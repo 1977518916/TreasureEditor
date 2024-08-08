@@ -1,0 +1,48 @@
+
+Fx_DianJi.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boom_01
+  rotate: true
+  xy: 1128, 120
+  size: 114, 113
+  orig: 256, 256
+  offset: 71, 71
+  index: -1
+Boom_02
+  rotate: true
+  xy: 928, 34
+  size: 200, 198
+  orig: 256, 256
+  offset: 28, 29
+  index: -1
+Boom_03
+  rotate: true
+  xy: 704, 10
+  size: 224, 222
+  orig: 256, 256
+  offset: 16, 17
+  index: -1
+Boom_04
+  rotate: false
+  xy: 2, 2
+  size: 232, 232
+  orig: 256, 256
+  offset: 12, 12
+  index: -1
+Boom_05
+  rotate: false
+  xy: 236, 2
+  size: 232, 232
+  orig: 256, 256
+  offset: 12, 12
+  index: -1
+Boom_06
+  rotate: false
+  xy: 470, 2
+  size: 232, 232
+  orig: 256, 256
+  offset: 12, 12
+  index: -1

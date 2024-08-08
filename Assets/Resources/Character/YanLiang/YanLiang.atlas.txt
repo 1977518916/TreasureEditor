@@ -1,0 +1,139 @@
+
+YanLiang.png
+size: 733,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 505, 8
+  size: 129, 100
+  orig: 129, 100
+  offset: 0, 0
+  index: -1
+DaoGuang
+  rotate: true
+  xy: 498, 139
+  size: 128, 127
+  orig: 128, 128
+  offset: 0, 1
+  index: -1
+Eye_B
+  rotate: false
+  xy: 388, 11
+  size: 43, 46
+  orig: 43, 46
+  offset: 0, 0
+  index: -1
+Eye_F
+  rotate: true
+  xy: 286, 7
+  size: 50, 49
+  orig: 50, 49
+  offset: 0, 0
+  index: -1
+Foot_B
+  rotate: true
+  xy: 60, 8
+  size: 20, 14
+  orig: 20, 14
+  offset: 0, 0
+  index: -1
+Foot_F
+  rotate: true
+  xy: 41, 8
+  size: 20, 17
+  orig: 20, 17
+  offset: 0, 0
+  index: -1
+Hand_B
+  rotate: true
+  xy: 475, 57
+  size: 29, 28
+  orig: 29, 28
+  offset: 0, 0
+  index: -1
+Hand_F
+  rotate: true
+  xy: 467, 7
+  size: 30, 28
+  orig: 30, 28
+  offset: 0, 0
+  index: -1
+HongYing
+  rotate: true
+  xy: 607, 22
+  size: 99, 89
+  orig: 99, 89
+  offset: 0, 0
+  index: -1
+HuZi
+  rotate: true
+  xy: 382, 88
+  size: 179, 114
+  orig: 179, 114
+  offset: 0, 0
+  index: -1
+JianJia_B
+  rotate: true
+  xy: 433, 39
+  size: 47, 40
+  orig: 47, 40
+  offset: 0, 0
+  index: -1
+JianJia_F
+  rotate: false
+  xy: 337, 8
+  size: 49, 49
+  orig: 49, 49
+  offset: 0, 0
+  index: -1
+MeiMao_B
+  rotate: false
+  xy: 382, 59
+  size: 32, 27
+  orig: 32, 27
+  offset: 0, 0
+  index: -1
+MeiMao_F
+  rotate: false
+  xy: 2, 2
+  size: 37, 26
+  orig: 37, 26
+  offset: 0, 0
+  index: -1
+Mouse
+  rotate: false
+  xy: 189, 24
+  size: 95, 33
+  orig: 95, 33
+  offset: 0, 0
+  index: -1
+PiFeng
+  rotate: true
+  xy: 627, 123
+  size: 144, 104
+  orig: 144, 104
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 433, 5
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Tou
+  rotate: false
+  xy: 189, 59
+  size: 191, 208
+  orig: 191, 208
+  offset: 0, 0
+  index: -1
+WuQi
+  rotate: false
+  xy: 2, 30
+  size: 185, 237
+  orig: 185, 237
+  offset: 0, 0
+  index: -1

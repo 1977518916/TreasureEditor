@@ -1,0 +1,1 @@
+{"skeleton":{"hash":"IOfhi78r4pQ2m4wpYiJ97SDteHg","spine":"3.8.99","images":"E:/工作/2024/3.26/buff","audio":""},"bones":[{"name":"root"},{"name":"b","parent":"root","y":19}],"slots":[{"name":"bing","bone":"b","attachment":"bing"}],"skins":[{"name":"default","attachments":{"bing":{"bing":{"x":0.5,"y":0.5,"width":127,"height":75}}}}],"animations":{"Skill":{}}}

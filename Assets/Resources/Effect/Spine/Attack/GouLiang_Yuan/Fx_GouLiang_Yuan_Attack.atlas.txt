@@ -1,0 +1,27 @@
+
+Fx_GouLiang_Yuan_Attack.png
+size: 203,104
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Dian
+  rotate: true
+  xy: 157, 39
+  size: 63, 44
+  orig: 64, 64
+  offset: 1, 10
+  index: -1
+FeiDan
+  rotate: true
+  xy: 103, 2
+  size: 100, 52
+  orig: 128, 64
+  offset: 11, 6
+  index: -1
+Glow
+  rotate: false
+  xy: 2, 3
+  size: 99, 99
+  orig: 128, 128
+  offset: 15, 14
+  index: -1

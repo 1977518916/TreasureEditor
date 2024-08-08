@@ -1,0 +1,62 @@
+
+XunYu_Skill_2.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow
+  rotate: false
+  xy: 132, 3
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+GuangZhu
+  rotate: false
+  xy: 2, 2
+  size: 128, 117
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Quan_01
+  rotate: true
+  xy: 820, 61
+  size: 58, 57
+  orig: 128, 128
+  offset: 35, 35
+  index: -1
+Quan_02
+  rotate: false
+  xy: 718, 19
+  size: 100, 100
+  orig: 128, 128
+  offset: 14, 14
+  index: -1
+Quan_03
+  rotate: false
+  xy: 604, 7
+  size: 112, 112
+  orig: 128, 128
+  offset: 8, 8
+  index: -1
+Quan_04
+  rotate: false
+  xy: 250, 3
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Quan_05
+  rotate: false
+  xy: 368, 3
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Quan_06
+  rotate: false
+  xy: 486, 3
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1

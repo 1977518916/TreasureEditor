@@ -1,0 +1,97 @@
+
+ZhouYu_Skill_2_hit.png
+size: 1732,600
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+001
+  rotate: false
+  xy: 1486, 406
+  size: 193, 192
+  orig: 306, 307
+  offset: 54, 61
+  index: -1
+002
+  rotate: true
+  xy: 288, 29
+  size: 264, 260
+  orig: 306, 307
+  offset: 22, 28
+  index: -1
+004
+  rotate: true
+  xy: 847, 4
+  size: 297, 293
+  orig: 306, 307
+  offset: 0, 10
+  index: -1
+006
+  rotate: true
+  xy: 303, 299
+  size: 299, 294
+  orig: 306, 307
+  offset: 0, 10
+  index: -1
+008
+  rotate: false
+  xy: 2, 295
+  size: 299, 303
+  orig: 306, 307
+  offset: 0, 3
+  index: -1
+010
+  rotate: false
+  xy: 550, 2
+  size: 295, 295
+  orig: 306, 307
+  offset: 4, 10
+  index: -1
+012
+  rotate: false
+  xy: 599, 303
+  size: 295, 295
+  orig: 306, 307
+  offset: 4, 10
+  index: -1
+014
+  rotate: false
+  xy: 896, 304
+  size: 293, 294
+  orig: 306, 307
+  offset: 4, 10
+  index: -1
+016
+  rotate: false
+  xy: 1142, 9
+  size: 293, 293
+  orig: 306, 307
+  offset: 4, 10
+  index: -1
+018
+  rotate: false
+  xy: 1191, 305
+  size: 293, 293
+  orig: 306, 307
+  offset: 4, 10
+  index: -1
+020
+  rotate: false
+  xy: 1437, 10
+  size: 293, 293
+  orig: 306, 307
+  offset: 4, 10
+  index: -1
+022
+  rotate: false
+  xy: 2, 9
+  size: 284, 284
+  orig: 306, 307
+  offset: 9, 15
+  index: -1
+024
+  rotate: true
+  xy: 1681, 571
+  size: 27, 36
+  orig: 306, 307
+  offset: 184, 179
+  index: -1

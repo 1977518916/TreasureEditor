@@ -1,0 +1,97 @@
+
+LvBu.png
+size: 1380,1040
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 1104, 224
+  size: 272, 223
+  orig: 272, 224
+  offset: 0, 1
+  index: -1
+Eye
+  rotate: false
+  xy: 1030, 813
+  size: 315, 222
+  orig: 317, 224
+  offset: 1, 1
+  index: -1
+Eye1
+  rotate: false
+  xy: 1030, 609
+  size: 315, 202
+  orig: 315, 202
+  offset: 0, 0
+  index: -1
+Hand_F
+  rotate: false
+  xy: 577, 427
+  size: 39, 42
+  orig: 41, 44
+  offset: 1, 1
+  index: -1
+Head
+  rotate: true
+  xy: 2, 2
+  size: 419, 586
+  orig: 431, 596
+  offset: 0, 0
+  index: -1
+HongYing_1
+  rotate: false
+  xy: 2, 423
+  size: 524, 612
+  orig: 524, 612
+  offset: 0, 0
+  index: -1
+HongYing_2
+  rotate: false
+  xy: 528, 508
+  size: 500, 527
+  orig: 500, 533
+  offset: 0, 6
+  index: -1
+JianJia_B
+  rotate: true
+  xy: 1030, 449
+  size: 158, 212
+  orig: 158, 217
+  offset: 0, 0
+  index: -1
+JianJia_F
+  rotate: true
+  xy: 1104, 33
+  size: 189, 227
+  orig: 189, 227
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 618, 437
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+WuQi
+  rotate: true
+  xy: 590, 12
+  size: 413, 512
+  orig: 413, 512
+  offset: 0, 0
+  index: -1
+Yan
+  rotate: false
+  xy: 528, 428
+  size: 47, 41
+  orig: 47, 41
+  offset: 0, 0
+  index: -1
+Zui
+  rotate: false
+  xy: 528, 471
+  size: 97, 35
+  orig: 99, 37
+  offset: 1, 1
+  index: -1

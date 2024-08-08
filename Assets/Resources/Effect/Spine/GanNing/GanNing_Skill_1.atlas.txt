@@ -1,0 +1,174 @@
+
+GanNing_Skill_1.png
+size: 524,272
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian_01
+  rotate: false
+  xy: 431, 62
+  size: 22, 27
+  orig: 64, 64
+  offset: 19, 17
+  index: -1
+BaoDian_02
+  rotate: true
+  xy: 55, 4
+  size: 17, 20
+  orig: 64, 64
+  offset: 22, 21
+  index: -1
+BaoDian_03
+  rotate: true
+  xy: 2, 4
+  size: 42, 51
+  orig: 64, 64
+  offset: 13, 5
+  index: -1
+BaoDian_04
+  rotate: false
+  xy: 469, 103
+  size: 50, 45
+  orig: 64, 64
+  offset: 9, 9
+  index: -1
+BaoDian_05
+  rotate: true
+  xy: 425, 91
+  size: 53, 42
+  orig: 64, 64
+  offset: 7, 11
+  index: -1
+BaoDian_06
+  rotate: false
+  xy: 431, 36
+  size: 22, 24
+  orig: 64, 64
+  offset: 21, 20
+  index: -1
+Fog_01
+  rotate: false
+  xy: 55, 23
+  size: 25, 25
+  orig: 128, 128
+  offset: 44, 0
+  index: -1
+Fog_02
+  rotate: true
+  xy: 323, 2
+  size: 64, 51
+  orig: 128, 128
+  offset: 27, 0
+  index: -1
+Fog_03
+  rotate: false
+  xy: 430, 150
+  size: 89, 52
+  orig: 128, 128
+  offset: 14, 0
+  index: -1
+Fog_04
+  rotate: false
+  xy: 326, 89
+  size: 97, 55
+  orig: 128, 128
+  offset: 10, 0
+  index: -1
+Fog_05
+  rotate: false
+  xy: 327, 146
+  size: 101, 56
+  orig: 128, 128
+  offset: 8, 0
+  index: -1
+Fog_06
+  rotate: false
+  xy: 96, 5
+  size: 105, 59
+  orig: 128, 128
+  offset: 7, 0
+  index: -1
+Fog_07
+  rotate: false
+  xy: 212, 3
+  size: 109, 63
+  orig: 128, 128
+  offset: 6, 0
+  index: -1
+Fog_08
+  rotate: false
+  xy: 212, 68
+  size: 110, 65
+  orig: 128, 128
+  offset: 6, 0
+  index: -1
+Fog_09
+  rotate: false
+  xy: 327, 204
+  size: 111, 66
+  orig: 128, 128
+  offset: 6, 0
+  index: -1
+Fog_10
+  rotate: false
+  xy: 212, 135
+  size: 112, 66
+  orig: 128, 128
+  offset: 6, 0
+  index: -1
+Fog_11
+  rotate: false
+  xy: 96, 203
+  size: 114, 67
+  orig: 128, 128
+  offset: 6, 0
+  index: -1
+Fog_12
+  rotate: false
+  xy: 212, 203
+  size: 113, 67
+  orig: 128, 128
+  offset: 8, 0
+  index: -1
+Fog_13
+  rotate: false
+  xy: 96, 134
+  size: 114, 67
+  orig: 128, 128
+  offset: 8, 0
+  index: -1
+Fog_14
+  rotate: false
+  xy: 96, 66
+  size: 114, 66
+  orig: 128, 128
+  offset: 9, 0
+  index: -1
+Fog_15
+  rotate: false
+  xy: 440, 204
+  size: 81, 66
+  orig: 128, 128
+  offset: 42, 0
+  index: -1
+Fog_16
+  rotate: true
+  xy: 376, 8
+  size: 79, 53
+  orig: 128, 128
+  offset: 44, 0
+  index: -1
+Jian
+  rotate: false
+  xy: 49, 50
+  size: 45, 220
+  orig: 45, 222
+  offset: 0, 1
+  index: -1
+Jian1
+  rotate: false
+  xy: 2, 48
+  size: 45, 222
+  orig: 45, 222
+  offset: 0, 0
+  index: -1

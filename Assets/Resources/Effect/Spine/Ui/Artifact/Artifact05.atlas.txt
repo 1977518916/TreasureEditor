@@ -1,0 +1,76 @@
+
+Artifact05.png
+size: 269,352
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+d
+  rotate: true
+  xy: 2, 211
+  size: 139, 161
+  orig: 139, 161
+  offset: 0, 0
+  index: -1
+x5 (1)
+  rotate: true
+  xy: 165, 279
+  size: 71, 85
+  orig: 75, 223
+  offset: 2, 0
+  index: -1
+x5 (2)
+  rotate: true
+  xy: 143, 60
+  size: 73, 115
+  orig: 75, 223
+  offset: 1, 9
+  index: -1
+x5 (3)
+  rotate: false
+  xy: 165, 135
+  size: 75, 142
+  orig: 75, 223
+  offset: 0, 16
+  index: -1
+x5 (4)
+  rotate: true
+  xy: 2, 135
+  size: 74, 157
+  orig: 75, 223
+  offset: 1, 15
+  index: -1
+x5 (5)
+  rotate: true
+  xy: 2, 3
+  size: 65, 138
+  orig: 75, 223
+  offset: 10, 38
+  index: -1
+x5 (6)
+  rotate: true
+  xy: 2, 70
+  size: 63, 139
+  orig: 75, 223
+  offset: 11, 72
+  index: -1
+x5 (7)
+  rotate: true
+  xy: 142, 2
+  size: 56, 125
+  orig: 75, 223
+  offset: 14, 98
+  index: -1
+x5 (8)
+  rotate: false
+  xy: 252, 266
+  size: 9, 84
+  orig: 75, 223
+  offset: 42, 136
+  index: -1
+x5 (9)
+  rotate: false
+  xy: 242, 237
+  size: 5, 40
+  orig: 75, 223
+  offset: 44, 161
+  index: -1

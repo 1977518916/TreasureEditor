@@ -1,0 +1,27 @@
+
+buff_violent.png
+size: 157,47
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dian
+  rotate: false
+  xy: 103, 2
+  size: 25, 24
+  orig: 26, 26
+  offset: 1, 0
+  index: -1
+j1
+  rotate: true
+  xy: 103, 28
+  size: 17, 52
+  orig: 17, 52
+  offset: 0, 0
+  index: -1
+j2
+  rotate: true
+  xy: 2, 3
+  size: 42, 99
+  orig: 43, 99
+  offset: 1, 0
+  index: -1

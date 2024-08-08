@@ -1,0 +1,111 @@
+
+egg.png
+size: 1978,152
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+EasterEgg
+  rotate: false
+  xy: 2, 37
+  size: 110, 113
+  orig: 110, 113
+  offset: 0, 0
+  index: -1
+d
+  rotate: false
+  xy: 776, 76
+  size: 72, 74
+  orig: 74, 76
+  offset: 1, 1
+  index: -1
+dd (1)
+  rotate: true
+  xy: 114, 2
+  size: 71, 334
+  orig: 80, 348
+  offset: 7, 4
+  index: -1
+dd (10)
+  rotate: true
+  xy: 1180, 81
+  size: 69, 329
+  orig: 80, 348
+  offset: 7, 6
+  index: -1
+dd (2)
+  rotate: true
+  xy: 450, 2
+  size: 71, 329
+  orig: 80, 348
+  offset: 7, 5
+  index: -1
+dd (3)
+  rotate: true
+  xy: 781, 3
+  size: 71, 327
+  orig: 80, 348
+  offset: 7, 6
+  index: -1
+dd (4)
+  rotate: true
+  xy: 850, 77
+  size: 73, 328
+  orig: 80, 348
+  offset: 5, 5
+  index: -1
+dd (5)
+  rotate: true
+  xy: 114, 75
+  size: 75, 329
+  orig: 80, 348
+  offset: 3, 5
+  index: -1
+dd (6)
+  rotate: true
+  xy: 445, 75
+  size: 75, 329
+  orig: 80, 348
+  offset: 2, 6
+  index: -1
+dd (7)
+  rotate: true
+  xy: 1110, 4
+  size: 71, 321
+  orig: 80, 348
+  offset: 4, 10
+  index: -1
+dd (8)
+  rotate: true
+  xy: 1511, 83
+  size: 67, 317
+  orig: 80, 348
+  offset: 7, 10
+  index: -1
+dd (9)
+  rotate: true
+  xy: 1433, 12
+  size: 67, 320
+  orig: 80, 348
+  offset: 7, 9
+  index: -1
+dian2
+  rotate: true
+  xy: 38, 7
+  size: 28, 27
+  orig: 29, 29
+  offset: 1, 0
+  index: -1
+xian
+  rotate: true
+  xy: 1755, 20
+  size: 61, 221
+  orig: 64, 222
+  offset: 2, 0
+  index: -1
+xxa
+  rotate: true
+  xy: 2, 2
+  size: 33, 34
+  orig: 35, 35
+  offset: 2, 0
+  index: -1

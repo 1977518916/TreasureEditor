@@ -1,0 +1,20 @@
+
+LiDian_Skill_1.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DaoGuang1
+  rotate: false
+  xy: 2, 2
+  size: 237, 212
+  orig: 256, 256
+  offset: 4, 22
+  index: -1
+DaoGuang2
+  rotate: false
+  xy: 241, 46
+  size: 107, 168
+  orig: 256, 256
+  offset: 10, 25
+  index: -1

@@ -1,0 +1,20 @@
+
+JiaXu_Skill_2.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DaoGuang
+  rotate: true
+  xy: 120, 54
+  size: 64, 128
+  orig: 64, 128
+  offset: 0, 0
+  index: -1
+Glow
+  rotate: false
+  xy: 2, 2
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1

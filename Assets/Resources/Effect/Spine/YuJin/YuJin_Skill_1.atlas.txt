@@ -1,0 +1,27 @@
+
+YuJin_Skill_1.png
+size: 229,99
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow
+  rotate: false
+  xy: 163, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Jian
+  rotate: true
+  xy: 2, 3
+  size: 63, 159
+  orig: 66, 159
+  offset: 2, 0
+  index: -1
+Path1
+  rotate: false
+  xy: 2, 68
+  size: 221, 29
+  orig: 300, 50
+  offset: 35, 11
+  index: -1

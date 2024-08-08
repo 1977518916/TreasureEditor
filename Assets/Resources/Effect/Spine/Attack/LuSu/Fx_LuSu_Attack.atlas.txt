@@ -1,0 +1,20 @@
+
+Fx_LuSu_Attack.png
+size: 52,38
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hl
+  rotate: false
+  xy: 2, 2
+  size: 27, 34
+  orig: 27, 34
+  offset: 0, 0
+  index: -1
+x
+  rotate: true
+  xy: 31, 2
+  size: 34, 19
+  orig: 35, 19
+  offset: 1, 0
+  index: -1

@@ -1,0 +1,90 @@
+
+Fx_PangTong_Hit.png
+size: 523,548
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qq1 (1)
+  rotate: true
+  xy: 203, 366
+  size: 180, 220
+  orig: 202, 222
+  offset: 15, 0
+  index: -1
+qq1 (10)
+  rotate: false
+  xy: 425, 446
+  size: 96, 100
+  orig: 202, 222
+  offset: 67, 71
+  index: -1
+qq1 (11)
+  rotate: false
+  xy: 137, 36
+  size: 79, 94
+  orig: 202, 222
+  offset: 66, 73
+  index: -1
+qq1 (12)
+  rotate: false
+  xy: 137, 36
+  size: 79, 94
+  orig: 202, 222
+  offset: 66, 73
+  index: -1
+qq1 (2)
+  rotate: false
+  xy: 2, 324
+  size: 199, 222
+  orig: 202, 222
+  offset: 3, 0
+  index: -1
+qq1 (3)
+  rotate: true
+  xy: 2, 132
+  size: 190, 222
+  orig: 202, 222
+  offset: 10, 0
+  index: -1
+qq1 (4)
+  rotate: false
+  xy: 226, 197
+  size: 140, 167
+  orig: 202, 222
+  offset: 38, 24
+  index: -1
+qq1 (5)
+  rotate: false
+  xy: 372, 102
+  size: 112, 122
+  orig: 202, 222
+  offset: 59, 42
+  index: -1
+qq1 (6)
+  rotate: true
+  xy: 2, 9
+  size: 121, 133
+  orig: 202, 222
+  offset: 55, 36
+  index: -1
+qq1 (7)
+  rotate: false
+  xy: 368, 226
+  size: 133, 138
+  orig: 202, 222
+  offset: 48, 34
+  index: -1
+qq1 (8)
+  rotate: false
+  xy: 226, 56
+  size: 144, 139
+  orig: 202, 222
+  offset: 40, 35
+  index: -1
+qq1 (9)
+  rotate: true
+  xy: 372, 2
+  size: 98, 137
+  orig: 202, 222
+  offset: 63, 36
+  index: -1

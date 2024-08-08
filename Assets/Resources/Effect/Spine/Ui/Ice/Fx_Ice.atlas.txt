@@ -1,0 +1,13 @@
+
+Fx_Ice.png
+size: 131,78
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bing
+  rotate: false
+  xy: 2, 2
+  size: 127, 74
+  orig: 127, 75
+  offset: 0, 0
+  index: -1

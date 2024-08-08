@@ -1,0 +1,160 @@
+
+GuanYinPing.png
+size: 380,380
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ErZhui_B
+  rotate: true
+  xy: 181, 6
+  size: 15, 26
+  orig: 15, 26
+  offset: 0, 0
+  index: -1
+ErZhui_F
+  rotate: true
+  xy: 181, 6
+  size: 15, 26
+  orig: 15, 26
+  offset: 0, 0
+  index: -1
+GeBo_B
+  rotate: false
+  xy: 314, 190
+  size: 51, 49
+  orig: 51, 49
+  offset: 0, 0
+  index: -1
+GeBo_F
+  rotate: true
+  xy: 324, 241
+  size: 48, 54
+  orig: 48, 54
+  offset: 0, 0
+  index: -1
+Hair_B
+  rotate: false
+  xy: 2, 170
+  size: 187, 208
+  orig: 187, 208
+  offset: 0, 0
+  index: -1
+Hair_F
+  rotate: false
+  xy: 181, 23
+  size: 71, 145
+  orig: 71, 145
+  offset: 0, 0
+  index: -1
+JianJia_F
+  rotate: true
+  xy: 324, 142
+  size: 46, 36
+  orig: 46, 36
+  offset: 0, 0
+  index: -1
+Jiao_B
+  rotate: false
+  xy: 316, 32
+  size: 10, 9
+  orig: 10, 9
+  offset: 0, 0
+  index: -1
+Jiao_F
+  rotate: false
+  xy: 367, 229
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+MeiMao_B
+  rotate: true
+  xy: 346, 21
+  size: 38, 28
+  orig: 38, 28
+  offset: 0, 0
+  index: -1
+MeiMao_F
+  rotate: true
+  xy: 324, 95
+  size: 45, 31
+  orig: 45, 31
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 346, 61
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+ShenTi
+  rotate: false
+  xy: 254, 90
+  size: 68, 86
+  orig: 68, 86
+  offset: 0, 0
+  index: -1
+Tou
+  rotate: false
+  xy: 2, 8
+  size: 177, 160
+  orig: 177, 160
+  offset: 0, 0
+  index: -1
+TouGuan
+  rotate: false
+  xy: 191, 178
+  size: 121, 83
+  orig: 121, 83
+  offset: 0, 0
+  index: -1
+WuQi
+  rotate: false
+  xy: 191, 263
+  size: 130, 115
+  orig: 130, 115
+  offset: 0, 0
+  index: -1
+YanJing_1_B
+  rotate: true
+  xy: 316, 43
+  size: 45, 28
+  orig: 46, 29
+  offset: 1, 0
+  index: -1
+YanJing_1_F
+  rotate: false
+  xy: 323, 291
+  size: 55, 30
+  orig: 55, 30
+  offset: 0, 0
+  index: -1
+YanJing_2_B
+  rotate: false
+  xy: 323, 323
+  size: 55, 55
+  orig: 56, 55
+  offset: 1, 0
+  index: -1
+YanJing_2_F
+  rotate: false
+  xy: 254, 28
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+ZuiBa_1
+  rotate: false
+  xy: 191, 170
+  size: 14, 6
+  orig: 14, 6
+  offset: 0, 0
+  index: -1
+ZuiBa_2
+  rotate: true
+  xy: 209, 4
+  size: 17, 23
+  orig: 17, 23
+  offset: 0, 0
+  index: -1

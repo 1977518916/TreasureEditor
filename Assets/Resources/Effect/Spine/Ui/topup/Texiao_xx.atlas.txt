@@ -1,0 +1,13 @@
+
+Texiao_xx.png
+size: 37,38
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xx
+  rotate: false
+  xy: 2, 2
+  size: 33, 34
+  orig: 35, 35
+  offset: 1, 0
+  index: -1

@@ -1,0 +1,202 @@
+
+Boss_dragon_skill1.png
+size: 443,1044
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dian11 (1)
+  rotate: false
+  xy: 150, 497
+  size: 143, 50
+  orig: 176, 112
+  offset: 16, 34
+  index: -1
+dian11 (2)
+  rotate: true
+  xy: 52, 13
+  size: 175, 48
+  orig: 176, 112
+  offset: 1, 40
+  index: -1
+dian11 (3)
+  rotate: true
+  xy: 179, 8
+  size: 143, 104
+  orig: 176, 112
+  offset: 23, 8
+  index: -1
+dian11 (4)
+  rotate: false
+  xy: 295, 466
+  size: 144, 110
+  orig: 176, 112
+  offset: 6, 0
+  index: -1
+dian11 (5)
+  rotate: false
+  xy: 285, 84
+  size: 120, 61
+  orig: 176, 112
+  offset: 23, 37
+  index: -1
+quan (1)
+  rotate: false
+  xy: 285, 35
+  size: 81, 47
+  orig: 153, 115
+  offset: 33, 22
+  index: -1
+quan (2)
+  rotate: false
+  xy: 190, 295
+  size: 100, 70
+  orig: 153, 115
+  offset: 23, 14
+  index: -1
+quan (3)
+  rotate: false
+  xy: 292, 147
+  size: 126, 92
+  orig: 153, 115
+  offset: 19, 7
+  index: -1
+quan (4)
+  rotate: false
+  xy: 295, 578
+  size: 144, 114
+  orig: 153, 115
+  offset: 6, 0
+  index: -1
+quan (5)
+  rotate: false
+  xy: 294, 350
+  size: 147, 114
+  orig: 153, 115
+  offset: 6, 0
+  index: -1
+quan (6)
+  rotate: true
+  xy: 179, 153
+  size: 140, 111
+  orig: 153, 115
+  offset: 7, 2
+  index: -1
+quan (7)
+  rotate: true
+  xy: 332, 694
+  size: 147, 109
+  orig: 153, 115
+  offset: 0, 3
+  index: -1
+quan (8)
+  rotate: false
+  xy: 292, 241
+  size: 144, 107
+  orig: 153, 115
+  offset: 6, 4
+  index: -1
+quan (9)
+  rotate: true
+  xy: 190, 367
+  size: 128, 102
+  orig: 153, 115
+  offset: 13, 6
+  index: -1
+sdd (1)
+  rotate: false
+  xy: 132, 301
+  size: 56, 191
+  orig: 82, 292
+  offset: 17, 77
+  index: -1
+sdd (11)
+  rotate: false
+  xy: 150, 549
+  size: 69, 246
+  orig: 82, 292
+  offset: 12, 28
+  index: -1
+sdd (13)
+  rotate: false
+  xy: 221, 573
+  size: 72, 222
+  orig: 82, 292
+  offset: 8, 28
+  index: -1
+sdd (15)
+  rotate: false
+  xy: 102, 20
+  size: 75, 192
+  orig: 82, 292
+  offset: 6, 64
+  index: -1
+sdd (2)
+  rotate: false
+  xy: 68, 214
+  size: 62, 259
+  orig: 82, 292
+  offset: 14, 27
+  index: -1
+sdd (3)
+  rotate: false
+  xy: 77, 494
+  size: 71, 259
+  orig: 82, 292
+  offset: 7, 19
+  index: -1
+sdd (5)
+  rotate: false
+  xy: 2, 475
+  size: 73, 278
+  orig: 82, 292
+  offset: 9, 8
+  index: -1
+sdd (6)
+  rotate: true
+  xy: 85, 881
+  size: 61, 254
+  orig: 82, 292
+  offset: 21, 14
+  index: -1
+sdd (7)
+  rotate: false
+  xy: 2, 755
+  size: 81, 287
+  orig: 82, 292
+  offset: 1, 3
+  index: -1
+sdd (9)
+  rotate: false
+  xy: 2, 190
+  size: 64, 283
+  orig: 82, 292
+  offset: 17, 3
+  index: -1
+yun1
+  rotate: false
+  xy: 85, 944
+  size: 254, 98
+  orig: 254, 98
+  offset: 0, 0
+  index: -1
+yun2
+  rotate: true
+  xy: 2, 2
+  size: 186, 48
+  orig: 186, 48
+  offset: 0, 0
+  index: -1
+yun3
+  rotate: true
+  xy: 341, 843
+  size: 199, 100
+  orig: 199, 100
+  offset: 0, 0
+  index: -1
+yun4
+  rotate: false
+  xy: 85, 797
+  size: 245, 82
+  orig: 245, 92
+  offset: 0, 10
+  index: -1

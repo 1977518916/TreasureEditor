@@ -1,0 +1,160 @@
+
+New_jiguang_skill_2.png
+size: 845,517
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian_01
+  rotate: false
+  xy: 805, 466
+  size: 32, 49
+  orig: 64, 128
+  offset: 15, 0
+  index: -1
+BaoDian_02
+  rotate: true
+  xy: 658, 132
+  size: 55, 91
+  orig: 64, 128
+  offset: 3, 3
+  index: -1
+BaoDian_03
+  rotate: false
+  xy: 744, 417
+  size: 59, 98
+  orig: 64, 128
+  offset: 2, 15
+  index: -1
+BaoDian_04
+  rotate: false
+  xy: 744, 325
+  size: 62, 90
+  orig: 64, 128
+  offset: 2, 30
+  index: -1
+BaoDian_05
+  rotate: true
+  xy: 690, 247
+  size: 61, 79
+  orig: 64, 128
+  offset: 3, 45
+  index: -1
+BaoDian_06
+  rotate: false
+  xy: 771, 253
+  size: 61, 70
+  orig: 64, 128
+  offset: 3, 57
+  index: -1
+BaoDian_07
+  rotate: false
+  xy: 714, 190
+  size: 61, 55
+  orig: 64, 128
+  offset: 2, 73
+  index: -1
+BaoDian_08
+  rotate: true
+  xy: 667, 189
+  size: 56, 45
+  orig: 64, 128
+  offset: 3, 82
+  index: -1
+Bo1
+  rotate: false
+  xy: 236, 3
+  size: 194, 512
+  orig: 256, 512
+  offset: 27, 0
+  index: -1
+Bo2
+  rotate: false
+  xy: 2, 3
+  size: 232, 512
+  orig: 256, 512
+  offset: 10, 0
+  index: -1
+Dian_01
+  rotate: false
+  xy: 432, 132
+  size: 224, 55
+  orig: 256, 64
+  offset: 6, 0
+  index: -1
+Dian_02
+  rotate: false
+  xy: 432, 189
+  size: 233, 56
+  orig: 256, 64
+  offset: 10, 4
+  index: -1
+Dian_03
+  rotate: false
+  xy: 432, 247
+  size: 238, 54
+  orig: 256, 64
+  offset: 12, 4
+  index: -1
+Dian_04
+  rotate: true
+  xy: 690, 310
+  size: 205, 52
+  orig: 256, 64
+  offset: 37, 3
+  index: -1
+Glow
+  rotate: false
+  xy: 678, 19
+  size: 110, 111
+  orig: 128, 128
+  offset: 9, 8
+  index: -1
+Path
+  rotate: false
+  xy: 432, 303
+  size: 256, 212
+  orig: 256, 256
+  offset: 0, 22
+  index: -1
+SheXian_01
+  rotate: false
+  xy: 800, 159
+  size: 43, 44
+  orig: 64, 64
+  offset: 2, 13
+  index: -1
+SheXian_02
+  rotate: false
+  xy: 777, 205
+  size: 50, 46
+  orig: 64, 64
+  offset: 7, 12
+  index: -1
+SheXian_03
+  rotate: true
+  xy: 751, 139
+  size: 49, 47
+  orig: 64, 64
+  offset: 12, 12
+  index: -1
+SheXian_04
+  rotate: false
+  xy: 805, 437
+  size: 27, 27
+  orig: 64, 64
+  offset: 33, 14
+  index: -1
+White
+  rotate: false
+  xy: 432, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Yuan
+  rotate: false
+  xy: 562, 16
+  size: 114, 114
+  orig: 128, 128
+  offset: 7, 7
+  index: -1

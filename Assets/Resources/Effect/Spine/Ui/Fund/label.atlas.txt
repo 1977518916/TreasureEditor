@@ -1,0 +1,13 @@
+
+label.png
+size: 139,87
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bq
+  rotate: false
+  xy: 2, 2
+  size: 135, 83
+  orig: 135, 83
+  offset: 0, 0
+  index: -1

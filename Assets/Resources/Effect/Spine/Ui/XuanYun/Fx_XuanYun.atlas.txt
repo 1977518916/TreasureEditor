@@ -1,0 +1,20 @@
+
+Fx_XuanYun.png
+size: 184,120
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Quan
+  rotate: false
+  xy: 2, 2
+  size: 117, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Star
+  rotate: true
+  xy: 121, 55
+  size: 63, 61
+  orig: 64, 64
+  offset: 1, 1
+  index: -1

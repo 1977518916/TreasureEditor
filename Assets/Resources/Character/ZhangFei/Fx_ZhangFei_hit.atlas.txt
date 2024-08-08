@@ -1,0 +1,111 @@
+
+Fx_ZhangFei_hit.png
+size: 238,720
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zf1 (1)
+  rotate: false
+  xy: 119, 83
+  size: 104, 91
+  orig: 146, 134
+  offset: 25, 16
+  index: -1
+zf1 (10)
+  rotate: true
+  xy: 134, 500
+  size: 115, 99
+  orig: 146, 134
+  offset: 15, 21
+  index: -1
+zf1 (11)
+  rotate: false
+  xy: 2, 300
+  size: 116, 85
+  orig: 146, 134
+  offset: 15, 26
+  index: -1
+zf1 (12)
+  rotate: false
+  xy: 2, 102
+  size: 115, 81
+  orig: 146, 134
+  offset: 16, 27
+  index: -1
+zf1 (13)
+  rotate: false
+  xy: 2, 26
+  size: 86, 74
+  orig: 146, 134
+  offset: 44, 31
+  index: -1
+zf1 (14)
+  rotate: false
+  xy: 90, 4
+  size: 85, 77
+  orig: 146, 134
+  offset: 43, 30
+  index: -1
+zf1 (15)
+  rotate: false
+  xy: 177, 2
+  size: 53, 79
+  orig: 146, 134
+  offset: 43, 29
+  index: -1
+zf1 (2)
+  rotate: false
+  xy: 2, 613
+  size: 130, 105
+  orig: 146, 134
+  offset: 16, 15
+  index: -1
+zf1 (3)
+  rotate: false
+  xy: 134, 617
+  size: 102, 101
+  orig: 146, 134
+  offset: 19, 12
+  index: -1
+zf1 (4)
+  rotate: true
+  xy: 125, 392
+  size: 106, 108
+  orig: 146, 134
+  offset: 15, 8
+  index: -1
+zf1 (5)
+  rotate: false
+  xy: 2, 185
+  size: 115, 113
+  orig: 146, 134
+  offset: 11, 4
+  index: -1
+zf1 (6)
+  rotate: false
+  xy: 2, 496
+  size: 121, 115
+  orig: 146, 134
+  offset: 10, 4
+  index: -1
+zf1 (7)
+  rotate: false
+  xy: 122, 284
+  size: 114, 106
+  orig: 146, 134
+  offset: 18, 13
+  index: -1
+zf1 (8)
+  rotate: false
+  xy: 119, 176
+  size: 115, 106
+  orig: 146, 134
+  offset: 18, 12
+  index: -1
+zf1 (9)
+  rotate: false
+  xy: 2, 387
+  size: 118, 107
+  orig: 146, 134
+  offset: 16, 12
+  index: -1

@@ -1,0 +1,27 @@
+
+monsterskill_05.png
+size: 420,88
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bai
+  rotate: false
+  xy: 2, 9
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+JianTou
+  rotate: false
+  xy: 324, 2
+  size: 92, 84
+  orig: 92, 84
+  offset: 0, 0
+  index: -1
+ShanXingBian
+  rotate: true
+  xy: 2, 61
+  size: 25, 320
+  orig: 25, 320
+  offset: 0, 0
+  index: -1

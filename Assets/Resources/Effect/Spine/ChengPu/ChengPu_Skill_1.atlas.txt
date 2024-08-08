@@ -1,0 +1,90 @@
+
+ChengPu_Skill_1.png
+size: 157,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fog1
+  rotate: false
+  xy: 103, 7
+  size: 19, 21
+  orig: 32, 32
+  offset: 6, 1
+  index: -1
+Fog2
+  rotate: true
+  xy: 74, 2
+  size: 26, 27
+  orig: 32, 32
+  offset: 3, 1
+  index: -1
+Fog3
+  rotate: true
+  xy: 74, 30
+  size: 25, 29
+  orig: 32, 32
+  offset: 3, 2
+  index: -1
+Fog4
+  rotate: true
+  xy: 115, 47
+  size: 28, 30
+  orig: 32, 32
+  offset: 2, 2
+  index: -1
+Fog5
+  rotate: true
+  xy: 115, 139
+  size: 29, 32
+  orig: 32, 32
+  offset: 2, 0
+  index: -1
+Fog6
+  rotate: true
+  xy: 115, 108
+  size: 29, 32
+  orig: 32, 32
+  offset: 1, 0
+  index: -1
+Fog7
+  rotate: true
+  xy: 115, 77
+  size: 29, 31
+  orig: 32, 32
+  offset: 2, 0
+  index: -1
+Fog8
+  rotate: false
+  xy: 105, 30
+  size: 15, 15
+  orig: 32, 32
+  offset: 14, 16
+  index: -1
+Glow
+  rotate: false
+  xy: 2, 57
+  size: 111, 111
+  orig: 128, 128
+  offset: 9, 8
+  index: -1
+Ice1
+  rotate: true
+  xy: 2, 6
+  size: 49, 70
+  orig: 49, 70
+  offset: 0, 0
+  index: -1
+Ice2
+  rotate: true
+  xy: 2, 170
+  size: 97, 153
+  orig: 114, 167
+  offset: 9, 3
+  index: -1
+Stone
+  rotate: true
+  xy: 122, 31
+  size: 14, 16
+  orig: 16, 16
+  offset: 1, 0
+  index: -1

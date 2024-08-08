@@ -1,0 +1,125 @@
+
+chouma.png
+size: 1757,650
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+001
+  rotate: false
+  xy: 823, 125
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+Energy
+  rotate: false
+  xy: 1606, 32
+  size: 51, 53
+  orig: 60, 60
+  offset: 4, 4
+  index: -1
+Fuhuo
+  rotate: false
+  xy: 1675, 360
+  size: 55, 58
+  orig: 60, 60
+  offset: 2, 1
+  index: -1
+d
+  rotate: false
+  xy: 1606, 173
+  size: 149, 149
+  orig: 162, 162
+  offset: 7, 6
+  index: -1
+gem
+  rotate: false
+  xy: 1690, 129
+  size: 56, 42
+  orig: 60, 60
+  offset: 2, 7
+  index: -1
+qqq
+  rotate: true
+  xy: 1675, 420
+  size: 228, 78
+  orig: 228, 78
+  offset: 0, 0
+  index: -1
+s3
+  rotate: false
+  xy: 1690, 83
+  size: 45, 44
+  orig: 45, 44
+  offset: 0, 0
+  index: -1
+szz
+  rotate: false
+  xy: 823, 152
+  size: 28, 183
+  orig: 28, 183
+  offset: 0, 0
+  index: -1
+xing
+  rotate: false
+  xy: 1606, 87
+  size: 82, 84
+  orig: 89, 93
+  offset: 4, 4
+  index: -1
+y1 (1)
+  rotate: false
+  xy: 1234, 20
+  size: 370, 302
+  orig: 435, 331
+  offset: 41, 8
+  index: -1
+y1 (2)
+  rotate: false
+  xy: 853, 27
+  size: 379, 312
+  orig: 435, 331
+  offset: 38, 8
+  index: -1
+y1 (3)
+  rotate: false
+  xy: 431, 13
+  size: 390, 322
+  orig: 435, 331
+  offset: 29, 5
+  index: -1
+y1 (4)
+  rotate: false
+  xy: 1269, 324
+  size: 404, 324
+  orig: 435, 331
+  offset: 17, 4
+  index: -1
+y1 (5)
+  rotate: false
+  xy: 853, 341
+  size: 414, 307
+  orig: 435, 331
+  offset: 10, 3
+  index: -1
+y1 (6)
+  rotate: false
+  xy: 431, 337
+  size: 420, 311
+  orig: 435, 331
+  offset: 7, 1
+  index: -1
+y1 (7)
+  rotate: false
+  xy: 2, 328
+  size: 427, 320
+  orig: 435, 331
+  offset: 7, 1
+  index: -1
+y1 (8)
+  rotate: false
+  xy: 2, 2
+  size: 414, 324
+  orig: 435, 331
+  offset: 2, 2
+  index: -1

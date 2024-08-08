@@ -1,0 +1,90 @@
+
+Fx_LuSu_Hit.png
+size: 718,948
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+弹幕_00000
+  rotate: true
+  xy: 526, 443
+  size: 115, 119
+  orig: 267, 267
+  offset: 72, 74
+  index: -1
+弹幕_00002
+  rotate: true
+  xy: 528, 754
+  size: 192, 188
+  orig: 267, 267
+  offset: 37, 39
+  index: -1
+弹幕_00004
+  rotate: false
+  xy: 492, 220
+  size: 222, 221
+  orig: 267, 267
+  offset: 17, 18
+  index: -1
+弹幕_00006
+  rotate: false
+  xy: 2, 681
+  size: 267, 265
+  orig: 267, 267
+  offset: 0, 1
+  index: -1
+弹幕_00008
+  rotate: false
+  xy: 271, 695
+  size: 255, 251
+  orig: 267, 267
+  offset: 5, 7
+  index: -1
+弹幕_00010
+  rotate: false
+  xy: 271, 446
+  size: 253, 247
+  orig: 267, 267
+  offset: 7, 9
+  index: -1
+弹幕_00012
+  rotate: false
+  xy: 2, 439
+  size: 243, 240
+  orig: 267, 267
+  offset: 12, 14
+  index: -1
+弹幕_00014
+  rotate: false
+  xy: 247, 204
+  size: 243, 240
+  orig: 267, 267
+  offset: 12, 14
+  index: -1
+弹幕_00016
+  rotate: false
+  xy: 2, 197
+  size: 243, 240
+  orig: 267, 267
+  offset: 12, 14
+  index: -1
+弹幕_00018
+  rotate: false
+  xy: 492, 17
+  size: 206, 201
+  orig: 267, 267
+  offset: 26, 35
+  index: -1
+弹幕_00020
+  rotate: false
+  xy: 247, 2
+  size: 200, 200
+  orig: 267, 267
+  offset: 26, 34
+  index: -1
+弹幕_00022
+  rotate: false
+  xy: 528, 560
+  size: 167, 192
+  orig: 267, 267
+  offset: 27, 37
+  index: -1

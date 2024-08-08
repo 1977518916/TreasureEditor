@@ -1,0 +1,27 @@
+
+XiaoBing_JiaSu.png
+size: 252,84
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0001
+  rotate: false
+  xy: 136, 6
+  size: 77, 14
+  orig: 77, 14
+  offset: 0, 0
+  index: -1
+0002
+  rotate: false
+  xy: 136, 22
+  size: 114, 60
+  orig: 114, 60
+  offset: 0, 0
+  index: -1
+0003
+  rotate: true
+  xy: 2, 2
+  size: 80, 132
+  orig: 80, 132
+  offset: 0, 0
+  index: -1

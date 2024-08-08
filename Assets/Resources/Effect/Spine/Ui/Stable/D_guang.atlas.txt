@@ -1,0 +1,34 @@
+
+D_guang.png
+size: 817,336
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+deng
+  rotate: true
+  xy: 708, 210
+  size: 124, 107
+  orig: 124, 107
+  offset: 0, 0
+  index: -1
+g11
+  rotate: true
+  xy: 708, 98
+  size: 110, 100
+  orig: 114, 104
+  offset: 2, 2
+  index: -1
+ggg1_00000
+  rotate: true
+  xy: 357, 41
+  size: 293, 349
+  orig: 370, 407
+  offset: 32, 39
+  index: -1
+ggg2_00000
+  rotate: true
+  xy: 2, 2
+  size: 332, 353
+  orig: 418, 407
+  offset: 43, 33
+  index: -1

@@ -1,0 +1,76 @@
+
+Yanhuo.png
+size: 188,68
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+h1 (1)
+  rotate: false
+  xy: 114, 35
+  size: 35, 31
+  orig: 38, 34
+  offset: 1, 0
+  index: -1
+h1 (10)
+  rotate: false
+  xy: 76, 2
+  size: 34, 30
+  orig: 38, 34
+  offset: 2, 0
+  index: -1
+h1 (13)
+  rotate: false
+  xy: 114, 3
+  size: 34, 30
+  orig: 38, 34
+  offset: 2, 0
+  index: -1
+h1 (16)
+  rotate: false
+  xy: 2, 2
+  size: 36, 31
+  orig: 38, 34
+  offset: 2, 0
+  index: -1
+h1 (19)
+  rotate: false
+  xy: 40, 34
+  size: 35, 32
+  orig: 38, 34
+  offset: 2, 0
+  index: -1
+h1 (22)
+  rotate: false
+  xy: 77, 34
+  size: 35, 32
+  orig: 38, 34
+  offset: 2, 0
+  index: -1
+h1 (25)
+  rotate: false
+  xy: 151, 35
+  size: 35, 31
+  orig: 38, 34
+  offset: 2, 0
+  index: -1
+h1 (28)
+  rotate: false
+  xy: 150, 3
+  size: 34, 30
+  orig: 38, 34
+  offset: 2, 0
+  index: -1
+h1 (4)
+  rotate: false
+  xy: 2, 35
+  size: 36, 31
+  orig: 38, 34
+  offset: 1, 0
+  index: -1
+h1 (7)
+  rotate: false
+  xy: 40, 2
+  size: 34, 30
+  orig: 38, 34
+  offset: 2, 0
+  index: -1

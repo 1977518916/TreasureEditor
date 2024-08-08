@@ -1,0 +1,20 @@
+
+MaDai_Skill_1_JiaSu.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+GuangZhu
+  rotate: false
+  xy: 2, 2
+  size: 128, 117
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Up
+  rotate: true
+  xy: 132, 55
+  size: 64, 51
+  orig: 64, 64
+  offset: 0, 10
+  index: -1

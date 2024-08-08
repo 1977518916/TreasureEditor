@@ -1,0 +1,195 @@
+
+FaZheng.png
+size: 309,947
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+01
+  rotate: true
+  xy: 254, 745
+  size: 97, 39
+  orig: 97, 39
+  offset: 0, 0
+  index: -1
+02
+  rotate: true
+  xy: 245, 570
+  size: 119, 61
+  orig: 119, 61
+  offset: 0, 0
+  index: -1
+03
+  rotate: true
+  xy: 254, 844
+  size: 101, 47
+  orig: 101, 47
+  offset: 0, 0
+  index: -1
+04
+  rotate: true
+  xy: 2, 730
+  size: 215, 250
+  orig: 217, 250
+  offset: 2, 0
+  index: -1
+05
+  rotate: false
+  xy: 56, 5
+  size: 26, 25
+  orig: 26, 25
+  offset: 0, 0
+  index: -1
+06
+  rotate: true
+  xy: 230, 469
+  size: 99, 66
+  orig: 100, 73
+  offset: 1, 4
+  index: -1
+07
+  rotate: true
+  xy: 124, 227
+  size: 70, 78
+  orig: 70, 78
+  offset: 0, 0
+  index: -1
+08
+  rotate: true
+  xy: 230, 660
+  size: 68, 13
+  orig: 68, 13
+  offset: 0, 0
+  index: -1
+09
+  rotate: false
+  xy: 2, 184
+  size: 120, 113
+  orig: 127, 115
+  offset: 6, 2
+  index: -1
+10
+  rotate: true
+  xy: 180, 27
+  size: 50, 55
+  orig: 51, 56
+  offset: 1, 1
+  index: -1
+11
+  rotate: true
+  xy: 254, 691
+  size: 52, 53
+  orig: 64, 53
+  offset: 0, 0
+  index: -1
+DaoGuang
+  rotate: false
+  xy: 214, 257
+  size: 91, 97
+  orig: 128, 128
+  offset: 37, 29
+  index: -1
+Fog1
+  rotate: true
+  xy: 101, 2
+  size: 38, 40
+  orig: 64, 64
+  offset: 12, 3
+  index: -1
+Fog2
+  rotate: true
+  xy: 2, 24
+  size: 50, 52
+  orig: 64, 64
+  offset: 7, 3
+  index: -1
+Fog3
+  rotate: true
+  xy: 247, 25
+  size: 54, 58
+  orig: 64, 64
+  offset: 3, 4
+  index: -1
+Fog4
+  rotate: true
+  xy: 247, 81
+  size: 55, 58
+  orig: 64, 64
+  offset: 5, 5
+  index: -1
+Fog5
+  rotate: true
+  xy: 183, 79
+  size: 57, 62
+  orig: 64, 64
+  offset: 5, 1
+  index: -1
+Fog6
+  rotate: true
+  xy: 118, 101
+  size: 58, 63
+  orig: 64, 64
+  offset: 2, 1
+  index: -1
+Fog7
+  rotate: true
+  xy: 118, 42
+  size: 57, 60
+  orig: 64, 64
+  offset: 4, 1
+  index: -1
+Fog8
+  rotate: false
+  xy: 143, 12
+  size: 29, 28
+  orig: 64, 64
+  offset: 28, 33
+  index: -1
+Glow
+  rotate: true
+  xy: 2, 503
+  size: 225, 226
+  orig: 256, 256
+  offset: 16, 14
+  index: -1
+GlowQuan
+  rotate: true
+  xy: 2, 299
+  size: 202, 210
+  orig: 256, 256
+  offset: 28, 18
+  index: -1
+LvQuan
+  rotate: true
+  xy: 214, 356
+  size: 111, 85
+  orig: 128, 128
+  offset: 7, 35
+  index: -1
+LvQuan1
+  rotate: true
+  xy: 204, 138
+  size: 117, 100
+  orig: 128, 128
+  offset: 5, 22
+  index: -1
+MoDian
+  rotate: true
+  xy: 56, 32
+  size: 42, 43
+  orig: 64, 64
+  offset: 11, 11
+  index: -1
+SanShe
+  rotate: true
+  xy: 2, 76
+  size: 106, 114
+  orig: 128, 128
+  offset: 11, 7
+  index: -1
+Shadow
+  rotate: false
+  xy: 124, 161
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,83 @@
+
+Mounts014.png
+size: 272,260
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+14_1
+  rotate: true
+  xy: 2, 2
+  size: 59, 83
+  orig: 59, 83
+  offset: 0, 0
+  index: -1
+14_10
+  rotate: true
+  xy: 208, 8
+  size: 31, 35
+  orig: 31, 35
+  offset: 0, 0
+  index: -1
+14_2
+  rotate: false
+  xy: 87, 2
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+14_3
+  rotate: true
+  xy: 228, 41
+  size: 89, 41
+  orig: 89, 41
+  offset: 0, 0
+  index: -1
+14_4
+  rotate: false
+  xy: 162, 132
+  size: 105, 123
+  orig: 105, 123
+  offset: 0, 0
+  index: -1
+14_5
+  rotate: true
+  xy: 2, 63
+  size: 74, 91
+  orig: 74, 92
+  offset: 0, 0
+  index: -1
+14_6
+  rotate: true
+  xy: 95, 40
+  size: 97, 65
+  orig: 97, 65
+  offset: 0, 0
+  index: -1
+14_7
+  rotate: true
+  xy: 162, 32
+  size: 32, 44
+  orig: 32, 44
+  offset: 0, 0
+  index: -1
+14_8
+  rotate: true
+  xy: 125, 6
+  size: 32, 34
+  orig: 32, 34
+  offset: 0, 0
+  index: -1
+14_9
+  rotate: false
+  xy: 2, 139
+  size: 158, 116
+  orig: 158, 116
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 162, 66
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

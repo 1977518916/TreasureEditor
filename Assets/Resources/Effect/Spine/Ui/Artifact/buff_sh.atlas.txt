@@ -1,0 +1,13 @@
+
+buff_sh.png
+size: 77,77
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sh
+  rotate: false
+  xy: 2, 2
+  size: 73, 73
+  orig: 73, 73
+  offset: 0, 0
+  index: -1

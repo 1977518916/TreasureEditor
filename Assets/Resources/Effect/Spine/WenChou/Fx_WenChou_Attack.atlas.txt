@@ -1,0 +1,76 @@
+
+Fx_WenChou_Attack.png
+size: 385,499
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+wenc (1)
+  rotate: true
+  xy: 2, 251
+  size: 246, 85
+  orig: 249, 85
+  offset: 1, 0
+  index: -1
+wenc (10)
+  rotate: true
+  xy: 176, 251
+  size: 246, 72
+  orig: 249, 85
+  offset: 1, 6
+  index: -1
+wenc (13)
+  rotate: true
+  xy: 251, 2
+  size: 247, 65
+  orig: 249, 85
+  offset: 0, 9
+  index: -1
+wenc (16)
+  rotate: true
+  xy: 324, 251
+  size: 246, 58
+  orig: 249, 85
+  offset: 1, 12
+  index: -1
+wenc (19)
+  rotate: true
+  xy: 318, 3
+  size: 246, 65
+  orig: 249, 85
+  offset: 1, 9
+  index: -1
+wenc (22)
+  rotate: true
+  xy: 250, 251
+  size: 246, 72
+  orig: 249, 85
+  offset: 1, 6
+  index: -1
+wenc (25)
+  rotate: true
+  xy: 170, 3
+  size: 246, 79
+  orig: 249, 85
+  offset: 1, 2
+  index: -1
+wenc (28)
+  rotate: true
+  xy: 89, 251
+  size: 246, 85
+  orig: 249, 85
+  offset: 1, 0
+  index: -1
+wenc (4)
+  rotate: true
+  xy: 2, 3
+  size: 246, 85
+  orig: 249, 85
+  offset: 1, 0
+  index: -1
+wenc (7)
+  rotate: true
+  xy: 89, 2
+  size: 247, 79
+  orig: 249, 85
+  offset: 0, 2
+  index: -1

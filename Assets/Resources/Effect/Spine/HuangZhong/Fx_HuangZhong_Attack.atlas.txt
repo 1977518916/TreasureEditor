@@ -1,0 +1,62 @@
+
+Fx_HuangZhong_Attack.png
+size: 396,182
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jian (1)
+  rotate: true
+  xy: 2, 51
+  size: 40, 184
+  orig: 49, 202
+  offset: 5, 17
+  index: -1
+jian (11)
+  rotate: true
+  xy: 2, 136
+  size: 44, 191
+  orig: 49, 202
+  offset: 3, 10
+  index: -1
+jian (13)
+  rotate: true
+  xy: 188, 47
+  size: 43, 196
+  orig: 49, 202
+  offset: 3, 5
+  index: -1
+jian (15)
+  rotate: true
+  xy: 2, 2
+  size: 43, 195
+  orig: 49, 202
+  offset: 3, 6
+  index: -1
+jian (3)
+  rotate: true
+  xy: 2, 93
+  size: 41, 187
+  orig: 49, 202
+  offset: 5, 14
+  index: -1
+jian (5)
+  rotate: true
+  xy: 199, 2
+  size: 43, 194
+  orig: 49, 202
+  offset: 4, 7
+  index: -1
+jian (7)
+  rotate: true
+  xy: 195, 92
+  size: 43, 196
+  orig: 49, 202
+  offset: 1, 5
+  index: -1
+jian (9)
+  rotate: true
+  xy: 195, 137
+  size: 43, 199
+  orig: 49, 202
+  offset: 1, 2
+  index: -1

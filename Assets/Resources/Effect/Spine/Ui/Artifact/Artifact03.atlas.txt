@@ -1,0 +1,76 @@
+
+Artifact03.png
+size: 316,291
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+s
+  rotate: false
+  xy: 2, 172
+  size: 109, 117
+  orig: 109, 117
+  offset: 0, 0
+  index: -1
+x3 (1)
+  rotate: true
+  xy: 224, 86
+  size: 75, 88
+  orig: 76, 226
+  offset: 1, 0
+  index: -1
+x3 (2)
+  rotate: true
+  xy: 167, 2
+  size: 76, 117
+  orig: 76, 226
+  offset: 0, 10
+  index: -1
+x3 (3)
+  rotate: false
+  xy: 79, 27
+  size: 76, 143
+  orig: 76, 226
+  offset: 0, 17
+  index: -1
+x3 (4)
+  rotate: false
+  xy: 2, 12
+  size: 75, 158
+  orig: 76, 226
+  offset: 1, 17
+  index: -1
+x3 (5)
+  rotate: true
+  xy: 113, 223
+  size: 66, 140
+  orig: 76, 226
+  offset: 10, 39
+  index: -1
+x3 (6)
+  rotate: false
+  xy: 157, 80
+  size: 65, 141
+  orig: 76, 226
+  offset: 11, 73
+  index: -1
+x3 (7)
+  rotate: false
+  xy: 255, 163
+  size: 59, 126
+  orig: 76, 226
+  offset: 13, 100
+  index: -1
+x3 (8)
+  rotate: true
+  xy: 79, 15
+  size: 10, 86
+  orig: 76, 226
+  offset: 42, 137
+  index: -1
+x3 (9)
+  rotate: true
+  xy: 2, 2
+  size: 8, 41
+  orig: 76, 226
+  offset: 43, 163
+  index: -1

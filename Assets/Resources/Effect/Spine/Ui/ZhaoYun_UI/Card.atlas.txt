@@ -1,0 +1,83 @@
+
+Card.png
+size: 536,562
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 467, 219
+  size: 133, 67
+  orig: 141, 67
+  offset: 8, 0
+  index: -1
+10
+  rotate: false
+  xy: 2, 271
+  size: 323, 94
+  orig: 323, 94
+  offset: 0, 0
+  index: -1
+11
+  rotate: true
+  xy: 484, 375
+  size: 39, 40
+  orig: 39, 40
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 344, 354
+  size: 138, 60
+  orig: 138, 60
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 327, 292
+  size: 138, 60
+  orig: 138, 60
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 2, 29
+  size: 271, 240
+  orig: 271, 240
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 344, 416
+  size: 163, 144
+  orig: 163, 144
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 403, 218
+  size: 58, 72
+  orig: 58, 72
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 2, 367
+  size: 340, 193
+  orig: 340, 193
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 327, 226
+  size: 74, 64
+  orig: 74, 64
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 275, 2
+  size: 247, 214
+  orig: 247, 214
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,13 @@
+
+buff_ms.png
+size: 56,49
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ms
+  rotate: false
+  xy: 2, 2
+  size: 52, 45
+  orig: 52, 45
+  offset: 0, 0
+  index: -1

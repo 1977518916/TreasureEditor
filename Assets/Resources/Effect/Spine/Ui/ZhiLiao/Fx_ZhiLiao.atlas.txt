@@ -1,0 +1,27 @@
+
+Fx_ZhiLiao.png
+size: 293,227
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow
+  rotate: false
+  xy: 2, 2
+  size: 223, 223
+  orig: 256, 256
+  offset: 17, 16
+  index: -1
+Glow1
+  rotate: false
+  xy: 227, 31
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Glow2
+  rotate: true
+  xy: 227, 97
+  size: 128, 46
+  orig: 128, 59
+  offset: 0, 8
+  index: -1

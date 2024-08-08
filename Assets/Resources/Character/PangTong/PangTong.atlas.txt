@@ -1,0 +1,223 @@
+
+PangTong.png
+size: 1956,544
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_B
+  rotate: false
+  xy: 1362, 334
+  size: 249, 208
+  orig: 250, 230
+  offset: 0, 22
+  index: -1
+Arm_F
+  rotate: true
+  xy: 1136, 84
+  size: 186, 224
+  orig: 192, 227
+  offset: 6, 3
+  index: -1
+Body
+  rotate: false
+  xy: 888, 224
+  size: 246, 318
+  orig: 251, 318
+  offset: 4, 0
+  index: -1
+ErDuo
+  rotate: false
+  xy: 440, 12
+  size: 57, 76
+  orig: 59, 78
+  offset: 1, 1
+  index: -1
+Eye1
+  rotate: false
+  xy: 1613, 190
+  size: 224, 148
+  orig: 226, 150
+  offset: 1, 1
+  index: -1
+Eye2
+  rotate: false
+  xy: 1362, 188
+  size: 239, 144
+  orig: 241, 146
+  offset: 1, 1
+  index: -1
+Hair1
+  rotate: true
+  xy: 1839, 171
+  size: 167, 98
+  orig: 168, 98
+  offset: 1, 0
+  index: -1
+Hair2
+  rotate: true
+  xy: 766, 16
+  size: 192, 137
+  orig: 204, 143
+  offset: 0, 6
+  index: -1
+Hair3
+  rotate: true
+  xy: 1362, 7
+  size: 83, 224
+  orig: 99, 225
+  offset: 0, 0
+  index: -1
+Hair4
+  rotate: false
+  xy: 1136, 272
+  size: 224, 270
+  orig: 224, 275
+  offset: 0, 5
+  index: -1
+Hair5
+  rotate: false
+  xy: 1613, 340
+  size: 237, 202
+  orig: 237, 202
+  offset: 0, 0
+  index: -1
+Hand_B
+  rotate: false
+  xy: 1312, 34
+  size: 48, 48
+  orig: 50, 50
+  offset: 1, 1
+  index: -1
+Hand_F
+  rotate: false
+  xy: 1653, 29
+  size: 48, 48
+  orig: 50, 50
+  offset: 1, 1
+  index: -1
+Head
+  rotate: false
+  xy: 2, 140
+  size: 509, 402
+  orig: 519, 490
+  offset: 10, 0
+  index: -1
+HuLu
+  rotate: false
+  xy: 1835, 60
+  size: 105, 109
+  orig: 106, 110
+  offset: 1, 0
+  index: -1
+HuZI2
+  rotate: false
+  xy: 1129, 33
+  size: 98, 49
+  orig: 98, 49
+  offset: 0, 0
+  index: -1
+HuZi
+  rotate: false
+  xy: 1734, 75
+  size: 99, 113
+  orig: 99, 115
+  offset: 0, 1
+  index: -1
+HuZi1
+  rotate: false
+  xy: 1588, 28
+  size: 63, 49
+  orig: 65, 49
+  offset: 1, 0
+  index: -1
+Jiu
+  rotate: false
+  xy: 1603, 79
+  size: 129, 109
+  orig: 129, 110
+  offset: 0, 0
+  index: -1
+JiuHu
+  rotate: true
+  xy: 905, 4
+  size: 218, 222
+  orig: 220, 223
+  offset: 1, 1
+  index: -1
+MaoZi
+  rotate: false
+  xy: 513, 210
+  size: 373, 332
+  orig: 377, 337
+  offset: 4, 5
+  index: -1
+MeiMao
+  rotate: false
+  xy: 220, 11
+  size: 218, 127
+  orig: 220, 129
+  offset: 1, 1
+  index: -1
+Shadow
+  rotate: false
+  xy: 499, 2
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Shui
+  rotate: false
+  xy: 440, 90
+  size: 71, 48
+  orig: 71, 48
+  offset: 0, 0
+  index: -1
+ShuiDi1
+  rotate: false
+  xy: 1229, 14
+  size: 49, 33
+  orig: 51, 35
+  offset: 1, 1
+  index: -1
+ShuiDi2
+  rotate: true
+  xy: 1129, 2
+  size: 29, 17
+  orig: 31, 19
+  offset: 1, 1
+  index: -1
+YiFu_B
+  rotate: true
+  xy: 1362, 92
+  size: 94, 238
+  orig: 99, 238
+  offset: 0, 0
+  index: -1
+YiFu_F
+  rotate: true
+  xy: 2, 2
+  size: 136, 216
+  orig: 136, 216
+  offset: 0, 0
+  index: -1
+YuPei
+  rotate: true
+  xy: 1229, 49
+  size: 33, 81
+  orig: 35, 84
+  offset: 1, 0
+  index: -1
+Zui1
+  rotate: false
+  xy: 513, 36
+  size: 251, 172
+  orig: 255, 172
+  offset: 4, 0
+  index: -1
+Zui2
+  rotate: true
+  xy: 1852, 361
+  size: 181, 102
+  orig: 183, 104
+  offset: 1, 1
+  index: -1

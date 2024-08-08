@@ -1,0 +1,83 @@
+
+Fx_ShanXian.png
+size: 175,399
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow
+  rotate: true
+  xy: 2, 287
+  size: 110, 111
+  orig: 128, 128
+  offset: 9, 8
+  index: -1
+Path
+  rotate: false
+  xy: 115, 262
+  size: 57, 26
+  orig: 64, 32
+  offset: 3, 3
+  index: -1
+Yuan_01
+  rotate: false
+  xy: 2, 202
+  size: 83, 83
+  orig: 85, 85
+  offset: 1, 1
+  index: -1
+Yuan_02
+  rotate: false
+  xy: 87, 177
+  size: 83, 83
+  orig: 85, 85
+  offset: 1, 1
+  index: -1
+Yuan_03
+  rotate: false
+  xy: 2, 117
+  size: 83, 83
+  orig: 85, 85
+  offset: 1, 1
+  index: -1
+Yuan_04
+  rotate: false
+  xy: 87, 93
+  size: 83, 82
+  orig: 85, 85
+  offset: 1, 2
+  index: -1
+Yuan_05
+  rotate: false
+  xy: 2, 33
+  size: 83, 82
+  orig: 85, 85
+  offset: 1, 2
+  index: -1
+Yuan_06
+  rotate: true
+  xy: 87, 12
+  size: 79, 82
+  orig: 85, 85
+  offset: 3, 2
+  index: -1
+Yuan_07
+  rotate: true
+  xy: 115, 324
+  size: 73, 39
+  orig: 85, 85
+  offset: 6, 45
+  index: -1
+Yuan_08
+  rotate: false
+  xy: 115, 290
+  size: 58, 32
+  orig: 85, 85
+  offset: 13, 52
+  index: -1
+Yuan_09
+  rotate: false
+  xy: 2, 2
+  size: 38, 29
+  orig: 85, 85
+  offset: 23, 55
+  index: -1

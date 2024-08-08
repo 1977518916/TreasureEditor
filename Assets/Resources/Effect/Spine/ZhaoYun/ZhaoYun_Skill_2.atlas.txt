@@ -1,0 +1,104 @@
+
+ZhaoYun_Skill_2.png
+size: 1759,257
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dian (1)
+  rotate: false
+  xy: 1397, 187
+  size: 222, 68
+  orig: 479, 96
+  offset: 7, 14
+  index: -1
+dian (2)
+  rotate: false
+  xy: 1397, 187
+  size: 222, 68
+  orig: 479, 96
+  offset: 7, 14
+  index: -1
+dian (11)
+  rotate: false
+  xy: 466, 165
+  size: 452, 90
+  orig: 479, 96
+  offset: 26, 3
+  index: -1
+dian (13)
+  rotate: false
+  xy: 2, 70
+  size: 460, 91
+  orig: 479, 96
+  offset: 19, 2
+  index: -1
+dian (15)
+  rotate: false
+  xy: 925, 96
+  size: 430, 82
+  orig: 479, 96
+  offset: 49, 7
+  index: -1
+dian (17)
+  rotate: false
+  xy: 941, 11
+  size: 421, 83
+  orig: 479, 96
+  offset: 58, 7
+  index: -1
+dian (19)
+  rotate: false
+  xy: 1357, 106
+  size: 400, 72
+  orig: 479, 96
+  offset: 78, 13
+  index: -1
+dian (21)
+  rotate: false
+  xy: 1364, 31
+  size: 387, 73
+  orig: 479, 96
+  offset: 92, 11
+  index: -1
+dian (23)
+  rotate: false
+  xy: 2, 11
+  size: 242, 57
+  orig: 479, 96
+  offset: 230, 19
+  index: -1
+dian (25)
+  rotate: false
+  xy: 246, 29
+  size: 118, 39
+  orig: 479, 96
+  offset: 352, 27
+  index: -1
+dian (3)
+  rotate: false
+  xy: 464, 2
+  size: 475, 67
+  orig: 479, 96
+  offset: 4, 16
+  index: -1
+dian (5)
+  rotate: false
+  xy: 920, 180
+  size: 475, 75
+  orig: 479, 96
+  offset: 4, 8
+  index: -1
+dian (7)
+  rotate: false
+  xy: 464, 71
+  size: 459, 90
+  orig: 479, 96
+  offset: 20, 4
+  index: -1
+dian (9)
+  rotate: false
+  xy: 2, 163
+  size: 462, 92
+  orig: 479, 96
+  offset: 17, 2
+  index: -1

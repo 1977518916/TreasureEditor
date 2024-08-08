@@ -1,0 +1,76 @@
+
+FaZheng_Skill_2.png
+size: 442,250
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Dun4
+  rotate: false
+  xy: 356, 164
+  size: 84, 84
+  orig: 96, 96
+  offset: 6, 5
+  index: -1
+Glow
+  rotate: false
+  xy: 116, 19
+  size: 111, 111
+  orig: 128, 128
+  offset: 9, 8
+  index: -1
+MoDian
+  rotate: false
+  xy: 415, 140
+  size: 22, 22
+  orig: 32, 32
+  offset: 5, 5
+  index: -1
+SanShe
+  rotate: false
+  xy: 229, 16
+  size: 106, 114
+  orig: 128, 128
+  offset: 11, 7
+  index: -1
+Yuan_01
+  rotate: true
+  xy: 356, 104
+  size: 58, 57
+  orig: 128, 128
+  offset: 35, 35
+  index: -1
+Yuan_02
+  rotate: false
+  xy: 337, 2
+  size: 100, 100
+  orig: 128, 128
+  offset: 14, 14
+  index: -1
+Yuan_03
+  rotate: false
+  xy: 2, 18
+  size: 112, 112
+  orig: 128, 128
+  offset: 8, 8
+  index: -1
+Yuan_04
+  rotate: false
+  xy: 2, 132
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Yuan_05
+  rotate: false
+  xy: 120, 132
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Yuan_06
+  rotate: false
+  xy: 238, 132
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1

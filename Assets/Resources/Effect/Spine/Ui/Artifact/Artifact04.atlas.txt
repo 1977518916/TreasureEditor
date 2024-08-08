@@ -1,0 +1,83 @@
+
+Artifact04.png
+size: 368,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+q
+  rotate: false
+  xy: 2, 99
+  size: 109, 168
+  orig: 109, 168
+  offset: 0, 0
+  index: -1
+x4 (1)
+  rotate: true
+  xy: 45, 3
+  size: 5, 10
+  orig: 74, 224
+  offset: 15, 53
+  index: -1
+x4 (10)
+  rotate: true
+  xy: 2, 2
+  size: 6, 41
+  orig: 74, 224
+  offset: 43, 162
+  index: -1
+x4 (2)
+  rotate: false
+  xy: 2, 10
+  size: 73, 87
+  orig: 74, 224
+  offset: 1, 0
+  index: -1
+x4 (3)
+  rotate: false
+  xy: 233, 8
+  size: 74, 117
+  orig: 74, 224
+  offset: 0, 9
+  index: -1
+x4 (4)
+  rotate: true
+  xy: 88, 23
+  size: 74, 143
+  orig: 74, 224
+  offset: 0, 16
+  index: -1
+x4 (5)
+  rotate: false
+  xy: 113, 109
+  size: 73, 158
+  orig: 74, 224
+  offset: 1, 16
+  index: -1
+x4 (6)
+  rotate: false
+  xy: 253, 129
+  size: 64, 138
+  orig: 74, 224
+  offset: 10, 39
+  index: -1
+x4 (7)
+  rotate: false
+  xy: 188, 127
+  size: 63, 140
+  orig: 74, 224
+  offset: 11, 72
+  index: -1
+x4 (8)
+  rotate: false
+  xy: 309, 2
+  size: 57, 125
+  orig: 74, 224
+  offset: 13, 99
+  index: -1
+x4 (9)
+  rotate: false
+  xy: 77, 11
+  size: 9, 86
+  orig: 74, 224
+  offset: 42, 136
+  index: -1

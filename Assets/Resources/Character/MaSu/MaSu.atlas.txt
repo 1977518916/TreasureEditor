@@ -1,0 +1,118 @@
+
+MaSu.png
+size: 364,364
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_L
+  rotate: false
+  xy: 275, 29
+  size: 53, 53
+  orig: 54, 57
+  offset: 0, 4
+  index: -1
+Arm_R
+  rotate: true
+  xy: 96, 34
+  size: 65, 53
+  orig: 66, 53
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 2, 33
+  size: 113, 92
+  orig: 120, 93
+  offset: 7, 1
+  index: -1
+Eye_L
+  rotate: false
+  xy: 279, 93
+  size: 46, 53
+  orig: 46, 53
+  offset: 0, 0
+  index: -1
+Eye_L_1
+  rotate: false
+  xy: 96, 101
+  size: 68, 67
+  orig: 68, 67
+  offset: 0, 0
+  index: -1
+Eye_R
+  rotate: false
+  xy: 327, 304
+  size: 34, 58
+  orig: 34, 58
+  offset: 0, 0
+  index: -1
+Eye_R_1
+  rotate: false
+  xy: 151, 37
+  size: 62, 62
+  orig: 62, 62
+  offset: 0, 0
+  index: -1
+Feet_L
+  rotate: false
+  xy: 325, 232
+  size: 18, 12
+  orig: 18, 12
+  offset: 0, 0
+  index: -1
+Feet_R
+  rotate: false
+  xy: 345, 230
+  size: 17, 14
+  orig: 17, 14
+  offset: 0, 0
+  index: -1
+Glow
+  rotate: false
+  xy: 215, 24
+  size: 58, 58
+  orig: 64, 64
+  offset: 3, 3
+  index: -1
+Head
+  rotate: false
+  xy: 2, 170
+  size: 202, 192
+  orig: 226, 192
+  offset: 3, 0
+  index: -1
+MeiMao_L
+  rotate: true
+  xy: 166, 101
+  size: 45, 42
+  orig: 45, 42
+  offset: 0, 0
+  index: -1
+MeiMao_R
+  rotate: false
+  xy: 327, 246
+  size: 34, 56
+  orig: 34, 56
+  offset: 0, 0
+  index: -1
+SanShe
+  rotate: true
+  xy: 206, 250
+  size: 112, 119
+  orig: 128, 128
+  offset: 8, 4
+  index: -1
+Shadow
+  rotate: false
+  xy: 215, 84
+  size: 62, 62
+  orig: 64, 64
+  offset: 1, 1
+  index: -1
+ShanZi
+  rotate: false
+  xy: 206, 148
+  size: 117, 100
+  orig: 117, 100
+  offset: 0, 0
+  index: -1

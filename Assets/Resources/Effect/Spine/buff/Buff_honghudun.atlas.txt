@@ -1,0 +1,76 @@
+
+Buff_honghudun.png
+size: 389,948
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/dd (1)
+  rotate: true
+  xy: 195, 759
+  size: 187, 192
+  orig: 194, 203
+  offset: 3, 7
+  index: -1
+images/dd (10)
+  rotate: true
+  xy: 197, 192
+  size: 187, 190
+  orig: 194, 203
+  offset: 4, 9
+  index: -1
+images/dd (2)
+  rotate: true
+  xy: 2, 570
+  size: 187, 192
+  orig: 194, 203
+  offset: 3, 7
+  index: -1
+images/dd (3)
+  rotate: true
+  xy: 2, 381
+  size: 187, 192
+  orig: 194, 203
+  offset: 4, 7
+  index: -1
+images/dd (4)
+  rotate: true
+  xy: 196, 570
+  size: 187, 191
+  orig: 194, 203
+  offset: 4, 8
+  index: -1
+images/dd (5)
+  rotate: true
+  xy: 2, 2
+  size: 188, 190
+  orig: 194, 203
+  offset: 3, 9
+  index: -1
+images/dd (6)
+  rotate: true
+  xy: 2, 192
+  size: 187, 193
+  orig: 194, 203
+  offset: 4, 6
+  index: -1
+images/dd (7)
+  rotate: true
+  xy: 196, 381
+  size: 187, 191
+  orig: 194, 203
+  offset: 4, 8
+  index: -1
+images/dd (8)
+  rotate: true
+  xy: 194, 2
+  size: 188, 191
+  orig: 194, 203
+  offset: 3, 8
+  index: -1
+images/dd (9)
+  rotate: true
+  xy: 2, 759
+  size: 187, 191
+  orig: 194, 203
+  offset: 4, 8
+  index: -1

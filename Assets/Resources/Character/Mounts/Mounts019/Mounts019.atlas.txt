@@ -1,0 +1,27 @@
+
+Mounts019.png
+size: 213,120
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 6
+  size: 143, 112
+  orig: 143, 112
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 147, 2
+  size: 56, 50
+  orig: 56, 50
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 147, 54
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

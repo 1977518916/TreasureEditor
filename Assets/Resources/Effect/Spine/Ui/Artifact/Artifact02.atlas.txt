@@ -1,0 +1,76 @@
+
+Artifact02.png
+size: 647,164
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fc
+  rotate: false
+  xy: 2, 7
+  size: 148, 155
+  orig: 148, 155
+  offset: 0, 0
+  index: -1
+x2 (1)
+  rotate: false
+  xy: 377, 2
+  size: 14, 15
+  orig: 84, 219
+  offset: 15, 42
+  index: -1
+x2 (2)
+  rotate: true
+  xy: 536, 12
+  size: 84, 101
+  orig: 84, 219
+  offset: 0, 0
+  index: -1
+x2 (3)
+  rotate: true
+  xy: 238, 2
+  size: 84, 137
+  orig: 84, 219
+  offset: 0, 1
+  index: -1
+x2 (4)
+  rotate: false
+  xy: 152, 11
+  size: 84, 151
+  orig: 84, 219
+  offset: 0, 10
+  index: -1
+x2 (5)
+  rotate: true
+  xy: 238, 88
+  size: 74, 157
+  orig: 84, 219
+  offset: 10, 13
+  index: -1
+x2 (6)
+  rotate: true
+  xy: 397, 16
+  size: 74, 132
+  orig: 84, 219
+  offset: 10, 45
+  index: -1
+x2 (7)
+  rotate: true
+  xy: 397, 92
+  size: 70, 137
+  orig: 84, 219
+  offset: 13, 78
+  index: -1
+x2 (8)
+  rotate: true
+  xy: 536, 98
+  size: 64, 109
+  orig: 84, 219
+  offset: 16, 110
+  index: -1
+x2 (9)
+  rotate: false
+  xy: 377, 19
+  size: 17, 67
+  orig: 84, 219
+  offset: 43, 142
+  index: -1

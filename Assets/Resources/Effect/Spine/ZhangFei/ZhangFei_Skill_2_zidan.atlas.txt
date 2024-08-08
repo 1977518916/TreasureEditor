@@ -1,0 +1,20 @@
+
+ZhangFei_Skill_2_zidan.png
+size: 187,175
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+q1
+  rotate: false
+  xy: 2, 3
+  size: 103, 170
+  orig: 108, 171
+  offset: 3, 0
+  index: -1
+q2
+  rotate: false
+  xy: 107, 2
+  size: 78, 171
+  orig: 81, 171
+  offset: 2, 0
+  index: -1

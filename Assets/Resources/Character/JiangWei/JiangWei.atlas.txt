@@ -1,0 +1,125 @@
+
+JiangWei.png
+size: 273,682
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+01
+  rotate: true
+  xy: 190, 414
+  size: 119, 61
+  orig: 119, 61
+  offset: 0, 0
+  index: -1
+02
+  rotate: false
+  xy: 68, 223
+  size: 33, 43
+  orig: 33, 43
+  offset: 0, 0
+  index: -1
+03
+  rotate: true
+  xy: 104, 316
+  size: 81, 41
+  orig: 81, 41
+  offset: 0, 0
+  index: -1
+04
+  rotate: true
+  xy: 104, 399
+  size: 104, 52
+  orig: 104, 52
+  offset: 0, 0
+  index: -1
+05
+  rotate: false
+  xy: 2, 505
+  size: 186, 175
+  orig: 191, 175
+  offset: 0, 0
+  index: -1
+06
+  rotate: true
+  xy: 140, 110
+  size: 163, 131
+  orig: 163, 135
+  offset: 0, 4
+  index: -1
+07
+  rotate: false
+  xy: 2, 2
+  size: 122, 157
+  orig: 139, 157
+  offset: 17, 0
+  index: -1
+08
+  rotate: false
+  xy: 2, 161
+  size: 61, 39
+  orig: 61, 43
+  offset: 0, 0
+  index: -1
+09
+  rotate: true
+  xy: 68, 164
+  size: 55, 60
+  orig: 62, 62
+  offset: 7, 2
+  index: -1
+10
+  rotate: true
+  xy: 253, 449
+  size: 84, 16
+  orig: 84, 16
+  offset: 0, 0
+  index: -1
+11
+  rotate: true
+  xy: 158, 275
+  size: 137, 111
+  orig: 141, 111
+  offset: 4, 0
+  index: -1
+12
+  rotate: true
+  xy: 190, 535
+  size: 145, 77
+  orig: 147, 85
+  offset: 0, 8
+  index: -1
+13
+  rotate: false
+  xy: 158, 478
+  size: 25, 25
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+DaoGuang01
+  rotate: true
+  xy: 2, 268
+  size: 235, 100
+  orig: 278, 114
+  offset: 12, 7
+  index: -1
+DaoGuang02
+  rotate: false
+  xy: 126, 2
+  size: 117, 106
+  orig: 128, 128
+  offset: 3, 11
+  index: -1
+DaoGuang03
+  rotate: false
+  xy: 104, 221
+  size: 34, 93
+  orig: 51, 96
+  offset: 9, 2
+  index: -1
+Shadow
+  rotate: false
+  xy: 2, 202
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

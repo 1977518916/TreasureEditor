@@ -1,0 +1,62 @@
+
+Fx_MaDai_Hit.png
+size: 577,464
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+马岱受击/s (1)
+  rotate: true
+  xy: 425, 5
+  size: 96, 141
+  orig: 285, 268
+  offset: 95, 66
+  index: -1
+马岱受击/s (11)
+  rotate: false
+  xy: 422, 281
+  size: 153, 181
+  orig: 285, 268
+  offset: 66, 20
+  index: -1
+马岱受击/s (12)
+  rotate: false
+  xy: 425, 103
+  size: 140, 176
+  orig: 285, 268
+  offset: 66, 20
+  index: -1
+马岱受击/s (14)
+  rotate: false
+  xy: 2, 2
+  size: 25, 18
+  orig: 285, 268
+  offset: 120, 101
+  index: -1
+马岱受击/s (3)
+  rotate: false
+  xy: 240, 246
+  size: 180, 216
+  orig: 285, 268
+  offset: 67, 39
+  index: -1
+马岱受击/s (6)
+  rotate: false
+  xy: 225, 29
+  size: 198, 198
+  orig: 285, 268
+  offset: 35, 41
+  index: -1
+马岱受击/s (8)
+  rotate: false
+  xy: 2, 229
+  size: 236, 233
+  orig: 285, 268
+  offset: 35, 6
+  index: -1
+马岱受击/s (9)
+  rotate: false
+  xy: 2, 22
+  size: 221, 205
+  orig: 285, 268
+  offset: 50, 6
+  index: -1

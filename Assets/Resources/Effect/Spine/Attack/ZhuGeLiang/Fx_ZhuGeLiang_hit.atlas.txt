@@ -1,0 +1,90 @@
+
+Fx_ZhuGeLiang_hit.png
+size: 346,928
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+11 (1)
+  rotate: false
+  xy: 96, 845
+  size: 81, 81
+  orig: 242, 213
+  offset: 82, 66
+  index: -1
+11 (11)
+  rotate: false
+  xy: 134, 635
+  size: 208, 130
+  orig: 242, 213
+  offset: 18, 40
+  index: -1
+11 (13)
+  rotate: true
+  xy: 205, 2
+  size: 210, 131
+  orig: 242, 213
+  offset: 17, 40
+  index: -1
+11 (15)
+  rotate: true
+  xy: 205, 214
+  size: 209, 132
+  orig: 242, 213
+  offset: 18, 39
+  index: -1
+11 (17)
+  rotate: true
+  xy: 212, 425
+  size: 208, 132
+  orig: 242, 213
+  offset: 18, 39
+  index: -1
+11 (19)
+  rotate: true
+  xy: 2, 641
+  size: 202, 130
+  orig: 242, 213
+  offset: 21, 40
+  index: -1
+11 (21)
+  rotate: false
+  xy: 16, 877
+  size: 78, 49
+  orig: 242, 213
+  offset: 70, 87
+  index: -1
+11 (23)
+  rotate: false
+  xy: 2, 915
+  size: 12, 11
+  orig: 242, 213
+  offset: 140, 127
+  index: -1
+11 (3)
+  rotate: false
+  xy: 179, 767
+  size: 160, 159
+  orig: 242, 213
+  offset: 42, 29
+  index: -1
+11 (5)
+  rotate: false
+  xy: 2, 300
+  size: 201, 201
+  orig: 242, 213
+  offset: 21, 9
+  index: -1
+11 (7)
+  rotate: false
+  xy: 2, 97
+  size: 201, 201
+  orig: 242, 213
+  offset: 21, 9
+  index: -1
+11 (9)
+  rotate: false
+  xy: 2, 503
+  size: 208, 130
+  orig: 242, 213
+  offset: 18, 40
+  index: -1

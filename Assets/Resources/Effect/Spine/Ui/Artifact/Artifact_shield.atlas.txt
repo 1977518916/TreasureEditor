@@ -1,0 +1,881 @@
+
+Artifact_shield.png
+size: 1719,1794
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+盾/cai (1)
+  rotate: false
+  xy: 306, 1578
+  size: 163, 214
+  orig: 164, 214
+  offset: 1, 0
+  index: -1
+盾/cai (16)
+  rotate: false
+  xy: 306, 1578
+  size: 163, 214
+  orig: 164, 214
+  offset: 1, 0
+  index: -1
+盾/cai (10)
+  rotate: false
+  xy: 1296, 1579
+  size: 163, 213
+  orig: 164, 214
+  offset: 1, 0
+  index: -1
+盾/cai (11)
+  rotate: false
+  xy: 2, 1073
+  size: 164, 213
+  orig: 164, 214
+  offset: 0, 0
+  index: -1
+盾/cai (12)
+  rotate: false
+  xy: 1461, 1579
+  size: 163, 213
+  orig: 164, 214
+  offset: 1, 0
+  index: -1
+盾/cai (13)
+  rotate: false
+  xy: 471, 1578
+  size: 163, 214
+  orig: 164, 214
+  offset: 1, 0
+  index: -1
+盾/cai (14)
+  rotate: false
+  xy: 2, 857
+  size: 163, 214
+  orig: 164, 214
+  offset: 1, 0
+  index: -1
+盾/cai (15)
+  rotate: false
+  xy: 636, 1578
+  size: 163, 214
+  orig: 164, 214
+  offset: 1, 0
+  index: -1
+盾/cai (2)
+  rotate: false
+  xy: 2, 641
+  size: 162, 214
+  orig: 164, 214
+  offset: 2, 0
+  index: -1
+盾/cai (3)
+  rotate: false
+  xy: 2, 426
+  size: 162, 213
+  orig: 164, 214
+  offset: 2, 0
+  index: -1
+盾/cai (4)
+  rotate: false
+  xy: 801, 1579
+  size: 163, 213
+  orig: 164, 214
+  offset: 1, 0
+  index: -1
+盾/cai (5)
+  rotate: false
+  xy: 2, 211
+  size: 162, 213
+  orig: 164, 214
+  offset: 2, 0
+  index: -1
+盾/cai (6)
+  rotate: true
+  xy: 306, 1414
+  size: 162, 213
+  orig: 164, 214
+  offset: 2, 0
+  index: -1
+盾/cai (7)
+  rotate: true
+  xy: 521, 1414
+  size: 162, 213
+  orig: 164, 214
+  offset: 2, 0
+  index: -1
+盾/cai (8)
+  rotate: false
+  xy: 966, 1579
+  size: 163, 213
+  orig: 164, 214
+  offset: 1, 0
+  index: -1
+盾/cai (9)
+  rotate: false
+  xy: 1131, 1579
+  size: 163, 213
+  orig: 164, 214
+  offset: 1, 0
+  index: -1
+盾/h (1)
+  rotate: false
+  xy: 546, 1039
+  size: 162, 209
+  orig: 164, 212
+  offset: 2, 3
+  index: -1
+盾/h (16)
+  rotate: false
+  xy: 546, 1039
+  size: 162, 209
+  orig: 164, 212
+  offset: 2, 3
+  index: -1
+盾/h (10)
+  rotate: true
+  xy: 332, 1085
+  size: 163, 212
+  orig: 164, 212
+  offset: 1, 0
+  index: -1
+盾/h (11)
+  rotate: true
+  xy: 950, 1414
+  size: 163, 212
+  orig: 164, 212
+  offset: 1, 0
+  index: -1
+盾/h (12)
+  rotate: true
+  xy: 1164, 1414
+  size: 163, 212
+  orig: 164, 212
+  offset: 1, 0
+  index: -1
+盾/h (13)
+  rotate: true
+  xy: 1378, 1413
+  size: 164, 211
+  orig: 164, 212
+  offset: 0, 1
+  index: -1
+盾/h (14)
+  rotate: false
+  xy: 875, 1038
+  size: 163, 211
+  orig: 164, 212
+  offset: 1, 1
+  index: -1
+盾/h (15)
+  rotate: true
+  xy: 1086, 1249
+  size: 163, 210
+  orig: 164, 212
+  offset: 1, 2
+  index: -1
+盾/h (2)
+  rotate: true
+  xy: 663, 1250
+  size: 162, 208
+  orig: 164, 212
+  offset: 2, 3
+  index: -1
+盾/h (3)
+  rotate: true
+  xy: 1509, 1248
+  size: 163, 208
+  orig: 164, 212
+  offset: 1, 3
+  index: -1
+盾/h (4)
+  rotate: false
+  xy: 710, 1039
+  size: 163, 209
+  orig: 164, 212
+  offset: 1, 2
+  index: -1
+盾/h (5)
+  rotate: false
+  xy: 1040, 1038
+  size: 163, 209
+  orig: 164, 212
+  offset: 1, 2
+  index: -1
+盾/h (6)
+  rotate: true
+  xy: 873, 1251
+  size: 161, 211
+  orig: 164, 212
+  offset: 2, 1
+  index: -1
+盾/h (7)
+  rotate: false
+  xy: 168, 1074
+  size: 162, 212
+  orig: 164, 212
+  offset: 1, 0
+  index: -1
+盾/h (8)
+  rotate: true
+  xy: 449, 1250
+  size: 162, 212
+  orig: 164, 212
+  offset: 1, 0
+  index: -1
+盾/h (9)
+  rotate: true
+  xy: 736, 1414
+  size: 162, 212
+  orig: 164, 212
+  offset: 1, 0
+  index: -1
+盾/hh (1)
+  rotate: true
+  xy: 1324, 282
+  size: 156, 204
+  orig: 159, 206
+  offset: 3, 1
+  index: -1
+盾/hh (16)
+  rotate: true
+  xy: 1324, 282
+  size: 156, 204
+  orig: 159, 206
+  offset: 3, 1
+  index: -1
+盾/hh (10)
+  rotate: true
+  xy: 538, 395
+  size: 158, 206
+  orig: 159, 206
+  offset: 1, 0
+  index: -1
+盾/hh (11)
+  rotate: true
+  xy: 746, 394
+  size: 159, 206
+  orig: 159, 206
+  offset: 0, 0
+  index: -1
+盾/hh (12)
+  rotate: true
+  xy: 537, 235
+  size: 158, 206
+  orig: 159, 206
+  offset: 1, 0
+  index: -1
+盾/hh (13)
+  rotate: true
+  xy: 948, 75
+  size: 158, 205
+  orig: 159, 206
+  offset: 1, 0
+  index: -1
+盾/hh (14)
+  rotate: true
+  xy: 745, 235
+  size: 157, 206
+  orig: 159, 206
+  offset: 2, 0
+  index: -1
+盾/hh (15)
+  rotate: true
+  xy: 953, 235
+  size: 157, 206
+  orig: 159, 206
+  offset: 2, 0
+  index: -1
+盾/hh (2)
+  rotate: false
+  xy: 1530, 187
+  size: 156, 204
+  orig: 159, 206
+  offset: 3, 1
+  index: -1
+盾/hh (3)
+  rotate: false
+  xy: 1165, 412
+  size: 157, 203
+  orig: 159, 206
+  offset: 2, 1
+  index: -1
+盾/hh (4)
+  rotate: true
+  xy: 1324, 440
+  size: 157, 204
+  orig: 159, 206
+  offset: 2, 1
+  index: -1
+盾/hh (5)
+  rotate: true
+  xy: 327, 120
+  size: 157, 205
+  orig: 159, 206
+  offset: 2, 0
+  index: -1
+盾/hh (6)
+  rotate: true
+  xy: 534, 76
+  size: 157, 205
+  orig: 159, 206
+  offset: 2, 0
+  index: -1
+盾/hh (7)
+  rotate: false
+  xy: 1530, 393
+  size: 157, 204
+  orig: 159, 206
+  offset: 1, 1
+  index: -1
+盾/hh (8)
+  rotate: true
+  xy: 741, 76
+  size: 157, 205
+  orig: 159, 206
+  offset: 2, 0
+  index: -1
+盾/hh (9)
+  rotate: true
+  xy: 957, 555
+  size: 158, 206
+  orig: 159, 206
+  offset: 1, 0
+  index: -1
+盾/lan (1)
+  rotate: false
+  xy: 164, 2
+  size: 159, 207
+  orig: 161, 209
+  offset: 2, 1
+  index: -1
+盾/lan (16)
+  rotate: false
+  xy: 164, 2
+  size: 159, 207
+  orig: 161, 209
+  offset: 2, 1
+  index: -1
+盾/lan (10)
+  rotate: false
+  xy: 1172, 617
+  size: 160, 208
+  orig: 161, 209
+  offset: 1, 0
+  index: -1
+盾/lan (11)
+  rotate: true
+  xy: 1509, 1085
+  size: 161, 208
+  orig: 161, 209
+  offset: 0, 0
+  index: -1
+盾/lan (12)
+  rotate: false
+  xy: 1334, 599
+  size: 160, 208
+  orig: 161, 209
+  offset: 1, 0
+  index: -1
+盾/lan (13)
+  rotate: false
+  xy: 167, 652
+  size: 160, 208
+  orig: 161, 209
+  offset: 1, 0
+  index: -1
+盾/lan (14)
+  rotate: true
+  xy: 329, 601
+  size: 159, 208
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/lan (15)
+  rotate: false
+  xy: 1205, 1038
+  size: 159, 209
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/lan (2)
+  rotate: true
+  xy: 539, 555
+  size: 159, 207
+  orig: 161, 209
+  offset: 2, 1
+  index: -1
+盾/lan (3)
+  rotate: true
+  xy: 954, 394
+  size: 159, 206
+  orig: 161, 209
+  offset: 2, 1
+  index: -1
+盾/lan (4)
+  rotate: true
+  xy: 748, 555
+  size: 159, 207
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/lan (5)
+  rotate: true
+  xy: 962, 715
+  size: 159, 208
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/lan (6)
+  rotate: true
+  xy: 1496, 599
+  size: 159, 208
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/lan (7)
+  rotate: false
+  xy: 2, 2
+  size: 160, 207
+  orig: 161, 209
+  offset: 1, 1
+  index: -1
+盾/lan (8)
+  rotate: false
+  xy: 166, 232
+  size: 159, 208
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/lan (9)
+  rotate: false
+  xy: 1339, 809
+  size: 160, 208
+  orig: 161, 209
+  offset: 1, 0
+  index: -1
+盾/lzz (1)
+  rotate: false
+  xy: 1626, 1650
+  size: 86, 94
+  orig: 137, 158
+  offset: 27, 27
+  index: -1
+盾/lzz (11)
+  rotate: false
+  xy: 1626, 1650
+  size: 86, 94
+  orig: 137, 158
+  offset: 27, 27
+  index: -1
+盾/lzz (10)
+  rotate: true
+  xy: 325, 4
+  size: 114, 122
+  orig: 137, 158
+  offset: 0, 11
+  index: -1
+盾/lzz (20)
+  rotate: true
+  xy: 325, 4
+  size: 114, 122
+  orig: 137, 158
+  offset: 0, 11
+  index: -1
+盾/lzz (2)
+  rotate: false
+  xy: 1591, 1458
+  size: 113, 119
+  orig: 137, 158
+  offset: 24, 11
+  index: -1
+盾/lzz (12)
+  rotate: false
+  xy: 1591, 1458
+  size: 113, 119
+  orig: 137, 158
+  offset: 24, 11
+  index: -1
+盾/lzz (3)
+  rotate: true
+  xy: 1161, 180
+  size: 114, 117
+  orig: 137, 158
+  offset: 21, 23
+  index: -1
+盾/lzz (13)
+  rotate: true
+  xy: 1161, 180
+  size: 114, 117
+  orig: 137, 158
+  offset: 21, 23
+  index: -1
+盾/lzz (4)
+  rotate: true
+  xy: 1155, 64
+  size: 114, 117
+  orig: 137, 158
+  offset: 18, 6
+  index: -1
+盾/lzz (14)
+  rotate: true
+  xy: 1155, 64
+  size: 114, 117
+  orig: 137, 158
+  offset: 18, 6
+  index: -1
+盾/lzz (5)
+  rotate: true
+  xy: 1162, 296
+  size: 114, 118
+  orig: 137, 158
+  offset: 14, 14
+  index: -1
+盾/lzz (15)
+  rotate: true
+  xy: 1162, 296
+  size: 114, 118
+  orig: 137, 158
+  offset: 14, 14
+  index: -1
+盾/lzz (6)
+  rotate: true
+  xy: 1366, 1134
+  size: 114, 141
+  orig: 137, 158
+  offset: 11, 0
+  index: -1
+盾/lzz (16)
+  rotate: true
+  xy: 1366, 1134
+  size: 114, 141
+  orig: 137, 158
+  offset: 11, 0
+  index: -1
+盾/lzz (7)
+  rotate: true
+  xy: 1366, 1019
+  size: 113, 141
+  orig: 137, 158
+  offset: 9, 9
+  index: -1
+盾/lzz (17)
+  rotate: true
+  xy: 1366, 1019
+  size: 113, 141
+  orig: 137, 158
+  offset: 9, 9
+  index: -1
+盾/lzz (8)
+  rotate: true
+  xy: 303, 1299
+  size: 113, 144
+  orig: 137, 158
+  offset: 6, 14
+  index: -1
+盾/lzz (18)
+  rotate: true
+  xy: 303, 1299
+  size: 113, 144
+  orig: 137, 158
+  offset: 6, 14
+  index: -1
+盾/lzz (9)
+  rotate: false
+  xy: 1280, 179
+  size: 113, 101
+  orig: 137, 158
+  offset: 3, 24
+  index: -1
+盾/lzz (19)
+  rotate: false
+  xy: 1280, 179
+  size: 113, 101
+  orig: 137, 158
+  offset: 3, 24
+  index: -1
+盾/sg (1)
+  rotate: true
+  xy: 1689, 536
+  size: 61, 23
+  orig: 116, 140
+  offset: 31, 0
+  index: -1
+盾/sg (10)
+  rotate: false
+  xy: 1274, 77
+  size: 113, 48
+  orig: 116, 140
+  offset: 0, 77
+  index: -1
+盾/sg (11)
+  rotate: false
+  xy: 1626, 1746
+  size: 91, 46
+  orig: 116, 140
+  offset: 11, 90
+  index: -1
+盾/sg (12)
+  rotate: false
+  xy: 767, 36
+  size: 74, 38
+  orig: 116, 140
+  offset: 18, 102
+  index: -1
+盾/sg (13)
+  rotate: true
+  xy: 1689, 418
+  size: 54, 23
+  orig: 116, 140
+  offset: 37, 117
+  index: -1
+盾/sg (2)
+  rotate: true
+  xy: 1282, 333
+  size: 77, 35
+  orig: 116, 140
+  offset: 23, 0
+  index: -1
+盾/sg (3)
+  rotate: false
+  xy: 1387, 131
+  size: 86, 44
+  orig: 116, 140
+  offset: 18, 4
+  index: -1
+盾/sg (4)
+  rotate: false
+  xy: 332, 1250
+  size: 93, 47
+  orig: 116, 140
+  offset: 15, 13
+  index: -1
+盾/sg (5)
+  rotate: false
+  xy: 499, 25
+  size: 104, 49
+  orig: 116, 140
+  offset: 10, 23
+  index: -1
+盾/sg (6)
+  rotate: false
+  xy: 1274, 127
+  size: 111, 50
+  orig: 116, 140
+  offset: 5, 34
+  index: -1
+盾/sg (7)
+  rotate: false
+  xy: 1395, 177
+  size: 113, 51
+  orig: 116, 140
+  offset: 3, 44
+  index: -1
+盾/sg (8)
+  rotate: false
+  xy: 1395, 230
+  size: 115, 50
+  orig: 116, 140
+  offset: 1, 55
+  index: -1
+盾/sg (9)
+  rotate: true
+  xy: 449, 2
+  size: 116, 48
+  orig: 116, 140
+  offset: 0, 66
+  index: -1
+盾/xx
+  rotate: false
+  xy: 2, 1288
+  size: 299, 140
+  orig: 299, 140
+  offset: 0, 0
+  index: -1
+盾/xxx (1)
+  rotate: false
+  xy: 687, 2
+  size: 91, 20
+  orig: 91, 68
+  offset: 0, 48
+  index: -1
+盾/xxx (10)
+  rotate: true
+  xy: 1512, 238
+  size: 42, 16
+  orig: 91, 68
+  offset: 19, 0
+  index: -1
+盾/xxx (2)
+  rotate: false
+  xy: 1626, 1621
+  size: 91, 27
+  orig: 91, 68
+  offset: 0, 39
+  index: -1
+盾/xxx (3)
+  rotate: false
+  xy: 1591, 1417
+  size: 90, 39
+  orig: 91, 68
+  offset: 1, 26
+  index: -1
+盾/xxx (4)
+  rotate: false
+  xy: 1389, 75
+  size: 90, 54
+  orig: 91, 68
+  offset: 1, 11
+  index: -1
+盾/xxx (5)
+  rotate: false
+  xy: 605, 16
+  size: 80, 58
+  orig: 91, 68
+  offset: 5, 1
+  index: -1
+盾/xxx (6)
+  rotate: false
+  xy: 687, 24
+  size: 78, 50
+  orig: 91, 68
+  offset: 6, 0
+  index: -1
+盾/xxx (7)
+  rotate: false
+  xy: 1626, 1579
+  size: 76, 40
+  orig: 91, 68
+  offset: 7, 0
+  index: -1
+盾/xxx (8)
+  rotate: false
+  xy: 843, 43
+  size: 71, 31
+  orig: 91, 68
+  offset: 9, 0
+  index: -1
+盾/xxx (9)
+  rotate: true
+  xy: 1689, 474
+  size: 60, 22
+  orig: 91, 68
+  offset: 12, 0
+  index: -1
+盾/zz (1)
+  rotate: true
+  xy: 332, 924
+  size: 159, 209
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/zz (16)
+  rotate: true
+  xy: 332, 924
+  size: 159, 209
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/zz (10)
+  rotate: true
+  xy: 1509, 922
+  size: 161, 208
+  orig: 161, 209
+  offset: 0, 0
+  index: -1
+盾/zz (11)
+  rotate: true
+  xy: 1298, 1250
+  size: 161, 209
+  orig: 161, 209
+  offset: 0, 0
+  index: -1
+盾/zz (12)
+  rotate: false
+  xy: 1176, 827
+  size: 161, 209
+  orig: 161, 209
+  offset: 0, 0
+  index: -1
+盾/zz (13)
+  rotate: true
+  xy: 329, 762
+  size: 160, 209
+  orig: 161, 209
+  offset: 1, 0
+  index: -1
+盾/zz (14)
+  rotate: true
+  xy: 540, 716
+  size: 160, 209
+  orig: 161, 209
+  offset: 1, 0
+  index: -1
+盾/zz (15)
+  rotate: true
+  xy: 751, 716
+  size: 159, 209
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/zz (2)
+  rotate: true
+  xy: 543, 878
+  size: 159, 209
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/zz (3)
+  rotate: true
+  xy: 754, 877
+  size: 159, 209
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/zz (4)
+  rotate: true
+  xy: 328, 440
+  size: 159, 208
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/zz (5)
+  rotate: true
+  xy: 327, 279
+  size: 159, 208
+  orig: 161, 209
+  offset: 2, 0
+  index: -1
+盾/zz (6)
+  rotate: false
+  xy: 166, 442
+  size: 160, 208
+  orig: 161, 209
+  offset: 1, 0
+  index: -1
+盾/zz (7)
+  rotate: true
+  xy: 965, 876
+  size: 160, 209
+  orig: 161, 209
+  offset: 1, 0
+  index: -1
+盾/zz (8)
+  rotate: true
+  xy: 1501, 760
+  size: 160, 209
+  orig: 161, 209
+  offset: 1, 0
+  index: -1
+盾/zz (9)
+  rotate: false
+  xy: 167, 862
+  size: 160, 209
+  orig: 161, 209
+  offset: 1, 0
+  index: -1
+盾/组 21
+  rotate: false
+  xy: 2, 1430
+  size: 302, 362
+  orig: 302, 362
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,20 @@
+
+Monster008_quan.png
+size: 276,238
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bz
+  rotate: true
+  xy: 239, 197
+  size: 39, 35
+  orig: 39, 35
+  offset: 0, 0
+  index: -1
+qq1
+  rotate: false
+  xy: 2, 2
+  size: 235, 234
+  orig: 240, 240
+  offset: 3, 3
+  index: -1

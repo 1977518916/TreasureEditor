@@ -1,0 +1,48 @@
+
+Mounts016.png
+size: 264,164
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+16_1
+  rotate: false
+  xy: 109, 6
+  size: 85, 66
+  orig: 85, 66
+  offset: 0, 0
+  index: -1
+16_2
+  rotate: true
+  xy: 2, 2
+  size: 160, 105
+  orig: 160, 105
+  offset: 0, 0
+  index: -1
+16_3
+  rotate: false
+  xy: 214, 119
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+16_4
+  rotate: false
+  xy: 214, 74
+  size: 43, 43
+  orig: 43, 43
+  offset: 0, 0
+  index: -1
+16_5
+  rotate: true
+  xy: 109, 76
+  size: 86, 103
+  orig: 86, 103
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 196, 8
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

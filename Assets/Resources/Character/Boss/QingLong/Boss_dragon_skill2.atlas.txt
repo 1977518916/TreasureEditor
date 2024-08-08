@@ -1,0 +1,111 @@
+
+Boss_dragon_skill2.png
+size: 945,545
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+d1
+  rotate: true
+  xy: 872, 26
+  size: 157, 55
+  orig: 198, 122
+  offset: 8, 27
+  index: -1
+d2
+  rotate: false
+  xy: 2, 12
+  size: 190, 54
+  orig: 198, 122
+  offset: 2, 26
+  index: -1
+d3
+  rotate: false
+  xy: 236, 15
+  size: 156, 121
+  orig: 198, 122
+  offset: 41, 0
+  index: -1
+d4
+  rotate: false
+  xy: 462, 2
+  size: 156, 121
+  orig: 198, 122
+  offset: 41, 0
+  index: -1
+d5
+  rotate: true
+  xy: 394, 4
+  size: 132, 66
+  orig: 198, 122
+  offset: 64, 20
+  index: -1
+quan
+  rotate: false
+  xy: 2, 280
+  size: 262, 263
+  orig: 267, 267
+  offset: 3, 1
+  index: -1
+xingx (1)
+  rotate: true
+  xy: 620, 21
+  size: 102, 82
+  orig: 252, 235
+  offset: 93, 76
+  index: -1
+xingx (2)
+  rotate: false
+  xy: 718, 185
+  size: 192, 156
+  orig: 252, 235
+  offset: 48, 40
+  index: -1
+xingx (3)
+  rotate: false
+  xy: 266, 138
+  size: 222, 198
+  orig: 252, 235
+  offset: 18, 21
+  index: -1
+xingx (4)
+  rotate: false
+  xy: 718, 343
+  size: 225, 200
+  orig: 252, 235
+  offset: 15, 19
+  index: -1
+xingx (5)
+  rotate: false
+  xy: 266, 338
+  size: 227, 205
+  orig: 252, 235
+  offset: 13, 15
+  index: -1
+xingx (6)
+  rotate: false
+  xy: 2, 68
+  size: 232, 210
+  orig: 252, 235
+  offset: 10, 12
+  index: -1
+xingx (7)
+  rotate: false
+  xy: 490, 125
+  size: 216, 206
+  orig: 252, 235
+  offset: 19, 14
+  index: -1
+xingx (8)
+  rotate: false
+  xy: 495, 333
+  size: 221, 210
+  orig: 252, 235
+  offset: 20, 8
+  index: -1
+xingx (9)
+  rotate: true
+  xy: 708, 22
+  size: 161, 162
+  orig: 252, 235
+  offset: 72, 37
+  index: -1

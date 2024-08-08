@@ -1,0 +1,34 @@
+
+ZhuGeLiang_Skill_1.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DiMianFire
+  rotate: false
+  xy: 2, 2
+  size: 128, 123
+  orig: 128, 128
+  offset: 0, 4
+  index: -1
+Dian
+  rotate: false
+  xy: 223, 74
+  size: 51, 51
+  orig: 64, 64
+  offset: 7, 6
+  index: -1
+LiuXin_GloWg
+  rotate: false
+  xy: 132, 11
+  size: 89, 35
+  orig: 89, 89
+  offset: 0, 27
+  index: -1
+LiuXingBaoDian
+  rotate: false
+  xy: 132, 48
+  size: 89, 77
+  orig: 89, 89
+  offset: 0, 8
+  index: -1

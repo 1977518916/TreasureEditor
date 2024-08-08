@@ -1,0 +1,125 @@
+
+LingTong.png
+size: 336,336
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 166, 214
+  size: 119, 103
+  orig: 125, 103
+  offset: 0, 0
+  index: -1
+Eye_L
+  rotate: false
+  xy: 230, 152
+  size: 66, 60
+  orig: 66, 60
+  offset: 0, 0
+  index: -1
+Eye_L_1
+  rotate: true
+  xy: 166, 151
+  size: 61, 62
+  orig: 61, 62
+  offset: 0, 0
+  index: -1
+Eye_R
+  rotate: true
+  xy: 142, 7
+  size: 33, 59
+  orig: 33, 59
+  offset: 0, 0
+  index: -1
+Eye_R_1
+  rotate: false
+  xy: 271, 214
+  size: 51, 51
+  orig: 51, 51
+  offset: 0, 0
+  index: -1
+Feet_L
+  rotate: true
+  xy: 298, 195
+  size: 17, 15
+  orig: 17, 15
+  offset: 0, 0
+  index: -1
+Feet_R
+  rotate: true
+  xy: 298, 176
+  size: 17, 15
+  orig: 17, 15
+  offset: 0, 0
+  index: -1
+Hamd_L
+  rotate: true
+  xy: 77, 10
+  size: 27, 29
+  orig: 27, 29
+  offset: 0, 0
+  index: -1
+Hand_L
+  rotate: false
+  xy: 108, 9
+  size: 26, 28
+  orig: 26, 28
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 147
+  size: 162, 186
+  orig: 162, 186
+  offset: 0, 0
+  index: -1
+Jian
+  rotate: true
+  xy: 2, 39
+  size: 106, 138
+  orig: 106, 138
+  offset: 0, 0
+  index: -1
+JianJia_L
+  rotate: false
+  xy: 2, 5
+  size: 39, 32
+  orig: 39, 32
+  offset: 0, 0
+  index: -1
+JianJia_R
+  rotate: false
+  xy: 203, 2
+  size: 40, 38
+  orig: 40, 38
+  offset: 0, 0
+  index: -1
+MeiMao_L
+  rotate: true
+  xy: 271, 267
+  size: 66, 55
+  orig: 66, 55
+  offset: 0, 0
+  index: -1
+MeiMao_R
+  rotate: true
+  xy: 245, 7
+  size: 33, 58
+  orig: 33, 58
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 43, 5
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Turban
+  rotate: false
+  xy: 142, 42
+  size: 159, 103
+  orig: 159, 103
+  offset: 0, 0
+  index: -1

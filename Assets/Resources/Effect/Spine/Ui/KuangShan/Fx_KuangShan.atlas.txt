@@ -1,0 +1,27 @@
+
+Fx_KuangShan.png
+size: 248,176
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow1
+  rotate: true
+  xy: 2, 2
+  size: 170, 184
+  orig: 170, 184
+  offset: 0, 0
+  index: -1
+SanJiao
+  rotate: true
+  xy: 188, 54
+  size: 60, 46
+  orig: 60, 46
+  offset: 0, 0
+  index: -1
+Star
+  rotate: false
+  xy: 188, 116
+  size: 56, 56
+  orig: 64, 64
+  offset: 4, 4
+  index: -1

@@ -1,0 +1,111 @@
+
+Fx_Fire.png
+size: 629,110
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fire_01
+  rotate: true
+  xy: 547, 50
+  size: 58, 69
+  orig: 128, 128
+  offset: 30, 0
+  index: -1
+Fire_02
+  rotate: false
+  xy: 469, 7
+  size: 76, 101
+  orig: 128, 128
+  offset: 22, 0
+  index: -1
+Fire_03
+  rotate: false
+  xy: 204, 4
+  size: 91, 104
+  orig: 128, 128
+  offset: 16, 9
+  index: -1
+Fire_04
+  rotate: false
+  xy: 2, 2
+  size: 100, 106
+  orig: 128, 128
+  offset: 13, 17
+  index: -1
+Fire_05
+  rotate: false
+  xy: 2, 2
+  size: 100, 106
+  orig: 128, 128
+  offset: 13, 17
+  index: -1
+Fire_06
+  rotate: true
+  xy: 104, 2
+  size: 106, 98
+  orig: 128, 128
+  offset: 12, 27
+  index: -1
+Fire_07
+  rotate: true
+  xy: 104, 2
+  size: 106, 98
+  orig: 128, 128
+  offset: 12, 27
+  index: -1
+Fire_08
+  rotate: true
+  xy: 297, 5
+  size: 103, 90
+  orig: 128, 128
+  offset: 16, 35
+  index: -1
+Fire_09
+  rotate: true
+  xy: 297, 5
+  size: 103, 90
+  orig: 128, 128
+  offset: 16, 35
+  index: -1
+Fire_10
+  rotate: true
+  xy: 389, 9
+  size: 99, 78
+  orig: 128, 128
+  offset: 21, 43
+  index: -1
+Fire_11
+  rotate: true
+  xy: 389, 9
+  size: 99, 78
+  orig: 128, 128
+  offset: 21, 43
+  index: -1
+Fire_12
+  rotate: true
+  xy: 547, 14
+  size: 34, 53
+  orig: 128, 128
+  offset: 84, 68
+  index: -1
+Fire_13
+  rotate: true
+  xy: 547, 14
+  size: 34, 53
+  orig: 128, 128
+  offset: 84, 68
+  index: -1
+Fire_14
+  rotate: false
+  xy: 602, 8
+  size: 25, 40
+  orig: 128, 128
+  offset: 89, 77
+  index: -1
+Fire_15
+  rotate: false
+  xy: 602, 8
+  size: 25, 40
+  orig: 128, 128
+  offset: 89, 77
+  index: -1

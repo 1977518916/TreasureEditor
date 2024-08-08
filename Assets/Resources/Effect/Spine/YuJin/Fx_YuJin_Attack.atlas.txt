@@ -1,0 +1,13 @@
+
+Fx_YuJin_Attack.png
+size: 44,272
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/20240415-165446
+  rotate: false
+  xy: 2, 2
+  size: 40, 268
+  orig: 49, 271
+  offset: 5, 1
+  index: -1

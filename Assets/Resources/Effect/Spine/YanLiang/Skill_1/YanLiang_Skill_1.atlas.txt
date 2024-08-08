@@ -1,0 +1,34 @@
+
+YanLiang_Skill_1.png
+size: 1887,560
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DaoGuang
+  rotate: false
+  xy: 1632, 308
+  size: 253, 250
+  orig: 256, 256
+  offset: 3, 2
+  index: -1
+WuQi
+  rotate: false
+  xy: 1632, 2
+  size: 149, 304
+  orig: 173, 317
+  offset: 8, 10
+  index: -1
+XuanZhuan_1
+  rotate: false
+  xy: 2, 10
+  size: 813, 548
+  orig: 890, 565
+  offset: 61, 1
+  index: -1
+XuanZhuan_2
+  rotate: false
+  xy: 817, 10
+  size: 813, 548
+  orig: 890, 565
+  offset: 16, 1
+  index: -1

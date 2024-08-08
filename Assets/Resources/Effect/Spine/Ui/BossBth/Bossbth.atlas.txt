@@ -1,0 +1,20 @@
+
+Bossbth.png
+size: 129,70
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow
+  rotate: true
+  xy: 56, 2
+  size: 66, 71
+  orig: 80, 80
+  offset: 7, 4
+  index: -1
+Outline
+  rotate: false
+  xy: 2, 16
+  size: 52, 52
+  orig: 80, 80
+  offset: 14, 14
+  index: -1

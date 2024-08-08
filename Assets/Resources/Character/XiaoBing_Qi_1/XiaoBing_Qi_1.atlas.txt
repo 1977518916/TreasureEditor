@@ -1,0 +1,111 @@
+
+XiaoBing_Qi_1.png
+size: 1181,100
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+monster32_walk_00
+  rotate: false
+  xy: 97, 6
+  size: 91, 92
+  orig: 100, 100
+  offset: 4, 5
+  index: -1
+monster32_walk_08
+  rotate: false
+  xy: 97, 6
+  size: 91, 92
+  orig: 100, 100
+  offset: 4, 5
+  index: -1
+monster32_walk_01
+  rotate: true
+  xy: 283, 5
+  size: 93, 90
+  orig: 100, 100
+  offset: 3, 5
+  index: -1
+monster32_walk_02
+  rotate: true
+  xy: 190, 6
+  size: 92, 91
+  orig: 100, 100
+  offset: 4, 5
+  index: -1
+monster32_walk_03
+  rotate: false
+  xy: 375, 5
+  size: 90, 93
+  orig: 100, 100
+  offset: 6, 5
+  index: -1
+monster32_walk_04
+  rotate: false
+  xy: 557, 5
+  size: 88, 93
+  orig: 100, 100
+  offset: 8, 5
+  index: -1
+monster32_walk_05
+  rotate: false
+  xy: 735, 3
+  size: 83, 95
+  orig: 100, 100
+  offset: 9, 5
+  index: -1
+monster32_walk_06
+  rotate: false
+  xy: 820, 4
+  size: 83, 94
+  orig: 100, 100
+  offset: 7, 5
+  index: -1
+monster32_walk_07
+  rotate: false
+  xy: 647, 6
+  size: 86, 92
+  orig: 100, 100
+  offset: 6, 5
+  index: -1
+monster32_walk_09
+  rotate: false
+  xy: 2, 2
+  size: 93, 96
+  orig: 100, 100
+  offset: 7, 4
+  index: -1
+monster32_walk_10
+  rotate: false
+  xy: 467, 3
+  size: 88, 95
+  orig: 100, 100
+  offset: 12, 5
+  index: -1
+monster32_walk_11
+  rotate: false
+  xy: 905, 3
+  size: 79, 95
+  orig: 100, 100
+  offset: 21, 5
+  index: -1
+monster32_walk_12
+  rotate: false
+  xy: 986, 3
+  size: 75, 95
+  orig: 100, 100
+  offset: 25, 5
+  index: -1
+monster32_walk_13
+  rotate: false
+  xy: 1063, 21
+  size: 58, 77
+  orig: 100, 100
+  offset: 42, 23
+  index: -1
+monster32_walk_14
+  rotate: false
+  xy: 1123, 27
+  size: 56, 71
+  orig: 100, 100
+  offset: 44, 29
+  index: -1

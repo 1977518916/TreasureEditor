@@ -1,0 +1,62 @@
+
+BaoXiang.png
+size: 667,525
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoGuang
+  rotate: true
+  xy: 2, 98
+  size: 425, 171
+  orig: 480, 212
+  offset: 26, 12
+  index: -1
+BaoXiang
+  rotate: true
+  xy: 175, 182
+  size: 341, 263
+  orig: 341, 263
+  offset: 0, 0
+  index: -1
+Down
+  rotate: false
+  xy: 175, 3
+  size: 339, 177
+  orig: 339, 177
+  offset: 0, 0
+  index: -1
+FeiDan
+  rotate: false
+  xy: 2, 2
+  size: 23, 94
+  orig: 25, 97
+  offset: 1, 2
+  index: -1
+Glow
+  rotate: false
+  xy: 27, 32
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+SaoGuang
+  rotate: false
+  xy: 516, 59
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 93, 34
+  size: 62, 62
+  orig: 64, 64
+  offset: 1, 1
+  index: -1
+Up
+  rotate: true
+  xy: 440, 189
+  size: 334, 225
+  orig: 334, 225
+  offset: 0, 0
+  index: -1

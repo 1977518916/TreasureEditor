@@ -1,0 +1,181 @@
+
+ZhaoYun_Skill_2.png
+size: 1924,366
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dian (1)
+  rotate: false
+  xy: 1579, 7
+  size: 222, 68
+  orig: 479, 96
+  offset: 7, 14
+  index: -1
+dian (2)
+  rotate: false
+  xy: 1579, 7
+  size: 222, 68
+  orig: 479, 96
+  offset: 7, 14
+  index: -1
+dian (10)
+  rotate: false
+  xy: 463, 86
+  size: 452, 90
+  orig: 479, 96
+  offset: 26, 3
+  index: -1
+dian (11)
+  rotate: false
+  xy: 463, 86
+  size: 452, 90
+  orig: 479, 96
+  offset: 26, 3
+  index: -1
+dian (12)
+  rotate: false
+  xy: 466, 273
+  size: 460, 91
+  orig: 479, 96
+  offset: 19, 2
+  index: -1
+dian (13)
+  rotate: false
+  xy: 466, 273
+  size: 460, 91
+  orig: 479, 96
+  offset: 19, 2
+  index: -1
+dian (14)
+  rotate: false
+  xy: 928, 201
+  size: 450, 86
+  orig: 479, 96
+  offset: 29, 5
+  index: -1
+dian (15)
+  rotate: false
+  xy: 2, 2
+  size: 430, 82
+  orig: 479, 96
+  offset: 49, 7
+  index: -1
+dian (16)
+  rotate: false
+  xy: 434, 2
+  size: 422, 82
+  orig: 479, 96
+  offset: 57, 7
+  index: -1
+dian (17)
+  rotate: false
+  xy: 927, 116
+  size: 421, 83
+  orig: 479, 96
+  offset: 58, 7
+  index: -1
+dian (18)
+  rotate: false
+  xy: 917, 35
+  size: 409, 79
+  orig: 479, 96
+  offset: 70, 9
+  index: -1
+dian (19)
+  rotate: false
+  xy: 1405, 223
+  size: 400, 72
+  orig: 479, 96
+  offset: 78, 13
+  index: -1
+dian (20)
+  rotate: false
+  xy: 1350, 77
+  size: 382, 69
+  orig: 479, 96
+  offset: 96, 13
+  index: -1
+dian (21)
+  rotate: false
+  xy: 1380, 148
+  size: 387, 73
+  orig: 479, 96
+  offset: 92, 11
+  index: -1
+dian (22)
+  rotate: false
+  xy: 1328, 6
+  size: 249, 69
+  orig: 479, 96
+  offset: 229, 13
+  index: -1
+dian (23)
+  rotate: true
+  xy: 1807, 53
+  size: 242, 57
+  orig: 479, 96
+  offset: 230, 19
+  index: -1
+dian (24)
+  rotate: false
+  xy: 1803, 2
+  size: 119, 49
+  orig: 479, 96
+  offset: 351, 23
+  index: -1
+dian (25)
+  rotate: true
+  xy: 1866, 177
+  size: 118, 39
+  orig: 479, 96
+  offset: 352, 27
+  index: -1
+dian (3)
+  rotate: false
+  xy: 1405, 297
+  size: 475, 67
+  orig: 479, 96
+  offset: 4, 16
+  index: -1
+dian (4)
+  rotate: false
+  xy: 1405, 297
+  size: 475, 67
+  orig: 479, 96
+  offset: 4, 16
+  index: -1
+dian (5)
+  rotate: false
+  xy: 928, 289
+  size: 475, 75
+  orig: 479, 96
+  offset: 4, 8
+  index: -1
+dian (6)
+  rotate: false
+  xy: 2, 86
+  size: 459, 90
+  orig: 479, 96
+  offset: 20, 4
+  index: -1
+dian (7)
+  rotate: false
+  xy: 466, 181
+  size: 459, 90
+  orig: 479, 96
+  offset: 20, 4
+  index: -1
+dian (8)
+  rotate: false
+  xy: 2, 178
+  size: 462, 92
+  orig: 479, 96
+  offset: 17, 2
+  index: -1
+dian (9)
+  rotate: false
+  xy: 2, 272
+  size: 462, 92
+  orig: 479, 96
+  offset: 17, 2
+  index: -1

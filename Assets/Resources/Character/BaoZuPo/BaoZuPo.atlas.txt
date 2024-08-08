@@ -1,0 +1,104 @@
+
+BaoZuPo.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 28, 18
+  size: 24, 23
+  orig: 24, 23
+  offset: 0, 0
+  index: -1
+10
+  rotate: true
+  xy: 569, 67
+  size: 326, 433
+  orig: 326, 433
+  offset: 0, 0
+  index: -1
+11
+  rotate: true
+  xy: 1004, 19
+  size: 374, 237
+  orig: 374, 239
+  offset: 0, 2
+  index: -1
+12
+  rotate: true
+  xy: 1351, 11
+  size: 105, 104
+  orig: 105, 104
+  offset: 0, 0
+  index: -1
+13
+  rotate: true
+  xy: 1243, 2
+  size: 114, 106
+  orig: 114, 106
+  offset: 0, 0
+  index: -1
+14
+  rotate: true
+  xy: 484, 3
+  size: 56, 100
+  orig: 56, 100
+  offset: 0, 0
+  index: -1
+15
+  rotate: false
+  xy: 484, 61
+  size: 83, 146
+  orig: 83, 146
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 2, 18
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 1457, 27
+  size: 89, 136
+  orig: 89, 136
+  offset: 0, 0
+  index: -1
+5
+  rotate: true
+  xy: 558, 395
+  size: 626, 474
+  orig: 626, 474
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 2, 209
+  size: 554, 812
+  orig: 554, 812
+  offset: 0, 0
+  index: -1
+7
+  rotate: true
+  xy: 1034, 411
+  size: 610, 555
+  orig: 610, 581
+  offset: 0, 26
+  index: -1
+8
+  rotate: true
+  xy: 2, 44
+  size: 163, 480
+  orig: 163, 480
+  offset: 0, 0
+  index: -1
+9
+  rotate: true
+  xy: 1243, 118
+  size: 291, 283
+  orig: 291, 283
+  offset: 0, 0
+  index: -1

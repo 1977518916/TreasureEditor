@@ -1,0 +1,13 @@
+
+Fx_GuanYu_Attack.png
+size: 145,130
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fx_GuanYu_Attack
+  rotate: false
+  xy: 2, 2
+  size: 141, 126
+  orig: 141, 126
+  offset: 0, 0
+  index: -1

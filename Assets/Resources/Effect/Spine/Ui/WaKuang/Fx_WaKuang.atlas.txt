@@ -1,0 +1,76 @@
+
+Fx_WaKuang.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian_01
+  rotate: true
+  xy: 2, 29
+  size: 89, 157
+  orig: 171, 171
+  offset: 41, 8
+  index: -1
+BaoDian_02
+  rotate: true
+  xy: 346, 80
+  size: 72, 56
+  orig: 170, 171
+  offset: 39, 56
+  index: -1
+BaoDian_03
+  rotate: true
+  xy: 242, 142
+  size: 108, 92
+  orig: 171, 171
+  offset: 25, 47
+  index: -1
+BaoDian_04
+  rotate: true
+  xy: 129, 136
+  size: 114, 111
+  orig: 171, 170
+  offset: 15, 38
+  index: -1
+BaoDian_05
+  rotate: true
+  xy: 161, 23
+  size: 111, 97
+  orig: 170, 170
+  offset: 15, 54
+  index: -1
+BaoDian_06
+  rotate: true
+  xy: 2, 120
+  size: 130, 125
+  orig: 171, 170
+  offset: 19, 38
+  index: -1
+BaoDian_07
+  rotate: true
+  xy: 336, 154
+  size: 96, 75
+  orig: 171, 171
+  offset: 45, 49
+  index: -1
+Dian
+  rotate: true
+  xy: 2, 2
+  size: 25, 64
+  orig: 25, 64
+  offset: 0, 0
+  index: -1
+GaoTou
+  rotate: false
+  xy: 260, 44
+  size: 84, 96
+  orig: 84, 96
+  offset: 0, 0
+  index: -1
+Stone
+  rotate: false
+  xy: 260, 10
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

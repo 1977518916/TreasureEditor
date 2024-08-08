@@ -1,0 +1,90 @@
+
+XiaoBing_Dun_1.png
+size: 391,243
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+monster14_walk_00
+  rotate: true
+  xy: 83, 167
+  size: 74, 97
+  orig: 100, 100
+  offset: 12, 1
+  index: -1
+monster14_walk_01
+  rotate: true
+  xy: 182, 167
+  size: 74, 97
+  orig: 100, 100
+  offset: 12, 1
+  index: -1
+monster14_walk_02
+  rotate: true
+  xy: 281, 167
+  size: 74, 97
+  orig: 100, 100
+  offset: 13, 1
+  index: -1
+monster14_walk_03
+  rotate: true
+  xy: 2, 91
+  size: 74, 97
+  orig: 100, 100
+  offset: 14, 1
+  index: -1
+monster14_walk_04
+  rotate: true
+  xy: 101, 91
+  size: 74, 97
+  orig: 100, 100
+  offset: 14, 1
+  index: -1
+monster14_walk_05
+  rotate: true
+  xy: 200, 91
+  size: 74, 97
+  orig: 100, 100
+  offset: 13, 1
+  index: -1
+monster14_walk_06
+  rotate: true
+  xy: 101, 5
+  size: 84, 99
+  orig: 100, 100
+  offset: 10, 1
+  index: -1
+monster14_walk_07
+  rotate: true
+  xy: 2, 7
+  size: 82, 97
+  orig: 100, 100
+  offset: 13, 2
+  index: -1
+monster14_walk_08
+  rotate: true
+  xy: 202, 2
+  size: 87, 96
+  orig: 100, 100
+  offset: 11, 2
+  index: -1
+monster14_walk_09
+  rotate: true
+  xy: 300, 2
+  size: 87, 89
+  orig: 100, 100
+  offset: 10, 2
+  index: -1
+monster14_walk_10
+  rotate: true
+  xy: 299, 91
+  size: 74, 87
+  orig: 100, 100
+  offset: 24, 13
+  index: -1
+monster14_walk_11
+  rotate: true
+  xy: 2, 168
+  size: 73, 79
+  orig: 100, 100
+  offset: 27, 20
+  index: -1

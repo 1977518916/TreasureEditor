@@ -1,0 +1,13 @@
+
+M_I_21.png
+size: 64,40
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+s
+  rotate: false
+  xy: 2, 2
+  size: 60, 36
+  orig: 60, 36
+  offset: 0, 0
+  index: -1

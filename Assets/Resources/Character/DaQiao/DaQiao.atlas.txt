@@ -1,0 +1,209 @@
+
+DaQiao.png
+size: 916,916
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 535, 854
+  size: 258, 58
+  orig: 265, 58
+  offset: 5, 0
+  index: -1
+10
+  rotate: false
+  xy: 2, 416
+  size: 421, 496
+  orig: 448, 496
+  offset: 27, 0
+  index: -1
+11
+  rotate: false
+  xy: 792, 625
+  size: 110, 100
+  orig: 110, 100
+  offset: 0, 0
+  index: -1
+12
+  rotate: false
+  xy: 425, 781
+  size: 107, 131
+  orig: 107, 131
+  offset: 0, 0
+  index: -1
+13
+  rotate: false
+  xy: 425, 419
+  size: 133, 82
+  orig: 133, 82
+  offset: 0, 0
+  index: -1
+14
+  rotate: true
+  xy: 476, 2
+  size: 120, 57
+  orig: 120, 57
+  offset: 0, 0
+  index: -1
+15
+  rotate: true
+  xy: 425, 639
+  size: 140, 104
+  orig: 140, 104
+  offset: 0, 0
+  index: -1
+16
+  rotate: true
+  xy: 425, 582
+  size: 55, 104
+  orig: 55, 104
+  offset: 0, 0
+  index: -1
+17
+  rotate: true
+  xy: 425, 532
+  size: 48, 104
+  orig: 48, 104
+  offset: 0, 0
+  index: -1
+18
+  rotate: false
+  xy: 819, 352
+  size: 89, 86
+  orig: 89, 86
+  offset: 0, 0
+  index: -1
+19
+  rotate: false
+  xy: 244, 124
+  size: 278, 290
+  orig: 278, 290
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 560, 404
+  size: 222, 97
+  orig: 231, 97
+  offset: 9, 0
+  index: -1
+20
+  rotate: true
+  xy: 535, 629
+  size: 157, 255
+  orig: 157, 255
+  offset: 0, 0
+  index: -1
+21
+  rotate: false
+  xy: 2, 120
+  size: 240, 294
+  orig: 240, 294
+  offset: 0, 0
+  index: -1
+3
+  rotate: true
+  xy: 524, 158
+  size: 225, 78
+  orig: 225, 78
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 535, 503
+  size: 124, 248
+  orig: 124, 248
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 795, 727
+  size: 114, 185
+  orig: 114, 185
+  offset: 0, 0
+  index: -1
+6
+  rotate: true
+  xy: 604, 188
+  size: 214, 213
+  orig: 214, 213
+  offset: 0, 0
+  index: -1
+7
+  rotate: true
+  xy: 535, 16
+  size: 140, 199
+  orig: 140, 199
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 785, 440
+  size: 126, 183
+  orig: 126, 183
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 819, 157
+  size: 87, 193
+  orig: 87, 194
+  offset: 0, 0
+  index: -1
+BoWen
+  rotate: true
+  xy: 238, 3
+  size: 115, 114
+  orig: 128, 128
+  offset: 7, 6
+  index: -1
+Dian
+  rotate: false
+  xy: 810, 103
+  size: 52, 52
+  orig: 64, 64
+  offset: 6, 6
+  index: -1
+Glow
+  rotate: false
+  xy: 2, 2
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Huan
+  rotate: false
+  xy: 120, 2
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Lang
+  rotate: true
+  xy: 535, 788
+  size: 64, 256
+  orig: 64, 256
+  offset: 0, 0
+  index: -1
+Quan
+  rotate: false
+  xy: 354, 2
+  size: 120, 120
+  orig: 128, 128
+  offset: 4, 4
+  index: -1
+Shadow
+  rotate: false
+  xy: 524, 385
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Star
+  rotate: false
+  xy: 736, 116
+  size: 72, 70
+  orig: 76, 76
+  offset: 2, 3
+  index: -1

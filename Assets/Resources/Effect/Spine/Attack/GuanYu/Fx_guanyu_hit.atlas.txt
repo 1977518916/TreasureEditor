@@ -1,0 +1,55 @@
+
+Fx_guanyu_hit.png
+size: 193,1055
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+GY (1)
+  rotate: true
+  xy: 2, 949
+  size: 104, 111
+  orig: 190, 227
+  offset: 40, 60
+  index: -1
+GY (2)
+  rotate: false
+  xy: 2, 2
+  size: 189, 213
+  orig: 190, 227
+  offset: 0, 9
+  index: -1
+GY (3)
+  rotate: false
+  xy: 2, 2
+  size: 189, 213
+  orig: 190, 227
+  offset: 0, 9
+  index: -1
+GY (4)
+  rotate: false
+  xy: 2, 217
+  size: 186, 207
+  orig: 190, 227
+  offset: 0, 12
+  index: -1
+GY (5)
+  rotate: false
+  xy: 2, 426
+  size: 173, 192
+  orig: 190, 227
+  offset: 6, 19
+  index: -1
+GY (6)
+  rotate: true
+  xy: 2, 620
+  size: 164, 185
+  orig: 190, 227
+  offset: 10, 23
+  index: -1
+GY (7)
+  rotate: true
+  xy: 2, 786
+  size: 161, 185
+  orig: 190, 227
+  offset: 12, 23
+  index: -1

@@ -1,0 +1,146 @@
+
+GouLiang_Jin_Skill_1.png
+size: 796,227
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian_01
+  rotate: true
+  xy: 630, 134
+  size: 32, 48
+  orig: 64, 128
+  offset: 15, 0
+  index: -1
+BaoDian_02
+  rotate: false
+  xy: 680, 77
+  size: 54, 89
+  orig: 64, 128
+  offset: 4, 4
+  index: -1
+BaoDian_03
+  rotate: false
+  xy: 569, 129
+  size: 59, 96
+  orig: 64, 128
+  offset: 2, 16
+  index: -1
+BaoDian_04
+  rotate: true
+  xy: 479, 163
+  size: 62, 88
+  orig: 64, 128
+  offset: 2, 31
+  index: -1
+BaoDian_05
+  rotate: false
+  xy: 479, 82
+  size: 61, 79
+  orig: 64, 128
+  offset: 3, 45
+  index: -1
+BaoDian_06
+  rotate: false
+  xy: 479, 12
+  size: 61, 68
+  orig: 64, 128
+  offset: 3, 58
+  index: -1
+BaoDian_07
+  rotate: true
+  xy: 567, 7
+  size: 60, 54
+  orig: 64, 128
+  offset: 3, 74
+  index: -1
+BaoDian_08
+  rotate: true
+  xy: 632, 77
+  size: 55, 43
+  orig: 64, 128
+  offset: 4, 83
+  index: -1
+Dimian
+  rotate: false
+  xy: 227, 4
+  size: 250, 221
+  orig: 256, 256
+  offset: 2, 16
+  index: -1
+Fog_01
+  rotate: false
+  xy: 756, 185
+  size: 38, 40
+  orig: 64, 64
+  offset: 12, 3
+  index: -1
+Fog_02
+  rotate: false
+  xy: 736, 114
+  size: 50, 52
+  orig: 64, 64
+  offset: 7, 3
+  index: -1
+Fog_03
+  rotate: true
+  xy: 692, 21
+  size: 54, 58
+  orig: 64, 64
+  offset: 3, 4
+  index: -1
+Fog_04
+  rotate: true
+  xy: 632, 20
+  size: 55, 58
+  orig: 64, 64
+  offset: 5, 5
+  index: -1
+Fog_05
+  rotate: true
+  xy: 630, 168
+  size: 57, 62
+  orig: 64, 64
+  offset: 5, 1
+  index: -1
+Fog_06
+  rotate: true
+  xy: 567, 69
+  size: 58, 63
+  orig: 64, 64
+  offset: 2, 1
+  index: -1
+Fog_07
+  rotate: true
+  xy: 694, 168
+  size: 57, 60
+  orig: 64, 64
+  offset: 4, 1
+  index: -1
+Fog_08
+  rotate: true
+  xy: 752, 30
+  size: 29, 28
+  orig: 64, 64
+  offset: 28, 33
+  index: -1
+Glow
+  rotate: false
+  xy: 2, 2
+  size: 223, 223
+  orig: 256, 256
+  offset: 17, 16
+  index: -1
+Path
+  rotate: false
+  xy: 542, 67
+  size: 23, 94
+  orig: 25, 97
+  offset: 1, 2
+  index: -1
+SuiPian
+  rotate: true
+  xy: 752, 61
+  size: 51, 42
+  orig: 64, 64
+  offset: 8, 13
+  index: -1

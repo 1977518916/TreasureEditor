@@ -1,0 +1,20 @@
+
+GanNing_Skill_2.png
+size: 128,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Jian
+  rotate: false
+  xy: 2, 6
+  size: 45, 220
+  orig: 45, 222
+  offset: 0, 1
+  index: -1
+Path1
+  rotate: true
+  xy: 49, 2
+  size: 224, 30
+  orig: 300, 50
+  offset: 34, 10
+  index: -1

@@ -1,0 +1,174 @@
+
+LiDian.png
+size: 456,456
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 205, 54
+  size: 131, 124
+  orig: 131, 124
+  offset: 0, 0
+  index: -1
+DaoGuang1
+  rotate: true
+  xy: 340, 101
+  size: 119, 106
+  orig: 128, 128
+  offset: 2, 11
+  index: -1
+DaoGuang2
+  rotate: false
+  xy: 210, 180
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+DaoGuang3
+  rotate: false
+  xy: 2, 84
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Eye_B
+  rotate: true
+  xy: 166, 235
+  size: 40, 22
+  orig: 40, 22
+  offset: 0, 0
+  index: -1
+Eye_F
+  rotate: true
+  xy: 166, 277
+  size: 52, 24
+  orig: 52, 24
+  offset: 0, 0
+  index: -1
+Eye_F_1
+  rotate: false
+  xy: 2, 20
+  size: 62, 62
+  orig: 62, 62
+  offset: 0, 0
+  index: -1
+Feet_B
+  rotate: false
+  xy: 190, 254
+  size: 15, 12
+  orig: 15, 12
+  offset: 0, 0
+  index: -1
+Feet_F
+  rotate: true
+  xy: 192, 268
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+Hand_B
+  rotate: false
+  xy: 132, 188
+  size: 26, 24
+  orig: 26, 24
+  offset: 0, 0
+  index: -1
+Hand_F
+  rotate: false
+  xy: 177, 47
+  size: 26, 24
+  orig: 26, 24
+  offset: 0, 0
+  index: -1
+Hat
+  rotate: false
+  xy: 2, 214
+  size: 162, 115
+  orig: 162, 115
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 213, 310
+  size: 141, 149
+  orig: 149, 149
+  offset: 0, 0
+  index: -1
+HuZi_B
+  rotate: true
+  xy: 192, 287
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+HuZi_F
+  rotate: true
+  xy: 192, 307
+  size: 22, 16
+  orig: 22, 16
+  offset: 0, 0
+  index: -1
+Ji
+  rotate: false
+  xy: 364, 222
+  size: 87, 229
+  orig: 87, 229
+  offset: 0, 0
+  index: -1
+JianJia_B
+  rotate: false
+  xy: 126, 17
+  size: 49, 54
+  orig: 49, 54
+  offset: 0, 0
+  index: -1
+JianJia_F
+  rotate: false
+  xy: 66, 32
+  size: 58, 50
+  orig: 58, 50
+  offset: 0, 0
+  index: -1
+MeiMao_B
+  rotate: false
+  xy: 340, 283
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+MeiMao_F
+  rotate: true
+  xy: 340, 256
+  size: 25, 22
+  orig: 25, 22
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: false
+  xy: 190, 245
+  size: 11, 7
+  orig: 11, 7
+  offset: 0, 0
+  index: -1
+Mouth_1
+  rotate: true
+  xy: 132, 73
+  size: 113, 71
+  orig: 113, 71
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 166, 201
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Toujin
+  rotate: false
+  xy: 2, 331
+  size: 209, 120
+  orig: 209, 120
+  offset: 0, 0
+  index: -1

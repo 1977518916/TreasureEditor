@@ -1,0 +1,76 @@
+
+ZhangFei_Skill_2.png
+size: 563,586
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bao1 (1)
+  rotate: true
+  xy: 413, 431
+  size: 153, 148
+  orig: 300, 268
+  offset: 71, 67
+  index: -1
+bao1 (11)
+  rotate: false
+  xy: 173, 154
+  size: 179, 163
+  orig: 300, 268
+  offset: 53, 60
+  index: -1
+bao1 (13)
+  rotate: false
+  xy: 2, 2
+  size: 206, 135
+  orig: 300, 268
+  offset: 33, 75
+  index: -1
+bao1 (15)
+  rotate: false
+  xy: 210, 3
+  size: 195, 149
+  orig: 300, 268
+  offset: 38, 67
+  index: -1
+bao1 (17)
+  rotate: false
+  xy: 354, 260
+  size: 171, 156
+  orig: 300, 268
+  offset: 58, 62
+  index: -1
+bao1 (19)
+  rotate: true
+  xy: 2, 139
+  size: 178, 169
+  orig: 300, 268
+  offset: 58, 56
+  index: -1
+bao1 (3)
+  rotate: true
+  xy: 407, 13
+  size: 108, 107
+  orig: 300, 268
+  offset: 94, 88
+  index: -1
+bao1 (5)
+  rotate: false
+  xy: 407, 123
+  size: 135, 135
+  orig: 300, 268
+  offset: 80, 74
+  index: -1
+bao1 (7)
+  rotate: true
+  xy: 2, 319
+  size: 265, 242
+  orig: 300, 268
+  offset: 15, 14
+  index: -1
+bao1 (9)
+  rotate: true
+  xy: 246, 418
+  size: 166, 165
+  orig: 300, 268
+  offset: 64, 56
+  index: -1

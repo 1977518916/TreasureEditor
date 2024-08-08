@@ -1,0 +1,167 @@
+
+XuShu.png
+size: 1972,756
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 1318, 4
+  size: 301, 257
+  orig: 309, 272
+  offset: 3, 15
+  index: -1
+FaceShadow
+  rotate: true
+  xy: 1749, 412
+  size: 342, 217
+  orig: 344, 219
+  offset: 1, 1
+  index: -1
+GuaJian
+  rotate: false
+  xy: 394, 54
+  size: 173, 75
+  orig: 174, 84
+  offset: 1, 1
+  index: -1
+Hair1
+  rotate: true
+  xy: 1742, 81
+  size: 285, 81
+  orig: 285, 84
+  offset: 0, 3
+  index: -1
+Hair2
+  rotate: true
+  xy: 1515, 368
+  size: 105, 232
+  orig: 110, 240
+  offset: 5, 8
+  index: -1
+Hair3
+  rotate: false
+  xy: 1186, 475
+  size: 561, 279
+  orig: 561, 288
+  offset: 0, 1
+  index: -1
+Hair4
+  rotate: false
+  xy: 1577, 71
+  size: 163, 295
+  orig: 167, 296
+  offset: 1, 0
+  index: -1
+Hand_B
+  rotate: false
+  xy: 91, 6
+  size: 53, 53
+  orig: 55, 55
+  offset: 1, 1
+  index: -1
+Hand_F
+  rotate: false
+  xy: 1515, 312
+  size: 53, 54
+  orig: 55, 56
+  offset: 1, 1
+  index: -1
+Head
+  rotate: false
+  xy: 676, 259
+  size: 508, 495
+  orig: 909, 736
+  offset: 286, 16
+  index: -1
+HuZi
+  rotate: false
+  xy: 1896, 62
+  size: 71, 78
+  orig: 72, 78
+  offset: 0, 0
+  index: -1
+JianJia
+  rotate: true
+  xy: 1825, 243
+  size: 167, 139
+  orig: 182, 141
+  offset: 15, 1
+  index: -1
+MaoZi
+  rotate: false
+  xy: 2, 243
+  size: 672, 511
+  orig: 737, 559
+  offset: 65, 1
+  index: -1
+PiFeng
+  rotate: false
+  xy: 2, 61
+  size: 390, 180
+  orig: 390, 180
+  offset: 0, 0
+  index: -1
+QianJin
+  rotate: false
+  xy: 1825, 142
+  size: 111, 99
+  orig: 111, 100
+  offset: 0, 1
+  index: -1
+QunJia_B
+  rotate: false
+  xy: 2, 2
+  size: 87, 57
+  orig: 87, 57
+  offset: 0, 0
+  index: -1
+QunJia_F
+  rotate: true
+  xy: 1825, 2
+  size: 138, 69
+  orig: 154, 72
+  offset: 11, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 1186, 273
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+ShiPin_B
+  rotate: true
+  xy: 1742, 3
+  size: 76, 78
+  orig: 99, 82
+  offset: 9, 3
+  index: -1
+ShiPin_F
+  rotate: true
+  xy: 569, 50
+  size: 79, 82
+  orig: 82, 82
+  offset: 1, 0
+  index: -1
+WeiJin
+  rotate: false
+  xy: 1186, 307
+  size: 327, 166
+  orig: 327, 166
+  offset: 0, 0
+  index: -1
+WuQi
+  rotate: false
+  xy: 676, 2
+  size: 640, 255
+  orig: 642, 257
+  offset: 1, 1
+  index: -1
+YaoDai
+  rotate: false
+  xy: 394, 131
+  size: 267, 110
+  orig: 274, 110
+  offset: 0, 0
+  index: -1

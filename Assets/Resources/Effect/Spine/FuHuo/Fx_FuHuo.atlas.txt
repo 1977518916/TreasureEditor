@@ -1,0 +1,41 @@
+
+Fx_FuHuo.png
+size: 496,536
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ChiBang
+  rotate: true
+  xy: 307, 203
+  size: 330, 153
+  orig: 384, 384
+  offset: 27, 115
+  index: -1
+Glow
+  rotate: true
+  xy: 2, 2
+  size: 226, 215
+  orig: 226, 215
+  offset: 0, 0
+  index: -1
+Huan
+  rotate: false
+  xy: 219, 39
+  size: 162, 162
+  orig: 162, 162
+  offset: 0, 0
+  index: -1
+Hun
+  rotate: true
+  xy: 383, 74
+  size: 127, 108
+  orig: 128, 108
+  offset: 1, 0
+  index: -1
+Zhuan
+  rotate: false
+  xy: 2, 230
+  size: 303, 303
+  orig: 303, 303
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,55 @@
+
+Monster012.png
+size: 464,464
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 232, 45
+  size: 172, 130
+  orig: 174, 132
+  offset: 1, 1
+  index: -1
+Hand_B
+  rotate: true
+  xy: 2, 3
+  size: 172, 228
+  orig: 174, 230
+  offset: 1, 1
+  index: -1
+Head
+  rotate: false
+  xy: 2, 177
+  size: 310, 283
+  orig: 312, 285
+  offset: 1, 1
+  index: -1
+HongYing
+  rotate: true
+  xy: 314, 309
+  size: 151, 146
+  orig: 158, 146
+  offset: 7, 0
+  index: -1
+Leg_B
+  rotate: true
+  xy: 348, 282
+  size: 25, 19
+  orig: 27, 21
+  offset: 1, 1
+  index: -1
+Leg_F
+  rotate: false
+  xy: 348, 261
+  size: 25, 19
+  orig: 27, 21
+  offset: 1, 1
+  index: -1
+Shadow
+  rotate: false
+  xy: 314, 275
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

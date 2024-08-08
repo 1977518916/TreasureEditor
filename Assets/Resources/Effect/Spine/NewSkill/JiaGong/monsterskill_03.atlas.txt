@@ -1,0 +1,20 @@
+
+monsterskill_03.png
+size: 320,268
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+JianTou
+  rotate: true
+  xy: 268, 211
+  size: 53, 47
+  orig: 53, 47
+  offset: 0, 0
+  index: -1
+Quan
+  rotate: false
+  xy: 2, 2
+  size: 264, 262
+  orig: 288, 288
+  offset: 11, 10
+  index: -1

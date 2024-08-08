@@ -1,0 +1,111 @@
+
+JiaXu_Skill_1.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_B
+  rotate: true
+  xy: 410, 17
+  size: 57, 77
+  orig: 57, 77
+  offset: 0, 0
+  index: -1
+Arm_F
+  rotate: true
+  xy: 410, 17
+  size: 57, 77
+  orig: 57, 77
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 2, 34
+  size: 215, 155
+  orig: 215, 155
+  offset: 0, 0
+  index: -1
+Fog1
+  rotate: true
+  xy: 489, 54
+  size: 20, 21
+  orig: 32, 32
+  offset: 6, 1
+  index: -1
+Fog2
+  rotate: true
+  xy: 166, 6
+  size: 26, 27
+  orig: 32, 32
+  offset: 3, 1
+  index: -1
+Fog3
+  rotate: true
+  xy: 135, 4
+  size: 28, 29
+  orig: 32, 32
+  offset: 1, 2
+  index: -1
+Fog4
+  rotate: true
+  xy: 103, 4
+  size: 28, 30
+  orig: 32, 32
+  offset: 2, 2
+  index: -1
+Fog5
+  rotate: true
+  xy: 35, 3
+  size: 29, 32
+  orig: 32, 32
+  offset: 2, 0
+  index: -1
+Fog6
+  rotate: true
+  xy: 69, 3
+  size: 29, 32
+  orig: 32, 32
+  offset: 1, 0
+  index: -1
+Fog7
+  rotate: true
+  xy: 2, 2
+  size: 30, 31
+  orig: 32, 32
+  offset: 1, 0
+  index: -1
+Fog8
+  rotate: false
+  xy: 493, 174
+  size: 15, 15
+  orig: 32, 32
+  offset: 14, 16
+  index: -1
+Head
+  rotate: false
+  xy: 219, 17
+  size: 189, 172
+  orig: 189, 172
+  offset: 0, 0
+  index: -1
+Leg_B
+  rotate: true
+  xy: 410, 129
+  size: 60, 81
+  orig: 60, 81
+  offset: 0, 0
+  index: -1
+Leg_F
+  rotate: true
+  xy: 410, 129
+  size: 60, 81
+  orig: 60, 81
+  offset: 0, 0
+  index: -1
+WeiBa
+  rotate: false
+  xy: 410, 76
+  size: 88, 51
+  orig: 88, 51
+  offset: 0, 0
+  index: -1

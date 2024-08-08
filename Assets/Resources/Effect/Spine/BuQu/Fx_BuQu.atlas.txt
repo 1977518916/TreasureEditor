@@ -1,0 +1,13 @@
+
+Fx_BuQu.png
+size: 92,48
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Zi
+  rotate: false
+  xy: 2, 2
+  size: 88, 41
+  orig: 88, 41
+  offset: 0, 0
+  index: -1

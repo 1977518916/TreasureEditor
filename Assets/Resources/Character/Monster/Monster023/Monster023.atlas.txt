@@ -1,0 +1,90 @@
+
+Monster023.png
+size: 228,228
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 188, 125
+  size: 51, 36
+  orig: 51, 36
+  offset: 0, 0
+  index: -1
+10
+  rotate: true
+  xy: 188, 74
+  size: 49, 35
+  orig: 49, 35
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 159, 28
+  size: 19, 24
+  orig: 19, 24
+  offset: 0, 0
+  index: -1
+2
+  rotate: true
+  xy: 126, 6
+  size: 32, 31
+  orig: 32, 31
+  offset: 0, 0
+  index: -1
+3
+  rotate: true
+  xy: 2, 2
+  size: 113, 74
+  orig: 113, 74
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 126, 178
+  size: 94, 48
+  orig: 94, 48
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 2, 117
+  size: 116, 109
+  orig: 119, 124
+  offset: 3, 15
+  index: -1
+6
+  rotate: true
+  xy: 120, 119
+  size: 57, 66
+  orig: 57, 66
+  offset: 0, 0
+  index: -1
+7
+  rotate: true
+  xy: 78, 8
+  size: 107, 46
+  orig: 107, 46
+  offset: 0, 0
+  index: -1
+8
+  rotate: true
+  xy: 126, 54
+  size: 63, 54
+  orig: 63, 54
+  offset: 0, 0
+  index: -1
+9
+  rotate: true
+  xy: 159, 4
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 182, 40
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

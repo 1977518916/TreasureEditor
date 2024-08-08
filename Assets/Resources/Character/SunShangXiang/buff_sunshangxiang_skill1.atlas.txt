@@ -1,0 +1,55 @@
+
+buff_sunshangxiang_skill1.png
+size: 480,373
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+孙尚香_00000
+  rotate: false
+  xy: 212, 2
+  size: 130, 191
+  orig: 187, 230
+  offset: 29, 5
+  index: -1
+孙尚香_00002
+  rotate: true
+  xy: 2, 2
+  size: 164, 208
+  orig: 187, 230
+  offset: 6, 4
+  index: -1
+孙尚香_00006
+  rotate: false
+  xy: 2, 168
+  size: 177, 203
+  orig: 187, 230
+  offset: 4, 5
+  index: -1
+孙尚香_00009
+  rotate: false
+  xy: 2, 168
+  size: 177, 203
+  orig: 187, 230
+  offset: 4, 5
+  index: -1
+孙尚香_00011
+  rotate: true
+  xy: 181, 195
+  size: 176, 142
+  orig: 187, 230
+  offset: 3, 4
+  index: -1
+孙尚香_00017
+  rotate: true
+  xy: 325, 222
+  size: 149, 153
+  orig: 187, 230
+  offset: 4, 4
+  index: -1
+孙尚香_00020
+  rotate: false
+  xy: 344, 32
+  size: 130, 188
+  orig: 187, 230
+  offset: 29, 7
+  index: -1

@@ -1,0 +1,97 @@
+
+Fx_HuangZhong_Hit.png
+size: 596,1063
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sj (1)
+  rotate: false
+  xy: 267, 218
+  size: 116, 87
+  orig: 340, 235
+  offset: 92, 83
+  index: -1
+sj (11)
+  rotate: false
+  xy: 336, 877
+  size: 255, 184
+  orig: 340, 235
+  offset: 16, 31
+  index: -1
+sj (13)
+  rotate: false
+  xy: 307, 307
+  size: 287, 199
+  orig: 340, 235
+  offset: 1, 23
+  index: -1
+sj (15)
+  rotate: false
+  xy: 2, 355
+  size: 303, 188
+  orig: 340, 235
+  offset: 2, 35
+  index: -1
+sj (17)
+  rotate: false
+  xy: 2, 545
+  size: 318, 176
+  orig: 340, 235
+  offset: 3, 38
+  index: -1
+sj (19)
+  rotate: false
+  xy: 2, 890
+  size: 332, 171
+  orig: 340, 235
+  offset: 5, 42
+  index: -1
+sj (21)
+  rotate: false
+  xy: 2, 723
+  size: 332, 165
+  orig: 340, 235
+  offset: 8, 47
+  index: -1
+sj (23)
+  rotate: false
+  xy: 322, 508
+  size: 265, 153
+  orig: 340, 235
+  offset: 74, 55
+  index: -1
+sj (25)
+  rotate: false
+  xy: 2, 218
+  size: 263, 135
+  orig: 340, 235
+  offset: 74, 67
+  index: -1
+sj (3)
+  rotate: true
+  xy: 336, 663
+  size: 212, 233
+  orig: 340, 235
+  offset: 77, 0
+  index: -1
+sj (5)
+  rotate: false
+  xy: 385, 131
+  size: 177, 174
+  orig: 340, 235
+  offset: 71, 36
+  index: -1
+sj (7)
+  rotate: true
+  xy: 183, 24
+  size: 192, 180
+  orig: 340, 235
+  offset: 63, 35
+  index: -1
+sj (9)
+  rotate: true
+  xy: 2, 2
+  size: 214, 179
+  orig: 340, 235
+  offset: 39, 35
+  index: -1

@@ -1,0 +1,13 @@
+
+monsterskill_02.png
+size: 144,124
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+XiangJiao
+  rotate: false
+  xy: 2, 2
+  size: 140, 119
+  orig: 140, 119
+  offset: 0, 0
+  index: -1

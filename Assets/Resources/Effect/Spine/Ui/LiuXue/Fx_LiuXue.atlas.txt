@@ -1,0 +1,13 @@
+
+Fx_LiuXue.png
+size: 22,43
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Xue
+  rotate: false
+  xy: 2, 2
+  size: 18, 39
+  orig: 64, 64
+  offset: 23, 12
+  index: -1

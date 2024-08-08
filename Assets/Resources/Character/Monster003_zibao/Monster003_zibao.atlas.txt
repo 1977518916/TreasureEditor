@@ -1,0 +1,104 @@
+
+Monster003_zibao.png
+size: 1426,549
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+小怪_00004
+  rotate: true
+  xy: 382, 178
+  size: 68, 57
+  orig: 415, 416
+  offset: 182, 144
+  index: -1
+小怪_00005
+  rotate: false
+  xy: 2, 7
+  size: 175, 149
+  orig: 415, 416
+  offset: 125, 102
+  index: -1
+小怪_00007
+  rotate: false
+  xy: 2, 158
+  size: 378, 389
+  orig: 415, 416
+  offset: 32, 13
+  index: -1
+小怪_00009
+  rotate: false
+  xy: 1013, 49
+  size: 278, 278
+  orig: 415, 416
+  offset: 84, 67
+  index: -1
+小怪_00011
+  rotate: false
+  xy: 382, 248
+  size: 294, 299
+  orig: 415, 416
+  offset: 69, 52
+  index: -1
+小怪_00013
+  rotate: true
+  xy: 678, 273
+  size: 274, 303
+  orig: 415, 416
+  offset: 65, 48
+  index: -1
+小怪_00015
+  rotate: false
+  xy: 517, 2
+  size: 271, 244
+  orig: 415, 416
+  offset: 65, 48
+  index: -1
+小怪_00017
+  rotate: true
+  xy: 790, 16
+  size: 255, 221
+  orig: 415, 416
+  offset: 81, 77
+  index: -1
+小怪_00019
+  rotate: false
+  xy: 983, 329
+  size: 215, 218
+  orig: 415, 416
+  offset: 117, 82
+  index: -1
+小怪_00021
+  rotate: true
+  xy: 1200, 349
+  size: 198, 166
+  orig: 415, 416
+  offset: 118, 87
+  index: -1
+小怪_00023
+  rotate: false
+  xy: 179, 5
+  size: 162, 151
+  orig: 415, 416
+  offset: 128, 92
+  index: -1
+小怪_00025
+  rotate: true
+  xy: 1293, 178
+  size: 169, 131
+  orig: 415, 416
+  offset: 124, 91
+  index: -1
+小怪_00027
+  rotate: false
+  xy: 343, 25
+  size: 172, 131
+  orig: 415, 416
+  offset: 123, 89
+  index: -1
+小怪_00029
+  rotate: true
+  xy: 1293, 2
+  size: 174, 126
+  orig: 415, 416
+  offset: 121, 92
+  index: -1

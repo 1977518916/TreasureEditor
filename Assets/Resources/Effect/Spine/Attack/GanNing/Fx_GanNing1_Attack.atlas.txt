@@ -1,0 +1,83 @@
+
+Fx_GanNing1_Attack.png
+size: 1010,59
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+da
+  rotate: false
+  xy: 2, 2
+  size: 223, 55
+  orig: 226, 58
+  offset: 1, 2
+  index: -1
+yan (1)
+  rotate: false
+  xy: 861, 31
+  size: 141, 26
+  orig: 186, 28
+  offset: 37, 0
+  index: -1
+yan (10)
+  rotate: false
+  xy: 377, 31
+  size: 166, 26
+  orig: 186, 28
+  offset: 8, 0
+  index: -1
+yan (2)
+  rotate: false
+  xy: 682, 5
+  size: 171, 24
+  orig: 186, 28
+  offset: 8, 2
+  index: -1
+yan (3)
+  rotate: false
+  xy: 706, 31
+  size: 153, 26
+  orig: 186, 28
+  offset: 29, 2
+  index: -1
+yan (4)
+  rotate: false
+  xy: 545, 31
+  size: 159, 26
+  orig: 186, 28
+  offset: 17, 2
+  index: -1
+yan (5)
+  rotate: false
+  xy: 227, 2
+  size: 146, 25
+  orig: 186, 28
+  offset: 30, 3
+  index: -1
+yan (6)
+  rotate: false
+  xy: 227, 29
+  size: 148, 28
+  orig: 186, 28
+  offset: 34, 0
+  index: -1
+yan (7)
+  rotate: false
+  xy: 514, 4
+  size: 166, 25
+  orig: 186, 28
+  offset: 10, 1
+  index: -1
+yan (8)
+  rotate: false
+  xy: 855, 5
+  size: 153, 24
+  orig: 186, 28
+  offset: 25, 2
+  index: -1
+yan (9)
+  rotate: false
+  xy: 377, 3
+  size: 135, 26
+  orig: 186, 28
+  offset: 32, 0
+  index: -1

@@ -1,0 +1,41 @@
+
+UpLvEffect.png
+size: 163,379
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+g2
+  rotate: false
+  xy: 2, 2
+  size: 159, 116
+  orig: 160, 121
+  offset: 1, 2
+  index: -1
+tt
+  rotate: false
+  xy: 123, 223
+  size: 19, 154
+  orig: 21, 156
+  offset: 2, 0
+  index: -1
+xx
+  rotate: false
+  xy: 123, 161
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+xxxa
+  rotate: true
+  xy: 123, 188
+  size: 33, 34
+  orig: 37, 38
+  offset: 2, 2
+  index: -1
+zhu
+  rotate: false
+  xy: 2, 120
+  size: 119, 257
+  orig: 120, 277
+  offset: 1, 0
+  index: -1

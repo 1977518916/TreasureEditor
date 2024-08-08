@@ -1,0 +1,146 @@
+
+Yingxongzhaomu.png
+size: 308,261
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jyjmm (1)
+  rotate: false
+  xy: 262, 144
+  size: 25, 26
+  orig: 237, 158
+  offset: 0, 0
+  index: -1
+jyjmm (10)
+  rotate: false
+  xy: 121, 8
+  size: 56, 55
+  orig: 237, 158
+  offset: 42, 18
+  index: -1
+jyjmm (11)
+  rotate: false
+  xy: 232, 16
+  size: 49, 49
+  orig: 237, 158
+  offset: 65, 20
+  index: -1
+jyjmm (12)
+  rotate: true
+  xy: 246, 69
+  size: 51, 49
+  orig: 237, 158
+  offset: 76, 29
+  index: -1
+jyjmm (13)
+  rotate: false
+  xy: 194, 67
+  size: 50, 53
+  orig: 237, 158
+  offset: 98, 33
+  index: -1
+jyjmm (14)
+  rotate: false
+  xy: 65, 106
+  size: 63, 56
+  orig: 237, 158
+  offset: 105, 31
+  index: -1
+jyjmm (15)
+  rotate: false
+  xy: 130, 65
+  size: 62, 56
+  orig: 237, 158
+  offset: 127, 32
+  index: -1
+jyjmm (16)
+  rotate: false
+  xy: 2, 66
+  size: 57, 90
+  orig: 237, 158
+  offset: 142, 34
+  index: -1
+jyjmm (17)
+  rotate: false
+  xy: 2, 158
+  size: 61, 101
+  orig: 237, 158
+  offset: 144, 38
+  index: -1
+jyjmm (18)
+  rotate: false
+  xy: 65, 164
+  size: 65, 95
+  orig: 237, 158
+  offset: 160, 57
+  index: -1
+jyjmm (19)
+  rotate: false
+  xy: 132, 172
+  size: 68, 87
+  orig: 237, 158
+  offset: 169, 71
+  index: -1
+jyjmm (2)
+  rotate: true
+  xy: 262, 228
+  size: 31, 44
+  orig: 237, 158
+  offset: 0, 0
+  index: -1
+jyjmm (20)
+  rotate: false
+  xy: 202, 175
+  size: 58, 84
+  orig: 237, 158
+  offset: 179, 74
+  index: -1
+jyjmm (3)
+  rotate: true
+  xy: 61, 67
+  size: 37, 51
+  orig: 237, 158
+  offset: 0, 0
+  index: -1
+jyjmm (4)
+  rotate: false
+  xy: 262, 172
+  size: 42, 54
+  orig: 237, 158
+  offset: 5, 0
+  index: -1
+jyjmm (5)
+  rotate: true
+  xy: 132, 123
+  size: 47, 64
+  orig: 237, 158
+  offset: 8, 1
+  index: -1
+jyjmm (6)
+  rotate: false
+  xy: 179, 6
+  size: 51, 57
+  orig: 237, 158
+  offset: 9, 10
+  index: -1
+jyjmm (7)
+  rotate: true
+  xy: 202, 122
+  size: 51, 58
+  orig: 237, 158
+  offset: 19, 10
+  index: -1
+jyjmm (8)
+  rotate: false
+  xy: 2, 2
+  size: 60, 62
+  orig: 237, 158
+  offset: 22, 11
+  index: -1
+jyjmm (9)
+  rotate: true
+  xy: 64, 3
+  size: 62, 55
+  orig: 237, 158
+  offset: 29, 18
+  index: -1

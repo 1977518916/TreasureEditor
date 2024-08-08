@@ -1,0 +1,146 @@
+
+buff_anger.png
+size: 1344,290
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+daaa (1)
+  rotate: true
+  xy: 2, 3
+  size: 38, 40
+  orig: 75, 118
+  offset: 21, 1
+  index: -1
+daaa (10)
+  rotate: true
+  xy: 44, 4
+  size: 37, 65
+  orig: 75, 118
+  offset: 1, 33
+  index: -1
+daaa (11)
+  rotate: true
+  xy: 111, 18
+  size: 23, 40
+  orig: 75, 118
+  offset: 1, 41
+  index: -1
+daaa (2)
+  rotate: true
+  xy: 675, 2
+  size: 59, 79
+  orig: 75, 118
+  offset: 8, 0
+  index: -1
+daaa (3)
+  rotate: false
+  xy: 1131, 11
+  size: 69, 84
+  orig: 75, 118
+  offset: 4, 0
+  index: -1
+daaa (4)
+  rotate: false
+  xy: 1058, 9
+  size: 71, 86
+  orig: 75, 118
+  offset: 3, 0
+  index: -1
+daaa (5)
+  rotate: true
+  xy: 756, 5
+  size: 56, 86
+  orig: 75, 118
+  offset: 4, 0
+  index: -1
+daaa (6)
+  rotate: false
+  xy: 1274, 190
+  size: 68, 98
+  orig: 75, 118
+  offset: 7, 1
+  index: -1
+daaa (7)
+  rotate: true
+  xy: 958, 3
+  size: 72, 98
+  orig: 75, 118
+  offset: 3, 3
+  index: -1
+daaa (8)
+  rotate: true
+  xy: 844, 3
+  size: 72, 112
+  orig: 75, 118
+  offset: 2, 6
+  index: -1
+daaa (9)
+  rotate: true
+  xy: 153, 22
+  size: 19, 102
+  orig: 75, 118
+  offset: 30, 16
+  index: -1
+dad (1)
+  rotate: true
+  xy: 1202, 15
+  size: 129, 128
+  orig: 196, 245
+  offset: 21, 0
+  index: -1
+dad (11)
+  rotate: false
+  xy: 516, 44
+  size: 157, 244
+  orig: 196, 245
+  offset: 15, 0
+  index: -1
+dad (13)
+  rotate: false
+  xy: 675, 63
+  size: 149, 225
+  orig: 196, 245
+  offset: 15, 19
+  index: -1
+dad (15)
+  rotate: false
+  xy: 985, 97
+  size: 150, 191
+  orig: 196, 245
+  offset: 15, 54
+  index: -1
+dad (17)
+  rotate: true
+  xy: 1137, 146
+  size: 142, 135
+  orig: 196, 245
+  offset: 18, 109
+  index: -1
+dad (3)
+  rotate: false
+  xy: 826, 77
+  size: 157, 211
+  orig: 196, 245
+  offset: 12, 0
+  index: -1
+dad (5)
+  rotate: false
+  xy: 350, 43
+  size: 164, 245
+  orig: 196, 245
+  offset: 16, 0
+  index: -1
+dad (7)
+  rotate: false
+  xy: 178, 43
+  size: 170, 245
+  orig: 196, 245
+  offset: 15, 0
+  index: -1
+dad (9)
+  rotate: false
+  xy: 2, 43
+  size: 174, 245
+  orig: 196, 245
+  offset: 13, 0
+  index: -1

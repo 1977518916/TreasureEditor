@@ -1,0 +1,111 @@
+
+HuangGai_Skill_1.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian_01
+  rotate: true
+  xy: 669, 94
+  size: 34, 51
+  orig: 64, 128
+  offset: 14, 0
+  index: -1
+BaoDian_02
+  rotate: false
+  xy: 586, 138
+  size: 56, 94
+  orig: 64, 128
+  offset: 2, 2
+  index: -1
+BaoDian_03
+  rotate: false
+  xy: 669, 130
+  size: 61, 102
+  orig: 64, 128
+  offset: 1, 13
+  index: -1
+BaoDian_04
+  rotate: false
+  xy: 521, 201
+  size: 63, 93
+  orig: 64, 128
+  offset: 1, 29
+  index: -1
+BaoDian_05
+  rotate: true
+  xy: 676, 307
+  size: 62, 85
+  orig: 64, 128
+  offset: 2, 43
+  index: -1
+BaoDian_06
+  rotate: true
+  xy: 602, 234
+  size: 64, 73
+  orig: 64, 128
+  offset: 0, 55
+  index: -1
+BaoDian_07
+  rotate: false
+  xy: 677, 248
+  size: 64, 57
+  orig: 64, 128
+  offset: 0, 71
+  index: -1
+BaoDian_08
+  rotate: false
+  xy: 521, 152
+  size: 59, 47
+  orig: 64, 128
+  offset: 2, 81
+  index: -1
+Boom
+  rotate: false
+  xy: 288, 46
+  size: 379, 90
+  orig: 379, 100
+  offset: 0, 10
+  index: -1
+Dimian
+  rotate: true
+  xy: 2, 87
+  size: 282, 284
+  orig: 284, 284
+  offset: 2, 0
+  index: -1
+Fog_1
+  rotate: false
+  xy: 602, 300
+  size: 72, 69
+  orig: 85, 85
+  offset: 7, 8
+  index: -1
+Fog_2
+  rotate: true
+  xy: 173, 6
+  size: 79, 78
+  orig: 85, 85
+  offset: 4, 4
+  index: -1
+Fog_3
+  rotate: false
+  xy: 521, 296
+  size: 79, 73
+  orig: 85, 85
+  offset: 2, 5
+  index: -1
+Glow
+  rotate: false
+  xy: 288, 138
+  size: 231, 231
+  orig: 256, 256
+  offset: 13, 12
+  index: -1
+Line
+  rotate: false
+  xy: 2, 2
+  size: 169, 83
+  orig: 179, 89
+  offset: 4, 3
+  index: -1

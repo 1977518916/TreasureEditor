@@ -1,0 +1,174 @@
+
+ZhenJi.png
+size: 1640,504
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 563, 239
+  size: 238, 263
+  orig: 238, 264
+  offset: 0, 1
+  index: -1
+DiaoMao1
+  rotate: true
+  xy: 997, 360
+  size: 142, 223
+  orig: 142, 223
+  offset: 0, 0
+  index: -1
+DiaoMao2
+  rotate: true
+  xy: 1540, 93
+  size: 129, 79
+  orig: 130, 79
+  offset: 1, 0
+  index: -1
+DiaoMao3
+  rotate: true
+  xy: 1222, 381
+  size: 121, 212
+  orig: 121, 212
+  offset: 0, 0
+  index: -1
+Eye1
+  rotate: false
+  xy: 997, 281
+  size: 225, 77
+  orig: 225, 77
+  offset: 0, 0
+  index: -1
+Eye2
+  rotate: true
+  xy: 781, 21
+  size: 216, 41
+  orig: 218, 43
+  offset: 1, 1
+  index: -1
+Hair1
+  rotate: true
+  xy: 824, 11
+  size: 100, 178
+  orig: 100, 178
+  offset: 0, 0
+  index: -1
+Hair2
+  rotate: true
+  xy: 1004, 25
+  size: 94, 147
+  orig: 94, 147
+  offset: 0, 0
+  index: -1
+Hair3
+  rotate: true
+  xy: 824, 113
+  size: 173, 151
+  orig: 174, 151
+  offset: 1, 0
+  index: -1
+Hand_B
+  rotate: false
+  xy: 1390, 3
+  size: 120, 90
+  orig: 120, 92
+  offset: 0, 2
+  index: -1
+Hand_F
+  rotate: false
+  xy: 1153, 41
+  size: 101, 78
+  orig: 101, 79
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 2, 8
+  size: 559, 494
+  orig: 561, 494
+  offset: 0, 0
+  index: -1
+PiaoDai1
+  rotate: false
+  xy: 1596, 289
+  size: 40, 72
+  orig: 48, 74
+  offset: 8, 2
+  index: -1
+PiaoDai2
+  rotate: false
+  xy: 1224, 301
+  size: 203, 78
+  orig: 208, 86
+  offset: 2, 0
+  index: -1
+PiaoDai3
+  rotate: false
+  xy: 1270, 2
+  size: 118, 121
+  orig: 118, 121
+  offset: 0, 0
+  index: -1
+PiaoDai4
+  rotate: false
+  xy: 1145, 121
+  size: 123, 158
+  orig: 132, 159
+  offset: 9, 1
+  index: -1
+PiaoDai5
+  rotate: false
+  xy: 803, 288
+  size: 192, 214
+  orig: 195, 214
+  offset: 0, 0
+  index: -1
+Qiu
+  rotate: false
+  xy: 1410, 95
+  size: 128, 127
+  orig: 130, 129
+  offset: 1, 1
+  index: -1
+Qiu1
+  rotate: false
+  xy: 563, 21
+  size: 216, 216
+  orig: 218, 218
+  offset: 1, 1
+  index: -1
+Shadow
+  rotate: false
+  xy: 1596, 255
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+ShuiHhuan1
+  rotate: false
+  xy: 1429, 224
+  size: 165, 137
+  orig: 167, 139
+  offset: 1, 1
+  index: -1
+ShuiHhuan2
+  rotate: false
+  xy: 1436, 363
+  size: 191, 139
+  orig: 193, 141
+  offset: 1, 1
+  index: -1
+ShuiHhuan3
+  rotate: true
+  xy: 1270, 125
+  size: 174, 138
+  orig: 176, 140
+  offset: 1, 1
+  index: -1
+ShuiHhuan4
+  rotate: false
+  xy: 977, 121
+  size: 166, 158
+  orig: 168, 160
+  offset: 1, 1
+  index: -1

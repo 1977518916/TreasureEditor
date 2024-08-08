@@ -1,0 +1,153 @@
+
+JiaXu.png
+size: 737,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_L
+  rotate: false
+  xy: 547, 90
+  size: 51, 51
+  orig: 57, 53
+  offset: 0, 2
+  index: -1
+Arm_R
+  rotate: true
+  xy: 376, 8
+  size: 62, 56
+  orig: 71, 56
+  offset: 9, 0
+  index: -1
+Body
+  rotate: false
+  xy: 607, 174
+  size: 100, 93
+  orig: 148, 99
+  offset: 27, 6
+  index: -1
+DaoGuang
+  rotate: false
+  xy: 2, 11
+  size: 128, 256
+  orig: 128, 256
+  offset: 0, 0
+  index: -1
+Decoration_1
+  rotate: false
+  xy: 709, 212
+  size: 26, 55
+  orig: 28, 58
+  offset: 1, 2
+  index: -1
+Dimian1
+  rotate: false
+  xy: 244, 5
+  size: 64, 65
+  orig: 64, 65
+  offset: 0, 0
+  index: -1
+Dust_1
+  rotate: false
+  xy: 132, 50
+  size: 94, 217
+  orig: 100, 225
+  offset: 6, 0
+  index: -1
+Dust_2
+  rotate: true
+  xy: 607, 80
+  size: 92, 100
+  orig: 95, 111
+  offset: 1, 2
+  index: -1
+Eye_L
+  rotate: false
+  xy: 659, 9
+  size: 53, 69
+  orig: 53, 69
+  offset: 0, 0
+  index: -1
+Eye_L_1
+  rotate: true
+  xy: 547, 6
+  size: 72, 69
+  orig: 80, 69
+  offset: 8, 0
+  index: -1
+Eye_R
+  rotate: false
+  xy: 618, 6
+  size: 39, 72
+  orig: 39, 72
+  offset: 0, 0
+  index: -1
+Eye_R_1
+  rotate: false
+  xy: 310, 6
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Feet_L
+  rotate: true
+  xy: 228, 51
+  size: 19, 14
+  orig: 19, 14
+  offset: 0, 0
+  index: -1
+Feet_R
+  rotate: true
+  xy: 518, 124
+  size: 17, 15
+  orig: 17, 15
+  offset: 0, 0
+  index: -1
+Glow
+  rotate: false
+  xy: 434, 6
+  size: 111, 111
+  orig: 128, 128
+  offset: 9, 8
+  index: -1
+Guan
+  rotate: true
+  xy: 518, 143
+  size: 124, 87
+  orig: 127, 89
+  offset: 2, 1
+  index: -1
+Hair_B
+  rotate: true
+  xy: 390, 119
+  size: 148, 126
+  orig: 150, 126
+  offset: 2, 0
+  index: -1
+Head
+  rotate: true
+  xy: 228, 72
+  size: 195, 160
+  orig: 226, 171
+  offset: 0, 0
+  index: -1
+JianJia_L
+  rotate: false
+  xy: 176, 7
+  size: 59, 41
+  orig: 59, 41
+  offset: 0, 0
+  index: -1
+JianJia_R
+  rotate: true
+  xy: 132, 2
+  size: 46, 42
+  orig: 46, 42
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 390, 85
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

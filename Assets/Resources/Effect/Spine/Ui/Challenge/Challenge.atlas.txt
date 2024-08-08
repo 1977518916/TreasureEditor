@@ -1,0 +1,69 @@
+
+Challenge.png
+size: 293,249
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+M_Z_04
+  rotate: true
+  xy: 191, 134
+  size: 36, 69
+  orig: 36, 69
+  offset: 0, 0
+  index: -1
+da (1)
+  rotate: false
+  xy: 197, 64
+  size: 77, 68
+  orig: 120, 99
+  offset: 22, 18
+  index: -1
+da (2)
+  rotate: true
+  xy: 102, 137
+  size: 110, 87
+  orig: 120, 99
+  offset: 4, 7
+  index: -1
+da (3)
+  rotate: true
+  xy: 101, 9
+  size: 116, 94
+  orig: 120, 99
+  offset: 2, 3
+  index: -1
+da (4)
+  rotate: true
+  xy: 2, 7
+  size: 118, 97
+  orig: 120, 99
+  offset: 1, 2
+  index: -1
+da (5)
+  rotate: true
+  xy: 2, 127
+  size: 120, 98
+  orig: 120, 99
+  offset: 0, 1
+  index: -1
+da (6)
+  rotate: false
+  xy: 191, 172
+  size: 100, 75
+  orig: 120, 99
+  offset: 5, 0
+  index: -1
+da (7)
+  rotate: false
+  xy: 2, 2
+  size: 2, 3
+  orig: 120, 99
+  offset: 41, 0
+  index: -1
+gg
+  rotate: false
+  xy: 197, 5
+  size: 56, 57
+  orig: 59, 59
+  offset: 2, 1
+  index: -1

@@ -1,0 +1,104 @@
+
+Artifact_unlock.png
+size: 314,507
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jiesuo/gg
+  rotate: false
+  xy: 2, 110
+  size: 59, 54
+  orig: 64, 57
+  offset: 3, 1
+  index: -1
+jiesuo/hh
+  rotate: false
+  xy: 2, 400
+  size: 221, 105
+  orig: 231, 120
+  offset: 6, 8
+  index: -1
+jiesuo/lt
+  rotate: true
+  xy: 2, 231
+  size: 167, 174
+  orig: 167, 175
+  offset: 0, 1
+  index: -1
+jiesuo/q1
+  rotate: true
+  xy: 157, 77
+  size: 142, 148
+  orig: 153, 156
+  offset: 6, 4
+  index: -1
+jiesuo/qe
+  rotate: true
+  xy: 2, 2
+  size: 73, 68
+  orig: 73, 68
+  offset: 0, 0
+  index: -1
+jiesuo/xian (1)
+  rotate: true
+  xy: 300, 503
+  size: 2, 9
+  orig: 74, 217
+  offset: 16, 44
+  index: -1
+jiesuo/xian (2)
+  rotate: false
+  xy: 72, 67
+  size: 71, 97
+  orig: 74, 217
+  offset: 2, 0
+  index: -1
+jiesuo/xian (3)
+  rotate: true
+  xy: 178, 283
+  size: 73, 134
+  orig: 74, 217
+  offset: 1, 1
+  index: -1
+jiesuo/xian (4)
+  rotate: false
+  xy: 225, 358
+  size: 73, 147
+  orig: 74, 217
+  offset: 1, 11
+  index: -1
+jiesuo/xian (5)
+  rotate: true
+  xy: 2, 166
+  size: 63, 153
+  orig: 74, 217
+  offset: 11, 13
+  index: -1
+jiesuo/xian (6)
+  rotate: true
+  xy: 72, 2
+  size: 63, 128
+  orig: 74, 217
+  offset: 11, 45
+  index: -1
+jiesuo/xian (7)
+  rotate: true
+  xy: 178, 221
+  size: 60, 133
+  orig: 74, 217
+  offset: 13, 78
+  index: -1
+jiesuo/xian (8)
+  rotate: true
+  xy: 202, 22
+  size: 53, 105
+  orig: 74, 217
+  offset: 16, 111
+  index: -1
+jiesuo/xian (9)
+  rotate: false
+  xy: 300, 437
+  size: 6, 64
+  orig: 74, 217
+  offset: 43, 142
+  index: -1

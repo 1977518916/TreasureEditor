@@ -1,0 +1,41 @@
+
+GuMian.png
+size: 825,298
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/2
+  rotate: false
+  xy: 297, 19
+  size: 330, 277
+  orig: 330, 277
+  offset: 0, 0
+  index: -1
+images/g
+  rotate: false
+  xy: 2, 3
+  size: 293, 293
+  orig: 298, 298
+  offset: 3, 2
+  index: -1
+images/jtt
+  rotate: true
+  xy: 629, 2
+  size: 113, 133
+  orig: 119, 138
+  offset: 3, 3
+  index: -1
+images/q
+  rotate: true
+  xy: 629, 117
+  size: 179, 162
+  orig: 180, 163
+  offset: 1, 0
+  index: -1
+images/yun
+  rotate: true
+  xy: 793, 125
+  size: 171, 30
+  orig: 171, 30
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,76 @@
+
+Fx_ZhaoYun_Attack.png
+size: 187,617
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+弹幕_00000
+  rotate: false
+  xy: 2, 392
+  size: 183, 55
+  orig: 200, 72
+  offset: 9, 9
+  index: -1
+弹幕_00001
+  rotate: false
+  xy: 2, 335
+  size: 183, 55
+  orig: 200, 72
+  offset: 9, 9
+  index: -1
+弹幕_00002
+  rotate: false
+  xy: 2, 74
+  size: 183, 70
+  orig: 200, 72
+  offset: 9, 2
+  index: -1
+弹幕_00003
+  rotate: false
+  xy: 2, 2
+  size: 183, 70
+  orig: 200, 72
+  offset: 9, 2
+  index: -1
+弹幕_00004
+  rotate: false
+  xy: 2, 505
+  size: 183, 54
+  orig: 200, 72
+  offset: 9, 6
+  index: -1
+弹幕_00005
+  rotate: false
+  xy: 2, 278
+  size: 183, 55
+  orig: 200, 72
+  offset: 9, 6
+  index: -1
+弹幕_00006
+  rotate: false
+  xy: 2, 212
+  size: 182, 64
+  orig: 200, 72
+  offset: 10, 3
+  index: -1
+弹幕_00007
+  rotate: false
+  xy: 2, 146
+  size: 183, 64
+  orig: 200, 72
+  offset: 9, 3
+  index: -1
+弹幕_00008
+  rotate: false
+  xy: 2, 449
+  size: 182, 54
+  orig: 200, 72
+  offset: 10, 6
+  index: -1
+弹幕_00009
+  rotate: false
+  xy: 2, 561
+  size: 183, 54
+  orig: 200, 72
+  offset: 9, 6
+  index: -1

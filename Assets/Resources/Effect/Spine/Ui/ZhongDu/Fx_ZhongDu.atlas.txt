@@ -1,0 +1,13 @@
+
+Fx_ZhongDu.png
+size: 33,33
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Qiu
+  rotate: false
+  xy: 2, 2
+  size: 29, 29
+  orig: 32, 32
+  offset: 1, 1
+  index: -1

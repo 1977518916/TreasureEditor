@@ -1,0 +1,223 @@
+
+ZhenJi_Skill_1.png
+size: 941,270
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+c01
+  rotate: false
+  xy: 821, 118
+  size: 88, 45
+  orig: 117, 72
+  offset: 0, 0
+  index: -1
+c02
+  rotate: false
+  xy: 449, 2
+  size: 90, 51
+  orig: 117, 72
+  offset: 14, 8
+  index: -1
+c03
+  rotate: false
+  xy: 585, 115
+  size: 88, 56
+  orig: 117, 72
+  offset: 19, 9
+  index: -1
+c04
+  rotate: false
+  xy: 809, 63
+  size: 83, 53
+  orig: 117, 72
+  offset: 27, 14
+  index: -1
+c05
+  rotate: false
+  xy: 803, 7
+  size: 83, 54
+  orig: 117, 72
+  offset: 33, 17
+  index: -1
+hua01
+  rotate: true
+  xy: 911, 75
+  size: 88, 28
+  orig: 122, 61
+  offset: 17, 24
+  index: -1
+hua02
+  rotate: false
+  xy: 670, 2
+  size: 109, 44
+  orig: 122, 61
+  offset: 7, 14
+  index: -1
+hua03
+  rotate: false
+  xy: 821, 165
+  size: 114, 50
+  orig: 122, 61
+  offset: 5, 10
+  index: -1
+hua04
+  rotate: false
+  xy: 821, 217
+  size: 117, 51
+  orig: 122, 61
+  offset: 3, 7
+  index: -1
+hua05
+  rotate: false
+  xy: 463, 112
+  size: 120, 55
+  orig: 122, 61
+  offset: 2, 3
+  index: -1
+hua06
+  rotate: false
+  xy: 340, 110
+  size: 121, 56
+  orig: 122, 61
+  offset: 1, 1
+  index: -1
+hua07
+  rotate: true
+  xy: 107, 21
+  size: 121, 46
+  orig: 122, 61
+  offset: 1, 1
+  index: -1
+sd01
+  rotate: false
+  xy: 2, 2
+  size: 55, 17
+  orig: 132, 54
+  offset: 37, 17
+  index: -1
+sd02
+  rotate: true
+  xy: 155, 19
+  size: 129, 53
+  orig: 132, 54
+  offset: 2, 0
+  index: -1
+sd03
+  rotate: false
+  xy: 687, 214
+  size: 132, 54
+  orig: 132, 54
+  offset: 0, 0
+  index: -1
+sd04
+  rotate: false
+  xy: 687, 158
+  size: 132, 54
+  orig: 132, 54
+  offset: 0, 0
+  index: -1
+sd05
+  rotate: false
+  xy: 675, 103
+  size: 132, 53
+  orig: 132, 54
+  offset: 0, 0
+  index: -1
+sd06
+  rotate: true
+  xy: 210, 16
+  size: 132, 53
+  orig: 132, 54
+  offset: 0, 0
+  index: -1
+sd07
+  rotate: true
+  xy: 265, 25
+  size: 132, 53
+  orig: 132, 54
+  offset: 0, 0
+  index: -1
+sd08
+  rotate: false
+  xy: 320, 55
+  size: 131, 53
+  orig: 132, 54
+  offset: 1, 0
+  index: -1
+sd09
+  rotate: false
+  xy: 453, 55
+  size: 131, 53
+  orig: 132, 54
+  offset: 1, 0
+  index: -1
+sd10
+  rotate: false
+  xy: 670, 48
+  size: 131, 53
+  orig: 132, 54
+  offset: 1, 0
+  index: -1
+sd11
+  rotate: false
+  xy: 320, 2
+  size: 127, 51
+  orig: 132, 54
+  offset: 3, 1
+  index: -1
+ss01
+  rotate: false
+  xy: 586, 33
+  size: 82, 80
+  orig: 116, 125
+  offset: 17, 4
+  index: -1
+ss02
+  rotate: true
+  xy: 582, 173
+  size: 95, 103
+  orig: 116, 125
+  offset: 12, 3
+  index: -1
+ss03
+  rotate: true
+  xy: 463, 169
+  size: 99, 117
+  orig: 116, 125
+  offset: 9, 3
+  index: -1
+ss04
+  rotate: true
+  xy: 340, 168
+  size: 100, 121
+  orig: 116, 125
+  offset: 9, 2
+  index: -1
+ss05
+  rotate: false
+  xy: 2, 21
+  size: 103, 121
+  orig: 116, 125
+  offset: 7, 2
+  index: -1
+ss06
+  rotate: false
+  xy: 2, 144
+  size: 108, 124
+  orig: 116, 125
+  offset: 5, 1
+  index: -1
+ss07
+  rotate: false
+  xy: 112, 150
+  size: 111, 118
+  orig: 116, 125
+  offset: 4, 1
+  index: -1
+ss08
+  rotate: false
+  xy: 225, 159
+  size: 113, 109
+  orig: 116, 125
+  offset: 2, 1
+  index: -1

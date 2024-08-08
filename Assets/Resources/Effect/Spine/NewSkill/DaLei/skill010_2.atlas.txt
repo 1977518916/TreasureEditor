@@ -1,0 +1,104 @@
+
+skill010_2.png
+size: 352,509
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Boom_01
+  rotate: false
+  xy: 286, 34
+  size: 58, 57
+  orig: 128, 128
+  offset: 35, 35
+  index: -1
+Boom_02
+  rotate: false
+  xy: 120, 18
+  size: 100, 100
+  orig: 128, 128
+  offset: 14, 14
+  index: -1
+Boom_03
+  rotate: false
+  xy: 238, 93
+  size: 112, 112
+  orig: 128, 128
+  offset: 8, 8
+  index: -1
+Boom_04
+  rotate: false
+  xy: 2, 120
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Boom_05
+  rotate: false
+  xy: 2, 2
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Boom_06
+  rotate: false
+  xy: 120, 120
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+LeiDian1
+  rotate: false
+  xy: 2, 443
+  size: 300, 64
+  orig: 300, 64
+  offset: 0, 0
+  index: -1
+LeiDian2
+  rotate: false
+  xy: 2, 381
+  size: 300, 60
+  orig: 300, 64
+  offset: 0, 4
+  index: -1
+LeiDian3
+  rotate: false
+  xy: 2, 337
+  size: 296, 42
+  orig: 300, 64
+  offset: 4, 13
+  index: -1
+LeiDian4
+  rotate: true
+  xy: 304, 207
+  size: 300, 46
+  orig: 300, 64
+  offset: 0, 9
+  index: -1
+LeiDian5
+  rotate: false
+  xy: 2, 297
+  size: 277, 38
+  orig: 300, 64
+  offset: 23, 10
+  index: -1
+LeiDian6
+  rotate: false
+  xy: 2, 266
+  size: 244, 29
+  orig: 300, 64
+  offset: 56, 16
+  index: -1
+LeiDian7
+  rotate: false
+  xy: 2, 238
+  size: 213, 26
+  orig: 300, 64
+  offset: 87, 17
+  index: -1
+circle
+  rotate: false
+  xy: 222, 29
+  size: 62, 62
+  orig: 64, 64
+  offset: 1, 1
+  index: -1

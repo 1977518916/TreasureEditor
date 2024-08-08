@@ -1,0 +1,76 @@
+
+SkillShiFang.png
+size: 1604,236
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bai
+  rotate: false
+  xy: 1128, 115
+  size: 118, 119
+  orig: 120, 121
+  offset: 1, 1
+  index: -1
+BaiGlow
+  rotate: false
+  xy: 1248, 115
+  size: 118, 119
+  orig: 128, 129
+  offset: 5, 5
+  index: -1
+Bian
+  rotate: false
+  xy: 1368, 115
+  size: 118, 119
+  orig: 120, 121
+  offset: 1, 1
+  index: -1
+Boom_01
+  rotate: true
+  xy: 1488, 120
+  size: 114, 113
+  orig: 256, 256
+  offset: 71, 71
+  index: -1
+Boom_02
+  rotate: true
+  xy: 928, 34
+  size: 200, 198
+  orig: 256, 256
+  offset: 28, 29
+  index: -1
+Boom_03
+  rotate: true
+  xy: 704, 10
+  size: 224, 222
+  orig: 256, 256
+  offset: 16, 17
+  index: -1
+Boom_04
+  rotate: false
+  xy: 2, 2
+  size: 232, 232
+  orig: 256, 256
+  offset: 12, 12
+  index: -1
+Boom_05
+  rotate: false
+  xy: 236, 2
+  size: 232, 232
+  orig: 256, 256
+  offset: 12, 12
+  index: -1
+Boom_06
+  rotate: false
+  xy: 470, 2
+  size: 232, 232
+  orig: 256, 256
+  offset: 12, 12
+  index: -1
+Path
+  rotate: true
+  xy: 1128, 49
+  size: 64, 124
+  orig: 64, 128
+  offset: 0, 1
+  index: -1

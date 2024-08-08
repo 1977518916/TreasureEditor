@@ -1,0 +1,118 @@
+
+feather.png
+size: 338,965
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+001
+  rotate: true
+  xy: 2, 953
+  size: 10, 11
+  orig: 10, 11
+  offset: 0, 0
+  index: -1
+PhoenixFeather
+  rotate: true
+  xy: 124, 2
+  size: 196, 197
+  orig: 196, 197
+  offset: 0, 0
+  index: -1
+dd (1)
+  rotate: true
+  xy: 2, 648
+  size: 71, 334
+  orig: 80, 348
+  offset: 7, 4
+  index: -1
+dd (10)
+  rotate: true
+  xy: 2, 721
+  size: 69, 329
+  orig: 80, 348
+  offset: 7, 6
+  index: -1
+dd (2)
+  rotate: true
+  xy: 2, 575
+  size: 71, 329
+  orig: 80, 348
+  offset: 7, 5
+  index: -1
+dd (3)
+  rotate: true
+  xy: 2, 502
+  size: 71, 327
+  orig: 80, 348
+  offset: 7, 6
+  index: -1
+dd (4)
+  rotate: true
+  xy: 2, 354
+  size: 73, 328
+  orig: 80, 348
+  offset: 5, 5
+  index: -1
+dd (5)
+  rotate: true
+  xy: 2, 277
+  size: 75, 329
+  orig: 80, 348
+  offset: 3, 5
+  index: -1
+dd (6)
+  rotate: true
+  xy: 2, 200
+  size: 75, 329
+  orig: 80, 348
+  offset: 2, 6
+  index: -1
+dd (7)
+  rotate: true
+  xy: 2, 429
+  size: 71, 321
+  orig: 80, 348
+  offset: 4, 10
+  index: -1
+dd (8)
+  rotate: true
+  xy: 2, 792
+  size: 67, 317
+  orig: 80, 348
+  offset: 7, 10
+  index: -1
+dd (9)
+  rotate: true
+  xy: 2, 861
+  size: 67, 320
+  orig: 80, 348
+  offset: 7, 9
+  index: -1
+dian
+  rotate: false
+  xy: 15, 951
+  size: 12, 12
+  orig: 13, 13
+  offset: 1, 0
+  index: -1
+dian2
+  rotate: false
+  xy: 29, 936
+  size: 28, 27
+  orig: 29, 29
+  offset: 1, 0
+  index: -1
+fh
+  rotate: true
+  xy: 2, 79
+  size: 119, 120
+  orig: 120, 120
+  offset: 1, 0
+  index: -1
+xxa
+  rotate: true
+  xy: 59, 930
+  size: 33, 34
+  orig: 35, 35
+  offset: 2, 0
+  index: -1

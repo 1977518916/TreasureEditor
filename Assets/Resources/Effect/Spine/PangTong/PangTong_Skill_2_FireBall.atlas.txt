@@ -1,0 +1,97 @@
+
+PangTong_Skill_2_FireBall.png
+size: 1446,244
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Jiu
+  rotate: false
+  xy: 1363, 80
+  size: 69, 59
+  orig: 69, 59
+  offset: 0, 0
+  index: -1
+JiuHu
+  rotate: true
+  xy: 1345, 141
+  size: 101, 99
+  orig: 101, 99
+  offset: 0, 0
+  index: -1
+tw (1)
+  rotate: false
+  xy: 384, 123
+  size: 254, 119
+  orig: 287, 133
+  offset: 15, 6
+  index: -1
+tw (10)
+  rotate: false
+  xy: 903, 8
+  size: 229, 121
+  orig: 287, 133
+  offset: 41, 9
+  index: -1
+tw (11)
+  rotate: false
+  xy: 1125, 133
+  size: 218, 109
+  orig: 287, 133
+  offset: 50, 12
+  index: -1
+tw (2)
+  rotate: false
+  xy: 131, 121
+  size: 251, 121
+  orig: 287, 133
+  offset: 21, 6
+  index: -1
+tw (3)
+  rotate: false
+  xy: 655, 8
+  size: 246, 120
+  orig: 287, 133
+  offset: 35, 3
+  index: -1
+tw (4)
+  rotate: false
+  xy: 640, 130
+  size: 247, 112
+  orig: 287, 133
+  offset: 22, 10
+  index: -1
+tw (5)
+  rotate: false
+  xy: 131, 2
+  size: 257, 117
+  orig: 287, 133
+  offset: 12, 9
+  index: -1
+tw (6)
+  rotate: false
+  xy: 1134, 13
+  size: 227, 118
+  orig: 287, 133
+  offset: 30, 9
+  index: -1
+tw (7)
+  rotate: false
+  xy: 889, 131
+  size: 234, 111
+  orig: 287, 133
+  offset: 33, 12
+  index: -1
+tw (8)
+  rotate: false
+  xy: 390, 14
+  size: 263, 107
+  orig: 287, 133
+  offset: 10, 11
+  index: -1
+tw (9)
+  rotate: true
+  xy: 2, 2
+  size: 240, 127
+  orig: 287, 133
+  offset: 41, 3
+  index: -1

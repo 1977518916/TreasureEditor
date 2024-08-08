@@ -1,0 +1,930 @@
+
+Artifact_sword.png
+size: 2033,1954
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+剑/ca (1)
+  rotate: false
+  xy: 910, 1676
+  size: 157, 276
+  orig: 157, 278
+  offset: 0, 0
+  index: -1
+剑/ca (16)
+  rotate: false
+  xy: 910, 1676
+  size: 157, 276
+  orig: 157, 278
+  offset: 0, 0
+  index: -1
+剑/ca (10)
+  rotate: false
+  xy: 1546, 1677
+  size: 157, 275
+  orig: 157, 278
+  offset: 0, 0
+  index: -1
+剑/ca (11)
+  rotate: false
+  xy: 592, 1675
+  size: 157, 277
+  orig: 157, 278
+  offset: 0, 0
+  index: -1
+剑/ca (12)
+  rotate: false
+  xy: 751, 1675
+  size: 157, 277
+  orig: 157, 278
+  offset: 0, 1
+  index: -1
+剑/ca (13)
+  rotate: false
+  xy: 1705, 1677
+  size: 157, 275
+  orig: 157, 278
+  offset: 0, 1
+  index: -1
+剑/ca (14)
+  rotate: false
+  xy: 2, 643
+  size: 157, 274
+  orig: 157, 278
+  offset: 0, 0
+  index: -1
+剑/ca (15)
+  rotate: false
+  xy: 2, 367
+  size: 157, 274
+  orig: 157, 278
+  offset: 0, 1
+  index: -1
+剑/ca (2)
+  rotate: false
+  xy: 1228, 1677
+  size: 157, 275
+  orig: 157, 278
+  offset: 0, 0
+  index: -1
+剑/ca (3)
+  rotate: false
+  xy: 1387, 1677
+  size: 157, 275
+  orig: 157, 278
+  offset: 0, 0
+  index: -1
+剑/ca (4)
+  rotate: false
+  xy: 1069, 1676
+  size: 157, 276
+  orig: 157, 278
+  offset: 0, 0
+  index: -1
+剑/ca (5)
+  rotate: false
+  xy: 274, 1674
+  size: 157, 278
+  orig: 157, 278
+  offset: 0, 0
+  index: -1
+剑/ca (6)
+  rotate: false
+  xy: 433, 1675
+  size: 157, 277
+  orig: 157, 278
+  offset: 0, 0
+  index: -1
+剑/ca (7)
+  rotate: false
+  xy: 1864, 1677
+  size: 156, 275
+  orig: 157, 278
+  offset: 1, 0
+  index: -1
+剑/ca (8)
+  rotate: false
+  xy: 2, 92
+  size: 156, 273
+  orig: 157, 278
+  offset: 1, 0
+  index: -1
+剑/ca (9)
+  rotate: false
+  xy: 2, 919
+  size: 156, 274
+  orig: 157, 278
+  offset: 1, 0
+  index: -1
+剑/h (1)
+  rotate: true
+  xy: 274, 1517
+  size: 155, 272
+  orig: 155, 275
+  offset: 0, 1
+  index: -1
+剑/h (16)
+  rotate: true
+  xy: 274, 1517
+  size: 155, 272
+  orig: 155, 275
+  offset: 0, 1
+  index: -1
+剑/h (10)
+  rotate: false
+  xy: 615, 1244
+  size: 155, 272
+  orig: 155, 275
+  offset: 0, 0
+  index: -1
+剑/h (11)
+  rotate: false
+  xy: 160, 944
+  size: 155, 274
+  orig: 155, 275
+  offset: 0, 0
+  index: -1
+剑/h (12)
+  rotate: false
+  xy: 161, 668
+  size: 155, 274
+  orig: 155, 275
+  offset: 0, 0
+  index: -1
+剑/h (13)
+  rotate: false
+  xy: 787, 972
+  size: 155, 271
+  orig: 155, 275
+  offset: 0, 1
+  index: -1
+剑/h (14)
+  rotate: true
+  xy: 823, 1518
+  size: 155, 270
+  orig: 155, 275
+  offset: 0, 1
+  index: -1
+剑/h (15)
+  rotate: false
+  xy: 473, 969
+  size: 155, 272
+  orig: 155, 275
+  offset: 0, 0
+  index: -1
+剑/h (2)
+  rotate: false
+  xy: 458, 1243
+  size: 155, 272
+  orig: 155, 275
+  offset: 0, 0
+  index: -1
+剑/h (3)
+  rotate: false
+  xy: 161, 393
+  size: 155, 273
+  orig: 155, 275
+  offset: 0, 0
+  index: -1
+剑/h (4)
+  rotate: true
+  xy: 548, 1518
+  size: 155, 273
+  orig: 155, 275
+  offset: 0, 0
+  index: -1
+剑/h (5)
+  rotate: false
+  xy: 144, 1220
+  size: 155, 274
+  orig: 155, 275
+  offset: 0, 0
+  index: -1
+剑/h (6)
+  rotate: false
+  xy: 301, 1242
+  size: 155, 273
+  orig: 155, 275
+  offset: 0, 0
+  index: -1
+剑/h (7)
+  rotate: false
+  xy: 317, 967
+  size: 154, 273
+  orig: 155, 275
+  offset: 1, 0
+  index: -1
+剑/h (8)
+  rotate: false
+  xy: 632, 423
+  size: 154, 271
+  orig: 155, 275
+  offset: 1, 0
+  index: -1
+剑/h (9)
+  rotate: false
+  xy: 772, 1245
+  size: 154, 271
+  orig: 155, 275
+  offset: 1, 0
+  index: -1
+剑/hh (1)
+  rotate: false
+  xy: 315, 126
+  size: 152, 265
+  orig: 153, 269
+  offset: 1, 1
+  index: -1
+剑/hh (16)
+  rotate: false
+  xy: 315, 126
+  size: 152, 265
+  orig: 153, 269
+  offset: 1, 1
+  index: -1
+剑/hh (10)
+  rotate: false
+  xy: 1725, 980
+  size: 153, 267
+  orig: 153, 269
+  offset: 0, 0
+  index: -1
+剑/hh (11)
+  rotate: false
+  xy: 1259, 705
+  size: 153, 269
+  orig: 153, 269
+  offset: 0, 0
+  index: -1
+剑/hh (12)
+  rotate: false
+  xy: 160, 99
+  size: 153, 266
+  orig: 153, 269
+  offset: 0, 1
+  index: -1
+剑/hh (13)
+  rotate: false
+  xy: 1727, 175
+  size: 152, 265
+  orig: 153, 269
+  offset: 0, 1
+  index: -1
+剑/hh (14)
+  rotate: false
+  xy: 1056, 159
+  size: 152, 265
+  orig: 153, 269
+  offset: 0, 2
+  index: -1
+剑/hh (15)
+  rotate: false
+  xy: 1727, 442
+  size: 152, 267
+  orig: 153, 269
+  offset: 0, 1
+  index: -1
+剑/hh (2)
+  rotate: false
+  xy: 1867, 1252
+  size: 152, 266
+  orig: 153, 269
+  offset: 1, 0
+  index: -1
+剑/hh (3)
+  rotate: true
+  xy: 788, 272
+  size: 152, 266
+  orig: 153, 269
+  offset: 1, 0
+  index: -1
+剑/hh (4)
+  rotate: false
+  xy: 1257, 976
+  size: 153, 269
+  orig: 153, 269
+  offset: 0, 0
+  index: -1
+剑/hh (5)
+  rotate: false
+  xy: 1414, 707
+  size: 153, 268
+  orig: 153, 269
+  offset: 0, 0
+  index: -1
+剑/hh (6)
+  rotate: false
+  xy: 469, 150
+  size: 152, 265
+  orig: 153, 269
+  offset: 1, 0
+  index: -1
+剑/hh (7)
+  rotate: false
+  xy: 623, 154
+  size: 152, 265
+  orig: 153, 269
+  offset: 1, 0
+  index: -1
+剑/hh (8)
+  rotate: false
+  xy: 1880, 985
+  size: 151, 265
+  orig: 153, 269
+  offset: 2, 0
+  index: -1
+剑/hh (9)
+  rotate: true
+  xy: 777, 118
+  size: 152, 265
+  orig: 153, 269
+  offset: 1, 0
+  index: -1
+剑/hhhuo (1)
+  rotate: false
+  xy: 1881, 395
+  size: 144, 139
+  orig: 153, 143
+  offset: 8, 2
+  index: -1
+剑/hhhuo (10)
+  rotate: true
+  xy: 1347, 287
+  size: 145, 137
+  orig: 153, 143
+  offset: 8, 2
+  index: -1
+剑/hhhuo (11)
+  rotate: true
+  xy: 1347, 287
+  size: 145, 137
+  orig: 153, 143
+  offset: 8, 2
+  index: -1
+剑/hhhuo (12)
+  rotate: false
+  xy: 1203, 2
+  size: 147, 130
+  orig: 153, 143
+  offset: 6, 2
+  index: -1
+剑/hhhuo (13)
+  rotate: true
+  xy: 1363, 142
+  size: 143, 135
+  orig: 153, 143
+  offset: 9, 1
+  index: -1
+剑/hhhuo (2)
+  rotate: true
+  xy: 1881, 246
+  size: 147, 141
+  orig: 153, 143
+  offset: 6, 2
+  index: -1
+剑/hhhuo (3)
+  rotate: false
+  xy: 1881, 103
+  size: 147, 141
+  orig: 153, 143
+  offset: 5, 2
+  index: -1
+剑/hhhuo (4)
+  rotate: false
+  xy: 1053, 17
+  size: 148, 140
+  orig: 153, 143
+  offset: 5, 2
+  index: -1
+剑/hhhuo (5)
+  rotate: false
+  xy: 1210, 134
+  size: 151, 137
+  orig: 153, 143
+  offset: 1, 1
+  index: -1
+剑/hhhuo (6)
+  rotate: false
+  xy: 1881, 844
+  size: 150, 139
+  orig: 153, 143
+  offset: 2, 1
+  index: -1
+剑/hhhuo (7)
+  rotate: true
+  xy: 1881, 690
+  size: 152, 141
+  orig: 153, 143
+  offset: 1, 0
+  index: -1
+剑/hhhuo (8)
+  rotate: true
+  xy: 1210, 273
+  size: 153, 135
+  orig: 153, 143
+  offset: 0, 0
+  index: -1
+剑/hhhuo (9)
+  rotate: true
+  xy: 1881, 536
+  size: 152, 138
+  orig: 153, 143
+  offset: 1, 0
+  index: -1
+剑/jg (1)
+  rotate: false
+  xy: 1712, 28
+  size: 97, 54
+  orig: 135, 279
+  offset: 0, 225
+  index: -1
+剑/jg (10)
+  rotate: false
+  xy: 1712, 84
+  size: 81, 89
+  orig: 135, 279
+  offset: 54, 17
+  index: -1
+剑/jg (11)
+  rotate: false
+  xy: 1448, 2
+  size: 78, 86
+  orig: 135, 279
+  offset: 57, 10
+  index: -1
+剑/jg (12)
+  rotate: false
+  xy: 1811, 4
+  size: 75, 83
+  orig: 135, 279
+  offset: 60, 2
+  index: -1
+剑/jg (13)
+  rotate: false
+  xy: 1888, 26
+  size: 70, 75
+  orig: 135, 279
+  offset: 65, 0
+  index: -1
+剑/jg (14)
+  rotate: false
+  xy: 1960, 37
+  size: 62, 64
+  orig: 135, 279
+  offset: 73, 0
+  index: -1
+剑/jg (15)
+  rotate: false
+  xy: 1363, 90
+  size: 49, 50
+  orig: 135, 279
+  offset: 82, 0
+  index: -1
+剑/jg (16)
+  rotate: false
+  xy: 265, 60
+  size: 36, 37
+  orig: 135, 279
+  offset: 91, 0
+  index: -1
+剑/jg (2)
+  rotate: false
+  xy: 2, 5
+  size: 103, 85
+  orig: 135, 279
+  offset: 0, 194
+  index: -1
+剑/jg (3)
+  rotate: false
+  xy: 1500, 185
+  size: 101, 107
+  orig: 135, 279
+  offset: 8, 162
+  index: -1
+剑/jg (4)
+  rotate: false
+  xy: 1603, 228
+  size: 98, 105
+  orig: 135, 279
+  offset: 17, 131
+  index: -1
+剑/jg (5)
+  rotate: true
+  xy: 160, 2
+  size: 95, 103
+  orig: 135, 279
+  offset: 26, 100
+  index: -1
+剑/jg (6)
+  rotate: true
+  xy: 1500, 90
+  size: 93, 102
+  orig: 135, 279
+  offset: 35, 69
+  index: -1
+剑/jg (7)
+  rotate: false
+  xy: 1604, 128
+  size: 89, 98
+  orig: 135, 279
+  offset: 45, 40
+  index: -1
+剑/jg (8)
+  rotate: false
+  xy: 1623, 30
+  size: 87, 96
+  orig: 135, 279
+  offset: 48, 32
+  index: -1
+剑/jg (9)
+  rotate: true
+  xy: 1528, 4
+  size: 84, 93
+  orig: 135, 279
+  offset: 51, 24
+  index: -1
+剑/jian
+  rotate: false
+  xy: 2, 1496
+  size: 270, 456
+  orig: 270, 456
+  offset: 0, 0
+  index: -1
+剑/lan (1)
+  rotate: false
+  xy: 1711, 1249
+  size: 154, 269
+  orig: 155, 273
+  offset: 1, 2
+  index: -1
+剑/lan (16)
+  rotate: false
+  xy: 1711, 1249
+  size: 154, 269
+  orig: 155, 273
+  offset: 1, 2
+  index: -1
+剑/lan (10)
+  rotate: false
+  xy: 1242, 1247
+  size: 154, 270
+  orig: 155, 273
+  offset: 1, 1
+  index: -1
+剑/lan (11)
+  rotate: false
+  xy: 475, 421
+  size: 155, 272
+  orig: 155, 273
+  offset: 0, 1
+  index: -1
+剑/lan (12)
+  rotate: true
+  xy: 1095, 1519
+  size: 155, 270
+  orig: 155, 273
+  offset: 0, 1
+  index: -1
+剑/lan (13)
+  rotate: false
+  xy: 1568, 978
+  size: 155, 268
+  orig: 155, 273
+  offset: 0, 2
+  index: -1
+剑/lan (14)
+  rotate: false
+  xy: 1569, 708
+  size: 154, 268
+  orig: 155, 273
+  offset: 0, 2
+  index: -1
+剑/lan (15)
+  rotate: true
+  xy: 1367, 1520
+  size: 155, 270
+  orig: 155, 273
+  offset: 0, 1
+  index: -1
+剑/lan (2)
+  rotate: false
+  xy: 1102, 700
+  size: 155, 270
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/lan (3)
+  rotate: false
+  xy: 1102, 428
+  size: 155, 270
+  orig: 155, 273
+  offset: 0, 1
+  index: -1
+剑/lan (4)
+  rotate: false
+  xy: 788, 699
+  size: 155, 271
+  orig: 155, 273
+  offset: 0, 1
+  index: -1
+剑/lan (5)
+  rotate: false
+  xy: 475, 695
+  size: 154, 272
+  orig: 155, 273
+  offset: 1, 0
+  index: -1
+剑/lan (6)
+  rotate: false
+  xy: 944, 972
+  size: 154, 271
+  orig: 155, 273
+  offset: 1, 0
+  index: -1
+剑/lan (7)
+  rotate: false
+  xy: 1725, 711
+  size: 154, 267
+  orig: 155, 273
+  offset: 1, 0
+  index: -1
+剑/lan (8)
+  rotate: false
+  xy: 1415, 437
+  size: 154, 268
+  orig: 155, 273
+  offset: 1, 0
+  index: -1
+剑/lan (9)
+  rotate: false
+  xy: 1412, 977
+  size: 154, 269
+  orig: 155, 273
+  offset: 1, 0
+  index: -1
+剑/lzz (1)
+  rotate: true
+  xy: 1352, 2
+  size: 86, 94
+  orig: 137, 158
+  offset: 27, 27
+  index: -1
+剑/lzz (11)
+  rotate: true
+  xy: 1352, 2
+  size: 86, 94
+  orig: 137, 158
+  offset: 27, 27
+  index: -1
+剑/lzz (10)
+  rotate: false
+  xy: 315, 2
+  size: 114, 122
+  orig: 137, 158
+  offset: 0, 11
+  index: -1
+剑/lzz (20)
+  rotate: false
+  xy: 315, 2
+  size: 114, 122
+  orig: 137, 158
+  offset: 0, 11
+  index: -1
+剑/lzz (2)
+  rotate: true
+  xy: 932, 3
+  size: 113, 119
+  orig: 137, 158
+  offset: 24, 11
+  index: -1
+剑/lzz (12)
+  rotate: true
+  xy: 932, 3
+  size: 113, 119
+  orig: 137, 158
+  offset: 24, 11
+  index: -1
+剑/lzz (3)
+  rotate: true
+  xy: 694, 2
+  size: 114, 117
+  orig: 137, 158
+  offset: 21, 23
+  index: -1
+剑/lzz (13)
+  rotate: true
+  xy: 694, 2
+  size: 114, 117
+  orig: 137, 158
+  offset: 21, 23
+  index: -1
+剑/lzz (4)
+  rotate: true
+  xy: 813, 2
+  size: 114, 117
+  orig: 137, 158
+  offset: 18, 6
+  index: -1
+剑/lzz (14)
+  rotate: true
+  xy: 813, 2
+  size: 114, 117
+  orig: 137, 158
+  offset: 18, 6
+  index: -1
+剑/lzz (5)
+  rotate: true
+  xy: 574, 2
+  size: 114, 118
+  orig: 137, 158
+  offset: 14, 14
+  index: -1
+剑/lzz (15)
+  rotate: true
+  xy: 574, 2
+  size: 114, 118
+  orig: 137, 158
+  offset: 14, 14
+  index: -1
+剑/lzz (6)
+  rotate: true
+  xy: 431, 2
+  size: 114, 141
+  orig: 137, 158
+  offset: 11, 0
+  index: -1
+剑/lzz (16)
+  rotate: true
+  xy: 431, 2
+  size: 114, 141
+  orig: 137, 158
+  offset: 11, 0
+  index: -1
+剑/lzz (7)
+  rotate: false
+  xy: 1486, 294
+  size: 113, 141
+  orig: 137, 158
+  offset: 9, 9
+  index: -1
+剑/lzz (17)
+  rotate: false
+  xy: 1486, 294
+  size: 113, 141
+  orig: 137, 158
+  offset: 9, 9
+  index: -1
+剑/lzz (8)
+  rotate: false
+  xy: 1911, 1531
+  size: 113, 144
+  orig: 137, 158
+  offset: 6, 14
+  index: -1
+剑/lzz (18)
+  rotate: false
+  xy: 1911, 1531
+  size: 113, 144
+  orig: 137, 158
+  offset: 6, 14
+  index: -1
+剑/lzz (9)
+  rotate: false
+  xy: 1601, 335
+  size: 113, 101
+  orig: 137, 158
+  offset: 3, 24
+  index: -1
+剑/lzz (19)
+  rotate: false
+  xy: 1601, 335
+  size: 113, 101
+  orig: 137, 158
+  offset: 3, 24
+  index: -1
+剑/qq0
+  rotate: false
+  xy: 1795, 89
+  size: 84, 84
+  orig: 84, 84
+  offset: 0, 0
+  index: -1
+剑/xx
+  rotate: true
+  xy: 2, 1195
+  size: 299, 140
+  orig: 299, 140
+  offset: 0, 0
+  index: -1
+剑/zz (1)
+  rotate: false
+  xy: 788, 426
+  size: 155, 271
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (16)
+  rotate: false
+  xy: 788, 426
+  size: 155, 271
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (10)
+  rotate: false
+  xy: 1085, 1245
+  size: 155, 271
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (11)
+  rotate: false
+  xy: 318, 417
+  size: 155, 273
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (12)
+  rotate: false
+  xy: 631, 696
+  size: 155, 272
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (13)
+  rotate: true
+  xy: 1639, 1520
+  size: 155, 270
+  orig: 155, 273
+  offset: 0, 1
+  index: -1
+剑/zz (14)
+  rotate: false
+  xy: 1398, 1248
+  size: 155, 270
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (15)
+  rotate: false
+  xy: 1100, 972
+  size: 155, 271
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (2)
+  rotate: false
+  xy: 928, 1245
+  size: 155, 271
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (3)
+  rotate: false
+  xy: 945, 699
+  size: 155, 271
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (4)
+  rotate: false
+  xy: 630, 970
+  size: 155, 272
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (5)
+  rotate: false
+  xy: 318, 692
+  size: 155, 273
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (6)
+  rotate: false
+  xy: 945, 426
+  size: 155, 271
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+剑/zz (7)
+  rotate: false
+  xy: 1555, 1248
+  size: 154, 270
+  orig: 155, 273
+  offset: 1, 0
+  index: -1
+剑/zz (8)
+  rotate: false
+  xy: 1571, 438
+  size: 154, 268
+  orig: 155, 273
+  offset: 1, 0
+  index: -1
+剑/zz (9)
+  rotate: false
+  xy: 1259, 434
+  size: 154, 269
+  orig: 155, 273
+  offset: 1, 0
+  index: -1

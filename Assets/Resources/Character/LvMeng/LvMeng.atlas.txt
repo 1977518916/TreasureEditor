@@ -1,0 +1,209 @@
+
+LvMeng.png
+size: 821,205
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+01
+  rotate: true
+  xy: 777, 100
+  size: 103, 42
+  orig: 103, 42
+  offset: 0, 0
+  index: -1
+02
+  rotate: true
+  xy: 588, 29
+  size: 59, 57
+  orig: 59, 57
+  offset: 0, 0
+  index: -1
+02_1
+  rotate: false
+  xy: 227, 3
+  size: 64, 62
+  orig: 64, 62
+  offset: 0, 0
+  index: -1
+03
+  rotate: true
+  xy: 477, 75
+  size: 12, 32
+  orig: 12, 32
+  offset: 0, 0
+  index: -1
+04
+  rotate: false
+  xy: 2, 13
+  size: 182, 190
+  orig: 182, 190
+  offset: 0, 0
+  index: -1
+05
+  rotate: true
+  xy: 477, 89
+  size: 114, 83
+  orig: 114, 83
+  offset: 0, 0
+  index: -1
+06
+  rotate: true
+  xy: 777, 41
+  size: 57, 39
+  orig: 57, 39
+  offset: 0, 0
+  index: -1
+07
+  rotate: false
+  xy: 703, 4
+  size: 38, 35
+  orig: 38, 35
+  offset: 0, 0
+  index: -1
+08
+  rotate: true
+  xy: 562, 90
+  size: 113, 100
+  orig: 113, 100
+  offset: 0, 0
+  index: -1
+09
+  rotate: true
+  xy: 523, 76
+  size: 11, 10
+  orig: 11, 10
+  offset: 0, 0
+  index: -1
+10
+  rotate: true
+  xy: 511, 75
+  size: 12, 10
+  orig: 12, 10
+  offset: 0, 0
+  index: -1
+11
+  rotate: true
+  xy: 651, 6
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+12
+  rotate: true
+  xy: 186, 67
+  size: 136, 96
+  orig: 136, 96
+  offset: 0, 0
+  index: -1
+13
+  rotate: true
+  xy: 647, 30
+  size: 58, 54
+  orig: 58, 54
+  offset: 0, 0
+  index: -1
+14
+  rotate: false
+  xy: 580, 3
+  size: 22, 22
+  orig: 22, 22
+  offset: 0, 0
+  index: -1
+15
+  rotate: true
+  xy: 293, 8
+  size: 64, 225
+  orig: 64, 225
+  offset: 0, 0
+  index: -1
+16
+  rotate: false
+  xy: 777, 7
+  size: 31, 32
+  orig: 31, 32
+  offset: 0, 0
+  index: -1
+17
+  rotate: true
+  xy: 743, 42
+  size: 48, 32
+  orig: 48, 32
+  offset: 0, 0
+  index: -1
+18
+  rotate: false
+  xy: 2, 4
+  size: 4, 7
+  orig: 4, 7
+  offset: 0, 0
+  index: -1
+19
+  rotate: true
+  xy: 703, 42
+  size: 48, 19
+  orig: 48, 19
+  offset: 0, 0
+  index: -1
+20
+  rotate: false
+  xy: 551, 2
+  size: 27, 23
+  orig: 27, 23
+  offset: 0, 0
+  index: -1
+BaoDian_01
+  rotate: false
+  xy: 604, 3
+  size: 45, 24
+  orig: 64, 64
+  offset: 7, 8
+  index: -1
+BaoDian_02
+  rotate: true
+  xy: 551, 27
+  size: 60, 35
+  orig: 64, 64
+  offset: 3, 11
+  index: -1
+BaoDian_03
+  rotate: true
+  xy: 186, 2
+  size: 63, 39
+  orig: 64, 64
+  offset: 1, 15
+  index: -1
+BaoDian_04
+  rotate: true
+  xy: 520, 11
+  size: 62, 29
+  orig: 64, 64
+  offset: 2, 20
+  index: -1
+DaoGuang
+  rotate: false
+  xy: 347, 75
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Glow
+  rotate: false
+  xy: 664, 92
+  size: 111, 111
+  orig: 128, 128
+  offset: 9, 8
+  index: -1
+QiangMang
+  rotate: true
+  xy: 284, 74
+  size: 129, 61
+  orig: 129, 61
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 743, 8
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

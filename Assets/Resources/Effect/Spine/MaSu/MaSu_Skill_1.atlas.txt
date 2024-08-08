@@ -1,0 +1,104 @@
+
+MaSu_Skill_1.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian1
+  rotate: false
+  xy: 2, 7
+  size: 115, 118
+  orig: 133, 129
+  offset: 9, 8
+  index: -1
+Fire_1
+  rotate: false
+  xy: 232, 25
+  size: 100, 100
+  orig: 128, 128
+  offset: 14, 14
+  index: -1
+Fire_2
+  rotate: false
+  xy: 334, 25
+  size: 100, 100
+  orig: 128, 128
+  offset: 14, 14
+  index: -1
+Fire_3
+  rotate: true
+  xy: 436, 25
+  size: 100, 98
+  orig: 128, 128
+  offset: 14, 16
+  index: -1
+Fire_4
+  rotate: true
+  xy: 536, 29
+  size: 96, 57
+  orig: 128, 128
+  offset: 16, 57
+  index: -1
+Fog1
+  rotate: false
+  xy: 768, 25
+  size: 39, 40
+  orig: 64, 64
+  offset: 12, 3
+  index: -1
+Fog2
+  rotate: false
+  xy: 716, 13
+  size: 50, 52
+  orig: 64, 64
+  offset: 7, 3
+  index: -1
+Fog3
+  rotate: false
+  xy: 715, 67
+  size: 54, 58
+  orig: 64, 64
+  offset: 3, 4
+  index: -1
+Fog4
+  rotate: false
+  xy: 659, 5
+  size: 55, 58
+  orig: 64, 64
+  offset: 5, 5
+  index: -1
+Fog5
+  rotate: true
+  xy: 595, 2
+  size: 58, 62
+  orig: 64, 64
+  offset: 4, 1
+  index: -1
+Fog6
+  rotate: false
+  xy: 595, 62
+  size: 58, 63
+  orig: 64, 64
+  offset: 2, 1
+  index: -1
+Fog7
+  rotate: false
+  xy: 655, 65
+  size: 58, 60
+  orig: 64, 64
+  offset: 3, 1
+  index: -1
+Fog8
+  rotate: true
+  xy: 771, 96
+  size: 29, 28
+  orig: 64, 64
+  offset: 28, 33
+  index: -1
+Glow
+  rotate: false
+  xy: 119, 14
+  size: 111, 111
+  orig: 128, 128
+  offset: 9, 8
+  index: -1

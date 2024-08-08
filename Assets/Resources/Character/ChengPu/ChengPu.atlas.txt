@@ -1,0 +1,125 @@
+
+ChengPu.png
+size: 770,203
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 397, 79
+  size: 124, 122
+  orig: 129, 122
+  offset: 0, 0
+  index: -1
+DaoGuang
+  rotate: false
+  xy: 397, 10
+  size: 161, 67
+  orig: 168, 69
+  offset: 2, 1
+  index: -1
+Decoration_1
+  rotate: false
+  xy: 523, 80
+  size: 125, 121
+  orig: 126, 121
+  offset: 0, 0
+  index: -1
+Eye_L
+  rotate: false
+  xy: 280, 32
+  size: 51, 41
+  orig: 51, 41
+  offset: 0, 0
+  index: -1
+Eye_L_1
+  rotate: false
+  xy: 560, 11
+  size: 67, 67
+  orig: 67, 67
+  offset: 0, 0
+  index: -1
+Eye_R
+  rotate: true
+  xy: 333, 30
+  size: 43, 40
+  orig: 43, 40
+  offset: 0, 0
+  index: -1
+Eye_R_1
+  rotate: false
+  xy: 216, 11
+  size: 62, 62
+  orig: 62, 62
+  offset: 0, 0
+  index: -1
+Feet_L
+  rotate: true
+  xy: 629, 61
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+Feet_R
+  rotate: true
+  xy: 629, 44
+  size: 15, 13
+  orig: 15, 13
+  offset: 0, 0
+  index: -1
+Hand_L
+  rotate: false
+  xy: 740, 13
+  size: 26, 26
+  orig: 26, 26
+  offset: 0, 0
+  index: -1
+Hand_R
+  rotate: false
+  xy: 740, 13
+  size: 26, 26
+  orig: 26, 26
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 2, 2
+  size: 199, 212
+  orig: 199, 212
+  offset: 0, 0
+  index: -1
+JianJia_L
+  rotate: false
+  xy: 699, 11
+  size: 39, 28
+  orig: 39, 28
+  offset: 0, 0
+  index: -1
+JianJia_R
+  rotate: false
+  xy: 663, 8
+  size: 34, 31
+  orig: 34, 31
+  offset: 0, 0
+  index: -1
+Mao
+  rotate: true
+  xy: 216, 75
+  size: 126, 179
+  orig: 126, 179
+  offset: 0, 0
+  index: -1
+PiFeng
+  rotate: true
+  xy: 650, 41
+  size: 160, 118
+  orig: 160, 118
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 629, 7
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

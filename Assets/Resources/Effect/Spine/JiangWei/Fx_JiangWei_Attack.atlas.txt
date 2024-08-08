@@ -1,0 +1,111 @@
+
+Fx_JiangWei_Attack.png
+size: 543,303
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+001
+  rotate: true
+  xy: 369, 3
+  size: 179, 57
+  orig: 189, 64
+  offset: 10, 3
+  index: -1
+003
+  rotate: false
+  xy: 187, 122
+  size: 180, 57
+  orig: 189, 64
+  offset: 9, 3
+  index: -1
+005
+  rotate: false
+  xy: 2, 180
+  size: 183, 59
+  orig: 189, 64
+  offset: 6, 3
+  index: -1
+007
+  rotate: false
+  xy: 372, 244
+  size: 169, 57
+  orig: 189, 64
+  offset: 20, 3
+  index: -1
+009
+  rotate: true
+  xy: 2, 2
+  size: 176, 58
+  orig: 189, 64
+  offset: 13, 3
+  index: -1
+011
+  rotate: false
+  xy: 181, 62
+  size: 179, 58
+  orig: 189, 64
+  offset: 10, 3
+  index: -1
+013
+  rotate: false
+  xy: 187, 181
+  size: 180, 60
+  orig: 189, 64
+  offset: 9, 3
+  index: -1
+015
+  rotate: true
+  xy: 485, 5
+  size: 177, 56
+  orig: 189, 64
+  offset: 12, 3
+  index: -1
+017
+  rotate: true
+  xy: 428, 3
+  size: 179, 55
+  orig: 189, 64
+  offset: 10, 4
+  index: -1
+019
+  rotate: false
+  xy: 372, 184
+  size: 162, 58
+  orig: 189, 64
+  offset: 27, 2
+  index: -1
+021
+  rotate: false
+  xy: 187, 243
+  size: 183, 58
+  orig: 189, 64
+  offset: 6, 2
+  index: -1
+023
+  rotate: true
+  xy: 122, 5
+  size: 173, 57
+  orig: 189, 64
+  offset: 16, 3
+  index: -1
+025
+  rotate: false
+  xy: 181, 2
+  size: 179, 58
+  orig: 189, 64
+  offset: 10, 3
+  index: -1
+027
+  rotate: false
+  xy: 2, 241
+  size: 183, 60
+  orig: 189, 64
+  offset: 6, 2
+  index: -1
+029
+  rotate: true
+  xy: 62, 2
+  size: 176, 58
+  orig: 189, 64
+  offset: 13, 3
+  index: -1

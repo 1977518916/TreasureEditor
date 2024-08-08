@@ -1,0 +1,111 @@
+
+Mounts021.png
+size: 868,868
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Shadow
+  rotate: false
+  xy: 255, 6
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+m1
+  rotate: false
+  xy: 255, 40
+  size: 245, 52
+  orig: 245, 52
+  offset: 0, 0
+  index: -1
+m10
+  rotate: false
+  xy: 386, 537
+  size: 106, 159
+  orig: 106, 164
+  offset: 0, 0
+  index: -1
+m11
+  rotate: true
+  xy: 2, 23
+  size: 385, 251
+  orig: 385, 251
+  offset: 0, 0
+  index: -1
+m12
+  rotate: true
+  xy: 386, 412
+  size: 123, 169
+  orig: 123, 169
+  offset: 0, 0
+  index: -1
+m13
+  rotate: true
+  xy: 494, 551
+  size: 106, 158
+  orig: 106, 164
+  offset: 0, 0
+  index: -1
+m14
+  rotate: true
+  xy: 716, 80
+  size: 155, 149
+  orig: 155, 160
+  offset: 0, 0
+  index: -1
+m2
+  rotate: true
+  xy: 654, 450
+  size: 207, 212
+  orig: 208, 216
+  offset: 1, 0
+  index: -1
+m3
+  rotate: true
+  xy: 510, 659
+  size: 207, 293
+  orig: 207, 293
+  offset: 0, 0
+  index: -1
+m4
+  rotate: false
+  xy: 557, 453
+  size: 94, 96
+  orig: 94, 96
+  offset: 0, 0
+  index: -1
+m5
+  rotate: true
+  xy: 510, 27
+  size: 208, 204
+  orig: 208, 204
+  offset: 0, 0
+  index: -1
+m6
+  rotate: true
+  xy: 557, 237
+  size: 211, 213
+  orig: 212, 213
+  offset: 1, 0
+  index: -1
+m7
+  rotate: false
+  xy: 2, 410
+  size: 382, 456
+  orig: 382, 458
+  offset: 0, 0
+  index: -1
+m8
+  rotate: false
+  xy: 255, 94
+  size: 253, 314
+  orig: 253, 314
+  offset: 0, 0
+  index: -1
+m9
+  rotate: false
+  xy: 386, 698
+  size: 119, 168
+  orig: 119, 168
+  offset: 0, 0
+  index: -1

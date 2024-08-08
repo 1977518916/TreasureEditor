@@ -1,0 +1,34 @@
+
+Fx_ZhangJiao_Attack.png
+size: 451,116
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DianQiu1
+  rotate: true
+  xy: 123, 3
+  size: 111, 114
+  orig: 122, 122
+  offset: 9, 7
+  index: -1
+DianQiu2
+  rotate: true
+  xy: 239, 2
+  size: 112, 103
+  orig: 122, 122
+  offset: 9, 3
+  index: -1
+DianQiu3
+  rotate: false
+  xy: 344, 7
+  size: 105, 107
+  orig: 122, 122
+  offset: 16, 4
+  index: -1
+DianQiu4
+  rotate: false
+  xy: 2, 4
+  size: 119, 110
+  orig: 122, 122
+  offset: 2, 9
+  index: -1

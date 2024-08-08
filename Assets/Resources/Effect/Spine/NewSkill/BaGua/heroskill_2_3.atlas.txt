@@ -1,0 +1,41 @@
+
+heroskill_2_3.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaGua
+  rotate: false
+  xy: 2, 220
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BaoDian1
+  rotate: false
+  xy: 260, 220
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+QiMian
+  rotate: true
+  xy: 297, 2
+  size: 216, 165
+  orig: 216, 165
+  offset: 0, 0
+  index: -1
+QiZi
+  rotate: true
+  xy: 2, 66
+  size: 152, 293
+  orig: 154, 295
+  offset: 1, 1
+  index: -1
+Yuan_Big_Glow
+  rotate: false
+  xy: 464, 111
+  size: 106, 107
+  orig: 128, 128
+  offset: 11, 10
+  index: -1

@@ -1,0 +1,41 @@
+
+Fx_CaoXie_Glow.png
+size: 304,168
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian
+  rotate: false
+  xy: 2, 38
+  size: 125, 128
+  orig: 128, 128
+  offset: 3, 0
+  index: -1
+Fog_02
+  rotate: false
+  xy: 216, 2
+  size: 85, 79
+  orig: 85, 85
+  offset: 0, 0
+  index: -1
+Fog_04
+  rotate: false
+  xy: 129, 81
+  size: 85, 85
+  orig: 85, 85
+  offset: 0, 0
+  index: -1
+Fog_06
+  rotate: false
+  xy: 216, 83
+  size: 85, 83
+  orig: 85, 85
+  offset: 0, 2
+  index: -1
+Fog_08
+  rotate: false
+  xy: 129, 4
+  size: 85, 75
+  orig: 85, 85
+  offset: 0, 10
+  index: -1

@@ -1,0 +1,104 @@
+
+ZhouYu_Skill_2.png
+size: 1986,468
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+小技能/01
+  rotate: false
+  xy: 2, 394
+  size: 75, 72
+  orig: 131, 128
+  offset: 41, 27
+  index: -1
+小技能/02
+  rotate: false
+  xy: 79, 379
+  size: 88, 87
+  orig: 110, 109
+  offset: 14, 12
+  index: -1
+小技能/03
+  rotate: true
+  xy: 169, 332
+  size: 134, 135
+  orig: 148, 148
+  offset: 8, 5
+  index: -1
+小技能/zy (1)
+  rotate: false
+  xy: 306, 236
+  size: 334, 230
+  orig: 364, 254
+  offset: 7, 11
+  index: -1
+小技能/zy (10)
+  rotate: false
+  xy: 642, 236
+  size: 322, 230
+  orig: 364, 254
+  offset: 19, 11
+  index: -1
+小技能/zy (13)
+  rotate: false
+  xy: 1307, 235
+  size: 332, 231
+  orig: 364, 254
+  offset: 8, 11
+  index: -1
+小技能/zy (16)
+  rotate: false
+  xy: 1641, 235
+  size: 343, 231
+  orig: 364, 254
+  offset: 0, 11
+  index: -1
+小技能/zy (19)
+  rotate: false
+  xy: 236, 3
+  size: 343, 231
+  orig: 364, 254
+  offset: 0, 10
+  index: -1
+小技能/zy (22)
+  rotate: false
+  xy: 581, 3
+  size: 341, 231
+  orig: 364, 254
+  offset: 0, 11
+  index: -1
+小技能/zy (25)
+  rotate: false
+  xy: 924, 2
+  size: 338, 231
+  orig: 364, 254
+  offset: 5, 11
+  index: -1
+小技能/zy (28)
+  rotate: false
+  xy: 1264, 2
+  size: 343, 231
+  orig: 364, 254
+  offset: 0, 10
+  index: -1
+小技能/zy (29)
+  rotate: false
+  xy: 1609, 2
+  size: 343, 231
+  orig: 364, 254
+  offset: 0, 10
+  index: -1
+小技能/zy (4)
+  rotate: false
+  xy: 966, 235
+  size: 339, 231
+  orig: 364, 254
+  offset: 2, 11
+  index: -1
+小技能/zy (7)
+  rotate: true
+  xy: 2, 17
+  size: 313, 232
+  orig: 364, 254
+  offset: 31, 10
+  index: -1

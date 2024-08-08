@@ -1,0 +1,111 @@
+
+GuanYu.png
+size: 733,173
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+HongLian
+  rotate: true
+  xy: 406, 53
+  size: 118, 75
+  orig: 118, 75
+  offset: 0, 0
+  index: -1
+JianJia
+  rotate: false
+  xy: 406, 2
+  size: 44, 49
+  orig: 44, 49
+  offset: 0, 0
+  index: -1
+Jiao
+  rotate: false
+  xy: 282, 13
+  size: 88, 15
+  orig: 88, 15
+  offset: 0, 0
+  index: -1
+MeiMao
+  rotate: false
+  xy: 548, 14
+  size: 110, 69
+  orig: 110, 69
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 372, 7
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+ShenTi
+  rotate: true
+  xy: 225, 30
+  size: 141, 114
+  orig: 141, 114
+  offset: 0, 0
+  index: -1
+Shou_B
+  rotate: true
+  xy: 660, 14
+  size: 69, 55
+  orig: 69, 55
+  offset: 0, 0
+  index: -1
+Shou_B_Hand
+  rotate: false
+  xy: 256, 4
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+Shou_F
+  rotate: false
+  xy: 225, 3
+  size: 29, 25
+  orig: 29, 25
+  offset: 0, 0
+  index: -1
+Tou
+  rotate: true
+  xy: 2, 9
+  size: 162, 221
+  orig: 162, 221
+  offset: 0, 0
+  index: -1
+WuQi
+  rotate: true
+  xy: 483, 85
+  size: 86, 227
+  orig: 86, 227
+  offset: 0, 0
+  index: -1
+XiuQiu
+  rotate: false
+  xy: 483, 2
+  size: 63, 81
+  orig: 63, 81
+  offset: 0, 0
+  index: -1
+YanJing_1
+  rotate: true
+  xy: 717, 65
+  size: 106, 14
+  orig: 106, 14
+  offset: 0, 0
+  index: -1
+YanJing_2
+  rotate: true
+  xy: 341, 41
+  size: 130, 63
+  orig: 130, 63
+  offset: 0, 0
+  index: -1
+ZuiBa
+  rotate: true
+  xy: 282, 2
+  size: 9, 13
+  orig: 9, 13
+  offset: 0, 0
+  index: -1

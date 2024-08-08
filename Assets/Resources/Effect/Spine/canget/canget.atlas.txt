@@ -1,0 +1,48 @@
+
+canget.png
+size: 321,130
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 259, 54
+  size: 74, 60
+  orig: 82, 82
+  offset: 4, 11
+  index: -1
+d1
+  rotate: true
+  xy: 295, 17
+  size: 16, 15
+  orig: 17, 18
+  offset: 1, 1
+  index: -1
+d2
+  rotate: true
+  xy: 295, 35
+  size: 17, 16
+  orig: 18, 17
+  offset: 1, 0
+  index: -1
+xx
+  rotate: true
+  xy: 259, 19
+  size: 33, 34
+  orig: 35, 35
+  offset: 1, 0
+  index: -1
+zha1
+  rotate: true
+  xy: 131, 5
+  size: 123, 126
+  orig: 124, 128
+  offset: 1, 1
+  index: -1
+zha2
+  rotate: true
+  xy: 2, 2
+  size: 126, 127
+  orig: 127, 128
+  offset: 1, 0
+  index: -1

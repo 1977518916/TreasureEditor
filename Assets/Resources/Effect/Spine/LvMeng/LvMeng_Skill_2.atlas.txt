@@ -1,0 +1,188 @@
+
+LvMeng_Skill_2.png
+size: 2048,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian_01
+  rotate: true
+  xy: 974, 27
+  size: 45, 24
+  orig: 64, 64
+  offset: 7, 8
+  index: -1
+BaoDian_02
+  rotate: true
+  xy: 776, 65
+  size: 61, 35
+  orig: 64, 64
+  offset: 3, 11
+  index: -1
+BaoDian_03
+  rotate: true
+  xy: 735, 62
+  size: 64, 39
+  orig: 64, 64
+  offset: 0, 15
+  index: -1
+BaoDian_04
+  rotate: false
+  xy: 611, 7
+  size: 64, 29
+  orig: 64, 64
+  offset: 0, 20
+  index: -1
+BoWen
+  rotate: true
+  xy: 66, 6
+  size: 120, 126
+  orig: 128, 128
+  offset: 2, 2
+  index: -1
+BoWen1
+  rotate: true
+  xy: 376, 15
+  size: 111, 107
+  orig: 128, 128
+  offset: 10, 11
+  index: -1
+Fog1
+  rotate: false
+  xy: 1000, 32
+  size: 39, 40
+  orig: 64, 64
+  offset: 12, 3
+  index: -1
+Fog2
+  rotate: false
+  xy: 922, 20
+  size: 50, 52
+  orig: 64, 64
+  offset: 7, 3
+  index: -1
+Fog3
+  rotate: false
+  xy: 866, 8
+  size: 54, 58
+  orig: 64, 64
+  offset: 3, 4
+  index: -1
+Fog4
+  rotate: false
+  xy: 813, 68
+  size: 55, 58
+  orig: 64, 64
+  offset: 5, 5
+  index: -1
+Fog5
+  rotate: true
+  xy: 742, 2
+  size: 58, 62
+  orig: 64, 64
+  offset: 4, 1
+  index: -1
+Fog6
+  rotate: true
+  xy: 677, 2
+  size: 58, 63
+  orig: 64, 64
+  offset: 2, 1
+  index: -1
+Fog7
+  rotate: false
+  xy: 806, 3
+  size: 58, 60
+  orig: 64, 64
+  offset: 3, 1
+  index: -1
+Fog8
+  rotate: false
+  xy: 1019, 2
+  size: 29, 28
+  orig: 64, 64
+  offset: 28, 33
+  index: -1
+Glow
+  rotate: false
+  xy: 258, 10
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Line
+  rotate: false
+  xy: 870, 74
+  size: 256, 52
+  orig: 256, 128
+  offset: 0, 38
+  index: -1
+ShuiHua1
+  rotate: false
+  xy: 1050, 17
+  size: 24, 24
+  orig: 32, 32
+  offset: 4, 4
+  index: -1
+ShuiHua2
+  rotate: true
+  xy: 997, 2
+  size: 23, 20
+  orig: 32, 32
+  offset: 6, 7
+  index: -1
+ShuiHua3
+  rotate: true
+  xy: 1041, 43
+  size: 29, 27
+  orig: 32, 32
+  offset: 3, 1
+  index: -1
+ShuiHua4
+  rotate: false
+  xy: 974, 2
+  size: 21, 23
+  orig: 32, 32
+  offset: 7, 4
+  index: -1
+ShuiZhu_01
+  rotate: false
+  xy: 194, 6
+  size: 62, 120
+  orig: 64, 128
+  offset: 1, 7
+  index: -1
+ShuiZhu_02
+  rotate: false
+  xy: 2, 3
+  size: 62, 123
+  orig: 64, 128
+  offset: 1, 1
+  index: -1
+ShuiZhu_03
+  rotate: false
+  xy: 485, 18
+  size: 61, 108
+  orig: 64, 128
+  offset: 2, 0
+  index: -1
+ShuiZhu_04
+  rotate: false
+  xy: 548, 19
+  size: 61, 107
+  orig: 64, 128
+  offset: 1, 5
+  index: -1
+ShuiZhu_05
+  rotate: false
+  xy: 611, 38
+  size: 60, 88
+  orig: 64, 128
+  offset: 2, 7
+  index: -1
+WaterBaoDian
+  rotate: true
+  xy: 673, 62
+  size: 64, 60
+  orig: 64, 64
+  offset: 0, 2
+  index: -1

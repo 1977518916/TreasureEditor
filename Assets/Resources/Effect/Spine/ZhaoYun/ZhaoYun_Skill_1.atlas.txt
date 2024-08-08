@@ -1,0 +1,83 @@
+
+ZhaoYun_Skill_1.png
+size: 271,435
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow
+  rotate: false
+  xy: 110, 2
+  size: 56, 56
+  orig: 64, 64
+  offset: 4, 4
+  index: -1
+Long
+  rotate: true
+  xy: 2, 16
+  size: 417, 106
+  orig: 417, 106
+  offset: 0, 0
+  index: -1
+Path
+  rotate: false
+  xy: 110, 179
+  size: 121, 61
+  orig: 128, 64
+  offset: 4, 1
+  index: -1
+Quan1
+  rotate: false
+  xy: 240, 267
+  size: 18, 52
+  orig: 20, 56
+  offset: 1, 2
+  index: -1
+Quan2
+  rotate: false
+  xy: 240, 321
+  size: 29, 112
+  orig: 32, 114
+  offset: 1, 1
+  index: -1
+Quan3
+  rotate: true
+  xy: 110, 136
+  size: 41, 112
+  orig: 44, 114
+  offset: 1, 1
+  index: -1
+Quan4
+  rotate: true
+  xy: 110, 96
+  size: 38, 112
+  orig: 40, 114
+  offset: 1, 1
+  index: -1
+Quan5
+  rotate: false
+  xy: 233, 131
+  size: 36, 109
+  orig: 38, 113
+  offset: 1, 2
+  index: -1
+Quan6
+  rotate: false
+  xy: 224, 23
+  size: 35, 106
+  orig: 38, 109
+  offset: 1, 2
+  index: -1
+Quan7
+  rotate: true
+  xy: 110, 60
+  size: 34, 105
+  orig: 37, 109
+  offset: 2, 2
+  index: -1
+Shadow
+  rotate: true
+  xy: 110, 242
+  size: 191, 128
+  orig: 256, 128
+  offset: 42, 0
+  index: -1

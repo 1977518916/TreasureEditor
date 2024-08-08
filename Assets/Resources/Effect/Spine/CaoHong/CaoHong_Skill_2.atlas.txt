@@ -1,0 +1,27 @@
+
+CaoHong_Skill_2.png
+size: 359,187
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Dimian
+  rotate: false
+  xy: 246, 30
+  size: 63, 42
+  orig: 64, 64
+  offset: 1, 11
+  index: -1
+Glow
+  rotate: false
+  xy: 246, 74
+  size: 111, 111
+  orig: 128, 128
+  offset: 9, 8
+  index: -1
+Quan
+  rotate: true
+  xy: 2, 2
+  size: 183, 242
+  orig: 256, 256
+  offset: 28, 5
+  index: -1

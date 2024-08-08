@@ -1,0 +1,139 @@
+
+WenChou.png
+size: 1008,1008
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 906, 136
+  size: 44, 42
+  orig: 44, 42
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 625, 19
+  size: 79, 66
+  orig: 79, 66
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 2, 260
+  size: 547, 502
+  orig: 550, 531
+  offset: 0, 29
+  index: -1
+12
+  rotate: false
+  xy: 551, 246
+  size: 344, 215
+  orig: 344, 215
+  offset: 0, 0
+  index: -1
+13
+  rotate: false
+  xy: 897, 247
+  size: 48, 76
+  orig: 48, 76
+  offset: 0, 0
+  index: -1
+14
+  rotate: false
+  xy: 906, 180
+  size: 45, 65
+  orig: 45, 65
+  offset: 0, 0
+  index: -1
+15
+  rotate: false
+  xy: 551, 463
+  size: 288, 299
+  orig: 291, 301
+  offset: 3, 2
+  index: -1
+16
+  rotate: true
+  xy: 897, 325
+  size: 140, 105
+  orig: 140, 106
+  offset: 0, 1
+  index: -1
+17
+  rotate: false
+  xy: 2, 2
+  size: 442, 256
+  orig: 449, 280
+  offset: 0, 24
+  index: -1
+18
+  rotate: true
+  xy: 947, 252
+  size: 71, 43
+  orig: 71, 43
+  offset: 0, 0
+  index: -1
+2
+  rotate: true
+  xy: 953, 207
+  size: 43, 42
+  orig: 43, 42
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 2, 764
+  size: 929, 240
+  orig: 929, 240
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 734, 111
+  size: 170, 133
+  orig: 170, 133
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 446, 8
+  size: 177, 77
+  orig: 183, 77
+  offset: 0, 0
+  index: -1
+6
+  rotate: true
+  xy: 841, 467
+  size: 295, 163
+  orig: 295, 163
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 446, 87
+  size: 286, 157
+  orig: 286, 157
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 734, 90
+  size: 61, 19
+  orig: 61, 19
+  offset: 0, 0
+  index: -1
+9
+  rotate: true
+  xy: 933, 805
+  size: 199, 58
+  orig: 199, 58
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 933, 771
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

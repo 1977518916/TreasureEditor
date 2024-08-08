@@ -1,0 +1,20 @@
+
+Fx_DianJi_2.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow
+  rotate: false
+  xy: 116, 3
+  size: 111, 111
+  orig: 128, 128
+  offset: 9, 8
+  index: -1
+Quan
+  rotate: false
+  xy: 2, 2
+  size: 112, 112
+  orig: 128, 128
+  offset: 8, 8
+  index: -1

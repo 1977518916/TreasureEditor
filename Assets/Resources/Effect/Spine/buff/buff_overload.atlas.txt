@@ -1,0 +1,20 @@
+
+buff_overload.png
+size: 357,223
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+d
+  rotate: false
+  xy: 2, 2
+  size: 219, 219
+  orig: 225, 225
+  offset: 3, 2
+  index: -1
+t1
+  rotate: false
+  xy: 223, 89
+  size: 132, 132
+  orig: 137, 136
+  offset: 3, 1
+  index: -1

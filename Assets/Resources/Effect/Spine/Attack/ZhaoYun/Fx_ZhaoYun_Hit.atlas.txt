@@ -1,0 +1,125 @@
+
+Fx_ZhaoYun_Hit.png
+size: 275,922
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sjj (1)
+  rotate: true
+  xy: 175, 807
+  size: 113, 98
+  orig: 177, 177
+  offset: 45, 51
+  index: -1
+sjj (10)
+  rotate: false
+  xy: 2, 436
+  size: 148, 147
+  orig: 177, 177
+  offset: 27, 26
+  index: -1
+sjj (11)
+  rotate: false
+  xy: 2, 287
+  size: 148, 147
+  orig: 177, 177
+  offset: 27, 26
+  index: -1
+sjj (12)
+  rotate: true
+  xy: 138, 4
+  size: 133, 135
+  orig: 177, 177
+  offset: 29, 29
+  index: -1
+sjj (13)
+  rotate: false
+  xy: 170, 635
+  size: 68, 55
+  orig: 177, 177
+  offset: 66, 66
+  index: -1
+sjj (14)
+  rotate: false
+  xy: 170, 635
+  size: 68, 55
+  orig: 177, 177
+  offset: 66, 66
+  index: -1
+sjj (15)
+  rotate: true
+  xy: 240, 631
+  size: 59, 32
+  orig: 177, 177
+  offset: 66, 80
+  index: -1
+sjj (16)
+  rotate: true
+  xy: 240, 631
+  size: 59, 32
+  orig: 177, 177
+  offset: 66, 80
+  index: -1
+sjj (17)
+  rotate: true
+  xy: 240, 631
+  size: 59, 32
+  orig: 177, 177
+  offset: 66, 80
+  index: -1
+sjj (2)
+  rotate: true
+  xy: 175, 692
+  size: 113, 98
+  orig: 177, 177
+  offset: 45, 51
+  index: -1
+sjj (3)
+  rotate: false
+  xy: 152, 452
+  size: 121, 131
+  orig: 177, 177
+  offset: 35, 41
+  index: -1
+sjj (4)
+  rotate: false
+  xy: 151, 152
+  size: 122, 133
+  orig: 177, 177
+  offset: 35, 39
+  index: -1
+sjj (5)
+  rotate: false
+  xy: 152, 319
+  size: 120, 131
+  orig: 177, 177
+  offset: 37, 36
+  index: -1
+sjj (6)
+  rotate: true
+  xy: 2, 2
+  size: 135, 134
+  orig: 177, 177
+  offset: 33, 33
+  index: -1
+sjj (7)
+  rotate: true
+  xy: 2, 585
+  size: 163, 166
+  orig: 177, 177
+  offset: 4, 4
+  index: -1
+sjj (8)
+  rotate: true
+  xy: 2, 750
+  size: 170, 171
+  orig: 177, 177
+  offset: 4, 4
+  index: -1
+sjj (9)
+  rotate: true
+  xy: 2, 139
+  size: 146, 147
+  orig: 177, 177
+  offset: 27, 26
+  index: -1

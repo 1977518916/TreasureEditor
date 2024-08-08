@@ -1,0 +1,97 @@
+
+PangTong_Skill_2.png
+size: 744,621
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pt (1)
+  rotate: true
+  xy: 553, 157
+  size: 136, 150
+  orig: 231, 251
+  offset: 64, 50
+  index: -1
+pt (11)
+  rotate: true
+  xy: 375, 243
+  size: 187, 176
+  orig: 231, 251
+  offset: 39, 38
+  index: -1
+pt (13)
+  rotate: true
+  xy: 190, 173
+  size: 194, 183
+  orig: 231, 251
+  offset: 36, 32
+  index: -1
+pt (15)
+  rotate: true
+  xy: 2, 169
+  size: 198, 186
+  orig: 231, 251
+  offset: 33, 28
+  index: -1
+pt (17)
+  rotate: false
+  xy: 226, 432
+  size: 177, 187
+  orig: 231, 251
+  offset: 32, 25
+  index: -1
+pt (19)
+  rotate: false
+  xy: 405, 434
+  size: 151, 185
+  orig: 231, 251
+  offset: 31, 23
+  index: -1
+pt (21)
+  rotate: false
+  xy: 178, 9
+  size: 146, 158
+  orig: 231, 251
+  offset: 31, 23
+  index: -1
+pt (23)
+  rotate: true
+  xy: 558, 295
+  size: 147, 156
+  orig: 231, 251
+  offset: 30, 24
+  index: -1
+pt (25)
+  rotate: false
+  xy: 503, 9
+  size: 146, 146
+  orig: 231, 251
+  offset: 31, 32
+  index: -1
+pt (3)
+  rotate: false
+  xy: 2, 369
+  size: 222, 250
+  orig: 231, 251
+  offset: 2, 0
+  index: -1
+pt (5)
+  rotate: false
+  xy: 558, 444
+  size: 184, 175
+  orig: 231, 251
+  offset: 40, 36
+  index: -1
+pt (7)
+  rotate: true
+  xy: 326, 3
+  size: 168, 175
+  orig: 231, 251
+  offset: 49, 34
+  index: -1
+pt (9)
+  rotate: false
+  xy: 2, 2
+  size: 174, 165
+  orig: 231, 251
+  offset: 45, 45
+  index: -1

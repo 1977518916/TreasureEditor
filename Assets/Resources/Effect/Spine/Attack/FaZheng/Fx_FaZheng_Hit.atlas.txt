@@ -1,0 +1,55 @@
+
+Fx_FaZheng_Hit.png
+size: 904,175
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zidan (1)
+  rotate: true
+  xy: 804, 14
+  size: 57, 55
+  orig: 197, 196
+  offset: 75, 71
+  index: -1
+zidan (10)
+  rotate: false
+  xy: 2, 6
+  size: 176, 167
+  orig: 197, 196
+  offset: 9, 16
+  index: -1
+zidan (3)
+  rotate: true
+  xy: 804, 73
+  size: 100, 98
+  orig: 197, 196
+  offset: 52, 50
+  index: -1
+zidan (5)
+  rotate: true
+  xy: 668, 32
+  size: 141, 134
+  orig: 197, 196
+  offset: 28, 32
+  index: -1
+zidan (7)
+  rotate: true
+  xy: 509, 8
+  size: 165, 157
+  orig: 197, 196
+  offset: 15, 21
+  index: -1
+zidan (8)
+  rotate: true
+  xy: 346, 4
+  size: 169, 161
+  orig: 197, 196
+  offset: 13, 19
+  index: -1
+zidan (9)
+  rotate: true
+  xy: 180, 2
+  size: 171, 164
+  orig: 197, 196
+  offset: 12, 17
+  index: -1

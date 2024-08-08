@@ -1,0 +1,13 @@
+
+TaiShiCi_Skill_2.png
+size: 134,149
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zzz
+  rotate: false
+  xy: 2, 2
+  size: 130, 145
+  orig: 132, 147
+  offset: 2, 1
+  index: -1

@@ -1,0 +1,55 @@
+
+Fx_ZhenJi_Attack.png
+size: 345,517
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Qiu
+  rotate: false
+  xy: 160, 4
+  size: 128, 127
+  orig: 130, 129
+  offset: 1, 1
+  index: -1
+Qiu1
+  rotate: false
+  xy: 2, 307
+  size: 208, 208
+  orig: 218, 218
+  offset: 5, 5
+  index: -1
+ShuiHhuan1
+  rotate: true
+  xy: 212, 351
+  size: 164, 123
+  orig: 167, 139
+  offset: 1, 14
+  index: -1
+ShuiHhuan2
+  rotate: false
+  xy: 2, 169
+  size: 190, 136
+  orig: 193, 141
+  offset: 2, 2
+  index: -1
+ShuiHhuan3
+  rotate: true
+  xy: 194, 133
+  size: 172, 137
+  orig: 176, 140
+  offset: 2, 1
+  index: -1
+ShuiHhuan4
+  rotate: true
+  xy: 2, 2
+  size: 165, 156
+  orig: 168, 160
+  offset: 1, 2
+  index: -1
+pp
+  rotate: false
+  xy: 290, 77
+  size: 53, 54
+  orig: 56, 56
+  offset: 1, 0
+  index: -1

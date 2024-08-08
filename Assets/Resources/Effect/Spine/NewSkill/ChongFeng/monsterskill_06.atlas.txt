@@ -1,0 +1,111 @@
+
+monsterskill_06.png
+size: 440,292
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FeiDan
+  rotate: false
+  xy: 2, 52
+  size: 123, 114
+  orig: 128, 128
+  offset: 3, 7
+  index: -1
+Fire_01
+  rotate: true
+  xy: 329, 231
+  size: 59, 109
+  orig: 64, 128
+  offset: 4, 5
+  index: -1
+Fire_02
+  rotate: true
+  xy: 223, 6
+  size: 55, 108
+  orig: 64, 128
+  offset: 4, 6
+  index: -1
+Fire_03
+  rotate: true
+  xy: 115, 2
+  size: 48, 106
+  orig: 64, 128
+  offset: 4, 7
+  index: -1
+Fire_04
+  rotate: true
+  xy: 333, 4
+  size: 57, 100
+  orig: 64, 128
+  offset: 4, 9
+  index: -1
+Fire_05
+  rotate: true
+  xy: 127, 63
+  size: 58, 109
+  orig: 64, 128
+  offset: 4, 6
+  index: -1
+Fire_06
+  rotate: true
+  xy: 323, 176
+  size: 53, 108
+  orig: 64, 128
+  offset: 5, 6
+  index: -1
+Fire_07
+  rotate: true
+  xy: 238, 63
+  size: 58, 106
+  orig: 64, 128
+  offset: 4, 8
+  index: -1
+Fire_08
+  rotate: false
+  xy: 346, 74
+  size: 60, 100
+  orig: 64, 128
+  offset: 4, 11
+  index: -1
+Quan
+  rotate: true
+  xy: 2, 2
+  size: 48, 111
+  orig: 48, 111
+  offset: 0, 0
+  index: -1
+TuoWei_01
+  rotate: false
+  xy: 131, 210
+  size: 190, 40
+  orig: 256, 64
+  offset: 61, 10
+  index: -1
+TuoWei_02
+  rotate: false
+  xy: 131, 252
+  size: 196, 38
+  orig: 256, 64
+  offset: 60, 14
+  index: -1
+TuoWei_03
+  rotate: false
+  xy: 131, 167
+  size: 187, 41
+  orig: 256, 64
+  offset: 60, 12
+  index: -1
+TuoWei_04
+  rotate: false
+  xy: 127, 123
+  size: 187, 42
+  orig: 256, 64
+  offset: 59, 7
+  index: -1
+Wind
+  rotate: false
+  xy: 2, 168
+  size: 127, 122
+  orig: 128, 128
+  offset: 0, 6
+  index: -1

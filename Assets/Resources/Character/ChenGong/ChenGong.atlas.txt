@@ -1,0 +1,209 @@
+
+ChenGong.png
+size: 656,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_B
+  rotate: false
+  xy: 502, 129
+  size: 52, 40
+  orig: 52, 40
+  offset: 0, 0
+  index: -1
+Arm_F
+  rotate: true
+  xy: 590, 113
+  size: 58, 46
+  orig: 58, 46
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 176, 2
+  size: 151, 98
+  orig: 151, 98
+  offset: 0, 0
+  index: -1
+DaoGuang1
+  rotate: true
+  xy: 66, 8
+  size: 58, 54
+  orig: 58, 54
+  offset: 0, 0
+  index: -1
+DaoGuang2
+  rotate: false
+  xy: 580, 173
+  size: 74, 94
+  orig: 74, 94
+  offset: 0, 0
+  index: -1
+DaoGuang3
+  rotate: true
+  xy: 287, 125
+  size: 142, 128
+  orig: 142, 128
+  offset: 0, 0
+  index: -1
+Eye_B
+  rotate: true
+  xy: 527, 2
+  size: 27, 38
+  orig: 27, 38
+  offset: 0, 0
+  index: -1
+Eye_B_1
+  rotate: false
+  xy: 590, 60
+  size: 51, 51
+  orig: 51, 51
+  offset: 0, 0
+  index: -1
+Eye_F
+  rotate: true
+  xy: 594, 11
+  size: 47, 45
+  orig: 47, 45
+  offset: 0, 0
+  index: -1
+Eye_F_1
+  rotate: false
+  xy: 2, 4
+  size: 62, 62
+  orig: 62, 62
+  offset: 0, 0
+  index: -1
+Feet_B
+  rotate: true
+  xy: 581, 14
+  size: 15, 11
+  orig: 15, 11
+  offset: 0, 0
+  index: -1
+Feet_F
+  rotate: true
+  xy: 567, 13
+  size: 16, 12
+  orig: 16, 12
+  offset: 0, 0
+  index: -1
+FeiDan
+  rotate: false
+  xy: 329, 26
+  size: 25, 97
+  orig: 25, 97
+  offset: 0, 0
+  index: -1
+Guan
+  rotate: true
+  xy: 165, 102
+  size: 165, 120
+  orig: 165, 120
+  offset: 0, 0
+  index: -1
+Hand_B
+  rotate: false
+  xy: 411, 2
+  size: 23, 23
+  orig: 23, 23
+  offset: 0, 0
+  index: -1
+HuZi_B
+  rotate: false
+  xy: 492, 10
+  size: 33, 18
+  orig: 33, 18
+  offset: 0, 0
+  index: -1
+HuZi_F
+  rotate: false
+  xy: 287, 104
+  size: 40, 19
+  orig: 40, 19
+  offset: 0, 0
+  index: -1
+Jian
+  rotate: false
+  xy: 417, 128
+  size: 83, 139
+  orig: 83, 139
+  offset: 0, 0
+  index: -1
+LiuSu
+  rotate: true
+  xy: 360, 2
+  size: 23, 49
+  orig: 23, 49
+  offset: 0, 0
+  index: -1
+MeiMao_B
+  rotate: true
+  xy: 436, 2
+  size: 26, 54
+  orig: 26, 54
+  offset: 0, 0
+  index: -1
+MeiMao_F
+  rotate: true
+  xy: 122, 8
+  size: 58, 52
+  orig: 58, 52
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: false
+  xy: 165, 92
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Mouth_1
+  rotate: true
+  xy: 329, 5
+  size: 19, 29
+  orig: 19, 29
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 556, 137
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Tou
+  rotate: false
+  xy: 2, 68
+  size: 161, 199
+  orig: 164, 199
+  offset: 0, 0
+  index: -1
+yanmu_1
+  rotate: true
+  xy: 356, 27
+  size: 96, 76
+  orig: 96, 76
+  offset: 0, 0
+  index: -1
+yanmu_2
+  rotate: true
+  xy: 434, 30
+  size: 96, 76
+  orig: 96, 76
+  offset: 0, 0
+  index: -1
+yanmu_3
+  rotate: true
+  xy: 502, 171
+  size: 96, 76
+  orig: 96, 76
+  offset: 0, 0
+  index: -1
+yanmu_4
+  rotate: true
+  xy: 512, 31
+  size: 96, 76
+  orig: 96, 76
+  offset: 0, 0
+  index: -1

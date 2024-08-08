@@ -1,0 +1,167 @@
+
+GaoShun.png
+size: 1012,252
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 856, 132
+  size: 118, 105
+  orig: 122, 108
+  offset: 0, 3
+  index: -1
+DaoGuang
+  rotate: false
+  xy: 242, 16
+  size: 85, 234
+  orig: 93, 256
+  offset: 4, 9
+  index: -1
+Dun
+  rotate: true
+  xy: 737, 132
+  size: 118, 117
+  orig: 119, 117
+  offset: 0, 0
+  index: -1
+Dun1
+  rotate: true
+  xy: 329, 17
+  size: 233, 150
+  orig: 256, 256
+  offset: 12, 98
+  index: -1
+Dun2
+  rotate: true
+  xy: 2, 11
+  size: 239, 238
+  orig: 256, 256
+  offset: 8, 8
+  index: -1
+Eye_1_L
+  rotate: false
+  xy: 864, 2
+  size: 62, 62
+  orig: 62, 62
+  offset: 0, 0
+  index: -1
+Eye_1_R
+  rotate: true
+  xy: 761, 6
+  size: 52, 51
+  orig: 52, 51
+  offset: 0, 0
+  index: -1
+Eye_L
+  rotate: false
+  xy: 242, 2
+  size: 42, 12
+  orig: 42, 12
+  offset: 0, 0
+  index: -1
+Eye_R
+  rotate: false
+  xy: 286, 5
+  size: 28, 9
+  orig: 28, 9
+  offset: 0, 0
+  index: -1
+Feet_L
+  rotate: false
+  xy: 481, 4
+  size: 20, 15
+  orig: 20, 15
+  offset: 0, 0
+  index: -1
+Feet_R
+  rotate: false
+  xy: 503, 4
+  size: 19, 15
+  orig: 19, 15
+  offset: 0, 0
+  index: -1
+FeiDan
+  rotate: false
+  xy: 963, 156
+  size: 23, 94
+  orig: 25, 97
+  offset: 1, 2
+  index: -1
+GuangHuan
+  rotate: false
+  xy: 928, 48
+  size: 82, 82
+  orig: 128, 128
+  offset: 23, 23
+  index: -1
+Hand_R
+  rotate: true
+  xy: 814, 8
+  size: 50, 48
+  orig: 50, 48
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 559, 50
+  size: 200, 176
+  orig: 202, 177
+  offset: 0, 1
+  index: -1
+JianJia_L
+  rotate: true
+  xy: 559, 4
+  size: 44, 55
+  orig: 45, 58
+  offset: 0, 0
+  index: -1
+JianJia_R
+  rotate: true
+  xy: 616, 5
+  size: 43, 55
+  orig: 44, 59
+  offset: 1, 0
+  index: -1
+Mao
+  rotate: false
+  xy: 481, 21
+  size: 76, 229
+  orig: 76, 229
+  offset: 0, 0
+  index: -1
+MeiMao_L
+  rotate: false
+  xy: 723, 12
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+MeiMao_R
+  rotate: false
+  xy: 673, 12
+  size: 48, 36
+  orig: 48, 36
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: false
+  xy: 896, 95
+  size: 27, 35
+  orig: 27, 35
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 830, 66
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Sui
+  rotate: false
+  xy: 737, 60
+  size: 91, 70
+  orig: 93, 72
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,41 @@
+
+Monster005.png
+size: 168,72
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+00001
+  rotate: false
+  xy: 126, 17
+  size: 34, 21
+  orig: 34, 21
+  offset: 0, 0
+  index: -1
+00002
+  rotate: false
+  xy: 126, 2
+  size: 14, 13
+  orig: 14, 13
+  offset: 0, 0
+  index: -1
+00003
+  rotate: false
+  xy: 92, 40
+  size: 71, 28
+  orig: 71, 28
+  offset: 0, 0
+  index: -1
+00004
+  rotate: true
+  xy: 2, 2
+  size: 66, 88
+  orig: 66, 88
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 92, 6
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

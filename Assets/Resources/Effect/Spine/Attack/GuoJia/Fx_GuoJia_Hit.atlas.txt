@@ -1,0 +1,83 @@
+
+Fx_GuoJia_Hit.png
+size: 929,316
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sj (1)
+  rotate: false
+  xy: 161, 5
+  size: 218, 159
+  orig: 238, 163
+  offset: 10, 2
+  index: -1
+sj (11)
+  rotate: true
+  xy: 775, 163
+  size: 151, 152
+  orig: 238, 163
+  offset: 48, 4
+  index: -1
+sj (13)
+  rotate: false
+  xy: 2, 15
+  size: 157, 151
+  orig: 238, 163
+  offset: 41, 2
+  index: -1
+sj (15)
+  rotate: false
+  xy: 616, 164
+  size: 157, 150
+  orig: 238, 163
+  offset: 40, 2
+  index: -1
+sj (17)
+  rotate: false
+  xy: 305, 166
+  size: 155, 148
+  orig: 238, 163
+  offset: 41, 2
+  index: -1
+sj (19)
+  rotate: false
+  xy: 150, 168
+  size: 153, 146
+  orig: 238, 163
+  offset: 42, 4
+  index: -1
+sj (21)
+  rotate: false
+  xy: 2, 179
+  size: 146, 135
+  orig: 238, 163
+  offset: 45, 7
+  index: -1
+sj (3)
+  rotate: false
+  xy: 381, 4
+  size: 189, 159
+  orig: 238, 163
+  offset: 24, 2
+  index: -1
+sj (5)
+  rotate: false
+  xy: 572, 3
+  size: 175, 159
+  orig: 238, 163
+  offset: 25, 2
+  index: -1
+sj (7)
+  rotate: false
+  xy: 749, 2
+  size: 176, 159
+  orig: 238, 163
+  offset: 22, 2
+  index: -1
+sj (9)
+  rotate: true
+  xy: 462, 165
+  size: 149, 152
+  orig: 238, 163
+  offset: 48, 4
+  index: -1

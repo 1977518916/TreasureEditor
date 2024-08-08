@@ -1,0 +1,118 @@
+
+Artifact_upgrade.png
+size: 782,301
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+升级/ll (1)
+  rotate: false
+  xy: 727, 102
+  size: 50, 88
+  orig: 136, 186
+  offset: 46, 6
+  index: -1
+升级/ll (11)
+  rotate: false
+  xy: 386, 144
+  size: 131, 155
+  orig: 136, 186
+  offset: 1, 23
+  index: -1
+升级/ll (13)
+  rotate: true
+  xy: 275, 5
+  size: 125, 157
+  orig: 136, 186
+  offset: 3, 24
+  index: -1
+升级/ll (15)
+  rotate: true
+  xy: 2, 2
+  size: 119, 133
+  orig: 136, 186
+  offset: 5, 36
+  index: -1
+升级/ll (2)
+  rotate: false
+  xy: 215, 11
+  size: 58, 111
+  orig: 136, 186
+  offset: 46, 6
+  index: -1
+升级/ll (3)
+  rotate: false
+  xy: 519, 149
+  size: 82, 150
+  orig: 136, 186
+  offset: 31, 6
+  index: -1
+升级/ll (5)
+  rotate: false
+  xy: 128, 124
+  size: 121, 175
+  orig: 136, 186
+  offset: 11, 6
+  index: -1
+升级/ll (7)
+  rotate: false
+  xy: 2, 123
+  size: 124, 176
+  orig: 136, 186
+  offset: 6, 4
+  index: -1
+升级/ll (9)
+  rotate: false
+  xy: 251, 132
+  size: 133, 167
+  orig: 136, 186
+  offset: 1, 9
+  index: -1
+升级/zz (1)
+  rotate: true
+  xy: 727, 26
+  size: 74, 53
+  orig: 134, 99
+  offset: 36, 30
+  index: -1
+升级/zz (2)
+  rotate: true
+  xy: 696, 192
+  size: 107, 78
+  orig: 134, 99
+  offset: 17, 13
+  index: -1
+升级/zz (3)
+  rotate: true
+  xy: 632, 48
+  size: 124, 93
+  orig: 134, 99
+  offset: 6, 3
+  index: -1
+升级/zz (4)
+  rotate: true
+  xy: 434, 9
+  size: 133, 98
+  orig: 134, 99
+  offset: 1, 0
+  index: -1
+升级/zz (5)
+  rotate: true
+  xy: 534, 16
+  size: 131, 96
+  orig: 134, 99
+  offset: 1, 0
+  index: -1
+升级/zz (6)
+  rotate: true
+  xy: 603, 174
+  size: 125, 91
+  orig: 134, 99
+  offset: 3, 1
+  index: -1
+升级/zz (7)
+  rotate: true
+  xy: 137, 3
+  size: 119, 76
+  orig: 134, 99
+  offset: 5, 13
+  index: -1

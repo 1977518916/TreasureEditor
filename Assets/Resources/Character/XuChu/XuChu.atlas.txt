@@ -1,0 +1,160 @@
+
+XuChu.png
+size: 902,237
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: true
+  xy: 631, 90
+  size: 145, 130
+  orig: 145, 130
+  offset: 0, 0
+  index: -1
+Clothes_L
+  rotate: true
+  xy: 448, 8
+  size: 61, 68
+  orig: 61, 68
+  offset: 0, 0
+  index: -1
+Clothes_R
+  rotate: false
+  xy: 645, 14
+  size: 54, 74
+  orig: 129, 74
+  offset: 75, 0
+  index: -1
+DaoGuang
+  rotate: false
+  xy: 382, 71
+  size: 247, 164
+  orig: 247, 164
+  offset: 0, 0
+  index: -1
+Eye_L
+  rotate: true
+  xy: 746, 40
+  size: 48, 40
+  orig: 48, 40
+  offset: 0, 0
+  index: -1
+Eye_L_1
+  rotate: false
+  xy: 861, 157
+  size: 33, 33
+  orig: 33, 33
+  offset: 0, 0
+  index: -1
+Eye_R
+  rotate: false
+  xy: 518, 13
+  size: 29, 56
+  orig: 29, 56
+  offset: 0, 0
+  index: -1
+Eye_R_1
+  rotate: true
+  xy: 549, 14
+  size: 55, 54
+  orig: 55, 54
+  offset: 0, 0
+  index: -1
+Feet_L
+  rotate: true
+  xy: 218, 3
+  size: 20, 15
+  orig: 20, 15
+  offset: 0, 0
+  index: -1
+Feet_R
+  rotate: true
+  xy: 235, 3
+  size: 20, 15
+  orig: 20, 15
+  offset: 0, 0
+  index: -1
+Hair_B
+  rotate: false
+  xy: 796, 7
+  size: 93, 97
+  orig: 94, 97
+  offset: 1, 0
+  index: -1
+Hammer_L
+  rotate: false
+  xy: 2, 5
+  size: 214, 230
+  orig: 214, 230
+  offset: 0, 0
+  index: -1
+Hammer_R
+  rotate: false
+  xy: 2, 5
+  size: 214, 230
+  orig: 214, 230
+  offset: 0, 0
+  index: -1
+Hand_L
+  rotate: false
+  xy: 861, 126
+  size: 29, 29
+  orig: 29, 29
+  offset: 0, 0
+  index: -1
+Hand_R
+  rotate: false
+  xy: 861, 126
+  size: 29, 29
+  orig: 29, 29
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 218, 25
+  size: 210, 162
+  orig: 226, 162
+  offset: 1, 0
+  index: -1
+JianJia_L
+  rotate: false
+  xy: 746, 2
+  size: 48, 36
+  orig: 48, 36
+  offset: 0, 0
+  index: -1
+Jianjia_R
+  rotate: false
+  xy: 861, 192
+  size: 39, 43
+  orig: 39, 43
+  offset: 0, 0
+  index: -1
+MeiMao_L
+  rotate: true
+  xy: 701, 20
+  size: 68, 43
+  orig: 68, 43
+  offset: 0, 0
+  index: -1
+MeiMao_R
+  rotate: false
+  xy: 605, 14
+  size: 38, 55
+  orig: 38, 55
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 382, 5
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Whirlwind_01
+  rotate: true
+  xy: 763, 106
+  size: 129, 96
+  orig: 129, 96
+  offset: 0, 0
+  index: -1

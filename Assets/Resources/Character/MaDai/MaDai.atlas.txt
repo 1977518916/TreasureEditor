@@ -1,0 +1,153 @@
+
+MaDai.png
+size: 1120,1052
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 332, 17
+  size: 53, 52
+  orig: 53, 52
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 332, 17
+  size: 53, 52
+  orig: 53, 52
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 455, 596
+  size: 83, 56
+  orig: 83, 56
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 340, 71
+  size: 243, 115
+  orig: 319, 222
+  offset: 5, 0
+  index: -1
+12
+  rotate: false
+  xy: 2, 595
+  size: 451, 453
+  orig: 461, 453
+  offset: 10, 0
+  index: -1
+13
+  rotate: true
+  xy: 340, 188
+  size: 405, 243
+  orig: 411, 251
+  offset: 6, 8
+  index: -1
+14
+  rotate: true
+  xy: 1032, 165
+  size: 169, 79
+  orig: 169, 79
+  offset: 0, 0
+  index: -1
+15
+  rotate: false
+  xy: 455, 891
+  size: 548, 157
+  orig: 574, 157
+  offset: 0, 0
+  index: -1
+16
+  rotate: false
+  xy: 885, 174
+  size: 145, 160
+  orig: 145, 160
+  offset: 0, 0
+  index: -1
+17
+  rotate: true
+  xy: 895, 701
+  size: 188, 109
+  orig: 188, 109
+  offset: 0, 0
+  index: -1
+18
+  rotate: false
+  xy: 585, 3
+  size: 298, 280
+  orig: 313, 280
+  offset: 15, 0
+  index: -1
+19
+  rotate: false
+  xy: 455, 654
+  size: 438, 235
+  orig: 452, 244
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 1005, 952
+  size: 100, 96
+  orig: 100, 96
+  offset: 0, 0
+  index: -1
+20
+  rotate: true
+  xy: 880, 336
+  size: 316, 237
+  orig: 316, 237
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 2, 104
+  size: 336, 489
+  orig: 336, 503
+  offset: 0, 14
+  index: -1
+4
+  rotate: true
+  xy: 585, 285
+  size: 367, 293
+  orig: 367, 293
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 224, 3
+  size: 106, 99
+  orig: 106, 99
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 1006, 765
+  size: 101, 185
+  orig: 101, 185
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 2, 2
+  size: 220, 100
+  orig: 329, 100
+  offset: 109, 0
+  index: -1
+9
+  rotate: true
+  xy: 885, 12
+  size: 160, 100
+  orig: 160, 100
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 1006, 699
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

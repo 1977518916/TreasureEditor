@@ -1,0 +1,13 @@
+
+Fx_ZhuGeLiang_Attack.png
+size: 78,78
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qiu
+  rotate: false
+  xy: 2, 2
+  size: 74, 74
+  orig: 78, 78
+  offset: 2, 2
+  index: -1

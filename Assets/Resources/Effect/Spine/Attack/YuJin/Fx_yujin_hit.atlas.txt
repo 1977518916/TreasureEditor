@@ -1,0 +1,83 @@
+
+Fx_yujin_hit.png
+size: 395,996
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+子弹制作_00000
+  rotate: true
+  xy: 186, 58
+  size: 91, 94
+  orig: 234, 234
+  offset: 69, 58
+  index: -1
+子弹制作_00002
+  rotate: true
+  xy: 233, 850
+  size: 144, 148
+  orig: 234, 234
+  offset: 42, 32
+  index: -1
+子弹制作_00004
+  rotate: false
+  xy: 2, 767
+  size: 229, 227
+  orig: 234, 234
+  offset: 0, 0
+  index: -1
+子弹制作_00006
+  rotate: false
+  xy: 2, 2
+  size: 182, 171
+  orig: 234, 234
+  offset: 27, 24
+  index: -1
+子弹制作_00008
+  rotate: true
+  xy: 212, 537
+  size: 184, 172
+  orig: 234, 234
+  offset: 26, 24
+  index: -1
+子弹制作_00010
+  rotate: false
+  xy: 209, 351
+  size: 184, 184
+  orig: 234, 234
+  offset: 26, 22
+  index: -1
+子弹制作_00012
+  rotate: false
+  xy: 203, 151
+  size: 188, 198
+  orig: 234, 234
+  offset: 23, 14
+  index: -1
+子弹制作_00014
+  rotate: true
+  xy: 2, 572
+  size: 193, 208
+  orig: 234, 234
+  offset: 19, 9
+  index: -1
+子弹制作_00016
+  rotate: true
+  xy: 2, 375
+  size: 195, 205
+  orig: 234, 234
+  offset: 17, 14
+  index: -1
+子弹制作_00018
+  rotate: true
+  xy: 2, 175
+  size: 198, 199
+  orig: 234, 234
+  offset: 15, 22
+  index: -1
+子弹制作_00020
+  rotate: true
+  xy: 233, 723
+  size: 125, 141
+  orig: 234, 234
+  offset: 76, 82
+  index: -1

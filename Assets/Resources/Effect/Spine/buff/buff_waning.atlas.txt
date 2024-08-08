@@ -1,0 +1,69 @@
+
+buff_waning.png
+size: 879,84
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+g101
+  rotate: true
+  xy: 2, 2
+  size: 80, 102
+  orig: 84, 113
+  offset: 3, 8
+  index: -1
+g102
+  rotate: true
+  xy: 106, 2
+  size: 80, 101
+  orig: 84, 113
+  offset: 3, 8
+  index: -1
+g103
+  rotate: true
+  xy: 415, 3
+  size: 79, 101
+  orig: 84, 113
+  offset: 4, 8
+  index: -1
+g104
+  rotate: true
+  xy: 518, 3
+  size: 79, 101
+  orig: 84, 113
+  offset: 4, 8
+  index: -1
+g105
+  rotate: true
+  xy: 621, 3
+  size: 79, 101
+  orig: 84, 113
+  offset: 4, 8
+  index: -1
+g106
+  rotate: true
+  xy: 724, 3
+  size: 79, 101
+  orig: 84, 113
+  offset: 4, 8
+  index: -1
+g107
+  rotate: true
+  xy: 209, 2
+  size: 80, 101
+  orig: 84, 113
+  offset: 3, 8
+  index: -1
+g108
+  rotate: true
+  xy: 312, 2
+  size: 80, 101
+  orig: 84, 113
+  offset: 3, 8
+  index: -1
+y2
+  rotate: false
+  xy: 827, 30
+  size: 50, 52
+  orig: 56, 58
+  offset: 3, 3
+  index: -1

@@ -1,0 +1,83 @@
+
+Boss_dragon_Attack.png
+size: 757,954
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/pg (1)
+  rotate: false
+  xy: 606, 2
+  size: 122, 64
+  orig: 468, 185
+  offset: 321, 51
+  index: -1
+images/pg (11)
+  rotate: false
+  xy: 139, 499
+  size: 441, 126
+  orig: 468, 185
+  offset: 2, 27
+  index: -1
+images/pg (13)
+  rotate: false
+  xy: 139, 627
+  size: 447, 185
+  orig: 468, 185
+  offset: 2, 0
+  index: -1
+images/pg (15)
+  rotate: false
+  xy: 139, 814
+  size: 450, 138
+  orig: 468, 185
+  offset: 2, 21
+  index: -1
+images/pg (17)
+  rotate: true
+  xy: 2, 495
+  size: 457, 135
+  orig: 468, 185
+  offset: 2, 21
+  index: -1
+images/pg (19)
+  rotate: false
+  xy: 2, 63
+  size: 441, 137
+  orig: 468, 185
+  offset: 2, 21
+  index: -1
+images/pg (21)
+  rotate: true
+  xy: 606, 68
+  size: 441, 149
+  orig: 468, 185
+  offset: 2, 15
+  index: -1
+images/pg (3)
+  rotate: true
+  xy: 455, 56
+  size: 441, 149
+  orig: 468, 185
+  offset: 2, 15
+  index: -1
+images/pg (5)
+  rotate: false
+  xy: 2, 341
+  size: 451, 152
+  orig: 468, 185
+  offset: 2, 17
+  index: -1
+images/pg (7)
+  rotate: false
+  xy: 2, 202
+  size: 441, 137
+  orig: 468, 185
+  offset: 2, 21
+  index: -1
+images/pg (9)
+  rotate: true
+  xy: 591, 511
+  size: 441, 149
+  orig: 468, 185
+  offset: 2, 15
+  index: -1

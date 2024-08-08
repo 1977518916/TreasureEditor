@@ -1,0 +1,76 @@
+
+GuanYu_Skill_1.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian
+  rotate: true
+  xy: 2, 71
+  size: 59, 75
+  orig: 59, 75
+  offset: 0, 0
+  index: -1
+DiMian
+  rotate: false
+  xy: 257, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Glow
+  rotate: false
+  xy: 387, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+GuangZhu
+  rotate: false
+  xy: 517, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Long
+  rotate: false
+  xy: 647, 2
+  size: 400, 128
+  orig: 400, 128
+  offset: 0, 0
+  index: -1
+Quan1
+  rotate: false
+  xy: 1049, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Quan2
+  rotate: false
+  xy: 1179, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Quan3
+  rotate: false
+  xy: 1309, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+SanJiao
+  rotate: true
+  xy: 79, 66
+  size: 64, 110
+  orig: 64, 110
+  offset: 0, 0
+  index: -1
+Yuan
+  rotate: false
+  xy: 191, 66
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

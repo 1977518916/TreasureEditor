@@ -1,0 +1,27 @@
+
+Fx_FangKuang.png
+size: 266,116
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow
+  rotate: true
+  xy: 223, 72
+  size: 42, 41
+  orig: 56, 55
+  offset: 7, 7
+  index: -1
+Glow1
+  rotate: true
+  xy: 115, 2
+  size: 112, 106
+  orig: 112, 111
+  offset: 0, 0
+  index: -1
+White
+  rotate: true
+  xy: 2, 2
+  size: 112, 111
+  orig: 112, 111
+  offset: 0, 0
+  index: -1

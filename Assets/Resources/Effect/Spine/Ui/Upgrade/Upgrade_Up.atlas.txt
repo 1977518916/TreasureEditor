@@ -1,0 +1,132 @@
+
+Upgrade_Up.png
+size: 189,523
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+003
+  rotate: false
+  xy: 133, 461
+  size: 52, 60
+  orig: 92, 112
+  offset: 39, 2
+  index: -1
+004
+  rotate: false
+  xy: 81, 77
+  size: 65, 67
+  orig: 92, 112
+  offset: 26, 3
+  index: -1
+005
+  rotate: false
+  xy: 89, 146
+  size: 84, 77
+  orig: 92, 112
+  offset: 7, 8
+  index: -1
+006
+  rotate: false
+  xy: 2, 318
+  size: 89, 81
+  orig: 92, 112
+  offset: 2, 14
+  index: -1
+007
+  rotate: false
+  xy: 93, 311
+  size: 88, 88
+  orig: 92, 112
+  offset: 2, 16
+  index: -1
+008
+  rotate: false
+  xy: 2, 230
+  size: 87, 86
+  orig: 92, 112
+  offset: 2, 19
+  index: -1
+009
+  rotate: false
+  xy: 91, 225
+  size: 87, 84
+  orig: 92, 112
+  offset: 2, 22
+  index: -1
+010
+  rotate: false
+  xy: 2, 146
+  size: 85, 82
+  orig: 92, 112
+  offset: 2, 26
+  index: -1
+011
+  rotate: true
+  xy: 2, 65
+  size: 79, 77
+  orig: 92, 112
+  offset: 2, 32
+  index: -1
+012
+  rotate: true
+  xy: 2, 2
+  size: 61, 63
+  orig: 92, 112
+  offset: 2, 46
+  index: -1
+013
+  rotate: false
+  xy: 67, 17
+  size: 31, 46
+  orig: 92, 112
+  offset: 4, 63
+  index: -1
+014
+  rotate: true
+  xy: 148, 117
+  size: 27, 31
+  orig: 92, 112
+  offset: 5, 78
+  index: -1
+015
+  rotate: false
+  xy: 148, 94
+  size: 26, 21
+  orig: 92, 112
+  offset: 7, 88
+  index: -1
+g1
+  rotate: false
+  xy: 2, 401
+  size: 103, 58
+  orig: 106, 59
+  offset: 2, 0
+  index: -1
+g2
+  rotate: false
+  xy: 107, 401
+  size: 80, 58
+  orig: 80, 61
+  offset: 0, 1
+  index: -1
+tt
+  rotate: false
+  xy: 175, 146
+  size: 10, 77
+  orig: 11, 78
+  offset: 1, 0
+  index: -1
+xx
+  rotate: false
+  xy: 67, 2
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+zhu
+  rotate: true
+  xy: 2, 461
+  size: 60, 129
+  orig: 60, 139
+  offset: 0, 0
+  index: -1

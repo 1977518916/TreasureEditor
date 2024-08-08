@@ -1,0 +1,34 @@
+
+Y_xiang.png
+size: 80,176
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xiang
+  rotate: false
+  xy: 2, 82
+  size: 76, 92
+  orig: 76, 92
+  offset: 0, 0
+  index: -1
+yx
+  rotate: false
+  xy: 2, 2
+  size: 39, 35
+  orig: 39, 35
+  offset: 0, 0
+  index: -1
+yx2
+  rotate: true
+  xy: 47, 45
+  size: 35, 31
+  orig: 35, 31
+  offset: 0, 0
+  index: -1
+zz
+  rotate: false
+  xy: 2, 39
+  size: 43, 41
+  orig: 43, 41
+  offset: 0, 0
+  index: -1

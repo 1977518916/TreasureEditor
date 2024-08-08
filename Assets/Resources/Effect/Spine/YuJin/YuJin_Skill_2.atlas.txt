@@ -1,0 +1,125 @@
+
+YuJin_Skill_2.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian_01
+  rotate: false
+  xy: 263, 202
+  size: 34, 51
+  orig: 64, 128
+  offset: 14, 0
+  index: -1
+BaoDian_02
+  rotate: false
+  xy: 104, 159
+  size: 56, 94
+  orig: 64, 128
+  offset: 2, 2
+  index: -1
+BaoDian_03
+  rotate: false
+  xy: 2, 23
+  size: 61, 102
+  orig: 64, 128
+  offset: 1, 13
+  index: -1
+BaoDian_04
+  rotate: false
+  xy: 65, 32
+  size: 63, 93
+  orig: 64, 128
+  offset: 1, 29
+  index: -1
+BaoDian_05
+  rotate: false
+  xy: 130, 40
+  size: 62, 85
+  orig: 64, 128
+  offset: 2, 43
+  index: -1
+BaoDian_06
+  rotate: false
+  xy: 162, 180
+  size: 64, 73
+  orig: 64, 128
+  offset: 0, 55
+  index: -1
+BaoDian_07
+  rotate: false
+  xy: 210, 6
+  size: 64, 57
+  orig: 64, 128
+  offset: 0, 71
+  index: -1
+BaoDian_08
+  rotate: false
+  xy: 162, 131
+  size: 59, 47
+  orig: 64, 128
+  offset: 2, 81
+  index: -1
+DaoGuang
+  rotate: false
+  xy: 2, 127
+  size: 100, 126
+  orig: 128, 128
+  offset: 28, 2
+  index: -1
+Fog_02
+  rotate: false
+  xy: 116, 4
+  size: 33, 26
+  orig: 64, 64
+  offset: 13, 0
+  index: -1
+Fog_04
+  rotate: false
+  xy: 65, 2
+  size: 49, 28
+  orig: 64, 64
+  offset: 5, 0
+  index: -1
+Fog_06
+  rotate: false
+  xy: 104, 127
+  size: 53, 30
+  orig: 64, 64
+  offset: 3, 0
+  index: -1
+Fog_08
+  rotate: true
+  xy: 228, 198
+  size: 55, 33
+  orig: 64, 64
+  offset: 3, 0
+  index: -1
+Fog_10
+  rotate: false
+  xy: 223, 145
+  size: 56, 33
+  orig: 64, 64
+  offset: 3, 0
+  index: -1
+Fog_12
+  rotate: false
+  xy: 151, 4
+  size: 57, 34
+  orig: 64, 64
+  offset: 4, 0
+  index: -1
+Fog_15
+  rotate: true
+  xy: 260, 102
+  size: 41, 33
+  orig: 64, 64
+  offset: 21, 0
+  index: -1
+Glow
+  rotate: false
+  xy: 194, 65
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

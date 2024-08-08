@@ -1,0 +1,160 @@
+
+Monster004_Idle.png
+size: 476,995
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+x01
+  rotate: true
+  xy: 400, 640
+  size: 171, 74
+  orig: 202, 101
+  offset: 11, 22
+  index: -1
+x02
+  rotate: true
+  xy: 388, 461
+  size: 177, 75
+  orig: 202, 101
+  offset: 6, 6
+  index: -1
+x03
+  rotate: true
+  xy: 323, 84
+  size: 180, 71
+  orig: 202, 101
+  offset: 7, 10
+  index: -1
+x04
+  rotate: true
+  xy: 400, 813
+  size: 180, 74
+  orig: 202, 101
+  offset: 12, 7
+  index: -1
+x05
+  rotate: true
+  xy: 245, 86
+  size: 178, 76
+  orig: 202, 101
+  offset: 15, 3
+  index: -1
+x06
+  rotate: false
+  xy: 184, 17
+  size: 172, 65
+  orig: 202, 101
+  offset: 18, 13
+  index: -1
+x07
+  rotate: true
+  xy: 384, 275
+  size: 184, 75
+  orig: 202, 101
+  offset: 12, 15
+  index: -1
+x08
+  rotate: false
+  xy: 2, 25
+  size: 180, 82
+  orig: 202, 101
+  offset: 14, 12
+  index: -1
+x09
+  rotate: true
+  xy: 396, 99
+  size: 174, 70
+  orig: 202, 101
+  offset: 16, 26
+  index: -1
+y01
+  rotate: false
+  xy: 396, 85
+  size: 25, 12
+  orig: 25, 12
+  offset: 0, 0
+  index: -1
+y02
+  rotate: false
+  xy: 184, 86
+  size: 17, 21
+  orig: 17, 21
+  offset: 0, 0
+  index: -1
+y03
+  rotate: false
+  xy: 2, 2
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+y04
+  rotate: false
+  xy: 358, 68
+  size: 19, 14
+  orig: 20, 14
+  offset: 1, 0
+  index: -1
+yy (1)
+  rotate: true
+  xy: 245, 266
+  size: 241, 137
+  orig: 252, 164
+  offset: 8, 14
+  index: -1
+yy (2)
+  rotate: false
+  xy: 2, 109
+  size: 241, 133
+  orig: 252, 164
+  offset: 8, 21
+  index: -1
+yy (3)
+  rotate: true
+  xy: 245, 509
+  size: 241, 141
+  orig: 252, 164
+  offset: 8, 16
+  index: -1
+yy (4)
+  rotate: false
+  xy: 2, 530
+  size: 241, 148
+  orig: 252, 164
+  offset: 8, 12
+  index: -1
+yy (5)
+  rotate: true
+  xy: 245, 752
+  size: 241, 153
+  orig: 252, 164
+  offset: 8, 8
+  index: -1
+yy (6)
+  rotate: false
+  xy: 2, 836
+  size: 241, 157
+  orig: 252, 164
+  offset: 8, 4
+  index: -1
+yy (7)
+  rotate: false
+  xy: 2, 680
+  size: 241, 154
+  orig: 252, 164
+  offset: 8, 1
+  index: -1
+yy (8)
+  rotate: false
+  xy: 2, 385
+  size: 241, 143
+  orig: 252, 164
+  offset: 8, 4
+  index: -1
+yy (9)
+  rotate: false
+  xy: 2, 244
+  size: 241, 139
+  orig: 252, 164
+  offset: 8, 11
+  index: -1

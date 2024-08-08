@@ -1,0 +1,13 @@
+
+Monster006.png
+size: 238,238
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+q2
+  rotate: false
+  xy: 2, 2
+  size: 234, 234
+  orig: 241, 240
+  offset: 4, 3
+  index: -1

@@ -1,0 +1,69 @@
+
+Monster020.png
+size: 124,272
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 11
+  size: 58, 58
+  orig: 58, 58
+  offset: 0, 0
+  index: -1
+10
+  rotate: true
+  xy: 2, 203
+  size: 67, 120
+  orig: 150, 150
+  offset: 49, 7
+  index: -1
+2
+  rotate: true
+  xy: 96, 47
+  size: 22, 23
+  orig: 22, 23
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 62, 15
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 84, 2
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 96, 24
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+6
+  rotate: true
+  xy: 2, 137
+  size: 64, 120
+  orig: 64, 120
+  offset: 0, 0
+  index: -1
+7
+  rotate: true
+  xy: 2, 71
+  size: 64, 120
+  orig: 64, 120
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 62, 37
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,41 @@
+
+Fx_SiXiang_Shui.png
+size: 392,120
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow
+  rotate: false
+  xy: 2, 2
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+QiPao
+  rotate: true
+  xy: 339, 38
+  size: 23, 22
+  orig: 23, 22
+  offset: 0, 0
+  index: -1
+ShuiHua
+  rotate: true
+  xy: 120, 3
+  size: 115, 110
+  orig: 115, 110
+  offset: 0, 0
+  index: -1
+WenLi2
+  rotate: true
+  xy: 232, 7
+  size: 111, 105
+  orig: 128, 128
+  offset: 9, 9
+  index: -1
+水
+  rotate: true
+  xy: 339, 63
+  size: 55, 49
+  orig: 57, 51
+  offset: 1, 1
+  index: -1

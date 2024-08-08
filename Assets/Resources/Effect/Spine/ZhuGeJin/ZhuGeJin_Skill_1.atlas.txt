@@ -1,0 +1,97 @@
+
+ZhuGeJin_Skill_1.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian_01
+  rotate: false
+  xy: 544, 72
+  size: 34, 51
+  orig: 64, 128
+  offset: 14, 0
+  index: -1
+BaoDian_02
+  rotate: false
+  xy: 298, 19
+  size: 56, 94
+  orig: 64, 128
+  offset: 2, 2
+  index: -1
+BaoDian_03
+  rotate: false
+  xy: 235, 9
+  size: 61, 102
+  orig: 64, 128
+  offset: 1, 13
+  index: -1
+BaoDian_04
+  rotate: false
+  xy: 452, 157
+  size: 63, 93
+  orig: 64, 128
+  offset: 1, 29
+  index: -1
+BaoDian_05
+  rotate: false
+  xy: 480, 70
+  size: 62, 85
+  orig: 64, 128
+  offset: 2, 43
+  index: -1
+BaoDian_06
+  rotate: true
+  xy: 480, 4
+  size: 64, 73
+  orig: 64, 128
+  offset: 0, 55
+  index: -1
+BaoDian_07
+  rotate: true
+  xy: 517, 186
+  size: 64, 57
+  orig: 64, 128
+  offset: 0, 71
+  index: -1
+BaoDian_08
+  rotate: true
+  xy: 544, 125
+  size: 59, 47
+  orig: 64, 128
+  offset: 2, 81
+  index: -1
+DiLie
+  rotate: false
+  xy: 356, 2
+  size: 122, 123
+  orig: 128, 128
+  offset: 3, 3
+  index: -1
+Glow
+  rotate: false
+  xy: 2, 19
+  size: 231, 231
+  orig: 256, 256
+  offset: 13, 12
+  index: -1
+Glow4
+  rotate: false
+  xy: 327, 127
+  size: 123, 123
+  orig: 128, 128
+  offset: 2, 3
+  index: -1
+Jian
+  rotate: false
+  xy: 281, 115
+  size: 44, 135
+  orig: 44, 137
+  offset: 0, 2
+  index: -1
+Jian1
+  rotate: false
+  xy: 235, 113
+  size: 44, 137
+  orig: 44, 137
+  offset: 0, 0
+  index: -1

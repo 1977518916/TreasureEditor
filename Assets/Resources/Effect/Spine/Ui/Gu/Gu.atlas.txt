@@ -1,0 +1,13 @@
+
+Gu.png
+size: 84,155
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 2
+  size: 80, 151
+  orig: 80, 151
+  offset: 0, 0
+  index: -1

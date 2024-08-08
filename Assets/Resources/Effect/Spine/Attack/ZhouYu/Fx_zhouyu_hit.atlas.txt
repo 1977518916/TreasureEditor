@@ -1,0 +1,90 @@
+
+Fx_zhouyu_hit.png
+size: 369,979
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zy (1)
+  rotate: false
+  xy: 214, 721
+  size: 84, 84
+  orig: 226, 228
+  offset: 72, 67
+  index: -1
+zy (10)
+  rotate: false
+  xy: 199, 525
+  size: 158, 194
+  orig: 226, 228
+  offset: 35, 20
+  index: -1
+zy (11)
+  rotate: false
+  xy: 214, 807
+  size: 108, 170
+  orig: 226, 228
+  offset: 57, 20
+  index: -1
+zy (12)
+  rotate: false
+  xy: 324, 878
+  size: 42, 99
+  orig: 226, 228
+  offset: 57, 41
+  index: -1
+zy (2)
+  rotate: false
+  xy: 2, 767
+  size: 210, 210
+  orig: 226, 228
+  offset: 11, 6
+  index: -1
+zy (3)
+  rotate: false
+  xy: 2, 377
+  size: 192, 192
+  orig: 226, 228
+  offset: 19, 14
+  index: -1
+zy (4)
+  rotate: true
+  xy: 2, 571
+  size: 194, 195
+  orig: 226, 228
+  offset: 18, 13
+  index: -1
+zy (5)
+  rotate: true
+  xy: 194, 186
+  size: 157, 167
+  orig: 226, 228
+  offset: 35, 32
+  index: -1
+zy (6)
+  rotate: false
+  xy: 196, 345
+  size: 168, 178
+  orig: 226, 228
+  offset: 27, 28
+  index: -1
+zy (7)
+  rotate: true
+  xy: 181, 8
+  size: 176, 186
+  orig: 226, 228
+  offset: 23, 24
+  index: -1
+zy (8)
+  rotate: true
+  xy: 2, 196
+  size: 179, 190
+  orig: 226, 228
+  offset: 21, 22
+  index: -1
+zy (9)
+  rotate: false
+  xy: 2, 2
+  size: 177, 192
+  orig: 226, 228
+  offset: 20, 21
+  index: -1

@@ -1,0 +1,20 @@
+
+GuoJia_Skill_1.png
+size: 122,81
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FeiDan
+  rotate: true
+  xy: 2, 2
+  size: 24, 95
+  orig: 25, 97
+  offset: 0, 2
+  index: -1
+FeiZhen
+  rotate: true
+  xy: 2, 28
+  size: 51, 118
+  orig: 55, 122
+  offset: 2, 2
+  index: -1

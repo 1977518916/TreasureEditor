@@ -1,0 +1,27 @@
+
+LingTong_Skill_2.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FeiDan
+  rotate: false
+  xy: 250, 22
+  size: 23, 97
+  orig: 25, 97
+  offset: 1, 0
+  index: -1
+Glow
+  rotate: false
+  xy: 132, 3
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+GuangZhu
+  rotate: false
+  xy: 2, 2
+  size: 128, 117
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

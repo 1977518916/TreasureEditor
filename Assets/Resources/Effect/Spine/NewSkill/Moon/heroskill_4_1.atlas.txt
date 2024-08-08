@@ -1,0 +1,41 @@
+
+heroskill_4_1.png
+size: 628,120
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BanYue
+  rotate: true
+  xy: 218, 6
+  size: 109, 118
+  orig: 109, 118
+  offset: 0, 0
+  index: -1
+DiSe
+  rotate: true
+  xy: 2, 2
+  size: 113, 214
+  orig: 128, 256
+  offset: 8, 41
+  index: -1
+Quan
+  rotate: false
+  xy: 338, 10
+  size: 111, 105
+  orig: 128, 128
+  offset: 9, 9
+  index: -1
+Star
+  rotate: false
+  xy: 561, 51
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+YueGuang
+  rotate: true
+  xy: 451, 13
+  size: 102, 108
+  orig: 109, 118
+  offset: 3, 5
+  index: -1

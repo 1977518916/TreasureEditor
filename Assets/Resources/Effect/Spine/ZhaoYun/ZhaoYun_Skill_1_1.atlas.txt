@@ -1,0 +1,111 @@
+
+ZhaoYun_Skill_1_1.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian_01
+  rotate: false
+  xy: 558, 199
+  size: 34, 51
+  orig: 64, 128
+  offset: 14, 0
+  index: -1
+BaoDian_02
+  rotate: true
+  xy: 381, 19
+  size: 56, 94
+  orig: 64, 128
+  offset: 2, 2
+  index: -1
+BaoDian_03
+  rotate: false
+  xy: 173, 56
+  size: 61, 102
+  orig: 64, 128
+  offset: 1, 13
+  index: -1
+BaoDian_04
+  rotate: true
+  xy: 2, 10
+  size: 63, 93
+  orig: 64, 128
+  offset: 1, 29
+  index: -1
+BaoDian_05
+  rotate: false
+  xy: 317, 73
+  size: 62, 85
+  orig: 64, 128
+  offset: 2, 43
+  index: -1
+BaoDian_06
+  rotate: false
+  xy: 477, 2
+  size: 64, 73
+  orig: 64, 128
+  offset: 0, 55
+  index: -1
+BaoDian_07
+  rotate: true
+  xy: 317, 7
+  size: 64, 57
+  orig: 64, 128
+  offset: 0, 71
+  index: -1
+BaoDian_08
+  rotate: false
+  xy: 171, 7
+  size: 59, 47
+  orig: 64, 128
+  offset: 2, 81
+  index: -1
+Boom
+  rotate: false
+  xy: 2, 160
+  size: 379, 90
+  orig: 379, 100
+  offset: 0, 10
+  index: -1
+Fog_1
+  rotate: false
+  xy: 97, 4
+  size: 72, 69
+  orig: 85, 85
+  offset: 7, 8
+  index: -1
+Fog_2
+  rotate: false
+  xy: 236, 80
+  size: 79, 78
+  orig: 85, 85
+  offset: 4, 4
+  index: -1
+Fog_3
+  rotate: false
+  xy: 236, 5
+  size: 79, 73
+  orig: 85, 85
+  offset: 2, 5
+  index: -1
+Glow
+  rotate: false
+  xy: 543, 17
+  size: 58, 58
+  orig: 64, 64
+  offset: 3, 3
+  index: -1
+Line
+  rotate: false
+  xy: 2, 75
+  size: 169, 83
+  orig: 179, 89
+  offset: 4, 3
+  index: -1
+ring
+  rotate: false
+  xy: 383, 77
+  size: 173, 173
+  orig: 179, 179
+  offset: 3, 3
+  index: -1

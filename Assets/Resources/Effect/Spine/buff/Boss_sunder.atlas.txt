@@ -1,0 +1,13 @@
+
+Boss_sunder.png
+size: 167,174
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/dun
+  rotate: false
+  xy: 2, 2
+  size: 163, 170
+  orig: 173, 182
+  offset: 6, 6
+  index: -1

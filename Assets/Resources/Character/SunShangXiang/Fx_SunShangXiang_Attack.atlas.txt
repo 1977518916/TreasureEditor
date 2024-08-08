@@ -1,0 +1,13 @@
+
+Fx_SunShangXiang_Attack.png
+size: 262,260
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+20240403-180511
+  rotate: false
+  xy: 2, 2
+  size: 258, 256
+  orig: 260, 261
+  offset: 1, 3
+  index: -1

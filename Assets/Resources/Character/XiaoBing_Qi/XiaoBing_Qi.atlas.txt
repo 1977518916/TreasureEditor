@@ -1,0 +1,90 @@
+
+XiaoBing_Qi.png
+size: 772,772
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 2, 35
+  size: 458, 343
+  orig: 460, 345
+  offset: 1, 1
+  index: -1
+Eye
+  rotate: true
+  xy: 478, 457
+  size: 136, 137
+  orig: 138, 139
+  offset: 1, 1
+  index: -1
+HongYing
+  rotate: true
+  xy: 478, 595
+  size: 172, 164
+  orig: 173, 164
+  offset: 0, 0
+  index: -1
+Leg
+  rotate: true
+  xy: 644, 612
+  size: 41, 47
+  orig: 43, 49
+  offset: 1, 1
+  index: -1
+MaBody
+  rotate: false
+  xy: 2, 380
+  size: 474, 387
+  orig: 474, 387
+  offset: 0, 0
+  index: -1
+MaHand_B
+  rotate: true
+  xy: 617, 482
+  size: 111, 108
+  orig: 113, 110
+  offset: 1, 1
+  index: -1
+MaHand_F
+  rotate: true
+  xy: 665, 267
+  size: 114, 102
+  orig: 116, 104
+  offset: 1, 1
+  index: -1
+MaLeg_B
+  rotate: false
+  xy: 617, 383
+  size: 110, 97
+  orig: 112, 99
+  offset: 1, 1
+  index: -1
+MaLeg_F
+  rotate: true
+  xy: 644, 655
+  size: 112, 103
+  orig: 114, 105
+  offset: 1, 1
+  index: -1
+Shadow
+  rotate: false
+  xy: 693, 621
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+TongKong
+  rotate: false
+  xy: 478, 424
+  size: 31, 31
+  orig: 33, 33
+  offset: 1, 1
+  index: -1
+WuQi
+  rotate: true
+  xy: 462, 6
+  size: 372, 201
+  orig: 374, 203
+  offset: 1, 1
+  index: -1

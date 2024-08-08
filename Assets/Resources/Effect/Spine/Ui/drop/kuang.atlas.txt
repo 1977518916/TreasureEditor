@@ -1,0 +1,13 @@
+
+kuang.png
+size: 108,109
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/xiaokuang1
+  rotate: false
+  xy: 2, 2
+  size: 104, 105
+  orig: 106, 106
+  offset: 1, 0
+  index: -1

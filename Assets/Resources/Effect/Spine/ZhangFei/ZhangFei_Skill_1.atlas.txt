@@ -1,0 +1,111 @@
+
+ZhangFei_Skill_1.png
+size: 1882,419
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+boo (1)
+  rotate: false
+  xy: 2, 342
+  size: 90, 75
+  orig: 302, 236
+  offset: 66, 83
+  index: -1
+boo (10)
+  rotate: false
+  xy: 1584, 214
+  size: 283, 203
+  orig: 302, 236
+  offset: 19, 30
+  index: -1
+boo (11)
+  rotate: false
+  xy: 492, 12
+  size: 276, 204
+  orig: 302, 236
+  offset: 19, 30
+  index: -1
+boo (12)
+  rotate: false
+  xy: 1604, 2
+  size: 276, 210
+  orig: 302, 236
+  offset: 19, 24
+  index: -1
+boo (13)
+  rotate: true
+  xy: 2, 36
+  size: 267, 210
+  orig: 302, 236
+  offset: 18, 25
+  index: -1
+boo (14)
+  rotate: false
+  xy: 214, 13
+  size: 276, 203
+  orig: 302, 236
+  offset: 19, 32
+  index: -1
+boo (15)
+  rotate: true
+  xy: 231, 228
+  size: 189, 196
+  orig: 302, 236
+  offset: 20, 39
+  index: -1
+boo (2)
+  rotate: false
+  xy: 94, 305
+  size: 135, 112
+  orig: 302, 236
+  offset: 43, 70
+  index: -1
+boo (3)
+  rotate: false
+  xy: 1329, 3
+  size: 273, 209
+  orig: 302, 236
+  offset: 21, 25
+  index: -1
+boo (4)
+  rotate: false
+  xy: 770, 11
+  size: 275, 205
+  orig: 302, 236
+  offset: 20, 27
+  index: -1
+boo (5)
+  rotate: false
+  xy: 1047, 10
+  size: 280, 205
+  orig: 302, 236
+  offset: 18, 27
+  index: -1
+boo (6)
+  rotate: false
+  xy: 714, 218
+  size: 291, 199
+  orig: 302, 236
+  offset: 7, 32
+  index: -1
+boo (7)
+  rotate: false
+  xy: 1295, 217
+  size: 287, 200
+  orig: 302, 236
+  offset: 6, 32
+  index: -1
+boo (8)
+  rotate: false
+  xy: 1007, 218
+  size: 286, 199
+  orig: 302, 236
+  offset: 7, 33
+  index: -1
+boo (9)
+  rotate: false
+  xy: 429, 218
+  size: 283, 199
+  orig: 302, 236
+  offset: 19, 34
+  index: -1

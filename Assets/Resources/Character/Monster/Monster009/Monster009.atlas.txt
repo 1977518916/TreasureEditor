@@ -1,0 +1,41 @@
+
+Monster009.png
+size: 159,137
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 93
+  size: 150, 42
+  orig: 150, 42
+  offset: 0, 0
+  index: -1
+2
+  rotate: true
+  xy: 2, 2
+  size: 89, 103
+  orig: 91, 103
+  offset: 2, 0
+  index: -1
+3
+  rotate: true
+  xy: 141, 18
+  size: 20, 16
+  orig: 20, 16
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 107, 40
+  size: 51, 46
+  orig: 69, 46
+  offset: 14, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 107, 6
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

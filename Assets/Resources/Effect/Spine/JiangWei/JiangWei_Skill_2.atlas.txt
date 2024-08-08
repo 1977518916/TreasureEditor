@@ -1,0 +1,90 @@
+
+JiangWei_Skill_2.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoDian_01
+  rotate: true
+  xy: 394, 5
+  size: 34, 51
+  orig: 64, 128
+  offset: 14, 0
+  index: -1
+BaoDian_02
+  rotate: false
+  xy: 183, 32
+  size: 56, 94
+  orig: 64, 128
+  offset: 2, 2
+  index: -1
+BaoDian_03
+  rotate: false
+  xy: 120, 24
+  size: 61, 102
+  orig: 64, 128
+  offset: 1, 13
+  index: -1
+BaoDian_04
+  rotate: false
+  xy: 241, 33
+  size: 63, 93
+  orig: 64, 128
+  offset: 1, 29
+  index: -1
+BaoDian_05
+  rotate: false
+  xy: 342, 41
+  size: 62, 85
+  orig: 64, 128
+  offset: 2, 43
+  index: -1
+BaoDian_06
+  rotate: false
+  xy: 406, 53
+  size: 64, 73
+  orig: 64, 128
+  offset: 0, 55
+  index: -1
+BaoDian_07
+  rotate: false
+  xy: 508, 2
+  size: 64, 57
+  orig: 64, 128
+  offset: 0, 71
+  index: -1
+BaoDian_08
+  rotate: false
+  xy: 447, 4
+  size: 59, 47
+  orig: 64, 128
+  offset: 2, 81
+  index: -1
+DaoGuang03
+  rotate: false
+  xy: 306, 33
+  size: 34, 93
+  orig: 51, 96
+  offset: 9, 2
+  index: -1
+Dimian1
+  rotate: false
+  xy: 472, 61
+  size: 64, 65
+  orig: 64, 65
+  offset: 0, 0
+  index: -1
+Glow
+  rotate: false
+  xy: 2, 10
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Path
+  rotate: true
+  xy: 183, 2
+  size: 28, 209
+  orig: 64, 256
+  offset: 18, 29
+  index: -1

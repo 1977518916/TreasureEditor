@@ -1,0 +1,62 @@
+
+FightPowerUpTip.png
+size: 663,524
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FightPowerUpTip1
+  rotate: false
+  xy: 2, 74
+  size: 431, 347
+  orig: 431, 347
+  offset: 0, 0
+  index: -1
+FightPowerUpTip2
+  rotate: false
+  xy: 399, 40
+  size: 31, 32
+  orig: 31, 32
+  offset: 0, 0
+  index: -1
+FightPowerUpTip3
+  rotate: true
+  xy: 518, 293
+  size: 128, 112
+  orig: 128, 112
+  offset: 0, 0
+  index: -1
+FightPowerUpTip4
+  rotate: false
+  xy: 2, 423
+  size: 659, 99
+  orig: 659, 99
+  offset: 0, 0
+  index: -1
+FightPowerUpTip5
+  rotate: false
+  xy: 2, 6
+  size: 395, 66
+  orig: 395, 66
+  offset: 0, 0
+  index: -1
+FightPowerUpTip6
+  rotate: true
+  xy: 435, 2
+  size: 419, 81
+  orig: 419, 81
+  offset: 0, 0
+  index: -1
+FightPowerUpTip7
+  rotate: false
+  xy: 518, 247
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
+FightPowerUpTip8
+  rotate: true
+  xy: 518, 99
+  size: 146, 42
+  orig: 146, 42
+  offset: 0, 0
+  index: -1

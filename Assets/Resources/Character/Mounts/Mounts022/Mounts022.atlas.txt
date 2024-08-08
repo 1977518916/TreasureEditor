@@ -1,0 +1,125 @@
+
+Mounts022.png
+size: 1244,1244
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Shadow
+  rotate: false
+  xy: 526, 240
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+hu1
+  rotate: true
+  xy: 573, 240
+  size: 259, 206
+  orig: 259, 206
+  offset: 0, 0
+  index: -1
+hu10
+  rotate: true
+  xy: 780, 36
+  size: 128, 171
+  orig: 128, 171
+  offset: 0, 0
+  index: -1
+hu11
+  rotate: false
+  xy: 289, 3
+  size: 235, 269
+  orig: 235, 269
+  offset: 0, 0
+  index: -1
+hu12
+  rotate: false
+  xy: 573, 501
+  size: 222, 308
+  orig: 222, 308
+  offset: 0, 0
+  index: -1
+hu13
+  rotate: false
+  xy: 2, 811
+  size: 728, 431
+  orig: 728, 431
+  offset: 0, 0
+  index: -1
+hu14
+  rotate: false
+  xy: 797, 645
+  size: 265, 205
+  orig: 265, 205
+  offset: 0, 0
+  index: -1
+hu15
+  rotate: true
+  xy: 781, 251
+  size: 191, 245
+  orig: 191, 246
+  offset: 0, 1
+  index: -1
+hu16
+  rotate: false
+  xy: 781, 166
+  size: 366, 83
+  orig: 366, 144
+  offset: 0, 0
+  index: -1
+hu2
+  rotate: false
+  xy: 953, 18
+  size: 159, 146
+  orig: 159, 146
+  offset: 0, 0
+  index: -1
+hu3
+  rotate: true
+  xy: 1053, 463
+  size: 171, 159
+  orig: 171, 159
+  offset: 0, 0
+  index: -1
+hu4
+  rotate: true
+  xy: 797, 444
+  size: 199, 254
+  orig: 199, 254
+  offset: 0, 0
+  index: -1
+hu5
+  rotate: false
+  xy: 2, 274
+  size: 569, 535
+  orig: 569, 535
+  offset: 0, 0
+  index: -1
+hu6
+  rotate: false
+  xy: 732, 852
+  size: 436, 390
+  orig: 436, 390
+  offset: 0, 0
+  index: -1
+hu7
+  rotate: true
+  xy: 526, 35
+  size: 203, 252
+  orig: 203, 252
+  offset: 0, 0
+  index: -1
+hu8
+  rotate: false
+  xy: 2, 2
+  size: 285, 270
+  orig: 285, 270
+  offset: 0, 0
+  index: -1
+hu9
+  rotate: false
+  xy: 1064, 636
+  size: 101, 214
+  orig: 101, 214
+  offset: 0, 0
+  index: -1

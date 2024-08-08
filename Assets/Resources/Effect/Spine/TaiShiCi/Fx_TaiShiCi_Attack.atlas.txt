@@ -1,0 +1,76 @@
+
+Fx_TaiShiCi_Attack.png
+size: 1611,116
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jian (1)
+  rotate: false
+  xy: 984, 59
+  size: 318, 55
+  orig: 330, 61
+  offset: 11, 4
+  index: -1
+jian (10)
+  rotate: false
+  xy: 2, 59
+  size: 330, 55
+  orig: 330, 61
+  offset: 0, 3
+  index: -1
+jian (13)
+  rotate: false
+  xy: 334, 3
+  size: 326, 53
+  orig: 330, 61
+  offset: 4, 4
+  index: -1
+jian (16)
+  rotate: false
+  xy: 1304, 59
+  size: 305, 55
+  orig: 330, 61
+  offset: 23, 3
+  index: -1
+jian (19)
+  rotate: false
+  xy: 984, 3
+  size: 311, 54
+  orig: 330, 61
+  offset: 19, 3
+  index: -1
+jian (22)
+  rotate: false
+  xy: 334, 58
+  size: 326, 56
+  orig: 330, 61
+  offset: 4, 2
+  index: -1
+jian (25)
+  rotate: false
+  xy: 2, 2
+  size: 330, 55
+  orig: 330, 61
+  offset: 0, 2
+  index: -1
+jian (28)
+  rotate: false
+  xy: 1297, 4
+  size: 311, 53
+  orig: 330, 61
+  offset: 18, 3
+  index: -1
+jian (4)
+  rotate: false
+  xy: 662, 2
+  size: 311, 53
+  orig: 330, 61
+  offset: 19, 4
+  index: -1
+jian (7)
+  rotate: false
+  xy: 662, 57
+  size: 320, 57
+  orig: 330, 61
+  offset: 10, 2
+  index: -1

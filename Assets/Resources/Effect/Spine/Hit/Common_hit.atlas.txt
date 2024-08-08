@@ -1,0 +1,41 @@
+
+Common_hit.png
+size: 644,111
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+001
+  rotate: false
+  xy: 553, 15
+  size: 89, 94
+  orig: 119, 149
+  offset: 17, 28
+  index: -1
+002
+  rotate: true
+  xy: 423, 2
+  size: 107, 128
+  orig: 119, 149
+  offset: 9, 11
+  index: -1
+003
+  rotate: true
+  xy: 289, 2
+  size: 107, 132
+  orig: 119, 149
+  offset: 4, 6
+  index: -1
+004
+  rotate: true
+  xy: 2, 4
+  size: 105, 141
+  orig: 119, 149
+  offset: 11, 2
+  index: -1
+005
+  rotate: true
+  xy: 145, 5
+  size: 104, 142
+  orig: 119, 149
+  offset: 11, 2
+  index: -1

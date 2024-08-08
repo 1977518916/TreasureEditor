@@ -1,0 +1,41 @@
+
+FaZheng_Skill_1.png
+size: 276,216
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FeiDan
+  rotate: false
+  xy: 251, 16
+  size: 23, 97
+  orig: 25, 97
+  offset: 1, 0
+  index: -1
+Glow
+  rotate: false
+  xy: 138, 2
+  size: 111, 111
+  orig: 128, 128
+  offset: 9, 8
+  index: -1
+Path
+  rotate: true
+  xy: 2, 8
+  size: 64, 128
+  orig: 64, 128
+  offset: 0, 0
+  index: -1
+Quan
+  rotate: false
+  xy: 2, 74
+  size: 134, 140
+  orig: 144, 144
+  offset: 6, 4
+  index: -1
+Zi
+  rotate: true
+  xy: 138, 115
+  size: 99, 133
+  orig: 99, 133
+  offset: 0, 0
+  index: -1

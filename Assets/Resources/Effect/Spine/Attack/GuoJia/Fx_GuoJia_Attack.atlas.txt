@@ -1,0 +1,90 @@
+
+Fx_GuoJia_Attack.png
+size: 1031,89
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+郭嘉/qiu (1)
+  rotate: false
+  xy: 2, 6
+  size: 104, 81
+  orig: 105, 94
+  offset: 1, 5
+  index: -1
+郭嘉/qiu (11)
+  rotate: false
+  xy: 574, 9
+  size: 91, 78
+  orig: 105, 94
+  offset: 10, 7
+  index: -1
+郭嘉/qiu (13)
+  rotate: false
+  xy: 397, 2
+  size: 87, 85
+  orig: 105, 94
+  offset: 16, 7
+  index: -1
+郭嘉/qiu (15)
+  rotate: true
+  xy: 756, 4
+  size: 83, 86
+  orig: 105, 94
+  offset: 14, 6
+  index: -1
+郭嘉/qiu (17)
+  rotate: true
+  xy: 212, 4
+  size: 83, 94
+  orig: 105, 94
+  offset: 13, 0
+  index: -1
+郭嘉/qiu (19)
+  rotate: false
+  xy: 667, 7
+  size: 87, 80
+  orig: 105, 94
+  offset: 14, 6
+  index: -1
+郭嘉/qiu (21)
+  rotate: true
+  xy: 486, 3
+  size: 84, 86
+  orig: 105, 94
+  offset: 14, 2
+  index: -1
+郭嘉/qiu (23)
+  rotate: false
+  xy: 844, 4
+  size: 85, 83
+  orig: 105, 94
+  offset: 14, 2
+  index: -1
+郭嘉/qiu (3)
+  rotate: false
+  xy: 108, 7
+  size: 102, 80
+  orig: 105, 94
+  offset: 2, 3
+  index: -1
+郭嘉/qiu (5)
+  rotate: false
+  xy: 931, 38
+  size: 48, 49
+  orig: 105, 94
+  offset: 33, 19
+  index: -1
+郭嘉/qiu (7)
+  rotate: false
+  xy: 308, 3
+  size: 87, 84
+  orig: 105, 94
+  offset: 16, 1
+  index: -1
+郭嘉/qiu (9)
+  rotate: false
+  xy: 981, 40
+  size: 48, 47
+  orig: 105, 94
+  offset: 33, 20
+  index: -1

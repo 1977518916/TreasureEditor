@@ -1,0 +1,125 @@
+
+XiaHouDun.png
+size: 428,428
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 187
+  size: 194, 239
+  orig: 194, 239
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 365, 375
+  size: 57, 51
+  orig: 57, 51
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 356, 80
+  size: 46, 49
+  orig: 46, 49
+  offset: 0, 0
+  index: -1
+12
+  rotate: false
+  xy: 239, 33
+  size: 85, 17
+  orig: 85, 17
+  offset: 0, 0
+  index: -1
+13
+  rotate: true
+  xy: 239, 52
+  size: 136, 115
+  orig: 136, 115
+  offset: 0, 0
+  index: -1
+14
+  rotate: false
+  xy: 198, 320
+  size: 165, 106
+  orig: 165, 106
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 365, 328
+  size: 43, 45
+  orig: 43, 45
+  offset: 0, 0
+  index: -1
+20
+  rotate: false
+  xy: 158, 3
+  size: 79, 182
+  orig: 79, 182
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 356, 45
+  size: 35, 33
+  orig: 35, 33
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 328, 201
+  size: 117, 92
+  orig: 117, 92
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 410, 361
+  size: 11, 12
+  orig: 11, 12
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 356, 131
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 2, 2
+  size: 73, 183
+  orig: 73, 183
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 77, 3
+  size: 79, 182
+  orig: 79, 182
+  offset: 0, 0
+  index: -1
+Dian
+  rotate: false
+  xy: 393, 46
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Quan
+  rotate: false
+  xy: 198, 190
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 393, 12
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

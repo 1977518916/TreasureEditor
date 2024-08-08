@@ -1,0 +1,13 @@
+
+Fx_MaDai_Attack.png
+size: 263,599
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Yu1
+  rotate: false
+  xy: 2, 2
+  size: 259, 595
+  orig: 259, 595
+  offset: 0, 0
+  index: -1

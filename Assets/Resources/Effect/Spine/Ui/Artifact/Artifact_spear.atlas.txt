@@ -1,0 +1,1119 @@
+
+Artifact_spear.png
+size: 2001,1254
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+枪/cai (1)
+  rotate: false
+  xy: 641, 89
+  size: 154, 237
+  orig: 155, 238
+  offset: 1, 0
+  index: -1
+枪/cai (11)
+  rotate: false
+  xy: 641, 89
+  size: 154, 237
+  orig: 155, 238
+  offset: 1, 0
+  index: -1
+枪/cai (10)
+  rotate: false
+  xy: 502, 1015
+  size: 153, 237
+  orig: 155, 238
+  offset: 2, 0
+  index: -1
+枪/cai (20)
+  rotate: false
+  xy: 502, 1015
+  size: 153, 237
+  orig: 155, 238
+  offset: 2, 0
+  index: -1
+枪/cai (2)
+  rotate: false
+  xy: 494, 328
+  size: 155, 237
+  orig: 155, 238
+  offset: 0, 0
+  index: -1
+枪/cai (12)
+  rotate: false
+  xy: 494, 328
+  size: 155, 237
+  orig: 155, 238
+  offset: 0, 0
+  index: -1
+枪/cai (3)
+  rotate: false
+  xy: 173, 73
+  size: 155, 238
+  orig: 155, 238
+  offset: 0, 0
+  index: -1
+枪/cai (13)
+  rotate: false
+  xy: 173, 73
+  size: 155, 238
+  orig: 155, 238
+  offset: 0, 0
+  index: -1
+枪/cai (4)
+  rotate: false
+  xy: 330, 73
+  size: 154, 238
+  orig: 155, 238
+  offset: 1, 0
+  index: -1
+枪/cai (14)
+  rotate: false
+  xy: 330, 73
+  size: 154, 238
+  orig: 155, 238
+  offset: 1, 0
+  index: -1
+枪/cai (5)
+  rotate: false
+  xy: 338, 324
+  size: 154, 238
+  orig: 155, 238
+  offset: 1, 0
+  index: -1
+枪/cai (15)
+  rotate: false
+  xy: 338, 324
+  size: 154, 238
+  orig: 155, 238
+  offset: 1, 0
+  index: -1
+枪/cai (6)
+  rotate: false
+  xy: 486, 84
+  size: 153, 238
+  orig: 155, 238
+  offset: 2, 0
+  index: -1
+枪/cai (16)
+  rotate: false
+  xy: 486, 84
+  size: 153, 238
+  orig: 155, 238
+  offset: 2, 0
+  index: -1
+枪/cai (7)
+  rotate: false
+  xy: 192, 1014
+  size: 153, 238
+  orig: 155, 238
+  offset: 2, 0
+  index: -1
+枪/cai (17)
+  rotate: false
+  xy: 192, 1014
+  size: 153, 238
+  orig: 155, 238
+  offset: 2, 0
+  index: -1
+枪/cai (8)
+  rotate: false
+  xy: 343, 567
+  size: 153, 238
+  orig: 155, 238
+  offset: 2, 0
+  index: -1
+枪/cai (18)
+  rotate: false
+  xy: 343, 567
+  size: 153, 238
+  orig: 155, 238
+  offset: 2, 0
+  index: -1
+枪/cai (9)
+  rotate: false
+  xy: 347, 1015
+  size: 153, 237
+  orig: 155, 238
+  offset: 2, 0
+  index: -1
+枪/cai (19)
+  rotate: false
+  xy: 347, 1015
+  size: 153, 237
+  orig: 155, 238
+  offset: 2, 0
+  index: -1
+枪/gg (1)
+  rotate: true
+  xy: 963, 847
+  size: 169, 224
+  orig: 169, 258
+  offset: 0, 34
+  index: -1
+枪/gg (10)
+  rotate: true
+  xy: 1189, 855
+  size: 161, 227
+  orig: 169, 258
+  offset: 5, 0
+  index: -1
+枪/gg (11)
+  rotate: true
+  xy: 1418, 859
+  size: 158, 220
+  orig: 169, 258
+  offset: 7, 0
+  index: -1
+枪/gg (12)
+  rotate: true
+  xy: 1640, 863
+  size: 155, 213
+  orig: 169, 258
+  offset: 9, 0
+  index: -1
+枪/gg (13)
+  rotate: false
+  xy: 192, 807
+  size: 152, 205
+  orig: 169, 258
+  offset: 11, 0
+  index: -1
+枪/gg (14)
+  rotate: false
+  xy: 346, 814
+  size: 148, 198
+  orig: 169, 258
+  offset: 13, 0
+  index: -1
+枪/gg (15)
+  rotate: true
+  xy: 1889, 1170
+  size: 82, 110
+  orig: 169, 146
+  offset: 42, 0
+  index: -1
+枪/gg (2)
+  rotate: true
+  xy: 732, 845
+  size: 169, 229
+  orig: 169, 258
+  offset: 0, 29
+  index: -1
+枪/gg (3)
+  rotate: true
+  xy: 496, 844
+  size: 169, 234
+  orig: 169, 258
+  offset: 0, 24
+  index: -1
+枪/gg (4)
+  rotate: false
+  xy: 172, 564
+  size: 169, 238
+  orig: 169, 258
+  offset: 0, 19
+  index: -1
+枪/gg (5)
+  rotate: false
+  xy: 2, 63
+  size: 169, 243
+  orig: 169, 258
+  offset: 0, 14
+  index: -1
+枪/gg (6)
+  rotate: false
+  xy: 2, 556
+  size: 168, 246
+  orig: 169, 258
+  offset: 1, 8
+  index: -1
+枪/gg (7)
+  rotate: false
+  xy: 2, 308
+  size: 167, 246
+  orig: 169, 258
+  offset: 2, 1
+  index: -1
+枪/gg (8)
+  rotate: false
+  xy: 171, 313
+  size: 165, 241
+  orig: 169, 258
+  offset: 3, 0
+  index: -1
+枪/gg (9)
+  rotate: false
+  xy: 797, 105
+  size: 163, 234
+  orig: 169, 258
+  offset: 4, 0
+  index: -1
+枪/h (1)
+  rotate: false
+  xy: 1724, 396
+  size: 151, 229
+  orig: 152, 233
+  offset: 1, 1
+  index: -1
+枪/h (11)
+  rotate: false
+  xy: 1724, 396
+  size: 151, 229
+  orig: 152, 233
+  offset: 1, 1
+  index: -1
+枪/h (10)
+  rotate: false
+  xy: 1737, 1022
+  size: 150, 230
+  orig: 152, 233
+  offset: 2, 0
+  index: -1
+枪/h (20)
+  rotate: false
+  xy: 1737, 1022
+  size: 150, 230
+  orig: 152, 233
+  offset: 2, 0
+  index: -1
+枪/h (2)
+  rotate: false
+  xy: 1573, 627
+  size: 151, 230
+  orig: 152, 233
+  offset: 1, 2
+  index: -1
+枪/h (12)
+  rotate: false
+  xy: 1573, 627
+  size: 151, 230
+  orig: 152, 233
+  offset: 1, 2
+  index: -1
+枪/h (3)
+  rotate: true
+  xy: 1610, 7
+  size: 151, 229
+  orig: 152, 233
+  offset: 1, 3
+  index: -1
+枪/h (13)
+  rotate: true
+  xy: 1610, 7
+  size: 151, 229
+  orig: 152, 233
+  offset: 1, 3
+  index: -1
+枪/h (4)
+  rotate: false
+  xy: 1571, 392
+  size: 151, 231
+  orig: 152, 233
+  offset: 1, 1
+  index: -1
+枪/h (14)
+  rotate: false
+  xy: 1571, 392
+  size: 151, 231
+  orig: 152, 233
+  offset: 1, 1
+  index: -1
+枪/h (5)
+  rotate: false
+  xy: 1585, 1020
+  size: 150, 232
+  orig: 152, 233
+  offset: 2, 1
+  index: -1
+枪/h (15)
+  rotate: false
+  xy: 1585, 1020
+  size: 150, 232
+  orig: 152, 233
+  offset: 2, 1
+  index: -1
+枪/h (6)
+  rotate: false
+  xy: 1423, 625
+  size: 148, 232
+  orig: 152, 233
+  offset: 3, 0
+  index: -1
+枪/h (16)
+  rotate: false
+  xy: 1423, 625
+  size: 148, 232
+  orig: 152, 233
+  offset: 3, 0
+  index: -1
+枪/h (7)
+  rotate: false
+  xy: 1425, 152
+  size: 148, 232
+  orig: 152, 233
+  offset: 3, 1
+  index: -1
+枪/h (17)
+  rotate: false
+  xy: 1425, 152
+  size: 148, 232
+  orig: 152, 233
+  offset: 3, 1
+  index: -1
+枪/h (8)
+  rotate: false
+  xy: 1575, 160
+  size: 149, 230
+  orig: 152, 233
+  offset: 3, 0
+  index: -1
+枪/h (18)
+  rotate: false
+  xy: 1575, 160
+  size: 149, 230
+  orig: 152, 233
+  offset: 3, 0
+  index: -1
+枪/h (9)
+  rotate: false
+  xy: 1420, 386
+  size: 149, 232
+  orig: 152, 233
+  offset: 3, 0
+  index: -1
+枪/h (19)
+  rotate: false
+  xy: 1420, 386
+  size: 149, 232
+  orig: 152, 233
+  offset: 3, 0
+  index: -1
+枪/hong (1)
+  rotate: false
+  xy: 1113, 612
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/hong (11)
+  rotate: false
+  xy: 1113, 612
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/hong (10)
+  rotate: false
+  xy: 959, 609
+  size: 152, 234
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/hong (20)
+  rotate: false
+  xy: 959, 609
+  size: 152, 234
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/hong (2)
+  rotate: false
+  xy: 1115, 138
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/hong (12)
+  rotate: false
+  xy: 1115, 138
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/hong (3)
+  rotate: false
+  xy: 1265, 377
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/hong (13)
+  rotate: false
+  xy: 1265, 377
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/hong (4)
+  rotate: false
+  xy: 812, 1018
+  size: 153, 234
+  orig: 154, 236
+  offset: 1, 0
+  index: -1
+枪/hong (14)
+  rotate: false
+  xy: 812, 1018
+  size: 153, 234
+  orig: 154, 236
+  offset: 1, 0
+  index: -1
+枪/hong (5)
+  rotate: false
+  xy: 657, 1016
+  size: 153, 236
+  orig: 154, 236
+  offset: 1, 0
+  index: -1
+枪/hong (15)
+  rotate: false
+  xy: 657, 1016
+  size: 153, 236
+  orig: 154, 236
+  offset: 1, 0
+  index: -1
+枪/hong (6)
+  rotate: false
+  xy: 498, 571
+  size: 151, 236
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/hong (16)
+  rotate: false
+  xy: 498, 571
+  size: 151, 236
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/hong (7)
+  rotate: false
+  xy: 651, 578
+  size: 151, 235
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/hong (17)
+  rotate: false
+  xy: 651, 578
+  size: 151, 235
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/hong (8)
+  rotate: false
+  xy: 804, 373
+  size: 152, 234
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/hong (18)
+  rotate: false
+  xy: 804, 373
+  size: 152, 234
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/hong (9)
+  rotate: false
+  xy: 958, 373
+  size: 152, 234
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/hong (19)
+  rotate: false
+  xy: 958, 373
+  size: 152, 234
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/lan (1)
+  rotate: false
+  xy: 1258, 9
+  size: 84, 127
+  orig: 84, 129
+  offset: 0, 1
+  index: -1
+枪/lan (11)
+  rotate: false
+  xy: 1258, 9
+  size: 84, 127
+  orig: 84, 129
+  offset: 0, 1
+  index: -1
+枪/lan (10)
+  rotate: false
+  xy: 1173, 8
+  size: 83, 128
+  orig: 84, 129
+  offset: 1, 0
+  index: -1
+枪/lan (20)
+  rotate: false
+  xy: 1173, 8
+  size: 83, 128
+  orig: 84, 129
+  offset: 1, 0
+  index: -1
+枪/lan (2)
+  rotate: true
+  xy: 1726, 777
+  size: 84, 127
+  orig: 84, 129
+  offset: 0, 1
+  index: -1
+枪/lan (12)
+  rotate: true
+  xy: 1726, 777
+  size: 84, 127
+  orig: 84, 129
+  offset: 0, 1
+  index: -1
+枪/lan (3)
+  rotate: false
+  xy: 1889, 1041
+  size: 84, 127
+  orig: 84, 129
+  offset: 0, 1
+  index: -1
+枪/lan (13)
+  rotate: false
+  xy: 1889, 1041
+  size: 84, 127
+  orig: 84, 129
+  offset: 0, 1
+  index: -1
+枪/lan (4)
+  rotate: true
+  xy: 1726, 310
+  size: 84, 127
+  orig: 84, 129
+  offset: 0, 1
+  index: -1
+枪/lan (14)
+  rotate: true
+  xy: 1726, 310
+  size: 84, 127
+  orig: 84, 129
+  offset: 0, 1
+  index: -1
+枪/lan (5)
+  rotate: true
+  xy: 1855, 243
+  size: 83, 127
+  orig: 84, 129
+  offset: 1, 1
+  index: -1
+枪/lan (15)
+  rotate: true
+  xy: 1855, 243
+  size: 83, 127
+  orig: 84, 129
+  offset: 1, 1
+  index: -1
+枪/lan (6)
+  rotate: true
+  xy: 1726, 225
+  size: 83, 127
+  orig: 84, 129
+  offset: 1, 1
+  index: -1
+枪/lan (16)
+  rotate: true
+  xy: 1726, 225
+  size: 83, 127
+  orig: 84, 129
+  offset: 1, 1
+  index: -1
+枪/lan (7)
+  rotate: true
+  xy: 1855, 158
+  size: 83, 127
+  orig: 84, 129
+  offset: 1, 1
+  index: -1
+枪/lan (17)
+  rotate: true
+  xy: 1855, 158
+  size: 83, 127
+  orig: 84, 129
+  offset: 1, 1
+  index: -1
+枪/lan (8)
+  rotate: false
+  xy: 1003, 7
+  size: 83, 128
+  orig: 84, 129
+  offset: 1, 0
+  index: -1
+枪/lan (18)
+  rotate: false
+  xy: 1003, 7
+  size: 83, 128
+  orig: 84, 129
+  offset: 1, 0
+  index: -1
+枪/lan (9)
+  rotate: false
+  xy: 1088, 7
+  size: 83, 128
+  orig: 84, 129
+  offset: 1, 0
+  index: -1
+枪/lan (19)
+  rotate: false
+  xy: 1088, 7
+  size: 83, 128
+  orig: 84, 129
+  offset: 1, 0
+  index: -1
+枪/lzz (1)
+  rotate: false
+  xy: 1726, 681
+  size: 86, 94
+  orig: 137, 158
+  offset: 27, 27
+  index: -1
+枪/lzz (11)
+  rotate: false
+  xy: 1726, 681
+  size: 86, 94
+  orig: 137, 158
+  offset: 27, 27
+  index: -1
+枪/lzz (10)
+  rotate: true
+  xy: 1877, 675
+  size: 114, 122
+  orig: 137, 158
+  offset: 0, 11
+  index: -1
+枪/lzz (20)
+  rotate: true
+  xy: 1877, 675
+  size: 114, 122
+  orig: 137, 158
+  offset: 0, 11
+  index: -1
+枪/lzz (2)
+  rotate: true
+  xy: 1877, 560
+  size: 113, 119
+  orig: 137, 158
+  offset: 24, 11
+  index: -1
+枪/lzz (12)
+  rotate: true
+  xy: 1877, 560
+  size: 113, 119
+  orig: 137, 158
+  offset: 24, 11
+  index: -1
+枪/lzz (3)
+  rotate: true
+  xy: 1877, 328
+  size: 114, 117
+  orig: 137, 158
+  offset: 21, 23
+  index: -1
+枪/lzz (13)
+  rotate: true
+  xy: 1877, 328
+  size: 114, 117
+  orig: 137, 158
+  offset: 21, 23
+  index: -1
+枪/lzz (4)
+  rotate: false
+  xy: 1841, 39
+  size: 114, 117
+  orig: 137, 158
+  offset: 18, 6
+  index: -1
+枪/lzz (14)
+  rotate: false
+  xy: 1841, 39
+  size: 114, 117
+  orig: 137, 158
+  offset: 18, 6
+  index: -1
+枪/lzz (5)
+  rotate: true
+  xy: 1877, 444
+  size: 114, 118
+  orig: 137, 158
+  offset: 14, 14
+  index: -1
+枪/lzz (15)
+  rotate: true
+  xy: 1877, 444
+  size: 114, 118
+  orig: 137, 158
+  offset: 14, 14
+  index: -1
+枪/lzz (6)
+  rotate: true
+  xy: 1855, 906
+  size: 114, 141
+  orig: 137, 158
+  offset: 11, 0
+  index: -1
+枪/lzz (16)
+  rotate: true
+  xy: 1855, 906
+  size: 114, 141
+  orig: 137, 158
+  offset: 11, 0
+  index: -1
+枪/lzz (7)
+  rotate: true
+  xy: 1855, 791
+  size: 113, 141
+  orig: 137, 158
+  offset: 9, 9
+  index: -1
+枪/lzz (17)
+  rotate: true
+  xy: 1855, 791
+  size: 113, 141
+  orig: 137, 158
+  offset: 9, 9
+  index: -1
+枪/lzz (8)
+  rotate: false
+  xy: 1495, 6
+  size: 113, 144
+  orig: 137, 158
+  offset: 6, 14
+  index: -1
+枪/lzz (18)
+  rotate: false
+  xy: 1495, 6
+  size: 113, 144
+  orig: 137, 158
+  offset: 6, 14
+  index: -1
+枪/lzz (9)
+  rotate: false
+  xy: 888, 2
+  size: 113, 101
+  orig: 137, 158
+  offset: 3, 24
+  index: -1
+枪/lzz (19)
+  rotate: false
+  xy: 888, 2
+  size: 113, 101
+  orig: 137, 158
+  offset: 3, 24
+  index: -1
+枪/qiangchutu
+  rotate: false
+  xy: 2, 804
+  size: 188, 448
+  orig: 188, 448
+  offset: 0, 0
+  index: -1
+枪/qiangchutu02
+  rotate: true
+  xy: 1344, 3
+  size: 137, 149
+  orig: 137, 149
+  offset: 0, 0
+  index: -1
+枪/qiangchutu03
+  rotate: true
+  xy: 1726, 161
+  size: 62, 123
+  orig: 62, 132
+  offset: 0, 0
+  index: -1
+枪/qiangchutu04
+  rotate: true
+  xy: 352, 4
+  size: 67, 125
+  orig: 67, 135
+  offset: 0, 0
+  index: -1
+枪/sg (1)
+  rotate: false
+  xy: 716, 824
+  size: 14, 18
+  orig: 153, 234
+  offset: 139, 0
+  index: -1
+枪/sg (10)
+  rotate: true
+  xy: 1814, 682
+  size: 93, 60
+  orig: 153, 234
+  offset: 19, 121
+  index: -1
+枪/sg (11)
+  rotate: false
+  xy: 479, 7
+  size: 108, 64
+  orig: 153, 234
+  offset: 7, 134
+  index: -1
+枪/sg (12)
+  rotate: false
+  xy: 589, 9
+  size: 116, 73
+  orig: 153, 234
+  offset: 0, 138
+  index: -1
+枪/sg (13)
+  rotate: false
+  xy: 236, 2
+  size: 114, 69
+  orig: 153, 234
+  offset: 0, 149
+  index: -1
+枪/sg (14)
+  rotate: false
+  xy: 42, 8
+  size: 106, 53
+  orig: 153, 234
+  offset: 4, 169
+  index: -1
+枪/sg (15)
+  rotate: false
+  xy: 150, 10
+  size: 84, 51
+  orig: 153, 234
+  offset: 4, 175
+  index: -1
+枪/sg (16)
+  rotate: false
+  xy: 1726, 628
+  size: 71, 45
+  orig: 153, 234
+  offset: 14, 188
+  index: -1
+枪/sg (17)
+  rotate: false
+  xy: 649, 815
+  size: 25, 27
+  orig: 153, 234
+  offset: 30, 207
+  index: -1
+枪/sg (18)
+  rotate: false
+  xy: 732, 826
+  size: 17, 17
+  orig: 153, 234
+  offset: 30, 217
+  index: -1
+枪/sg (19)
+  rotate: false
+  xy: 732, 826
+  size: 17, 17
+  orig: 153, 234
+  offset: 30, 217
+  index: -1
+枪/sg (2)
+  rotate: false
+  xy: 598, 812
+  size: 20, 30
+  orig: 153, 234
+  offset: 133, 1
+  index: -1
+枪/sg (3)
+  rotate: true
+  xy: 560, 811
+  size: 31, 36
+  orig: 153, 234
+  offset: 118, 9
+  index: -1
+枪/sg (4)
+  rotate: true
+  xy: 529, 810
+  size: 32, 29
+  orig: 153, 234
+  offset: 113, 24
+  index: -1
+枪/sg (5)
+  rotate: false
+  xy: 496, 809
+  size: 31, 33
+  orig: 153, 234
+  offset: 113, 27
+  index: -1
+枪/sg (6)
+  rotate: true
+  xy: 620, 814
+  size: 28, 27
+  orig: 153, 234
+  offset: 114, 35
+  index: -1
+枪/sg (7)
+  rotate: true
+  xy: 651, 328
+  size: 11, 12
+  orig: 153, 234
+  offset: 116, 50
+  index: -1
+枪/sg (8)
+  rotate: false
+  xy: 676, 822
+  size: 38, 20
+  orig: 153, 234
+  offset: 67, 119
+  index: -1
+枪/sg (9)
+  rotate: true
+  xy: 2, 5
+  size: 56, 38
+  orig: 153, 234
+  offset: 51, 119
+  index: -1
+枪/xxx
+  rotate: false
+  xy: 707, 3
+  size: 179, 84
+  orig: 179, 84
+  offset: 0, 0
+  index: -1
+枪/z (1)
+  rotate: false
+  xy: 1430, 1020
+  size: 153, 232
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/z (11)
+  rotate: false
+  xy: 1430, 1020
+  size: 153, 232
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/z (10)
+  rotate: false
+  xy: 1121, 1018
+  size: 152, 234
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/z (20)
+  rotate: false
+  xy: 1121, 1018
+  size: 152, 234
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/z (2)
+  rotate: false
+  xy: 1270, 142
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/z (12)
+  rotate: false
+  xy: 1270, 142
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/z (3)
+  rotate: false
+  xy: 1275, 1019
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/z (13)
+  rotate: false
+  xy: 1275, 1019
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/z (4)
+  rotate: false
+  xy: 1268, 620
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/z (14)
+  rotate: false
+  xy: 1268, 620
+  size: 153, 233
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/z (5)
+  rotate: false
+  xy: 804, 609
+  size: 153, 234
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/z (15)
+  rotate: false
+  xy: 804, 609
+  size: 153, 234
+  orig: 154, 236
+  offset: 1, 1
+  index: -1
+枪/z (6)
+  rotate: false
+  xy: 651, 341
+  size: 151, 235
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/z (16)
+  rotate: false
+  xy: 651, 341
+  size: 151, 235
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/z (7)
+  rotate: false
+  xy: 962, 137
+  size: 151, 234
+  orig: 154, 236
+  offset: 2, 1
+  index: -1
+枪/z (17)
+  rotate: false
+  xy: 962, 137
+  size: 151, 234
+  orig: 154, 236
+  offset: 2, 1
+  index: -1
+枪/z (8)
+  rotate: false
+  xy: 967, 1018
+  size: 152, 234
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/z (18)
+  rotate: false
+  xy: 967, 1018
+  size: 152, 234
+  orig: 154, 236
+  offset: 2, 0
+  index: -1
+枪/z (9)
+  rotate: false
+  xy: 1112, 373
+  size: 151, 234
+  orig: 154, 236
+  offset: 3, 0
+  index: -1
+枪/z (19)
+  rotate: false
+  xy: 1112, 373
+  size: 151, 234
+  orig: 154, 236
+  offset: 3, 0
+  index: -1

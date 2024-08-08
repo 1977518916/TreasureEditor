@@ -1,0 +1,20 @@
+
+XiaoQiao_Skill_2.png
+size: 184,132
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+小乔/dd
+  rotate: true
+  xy: 146, 92
+  size: 38, 36
+  orig: 39, 37
+  offset: 0, 1
+  index: -1
+小乔/sb
+  rotate: false
+  xy: 2, 2
+  size: 142, 128
+  orig: 142, 142
+  offset: 0, 7
+  index: -1

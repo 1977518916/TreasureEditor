@@ -1,0 +1,41 @@
+
+XunYu_Skill_1.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow
+  rotate: false
+  xy: 138, 121
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+Path
+  rotate: true
+  xy: 96, 31
+  size: 64, 128
+  orig: 64, 128
+  offset: 0, 0
+  index: -1
+Quan
+  rotate: false
+  xy: 2, 97
+  size: 134, 140
+  orig: 144, 144
+  offset: 6, 4
+  index: -1
+ShuJian_1
+  rotate: true
+  xy: 2, 2
+  size: 93, 92
+  orig: 97, 95
+  offset: 4, 3
+  index: -1
+Up
+  rotate: true
+  xy: 226, 55
+  size: 64, 51
+  orig: 64, 64
+  offset: 0, 10
+  index: -1

@@ -1,0 +1,97 @@
+
+buff_zuoqi.png
+size: 620,67
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lgg (1)
+  rotate: true
+  xy: 565, 8
+  size: 24, 46
+  orig: 56, 75
+  offset: 17, 18
+  index: -1
+lgg (10)
+  rotate: false
+  xy: 116, 2
+  size: 54, 63
+  orig: 56, 75
+  offset: 2, 4
+  index: -1
+lgg (11)
+  rotate: false
+  xy: 2, 2
+  size: 55, 63
+  orig: 56, 75
+  offset: 1, 4
+  index: -1
+lgg (12)
+  rotate: false
+  xy: 59, 3
+  size: 55, 62
+  orig: 56, 75
+  offset: 1, 5
+  index: -1
+lgg (13)
+  rotate: false
+  xy: 172, 4
+  size: 55, 61
+  orig: 56, 75
+  offset: 1, 6
+  index: -1
+lgg (2)
+  rotate: true
+  xy: 565, 34
+  size: 31, 53
+  orig: 56, 75
+  offset: 13, 14
+  index: -1
+lgg (3)
+  rotate: false
+  xy: 526, 8
+  size: 37, 57
+  orig: 56, 75
+  offset: 10, 12
+  index: -1
+lgg (4)
+  rotate: false
+  xy: 483, 5
+  size: 41, 60
+  orig: 56, 75
+  offset: 8, 9
+  index: -1
+lgg (5)
+  rotate: false
+  xy: 437, 5
+  size: 44, 60
+  orig: 56, 75
+  offset: 7, 8
+  index: -1
+lgg (6)
+  rotate: false
+  xy: 388, 4
+  size: 47, 61
+  orig: 56, 75
+  offset: 5, 6
+  index: -1
+lgg (7)
+  rotate: false
+  xy: 337, 5
+  size: 49, 60
+  orig: 56, 75
+  offset: 4, 5
+  index: -1
+lgg (8)
+  rotate: false
+  xy: 284, 3
+  size: 51, 62
+  orig: 56, 75
+  offset: 3, 4
+  index: -1
+lgg (9)
+  rotate: false
+  xy: 229, 3
+  size: 53, 62
+  orig: 56, 75
+  offset: 2, 4
+  index: -1

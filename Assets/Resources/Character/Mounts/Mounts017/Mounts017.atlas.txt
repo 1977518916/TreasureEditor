@@ -1,0 +1,90 @@
+
+Mounts017.png
+size: 134,537
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+17_1
+  rotate: false
+  xy: 75, 90
+  size: 41, 41
+  orig: 41, 41
+  offset: 0, 0
+  index: -1
+17_10
+  rotate: false
+  xy: 95, 173
+  size: 34, 51
+  orig: 34, 63
+  offset: 0, 12
+  index: -1
+17_11
+  rotate: false
+  xy: 2, 154
+  size: 72, 67
+  orig: 72, 70
+  offset: 0, 3
+  index: -1
+17_2
+  rotate: true
+  xy: 75, 63
+  size: 25, 33
+  orig: 25, 33
+  offset: 0, 0
+  index: -1
+17_3
+  rotate: true
+  xy: 76, 133
+  size: 38, 50
+  orig: 38, 50
+  offset: 0, 0
+  index: -1
+17_4
+  rotate: true
+  xy: 68, 2
+  size: 59, 62
+  orig: 59, 62
+  offset: 0, 0
+  index: -1
+17_5
+  rotate: false
+  xy: 2, 81
+  size: 71, 71
+  orig: 71, 73
+  offset: 0, 2
+  index: -1
+17_6
+  rotate: false
+  xy: 95, 226
+  size: 35, 53
+  orig: 35, 65
+  offset: 0, 12
+  index: -1
+17_7
+  rotate: true
+  xy: 2, 281
+  size: 146, 115
+  orig: 146, 115
+  offset: 0, 0
+  index: -1
+17_8
+  rotate: false
+  xy: 2, 429
+  size: 130, 106
+  orig: 130, 106
+  offset: 0, 0
+  index: -1
+17_9
+  rotate: true
+  xy: 2, 223
+  size: 56, 91
+  orig: 62, 95
+  offset: 5, 4
+  index: -1
+Shadow
+  rotate: false
+  xy: 2, 15
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

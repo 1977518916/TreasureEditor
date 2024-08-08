@@ -1,0 +1,20 @@
+
+CaoHong_Skill_1.png
+size: 222,131
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DaoGuang
+  rotate: false
+  xy: 2, 2
+  size: 174, 127
+  orig: 175, 128
+  offset: 1, 0
+  index: -1
+Dimian
+  rotate: true
+  xy: 178, 66
+  size: 63, 42
+  orig: 64, 64
+  offset: 1, 11
+  index: -1

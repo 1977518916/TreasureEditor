@@ -1,0 +1,13 @@
+
+Fx_XiaoQiao_Attack.png
+size: 96,93
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hua
+  rotate: false
+  xy: 2, 2
+  size: 92, 89
+  orig: 92, 90
+  offset: 0, 0
+  index: -1

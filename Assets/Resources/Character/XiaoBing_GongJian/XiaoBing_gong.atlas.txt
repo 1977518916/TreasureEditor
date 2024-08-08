@@ -1,0 +1,153 @@
+
+XiaoBing_gong.png
+size: 664,237
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BaoQi_1
+  rotate: true
+  xy: 401, 3
+  size: 66, 64
+  orig: 66, 64
+  offset: 0, 0
+  index: -1
+BaoQi_2
+  rotate: true
+  xy: 467, 5
+  size: 66, 64
+  orig: 66, 64
+  offset: 0, 0
+  index: -1
+BaoQi_3
+  rotate: true
+  xy: 509, 77
+  size: 66, 64
+  orig: 66, 64
+  offset: 0, 0
+  index: -1
+BaoQi_4
+  rotate: true
+  xy: 533, 9
+  size: 66, 64
+  orig: 66, 64
+  offset: 0, 0
+  index: -1
+Eye_1_B
+  rotate: false
+  xy: 614, 136
+  size: 44, 45
+  orig: 44, 45
+  offset: 0, 0
+  index: -1
+Eye_1_F
+  rotate: true
+  xy: 575, 79
+  size: 64, 37
+  orig: 64, 37
+  offset: 0, 0
+  index: -1
+Eye_2_B
+  rotate: true
+  xy: 352, 3
+  size: 53, 47
+  orig: 53, 47
+  offset: 0, 0
+  index: -1
+Eye_2_F
+  rotate: true
+  xy: 577, 183
+  size: 52, 45
+  orig: 52, 45
+  offset: 0, 0
+  index: -1
+FaDai_B
+  rotate: false
+  xy: 221, 2
+  size: 78, 54
+  orig: 78, 54
+  offset: 0, 0
+  index: -1
+FaDai_F
+  rotate: false
+  xy: 491, 145
+  size: 84, 90
+  orig: 84, 90
+  offset: 0, 0
+  index: -1
+Gong
+  rotate: false
+  xy: 356, 71
+  size: 98, 164
+  orig: 98, 164
+  offset: 0, 0
+  index: -1
+JianJia_B
+  rotate: true
+  xy: 301, 3
+  size: 53, 49
+  orig: 53, 49
+  offset: 0, 0
+  index: -1
+JianJia_F
+  rotate: true
+  xy: 599, 18
+  size: 59, 51
+  orig: 59, 51
+  offset: 0, 0
+  index: -1
+Jiao_B
+  rotate: true
+  xy: 577, 161
+  size: 20, 18
+  orig: 20, 18
+  offset: 0, 0
+  index: -1
+Jiao_F
+  rotate: true
+  xy: 490, 83
+  size: 22, 17
+  orig: 22, 17
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 456, 73
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+ShenTi
+  rotate: true
+  xy: 221, 58
+  size: 177, 133
+  orig: 177, 133
+  offset: 0, 0
+  index: -1
+Shou_B
+  rotate: true
+  xy: 614, 94
+  size: 40, 37
+  orig: 40, 37
+  offset: 0, 0
+  index: -1
+Shou_F
+  rotate: true
+  xy: 624, 195
+  size: 40, 38
+  orig: 40, 38
+  offset: 0, 0
+  index: -1
+Tou
+  rotate: false
+  xy: 2, 5
+  size: 217, 230
+  orig: 217, 230
+  offset: 0, 0
+  index: -1
+jian
+  rotate: false
+  xy: 456, 107
+  size: 33, 128
+  orig: 33, 128
+  offset: 0, 0
+  index: -1

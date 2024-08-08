@@ -1,0 +1,27 @@
+
+LuSu_Skill_2.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FeiDan
+  rotate: false
+  xy: 235, 25
+  size: 25, 97
+  orig: 25, 97
+  offset: 0, 0
+  index: -1
+Glow
+  rotate: false
+  xy: 2, 2
+  size: 231, 231
+  orig: 256, 256
+  offset: 13, 12
+  index: -1
+Glow4
+  rotate: false
+  xy: 235, 124
+  size: 109, 109
+  orig: 128, 128
+  offset: 9, 10
+  index: -1

@@ -1,0 +1,118 @@
+
+buff_Icearmor.png
+size: 1975,514
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BING
+  rotate: true
+  xy: 1685, 257
+  size: 35, 133
+  orig: 36, 134
+  offset: 0, 0
+  index: -1
+DIAN
+  rotate: true
+  xy: 1685, 294
+  size: 218, 217
+  orig: 218, 218
+  offset: 0, 0
+  index: -1
+XX (1)
+  rotate: false
+  xy: 563, 18
+  size: 194, 69
+  orig: 559, 302
+  offset: 188, 128
+  index: -1
+XX (2)
+  rotate: false
+  xy: 1364, 6
+  size: 468, 230
+  orig: 559, 302
+  offset: 52, 19
+  index: -1
+XX (3)
+  rotate: false
+  xy: 2, 221
+  size: 559, 291
+  orig: 559, 302
+  offset: 0, 0
+  index: -1
+XX (4)
+  rotate: false
+  xy: 563, 222
+  size: 559, 290
+  orig: 559, 302
+  offset: 0, 0
+  index: -1
+XX (5)
+  rotate: false
+  xy: 1124, 238
+  size: 559, 274
+  orig: 559, 302
+  offset: 0, 0
+  index: -1
+XX (6)
+  rotate: false
+  xy: 2, 5
+  size: 559, 214
+  orig: 559, 302
+  offset: 0, 54
+  index: -1
+XX (7)
+  rotate: false
+  xy: 563, 89
+  size: 387, 131
+  orig: 559, 302
+  offset: 172, 60
+  index: -1
+XXX (1)
+  rotate: false
+  xy: 759, 2
+  size: 152, 85
+  orig: 417, 117
+  offset: 5, 14
+  index: -1
+XXX (2)
+  rotate: true
+  xy: 1834, 49
+  size: 243, 89
+  orig: 417, 117
+  offset: 25, 10
+  index: -1
+XXX (3)
+  rotate: false
+  xy: 952, 115
+  size: 367, 105
+  orig: 417, 117
+  offset: 27, 6
+  index: -1
+XXX (4)
+  rotate: false
+  xy: 1022, 10
+  size: 340, 103
+  orig: 417, 117
+  offset: 52, 8
+  index: -1
+XXX (5)
+  rotate: false
+  xy: 913, 13
+  size: 107, 74
+  orig: 417, 117
+  offset: 288, 33
+  index: -1
+XXX (6)
+  rotate: true
+  xy: 1904, 422
+  size: 90, 69
+  orig: 417, 117
+  offset: 317, 37
+  index: -1
+XXX (7)
+  rotate: true
+  xy: 1904, 361
+  size: 59, 67
+  orig: 417, 117
+  offset: 353, 36
+  index: -1

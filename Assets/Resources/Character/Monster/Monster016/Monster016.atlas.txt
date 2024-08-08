@@ -1,0 +1,55 @@
+
+Monster016.png
+size: 202,144
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 41
+  size: 145, 101
+  orig: 145, 101
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 149, 50
+  size: 47, 30
+  orig: 47, 30
+  offset: 0, 0
+  index: -1
+3
+  rotate: true
+  xy: 149, 82
+  size: 60, 51
+  orig: 72, 51
+  offset: 2, 0
+  index: -1
+4
+  rotate: false
+  xy: 60, 2
+  size: 36, 37
+  orig: 36, 37
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 2, 2
+  size: 56, 37
+  orig: 56, 37
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 98, 3
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 136, 7
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1

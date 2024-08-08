@@ -1,0 +1,62 @@
+
+Mounts018.png
+size: 254,150
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+18_1
+  rotate: false
+  xy: 223, 108
+  size: 29, 40
+  orig: 29, 40
+  offset: 0, 0
+  index: -1
+18_2
+  rotate: true
+  xy: 204, 37
+  size: 27, 39
+  orig: 27, 39
+  offset: 0, 0
+  index: -1
+18_3
+  rotate: false
+  xy: 157, 39
+  size: 45, 43
+  orig: 45, 43
+  offset: 0, 0
+  index: -1
+18_4
+  rotate: true
+  xy: 197, 6
+  size: 29, 27
+  orig: 29, 27
+  offset: 0, 0
+  index: -1
+18_5
+  rotate: false
+  xy: 2, 2
+  size: 153, 146
+  orig: 153, 146
+  offset: 0, 0
+  index: -1
+18_6
+  rotate: false
+  xy: 223, 66
+  size: 27, 40
+  orig: 27, 40
+  offset: 0, 0
+  index: -1
+18_7
+  rotate: true
+  xy: 157, 12
+  size: 25, 38
+  orig: 25, 38
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 157, 84
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,69 @@
+
+DongZhuo_Skill_1.png
+size: 807,303
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BoWen1
+  rotate: false
+  xy: 677, 173
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Fog1
+  rotate: true
+  xy: 729, 133
+  size: 38, 40
+  orig: 64, 64
+  offset: 12, 3
+  index: -1
+Fog2
+  rotate: false
+  xy: 677, 119
+  size: 50, 52
+  orig: 64, 64
+  offset: 7, 3
+  index: -1
+JiuChi
+  rotate: false
+  xy: 2, 2
+  size: 415, 299
+  orig: 425, 309
+  offset: 5, 4
+  index: -1
+Pao_01
+  rotate: true
+  xy: 696, 43
+  size: 41, 13
+  orig: 64, 64
+  offset: 11, 16
+  index: -1
+Pao_02
+  rotate: false
+  xy: 677, 86
+  size: 53, 31
+  orig: 64, 64
+  offset: 5, 15
+  index: -1
+Pao_03
+  rotate: true
+  xy: 732, 79
+  size: 52, 24
+  orig: 64, 64
+  offset: 6, 18
+  index: -1
+Pao_04
+  rotate: true
+  xy: 677, 40
+  size: 44, 17
+  orig: 64, 64
+  offset: 10, 18
+  index: -1
+WenLi
+  rotate: false
+  xy: 419, 45
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1

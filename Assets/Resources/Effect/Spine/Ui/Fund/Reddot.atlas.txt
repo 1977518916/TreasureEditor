@@ -1,0 +1,20 @@
+
+Reddot.png
+size: 52,35
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tan1
+  rotate: false
+  xy: 37, 10
+  size: 13, 23
+  orig: 13, 23
+  offset: 0, 0
+  index: -1
+tan2
+  rotate: true
+  xy: 2, 2
+  size: 31, 33
+  orig: 31, 33
+  offset: 0, 0
+  index: -1

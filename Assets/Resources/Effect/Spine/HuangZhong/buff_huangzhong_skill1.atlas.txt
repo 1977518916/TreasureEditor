@@ -1,0 +1,55 @@
+
+buff_huangzhong_skill1.png
+size: 573,325
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+孙尚香_00000
+  rotate: true
+  xy: 193, 192
+  size: 131, 191
+  orig: 187, 230
+  offset: 28, 5
+  index: -1
+孙尚香_00002
+  rotate: true
+  xy: 157, 26
+  size: 164, 208
+  orig: 187, 230
+  offset: 6, 4
+  index: -1
+孙尚香_00006
+  rotate: true
+  xy: 367, 2
+  size: 177, 204
+  orig: 187, 230
+  offset: 4, 5
+  index: -1
+孙尚香_00010
+  rotate: false
+  xy: 386, 181
+  size: 176, 142
+  orig: 187, 230
+  offset: 3, 4
+  index: -1
+孙尚香_00014
+  rotate: true
+  xy: 2, 41
+  size: 149, 153
+  orig: 187, 230
+  offset: 4, 4
+  index: -1
+孙尚香_00021
+  rotate: true
+  xy: 2, 192
+  size: 131, 189
+  orig: 187, 230
+  offset: 28, 7
+  index: -1
+孙尚香_00018
+  rotate: true
+  xy: 2, 192
+  size: 131, 189
+  orig: 187, 230
+  offset: 28, 7
+  index: -1

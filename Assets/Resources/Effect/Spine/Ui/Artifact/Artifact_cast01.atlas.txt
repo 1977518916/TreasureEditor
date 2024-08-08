@@ -1,0 +1,111 @@
+
+Artifact_cast01.png
+size: 1727,888
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hh (1)
+  rotate: false
+  xy: 2, 595
+  size: 343, 291
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (10)
+  rotate: false
+  xy: 2, 3
+  size: 343, 294
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (11)
+  rotate: false
+  xy: 347, 3
+  size: 343, 294
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (12)
+  rotate: false
+  xy: 692, 3
+  size: 343, 294
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (13)
+  rotate: false
+  xy: 1037, 2
+  size: 343, 294
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (14)
+  rotate: false
+  xy: 1382, 2
+  size: 343, 294
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (15)
+  rotate: false
+  xy: 1382, 594
+  size: 343, 292
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (2)
+  rotate: false
+  xy: 347, 595
+  size: 343, 291
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (3)
+  rotate: false
+  xy: 692, 595
+  size: 343, 291
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (4)
+  rotate: false
+  xy: 1037, 594
+  size: 343, 292
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (5)
+  rotate: false
+  xy: 347, 299
+  size: 343, 294
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (6)
+  rotate: false
+  xy: 692, 299
+  size: 343, 294
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (7)
+  rotate: false
+  xy: 1037, 298
+  size: 343, 294
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (8)
+  rotate: false
+  xy: 1382, 298
+  size: 343, 294
+  orig: 343, 294
+  offset: 0, 0
+  index: -1
+hh (9)
+  rotate: false
+  xy: 2, 299
+  size: 343, 294
+  orig: 343, 294
+  offset: 0, 0
+  index: -1

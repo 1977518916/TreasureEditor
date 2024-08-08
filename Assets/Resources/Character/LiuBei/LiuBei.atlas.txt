@@ -1,0 +1,111 @@
+
+LiuBei.png
+size: 732,524
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_l
+  rotate: true
+  xy: 405, 226
+  size: 82, 92
+  orig: 84, 94
+  offset: 1, 1
+  index: -1
+Arm_r
+  rotate: true
+  xy: 499, 303
+  size: 78, 80
+  orig: 80, 82
+  offset: 1, 1
+  index: -1
+Pifeng
+  rotate: false
+  xy: 354, 38
+  size: 228, 177
+  orig: 228, 177
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 284, 310
+  size: 204, 212
+  orig: 204, 212
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 354, 5
+  size: 205, 31
+  orig: 207, 33
+  offset: 1, 1
+  index: -1
+feet_l
+  rotate: false
+  xy: 151, 11
+  size: 30, 20
+  orig: 32, 22
+  offset: 1, 1
+  index: -1
+feet_r
+  rotate: true
+  xy: 183, 2
+  size: 29, 20
+  orig: 31, 22
+  offset: 1, 1
+  index: -1
+guan
+  rotate: false
+  xy: 2, 33
+  size: 350, 181
+  orig: 350, 190
+  offset: 0, 0
+  index: -1
+jian_l
+  rotate: false
+  xy: 584, 131
+  size: 140, 250
+  orig: 142, 252
+  offset: 1, 1
+  index: -1
+jian_r
+  rotate: true
+  xy: 490, 383
+  size: 139, 237
+  orig: 141, 239
+  offset: 1, 1
+  index: -1
+jianjia_l
+  rotate: false
+  xy: 284, 217
+  size: 119, 91
+  orig: 120, 91
+  offset: 0, 0
+  index: -1
+jianjia_r
+  rotate: true
+  xy: 584, 41
+  size: 88, 85
+  orig: 88, 85
+  offset: 0, 0
+  index: -1
+meimao
+  rotate: false
+  xy: 2, 3
+  size: 147, 28
+  orig: 149, 30
+  offset: 1, 1
+  index: -1
+tou
+  rotate: true
+  xy: 2, 216
+  size: 306, 280
+  orig: 312, 280
+  offset: 4, 0
+  index: -1
+zui
+  rotate: false
+  xy: 205, 16
+  size: 15, 15
+  orig: 17, 17
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,146 @@
+
+ZhangJiao.png
+size: 2001,625
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Arm_B
+  rotate: true
+  xy: 718, 7
+  size: 243, 176
+  orig: 243, 177
+  offset: 0, 1
+  index: -1
+Arm_F
+  rotate: true
+  xy: 1612, 63
+  size: 225, 180
+  orig: 225, 180
+  offset: 0, 0
+  index: -1
+Body
+  rotate: true
+  xy: 423, 3
+  size: 247, 293
+  orig: 254, 303
+  offset: 0, 10
+  index: -1
+Eye1
+  rotate: true
+  xy: 1140, 2
+  size: 282, 118
+  orig: 291, 120
+  offset: 1, 1
+  index: -1
+Eye1MeiMao
+  rotate: false
+  xy: 1793, 400
+  size: 206, 105
+  orig: 227, 108
+  offset: 5, 2
+  index: -1
+Eye1YanYing
+  rotate: true
+  xy: 1690, 417
+  size: 206, 101
+  orig: 208, 115
+  offset: 1, 1
+  index: -1
+Eye2
+  rotate: false
+  xy: 1794, 507
+  size: 204, 116
+  orig: 227, 119
+  offset: 5, 1
+  index: -1
+Hair1
+  rotate: true
+  xy: 1260, 10
+  size: 274, 223
+  orig: 276, 223
+  offset: 2, 0
+  index: -1
+Hair2
+  rotate: true
+  xy: 780, 271
+  size: 352, 256
+  orig: 352, 288
+  offset: 0, 32
+  index: -1
+Hair3
+  rotate: true
+  xy: 423, 252
+  size: 371, 355
+  orig: 371, 355
+  offset: 0, 0
+  index: -1
+Hair4
+  rotate: false
+  xy: 1485, 15
+  size: 125, 273
+  orig: 125, 273
+  offset: 0, 0
+  index: -1
+Hand_B
+  rotate: false
+  xy: 1669, 15
+  size: 44, 46
+  orig: 46, 49
+  offset: 1, 2
+  index: -1
+Hand_F
+  rotate: true
+  xy: 1612, 4
+  size: 57, 55
+  orig: 59, 59
+  offset: 1, 2
+  index: -1
+Head
+  rotate: false
+  xy: 1355, 290
+  size: 333, 333
+  orig: 338, 333
+  offset: 1, 0
+  index: -1
+Huzi
+  rotate: false
+  xy: 896, 6
+  size: 242, 263
+  orig: 242, 263
+  offset: 0, 0
+  index: -1
+JianJia_B
+  rotate: true
+  xy: 1794, 233
+  size: 165, 194
+  orig: 168, 204
+  offset: 0, 10
+  index: -1
+JianJia_F
+  rotate: true
+  xy: 1794, 10
+  size: 221, 178
+  orig: 235, 203
+  offset: 0, 25
+  index: -1
+MaoZi
+  rotate: false
+  xy: 1038, 286
+  size: 315, 337
+  orig: 320, 356
+  offset: 1, 19
+  index: -1
+Shadow
+  rotate: false
+  xy: 1715, 29
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+WuQi
+  rotate: false
+  xy: 2, 23
+  size: 419, 600
+  orig: 419, 600
+  offset: 0, 0
+  index: -1

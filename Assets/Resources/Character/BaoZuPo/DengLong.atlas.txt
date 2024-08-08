@@ -1,0 +1,20 @@
+
+DengLong.png
+size: 128,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg_gh162
+  rotate: false
+  xy: 2, 37
+  size: 79, 102
+  orig: 79, 102
+  offset: 0, 0
+  index: -1
+bg_gh163
+  rotate: true
+  xy: 2, 2
+  size: 33, 56
+  orig: 33, 56
+  offset: 0, 0
+  index: -1

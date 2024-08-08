@@ -1,0 +1,118 @@
+
+Buff_giddiness_aoe.png
+size: 1202,302
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aaa (1)
+  rotate: false
+  xy: 2, 2
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (10)
+  rotate: false
+  xy: 602, 2
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (11)
+  rotate: false
+  xy: 752, 152
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (12)
+  rotate: false
+  xy: 752, 2
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (13)
+  rotate: false
+  xy: 902, 152
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (14)
+  rotate: false
+  xy: 902, 2
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (15)
+  rotate: false
+  xy: 1052, 152
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (16)
+  rotate: false
+  xy: 1052, 2
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (2)
+  rotate: false
+  xy: 152, 152
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (3)
+  rotate: false
+  xy: 152, 2
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (4)
+  rotate: false
+  xy: 302, 152
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (5)
+  rotate: false
+  xy: 302, 2
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (6)
+  rotate: false
+  xy: 452, 152
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (7)
+  rotate: false
+  xy: 452, 2
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (8)
+  rotate: false
+  xy: 602, 152
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1
+aaa (9)
+  rotate: false
+  xy: 2, 152
+  size: 148, 148
+  orig: 149, 149
+  offset: 1, 0
+  index: -1

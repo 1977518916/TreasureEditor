@@ -1,0 +1,13 @@
+
+Soul.png
+size: 202,177
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 2
+  size: 198, 173
+  orig: 200, 200
+  offset: 0, 8
+  index: -1

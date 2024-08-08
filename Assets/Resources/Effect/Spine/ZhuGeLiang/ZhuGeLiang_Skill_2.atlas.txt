@@ -1,0 +1,132 @@
+
+ZhuGeLiang_Skill_2.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DaoGuang_Glow
+  rotate: false
+  xy: 2, 13
+  size: 128, 241
+  orig: 128, 256
+  offset: 0, 0
+  index: -1
+DiMianFire
+  rotate: false
+  xy: 132, 126
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+FireBaoFa_01
+  rotate: false
+  xy: 333, 2
+  size: 45, 19
+  orig: 64, 64
+  offset: 12, 0
+  index: -1
+FireBaoFa_02
+  rotate: true
+  xy: 371, 96
+  size: 45, 27
+  orig: 64, 64
+  offset: 12, 0
+  index: -1
+FireBaoFa_03
+  rotate: true
+  xy: 385, 207
+  size: 47, 35
+  orig: 64, 64
+  offset: 10, 0
+  index: -1
+FireBaoFa_04
+  rotate: true
+  xy: 353, 143
+  size: 48, 46
+  orig: 64, 64
+  offset: 9, 0
+  index: -1
+FireBaoFa_05
+  rotate: true
+  xy: 355, 206
+  size: 48, 28
+  orig: 64, 64
+  offset: 9, 0
+  index: -1
+FireBaoFa_06
+  rotate: true
+  xy: 312, 22
+  size: 47, 19
+  orig: 64, 64
+  offset: 10, 0
+  index: -1
+FireBaoFa_07
+  rotate: false
+  xy: 355, 193
+  size: 44, 11
+  orig: 64, 64
+  offset: 12, 0
+  index: -1
+FireBaoFa_08
+  rotate: false
+  xy: 2, 6
+  size: 40, 5
+  orig: 64, 64
+  offset: 16, 1
+  index: -1
+FireQuan_01
+  rotate: false
+  xy: 333, 23
+  size: 46, 46
+  orig: 76, 76
+  offset: 15, 15
+  index: -1
+FireQuan_02
+  rotate: true
+  xy: 312, 71
+  size: 58, 57
+  orig: 76, 76
+  offset: 9, 9
+  index: -1
+FireQuan_03
+  rotate: false
+  xy: 292, 193
+  size: 61, 61
+  orig: 76, 76
+  offset: 7, 8
+  index: -1
+FireQuan_04
+  rotate: false
+  xy: 292, 131
+  size: 59, 60
+  orig: 76, 76
+  offset: 9, 8
+  index: -1
+FireZhu_01
+  rotate: false
+  xy: 132, 5
+  size: 30, 119
+  orig: 42, 128
+  offset: 5, 2
+  index: -1
+FireZhu_02
+  rotate: false
+  xy: 282, 5
+  size: 28, 123
+  orig: 43, 128
+  offset: 8, 3
+  index: -1
+FireZhu_03
+  rotate: false
+  xy: 262, 130
+  size: 28, 124
+  orig: 42, 128
+  offset: 10, 2
+  index: -1
+Glow
+  rotate: false
+  xy: 164, 8
+  size: 116, 116
+  orig: 128, 128
+  offset: 6, 6
+  index: -1

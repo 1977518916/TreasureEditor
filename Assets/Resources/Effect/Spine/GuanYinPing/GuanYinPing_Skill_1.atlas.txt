@@ -1,0 +1,27 @@
+
+GuanYinPing_Skill_1.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DaoGuang
+  rotate: true
+  xy: 134, 6
+  size: 111, 126
+  orig: 128, 128
+  offset: 17, 2
+  index: -1
+DaoGuang1
+  rotate: true
+  xy: 262, 16
+  size: 101, 90
+  orig: 104, 90
+  offset: 2, 0
+  index: -1
+WuQi
+  rotate: false
+  xy: 2, 2
+  size: 130, 115
+  orig: 130, 115
+  offset: 0, 0
+  index: -1

@@ -49,11 +49,11 @@ namespace Spine.Unity {
 		#region Inspector
 		public SkeletonDataAsset skeletonDataAsset;
 		public SkeletonDataAsset SkeletonDataAsset { get { return skeletonDataAsset; } }
-
+		
 		[SpineSkin(dataField:"skeletonDataAsset", defaultAsEmptyString:true)]
 		public string initialSkinName;
 		public bool initialFlipX, initialFlipY;
-
+		
 		[SpineAnimation(dataField:"skeletonDataAsset")]
 		public string startingAnimation;
 		public bool startingLoop;

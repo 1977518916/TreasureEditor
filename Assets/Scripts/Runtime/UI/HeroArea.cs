@@ -25,12 +25,15 @@ namespace Runtime.UI
         private class Hero : MonoBehaviour
         {
             private HeroData heroData;
+            private DataType.HeroPositionType positionType;
             private int index;
             private Action updateAction;
             private void Awake()
             {
                 index = int.Parse(name.Replace("hero", ""));
-                heroData = ReadWriteManager.GetHeroData((DataType.HeroPositionType)(index - 1));
+                positionType = (DataType.HeroPositionType)(index - 1);
+                heroData = ReadWriteManager.GetHeroData(positionType);
+                DataManager.HeroDatas.Add(positionType,heroData);
                 transform.FindGet<TextMeshProUGUI>("info").SetText($"英雄{index}");
                 InitDropdown();
                 InitNumberField();
@@ -40,12 +43,12 @@ namespace Runtime.UI
             private void InitButton()
             {
                 Button save = transform.FindGet<Button>("Save");
-                save.onClick.AddListener(() => ReadWriteManager.SaveHeroData((DataType.HeroPositionType)(index - 1), heroData));
+                save.onClick.AddListener(() => ReadWriteManager.SaveHeroData(positionType, heroData));
                 Button clear = transform.FindGet<Button>("Clear");
                 clear.onClick.AddListener(() =>
                 {
                     heroData = new HeroData();
-                    ReadWriteManager.SaveHeroData((DataType.HeroPositionType)(index - 1), null);
+                    ReadWriteManager.SaveHeroData(positionType, null);
                     updateAction.Invoke();
                 });
             }
@@ -56,16 +59,17 @@ namespace Runtime.UI
                 heroType.options.Clear();
                 foreach (HeroType value in Enum.GetValues(typeof(HeroType)))
                 {
-                    heroType.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.Translate(value)));
+                    heroType.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(value)));
                 }
                 heroType.onValueChanged.AddListener(i => heroData.heroType = (HeroType)i);
+                heroType.onValueChanged.AddListener(arg0 => Debug.Log(DataManager.HeroDatas[positionType].heroType));
                 updateAction += () => { heroType.value = (int)heroData.heroType; };
 
                 TMP_Dropdown bulletType = transform.FindGet<TMP_Dropdown>("bulletField");
                 bulletType.options.Clear();
                 foreach (BulletType value in Enum.GetValues(typeof(BulletType)))
                 {
-                    bulletType.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.Translate(value)));
+                    bulletType.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(value)));
                 }
                 bulletType.onValueChanged.AddListener(i => heroData.bulletType = (BulletType)i);
                 updateAction += () => { bulletType.value = (int)heroData.bulletType; };

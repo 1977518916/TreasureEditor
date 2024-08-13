@@ -6,13 +6,16 @@ namespace Runtime.Data
     [Serializable]
     public class LevelData
     {
-        public List<TimesData> timesDatas;
+        public List<TimesData> timesDatas = new List<TimesData>()
+        {
+            new TimesData()
+        };
     }
 
     [Serializable]
     public class TimesData
     {
         public int amount;
-        public int enemyType;
+        public EnemyTypeEnum enemyType = EnemyTypeEnum.XiaoBing;
     }
 }

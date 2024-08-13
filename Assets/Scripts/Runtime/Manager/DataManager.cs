@@ -6,6 +6,5 @@ namespace Runtime.Manager
     public static class DataManager
     {
         public static readonly Dictionary<DataType.HeroPositionType, HeroData> HeroDatas = new Dictionary<DataType.HeroPositionType, HeroData>();
-        
     }
 }

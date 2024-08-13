@@ -1,4 +1,5 @@
-using Runtime.Data;
+using QFSW.QC;
+using Runtime.Manager;
 using Tao_Framework.Core.Singleton;
 using UnityEngine;
 
@@ -8,17 +9,26 @@ public class GameManager : MonoSingleton<GameManager>
     /// 显示帧率
     /// </summary>
     public GameObject showFPS;
+
+    /// <summary>
+    /// 控制台程序
+    /// </summary>
+    public GameObject quantumConsole;
     
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.BackQuote))
+        {
+            quantumConsole.SetActive(!quantumConsole.activeSelf);
+        }
     }
-    
+
     /// <summary>
     /// 是否显示帧率
     /// </summary>
-    private void IsShowFPS()
+    [Command]
+    private void IsShowFPS(bool isShow)
     {
-        
+        showFPS.SetActive(isShow);
     }
 }

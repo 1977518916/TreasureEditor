@@ -18,7 +18,15 @@ public class FPS : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(100, 100, 200, 200), fpsFormat);
+        GUIStyle titleStyle2 = new GUIStyle
+        {
+            fontSize = 20,
+            normal =
+            {
+                textColor = Color.white
+            }
+        };
+        GUI.Label(new Rect(50, 50, 500, 500), fpsFormat, titleStyle2);
     }
 
     void Update()
@@ -35,7 +43,7 @@ public class FPS : MonoBehaviour
             float fps = _accum / _frames;
             //Debug.Log(_accum + "__" + _frames);  
             fpsFormat = System.String.Format("{0:F2}FPS", fps);//保留两位小数  
-            Debug.LogError(fpsFormat);
+            //Debug.LogError(fpsFormat);
 
             _timeLeft = _updateInterval;
             _accum = .0f;

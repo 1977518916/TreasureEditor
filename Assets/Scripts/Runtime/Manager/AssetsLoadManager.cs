@@ -4,6 +4,7 @@ using Spine.Unity;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
 namespace Runtime.Manager
 {
@@ -21,7 +22,7 @@ namespace Runtime.Manager
 
         public static SkeletonGraphic LoadSkeletonGraphic(string path, Transform parent)
         {
-            SkeletonDataAsset asset = Resources.Load<SkeletonDataAsset>(path);
+            SkeletonDataAsset asset = Load<SkeletonDataAsset>(path);
             SkeletonGraphic skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
             skeletonGraphic.AnimationState.SetAnimation(0, "Idle", true);
             return skeletonGraphic;
@@ -33,6 +34,11 @@ namespace Runtime.Manager
             SkeletonGraphic skeletonAnimation = LoadSkeletonGraphic(path, parent);
             skeletonAnimation.name = @enum.ToString();
             return skeletonAnimation;
+        }
+
+        public static T Load<T>(string path) where T : Object
+        {
+            return Resources.Load<T>(path);
         }
     }
 }

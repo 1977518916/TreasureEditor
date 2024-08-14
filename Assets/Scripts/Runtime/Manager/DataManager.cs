@@ -7,9 +7,10 @@ namespace Runtime.Manager
     {
         public static readonly Dictionary<DataType.HeroPositionType, HeroData> HeroDatas = new Dictionary<DataType.HeroPositionType, HeroData>();
 
-        /// <summary>
+		public static LevelData levelData;
+
+		/// <summary>
         /// 地图素材路径
         /// </summary>
-        public const string MapTexturePath = "Texture/LongMap/Map_";
-    }
+        public const string MapTexturePath = "Texture/LongMap/Map_";    }
 }

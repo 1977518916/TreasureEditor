@@ -4,99 +4,120 @@ namespace Runtime.Utils
 {
     public static class TranslateUtil
     {
-        public static string TranslateUi(HeroType heroType)
+        public static string TranslateUi(HeroTypeEnum heroTypeEnum)
         {
-            switch(heroType)
+            switch(heroTypeEnum)
             {
-                case HeroType.CaoHong:
+                case HeroTypeEnum.CaoHong:
                     return "曹洪";
-                case HeroType.CaoZhang:
+                case HeroTypeEnum.CaoZhang:
                     return "曹彰";
-                case HeroType.ChenGong:
+                case HeroTypeEnum.ChenGong:
                     return "陈宫";
-                case HeroType.ChengPu:
+                case HeroTypeEnum.ChengPu:
                     return "程普";
-                case HeroType.ChengYuanZhi:
+                case HeroTypeEnum.ChengYuanZhi:
                     return "程远志";
-                case HeroType.DaQiao:
+                case HeroTypeEnum.DaQiao:
                     return "大乔";
-                case HeroType.FaZheng:
+                case HeroTypeEnum.FaZheng:
                     return "法正";
-                case HeroType.GanNing:
+                case HeroTypeEnum.GanNing:
                     return "甘宁";
-                case HeroType.GaoShun:
+                case HeroTypeEnum.GaoShun:
                     return "高顺";
-                case HeroType.GuanYinPing:
+                case HeroTypeEnum.GuanYinPing:
                     return "关银屏";
-                case HeroType.GuanYu:
+                case HeroTypeEnum.GuanYu:
                     return "关羽";
-                case HeroType.GuoJia:
+                case HeroTypeEnum.GuoJia:
                     return "郭嘉";
-                case HeroType.HuangGai:
+                case HeroTypeEnum.HuangGai:
                     return "黄盖";
-                case HeroType.HuangZhong:
+                case HeroTypeEnum.HuangZhong:
                     return "黄忠";
-                case HeroType.JiangWei:
+                case HeroTypeEnum.JiangWei:
                     return "姜维";
-                case HeroType.JiaXu:
+                case HeroTypeEnum.JiaXu:
                     return "贾诩";
-                case HeroType.LiDian:
+                case HeroTypeEnum.LiDian:
                     return "李典";
-                case HeroType.LingTong:
+                case HeroTypeEnum.LingTong:
                     return "凌统";
-                case HeroType.LiuBei:
+                case HeroTypeEnum.LiuBei:
                     return "刘备";
-                case HeroType.LuJi:
+                case HeroTypeEnum.LuJi:
                     return "陆绩";
-                case HeroType.LuSu:
+                case HeroTypeEnum.LuSu:
                     return "鲁肃";
-                case HeroType.LvBu:
+                case HeroTypeEnum.LvBu:
                     return "吕布";
-                case HeroType.LvMeng:
+                case HeroTypeEnum.LvMeng:
                     return "吕蒙";
-                case HeroType.MaDai:
+                case HeroTypeEnum.MaDai:
                     return "马岱";
-                case HeroType.MaSu:
+                case HeroTypeEnum.MaSu:
                     return "马谡";
-                case HeroType.PangTong:
+                case HeroTypeEnum.PangTong:
                     return "庞统";
-                case HeroType.SunShangXiang:
+                case HeroTypeEnum.SunShangXiang:
                     return "孙尚香";
-                case HeroType.TaiShiCi:
+                case HeroTypeEnum.TaiShiCi:
                     return "太史慈";
-                case HeroType.WenChou:
+                case HeroTypeEnum.WenChou:
                     return "文丑";
-                case HeroType.XiaHouDun:
+                case HeroTypeEnum.XiaHouDun:
                     return "夏侯惇";
-                case HeroType.XiaoQiao:
+                case HeroTypeEnum.XiaoQiao:
                     return "小乔";
-                case HeroType.XuChu:
+                case HeroTypeEnum.XuChu:
                     return "许褚";
-                case HeroType.XunYu:
+                case HeroTypeEnum.XunYu:
                     return "荀彧";
-                case HeroType.XuShu:
+                case HeroTypeEnum.XuShu:
                     return "徐庶";
-                case HeroType.YanLiang:
+                case HeroTypeEnum.YanLiang:
                     return "颜良";
-                case HeroType.YuJin:
+                case HeroTypeEnum.YuJin:
                     return "于禁";
-                case HeroType.ZhangFei:
+                case HeroTypeEnum.ZhangFei:
                     return "张飞";
-                case HeroType.ZhangJiao:
+                case HeroTypeEnum.ZhangJiao:
                     return "张角";
-                case HeroType.ZhaoYun:
+                case HeroTypeEnum.ZhaoYun:
                     return "赵云";
-                case HeroType.ZhenJi:
+                case HeroTypeEnum.ZhenJi:
                     return "甄姬";
-                case HeroType.ZhouYu:
+                case HeroTypeEnum.ZhouYu:
                     return "周瑜";
-                case HeroType.ZhuGeLiang:
+                case HeroTypeEnum.ZhuGeLiang:
                     return "诸葛亮";
-                case HeroType.ZhuRong:
+                case HeroTypeEnum.ZhuRong:
                     return "祝融";
-                case HeroType.LiuShan:
+                case HeroTypeEnum.LiuShan:
                 default:
                     return "刘禅";
+            }
+        }
+
+        public static string TranslateUi(EnemyTypeEnum enemyTypeEnum)
+        {
+            switch(enemyTypeEnum)
+            {
+                case EnemyTypeEnum.DunBing:
+                    return "盾兵";
+                case EnemyTypeEnum.XiaoBing:
+                    return "小兵";
+                case EnemyTypeEnum.XiaoBing_Dao:
+                    return "刀兵";
+                case EnemyTypeEnum.XiaoBing_GongJian:
+                    return "弓箭手";
+                case EnemyTypeEnum.XiaoBing_Qi:
+                    return "骑兵";
+                case EnemyTypeEnum.XiaoBing_TouShiChe:
+                    return "投石车";
+                default:
+                    return "";
             }
         }
 

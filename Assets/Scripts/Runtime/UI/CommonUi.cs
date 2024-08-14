@@ -1,6 +1,4 @@
-﻿using Runtime.Data;
-using Runtime.Manager;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Runtime.UI
 {
@@ -8,7 +6,6 @@ namespace Runtime.UI
     {
         private void Awake()
         {
-            
         }
     }
 }

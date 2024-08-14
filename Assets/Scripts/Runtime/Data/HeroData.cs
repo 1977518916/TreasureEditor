@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine.Serialization;
 
 namespace Runtime.Data
 {
@@ -6,7 +7,8 @@ namespace Runtime.Data
     public class HeroData : UnitData
     {
         public int bulletAmount;
-        public HeroType heroType;
+        [FormerlySerializedAs("heroType")]
+        public HeroTypeEnum heroTypeEnum;
         public BulletType bulletType;
     }
 }

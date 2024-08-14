@@ -89,12 +89,12 @@ namespace Tao_Framework.Core.Event
         /// 恢复镜头
         /// </summary>
         RestoreFootage,
-        
+
         /// <summary>
         /// 恢复速度
         /// </summary>
         RecoverySpeed,
-        
+
         /// <summary>
         /// 升级大小事件
         /// </summary>
@@ -134,41 +134,51 @@ namespace Tao_Framework.Core.Event
         /// 停止生成怪物并且清除所有当前存在的怪物
         /// </summary>
         StopSpawnMonsterAndClearAllMonsters,
-        
+
         /// <summary>
         /// 倒退
         /// </summary>
         Regress,
-        
+
         /// <summary>
         /// 停止倒退
         /// </summary>
         StopRegress,
-        
+
         /// <summary>
         /// 无敌
         /// </summary>
         Invincible,
-        
+
         /// <summary>
         /// 解除无敌
         /// </summary>
         QuitInvincibility,
-        
+
         /// <summary>
         /// 升级开火
         /// </summary>
         UpgradeFire,
-        
+
         /// <summary>
         /// 升级辅助飞机
         /// </summary>
         UpgradePlane,
-        
+
         /// <summary>
         /// 血量无敌
         /// </summary>
-        HPInvincible,
+        HpInvincible,
+
+        /// <summary>
+        /// 技能开始进入CD
+        /// </summary>
+        AttackStartCd,
+
+        /// <summary>
+        /// 技能结束CD
+        /// </summary>
+        AttackEndCd
     }
 
     public enum UIEvent

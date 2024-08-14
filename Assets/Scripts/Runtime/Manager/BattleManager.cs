@@ -51,6 +51,6 @@ public class BattleManager : MonoBehaviour
     public void SetBattleBG(int value)
     {
         if (value > 6) return;
-        battleBG.sprite = Resources.Load<Sprite>(DataManager.MapTexturePath + value);
+        battleBG.sprite = AssetsLoadManager.Load<Sprite>(DataManager.MapTexturePath + value);
     }
 }

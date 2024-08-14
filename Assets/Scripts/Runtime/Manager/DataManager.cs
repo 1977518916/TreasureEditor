@@ -14,5 +14,10 @@ namespace Runtime.Manager
 		/// 地图素材路径
 		/// </summary>
 		public const string MapTexturePath = "Texture/LongMap/Map_";
+		
+		/// <summary>
+		/// 预制体路径
+		/// </summary>
+		public const string PrefabPath = "Prefabs/";
 	}
 }

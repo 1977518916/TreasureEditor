@@ -23,6 +23,7 @@ namespace Runtime.Manager
         {
             SkeletonDataAsset asset = Resources.Load<SkeletonDataAsset>(path);
             SkeletonGraphic skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
+            skeletonGraphic.AnimationState.SetAnimation(0, "Idle", true);
             return skeletonGraphic;
         }
         

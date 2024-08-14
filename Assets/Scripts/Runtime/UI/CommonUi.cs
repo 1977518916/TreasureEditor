@@ -1,11 +1,4 @@
-﻿using System;
-using Runtime.Data;
-using Runtime.Extensions;
-using Runtime.Manager;
-using TMPro;
-using UnityEngine;
-using UnityEngine.PlayerLoop;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 namespace Runtime.UI
 {

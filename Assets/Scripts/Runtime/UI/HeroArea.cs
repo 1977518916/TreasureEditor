@@ -28,6 +28,7 @@ namespace Runtime.UI
             private DataType.HeroPositionType positionType;
             private int index;
             private Action updateAction;
+            private Transform heroParent, bulletParent;
             private void Awake()
             {
                 index = int.Parse(name.Replace("hero", ""));
@@ -35,6 +36,8 @@ namespace Runtime.UI
                 heroData = ReadWriteManager.Hero.GetHeroData(positionType);
                 DataManager.HeroDatas.Add(positionType,heroData);
                 transform.FindGet<TextMeshProUGUI>("info").SetText($"英雄{index}");
+                heroParent = transform.Find("HeroNode");
+                bulletParent = transform.Find("BulletNode");
                 InitDropdown();
                 InitNumberField();
                 InitButton();
@@ -61,8 +64,17 @@ namespace Runtime.UI
                 {
                     heroType.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(value)));
                 }
-                heroType.onValueChanged.AddListener(i => heroData.heroTypeEnum = (HeroTypeEnum)i);
-                updateAction += () => { heroType.value = (int)heroData.heroTypeEnum; };
+                heroType.onValueChanged.AddListener(i =>
+                {
+                    heroData.heroTypeEnum = (HeroTypeEnum)i;
+                    updateAction.Invoke();
+                });
+                updateAction += () =>
+                {
+                    heroType.value = (int)heroData.heroTypeEnum;
+                    heroParent.ClearChild();
+                    AssetsLoadManager.LoadHero(heroData.heroTypeEnum, heroParent);
+                };
 
                 TMP_Dropdown bulletType = transform.FindGet<TMP_Dropdown>("bulletField");
                 bulletType.options.Clear();

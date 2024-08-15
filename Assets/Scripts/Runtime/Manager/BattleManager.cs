@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using QFSW.QC;
 using Runtime.Manager;
+using Tao_Framework.Core.Singleton;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BattleManager : MonoBehaviour
+public class BattleManager : MonoSingleton<BattleManager>
 {
     /// <summary>
     /// 战斗背景
@@ -28,7 +29,7 @@ public class BattleManager : MonoBehaviour
     /// <param name="root"></param>
     /// <param name="value"></param>
     [Command]
-    private void SetPrefabLocation(GameObject root, int value)
+    public void SetPrefabLocation(GameObject root, int value)
     {
         var obj = Instantiate(root, transform);
         obj.GetComponent<RectTransform>().position = new Vector3(BattleBaseList[value].position.x, BattleBaseList[value].position.y + 10f);

@@ -13,6 +13,11 @@ namespace Runtime.Data
         {
             new TimesData()
         };
+
+        /// <summary>
+        /// 地图类型
+        /// </summary>
+        public MapTypeEnum mapType;
     }
 
     [Serializable]

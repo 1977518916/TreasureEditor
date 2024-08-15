@@ -12,12 +12,17 @@ namespace Runtime.Manager
     {
         public static GameObject LoadHero(HeroTypeEnum heroTypeEnum, Transform parent)
         {
-            return LoadSkeletonOfEnum(heroTypeEnum,parent).GameObject();
+            return LoadSkeletonOfEnum(heroTypeEnum, parent).GameObject();
         }
 
         public static GameObject LoadEnemy(EnemyTypeEnum enemyTypeEnum, Transform parent)
         {
-            return LoadSkeletonOfEnum(enemyTypeEnum,parent).GameObject();
+            return LoadSkeletonOfEnum(enemyTypeEnum, parent).GameObject();
+        }
+
+        public static Sprite LoadBg(MapTypeEnum mapTypeEnum)
+        {
+            return Resources.Load<Sprite>(DataManager.MapTexturePath + ((int)mapTypeEnum + 1));
         }
 
         public static SkeletonGraphic LoadSkeletonGraphic(string path, Transform parent)
@@ -27,8 +32,8 @@ namespace Runtime.Manager
             skeletonGraphic.AnimationState.SetAnimation(0, "Idle", true);
             return skeletonGraphic;
         }
-        
-        private static SkeletonGraphic LoadSkeletonOfEnum(Enum @enum,Transform parent)
+
+        private static SkeletonGraphic LoadSkeletonOfEnum(Enum @enum, Transform parent)
         {
             string path = $"Character/{@enum.ToString()}/{@enum.ToString()}_SkeletonData";
             SkeletonGraphic skeletonAnimation = LoadSkeletonGraphic(path, parent);

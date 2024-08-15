@@ -8,6 +8,8 @@ namespace Runtime.Utils
         {
             switch(heroTypeEnum)
             {
+                case HeroTypeEnum.Null:
+                    return "无";
                 case HeroTypeEnum.CaoHong:
                     return "曹洪";
                 case HeroTypeEnum.CaoZhang:
@@ -118,6 +120,15 @@ namespace Runtime.Utils
                     return "投石车";
                 default:
                     return "";
+            }
+        }
+
+        public static string TranslateUi(MapTypeEnum mapTypeEnum)
+        {
+            switch(mapTypeEnum)
+            {
+                default:
+                    return $"地图{(int)mapTypeEnum + 1}";
             }
         }
 

@@ -59,7 +59,7 @@ namespace Runtime.UI
             private void InitDropdown()
             {
                 TMP_Dropdown heroType = transform.FindGet<TMP_Dropdown>("typeField");
-                heroType.options.Clear();
+                heroType.ClearOptions();
                 foreach (HeroTypeEnum value in Enum.GetValues(typeof(HeroTypeEnum)))
                 {
                     heroType.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(value)));
@@ -73,6 +73,10 @@ namespace Runtime.UI
                 {
                     heroType.value = (int)heroData.heroTypeEnum;
                     heroParent.ClearChild();
+                    if(heroData.heroTypeEnum == HeroTypeEnum.Null)
+                    {
+                        return;
+                    }
                     AssetsLoadManager.LoadHero(heroData.heroTypeEnum, heroParent);
                 };
 

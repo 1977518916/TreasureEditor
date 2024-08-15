@@ -11,7 +11,7 @@ namespace Runtime.Data
         /// </summary>
         public int bulletAmount;
         [FormerlySerializedAs("heroType")]
-        public HeroTypeEnum heroTypeEnum;
+        public HeroTypeEnum heroTypeEnum = HeroTypeEnum.Null;
         public BulletType bulletType;
     }
 }

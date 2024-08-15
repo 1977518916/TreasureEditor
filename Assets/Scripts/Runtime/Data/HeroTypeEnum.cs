@@ -2,6 +2,7 @@
 {
     public enum HeroTypeEnum
     {
+        Null,
         CaoHong,
         CaoZhang,
         ChenGong,

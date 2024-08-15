@@ -178,7 +178,8 @@ namespace Tao_Framework.Core.Event
         /// <summary>
         /// 技能结束CD
         /// </summary>
-        AttackEndCd
+        AttackEndCd,
+
     }
 
     public enum UIEvent

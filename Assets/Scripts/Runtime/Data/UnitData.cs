@@ -1,8 +1,14 @@
 using System;
-[Serializable]
-public class UnitData
+namespace Runtime.Data
 {
-    public int hp;
-    public int atk;
-    public bool isInvincible;
+    [Serializable]
+    public class UnitData
+    {
+        public int hp;
+        public int atk;
+        /// <summary>
+        /// 是否无敌
+        /// </summary>
+        public bool isInvincible;
+    }
 }

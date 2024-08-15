@@ -14,12 +14,14 @@ namespace Runtime.UI
         private TMP_Dropdown dropdown, typeDropDown;
         private TMP_InputField amount;
         private LevelData levelData;
-        private TimesData currentData => levelData.timesDatas[dropdown.value];
+        private Transform enemyParent;
+        private TimesData CurrentData => levelData.timesDatas[dropdown.value];
         private void Awake()
         {
             dropdown = transform.FindGet<TMP_Dropdown>("LevelDrop");
             typeDropDown = transform.FindGet<TMP_Dropdown>("TimesInfo/Type");
             amount = transform.FindGet<TMP_InputField>("TimesInfo/Amount");
+            enemyParent = transform.Find("TimesInfo/EnemyParent");
             transform.FindGet<Button>("DeleteButton").onClick.AddListener(DeleteTimes);
             transform.FindGet<Button>("AddButton").onClick.AddListener(AddTimes);
             transform.FindGet<Button>("Delete").onClick.AddListener(Delete);
@@ -40,16 +42,24 @@ namespace Runtime.UI
             {
                 typeDropDown.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(value)));
             }
-            typeDropDown.onValueChanged.AddListener(value => currentData.enemyType = (EnemyTypeEnum)value);
+            typeDropDown.onValueChanged.AddListener(value => CurrentData.enemyType = (EnemyTypeEnum)value);
+            typeDropDown.onValueChanged.AddListener(_ => ShowEnemy());
             ShowTimeData(dropdown.value);
 
-            amount.onValueChanged.AddListener(content => currentData.amount = int.Parse(content));
+            amount.onValueChanged.AddListener(content => CurrentData.amount = int.Parse(content));
         }
 
         private void ShowTimeData(int index)
         {
-            amount.SetTextWithoutNotify(currentData.amount.ToString());
-            typeDropDown.value = (int)currentData.enemyType;
+            amount.SetTextWithoutNotify(CurrentData.amount.ToString());
+            typeDropDown.value = (int)CurrentData.enemyType;
+            ShowEnemy();
+        }
+
+        private void ShowEnemy()
+        {
+            enemyParent.ClearChild();
+            AssetsLoadManager.LoadEnemy(CurrentData.enemyType, enemyParent);
         }
 
         private void ShowLevelData()

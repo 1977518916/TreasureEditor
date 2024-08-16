@@ -12,13 +12,21 @@ namespace Runtime.Manager
     {
         public static GameObject LoadHero(HeroTypeEnum heroTypeEnum, Transform parent)
         {
-            return LoadSkeletonOfEnum(heroTypeEnum, parent).GameObject();
+            return LoadCharacterSkeletonOfEnum(heroTypeEnum, parent).GameObject();
         }
 
         public static GameObject LoadEnemy(EnemyTypeEnum enemyTypeEnum, Transform parent)
         {
-            return LoadSkeletonOfEnum(enemyTypeEnum, parent).GameObject();
+            return LoadCharacterSkeletonOfEnum(enemyTypeEnum, parent).GameObject();
         }
+
+        // public static GameObject LoadBullet(HeroData heroData)
+        // {
+        //     if(heroData.bulletType == BulletType.Self)
+        //     {
+        //         
+        //     }
+        // }
 
         public static Sprite LoadBg(MapTypeEnum mapTypeEnum)
         {
@@ -33,9 +41,17 @@ namespace Runtime.Manager
             return skeletonGraphic;
         }
 
-        private static SkeletonGraphic LoadSkeletonOfEnum(Enum @enum, Transform parent)
+        private static SkeletonGraphic LoadCharacterSkeletonOfEnum(Enum @enum, Transform parent)
         {
             string path = $"Character/{@enum.ToString()}/{@enum.ToString()}_SkeletonData";
+            SkeletonGraphic skeletonAnimation = LoadSkeletonGraphic(path, parent);
+            skeletonAnimation.name = @enum.ToString();
+            return skeletonAnimation;
+        }
+
+        private static SkeletonGraphic LoadBulletSkeletonOfEnum(Enum @enum, Transform parent)
+        {
+            string path = $"Effect/Spine/{@enum.ToString()}/{@enum.ToString()}_SkeletonData";
             SkeletonGraphic skeletonAnimation = LoadSkeletonGraphic(path, parent);
             skeletonAnimation.name = @enum.ToString();
             return skeletonAnimation;

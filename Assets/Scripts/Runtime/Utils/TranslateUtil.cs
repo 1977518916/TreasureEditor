@@ -8,18 +8,10 @@ namespace Runtime.Utils
         {
             switch(heroTypeEnum)
             {
-                case HeroTypeEnum.Null:
-                    return "无";
-                case HeroTypeEnum.CaoHong:
-                    return "曹洪";
-                case HeroTypeEnum.CaoZhang:
-                    return "曹彰";
-                case HeroTypeEnum.ChenGong:
-                    return "陈宫";
-                case HeroTypeEnum.ChengPu:
-                    return "程普";
-                case HeroTypeEnum.ChengYuanZhi:
-                    return "程远志";
+                case HeroTypeEnum.CaiWenJi:
+                    return "蔡文姬";
+                case HeroTypeEnum.CaoFang:
+                    return "曹芳";
                 case HeroTypeEnum.DaQiao:
                     return "大乔";
                 case HeroTypeEnum.FaZheng:
@@ -42,16 +34,14 @@ namespace Runtime.Utils
                     return "姜维";
                 case HeroTypeEnum.JiaXu:
                     return "贾诩";
-                case HeroTypeEnum.LiDian:
-                    return "李典";
                 case HeroTypeEnum.LingTong:
                     return "凌统";
-                case HeroTypeEnum.LiuBei:
-                    return "刘备";
                 case HeroTypeEnum.LuJi:
                     return "陆绩";
                 case HeroTypeEnum.LuSu:
                     return "鲁肃";
+                case HeroTypeEnum.LuXun:
+                    return "陆逊";
                 case HeroTypeEnum.LvBu:
                     return "吕布";
                 case HeroTypeEnum.LvMeng:
@@ -68,18 +58,16 @@ namespace Runtime.Utils
                     return "太史慈";
                 case HeroTypeEnum.WenChou:
                     return "文丑";
-                case HeroTypeEnum.XiaHouDun:
-                    return "夏侯惇";
                 case HeroTypeEnum.XiaoQiao:
                     return "小乔";
                 case HeroTypeEnum.XuChu:
                     return "许褚";
+                case HeroTypeEnum.XunYou:
+                    return "荀攸";
                 case HeroTypeEnum.XunYu:
                     return "荀彧";
                 case HeroTypeEnum.XuShu:
                     return "徐庶";
-                case HeroTypeEnum.YanLiang:
-                    return "颜良";
                 case HeroTypeEnum.YuJin:
                     return "于禁";
                 case HeroTypeEnum.ZhangFei:
@@ -92,13 +80,15 @@ namespace Runtime.Utils
                     return "甄姬";
                 case HeroTypeEnum.ZhouYu:
                     return "周瑜";
+                case HeroTypeEnum.ZhuGeJin:
+                    return "诸葛瑾";
                 case HeroTypeEnum.ZhuGeLiang:
                     return "诸葛亮";
                 case HeroTypeEnum.ZhuRong:
                     return "祝融";
-                case HeroTypeEnum.LiuShan:
+                case HeroTypeEnum.Null:
                 default:
-                    return "刘禅";
+                    return "无";
             }
         }
 
@@ -136,11 +126,10 @@ namespace Runtime.Utils
         {
             switch(bulletType)
             {
-                case BulletType.Test1:
-                    return "测试子弹1";
-                case BulletType.Test2:
+                case BulletType.Self:
                 default:
-                    return "测试子弹2";
+
+                    return "自身子弹";
             }
         }
     }

@@ -2,7 +2,9 @@
 {
     public enum BulletType
     {
-        Test1,
-        Test2
+        /// <summary>
+        /// 自身子弹
+        /// </summary>
+        Self
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CaiWenJi_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: c3865c5cf09ef154ebff033736bb0a18, type: 2}
+  - {fileID: 11400000, guid: c8835d957369058448a4a430891f0ce5, type: 2}
   scale: 0.01
   skeletonJSON: {fileID: 4900000, guid: 9c1a99c0d1461e140814382a0b02c836, type: 3}
   isUpgradingBlendModeMaterials: 0

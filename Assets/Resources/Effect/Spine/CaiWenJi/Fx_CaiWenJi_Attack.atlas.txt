@@ -1,0 +1,83 @@
+
+Fx_CaiWenJi_Attack.png
+size: 1075,95
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_CaiWenJi_Attack_001
+  rotate: false
+  xy: 1010, 24
+  size: 63, 69
+  orig: 65, 71
+  offset: 1, 1
+  index: -1
+images/Fx_CaiWenJi_Attack_lz_001
+  rotate: false
+  xy: 831, 51
+  size: 153, 42
+  orig: 337, 126
+  offset: 105, 34
+  index: -1
+images/Fx_CaiWenJi_Attack_lz_002
+  rotate: false
+  xy: 631, 6
+  size: 196, 42
+  orig: 337, 126
+  offset: 76, 34
+  index: -1
+images/Fx_CaiWenJi_Attack_lz_003
+  rotate: false
+  xy: 226, 4
+  size: 217, 44
+  orig: 337, 126
+  offset: 62, 34
+  index: -1
+images/Fx_CaiWenJi_Attack_lz_004
+  rotate: false
+  xy: 651, 51
+  size: 178, 42
+  orig: 337, 126
+  offset: 89, 36
+  index: -1
+images/Fx_CaiWenJi_Attack_lz_005
+  rotate: false
+  xy: 445, 2
+  size: 184, 46
+  orig: 337, 126
+  offset: 83, 36
+  index: -1
+images/Fx_CaiWenJi_Attack_lz_006
+  rotate: false
+  xy: 250, 50
+  size: 202, 43
+  orig: 337, 126
+  offset: 53, 39
+  index: -1
+images/Fx_CaiWenJi_Attack_lz_007
+  rotate: false
+  xy: 829, 3
+  size: 179, 46
+  orig: 337, 126
+  offset: 83, 36
+  index: -1
+images/Fx_CaiWenJi_Attack_lz_008
+  rotate: false
+  xy: 2, 2
+  size: 222, 46
+  orig: 337, 126
+  offset: 54, 36
+  index: -1
+images/Fx_CaiWenJi_Attack_lz_009
+  rotate: false
+  xy: 454, 50
+  size: 195, 43
+  orig: 337, 126
+  offset: 52, 36
+  index: -1
+images/Fx_CaiWenJi_Attack_lz_010
+  rotate: false
+  xy: 2, 50
+  size: 246, 43
+  orig: 337, 126
+  offset: 21, 35
+  index: -1

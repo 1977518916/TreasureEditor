@@ -1,0 +1,55 @@
+
+Fx_GuanYinPing_hit.png
+size: 191,1017
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fx_GuanYinPing_hit_001
+  rotate: true
+  xy: 2, 914
+  size: 101, 108
+  orig: 190, 227
+  offset: 42, 62
+  index: -1
+Fx_GuanYinPing_hit_002
+  rotate: false
+  xy: 2, 2
+  size: 187, 210
+  orig: 190, 227
+  offset: 0, 10
+  index: -1
+Fx_GuanYinPing_hit_003
+  rotate: false
+  xy: 2, 2
+  size: 187, 210
+  orig: 190, 227
+  offset: 0, 10
+  index: -1
+Fx_GuanYinPing_hit_004
+  rotate: false
+  xy: 2, 214
+  size: 182, 203
+  orig: 190, 227
+  offset: 2, 14
+  index: -1
+Fx_GuanYinPing_hit_005
+  rotate: true
+  xy: 2, 419
+  size: 167, 187
+  orig: 190, 227
+  offset: 9, 22
+  index: -1
+Fx_GuanYinPing_hit_006
+  rotate: true
+  xy: 2, 751
+  size: 161, 185
+  orig: 190, 227
+  offset: 12, 23
+  index: -1
+Fx_GuanYinPing_hit_007
+  rotate: true
+  xy: 2, 588
+  size: 161, 185
+  orig: 190, 227
+  offset: 12, 23
+  index: -1

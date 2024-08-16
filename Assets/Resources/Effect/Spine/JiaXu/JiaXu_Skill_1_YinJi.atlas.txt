@@ -1,12 +1,12 @@
 
 JiaXu_Skill_1_YinJi.png
-size: 512,128
+size: 259,107
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 KuLou
   rotate: true
-  xy: 201, 42
+  xy: 197, 39
   size: 66, 60
   orig: 76, 76
   offset: 5, 8
@@ -14,14 +14,14 @@ KuLou
 KuLouGlow
   rotate: false
   xy: 2, 2
-  size: 106, 106
+  size: 103, 103
   orig: 128, 128
-  offset: 11, 11
+  offset: 12, 13
   index: -1
 KuLouQuan
   rotate: false
-  xy: 110, 19
-  size: 89, 89
+  xy: 107, 17
+  size: 88, 88
   orig: 128, 128
-  offset: 19, 20
+  offset: 20, 20
   index: -1

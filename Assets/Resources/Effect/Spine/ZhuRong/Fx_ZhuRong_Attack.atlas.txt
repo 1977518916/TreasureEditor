@@ -1,0 +1,90 @@
+
+Fx_ZhuRong_Attack.png
+size: 403,213
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_ZhuRong_Attack_01
+  rotate: false
+  xy: 358, 102
+  size: 36, 109
+  orig: 37, 109
+  offset: 1, 0
+  index: -1
+images/Fx_ZhuRong_Attack_02
+  rotate: false
+  xy: 358, 6
+  size: 43, 94
+  orig: 43, 98
+  offset: 0, 4
+  index: -1
+images/Fx_ZhuRong_Attack_pd_001
+  rotate: true
+  xy: 115, 70
+  size: 32, 209
+  orig: 65, 230
+  offset: 17, 19
+  index: -1
+images/Fx_ZhuRong_Attack_pd_002
+  rotate: false
+  xy: 77, 4
+  size: 36, 207
+  orig: 65, 230
+  offset: 17, 20
+  index: -1
+images/Fx_ZhuRong_Attack_pd_003
+  rotate: true
+  xy: 115, 139
+  size: 36, 206
+  orig: 65, 230
+  offset: 17, 19
+  index: -1
+images/Fx_ZhuRong_Attack_pd_004
+  rotate: true
+  xy: 115, 177
+  size: 34, 209
+  orig: 65, 230
+  offset: 15, 19
+  index: -1
+images/Fx_ZhuRong_Attack_pd_005
+  rotate: true
+  xy: 115, 104
+  size: 33, 209
+  orig: 65, 230
+  offset: 15, 19
+  index: -1
+images/Fx_ZhuRong_Attack_pd_006
+  rotate: true
+  xy: 115, 36
+  size: 32, 208
+  orig: 65, 230
+  offset: 14, 19
+  index: -1
+images/Fx_ZhuRong_Attack_pd_007
+  rotate: true
+  xy: 115, 2
+  size: 32, 208
+  orig: 65, 230
+  offset: 14, 19
+  index: -1
+images/Fx_ZhuRong_Attack_pd_008
+  rotate: false
+  xy: 2, 2
+  size: 36, 209
+  orig: 65, 230
+  offset: 13, 19
+  index: -1
+images/Fx_ZhuRong_Attack_pd_009
+  rotate: false
+  xy: 326, 2
+  size: 30, 209
+  orig: 65, 230
+  offset: 15, 19
+  index: -1
+images/Fx_ZhuRong_Attack_pd_010
+  rotate: false
+  xy: 40, 2
+  size: 35, 209
+  orig: 65, 230
+  offset: 16, 19
+  index: -1

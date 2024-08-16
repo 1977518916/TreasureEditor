@@ -1,0 +1,111 @@
+
+Buff_HuangZhong_LaoHuB.png
+size: 172,84
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Buff_HuangZhong_LaoHu_piaodaia_001
+  rotate: true
+  xy: 35, 29
+  size: 25, 31
+  orig: 60, 57
+  offset: 17, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_002
+  rotate: true
+  xy: 2, 56
+  size: 24, 31
+  orig: 60, 57
+  offset: 18, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_003
+  rotate: true
+  xy: 35, 56
+  size: 24, 32
+  orig: 60, 57
+  offset: 18, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_004
+  rotate: true
+  xy: 68, 29
+  size: 25, 32
+  orig: 60, 57
+  offset: 17, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_005
+  rotate: true
+  xy: 102, 29
+  size: 25, 31
+  orig: 60, 57
+  offset: 17, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_006
+  rotate: true
+  xy: 135, 29
+  size: 25, 32
+  orig: 60, 57
+  offset: 17, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_007
+  rotate: true
+  xy: 2, 2
+  size: 25, 32
+  orig: 60, 57
+  offset: 17, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_008
+  rotate: true
+  xy: 36, 2
+  size: 25, 31
+  orig: 60, 57
+  offset: 17, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_009
+  rotate: true
+  xy: 69, 2
+  size: 25, 31
+  orig: 60, 57
+  offset: 17, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_010
+  rotate: true
+  xy: 69, 56
+  size: 24, 32
+  orig: 60, 57
+  offset: 18, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_011
+  rotate: true
+  xy: 103, 56
+  size: 24, 32
+  orig: 60, 57
+  offset: 18, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_012
+  rotate: true
+  xy: 102, 2
+  size: 25, 31
+  orig: 60, 57
+  offset: 17, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_013
+  rotate: true
+  xy: 135, 2
+  size: 25, 32
+  orig: 60, 57
+  offset: 17, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_014
+  rotate: true
+  xy: 137, 56
+  size: 24, 32
+  orig: 60, 57
+  offset: 18, 12
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodaia_015
+  rotate: true
+  xy: 2, 29
+  size: 25, 31
+  orig: 60, 57
+  offset: 17, 12
+  index: -1

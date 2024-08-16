@@ -1,110 +1,110 @@
 
 LuSu_Skill_1.png
-size: 1024,256
+size: 592,279
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Fog1
   rotate: false
-  xy: 552, 23
+  xy: 550, 82
   size: 37, 40
   orig: 64, 64
   offset: 13, 3
   index: -1
 Fog2
-  rotate: false
-  xy: 500, 11
+  rotate: true
+  xy: 204, 2
   size: 50, 52
   orig: 64, 64
   offset: 7, 3
   index: -1
 Fog3
-  rotate: true
-  xy: 318, 2
-  size: 50, 58
+  rotate: false
+  xy: 433, 14
+  size: 49, 58
   orig: 64, 64
   offset: 7, 4
   index: -1
 Fog4
-  rotate: true
-  xy: 378, 4
+  rotate: false
+  xy: 376, 14
   size: 55, 58
   orig: 64, 64
   offset: 5, 5
   index: -1
 Fog5
   rotate: false
-  xy: 430, 62
-  size: 58, 62
+  xy: 317, 8
+  size: 57, 62
   orig: 64, 64
-  offset: 4, 1
+  offset: 5, 1
   index: -1
 Fog6
-  rotate: false
-  xy: 370, 61
+  rotate: true
+  xy: 485, 64
   size: 58, 63
   orig: 64, 64
   offset: 2, 1
   index: -1
 Fog7
-  rotate: true
-  xy: 438, 2
-  size: 58, 60
+  rotate: false
+  xy: 258, 2
+  size: 57, 60
   orig: 64, 64
-  offset: 3, 1
+  offset: 4, 1
   index: -1
 Fog8
-  rotate: true
-  xy: 630, 225
+  rotate: false
+  xy: 484, 34
   size: 29, 28
   orig: 64, 64
   offset: 28, 33
   index: -1
 Glow
   rotate: false
-  xy: 85, 23
-  size: 231, 231
+  xy: 2, 54
+  size: 223, 223
   orig: 256, 256
-  offset: 13, 12
+  offset: 17, 16
   index: -1
 Glow1
   rotate: false
-  xy: 370, 126
-  size: 128, 128
+  xy: 357, 74
+  size: 126, 126
   orig: 128, 128
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 Glow2
   rotate: false
-  xy: 490, 65
-  size: 128, 59
+  xy: 458, 231
+  size: 128, 46
   orig: 128, 59
-  offset: 0, 0
+  offset: 0, 8
   index: -1
 Glow3
-  rotate: false
-  xy: 2, 16
-  size: 81, 238
+  rotate: true
+  xy: 227, 202
+  size: 75, 229
   orig: 117, 256
-  offset: 18, 5
+  offset: 21, 8
   index: -1
 Glow4
   rotate: false
-  xy: 620, 15
-  size: 109, 109
+  xy: 485, 124
+  size: 105, 105
   orig: 128, 128
-  offset: 9, 10
+  offset: 11, 12
   index: -1
 Glow5
   rotate: false
-  xy: 500, 126
+  xy: 227, 72
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 Glow6
-  rotate: false
-  xy: 318, 54
+  rotate: true
+  xy: 2, 2
   size: 50, 200
   orig: 50, 200
   offset: 0, 0

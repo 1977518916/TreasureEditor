@@ -1,0 +1,181 @@
+
+HuangZhong_ZhuanShu_Skill_1.png
+size: 868,344
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/HuangZhong_ZhuanShu_Skill_001
+  rotate: true
+  xy: 372, 148
+  size: 13, 247
+  orig: 15, 251
+  offset: 1, 2
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_002
+  rotate: true
+  xy: 2, 252
+  size: 90, 370
+  orig: 106, 376
+  offset: 10, 6
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_003
+  rotate: true
+  xy: 520, 2
+  size: 33, 146
+  orig: 35, 155
+  offset: 1, 1
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_001
+  rotate: true
+  xy: 689, 48
+  size: 146, 137
+  orig: 276, 230
+  offset: 62, 30
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_002
+  rotate: false
+  xy: 2, 77
+  size: 188, 173
+  orig: 276, 230
+  offset: 45, 5
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_003
+  rotate: false
+  xy: 540, 41
+  size: 147, 105
+  orig: 276, 230
+  offset: 60, 62
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_004
+  rotate: false
+  xy: 192, 34
+  size: 167, 106
+  orig: 276, 230
+  offset: 43, 61
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_005
+  rotate: false
+  xy: 192, 142
+  size: 178, 108
+  orig: 276, 230
+  offset: 32, 60
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_006
+  rotate: false
+  xy: 372, 37
+  size: 166, 109
+  orig: 276, 230
+  offset: 46, 59
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_007
+  rotate: false
+  xy: 629, 196
+  size: 164, 110
+  orig: 276, 230
+  offset: 48, 58
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_008
+  rotate: false
+  xy: 2, 8
+  size: 167, 67
+  orig: 276, 230
+  offset: 45, 57
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_009
+  rotate: true
+  xy: 828, 53
+  size: 157, 34
+  orig: 276, 230
+  offset: 55, 76
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_010
+  rotate: true
+  xy: 828, 53
+  size: 157, 34
+  orig: 276, 230
+  offset: 55, 76
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_011
+  rotate: false
+  xy: 361, 2
+  size: 157, 33
+  orig: 276, 230
+  offset: 55, 76
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_012
+  rotate: false
+  xy: 361, 2
+  size: 157, 33
+  orig: 276, 230
+  offset: 55, 76
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_013
+  rotate: false
+  xy: 361, 2
+  size: 157, 33
+  orig: 276, 230
+  offset: 55, 76
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_014
+  rotate: false
+  xy: 171, 2
+  size: 155, 30
+  orig: 276, 230
+  offset: 56, 77
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_004_015
+  rotate: false
+  xy: 171, 2
+  size: 155, 30
+  orig: 276, 230
+  offset: 56, 77
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_005_001
+  rotate: true
+  xy: 372, 163
+  size: 35, 220
+  orig: 162, 341
+  offset: 67, 89
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_005_002
+  rotate: true
+  xy: 374, 270
+  size: 35, 241
+  orig: 162, 341
+  offset: 66, 55
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_005_003
+  rotate: true
+  xy: 374, 307
+  size: 35, 253
+  orig: 162, 341
+  offset: 66, 38
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_005_004
+  rotate: true
+  xy: 374, 234
+  size: 34, 242
+  orig: 162, 341
+  offset: 66, 36
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_005_005
+  rotate: true
+  xy: 629, 308
+  size: 34, 236
+  orig: 162, 341
+  offset: 66, 36
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_005_006
+  rotate: true
+  xy: 372, 200
+  size: 32, 233
+  orig: 162, 341
+  offset: 67, 36
+  index: -1
+images/HuangZhong_ZhuanShu_Skill_006
+  rotate: true
+  xy: 795, 212
+  size: 94, 52
+  orig: 100, 54
+  offset: 2, 1
+  index: -1

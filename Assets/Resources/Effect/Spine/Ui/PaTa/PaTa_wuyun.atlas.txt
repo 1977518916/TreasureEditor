@@ -1,0 +1,48 @@
+
+PaTa_wuyun.png
+size: 741,220
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/shandian_000
+  rotate: false
+  xy: 394, 18
+  size: 112, 89
+  orig: 120, 98
+  offset: 5, 5
+  index: -1
+images/shandian_001
+  rotate: false
+  xy: 2, 13
+  size: 155, 94
+  orig: 164, 103
+  offset: 5, 5
+  index: -1
+images/shandian_002
+  rotate: false
+  xy: 281, 11
+  size: 111, 96
+  orig: 119, 108
+  offset: 4, 5
+  index: -1
+images/shandian_003
+  rotate: true
+  xy: 159, 2
+  size: 105, 120
+  orig: 114, 127
+  offset: 5, 4
+  index: -1
+images/wuyun
+  rotate: false
+  xy: 2, 109
+  size: 737, 109
+  orig: 737, 109
+  offset: 0, 0
+  index: -1
+images/yuan
+  rotate: false
+  xy: 508, 31
+  size: 76, 76
+  orig: 100, 100
+  offset: 12, 12
+  index: -1

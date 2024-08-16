@@ -1,90 +1,90 @@
 
 Texiao_Up.png
-size: 622,287
+size: 492,336
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 pin
-  rotate: true
-  xy: 160, 84
+  rotate: false
+  xy: 181, 2
   size: 201, 40
   orig: 201, 40
   offset: 0, 0
   index: -1
 sdian (1)
   rotate: false
-  xy: 553, 5
-  size: 67, 67
+  xy: 374, 70
+  size: 63, 64
   orig: 262, 182
-  offset: 95, 2
+  offset: 97, 3
   index: -1
 sdian (10)
-  rotate: true
-  xy: 276, 19
-  size: 84, 133
+  rotate: false
+  xy: 293, 58
+  size: 79, 129
   orig: 262, 182
-  offset: 5, 41
+  offset: 7, 44
   index: -1
 sdian (11)
   rotate: true
-  xy: 553, 74
-  size: 70, 64
+  xy: 384, 2
+  size: 66, 61
   orig: 262, 182
-  offset: 6, 111
+  offset: 8, 113
   index: -1
 sdian (2)
   rotate: true
-  xy: 479, 146
-  size: 139, 114
+  xy: 181, 44
+  size: 136, 110
   orig: 262, 182
-  offset: 99, 5
+  offset: 101, 7
   index: -1
 sdian (3)
-  rotate: false
-  xy: 411, 15
-  size: 140, 119
+  rotate: true
+  xy: 374, 199
+  size: 135, 114
   orig: 262, 182
-  offset: 106, 11
+  offset: 109, 13
   index: -1
 sdian (4)
-  rotate: true
-  xy: 210, 15
-  size: 88, 64
+  rotate: false
+  xy: 374, 136
+  size: 85, 61
   orig: 262, 182
-  offset: 73, 36
+  offset: 74, 37
   index: -1
 sdian (5)
-  rotate: true
-  xy: 202, 105
-  size: 180, 146
+  rotate: false
+  xy: 2, 36
+  size: 177, 144
   orig: 262, 182
-  offset: 75, 1
+  offset: 77, 2
   index: -1
 sdian (6)
   rotate: false
-  xy: 350, 136
-  size: 127, 149
+  xy: 249, 189
+  size: 123, 145
   orig: 262, 182
-  offset: 17, 5
+  offset: 19, 7
   index: -1
 sdian (7)
-  rotate: true
-  xy: 2, 37
-  size: 248, 156
+  rotate: false
+  xy: 2, 182
+  size: 245, 152
   orig: 262, 182
-  offset: 11, 10
+  offset: 12, 12
   index: -1
 sdian (8)
   rotate: false
-  xy: 160, 2
-  size: 48, 80
+  xy: 447, 60
+  size: 42, 74
   orig: 262, 182
-  offset: 210, 76
+  offset: 214, 80
   index: -1
 sdian (9)
   rotate: true
   xy: 2, 7
-  size: 28, 66
+  size: 27, 65
   orig: 262, 182
   offset: 216, 80
   index: -1

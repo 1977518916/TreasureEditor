@@ -1,0 +1,104 @@
+
+Buff_gongsu.png
+size: 420,304
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Buff_gongsu_001
+  rotate: false
+  xy: 173, 198
+  size: 77, 102
+  orig: 155, 165
+  offset: 41, 41
+  index: -1
+images/Buff_gongsu_002
+  rotate: false
+  xy: 2, 89
+  size: 89, 104
+  orig: 155, 165
+  offset: 31, 39
+  index: -1
+images/Buff_gongsu_003
+  rotate: false
+  xy: 252, 199
+  size: 83, 101
+  orig: 155, 165
+  offset: 36, 38
+  index: -1
+images/Buff_gongsu_004
+  rotate: false
+  xy: 179, 94
+  size: 77, 102
+  orig: 155, 165
+  offset: 39, 39
+  index: -1
+images/Buff_gongsu_005
+  rotate: true
+  xy: 2, 2
+  size: 85, 98
+  orig: 155, 165
+  offset: 32, 41
+  index: -1
+images/Buff_gongsu_006
+  rotate: false
+  xy: 337, 202
+  size: 81, 98
+  orig: 155, 165
+  offset: 36, 39
+  index: -1
+images/Buff_gongsu_007
+  rotate: false
+  xy: 258, 96
+  size: 78, 101
+  orig: 155, 165
+  offset: 38, 35
+  index: -1
+images/Buff_gongsu_008
+  rotate: false
+  xy: 93, 91
+  size: 84, 103
+  orig: 155, 165
+  offset: 30, 34
+  index: -1
+images/Buff_gongsu_009
+  rotate: false
+  xy: 87, 196
+  size: 84, 104
+  orig: 155, 165
+  offset: 34, 34
+  index: -1
+images/Buff_gongsu_010
+  rotate: false
+  xy: 2, 195
+  size: 83, 105
+  orig: 155, 165
+  offset: 39, 34
+  index: -1
+images/Buff_gongsu_011
+  rotate: true
+  xy: 102, 5
+  size: 84, 100
+  orig: 155, 165
+  offset: 32, 38
+  index: -1
+images/Buff_gongsu_012
+  rotate: true
+  xy: 204, 9
+  size: 83, 97
+  orig: 155, 165
+  offset: 33, 40
+  index: -1
+images/Buff_gongsu_013
+  rotate: true
+  xy: 303, 11
+  size: 83, 95
+  orig: 155, 165
+  offset: 34, 41
+  index: -1
+images/Buff_gongsu_014
+  rotate: false
+  xy: 338, 104
+  size: 77, 96
+  orig: 155, 165
+  offset: 39, 46
+  index: -1

@@ -1,349 +1,349 @@
 
 XuChu_Skill_2.png
-size: 1866,159
+size: 308,264
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 BaoDian_01
-  rotate: false
-  xy: 1820, 109
-  size: 32, 48
-  orig: 64, 128
-  offset: 15, 0
+  rotate: true
+  xy: 101, 202
+  size: 15, 24
+  orig: 32, 64
+  offset: 8, 0
   index: -1
 BaoDian_02
   rotate: true
-  xy: 592, 16
-  size: 54, 89
-  orig: 64, 128
-  offset: 4, 4
+  xy: 137, 145
+  size: 27, 44
+  orig: 32, 64
+  offset: 2, 2
   index: -1
 BaoDian_03
   rotate: true
-  xy: 236, 11
-  size: 59, 96
-  orig: 64, 128
-  offset: 2, 16
+  xy: 248, 201
+  size: 30, 48
+  orig: 32, 64
+  offset: 1, 8
   index: -1
 BaoDian_04
   rotate: true
-  xy: 334, 8
-  size: 62, 88
-  orig: 64, 128
-  offset: 2, 31
+  xy: 227, 168
+  size: 31, 43
+  orig: 32, 64
+  offset: 1, 16
   index: -1
 BaoDian_05
   rotate: true
-  xy: 511, 9
-  size: 61, 79
-  orig: 64, 128
-  offset: 3, 45
+  xy: 183, 142
+  size: 30, 39
+  orig: 32, 64
+  offset: 2, 23
   index: -1
 BaoDian_06
   rotate: false
-  xy: 683, 2
-  size: 61, 68
-  orig: 64, 128
-  offset: 3, 58
+  xy: 260, 18
+  size: 30, 34
+  orig: 32, 64
+  offset: 2, 29
   index: -1
 BaoDian_07
-  rotate: true
-  xy: 1764, 97
-  size: 60, 54
-  orig: 64, 128
-  offset: 3, 74
+  rotate: false
+  xy: 205, 3
+  size: 30, 27
+  orig: 32, 64
+  offset: 1, 37
   index: -1
 BaoDian_08
   rotate: true
-  xy: 1802, 40
-  size: 55, 43
-  orig: 64, 128
-  offset: 4, 83
+  xy: 237, 3
+  size: 27, 21
+  orig: 32, 64
+  offset: 2, 42
   index: -1
 Dimian
   rotate: false
-  xy: 2, 29
-  size: 128, 128
-  orig: 128, 128
+  xy: 2, 198
+  size: 64, 64
+  orig: 64, 64
   offset: 0, 0
   index: -1
 Fog_01
   rotate: false
-  xy: 746, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 137, 111
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_02
   rotate: false
-  xy: 812, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 224, 134
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_03
   rotate: false
-  xy: 878, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 171, 108
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_04
   rotate: false
-  xy: 944, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 137, 77
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_05
   rotate: false
-  xy: 1010, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 258, 122
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_06
   rotate: false
-  xy: 1076, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 205, 100
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_07
   rotate: false
-  xy: 1142, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 171, 74
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_08
   rotate: false
-  xy: 1208, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 137, 43
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_09
   rotate: false
-  xy: 1274, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 137, 9
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_10
   rotate: false
-  xy: 1340, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 239, 88
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_11
   rotate: false
-  xy: 1406, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 205, 66
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_12
   rotate: false
-  xy: 1472, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 171, 40
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_13
   rotate: false
-  xy: 1538, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 273, 88
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_14
   rotate: false
-  xy: 1604, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 171, 6
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_15
   rotate: false
-  xy: 1670, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 239, 54
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Fog_16
   rotate: false
-  xy: 1698, 93
-  size: 64, 64
-  orig: 64, 64
+  xy: 205, 32
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Glow
   rotate: false
-  xy: 1736, 27
-  size: 64, 64
-  orig: 64, 64
+  xy: 273, 54
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Path
   rotate: true
-  xy: 2, 4
-  size: 23, 94
-  orig: 25, 97
-  offset: 1, 2
+  xy: 2, 5
+  size: 11, 48
+  orig: 13, 49
+  offset: 1, 1
   index: -1
 Quan_01
   rotate: false
-  xy: 132, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 2, 153
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_02
   rotate: false
-  xy: 219, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 2, 108
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_03
   rotate: false
-  xy: 306, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 2, 63
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_04
   rotate: false
-  xy: 393, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 2, 18
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_05
   rotate: false
-  xy: 480, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 47, 153
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_06
   rotate: false
-  xy: 567, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 68, 219
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_07
   rotate: false
-  xy: 654, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 47, 108
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_08
   rotate: false
-  xy: 741, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 47, 63
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_09
   rotate: false
-  xy: 828, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 47, 18
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_10
   rotate: false
-  xy: 915, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 92, 155
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_11
   rotate: false
-  xy: 1002, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 113, 219
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_12
   rotate: false
-  xy: 1089, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 92, 110
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_13
   rotate: false
-  xy: 1176, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 92, 65
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_14
   rotate: false
-  xy: 1263, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 92, 20
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_15
   rotate: false
-  xy: 1350, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 137, 174
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_16
   rotate: false
-  xy: 1437, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 158, 219
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_17
   rotate: false
-  xy: 1524, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 182, 174
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Quan_18
   rotate: false
-  xy: 1611, 72
-  size: 85, 85
-  orig: 85, 85
+  xy: 203, 219
+  size: 43, 43
+  orig: 43, 43
   offset: 0, 0
   index: -1
 Stone1
   rotate: true
-  xy: 132, 12
-  size: 58, 102
-  orig: 58, 102
+  xy: 248, 233
+  size: 29, 51
+  orig: 29, 51
   offset: 0, 0
   index: -1
 Stone2
-  rotate: true
-  xy: 424, 12
-  size: 58, 85
-  orig: 58, 85
+  rotate: false
+  xy: 272, 156
+  size: 29, 43
+  orig: 29, 43
   offset: 0, 0
   index: -1
 Stone3
   rotate: false
-  xy: 1802, 4
-  size: 62, 34
-  orig: 62, 34
+  xy: 68, 200
+  size: 31, 17
+  orig: 31, 17
   offset: 0, 0
   index: -1
 SuiPian
   rotate: false
-  xy: 98, 2
-  size: 23, 25
-  orig: 25, 27
-  offset: 1, 1
+  xy: 52, 2
+  size: 13, 14
+  orig: 13, 14
+  offset: 0, 0
   index: -1

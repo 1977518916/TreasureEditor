@@ -45,7 +45,7 @@ public class HeroEntity : MonoBehaviour, Entity
         data = heroData;
         heroObj = hero;
     }
-
+    
     /// <summary>
     /// 设置英雄位置
     /// </summary>

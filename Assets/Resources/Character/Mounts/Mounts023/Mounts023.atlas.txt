@@ -1,0 +1,83 @@
+
+Mounts023.png
+size: 144,476
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 83, 412
+  size: 38, 39
+  orig: 38, 39
+  offset: 0, 0
+  index: -1
+10
+  rotate: true
+  xy: 2, 2
+  size: 154, 138
+  orig: 154, 138
+  offset: 0, 0
+  index: -1
+2
+  rotate: true
+  xy: 42, 414
+  size: 36, 39
+  orig: 36, 39
+  offset: 0, 0
+  index: -1
+3
+  rotate: true
+  xy: 2, 374
+  size: 36, 94
+  orig: 36, 94
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 32, 452
+  size: 20, 78
+  orig: 20, 78
+  offset: 0, 0
+  index: -1
+5
+  rotate: true
+  xy: 2, 158
+  size: 146, 139
+  orig: 146, 139
+  offset: 0, 0
+  index: -1
+6
+  rotate: true
+  xy: 2, 454
+  size: 18, 28
+  orig: 18, 28
+  offset: 0, 0
+  index: -1
+7
+  rotate: true
+  xy: 98, 372
+  size: 38, 39
+  orig: 38, 39
+  offset: 0, 0
+  index: -1
+8
+  rotate: true
+  xy: 2, 415
+  size: 35, 38
+  orig: 35, 38
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 2, 321
+  size: 56, 51
+  orig: 56, 53
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 60, 306
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

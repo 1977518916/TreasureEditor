@@ -1,110 +1,110 @@
 
 tysg.png
-size: 1098,80
+size: 386,236
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 s/sggk01
   rotate: false
-  xy: 1060, 2
+  xy: 316, 2
   size: 36, 76
   orig: 77, 76
   offset: 1, 0
   index: -1
 s/sggk02
   rotate: false
-  xy: 947, 2
+  xy: 318, 158
   size: 66, 76
   orig: 77, 76
   offset: 0, 0
   index: -1
 s/sggk03
   rotate: false
-  xy: 2, 2
+  xy: 2, 158
   size: 77, 76
   orig: 77, 76
   offset: 0, 0
   index: -1
 s/sggk04
   rotate: false
-  xy: 81, 2
+  xy: 2, 80
   size: 77, 76
   orig: 77, 76
   offset: 0, 0
   index: -1
 s/sggk05
   rotate: false
-  xy: 160, 2
+  xy: 81, 158
   size: 77, 76
   orig: 77, 76
   offset: 0, 0
   index: -1
 s/sggk06
   rotate: false
-  xy: 239, 2
+  xy: 2, 2
   size: 77, 76
   orig: 77, 76
   offset: 0, 0
   index: -1
 s/sggk07
   rotate: false
-  xy: 318, 2
+  xy: 81, 80
   size: 77, 76
   orig: 77, 76
   offset: 0, 0
   index: -1
 s/sggk08
   rotate: false
-  xy: 397, 2
+  xy: 160, 158
   size: 77, 76
   orig: 77, 76
   offset: 0, 0
   index: -1
 s/sggk09
   rotate: false
-  xy: 476, 2
+  xy: 81, 2
   size: 77, 76
   orig: 77, 76
   offset: 0, 0
   index: -1
 s/sggk10
   rotate: false
-  xy: 555, 2
+  xy: 160, 80
   size: 77, 76
   orig: 77, 76
   offset: 0, 0
   index: -1
 s/sggk11
   rotate: false
-  xy: 634, 2
+  xy: 239, 158
   size: 77, 76
   orig: 77, 76
   offset: 0, 0
   index: -1
 s/sggk12
   rotate: false
-  xy: 713, 2
+  xy: 160, 2
   size: 76, 76
   orig: 77, 76
   offset: 1, 0
   index: -1
 s/sggk13
   rotate: false
-  xy: 791, 2
+  xy: 239, 80
   size: 76, 76
   orig: 77, 76
   offset: 1, 0
   index: -1
 s/sggk14
   rotate: false
-  xy: 869, 2
+  xy: 238, 2
   size: 76, 76
   orig: 77, 76
   offset: 1, 0
   index: -1
 s/sggk15
   rotate: false
-  xy: 1015, 2
+  xy: 317, 80
   size: 43, 76
   orig: 77, 76
   offset: 34, 0

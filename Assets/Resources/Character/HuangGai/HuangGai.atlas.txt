@@ -1,132 +1,125 @@
 
 HuangGai.png
-size: 2001,783
+size: 428,964
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Body
-  rotate: true
-  xy: 1293, 478
-  size: 303, 295
-  orig: 303, 296
-  offset: 0, 1
-  index: -1
-DaoGuang
   rotate: false
-  xy: 1666, 2
-  size: 128, 128
-  orig: 128, 128
+  xy: 255, 222
+  size: 152, 148
+  orig: 152, 148
   offset: 0, 0
   index: -1
 Eye1
   rotate: false
-  xy: 1293, 309
-  size: 319, 167
-  orig: 323, 171
-  offset: 2, 2
+  xy: 260, 529
+  size: 162, 84
+  orig: 162, 86
+  offset: 0, 1
   index: -1
 Eye2
   rotate: true
-  xy: 1935, 264
-  size: 228, 59
-  orig: 230, 63
-  offset: 1, 2
+  xy: 376, 105
+  size: 115, 30
+  orig: 115, 32
+  offset: 0, 1
   index: -1
 Hand_B
-  rotate: false
-  xy: 1949, 730
-  size: 50, 51
-  orig: 52, 53
-  offset: 1, 1
+  rotate: true
+  xy: 376, 77
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
   index: -1
 Hand_F
   rotate: true
-  xy: 1949, 677
-  size: 51, 50
-  orig: 53, 52
-  offset: 1, 1
+  xy: 2, 2
+  size: 27, 26
+  orig: 27, 26
+  offset: 0, 0
   index: -1
 Head
-  rotate: false
-  xy: 2, 271
-  size: 433, 510
-  orig: 436, 513
-  offset: 3, 3
+  rotate: true
+  xy: 2, 463
+  size: 217, 256
+  orig: 218, 257
+  offset: 1, 1
   index: -1
 JianJia
-  rotate: false
-  xy: 1455, 49
-  size: 209, 258
-  orig: 210, 260
-  offset: 0, 2
+  rotate: true
+  xy: 280, 615
+  size: 105, 129
+  orig: 105, 130
+  offset: 0, 1
   index: -1
 LianZi1
   rotate: false
-  xy: 2, 8
-  size: 646, 261
-  orig: 663, 261
-  offset: 17, 0
+  xy: 2, 828
+  size: 324, 131
+  orig: 332, 131
+  offset: 8, 0
   index: -1
 LianZi2
   rotate: false
-  xy: 1666, 132
-  size: 317, 130
-  orig: 320, 138
-  offset: 2, 1
+  xy: 255, 372
+  size: 160, 69
+  orig: 160, 69
+  offset: 0, 0
   index: -1
 LianZi3
-  rotate: true
-  xy: 650, 29
-  size: 250, 249
-  orig: 257, 251
-  offset: 4, 1
+  rotate: false
+  xy: 247, 94
+  size: 127, 126
+  orig: 129, 126
+  offset: 1, 0
   index: -1
 LianZi4
   rotate: false
-  xy: 1590, 482
-  size: 186, 299
-  orig: 189, 302
-  offset: 1, 1
+  xy: 328, 809
+  size: 95, 150
+  orig: 95, 151
+  offset: 0, 0
   index: -1
 MeiMao
   rotate: false
-  xy: 1614, 315
-  size: 319, 165
-  orig: 323, 168
-  offset: 2, 1
+  xy: 260, 443
+  size: 161, 84
+  orig: 162, 84
+  offset: 0, 0
   index: -1
 PiFeng
   rotate: false
-  xy: 901, 7
-  size: 552, 288
-  orig: 552, 288
+  xy: 2, 682
+  size: 276, 144
+  orig: 276, 144
   offset: 0, 0
   index: -1
 Quan
-  rotate: false
-  xy: 437, 281
-  size: 440, 500
-  orig: 442, 502
-  offset: 1, 1
+  rotate: true
+  xy: 2, 240
+  size: 221, 251
+  orig: 221, 251
+  offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 1949, 643
-  size: 32, 32
-  orig: 32, 32
+  xy: 280, 810
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 XuanZhuan
-  rotate: false
-  xy: 879, 297
-  size: 412, 484
-  orig: 418, 490
-  offset: 3, 3
+  rotate: true
+  xy: 2, 31
+  size: 207, 243
+  orig: 209, 245
+  offset: 1, 1
   index: -1
 Zui
-  rotate: true
-  xy: 1778, 494
-  size: 287, 169
-  orig: 297, 182
-  offset: 0, 11
+  rotate: false
+  xy: 280, 722
+  size: 144, 85
+  orig: 149, 91
+  offset: 0, 5
   index: -1

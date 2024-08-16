@@ -1,160 +1,160 @@
 
 GuanYinPing.png
-size: 380,380
+size: 395,801
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-ErZhui_B
-  rotate: true
-  xy: 181, 6
-  size: 15, 26
-  orig: 15, 26
-  offset: 0, 0
-  index: -1
-ErZhui_F
-  rotate: true
-  xy: 181, 6
-  size: 15, 26
-  orig: 15, 26
-  offset: 0, 0
-  index: -1
-GeBo_B
+1
   rotate: false
-  xy: 314, 190
-  size: 51, 49
-  orig: 51, 49
-  offset: 0, 0
+  xy: 270, 660
+  size: 120, 139
+  orig: 134, 140
+  offset: 0, 1
   index: -1
-GeBo_F
+10
   rotate: true
-  xy: 324, 241
-  size: 48, 54
-  orig: 48, 54
-  offset: 0, 0
+  xy: 2, 167
+  size: 215, 224
+  orig: 224, 224
+  offset: 9, 0
   index: -1
-Hair_B
+11
   rotate: false
-  xy: 2, 170
-  size: 187, 208
-  orig: 187, 208
+  xy: 2, 485
+  size: 243, 241
+  orig: 243, 244
   offset: 0, 0
   index: -1
-Hair_F
-  rotate: false
-  xy: 181, 23
-  size: 71, 145
-  orig: 71, 145
-  offset: 0, 0
-  index: -1
-JianJia_F
+12
   rotate: true
-  xy: 324, 142
-  size: 46, 36
-  orig: 46, 36
+  xy: 348, 64
+  size: 57, 43
+  orig: 57, 43
   offset: 0, 0
   index: -1
-Jiao_B
+13
   rotate: false
-  xy: 316, 32
-  size: 10, 9
-  orig: 10, 9
+  xy: 105, 37
+  size: 62, 40
+  orig: 62, 40
   offset: 0, 0
   index: -1
-Jiao_F
+14
   rotate: false
-  xy: 367, 229
-  size: 10, 10
-  orig: 10, 10
+  xy: 2, 2
+  size: 101, 75
+  orig: 102, 75
+  offset: 1, 0
+  index: -1
+15
+  rotate: false
+  xy: 348, 123
+  size: 44, 38
+  orig: 44, 38
   offset: 0, 0
   index: -1
-MeiMao_B
+16
   rotate: true
-  xy: 346, 21
-  size: 38, 28
-  orig: 38, 28
+  xy: 187, 41
+  size: 58, 33
+  orig: 58, 33
   offset: 0, 0
   index: -1
-MeiMao_F
+17
+  rotate: false
+  xy: 247, 510
+  size: 136, 71
+  orig: 138, 75
+  offset: 0, 4
+  index: -1
+18
   rotate: true
-  xy: 324, 95
-  size: 45, 31
-  orig: 45, 31
+  xy: 348, 163
+  size: 53, 45
+  orig: 54, 45
+  offset: 0, 0
+  index: -1
+19
+  rotate: true
+  xy: 348, 13
+  size: 49, 42
+  orig: 49, 42
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 247, 448
+  size: 132, 60
+  orig: 134, 60
+  offset: 2, 0
+  index: -1
+20
+  rotate: false
+  xy: 2, 384
+  size: 235, 99
+  orig: 240, 99
+  offset: 0, 0
+  index: -1
+21
+  rotate: false
+  xy: 2, 728
+  size: 266, 71
+  orig: 266, 71
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 247, 583
+  size: 138, 75
+  orig: 143, 75
+  offset: 5, 0
+  index: -1
+4
+  rotate: false
+  xy: 2, 79
+  size: 183, 86
+  orig: 183, 86
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 228, 41
+  size: 118, 175
+  orig: 118, 175
+  offset: 0, 0
+  index: -1
+6
+  rotate: true
+  xy: 228, 218
+  size: 104, 164
+  orig: 104, 164
+  offset: 0, 0
+  index: -1
+7
+  rotate: true
+  xy: 187, 101
+  size: 64, 38
+  orig: 64, 38
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 239, 386
+  size: 131, 60
+  orig: 131, 60
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 239, 324
+  size: 131, 60
+  orig: 131, 60
   offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 346, 61
-  size: 32, 32
-  orig: 32, 32
-  offset: 0, 0
-  index: -1
-ShenTi
-  rotate: false
-  xy: 254, 90
-  size: 68, 86
-  orig: 68, 86
-  offset: 0, 0
-  index: -1
-Tou
-  rotate: false
-  xy: 2, 8
-  size: 177, 160
-  orig: 177, 160
-  offset: 0, 0
-  index: -1
-TouGuan
-  rotate: false
-  xy: 191, 178
-  size: 121, 83
-  orig: 121, 83
-  offset: 0, 0
-  index: -1
-WuQi
-  rotate: false
-  xy: 191, 263
-  size: 130, 115
-  orig: 130, 115
-  offset: 0, 0
-  index: -1
-YanJing_1_B
-  rotate: true
-  xy: 316, 43
-  size: 45, 28
-  orig: 46, 29
-  offset: 1, 0
-  index: -1
-YanJing_1_F
-  rotate: false
-  xy: 323, 291
-  size: 55, 30
-  orig: 55, 30
-  offset: 0, 0
-  index: -1
-YanJing_2_B
-  rotate: false
-  xy: 323, 323
-  size: 55, 55
-  orig: 56, 55
-  offset: 1, 0
-  index: -1
-YanJing_2_F
-  rotate: false
-  xy: 254, 28
-  size: 60, 60
-  orig: 60, 60
-  offset: 0, 0
-  index: -1
-ZuiBa_1
-  rotate: false
-  xy: 191, 170
-  size: 14, 6
-  orig: 14, 6
-  offset: 0, 0
-  index: -1
-ZuiBa_2
-  rotate: true
-  xy: 209, 4
-  size: 17, 23
-  orig: 17, 23
+  xy: 247, 710
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1

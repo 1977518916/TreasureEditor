@@ -1,0 +1,83 @@
+
+GongHui.png
+size: 752, 289
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+1
+  rotate: true
+  xy: 303, 5
+  size: 117, 184
+  orig: 117, 184
+  offset: 0, 0
+  index: -1
+10
+  rotate: true
+  xy: 595, 2
+  size: 285, 155
+  orig: 285, 155
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 303, 124
+  size: 290, 163
+  orig: 290, 163
+  offset: 0, 0
+  index: -1
+2
+  rotate: true
+  xy: 196, 12
+  size: 45, 46
+  orig: 45, 46
+  offset: 0, 0
+  index: -1
+3
+  rotate: true
+  xy: 2, 49
+  size: 59, 75
+  orig: 59, 75
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 196, 59
+  size: 49, 47
+  orig: 51, 47
+  offset: 2, 0
+  index: -1
+5
+  rotate: false
+  xy: 79, 53
+  size: 58, 55
+  orig: 58, 55
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 139, 7
+  size: 45, 45
+  orig: 45, 45
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 139, 54
+  size: 55, 54
+  orig: 55, 54
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 489, 7
+  size: 99, 115
+  orig: 99, 115
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 2, 110
+  size: 299, 177
+  orig: 299, 177
+  offset: 0, 0
+  index: -1

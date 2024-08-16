@@ -1,0 +1,13 @@
+
+Fx_GaoShun_Attack.png
+size: 187,210
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_GaoShun_Attack
+  rotate: false
+  xy: 0, 0
+  size: 187, 210
+  orig: 187, 210
+  offset: 0, 0
+  index: -1

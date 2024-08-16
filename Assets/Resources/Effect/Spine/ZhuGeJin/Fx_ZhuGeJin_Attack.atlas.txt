@@ -1,0 +1,83 @@
+
+Fx_ZhuGeJin_Attack.png
+size: 423,219
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Fx_ZhuGeJin_Attack_01
+  rotate: true
+  xy: 2, 175
+  size: 42, 223
+  orig: 43, 241
+  offset: 0, 9
+  index: -1
+Fx_ZhuGeJin_Attack_pd001
+  rotate: true
+  xy: 2, 35
+  size: 31, 208
+  orig: 88, 244
+  offset: 31, 29
+  index: -1
+Fx_ZhuGeJin_Attack_pd002
+  rotate: false
+  xy: 227, 9
+  size: 38, 208
+  orig: 88, 244
+  offset: 29, 29
+  index: -1
+Fx_ZhuGeJin_Attack_pd003
+  rotate: false
+  xy: 307, 11
+  size: 38, 206
+  orig: 88, 244
+  offset: 30, 29
+  index: -1
+Fx_ZhuGeJin_Attack_pd004
+  rotate: false
+  xy: 267, 9
+  size: 38, 208
+  orig: 88, 244
+  offset: 27, 29
+  index: -1
+Fx_ZhuGeJin_Attack_pd005
+  rotate: true
+  xy: 2, 138
+  size: 35, 208
+  orig: 88, 244
+  offset: 28, 29
+  index: -1
+Fx_ZhuGeJin_Attack_pd006
+  rotate: true
+  xy: 2, 68
+  size: 32, 207
+  orig: 88, 244
+  offset: 28, 29
+  index: -1
+Fx_ZhuGeJin_Attack_pd007
+  rotate: true
+  xy: 2, 102
+  size: 34, 208
+  orig: 88, 244
+  offset: 26, 29
+  index: -1
+Fx_ZhuGeJin_Attack_pd008
+  rotate: false
+  xy: 347, 9
+  size: 36, 208
+  orig: 88, 244
+  offset: 27, 29
+  index: -1
+Fx_ZhuGeJin_Attack_pd009
+  rotate: true
+  xy: 2, 2
+  size: 31, 208
+  orig: 88, 244
+  offset: 30, 29
+  index: -1
+Fx_ZhuGeJin_Attack_pd010
+  rotate: false
+  xy: 385, 9
+  size: 36, 208
+  orig: 88, 244
+  offset: 28, 29
+  index: -1

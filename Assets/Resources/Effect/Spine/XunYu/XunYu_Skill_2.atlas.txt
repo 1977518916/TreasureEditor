@@ -1,62 +1,62 @@
 
 XunYu_Skill_2.png
-size: 1024,128
+size: 448,64
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Glow
   rotate: false
-  xy: 132, 3
-  size: 116, 116
-  orig: 128, 128
-  offset: 6, 6
+  xy: 248, 4
+  size: 56, 56
+  orig: 64, 64
+  offset: 4, 4
   index: -1
 GuangZhu
   rotate: false
-  xy: 2, 2
-  size: 128, 117
-  orig: 128, 128
-  offset: 0, 0
+  xy: 182, 4
+  size: 64, 56
+  orig: 64, 64
+  offset: 0, 1
   index: -1
 Quan_01
   rotate: true
-  xy: 820, 61
-  size: 58, 57
-  orig: 128, 128
-  offset: 35, 35
+  xy: 416, 30
+  size: 30, 29
+  orig: 64, 64
+  offset: 17, 17
   index: -1
 Quan_02
   rotate: false
-  xy: 718, 19
-  size: 100, 100
-  orig: 128, 128
-  offset: 14, 14
+  xy: 364, 10
+  size: 50, 50
+  orig: 64, 64
+  offset: 7, 7
   index: -1
 Quan_03
   rotate: false
-  xy: 604, 7
-  size: 112, 112
-  orig: 128, 128
-  offset: 8, 8
+  xy: 306, 4
+  size: 56, 56
+  orig: 64, 64
+  offset: 4, 4
   index: -1
 Quan_04
   rotate: false
-  xy: 250, 3
-  size: 116, 116
-  orig: 128, 128
-  offset: 6, 6
+  xy: 2, 2
+  size: 58, 58
+  orig: 64, 64
+  offset: 3, 3
   index: -1
 Quan_05
   rotate: false
-  xy: 368, 3
-  size: 116, 116
-  orig: 128, 128
-  offset: 6, 6
+  xy: 62, 2
+  size: 58, 58
+  orig: 64, 64
+  offset: 3, 3
   index: -1
 Quan_06
   rotate: false
-  xy: 486, 3
-  size: 116, 116
-  orig: 128, 128
-  offset: 6, 6
+  xy: 122, 2
+  size: 58, 58
+  orig: 64, 64
+  offset: 3, 3
   index: -1

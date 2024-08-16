@@ -1,118 +1,118 @@
 
 XiaoBing_Dun.png
-size: 456,157
+size: 243,77
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Body
   rotate: true
-  xy: 271, 67
-  size: 88, 67
-  orig: 88, 67
+  xy: 144, 31
+  size: 44, 34
+  orig: 44, 34
   offset: 0, 0
   index: -1
 Dun
-  rotate: false
-  xy: 2, 2
-  size: 144, 153
-  orig: 144, 153
+  rotate: true
+  xy: 2, 3
+  size: 72, 77
+  orig: 72, 77
   offset: 0, 0
   index: -1
 Eye_B
-  rotate: false
-  xy: 440, 132
-  size: 14, 23
-  orig: 14, 23
+  rotate: true
+  xy: 206, 34
+  size: 7, 12
+  orig: 7, 12
   offset: 0, 0
   index: -1
 Eye_B_1
   rotate: true
-  xy: 420, 70
-  size: 24, 21
-  orig: 26, 23
-  offset: 1, 2
+  xy: 214, 43
+  size: 13, 11
+  orig: 13, 12
+  offset: 0, 1
   index: -1
 Eye_F
   rotate: false
-  xy: 430, 99
-  size: 22, 22
-  orig: 22, 22
+  xy: 227, 49
+  size: 11, 11
+  orig: 11, 11
   offset: 0, 0
   index: -1
 Eye_F_1
   rotate: true
-  xy: 406, 96
-  size: 25, 22
-  orig: 26, 22
+  xy: 227, 62
+  size: 13, 11
+  orig: 13, 11
   offset: 0, 0
   index: -1
 Feet_B
-  rotate: false
-  xy: 162, 3
-  size: 11, 8
-  orig: 11, 8
+  rotate: true
+  xy: 193, 5
+  size: 6, 4
+  orig: 6, 4
   offset: 0, 0
   index: -1
 Feet_F
-  rotate: false
-  xy: 148, 3
-  size: 12, 8
-  orig: 12, 8
+  rotate: true
+  xy: 199, 5
+  size: 6, 4
+  orig: 6, 4
   offset: 0, 0
   index: -1
 Glow1
   rotate: false
-  xy: 340, 91
-  size: 64, 64
-  orig: 64, 64
+  xy: 180, 43
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1
 Glow4
   rotate: false
-  xy: 366, 7
-  size: 60, 60
-  orig: 64, 64
-  offset: 2, 2
+  xy: 211, 2
+  size: 30, 30
+  orig: 32, 32
+  offset: 1, 1
   index: -1
 Hand_B
   rotate: false
-  xy: 400, 70
-  size: 18, 19
-  orig: 20, 20
-  offset: 1, 0
+  xy: 194, 31
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
   index: -1
 Head
   rotate: true
-  xy: 148, 13
-  size: 142, 121
-  orig: 142, 121
+  xy: 81, 4
+  size: 71, 61
+  orig: 71, 61
   offset: 0, 0
   index: -1
 HongYing
   rotate: false
-  xy: 271, 13
-  size: 93, 52
-  orig: 93, 52
+  xy: 144, 3
+  size: 47, 26
+  orig: 47, 26
   offset: 0, 0
   index: -1
 JianJia_B
   rotate: false
-  xy: 375, 71
-  size: 23, 18
-  orig: 24, 19
+  xy: 180, 31
+  size: 12, 10
+  orig: 12, 10
   offset: 0, 0
   index: -1
 JianJia_F
-  rotate: false
-  xy: 340, 69
-  size: 33, 20
-  orig: 34, 21
+  rotate: true
+  xy: 214, 58
+  size: 17, 11
+  orig: 17, 11
   offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 406, 123
-  size: 32, 32
-  orig: 32, 32
+  xy: 193, 13
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1

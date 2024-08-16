@@ -1,0 +1,76 @@
+
+LvBu_Hun.png
+size: 664,524
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 518, 247
+  size: 136, 112
+  orig: 136, 112
+  offset: 0, 0
+  index: -1
+Eye
+  rotate: true
+  xy: 518, 361
+  size: 159, 112
+  orig: 159, 112
+  offset: 0, 0
+  index: -1
+Hand_F
+  rotate: false
+  xy: 297, 2
+  size: 21, 22
+  orig: 21, 22
+  offset: 0, 0
+  index: -1
+Head
+  rotate: true
+  xy: 2, 2
+  size: 210, 293
+  orig: 216, 298
+  offset: 0, 0
+  index: -1
+HongYing_1
+  rotate: false
+  xy: 2, 214
+  size: 262, 306
+  orig: 262, 306
+  offset: 0, 0
+  index: -1
+HongYing_2
+  rotate: false
+  xy: 266, 256
+  size: 250, 264
+  orig: 250, 267
+  offset: 0, 3
+  index: -1
+JianJia_B
+  rotate: true
+  xy: 555, 50
+  size: 79, 106
+  orig: 79, 109
+  offset: 0, 0
+  index: -1
+JianJia_F
+  rotate: false
+  xy: 555, 131
+  size: 95, 114
+  orig: 95, 114
+  offset: 0, 0
+  index: -1
+WuQi
+  rotate: true
+  xy: 297, 26
+  size: 207, 256
+  orig: 207, 256
+  offset: 0, 0
+  index: -1
+Zui
+  rotate: false
+  xy: 266, 235
+  size: 50, 19
+  orig: 50, 19
+  offset: 0, 0
+  index: -1

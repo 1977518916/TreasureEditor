@@ -1,125 +1,125 @@
 
 box.png
-size: 681,133
+size: 336,264
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 001
-  rotate: false
-  xy: 259, 67
+  rotate: true
+  xy: 124, 59
   size: 74, 64
   orig: 74, 64
   offset: 0, 0
   index: -1
 d1
-  rotate: true
-  xy: 663, 26
-  size: 16, 15
+  rotate: false
+  xy: 147, 136
+  size: 15, 15
   orig: 17, 18
-  offset: 1, 1
+  offset: 2, 1
   index: -1
 d2
-  rotate: true
-  xy: 663, 44
-  size: 17, 16
+  rotate: false
+  xy: 129, 135
+  size: 16, 16
   orig: 18, 17
   offset: 1, 0
   index: -1
 sg (1)
-  rotate: true
-  xy: 628, 5
+  rotate: false
+  xy: 129, 153
   size: 56, 33
   orig: 74, 63
   offset: 7, 13
   index: -1
 sg (10)
   rotate: false
-  xy: 411, 3
-  size: 63, 63
+  xy: 258, 6
+  size: 62, 63
   orig: 74, 63
   offset: 0, 0
   index: -1
 sg (2)
-  rotate: true
-  xy: 628, 63
-  size: 68, 47
+  rotate: false
+  xy: 124, 10
+  size: 67, 47
   orig: 74, 63
-  offset: 3, 4
+  offset: 4, 4
   index: -1
 sg (3)
   rotate: false
-  xy: 476, 5
+  xy: 258, 71
   size: 73, 61
   orig: 74, 63
   offset: 1, 1
   index: -1
 sg (4)
-  rotate: false
-  xy: 411, 68
+  rotate: true
+  xy: 129, 188
   size: 74, 63
   orig: 74, 63
   offset: 0, 0
   index: -1
 sg (5)
-  rotate: false
-  xy: 487, 68
+  rotate: true
+  xy: 194, 188
   size: 74, 63
   orig: 74, 63
   offset: 0, 0
   index: -1
 sg (6)
   rotate: true
-  xy: 563, 57
+  xy: 190, 78
   size: 74, 63
   orig: 74, 63
   offset: 0, 0
   index: -1
 sg (7)
-  rotate: false
-  xy: 335, 3
+  rotate: true
+  xy: 193, 2
   size: 74, 63
   orig: 74, 63
   offset: 0, 0
   index: -1
 sg (8)
   rotate: false
-  xy: 259, 2
+  xy: 259, 199
   size: 74, 63
   orig: 74, 63
   offset: 0, 0
   index: -1
 sg (9)
   rotate: false
-  xy: 335, 68
+  xy: 259, 134
   size: 74, 63
   orig: 74, 63
   offset: 0, 0
   index: -1
 xx
-  rotate: true
-  xy: 551, 22
-  size: 33, 34
+  rotate: false
+  xy: 187, 154
+  size: 32, 32
   orig: 37, 38
-  offset: 2, 2
+  offset: 3, 3
   index: -1
 xxx
   rotate: true
-  xy: 587, 27
+  xy: 221, 158
   size: 28, 26
   orig: 28, 26
   offset: 0, 0
   index: -1
 zha1
-  rotate: true
-  xy: 131, 8
-  size: 123, 126
+  rotate: false
+  xy: 2, 8
+  size: 120, 125
   orig: 124, 128
-  offset: 1, 1
+  offset: 3, 2
   index: -1
 zha2
-  rotate: true
-  xy: 2, 5
-  size: 126, 127
+  rotate: false
+  xy: 2, 135
+  size: 125, 127
   orig: 127, 128
   offset: 1, 0
   index: -1

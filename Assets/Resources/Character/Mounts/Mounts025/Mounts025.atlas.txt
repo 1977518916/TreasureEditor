@@ -1,0 +1,69 @@
+
+Mounts025.png
+size: 412,172
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 163, 60
+  size: 104, 110
+  orig: 104, 110
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 269, 90
+  size: 140, 80
+  orig: 140, 81
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 250, 13
+  size: 34, 45
+  orig: 34, 45
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 352, 55
+  size: 33, 45
+  orig: 33, 45
+  offset: 0, 0
+  index: -1
+5
+  rotate: true
+  xy: 2, 2
+  size: 168, 159
+  orig: 168, 159
+  offset: 0, 0
+  index: -1
+6
+  rotate: true
+  xy: 163, 2
+  size: 56, 49
+  orig: 58, 49
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 214, 7
+  size: 34, 51
+  orig: 34, 51
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 352, 8
+  size: 33, 45
+  orig: 33, 45
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 286, 24
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1

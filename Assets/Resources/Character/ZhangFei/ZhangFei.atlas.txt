@@ -1,237 +1,132 @@
 
 ZhangFei.png
-size: 1982,960
+size: 1012,272
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Body
-  rotate: true
-  xy: 1092, 105
-  size: 285, 229
-  orig: 286, 229
+  rotate: false
+  xy: 864, 6
+  size: 143, 115
+  orig: 143, 115
   offset: 0, 0
   index: -1
 Eye1
   rotate: true
-  xy: 79, 73
-  size: 298, 244
-  orig: 300, 246
-  offset: 1, 1
+  xy: 730, 120
+  size: 150, 123
+  orig: 150, 123
+  offset: 0, 0
   index: -1
 Eye2
-  rotate: true
-  xy: 946, 670
-  size: 288, 208
-  orig: 291, 211
-  offset: 1, 2
+  rotate: false
+  xy: 505, 5
+  size: 145, 105
+  orig: 146, 106
+  offset: 0, 1
   index: -1
 Hand_B
   rotate: false
-  xy: 2, 12
-  size: 42, 43
-  orig: 46, 45
-  offset: 2, 1
+  xy: 290, 56
+  size: 23, 23
+  orig: 23, 23
+  offset: 0, 0
   index: -1
 Hand_F
   rotate: false
-  xy: 2, 12
-  size: 42, 43
-  orig: 46, 45
-  offset: 2, 1
+  xy: 290, 56
+  size: 23, 23
+  orig: 23, 23
+  offset: 0, 0
   index: -1
 Head
   rotate: true
-  xy: 325, 10
-  size: 377, 286
-  orig: 377, 286
+  xy: 290, 81
+  size: 189, 143
+  orig: 189, 143
   offset: 0, 0
   index: -1
 HongYing1
   rotate: false
-  xy: 1092, 5
-  size: 195, 98
-  orig: 198, 101
-  offset: 1, 2
+  xy: 2, 4
+  size: 98, 50
+  orig: 99, 51
+  offset: 0, 1
   index: -1
 HongYing2
   rotate: true
-  xy: 80, 8
-  size: 63, 110
-  orig: 65, 112
-  offset: 1, 1
+  xy: 652, 7
+  size: 33, 56
+  orig: 33, 56
+  offset: 0, 0
   index: -1
 HuZi
-  rotate: true
-  xy: 2, 373
-  size: 585, 315
-  orig: 585, 327
-  offset: 0, 12
+  rotate: false
+  xy: 435, 112
+  size: 293, 158
+  orig: 293, 164
+  offset: 0, 6
   index: -1
 JianJia
   rotate: false
-  xy: 890, 3
-  size: 135, 95
-  orig: 140, 101
-  offset: 4, 0
-  index: -1
-JiuHu
-  rotate: true
-  xy: 1797, 75
-  size: 202, 146
-  orig: 204, 146
+  xy: 102, 6
+  size: 68, 48
+  orig: 70, 51
   offset: 2, 0
   index: -1
-MaoZi
+JiuHu
   rotate: false
-  xy: 1769, 823
-  size: 211, 135
-  orig: 219, 135
+  xy: 332, 6
+  size: 101, 73
+  orig: 102, 73
+  offset: 1, 0
+  index: -1
+MaoZi
+  rotate: true
+  xy: 435, 4
+  size: 106, 68
+  orig: 110, 68
   offset: 0, 0
   index: -1
 PiFeng
-  rotate: true
-  xy: 1524, 132
-  size: 264, 231
-  orig: 264, 231
+  rotate: false
+  xy: 730, 2
+  size: 132, 116
+  orig: 132, 116
   offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 46, 23
-  size: 32, 32
-  orig: 32, 32
+  xy: 707, 94
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 Shui
-  rotate: false
-  xy: 1661, 24
-  size: 134, 106
-  orig: 142, 108
-  offset: 3, 0
+  rotate: true
+  xy: 652, 42
+  size: 68, 53
+  orig: 71, 54
+  offset: 1, 0
   index: -1
 WuQi
-  rotate: false
-  xy: 319, 389
-  size: 424, 569
-  orig: 428, 571
-  offset: 3, 1
+  rotate: true
+  xy: 2, 56
+  size: 214, 286
+  orig: 214, 286
+  offset: 0, 0
   index: -1
 Zui
-  rotate: true
-  xy: 2, 57
-  size: 314, 75
-  orig: 316, 77
-  offset: 1, 1
+  rotate: false
+  xy: 172, 15
+  size: 158, 39
+  orig: 158, 39
+  offset: 0, 0
   index: -1
 Zui2
   rotate: false
-  xy: 613, 94
-  size: 275, 293
-  orig: 307, 293
+  xy: 855, 123
+  size: 138, 147
+  orig: 154, 147
   offset: 0, 0
-  index: -1
-boo (1)
-  rotate: true
-  xy: 613, 2
-  size: 90, 75
-  orig: 302, 236
-  offset: 66, 83
-  index: -1
-boo (10)
-  rotate: true
-  xy: 1357, 675
-  size: 283, 203
-  orig: 302, 236
-  offset: 19, 30
-  index: -1
-boo (11)
-  rotate: true
-  xy: 957, 392
-  size: 276, 204
-  orig: 302, 236
-  offset: 19, 30
-  index: -1
-boo (12)
-  rotate: true
-  xy: 745, 389
-  size: 276, 210
-  orig: 302, 236
-  offset: 19, 24
-  index: -1
-boo (13)
-  rotate: true
-  xy: 1769, 554
-  size: 267, 210
-  orig: 302, 236
-  offset: 18, 25
-  index: -1
-boo (14)
-  rotate: true
-  xy: 1163, 394
-  size: 276, 203
-  orig: 302, 236
-  offset: 19, 32
-  index: -1
-boo (15)
-  rotate: false
-  xy: 1575, 480
-  size: 189, 196
-  orig: 302, 236
-  offset: 20, 39
-  index: -1
-boo (2)
-  rotate: false
-  xy: 1524, 18
-  size: 135, 112
-  orig: 302, 236
-  offset: 43, 70
-  index: -1
-boo (3)
-  rotate: true
-  xy: 1766, 279
-  size: 273, 209
-  orig: 302, 236
-  offset: 21, 25
-  index: -1
-boo (4)
-  rotate: true
-  xy: 1368, 398
-  size: 275, 205
-  orig: 302, 236
-  offset: 20, 27
-  index: -1
-boo (5)
-  rotate: true
-  xy: 1562, 678
-  size: 280, 205
-  orig: 302, 236
-  offset: 18, 27
-  index: -1
-boo (6)
-  rotate: true
-  xy: 745, 667
-  size: 291, 199
-  orig: 302, 236
-  offset: 7, 32
-  index: -1
-boo (7)
-  rotate: true
-  xy: 890, 100
-  size: 287, 200
-  orig: 302, 236
-  offset: 6, 32
-  index: -1
-boo (8)
-  rotate: true
-  xy: 1156, 672
-  size: 286, 199
-  orig: 302, 236
-  offset: 7, 33
-  index: -1
-boo (9)
-  rotate: true
-  xy: 1323, 109
-  size: 283, 199
-  orig: 302, 236
-  offset: 19, 34
   index: -1

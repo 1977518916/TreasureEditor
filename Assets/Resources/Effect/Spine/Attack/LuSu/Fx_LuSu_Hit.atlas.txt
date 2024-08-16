@@ -1,90 +1,90 @@
 
 Fx_LuSu_Hit.png
-size: 718,948
+size: 482,360
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 弹幕_00000
   rotate: true
-  xy: 526, 443
-  size: 115, 119
-  orig: 267, 267
-  offset: 72, 74
+  xy: 2, 302
+  size: 56, 58
+  orig: 134, 134
+  offset: 37, 38
   index: -1
 弹幕_00002
-  rotate: true
-  xy: 528, 754
-  size: 192, 188
-  orig: 267, 267
-  offset: 37, 39
+  rotate: false
+  xy: 159, 265
+  size: 95, 93
+  orig: 134, 134
+  offset: 19, 20
   index: -1
 弹幕_00004
   rotate: false
-  xy: 492, 220
-  size: 222, 221
-  orig: 267, 267
-  offset: 17, 18
+  xy: 2, 164
+  size: 110, 109
+  orig: 134, 134
+  offset: 9, 10
   index: -1
 弹幕_00006
   rotate: false
-  xy: 2, 681
-  size: 267, 265
-  orig: 267, 267
+  xy: 260, 2
+  size: 134, 132
+  orig: 134, 134
   offset: 0, 1
   index: -1
 弹幕_00008
   rotate: false
-  xy: 271, 695
-  size: 255, 251
-  orig: 267, 267
-  offset: 5, 7
+  xy: 130, 9
+  size: 128, 125
+  orig: 134, 134
+  offset: 3, 4
   index: -1
 弹幕_00010
   rotate: false
-  xy: 271, 446
-  size: 253, 247
-  orig: 267, 267
-  offset: 7, 9
+  xy: 2, 18
+  size: 126, 123
+  orig: 134, 134
+  offset: 4, 5
   index: -1
 弹幕_00012
-  rotate: false
-  xy: 2, 439
-  size: 243, 240
-  orig: 267, 267
-  offset: 12, 14
+  rotate: true
+  xy: 114, 143
+  size: 120, 121
+  orig: 134, 134
+  offset: 7, 7
   index: -1
 弹幕_00014
-  rotate: false
-  xy: 247, 204
-  size: 243, 240
-  orig: 267, 267
-  offset: 12, 14
+  rotate: true
+  xy: 237, 136
+  size: 120, 121
+  orig: 134, 134
+  offset: 7, 7
   index: -1
 弹幕_00016
   rotate: false
-  xy: 2, 197
-  size: 243, 240
-  orig: 267, 267
-  offset: 12, 14
+  xy: 360, 136
+  size: 120, 120
+  orig: 134, 134
+  offset: 7, 8
   index: -1
 弹幕_00018
   rotate: false
-  xy: 492, 17
-  size: 206, 201
-  orig: 267, 267
-  offset: 26, 35
+  xy: 358, 258
+  size: 104, 100
+  orig: 134, 134
+  offset: 13, 18
   index: -1
 弹幕_00020
-  rotate: false
-  xy: 247, 2
-  size: 200, 200
-  orig: 267, 267
-  offset: 26, 34
+  rotate: true
+  xy: 256, 259
+  size: 99, 100
+  orig: 134, 134
+  offset: 13, 17
   index: -1
 弹幕_00022
-  rotate: false
-  xy: 528, 560
-  size: 167, 192
-  orig: 267, 267
-  offset: 27, 37
+  rotate: true
+  xy: 62, 275
+  size: 83, 95
+  orig: 134, 134
+  offset: 14, 19
   index: -1

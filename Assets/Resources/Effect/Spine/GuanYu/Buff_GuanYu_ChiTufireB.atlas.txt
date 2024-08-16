@@ -1,0 +1,83 @@
+
+Buff_GuanYu_ChiTufireB.png
+size: 1028,87
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+imager/Buff_CiTufireB_a_001
+  rotate: true
+  xy: 858, 6
+  size: 79, 84
+  orig: 93, 99
+  offset: 10, 0
+  index: -1
+imager/Buff_CiTufireB_a_002
+  rotate: true
+  xy: 682, 7
+  size: 78, 86
+  orig: 93, 99
+  offset: 11, 0
+  index: -1
+imager/Buff_CiTufireB_a_003
+  rotate: true
+  xy: 591, 7
+  size: 78, 89
+  orig: 93, 99
+  offset: 11, 0
+  index: -1
+imager/Buff_CiTufireB_a_004
+  rotate: true
+  xy: 496, 9
+  size: 76, 93
+  orig: 93, 99
+  offset: 11, 0
+  index: -1
+imager/Buff_CiTufireB_a_005
+  rotate: true
+  xy: 399, 7
+  size: 78, 95
+  orig: 93, 99
+  offset: 11, 0
+  index: -1
+imager/Buff_CiTufireB_a_006
+  rotate: true
+  xy: 300, 6
+  size: 79, 97
+  orig: 93, 99
+  offset: 11, 0
+  index: -1
+imager/Buff_CiTufireB_a_007
+  rotate: true
+  xy: 102, 2
+  size: 83, 97
+  orig: 93, 99
+  offset: 10, 0
+  index: -1
+imager/Buff_CiTufireB_a_008
+  rotate: true
+  xy: 201, 2
+  size: 83, 97
+  orig: 93, 99
+  offset: 10, 1
+  index: -1
+imager/Buff_CiTufireB_a_009
+  rotate: true
+  xy: 2, 2
+  size: 83, 98
+  orig: 93, 99
+  offset: 10, 1
+  index: -1
+imager/Buff_CiTufireB_a_010
+  rotate: true
+  xy: 770, 4
+  size: 81, 86
+  orig: 93, 99
+  offset: 10, 0
+  index: -1
+imager/Buff_CiTufireB_a_011
+  rotate: false
+  xy: 944, 3
+  size: 82, 82
+  orig: 93, 99
+  offset: 10, 0
+  index: -1

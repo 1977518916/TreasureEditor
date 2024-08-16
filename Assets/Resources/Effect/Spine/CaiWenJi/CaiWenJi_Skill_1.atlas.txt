@@ -1,0 +1,76 @@
+
+CaiWenJi_Skill_1.png
+size: 862,134
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/CaiWenJi_Skill_001
+  rotate: false
+  xy: 88, 2
+  size: 84, 130
+  orig: 146, 157
+  offset: 39, 14
+  index: -1
+images/CaiWenJi_Skill_002
+  rotate: false
+  xy: 174, 2
+  size: 84, 130
+  orig: 146, 157
+  offset: 39, 14
+  index: -1
+images/CaiWenJi_Skill_003
+  rotate: false
+  xy: 260, 2
+  size: 84, 130
+  orig: 146, 157
+  offset: 39, 14
+  index: -1
+images/CaiWenJi_Skill_004
+  rotate: false
+  xy: 346, 2
+  size: 84, 130
+  orig: 146, 157
+  offset: 39, 14
+  index: -1
+images/CaiWenJi_Skill_005
+  rotate: false
+  xy: 432, 2
+  size: 84, 130
+  orig: 146, 157
+  offset: 39, 14
+  index: -1
+images/CaiWenJi_Skill_006
+  rotate: false
+  xy: 518, 2
+  size: 84, 130
+  orig: 146, 157
+  offset: 39, 14
+  index: -1
+images/CaiWenJi_Skill_007
+  rotate: false
+  xy: 604, 2
+  size: 84, 130
+  orig: 146, 157
+  offset: 39, 14
+  index: -1
+images/CaiWenJi_Skill_008
+  rotate: false
+  xy: 690, 2
+  size: 84, 130
+  orig: 146, 157
+  offset: 39, 14
+  index: -1
+images/CaiWenJi_Skill_009
+  rotate: false
+  xy: 776, 2
+  size: 84, 130
+  orig: 146, 157
+  offset: 39, 14
+  index: -1
+images/CaiWenJi_Skill_010
+  rotate: false
+  xy: 2, 2
+  size: 84, 130
+  orig: 146, 157
+  offset: 39, 14
+  index: -1

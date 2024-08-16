@@ -1,0 +1,223 @@
+
+PaTa_jianglikuang.png
+size: 840,348
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/pata_jiangliguang_001
+  rotate: false
+  xy: 211, 308
+  size: 207, 38
+  orig: 223, 54
+  offset: 7, 9
+  index: -1
+images/pata_jiangliguang_002
+  rotate: false
+  xy: 2, 162
+  size: 205, 49
+  orig: 223, 54
+  offset: 8, 3
+  index: -1
+images/pata_jiangliguang_003
+  rotate: false
+  xy: 409, 158
+  size: 203, 49
+  orig: 223, 54
+  offset: 9, 3
+  index: -1
+images/pata_jiangliguang_004
+  rotate: false
+  xy: 209, 160
+  size: 198, 49
+  orig: 223, 54
+  offset: 11, 3
+  index: -1
+images/pata_jiangliguang_005
+  rotate: false
+  xy: 512, 54
+  size: 188, 50
+  orig: 223, 54
+  offset: 16, 3
+  index: -1
+images/pata_jiangliguang_006
+  rotate: false
+  xy: 129, 6
+  size: 168, 50
+  orig: 223, 54
+  offset: 25, 3
+  index: -1
+images/pata_jiangliguang_007
+  rotate: false
+  xy: 702, 20
+  size: 125, 50
+  orig: 223, 54
+  offset: 45, 3
+  index: -1
+images/pata_jiangliguang_008
+  rotate: true
+  xy: 777, 72
+  size: 83, 50
+  orig: 223, 54
+  offset: 69, 3
+  index: -1
+images/pata_jiangliguang_009
+  rotate: false
+  xy: 2, 8
+  size: 125, 50
+  orig: 223, 54
+  offset: 48, 3
+  index: -1
+images/pata_jiangliguang_010
+  rotate: false
+  xy: 299, 4
+  size: 167, 50
+  orig: 223, 54
+  offset: 27, 3
+  index: -1
+images/pata_jiangliguang_011
+  rotate: false
+  xy: 614, 157
+  size: 193, 49
+  orig: 223, 54
+  offset: 14, 3
+  index: -1
+images/pata_jiangliguang_012
+  rotate: false
+  xy: 413, 209
+  size: 200, 48
+  orig: 223, 54
+  offset: 10, 4
+  index: -1
+images/pata_jiangliguang_013
+  rotate: false
+  xy: 630, 258
+  size: 207, 47
+  orig: 223, 54
+  offset: 7, 4
+  index: -1
+images/pata_jiangliguang_014
+  rotate: false
+  xy: 211, 260
+  size: 208, 45
+  orig: 223, 54
+  offset: 6, 5
+  index: -1
+images/pata_jiangliguang_015
+  rotate: false
+  xy: 420, 307
+  size: 208, 39
+  orig: 223, 54
+  offset: 6, 8
+  index: -1
+images/pata_jiangliguang_016
+  rotate: false
+  xy: 630, 307
+  size: 207, 39
+  orig: 223, 54
+  offset: 7, 8
+  index: -1
+images/pata_jiangliguang_017
+  rotate: false
+  xy: 2, 213
+  size: 206, 47
+  orig: 223, 54
+  offset: 7, 4
+  index: -1
+images/pata_jiangliguang_018
+  rotate: false
+  xy: 2, 111
+  size: 203, 49
+  orig: 223, 54
+  offset: 9, 3
+  index: -1
+images/pata_jiangliguang_019
+  rotate: false
+  xy: 207, 109
+  size: 199, 49
+  orig: 223, 54
+  offset: 11, 3
+  index: -1
+images/pata_jiangliguang_020
+  rotate: false
+  xy: 408, 107
+  size: 193, 49
+  orig: 223, 54
+  offset: 14, 3
+  index: -1
+images/pata_jiangliguang_021
+  rotate: false
+  xy: 603, 106
+  size: 172, 49
+  orig: 223, 54
+  offset: 25, 3
+  index: -1
+images/pata_jiangliguang_022
+  rotate: false
+  xy: 2, 60
+  size: 127, 49
+  orig: 223, 54
+  offset: 47, 3
+  index: -1
+images/pata_jiangliguang_023
+  rotate: false
+  xy: 131, 58
+  size: 85, 49
+  orig: 223, 54
+  offset: 69, 3
+  index: -1
+images/pata_jiangliguang_024
+  rotate: false
+  xy: 218, 58
+  size: 124, 49
+  orig: 223, 54
+  offset: 48, 3
+  index: -1
+images/pata_jiangliguang_025
+  rotate: false
+  xy: 344, 56
+  size: 166, 49
+  orig: 223, 54
+  offset: 27, 3
+  index: -1
+images/pata_jiangliguang_026
+  rotate: false
+  xy: 615, 208
+  size: 193, 48
+  orig: 223, 54
+  offset: 14, 4
+  index: -1
+images/pata_jiangliguang_027
+  rotate: false
+  xy: 210, 211
+  size: 201, 47
+  orig: 223, 54
+  offset: 10, 4
+  index: -1
+images/pata_jiangliguang_028
+  rotate: false
+  xy: 421, 259
+  size: 207, 46
+  orig: 223, 54
+  offset: 7, 5
+  index: -1
+images/pata_jiangliguang_029
+  rotate: false
+  xy: 2, 262
+  size: 207, 44
+  orig: 223, 54
+  offset: 7, 6
+  index: -1
+images/pata_jiangliguang_030
+  rotate: false
+  xy: 2, 308
+  size: 207, 38
+  orig: 223, 54
+  offset: 7, 9
+  index: -1
+images/pata_jianglikuang
+  rotate: false
+  xy: 468, 2
+  size: 207, 50
+  orig: 209, 52
+  offset: 1, 1
+  index: -1

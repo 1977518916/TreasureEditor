@@ -1,27 +1,76 @@
 
 LingTong_Skill_2.png
-size: 512,128
+size: 204,288
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-FeiDan
-  rotate: false
-  xy: 250, 22
-  size: 23, 97
-  orig: 25, 97
-  offset: 1, 0
+LingTong_skill2_001
+  rotate: true
+  xy: 2, 233
+  size: 53, 92
+  orig: 70, 121
+  offset: 7, 10
   index: -1
-Glow
-  rotate: false
-  xy: 132, 3
-  size: 116, 116
-  orig: 128, 128
-  offset: 6, 6
+LingTong_skill2_002
+  rotate: true
+  xy: 108, 119
+  size: 56, 91
+  orig: 70, 121
+  offset: 5, 12
   index: -1
-GuangZhu
-  rotate: false
-  xy: 2, 2
-  size: 128, 117
-  orig: 128, 128
-  offset: 0, 0
+LingTong_skill2_003
+  rotate: true
+  xy: 100, 2
+  size: 57, 102
+  orig: 70, 121
+  offset: 5, 11
+  index: -1
+LingTong_skill2_004
+  rotate: true
+  xy: 2, 62
+  size: 56, 99
+  orig: 70, 121
+  offset: 5, 11
+  index: -1
+LingTong_skill2_005
+  rotate: true
+  xy: 2, 120
+  size: 55, 104
+  orig: 70, 121
+  offset: 6, 7
+  index: -1
+LingTong_skill2_006
+  rotate: true
+  xy: 96, 233
+  size: 53, 105
+  orig: 70, 121
+  offset: 7, 4
+  index: -1
+LingTong_skill2_007
+  rotate: true
+  xy: 2, 177
+  size: 54, 106
+  orig: 70, 121
+  offset: 6, 0
+  index: -1
+LingTong_skill2_008
+  rotate: true
+  xy: 103, 61
+  size: 56, 99
+  orig: 70, 121
+  offset: 5, 0
+  index: -1
+LingTong_skill2_009
+  rotate: true
+  xy: 2, 4
+  size: 56, 96
+  orig: 70, 121
+  offset: 5, 3
+  index: -1
+LingTong_skill2_010
+  rotate: true
+  xy: 110, 177
+  size: 54, 91
+  orig: 70, 121
+  offset: 6, 11
   index: -1

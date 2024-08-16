@@ -1,132 +1,132 @@
 
 XunYu.png
-size: 1776,520
+size: 888,272
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Arm_B
   rotate: true
-  xy: 914, 47
-  size: 155, 214
-  orig: 155, 214
+  xy: 777, 144
+  size: 78, 107
+  orig: 78, 107
   offset: 0, 0
   index: -1
 Arm_F
-  rotate: true
-  xy: 1230, 155
-  size: 153, 217
-  orig: 153, 228
-  offset: 0, 3
+  rotate: false
+  xy: 616, 2
+  size: 77, 109
+  orig: 77, 114
+  offset: 0, 1
   index: -1
 Body
-  rotate: true
-  xy: 907, 279
-  size: 237, 320
-  orig: 238, 321
-  offset: 0, 1
+  rotate: false
+  xy: 308, 109
+  size: 119, 161
+  orig: 119, 161
+  offset: 0, 0
   index: -1
 Eye1
   rotate: false
-  xy: 1229, 310
-  size: 303, 206
-  orig: 305, 208
-  offset: 1, 1
+  xy: 308, 3
+  size: 153, 104
+  orig: 153, 104
+  offset: 0, 0
   index: -1
 Eye2
   rotate: false
-  xy: 612, 14
-  size: 300, 186
-  orig: 302, 188
-  offset: 1, 1
+  xy: 463, 14
+  size: 151, 93
+  orig: 151, 94
+  offset: 0, 0
   index: -1
 FaDai1
   rotate: false
-  xy: 1449, 29
-  size: 72, 279
-  orig: 84, 279
+  xy: 617, 130
+  size: 36, 140
+  orig: 42, 140
   offset: 0, 0
   index: -1
 FaDai2
-  rotate: true
-  xy: 907, 204
-  size: 73, 321
-  orig: 73, 351
-  offset: 0, 29
+  rotate: false
+  xy: 429, 109
+  size: 37, 161
+  orig: 37, 176
+  offset: 0, 14
   index: -1
 Hair1
-  rotate: true
-  xy: 1183, 3
-  size: 47, 79
-  orig: 47, 79
+  rotate: false
+  xy: 748, 66
+  size: 24, 40
+  orig: 24, 40
   offset: 0, 0
   index: -1
 Hair2
   rotate: false
-  xy: 612, 202
-  size: 293, 314
-  orig: 293, 314
+  xy: 468, 113
+  size: 147, 157
+  orig: 147, 157
   offset: 0, 0
   index: -1
 Hand_F
   rotate: false
-  xy: 1130, 17
-  size: 51, 50
-  orig: 53, 52
-  offset: 1, 1
+  xy: 748, 108
+  size: 27, 26
+  orig: 27, 26
+  offset: 0, 0
   index: -1
 Head
   rotate: false
-  xy: 2, 2
-  size: 608, 514
-  orig: 641, 529
+  xy: 2, 13
+  size: 304, 257
+  orig: 321, 265
   offset: 0, 0
   index: -1
 HuZi1
   rotate: false
-  xy: 1616, 5
-  size: 142, 110
-  orig: 142, 110
+  xy: 777, 87
+  size: 71, 55
+  orig: 71, 55
   offset: 0, 0
   index: -1
 HuZi2
-  rotate: true
-  xy: 1616, 117
-  size: 130, 131
-  orig: 131, 132
-  offset: 1, 0
+  rotate: false
+  xy: 774, 7
+  size: 66, 66
+  orig: 66, 66
+  offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 1190, 170
-  size: 32, 32
-  orig: 32, 32
+  xy: 655, 118
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 WuQi
   rotate: false
-  xy: 1534, 249
-  size: 240, 267
-  orig: 242, 269
-  offset: 1, 1
+  xy: 655, 136
+  size: 120, 134
+  orig: 121, 135
+  offset: 1, 0
   index: -1
 YiFu_B
-  rotate: true
-  xy: 1190, 52
-  size: 101, 239
-  orig: 101, 239
+  rotate: false
+  xy: 695, 14
+  size: 51, 120
+  orig: 51, 120
   offset: 0, 0
   index: -1
 YiFu_F
-  rotate: false
-  xy: 1523, 31
-  size: 91, 216
-  orig: 91, 216
+  rotate: true
+  xy: 777, 224
+  size: 46, 108
+  orig: 46, 108
   offset: 0, 0
   index: -1
 YuPei
   rotate: false
-  xy: 1130, 69
-  size: 58, 133
-  orig: 58, 134
-  offset: 0, 1
+  xy: 850, 75
+  size: 29, 67
+  orig: 29, 67
+  offset: 0, 0
   index: -1

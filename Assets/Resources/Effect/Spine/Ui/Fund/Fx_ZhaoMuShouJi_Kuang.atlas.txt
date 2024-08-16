@@ -1,0 +1,13 @@
+
+Fx_ZhaoMuShouJi_Kuang.png
+size: 212,132
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_ZhaoMuShouJi_Kuang
+  rotate: false
+  xy: 2, 2
+  size: 207, 127
+  orig: 215, 135
+  offset: 4, 4
+  index: -1

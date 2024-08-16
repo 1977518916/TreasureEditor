@@ -1,117 +1,111 @@
 
 buff_Sunflower.png
-size: 2021,1755
+size: 1546,790
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 images/aa
   rotate: false
-  xy: 341, 1609
+  xy: 937, 2
   size: 145, 144
   orig: 146, 145
   offset: 1, 0
   index: -1
 images/yuan
   rotate: false
-  xy: 1328, 1479
-  size: 275, 274
+  xy: 1269, 10
+  size: 273, 273
   orig: 279, 278
-  offset: 2, 2
+  offset: 3, 2
   index: -1
 images/新建文件夹/lzz (1)
   rotate: false
-  xy: 2, 1666
-  size: 106, 87
-  orig: 1088, 639
-  offset: 512, 345
+  xy: 977, 466
+  size: 51, 44
+  orig: 544, 320
+  offset: 257, 173
   index: -1
 images/新建文件夹/lzz (10)
   rotate: false
-  xy: 2, 31
-  size: 947, 526
-  orig: 1088, 639
-  offset: 92, 77
+  xy: 1030, 525
+  size: 472, 263
+  orig: 544, 320
+  offset: 47, 39
   index: -1
 images/新建文件夹/lzz (11)
   rotate: false
-  xy: 951, 2
-  size: 996, 555
-  orig: 1088, 639
-  offset: 69, 58
+  xy: 531, 512
+  size: 497, 276
+  orig: 544, 320
+  offset: 35, 30
+  index: -1
+images/新建文件夹/lzz (12)
+  rotate: false
+  xy: 2, 197
+  size: 518, 289
+  orig: 544, 320
+  offset: 25, 21
+  index: -1
+images/新建文件夹/lzz (13)
+  rotate: false
+  xy: 2, 488
+  size: 527, 300
+  orig: 544, 320
+  offset: 15, 14
   index: -1
 images/新建文件夹/lzz (2)
   rotate: false
-  xy: 110, 1610
-  size: 229, 143
-  orig: 1088, 639
-  offset: 442, 318
+  xy: 341, 16
+  size: 115, 72
+  orig: 544, 320
+  offset: 221, 159
   index: -1
 images/新建文件夹/lzz (3)
   rotate: false
-  xy: 488, 1542
-  size: 358, 211
-  orig: 1088, 639
-  offset: 380, 278
+  xy: 341, 90
+  size: 179, 105
+  orig: 544, 320
+  offset: 190, 140
   index: -1
 images/新建文件夹/lzz (4)
-  rotate: false
-  xy: 848, 1482
-  size: 478, 271
-  orig: 1088, 639
-  offset: 320, 242
+  rotate: true
+  xy: 1409, 285
+  size: 238, 135
+  orig: 544, 320
+  offset: 161, 122
   index: -1
 images/新建文件夹/lzz (5)
   rotate: false
-  xy: 2, 1214
-  size: 582, 326
-  orig: 1088, 639
-  offset: 269, 207
+  xy: 977, 148
+  size: 290, 163
+  orig: 544, 320
+  offset: 135, 104
   index: -1
 images/新建文件夹/lzz (6)
   rotate: false
-  xy: 586, 1103
-  size: 675, 377
-  orig: 1088, 639
-  offset: 223, 176
+  xy: 2, 8
+  size: 337, 187
+  orig: 544, 320
+  offset: 112, 89
   index: -1
 images/新建文件夹/lzz (7)
   rotate: false
-  xy: 1263, 1056
-  size: 756, 421
-  orig: 1088, 639
-  offset: 183, 147
+  xy: 1030, 313
+  size: 377, 210
+  orig: 544, 320
+  offset: 92, 74
   index: -1
 images/新建文件夹/lzz (8)
   rotate: false
-  xy: 2, 641
-  size: 828, 460
-  orig: 1088, 639
-  offset: 149, 121
+  xy: 522, 31
+  size: 413, 230
+  orig: 544, 320
+  offset: 75, 61
   index: -1
 images/新建文件夹/lzz (9)
   rotate: false
-  xy: 832, 559
-  size: 891, 495
-  orig: 1088, 639
-  offset: 119, 98
-  index: -1
-
-buff_Sunflower2.png
-size: 1185,1060
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-images/新建文件夹/lzz (12)
-  rotate: true
-  xy: 604, 19
-  size: 1039, 579
-  orig: 1088, 639
-  offset: 48, 41
-  index: -1
-images/新建文件夹/lzz (13)
-  rotate: true
-  xy: 2, 2
-  size: 1056, 600
-  orig: 1088, 639
-  offset: 29, 26
+  xy: 531, 263
+  size: 444, 247
+  orig: 544, 320
+  offset: 60, 50
   index: -1

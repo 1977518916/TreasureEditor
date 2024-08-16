@@ -1,0 +1,76 @@
+
+Fx_HeCheng.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow_01
+  rotate: true
+  xy: 2, 2
+  size: 72, 90
+  orig: 72, 90
+  offset: 0, 0
+  index: -1
+Glow_02
+  rotate: false
+  xy: 140, 159
+  size: 73, 89
+  orig: 73, 89
+  offset: 0, 0
+  index: -1
+JianTou
+  rotate: false
+  xy: 2, 76
+  size: 136, 172
+  orig: 136, 172
+  offset: 0, 0
+  index: -1
+Plane_01
+  rotate: false
+  xy: 215, 181
+  size: 95, 67
+  orig: 95, 67
+  offset: 0, 0
+  index: -1
+Plane_02
+  rotate: false
+  xy: 312, 181
+  size: 95, 67
+  orig: 95, 67
+  offset: 0, 0
+  index: -1
+Plane_03
+  rotate: false
+  xy: 409, 181
+  size: 95, 67
+  orig: 95, 67
+  offset: 0, 0
+  index: -1
+Plane_04
+  rotate: true
+  xy: 140, 62
+  size: 95, 67
+  orig: 95, 67
+  offset: 0, 0
+  index: -1
+Plane_05
+  rotate: false
+  xy: 215, 112
+  size: 95, 67
+  orig: 95, 67
+  offset: 0, 0
+  index: -1
+Plane_06
+  rotate: false
+  xy: 312, 112
+  size: 95, 67
+  orig: 95, 67
+  offset: 0, 0
+  index: -1
+Plane_07
+  rotate: false
+  xy: 409, 112
+  size: 95, 67
+  orig: 95, 67
+  offset: 0, 0
+  index: -1

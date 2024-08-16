@@ -1,118 +1,118 @@
 
 Monster018.png
-size: 1284,160
+size: 377,141
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Body_1
   rotate: false
-  xy: 868, 73
-  size: 119, 85
-  orig: 123, 85
-  offset: 3, 0
+  xy: 2, 2
+  size: 60, 43
+  orig: 62, 43
+  offset: 1, 0
   index: -1
 Body_2
   rotate: false
-  xy: 989, 73
-  size: 119, 85
-  orig: 123, 85
-  offset: 3, 0
+  xy: 64, 2
+  size: 60, 43
+  orig: 62, 43
+  offset: 1, 0
   index: -1
 Body_3
-  rotate: true
-  xy: 1110, 39
-  size: 119, 85
-  orig: 123, 85
-  offset: 3, 0
+  rotate: false
+  xy: 126, 2
+  size: 60, 43
+  orig: 62, 43
+  offset: 1, 0
   index: -1
 Body_4
-  rotate: true
-  xy: 1197, 39
-  size: 119, 85
-  orig: 123, 85
-  offset: 3, 0
+  rotate: false
+  xy: 188, 2
+  size: 60, 43
+  orig: 62, 43
+  offset: 1, 0
   index: -1
 Dao
   rotate: true
-  xy: 746, 2
-  size: 52, 115
-  orig: 53, 115
-  offset: 1, 0
+  xy: 317, 18
+  size: 27, 58
+  orig: 27, 58
+  offset: 0, 0
   index: -1
 Eye_L_1
   rotate: false
-  xy: 999, 13
-  size: 58, 58
-  orig: 58, 58
+  xy: 322, 48
+  size: 29, 29
+  orig: 29, 29
   offset: 0, 0
   index: -1
 Eye_R_1
-  rotate: false
-  xy: 934, 9
-  size: 63, 62
-  orig: 63, 62
+  rotate: true
+  xy: 284, 13
+  size: 32, 31
+  orig: 32, 31
   offset: 0, 0
   index: -1
 Feet_L_1
-  rotate: true
-  xy: 1059, 20
-  size: 21, 16
-  orig: 21, 16
+  rotate: false
+  xy: 260, 3
+  size: 11, 8
+  orig: 11, 8
   offset: 0, 0
   index: -1
 Feet_R_1
   rotate: true
-  xy: 1077, 23
-  size: 18, 15
-  orig: 18, 15
+  xy: 250, 2
+  size: 9, 8
+  orig: 9, 8
   offset: 0, 0
   index: -1
 Hair_B_1
-  rotate: false
-  xy: 746, 56
-  size: 120, 102
-  orig: 120, 102
+  rotate: true
+  xy: 322, 79
+  size: 60, 51
+  orig: 60, 51
   offset: 0, 0
   index: -1
 Hand_L_1
   rotate: true
-  xy: 1059, 43
-  size: 28, 25
-  orig: 28, 25
+  xy: 317, 2
+  size: 14, 13
+  orig: 14, 13
   offset: 0, 0
   index: -1
 Head_1
-  rotate: true
-  xy: 2, 3
-  size: 155, 184
-  orig: 155, 184
+  rotate: false
+  xy: 2, 47
+  size: 78, 92
+  orig: 78, 92
   offset: 0, 0
   index: -1
 Head_2
-  rotate: true
-  xy: 188, 3
-  size: 155, 184
-  orig: 155, 184
+  rotate: false
+  xy: 82, 47
+  size: 78, 92
+  orig: 78, 92
   offset: 0, 0
   index: -1
 Head_3
-  rotate: true
-  xy: 374, 3
-  size: 155, 184
-  orig: 155, 184
+  rotate: false
+  xy: 162, 47
+  size: 78, 92
+  orig: 78, 92
   offset: 0, 0
   index: -1
 Head_4
-  rotate: true
-  xy: 560, 3
-  size: 155, 184
-  orig: 155, 184
+  rotate: false
+  xy: 242, 47
+  size: 78, 92
+  orig: 78, 92
   offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 868, 7
-  size: 64, 64
-  orig: 64, 64
+  xy: 250, 13
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1

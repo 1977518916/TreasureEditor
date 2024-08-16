@@ -1,0 +1,13 @@
+
+Fx_ZhaoMuShouJi_Qiu.png
+size: 72,72
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_ZhaoMuShouJi_Qiu
+  rotate: false
+  xy: 2, 2
+  size: 65, 65
+  orig: 67, 67
+  offset: 1, 1
+  index: -1

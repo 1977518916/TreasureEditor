@@ -1,104 +1,104 @@
 
 ZhaoYun_Skill_2.png
-size: 1759,257
+size: 220,508
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 dian (1)
-  rotate: false
-  xy: 1397, 187
-  size: 222, 68
-  orig: 479, 96
-  offset: 7, 14
+  rotate: true
+  xy: 176, 196
+  size: 110, 34
+  orig: 240, 48
+  offset: 4, 7
   index: -1
 dian (2)
-  rotate: false
-  xy: 1397, 187
-  size: 222, 68
-  orig: 479, 96
-  offset: 7, 14
+  rotate: true
+  xy: 176, 196
+  size: 110, 34
+  orig: 240, 48
+  offset: 4, 7
   index: -1
 dian (11)
-  rotate: false
-  xy: 466, 165
-  size: 452, 90
-  orig: 479, 96
-  offset: 26, 3
+  rotate: true
+  xy: 50, 280
+  size: 225, 44
+  orig: 240, 48
+  offset: 14, 2
   index: -1
 dian (13)
-  rotate: false
-  xy: 2, 70
-  size: 460, 91
-  orig: 479, 96
-  offset: 19, 2
+  rotate: true
+  xy: 49, 44
+  size: 229, 45
+  orig: 240, 48
+  offset: 11, 1
   index: -1
 dian (15)
   rotate: false
-  xy: 925, 96
-  size: 430, 82
-  orig: 479, 96
-  offset: 49, 7
+  xy: 2, 2
+  size: 215, 40
+  orig: 240, 48
+  offset: 25, 4
   index: -1
 dian (17)
-  rotate: false
-  xy: 941, 11
-  size: 421, 83
-  orig: 479, 96
-  offset: 58, 7
+  rotate: true
+  xy: 96, 57
+  size: 209, 40
+  orig: 240, 48
+  offset: 30, 4
   index: -1
 dian (19)
-  rotate: false
-  xy: 1357, 106
-  size: 400, 72
-  orig: 479, 96
-  offset: 78, 13
+  rotate: true
+  xy: 169, 308
+  size: 197, 34
+  orig: 240, 48
+  offset: 42, 7
   index: -1
 dian (21)
-  rotate: false
-  xy: 1364, 31
-  size: 387, 73
-  orig: 479, 96
-  offset: 92, 11
+  rotate: true
+  xy: 138, 73
+  size: 193, 36
+  orig: 240, 48
+  offset: 47, 6
   index: -1
 dian (23)
-  rotate: false
-  xy: 2, 11
-  size: 242, 57
-  orig: 479, 96
-  offset: 230, 19
+  rotate: true
+  xy: 176, 74
+  size: 120, 27
+  orig: 240, 48
+  offset: 116, 10
   index: -1
 dian (25)
   rotate: false
-  xy: 246, 29
-  size: 118, 39
-  orig: 479, 96
-  offset: 352, 27
+  xy: 138, 55
+  size: 58, 16
+  orig: 240, 48
+  offset: 177, 15
   index: -1
 dian (3)
-  rotate: false
-  xy: 464, 2
-  size: 475, 67
-  orig: 479, 96
-  offset: 4, 16
+  rotate: true
+  xy: 134, 268
+  size: 237, 33
+  orig: 240, 48
+  offset: 3, 8
   index: -1
 dian (5)
-  rotate: false
-  xy: 920, 180
-  size: 475, 75
-  orig: 479, 96
-  offset: 4, 8
+  rotate: true
+  xy: 96, 268
+  size: 237, 36
+  orig: 240, 48
+  offset: 3, 5
   index: -1
 dian (7)
-  rotate: false
-  xy: 464, 71
-  size: 459, 90
-  orig: 479, 96
-  offset: 20, 4
+  rotate: true
+  xy: 2, 44
+  size: 229, 45
+  orig: 240, 48
+  offset: 11, 2
   index: -1
 dian (9)
-  rotate: false
-  xy: 2, 163
-  size: 462, 92
-  orig: 479, 96
-  offset: 17, 2
+  rotate: true
+  xy: 2, 275
+  size: 230, 46
+  orig: 240, 48
+  offset: 10, 1
   index: -1

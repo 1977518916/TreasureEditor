@@ -1,0 +1,62 @@
+
+Fx_LvBu_Attack.png
+size: 283,120
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_LvBu_Attack_001
+  rotate: true
+  xy: 153, 65
+  size: 25, 124
+  orig: 56, 157
+  offset: 16, 24
+  index: -1
+images/Fx_LvBu_Attack_002
+  rotate: true
+  xy: 146, 7
+  size: 27, 130
+  orig: 56, 157
+  offset: 15, 18
+  index: -1
+images/Fx_LvBu_Attack_003
+  rotate: true
+  xy: 2, 2
+  size: 27, 137
+  orig: 56, 157
+  offset: 15, 12
+  index: -1
+images/Fx_LvBu_Attack_004
+  rotate: true
+  xy: 2, 60
+  size: 27, 142
+  orig: 56, 157
+  offset: 15, 7
+  index: -1
+images/Fx_LvBu_Attack_005
+  rotate: true
+  xy: 2, 89
+  size: 29, 149
+  orig: 56, 157
+  offset: 14, 1
+  index: -1
+images/Fx_LvBu_Attack_006
+  rotate: true
+  xy: 2, 31
+  size: 27, 142
+  orig: 56, 157
+  offset: 15, 7
+  index: -1
+images/Fx_LvBu_Attack_007
+  rotate: true
+  xy: 146, 36
+  size: 27, 135
+  orig: 56, 157
+  offset: 15, 14
+  index: -1
+images/Fx_LvBu_Attack_008
+  rotate: true
+  xy: 153, 92
+  size: 26, 127
+  orig: 56, 157
+  offset: 15, 21
+  index: -1

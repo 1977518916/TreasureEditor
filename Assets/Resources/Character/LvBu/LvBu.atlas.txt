@@ -1,97 +1,272 @@
 
 LvBu.png
-size: 1380,1040
+size: 852,520
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Body
   rotate: false
-  xy: 1104, 224
-  size: 272, 223
-  orig: 272, 224
-  offset: 0, 1
+  xy: 678, 194
+  size: 136, 112
+  orig: 136, 112
+  offset: 0, 0
   index: -1
 Eye
   rotate: false
-  xy: 1030, 813
-  size: 315, 222
-  orig: 317, 224
-  offset: 1, 1
+  xy: 518, 194
+  size: 158, 112
+  orig: 159, 112
+  offset: 0, 0
   index: -1
 Eye1
   rotate: false
-  xy: 1030, 609
-  size: 315, 202
-  orig: 315, 202
+  xy: 266, 151
+  size: 158, 101
+  orig: 158, 101
   offset: 0, 0
   index: -1
 Hand_F
   rotate: false
-  xy: 577, 427
-  size: 39, 42
-  orig: 41, 44
-  offset: 1, 1
+  xy: 813, 373
+  size: 21, 22
+  orig: 21, 22
+  offset: 0, 0
   index: -1
 Head
   rotate: true
-  xy: 2, 2
-  size: 419, 586
-  orig: 431, 596
+  xy: 518, 308
+  size: 210, 293
+  orig: 216, 298
   offset: 0, 0
   index: -1
 HongYing_1
   rotate: false
-  xy: 2, 423
-  size: 524, 612
-  orig: 524, 612
+  xy: 2, 212
+  size: 262, 306
+  orig: 262, 306
   offset: 0, 0
   index: -1
 HongYing_2
   rotate: false
-  xy: 528, 508
-  size: 500, 527
-  orig: 500, 533
-  offset: 0, 6
+  xy: 266, 254
+  size: 250, 264
+  orig: 250, 267
+  offset: 0, 3
   index: -1
 JianJia_B
-  rotate: true
-  xy: 1030, 449
-  size: 158, 212
-  orig: 158, 217
+  rotate: false
+  xy: 426, 146
+  size: 79, 106
+  orig: 79, 109
   offset: 0, 0
   index: -1
 JianJia_F
-  rotate: true
-  xy: 1104, 33
-  size: 189, 227
-  orig: 189, 227
+  rotate: false
+  xy: 260, 35
+  size: 95, 114
+  orig: 95, 114
   offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 618, 437
-  size: 32, 32
-  orig: 32, 32
+  xy: 813, 355
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 WuQi
   rotate: true
-  xy: 590, 12
-  size: 413, 512
-  orig: 413, 512
+  xy: 2, 3
+  size: 207, 256
+  orig: 207, 256
   offset: 0, 0
   index: -1
 Yan
   rotate: false
-  xy: 528, 428
-  size: 47, 41
-  orig: 47, 41
+  xy: 813, 397
+  size: 24, 21
+  orig: 24, 21
   offset: 0, 0
   index: -1
 Zui
   rotate: false
-  xy: 528, 471
-  size: 97, 35
-  orig: 99, 37
-  offset: 1, 1
+  xy: 260, 14
+  size: 50, 19
+  orig: 50, 19
+  offset: 0, 0
+  index: -1
+lvbu_Skill_1_Guide_001
+  rotate: false
+  xy: 642, 67
+  size: 59, 50
+  orig: 69, 59
+  offset: 8, 3
+  index: -1
+lvbu_Skill_1_Guide_002
+  rotate: false
+  xy: 579, 65
+  size: 61, 52
+  orig: 69, 59
+  offset: 8, 3
+  index: -1
+lvbu_Skill_1_Guide_003
+  rotate: false
+  xy: 703, 67
+  size: 59, 50
+  orig: 69, 59
+  offset: 8, 3
+  index: -1
+lvbu_Skill_1_Guide_004
+  rotate: true
+  xy: 786, 17
+  size: 48, 45
+  orig: 69, 59
+  offset: 10, 3
+  index: -1
+lvbu_Skill_1_Guide_005
+  rotate: false
+  xy: 813, 449
+  size: 36, 35
+  orig: 69, 59
+  offset: 22, 9
+  index: -1
+lvbu_Skill_1_Guide_006
+  rotate: false
+  xy: 312, 14
+  size: 32, 19
+  orig: 69, 59
+  offset: 23, 18
+  index: -1
+lvbu_Skill_1_Guide_007
+  rotate: true
+  xy: 507, 231
+  size: 21, 9
+  orig: 69, 59
+  offset: 25, 22
+  index: -1
+lvbu_skill1_001
+  rotate: false
+  xy: 426, 69
+  size: 78, 75
+  orig: 80, 75
+  offset: 0, 0
+  index: -1
+lvbu_skill1_002
+  rotate: false
+  xy: 507, 119
+  size: 78, 73
+  orig: 80, 75
+  offset: 2, 0
+  index: -1
+lvbu_skill1_003
+  rotate: false
+  xy: 587, 119
+  size: 78, 73
+  orig: 80, 75
+  offset: 2, 0
+  index: -1
+lvbu_skill1_004
+  rotate: false
+  xy: 667, 119
+  size: 72, 73
+  orig: 80, 75
+  offset: 5, 0
+  index: -1
+lvbu_skill1_005
+  rotate: false
+  xy: 741, 119
+  size: 70, 73
+  orig: 80, 75
+  offset: 5, 0
+  index: -1
+lvbu_skill1_006
+  rotate: true
+  xy: 506, 47
+  size: 70, 71
+  orig: 80, 75
+  offset: 5, 1
+  index: -1
+lvbu_skill1_007
+  rotate: true
+  xy: 357, 80
+  size: 69, 67
+  orig: 80, 75
+  offset: 5, 1
+  index: -1
+lvbu_skill1_008
+  rotate: true
+  xy: 357, 9
+  size: 69, 67
+  orig: 80, 75
+  offset: 5, 1
+  index: -1
+lvbu_skill1_009
+  rotate: false
+  xy: 426, 2
+  size: 64, 65
+  orig: 80, 75
+  offset: 7, 2
+  index: -1
+lvbu_skill1_1_001
+  rotate: false
+  xy: 813, 420
+  size: 28, 27
+  orig: 59, 61
+  offset: 4, 15
+  index: -1
+lvbu_skill1_1_002
+  rotate: false
+  xy: 813, 486
+  size: 37, 32
+  orig: 59, 61
+  offset: 4, 13
+  index: -1
+lvbu_skill1_1_003
+  rotate: false
+  xy: 492, 2
+  size: 42, 43
+  orig: 59, 61
+  offset: 4, 10
+  index: -1
+lvbu_skill1_1_004
+  rotate: true
+  xy: 764, 67
+  size: 50, 48
+  orig: 59, 61
+  offset: 4, 8
+  index: -1
+lvbu_skill1_1_005
+  rotate: true
+  xy: 634, 13
+  size: 50, 48
+  orig: 59, 61
+  offset: 4, 8
+  index: -1
+lvbu_skill1_1_006
+  rotate: false
+  xy: 582, 14
+  size: 50, 49
+  orig: 59, 61
+  offset: 4, 8
+  index: -1
+lvbu_skill1_1_007
+  rotate: false
+  xy: 684, 16
+  size: 50, 49
+  orig: 59, 61
+  offset: 4, 8
+  index: -1
+lvbu_skill1_1_008
+  rotate: false
+  xy: 736, 17
+  size: 48, 48
+  orig: 59, 61
+  offset: 4, 9
+  index: -1
+lvbu_skill1_1_009
+  rotate: true
+  xy: 536, 5
+  size: 40, 44
+  orig: 59, 61
+  offset: 7, 11
   index: -1

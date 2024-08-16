@@ -1,0 +1,125 @@
+
+PaTa_dengtai.png
+size: 462,112
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/dengtai
+  rotate: false
+  xy: 424, 33
+  size: 36, 31
+  orig: 36, 31
+  offset: 0, 0
+  index: -1
+images/pata_dengtai_001
+  rotate: true
+  xy: 2, 2
+  size: 47, 59
+  orig: 52, 70
+  offset: 4, 3
+  index: -1
+images/pata_dengtai_002
+  rotate: false
+  xy: 51, 51
+  size: 47, 59
+  orig: 52, 70
+  offset: 4, 3
+  index: -1
+images/pata_dengtai_003
+  rotate: false
+  xy: 100, 52
+  size: 47, 58
+  orig: 52, 70
+  offset: 3, 3
+  index: -1
+images/pata_dengtai_004
+  rotate: false
+  xy: 233, 5
+  size: 46, 58
+  orig: 52, 70
+  offset: 3, 3
+  index: -1
+images/pata_dengtai_005
+  rotate: true
+  xy: 124, 4
+  size: 46, 59
+  orig: 52, 70
+  offset: 3, 3
+  index: -1
+images/pata_dengtai_006
+  rotate: true
+  xy: 149, 64
+  size: 46, 59
+  orig: 52, 70
+  offset: 3, 3
+  index: -1
+images/pata_dengtai_007
+  rotate: false
+  xy: 185, 3
+  size: 46, 59
+  orig: 52, 70
+  offset: 3, 3
+  index: -1
+images/pata_dengtai_008
+  rotate: true
+  xy: 272, 65
+  size: 45, 59
+  orig: 52, 70
+  offset: 4, 3
+  index: -1
+images/pata_dengtai_009
+  rotate: true
+  xy: 333, 65
+  size: 45, 59
+  orig: 52, 70
+  offset: 4, 2
+  index: -1
+images/pata_dengtai_010
+  rotate: true
+  xy: 210, 65
+  size: 45, 60
+  orig: 52, 70
+  offset: 4, 2
+  index: -1
+images/pata_dengtai_011
+  rotate: true
+  xy: 394, 66
+  size: 44, 58
+  orig: 52, 70
+  offset: 5, 2
+  index: -1
+images/pata_dengtai_012
+  rotate: false
+  xy: 377, 4
+  size: 45, 59
+  orig: 52, 70
+  offset: 4, 2
+  index: -1
+images/pata_dengtai_013
+  rotate: false
+  xy: 281, 5
+  size: 46, 58
+  orig: 52, 70
+  offset: 4, 3
+  index: -1
+images/pata_dengtai_014
+  rotate: false
+  xy: 329, 5
+  size: 46, 58
+  orig: 52, 70
+  offset: 4, 3
+  index: -1
+images/pata_dengtai_015
+  rotate: true
+  xy: 63, 2
+  size: 47, 59
+  orig: 52, 70
+  offset: 4, 3
+  index: -1
+images/pata_dengtai_016
+  rotate: false
+  xy: 2, 51
+  size: 47, 59
+  orig: 52, 70
+  offset: 4, 3
+  index: -1

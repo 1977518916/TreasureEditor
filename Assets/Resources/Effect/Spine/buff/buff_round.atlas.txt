@@ -1,62 +1,62 @@
 
 buff_round.png
-size: 770,84
+size: 260,264
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 g202
   rotate: true
-  xy: 2, 2
-  size: 80, 101
+  xy: 82, 182
+  size: 77, 98
   orig: 84, 113
-  offset: 3, 8
+  offset: 5, 10
   index: -1
 g203
-  rotate: true
-  xy: 311, 3
-  size: 79, 101
+  rotate: false
+  xy: 102, 82
+  size: 77, 98
   orig: 84, 113
-  offset: 4, 8
+  offset: 5, 10
   index: -1
 g204
   rotate: true
-  xy: 414, 3
-  size: 79, 101
+  xy: 102, 3
+  size: 77, 97
   orig: 84, 113
-  offset: 4, 8
+  offset: 5, 11
   index: -1
 g205
   rotate: true
-  xy: 517, 3
-  size: 79, 101
+  xy: 2, 2
+  size: 77, 97
   orig: 84, 113
-  offset: 4, 8
+  offset: 5, 11
   index: -1
 g206
-  rotate: true
-  xy: 620, 3
-  size: 79, 101
+  rotate: false
+  xy: 181, 83
+  size: 77, 97
   orig: 84, 113
-  offset: 4, 8
+  offset: 5, 11
   index: -1
 g207
-  rotate: true
-  xy: 105, 2
-  size: 80, 101
+  rotate: false
+  xy: 2, 161
+  size: 78, 98
   orig: 84, 113
-  offset: 3, 8
+  offset: 5, 10
   index: -1
 g208
   rotate: true
-  xy: 208, 2
-  size: 80, 101
+  xy: 2, 81
+  size: 78, 98
   orig: 84, 113
-  offset: 3, 8
+  offset: 5, 10
   index: -1
 y1
-  rotate: false
-  xy: 723, 37
-  size: 45, 45
+  rotate: true
+  xy: 182, 216
+  size: 43, 44
   orig: 48, 48
-  offset: 2, 1
+  offset: 3, 2
   index: -1

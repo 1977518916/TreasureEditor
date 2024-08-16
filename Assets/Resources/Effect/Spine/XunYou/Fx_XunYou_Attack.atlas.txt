@@ -1,0 +1,27 @@
+
+Fx_XunYou_Attack.png
+size: 257,194
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_XunYou_Attack_001
+  rotate: false
+  xy: 2, 22
+  size: 139, 170
+  orig: 315, 170
+  offset: 0, 0
+  index: -1
+images/Fx_XunYou_Attack_002
+  rotate: true
+  xy: 143, 2
+  size: 99, 110
+  orig: 315, 170
+  offset: 133, 3
+  index: -1
+images/Fx_XunYou_Attack_003
+  rotate: true
+  xy: 143, 103
+  size: 89, 112
+  orig: 315, 170
+  offset: 226, 24
+  index: -1

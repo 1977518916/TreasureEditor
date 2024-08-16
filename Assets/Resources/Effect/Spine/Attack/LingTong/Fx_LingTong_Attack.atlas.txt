@@ -1,0 +1,48 @@
+
+Fx_LingTong_Attack.png
+size: 230,226
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/LingTong_attack_a_001
+  rotate: false
+  xy: 2, 161
+  size: 225, 31
+  orig: 287, 67
+  offset: 33, 17
+  index: -1
+images/LingTong_attack_a_003
+  rotate: false
+  xy: 2, 56
+  size: 223, 35
+  orig: 287, 67
+  offset: 32, 13
+  index: -1
+images/LingTong_attack_a_005
+  rotate: false
+  xy: 2, 127
+  size: 226, 32
+  orig: 287, 67
+  offset: 32, 18
+  index: -1
+images/LingTong_attack_a_007
+  rotate: false
+  xy: 2, 93
+  size: 225, 32
+  orig: 287, 67
+  offset: 32, 20
+  index: -1
+images/LingTong_attack_a_009
+  rotate: false
+  xy: 2, 194
+  size: 226, 30
+  orig: 287, 67
+  offset: 32, 21
+  index: -1
+images/LingTong_attack_b_002
+  rotate: true
+  xy: 2, 2
+  size: 52, 126
+  orig: 52, 127
+  offset: 0, 1
+  index: -1

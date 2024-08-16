@@ -1,12 +1,12 @@
 
 LuSu_Skill_2.png
-size: 512,256
+size: 334,227
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 FeiDan
   rotate: false
-  xy: 235, 25
+  xy: 227, 21
   size: 25, 97
   orig: 25, 97
   offset: 0, 0
@@ -14,14 +14,14 @@ FeiDan
 Glow
   rotate: false
   xy: 2, 2
-  size: 231, 231
+  size: 223, 223
   orig: 256, 256
-  offset: 13, 12
+  offset: 17, 16
   index: -1
 Glow4
   rotate: false
-  xy: 235, 124
-  size: 109, 109
+  xy: 227, 120
+  size: 105, 105
   orig: 128, 128
-  offset: 9, 10
+  offset: 11, 12
   index: -1

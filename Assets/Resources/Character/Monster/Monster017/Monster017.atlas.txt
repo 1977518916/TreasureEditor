@@ -1,132 +1,132 @@
 
 Monster017.png
-size: 672,137
+size: 178,142
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Che
   rotate: false
-  xy: 2, 3
-  size: 132, 132
-  orig: 132, 132
+  xy: 2, 74
+  size: 66, 66
+  orig: 66, 66
   offset: 0, 0
   index: -1
 Fog1
-  rotate: true
-  xy: 625, 43
-  size: 38, 40
-  orig: 64, 64
-  offset: 12, 3
+  rotate: false
+  xy: 154, 19
+  size: 19, 21
+  orig: 32, 32
+  offset: 6, 1
   index: -1
 Fog2
   rotate: false
-  xy: 589, 83
-  size: 50, 52
-  orig: 64, 64
-  offset: 7, 3
+  xy: 68, 2
+  size: 26, 27
+  orig: 32, 32
+  offset: 3, 1
   index: -1
 Fog3
   rotate: false
-  xy: 533, 77
-  size: 54, 58
-  orig: 64, 64
-  offset: 3, 4
+  xy: 151, 111
+  size: 25, 29
+  orig: 32, 32
+  offset: 3, 2
   index: -1
 Fog4
-  rotate: false
-  xy: 509, 15
-  size: 55, 58
-  orig: 64, 64
-  offset: 5, 5
+  rotate: true
+  xy: 70, 74
+  size: 28, 30
+  orig: 32, 32
+  offset: 2, 2
   index: -1
 Fog5
   rotate: false
-  xy: 415, 73
-  size: 57, 62
-  orig: 64, 64
-  offset: 5, 1
+  xy: 96, 40
+  size: 29, 32
+  orig: 32, 32
+  offset: 2, 0
   index: -1
 Fog6
   rotate: false
-  xy: 386, 5
-  size: 58, 63
-  orig: 64, 64
-  offset: 2, 1
+  xy: 120, 108
+  size: 29, 32
+  orig: 32, 32
+  offset: 1, 0
   index: -1
 Fog7
   rotate: false
-  xy: 474, 75
-  size: 57, 60
-  orig: 64, 64
-  offset: 4, 1
+  xy: 96, 7
+  size: 29, 31
+  orig: 32, 32
+  offset: 2, 0
   index: -1
 Fog8
   rotate: false
-  xy: 641, 107
-  size: 29, 28
-  orig: 64, 64
-  offset: 28, 33
+  xy: 154, 2
+  size: 15, 15
+  orig: 32, 32
+  offset: 14, 16
   index: -1
 Glow
   rotate: false
-  xy: 136, 7
-  size: 128, 128
-  orig: 128, 128
+  xy: 2, 8
+  size: 64, 64
+  orig: 64, 64
   offset: 0, 0
   index: -1
 Guo
   rotate: false
-  xy: 566, 18
-  size: 57, 57
-  orig: 57, 57
+  xy: 135, 77
+  size: 29, 29
+  orig: 29, 29
   offset: 0, 0
   index: -1
 LunZi_1
-  rotate: true
-  xy: 325, 2
-  size: 60, 59
-  orig: 60, 59
+  rotate: false
+  xy: 127, 42
+  size: 30, 30
+  orig: 30, 30
   offset: 0, 0
   index: -1
 LunZi_2
   rotate: false
-  xy: 446, 10
-  size: 61, 61
-  orig: 61, 61
+  xy: 102, 74
+  size: 31, 31
+  orig: 31, 31
   offset: 0, 0
   index: -1
 LunZi_3
   rotate: true
-  xy: 350, 70
-  size: 65, 63
-  orig: 65, 63
+  xy: 86, 107
+  size: 33, 32
+  orig: 33, 32
   offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 625, 9
-  size: 32, 32
-  orig: 32, 32
+  xy: 159, 59
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 Sheng
   rotate: false
-  xy: 320, 64
-  size: 28, 71
-  orig: 28, 71
+  xy: 70, 104
+  size: 14, 36
+  orig: 14, 36
   offset: 0, 0
   index: -1
 Stone
-  rotate: false
-  xy: 266, 2
-  size: 57, 50
-  orig: 57, 50
+  rotate: true
+  xy: 127, 11
+  size: 29, 25
+  orig: 29, 25
   offset: 0, 0
   index: -1
 ZhiZhu
   rotate: true
-  xy: 266, 54
-  size: 81, 52
-  orig: 81, 52
+  xy: 68, 31
+  size: 41, 26
+  orig: 41, 26
   offset: 0, 0
   index: -1

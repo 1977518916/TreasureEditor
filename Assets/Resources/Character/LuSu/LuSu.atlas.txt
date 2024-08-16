@@ -1,223 +1,174 @@
 
 LuSu.png
-size: 665,205
+size: 700,392
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Arm_B
   rotate: false
-  xy: 603, 8
-  size: 56, 48
-  orig: 57, 48
-  offset: 1, 0
+  xy: 473, 178
+  size: 157, 68
+  orig: 157, 68
+  offset: 0, 0
+  index: -1
+Arm_B_1
+  rotate: true
+  xy: 627, 288
+  size: 102, 70
+  orig: 102, 71
+  offset: 0, 0
   index: -1
 Arm_F
-  rotate: false
-  xy: 611, 151
-  size: 52, 52
-  orig: 53, 52
+  rotate: true
+  xy: 466, 102
+  size: 74, 131
+  orig: 74, 132
+  offset: 0, 0
+  index: -1
+Arm_F_1
+  rotate: true
+  xy: 466, 12
+  size: 74, 100
+  orig: 77, 101
   offset: 0, 0
   index: -1
 Body
   rotate: false
-  xy: 505, 120
-  size: 104, 83
-  orig: 120, 83
-  offset: 10, 0
+  xy: 473, 248
+  size: 152, 142
+  orig: 164, 142
+  offset: 4, 0
   index: -1
-Bu_1
-  rotate: false
-  xy: 74, 9
-  size: 28, 22
-  orig: 28, 22
-  offset: 0, 0
-  index: -1
-Bu_2
-  rotate: false
-  xy: 611, 124
-  size: 33, 25
-  orig: 33, 25
-  offset: 0, 0
-  index: -1
-Bu_3
+Eye1
   rotate: false
   xy: 2, 2
-  size: 35, 29
-  orig: 35, 29
+  size: 163, 90
+  orig: 164, 90
   offset: 0, 0
   index: -1
-Bu_4
+Eye2
   rotate: false
-  xy: 39, 10
-  size: 33, 21
-  orig: 34, 22
-  offset: 1, 0
-  index: -1
-Bu_5
-  rotate: false
-  xy: 104, 8
-  size: 27, 23
-  orig: 27, 23
+  xy: 167, 2
+  size: 163, 90
+  orig: 164, 90
   offset: 0, 0
   index: -1
-Bu_6
+Hand_B
   rotate: false
-  xy: 301, 5
-  size: 33, 31
-  orig: 33, 31
+  xy: 665, 176
+  size: 25, 25
+  orig: 25, 25
   offset: 0, 0
   index: -1
-Bu_7
-  rotate: true
-  xy: 395, 14
-  size: 35, 41
-  orig: 35, 41
-  offset: 0, 0
-  index: -1
-Eye_B
+Hand_F
   rotate: false
-  xy: 220, 2
-  size: 31, 34
-  orig: 31, 34
-  offset: 0, 0
-  index: -1
-Eye_B_1
-  rotate: false
-  xy: 603, 58
-  size: 60, 60
-  orig: 60, 60
-  offset: 0, 0
-  index: -1
-Eye_F
-  rotate: false
-  xy: 339, 40
-  size: 54, 9
-  orig: 54, 9
-  offset: 0, 0
-  index: -1
-Eye_F_1
-  rotate: false
-  xy: 339, 51
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: -1
-Feet_B
-  rotate: false
-  xy: 646, 138
-  size: 16, 11
-  orig: 16, 11
-  offset: 0, 0
-  index: -1
-Feet_F
-  rotate: false
-  xy: 133, 2
-  size: 14, 12
-  orig: 14, 12
-  offset: 0, 0
-  index: -1
-Glow
-  rotate: false
-  xy: 405, 51
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: -1
-Glow1
-  rotate: false
-  xy: 471, 51
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: -1
-Glow2
-  rotate: false
-  xy: 438, 17
-  size: 32, 32
-  orig: 32, 32
-  offset: 0, 0
-  index: -1
-Guan
-  rotate: false
-  xy: 339, 117
-  size: 164, 86
-  orig: 164, 91
-  offset: 0, 5
-  index: -1
-Hair
-  rotate: false
-  xy: 186, 38
-  size: 151, 165
-  orig: 151, 167
+  xy: 665, 176
+  size: 25, 25
+  orig: 25, 25
   offset: 0, 0
   index: -1
 Head
   rotate: false
-  xy: 2, 33
-  size: 182, 170
-  orig: 182, 170
+  xy: 2, 94
+  size: 343, 296
+  orig: 344, 296
   offset: 0, 0
   index: -1
-HuLu
+JianJia_B
   rotate: false
-  xy: 537, 4
-  size: 55, 48
-  orig: 55, 48
-  offset: 0, 0
+  xy: 347, 87
+  size: 117, 98
+  orig: 125, 102
+  offset: 8, 0
   index: -1
-HuLuGlow
-  rotate: false
-  xy: 537, 54
-  size: 64, 64
-  orig: 64, 64
-  offset: 0, 0
-  index: -1
-HuZi_B
+JianJia_F
   rotate: true
-  xy: 506, 38
-  size: 11, 29
-  orig: 11, 29
-  offset: 0, 0
-  index: -1
-HuZi_F
-  rotate: true
-  xy: 506, 25
-  size: 11, 29
-  orig: 11, 29
-  offset: 0, 0
-  index: -1
-MeiMao_B
-  rotate: false
-  xy: 186, 2
-  size: 32, 34
-  orig: 32, 34
-  offset: 0, 0
-  index: -1
-MeiMao_F
-  rotate: false
-  xy: 253, 3
-  size: 46, 33
-  orig: 46, 33
-  offset: 0, 0
-  index: -1
-Mouth
-  rotate: false
-  xy: 149, 2
-  size: 10, 12
-  orig: 10, 12
-  offset: 0, 0
-  index: -1
-Mouth_1
-  rotate: true
-  xy: 133, 16
-  size: 15, 31
-  orig: 15, 31
-  offset: 0, 0
+  xy: 332, 5
+  size: 80, 112
+  orig: 88, 114
+  offset: 1, 0
   index: -1
 Shadow
   rotate: false
-  xy: 472, 17
-  size: 32, 32
-  orig: 32, 32
+  xy: 663, 158
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+ShiPin
+  rotate: true
+  xy: 629, 12
+  size: 32, 41
+  orig: 32, 43
+  offset: 0, 1
+  index: -1
+Shui
+  rotate: false
+  xy: 627, 258
+  size: 67, 28
+  orig: 67, 29
+  offset: 0, 0
+  index: -1
+Shui1
+  rotate: true
+  xy: 466, 88
+  size: 12, 154
+  orig: 12, 154
+  offset: 0, 0
+  index: -1
+ShuiDi1
+  rotate: false
+  xy: 632, 179
+  size: 31, 22
+  orig: 32, 23
+  offset: 0, 1
+  index: -1
+ShuiDi2
+  rotate: true
+  xy: 446, 32
+  size: 22, 14
+  orig: 22, 14
+  offset: 0, 0
+  index: -1
+ShuiDi3
+  rotate: true
+  xy: 446, 56
+  size: 29, 18
+  orig: 34, 18
+  offset: 0, 0
+  index: -1
+WuQi
+  rotate: false
+  xy: 347, 187
+  size: 124, 203
+  orig: 125, 203
+  offset: 0, 0
+  index: -1
+WuQiShiPin_1
+  rotate: false
+  xy: 629, 46
+  size: 42, 56
+  orig: 43, 56
+  offset: 1, 0
+  index: -1
+WuQiShiPin_2
+  rotate: false
+  xy: 599, 104
+  size: 62, 72
+  orig: 67, 72
+  offset: 2, 0
+  index: -1
+WuQiShiPin_3
+  rotate: false
+  xy: 632, 203
+  size: 60, 53
+  orig: 89, 67
+  offset: 0, 13
+  index: -1
+XiaBai
+  rotate: true
+  xy: 568, 23
+  size: 63, 59
+  orig: 63, 59
   offset: 0, 0
   index: -1

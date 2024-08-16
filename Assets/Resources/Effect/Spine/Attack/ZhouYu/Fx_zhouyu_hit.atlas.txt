@@ -1,90 +1,90 @@
 
 Fx_zhouyu_hit.png
-size: 369,979
+size: 330,292
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 zy (1)
   rotate: false
-  xy: 214, 721
-  size: 84, 84
-  orig: 226, 228
-  offset: 72, 67
+  xy: 285, 153
+  size: 42, 42
+  orig: 113, 114
+  offset: 36, 34
   index: -1
 zy (10)
-  rotate: false
-  xy: 199, 525
-  size: 158, 194
-  orig: 226, 228
-  offset: 35, 20
+  rotate: true
+  xy: 2, 8
+  size: 78, 97
+  orig: 113, 114
+  offset: 18, 10
   index: -1
 zy (11)
   rotate: false
-  xy: 214, 807
-  size: 108, 170
-  orig: 226, 228
-  offset: 57, 20
+  xy: 273, 9
+  size: 55, 85
+  orig: 113, 114
+  offset: 28, 10
   index: -1
 zy (12)
   rotate: false
-  xy: 324, 878
-  size: 42, 99
-  orig: 226, 228
-  offset: 57, 41
+  xy: 285, 101
+  size: 22, 50
+  orig: 113, 114
+  offset: 28, 20
   index: -1
 zy (2)
   rotate: false
-  xy: 2, 767
-  size: 210, 210
-  orig: 226, 228
-  offset: 11, 6
+  xy: 2, 186
+  size: 104, 104
+  orig: 113, 114
+  offset: 6, 3
   index: -1
 zy (3)
-  rotate: false
-  xy: 2, 377
-  size: 192, 192
-  orig: 226, 228
-  offset: 19, 14
+  rotate: true
+  xy: 99, 89
+  size: 95, 94
+  orig: 113, 114
+  offset: 10, 8
   index: -1
 zy (4)
-  rotate: true
-  xy: 2, 571
-  size: 194, 195
-  orig: 226, 228
-  offset: 18, 13
+  rotate: false
+  xy: 2, 88
+  size: 95, 96
+  orig: 113, 114
+  offset: 10, 7
   index: -1
 zy (5)
-  rotate: true
-  xy: 194, 186
-  size: 157, 167
-  orig: 226, 228
-  offset: 35, 32
+  rotate: false
+  xy: 192, 4
+  size: 79, 83
+  orig: 113, 114
+  offset: 17, 17
   index: -1
 zy (6)
-  rotate: false
-  xy: 196, 345
-  size: 168, 178
-  orig: 226, 228
-  offset: 27, 28
+  rotate: true
+  xy: 101, 2
+  size: 85, 89
+  orig: 113, 114
+  offset: 13, 14
   index: -1
 zy (7)
-  rotate: true
-  xy: 181, 8
-  size: 176, 186
-  orig: 226, 228
-  offset: 23, 24
+  rotate: false
+  xy: 200, 197
+  size: 89, 93
+  orig: 113, 114
+  offset: 11, 12
   index: -1
 zy (8)
-  rotate: true
-  xy: 2, 196
-  size: 179, 190
-  orig: 226, 228
-  offset: 21, 22
+  rotate: false
+  xy: 108, 195
+  size: 90, 95
+  orig: 113, 114
+  offset: 10, 11
   index: -1
 zy (9)
   rotate: false
-  xy: 2, 2
-  size: 177, 192
-  orig: 226, 228
-  offset: 20, 21
+  xy: 195, 96
+  size: 88, 97
+  orig: 113, 114
+  offset: 10, 10
   index: -1

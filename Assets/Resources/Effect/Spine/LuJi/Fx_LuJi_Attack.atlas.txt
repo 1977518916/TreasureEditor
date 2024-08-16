@@ -1,0 +1,76 @@
+
+Fx_LuJi_Attack.png
+size: 784,176
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_LuJi_Attack_001
+  rotate: false
+  xy: 329, 89
+  size: 158, 85
+  orig: 211, 99
+  offset: 39, 10
+  index: -1
+images/Fx_LuJi_Attack_002
+  rotate: false
+  xy: 168, 91
+  size: 159, 83
+  orig: 211, 99
+  offset: 38, 11
+  index: -1
+images/Fx_LuJi_Attack_003
+  rotate: false
+  xy: 2, 91
+  size: 164, 83
+  orig: 211, 99
+  offset: 32, 11
+  index: -1
+images/Fx_LuJi_Attack_004
+  rotate: false
+  xy: 322, 3
+  size: 153, 84
+  orig: 211, 99
+  offset: 43, 10
+  index: -1
+images/Fx_LuJi_Attack_005
+  rotate: false
+  xy: 631, 2
+  size: 151, 84
+  orig: 211, 99
+  offset: 45, 10
+  index: -1
+images/Fx_LuJi_Attack_006
+  rotate: false
+  xy: 477, 2
+  size: 152, 84
+  orig: 211, 99
+  offset: 44, 10
+  index: -1
+images/Fx_LuJi_Attack_007
+  rotate: false
+  xy: 648, 88
+  size: 125, 86
+  orig: 211, 99
+  offset: 71, 9
+  index: -1
+images/Fx_LuJi_Attack_008
+  rotate: false
+  xy: 489, 88
+  size: 157, 86
+  orig: 211, 99
+  offset: 40, 9
+  index: -1
+images/Fx_LuJi_Attack_009
+  rotate: false
+  xy: 2, 2
+  size: 159, 87
+  orig: 211, 99
+  offset: 38, 8
+  index: -1
+images/Fx_LuJi_Attack_010
+  rotate: false
+  xy: 163, 3
+  size: 157, 86
+  orig: 211, 99
+  offset: 40, 9
+  index: -1

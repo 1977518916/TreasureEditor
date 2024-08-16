@@ -1,167 +1,167 @@
 
 XuShu.png
-size: 1972,756
+size: 748,520
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Body
-  rotate: true
-  xy: 1318, 4
-  size: 301, 257
-  orig: 309, 272
-  offset: 3, 15
+  rotate: false
+  xy: 455, 30
+  size: 151, 129
+  orig: 155, 136
+  offset: 1, 7
   index: -1
 FaceShadow
-  rotate: true
-  xy: 1749, 412
-  size: 342, 217
-  orig: 344, 219
-  offset: 1, 1
+  rotate: false
+  xy: 258, 42
+  size: 172, 110
+  orig: 172, 110
+  offset: 0, 0
   index: -1
 GuaJian
   rotate: false
-  xy: 394, 54
-  size: 173, 75
-  orig: 174, 84
-  offset: 1, 1
+  xy: 258, 2
+  size: 87, 38
+  orig: 87, 42
+  offset: 0, 0
   index: -1
 Hair1
   rotate: true
-  xy: 1742, 81
-  size: 285, 81
-  orig: 285, 84
-  offset: 0, 3
+  xy: 624, 243
+  size: 143, 41
+  orig: 143, 42
+  offset: 0, 1
   index: -1
 Hair2
-  rotate: true
-  xy: 1515, 368
-  size: 105, 232
-  orig: 110, 240
-  offset: 5, 8
+  rotate: false
+  xy: 667, 192
+  size: 53, 116
+  orig: 55, 120
+  offset: 2, 4
   index: -1
 Hair3
   rotate: false
-  xy: 1186, 475
-  size: 561, 279
-  orig: 561, 288
-  offset: 0, 1
+  xy: 341, 246
+  size: 281, 140
+  orig: 281, 144
+  offset: 0, 0
   index: -1
 Hair4
   rotate: false
-  xy: 1577, 71
-  size: 163, 295
-  orig: 167, 296
-  offset: 1, 0
+  xy: 608, 11
+  size: 82, 148
+  orig: 84, 148
+  offset: 0, 0
   index: -1
 Hand_B
   rotate: false
-  xy: 91, 6
-  size: 53, 53
-  orig: 55, 55
-  offset: 1, 1
+  xy: 692, 21
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
   index: -1
 Hand_F
   rotate: false
-  xy: 1515, 312
-  size: 53, 54
-  orig: 55, 56
-  offset: 1, 1
+  xy: 419, 12
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
   index: -1
 Head
   rotate: false
-  xy: 676, 259
-  size: 508, 495
-  orig: 909, 736
-  offset: 286, 16
+  xy: 2, 10
+  size: 254, 248
+  orig: 455, 368
+  offset: 143, 8
   index: -1
 HuZi
   rotate: false
-  xy: 1896, 62
-  size: 71, 78
-  orig: 72, 78
+  xy: 692, 51
+  size: 36, 39
+  orig: 36, 39
   offset: 0, 0
   index: -1
 JianJia
-  rotate: true
-  xy: 1825, 243
-  size: 167, 139
-  orig: 182, 141
-  offset: 15, 1
+  rotate: false
+  xy: 662, 446
+  size: 84, 70
+  orig: 91, 71
+  offset: 7, 0
   index: -1
 MaoZi
   rotate: false
-  xy: 2, 243
-  size: 672, 511
-  orig: 737, 559
-  offset: 65, 1
+  xy: 2, 260
+  size: 337, 256
+  orig: 369, 280
+  offset: 32, 0
   index: -1
 PiFeng
   rotate: false
-  xy: 2, 61
-  size: 390, 180
-  orig: 390, 180
+  xy: 258, 154
+  size: 195, 90
+  orig: 195, 90
   offset: 0, 0
   index: -1
 QianJin
-  rotate: false
-  xy: 1825, 142
-  size: 111, 99
-  orig: 111, 100
-  offset: 0, 1
+  rotate: true
+  xy: 692, 134
+  size: 56, 50
+  orig: 56, 50
+  offset: 0, 0
   index: -1
 QunJia_B
   rotate: false
-  xy: 2, 2
-  size: 87, 57
-  orig: 87, 57
+  xy: 621, 212
+  size: 44, 29
+  orig: 44, 29
   offset: 0, 0
   index: -1
 QunJia_F
-  rotate: true
-  xy: 1825, 2
-  size: 138, 69
-  orig: 154, 72
-  offset: 11, 0
+  rotate: false
+  xy: 347, 5
+  size: 70, 35
+  orig: 77, 36
+  offset: 5, 0
   index: -1
 Shadow
   rotate: false
-  xy: 1186, 273
-  size: 32, 32
-  orig: 32, 32
+  xy: 730, 74
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 ShiPin_B
-  rotate: true
-  xy: 1742, 3
-  size: 76, 78
-  orig: 99, 82
-  offset: 9, 3
+  rotate: false
+  xy: 692, 92
+  size: 39, 40
+  orig: 50, 41
+  offset: 4, 1
   index: -1
 ShiPin_F
-  rotate: true
-  xy: 569, 50
-  size: 79, 82
-  orig: 82, 82
-  offset: 1, 0
+  rotate: false
+  xy: 621, 169
+  size: 40, 41
+  orig: 41, 41
+  offset: 0, 0
   index: -1
 WeiJin
   rotate: false
-  xy: 1186, 307
-  size: 327, 166
-  orig: 327, 166
+  xy: 455, 161
+  size: 164, 83
+  orig: 164, 83
   offset: 0, 0
   index: -1
 WuQi
   rotate: false
-  xy: 676, 2
-  size: 640, 255
-  orig: 642, 257
+  xy: 341, 388
+  size: 319, 128
+  orig: 321, 129
   offset: 1, 1
   index: -1
 YaoDai
-  rotate: false
-  xy: 394, 131
-  size: 267, 110
-  orig: 274, 110
+  rotate: true
+  xy: 667, 310
+  size: 134, 55
+  orig: 137, 55
   offset: 0, 0
   index: -1

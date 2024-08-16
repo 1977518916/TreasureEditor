@@ -1,111 +1,111 @@
 
 ZhangFei_Skill_1.png
-size: 1882,419
+size: 476,448
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 boo (1)
   rotate: false
-  xy: 2, 342
-  size: 90, 75
-  orig: 302, 236
-  offset: 66, 83
+  xy: 215, 166
+  size: 45, 37
+  orig: 151, 118
+  offset: 33, 42
   index: -1
 boo (10)
-  rotate: false
-  xy: 1584, 214
-  size: 283, 203
-  orig: 302, 236
-  offset: 19, 30
+  rotate: true
+  xy: 104, 303
+  size: 141, 102
+  orig: 151, 118
+  offset: 10, 15
   index: -1
 boo (11)
-  rotate: false
-  xy: 492, 12
-  size: 276, 204
-  orig: 302, 236
-  offset: 19, 30
+  rotate: true
+  xy: 208, 306
+  size: 138, 102
+  orig: 151, 118
+  offset: 9, 15
   index: -1
 boo (12)
-  rotate: false
-  xy: 1604, 2
-  size: 276, 210
-  orig: 302, 236
-  offset: 19, 24
+  rotate: true
+  xy: 2, 161
+  size: 137, 105
+  orig: 151, 118
+  offset: 10, 12
   index: -1
 boo (13)
   rotate: true
-  xy: 2, 36
-  size: 267, 210
-  orig: 302, 236
-  offset: 18, 25
+  xy: 312, 311
+  size: 133, 104
+  orig: 151, 118
+  offset: 9, 13
   index: -1
 boo (14)
   rotate: false
-  xy: 214, 13
-  size: 276, 203
-  orig: 302, 236
-  offset: 19, 32
+  xy: 312, 103
+  size: 137, 100
+  orig: 151, 118
+  offset: 10, 17
   index: -1
 boo (15)
-  rotate: true
-  xy: 231, 228
-  size: 189, 196
-  orig: 302, 236
-  offset: 20, 39
+  rotate: false
+  xy: 358, 212
+  size: 93, 97
+  orig: 151, 118
+  offset: 11, 20
   index: -1
 boo (2)
-  rotate: false
-  xy: 94, 305
-  size: 135, 112
-  orig: 302, 236
-  offset: 43, 70
+  rotate: true
+  xy: 418, 377
+  size: 67, 56
+  orig: 151, 118
+  offset: 22, 35
   index: -1
 boo (3)
-  rotate: false
-  xy: 1329, 3
-  size: 273, 209
-  orig: 302, 236
-  offset: 21, 25
+  rotate: true
+  xy: 109, 165
+  size: 136, 104
+  orig: 151, 118
+  offset: 11, 13
   index: -1
 boo (4)
-  rotate: false
-  xy: 770, 11
-  size: 275, 205
-  orig: 302, 236
-  offset: 20, 27
+  rotate: true
+  xy: 208, 26
+  size: 137, 102
+  orig: 151, 118
+  offset: 10, 14
   index: -1
 boo (5)
-  rotate: false
-  xy: 1047, 10
-  size: 280, 205
-  orig: 302, 236
-  offset: 18, 27
+  rotate: true
+  xy: 104, 20
+  size: 139, 102
+  orig: 151, 118
+  offset: 10, 14
   index: -1
 boo (6)
-  rotate: false
-  xy: 714, 218
-  size: 291, 199
-  orig: 302, 236
-  offset: 7, 32
+  rotate: true
+  xy: 2, 300
+  size: 144, 100
+  orig: 151, 118
+  offset: 5, 16
   index: -1
 boo (7)
-  rotate: false
-  xy: 1295, 217
-  size: 287, 200
-  orig: 302, 236
-  offset: 6, 32
+  rotate: true
+  xy: 2, 17
+  size: 142, 100
+  orig: 151, 118
+  offset: 4, 16
   index: -1
 boo (8)
   rotate: false
-  xy: 1007, 218
-  size: 286, 199
-  orig: 302, 236
-  offset: 7, 33
+  xy: 312, 2
+  size: 136, 99
+  orig: 151, 118
+  offset: 10, 17
   index: -1
 boo (9)
   rotate: false
-  xy: 429, 218
-  size: 283, 199
-  orig: 302, 236
-  offset: 19, 34
+  xy: 215, 205
+  size: 141, 99
+  orig: 151, 118
+  offset: 10, 17
   index: -1

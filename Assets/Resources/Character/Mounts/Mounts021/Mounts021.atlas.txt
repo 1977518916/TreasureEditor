@@ -1,111 +1,111 @@
 
 Mounts021.png
-size: 868,868
+size: 444,444
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Shadow
   rotate: false
-  xy: 255, 6
-  size: 32, 32
-  orig: 32, 32
+  xy: 158, 196
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 m1
-  rotate: false
-  xy: 255, 40
-  size: 245, 52
-  orig: 245, 52
+  rotate: true
+  xy: 130, 89
+  size: 123, 26
+  orig: 123, 26
   offset: 0, 0
   index: -1
 m10
-  rotate: false
-  xy: 386, 537
-  size: 106, 159
-  orig: 106, 164
+  rotate: true
+  xy: 300, 45
+  size: 53, 80
+  orig: 53, 82
   offset: 0, 0
   index: -1
 m11
   rotate: true
-  xy: 2, 23
-  size: 385, 251
-  orig: 385, 251
+  xy: 2, 19
+  size: 193, 126
+  orig: 193, 126
   offset: 0, 0
   index: -1
 m12
-  rotate: true
-  xy: 386, 412
-  size: 123, 169
-  orig: 123, 169
+  rotate: false
+  xy: 130, 2
+  size: 62, 85
+  orig: 62, 85
   offset: 0, 0
   index: -1
 m13
-  rotate: true
-  xy: 494, 551
-  size: 106, 158
-  orig: 106, 164
+  rotate: false
+  xy: 382, 46
+  size: 53, 79
+  orig: 53, 82
   offset: 0, 0
   index: -1
 m14
-  rotate: true
-  xy: 716, 80
-  size: 155, 149
-  orig: 155, 160
+  rotate: false
+  xy: 300, 100
+  size: 78, 75
+  orig: 78, 80
   offset: 0, 0
   index: -1
 m2
-  rotate: true
-  xy: 654, 450
-  size: 207, 212
-  orig: 208, 216
-  offset: 1, 0
+  rotate: false
+  xy: 304, 177
+  size: 104, 106
+  orig: 104, 108
+  offset: 0, 0
   index: -1
 m3
-  rotate: true
-  xy: 510, 659
-  size: 207, 293
-  orig: 207, 293
+  rotate: false
+  xy: 324, 295
+  size: 104, 147
+  orig: 104, 147
   offset: 0, 0
   index: -1
 m4
   rotate: false
-  xy: 557, 453
-  size: 94, 96
-  orig: 94, 96
+  xy: 380, 127
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 m5
-  rotate: true
-  xy: 510, 27
-  size: 208, 204
-  orig: 208, 204
+  rotate: false
+  xy: 194, 73
+  size: 104, 102
+  orig: 104, 102
   offset: 0, 0
   index: -1
 m6
   rotate: true
-  xy: 557, 237
-  size: 211, 213
-  orig: 212, 213
-  offset: 1, 0
+  xy: 195, 177
+  size: 106, 107
+  orig: 106, 107
+  offset: 0, 0
   index: -1
 m7
   rotate: false
-  xy: 2, 410
-  size: 382, 456
-  orig: 382, 458
+  xy: 2, 214
+  size: 191, 228
+  orig: 191, 229
   offset: 0, 0
   index: -1
 m8
   rotate: false
-  xy: 255, 94
-  size: 253, 314
-  orig: 253, 314
+  xy: 195, 285
+  size: 127, 157
+  orig: 127, 157
   offset: 0, 0
   index: -1
 m9
-  rotate: false
-  xy: 386, 698
-  size: 119, 168
-  orig: 119, 168
+  rotate: true
+  xy: 194, 11
+  size: 60, 84
+  orig: 60, 84
   offset: 0, 0
   index: -1

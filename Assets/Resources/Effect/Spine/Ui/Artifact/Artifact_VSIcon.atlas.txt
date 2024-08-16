@@ -1,0 +1,111 @@
+
+Artifact_VSIcon.png
+size: 1047,157
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Artifact_VSIcon_fire_001
+  rotate: false
+  xy: 286, 9
+  size: 71, 146
+  orig: 99, 172
+  offset: 14, 10
+  index: -1
+images/Artifact_VSIcon_fire_002
+  rotate: false
+  xy: 774, 6
+  size: 68, 149
+  orig: 99, 172
+  offset: 13, 9
+  index: -1
+images/Artifact_VSIcon_fire_003
+  rotate: false
+  xy: 979, 6
+  size: 66, 149
+  orig: 99, 172
+  offset: 14, 9
+  index: -1
+images/Artifact_VSIcon_fire_004
+  rotate: false
+  xy: 359, 2
+  size: 67, 153
+  orig: 99, 172
+  offset: 14, 9
+  index: -1
+images/Artifact_VSIcon_fire_005
+  rotate: false
+  xy: 428, 2
+  size: 67, 153
+  orig: 99, 172
+  offset: 14, 9
+  index: -1
+images/Artifact_VSIcon_fire_006
+  rotate: false
+  xy: 497, 2
+  size: 67, 153
+  orig: 99, 172
+  offset: 13, 9
+  index: -1
+images/Artifact_VSIcon_fire_007
+  rotate: false
+  xy: 844, 2
+  size: 66, 153
+  orig: 99, 172
+  offset: 13, 9
+  index: -1
+images/Artifact_VSIcon_fire_008
+  rotate: false
+  xy: 146, 2
+  size: 68, 153
+  orig: 99, 172
+  offset: 12, 9
+  index: -1
+images/Artifact_VSIcon_fire_009
+  rotate: false
+  xy: 566, 2
+  size: 67, 153
+  orig: 99, 172
+  offset: 13, 9
+  index: -1
+images/Artifact_VSIcon_fire_010
+  rotate: false
+  xy: 704, 5
+  size: 68, 150
+  orig: 99, 172
+  offset: 13, 9
+  index: -1
+images/Artifact_VSIcon_fire_011
+  rotate: false
+  xy: 635, 2
+  size: 67, 153
+  orig: 99, 172
+  offset: 14, 9
+  index: -1
+images/Artifact_VSIcon_fire_012
+  rotate: false
+  xy: 912, 2
+  size: 65, 153
+  orig: 99, 172
+  offset: 15, 9
+  index: -1
+images/Artifact_VSIcon_fire_013
+  rotate: false
+  xy: 75, 2
+  size: 69, 153
+  orig: 99, 172
+  offset: 13, 9
+  index: -1
+images/Artifact_VSIcon_fire_014
+  rotate: false
+  xy: 216, 2
+  size: 68, 153
+  orig: 99, 172
+  offset: 14, 9
+  index: -1
+images/Artifact_VSIcon_fire_015
+  rotate: false
+  xy: 2, 5
+  size: 71, 150
+  orig: 99, 172
+  offset: 13, 9
+  index: -1

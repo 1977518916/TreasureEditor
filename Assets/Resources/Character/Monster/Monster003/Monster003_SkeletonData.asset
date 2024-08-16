@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Monster003_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 5f0800878bb98cb4483669250ae092db, type: 2}
+  - {fileID: 11400000, guid: ac9c398926c760042aa16b5b945119de, type: 2}
   scale: 0.01
   skeletonJSON: {fileID: 4900000, guid: eb2b4fcb9b68a714ba7b18be25eb385a, type: 3}
   isUpgradingBlendModeMaterials: 0

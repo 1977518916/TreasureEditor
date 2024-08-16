@@ -1,83 +1,83 @@
 
 Fx_yujin_hit.png
-size: 395,996
+size: 199,511
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 子弹制作_00000
   rotate: true
-  xy: 186, 58
-  size: 91, 94
-  orig: 234, 234
-  offset: 69, 58
+  xy: 94, 38
+  size: 44, 45
+  orig: 117, 117
+  offset: 35, 30
   index: -1
 子弹制作_00002
   rotate: true
-  xy: 233, 850
-  size: 144, 148
-  orig: 234, 234
-  offset: 42, 32
+  xy: 117, 439
+  size: 70, 72
+  orig: 117, 117
+  offset: 22, 17
   index: -1
 子弹制作_00004
   rotate: false
-  xy: 2, 767
-  size: 229, 227
-  orig: 234, 234
-  offset: 0, 0
+  xy: 2, 396
+  size: 113, 113
+  orig: 117, 117
+  offset: 1, 0
   index: -1
 子弹制作_00006
   rotate: false
   xy: 2, 2
-  size: 182, 171
-  orig: 234, 234
-  offset: 27, 24
+  size: 90, 85
+  orig: 117, 117
+  offset: 14, 13
   index: -1
 子弹制作_00008
   rotate: true
-  xy: 212, 537
-  size: 184, 172
-  orig: 234, 234
-  offset: 26, 24
+  xy: 107, 280
+  size: 92, 86
+  orig: 117, 117
+  offset: 13, 12
   index: -1
 子弹制作_00010
   rotate: false
-  xy: 209, 351
-  size: 184, 184
-  orig: 234, 234
-  offset: 26, 22
+  xy: 98, 84
+  size: 92, 92
+  orig: 117, 117
+  offset: 13, 11
   index: -1
 子弹制作_00012
   rotate: false
-  xy: 203, 151
-  size: 188, 198
-  orig: 234, 234
-  offset: 23, 14
+  xy: 2, 89
+  size: 94, 99
+  orig: 117, 117
+  offset: 11, 7
   index: -1
 子弹制作_00014
-  rotate: true
-  xy: 2, 572
-  size: 193, 208
-  orig: 234, 234
-  offset: 19, 9
+  rotate: false
+  xy: 2, 190
+  size: 95, 104
+  orig: 117, 117
+  offset: 10, 4
   index: -1
 子弹制作_00016
   rotate: true
-  xy: 2, 375
-  size: 195, 205
-  orig: 234, 234
-  offset: 17, 14
+  xy: 2, 296
+  size: 98, 103
+  orig: 117, 117
+  offset: 8, 7
   index: -1
 子弹制作_00018
-  rotate: true
-  xy: 2, 175
-  size: 198, 199
-  orig: 234, 234
-  offset: 15, 22
+  rotate: false
+  xy: 99, 178
+  size: 98, 100
+  orig: 117, 117
+  offset: 8, 11
   index: -1
 子弹制作_00020
   rotate: true
-  xy: 233, 723
-  size: 125, 141
-  orig: 234, 234
-  offset: 76, 82
+  xy: 117, 374
+  size: 63, 70
+  orig: 117, 117
+  offset: 38, 41
   index: -1

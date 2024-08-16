@@ -1,83 +1,83 @@
 
 Fx_GanNing1_Attack.png
-size: 1010,59
+size: 338,76
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 da
   rotate: false
-  xy: 2, 2
-  size: 223, 55
+  xy: 2, 20
+  size: 220, 54
   orig: 226, 58
-  offset: 1, 2
+  offset: 3, 2
   index: -1
 yan (1)
   rotate: false
-  xy: 861, 31
-  size: 141, 26
-  orig: 186, 28
-  offset: 37, 0
+  xy: 165, 3
+  size: 69, 13
+  orig: 93, 14
+  offset: 19, 0
   index: -1
 yan (10)
   rotate: false
-  xy: 377, 31
-  size: 166, 26
-  orig: 186, 28
-  offset: 8, 0
+  xy: 224, 47
+  size: 80, 13
+  orig: 93, 14
+  offset: 6, 0
   index: -1
 yan (2)
   rotate: false
-  xy: 682, 5
-  size: 171, 24
-  orig: 186, 28
-  offset: 8, 2
+  xy: 2, 6
+  size: 84, 12
+  orig: 93, 14
+  offset: 5, 1
   index: -1
 yan (3)
   rotate: false
-  xy: 706, 31
-  size: 153, 26
-  orig: 186, 28
-  offset: 29, 2
+  xy: 88, 5
+  size: 75, 13
+  orig: 93, 14
+  offset: 15, 1
   index: -1
 yan (4)
   rotate: false
-  xy: 545, 31
-  size: 159, 26
-  orig: 186, 28
-  offset: 17, 2
+  xy: 224, 32
+  size: 78, 13
+  orig: 93, 14
+  offset: 9, 1
   index: -1
 yan (5)
-  rotate: false
-  xy: 227, 2
-  size: 146, 25
-  orig: 186, 28
-  offset: 30, 3
+  rotate: true
+  xy: 323, 2
+  size: 72, 13
+  orig: 93, 14
+  offset: 15, 1
   index: -1
 yan (6)
-  rotate: false
-  xy: 227, 29
-  size: 148, 28
-  orig: 186, 28
-  offset: 34, 0
+  rotate: true
+  xy: 307, 2
+  size: 72, 14
+  orig: 93, 14
+  offset: 18, 0
   index: -1
 yan (7)
   rotate: false
-  xy: 514, 4
-  size: 166, 25
-  orig: 186, 28
-  offset: 10, 1
+  xy: 224, 62
+  size: 81, 12
+  orig: 93, 14
+  offset: 6, 1
   index: -1
 yan (8)
   rotate: false
-  xy: 855, 5
-  size: 153, 24
-  orig: 186, 28
-  offset: 25, 2
+  xy: 224, 18
+  size: 75, 12
+  orig: 93, 14
+  offset: 13, 1
   index: -1
 yan (9)
   rotate: false
-  xy: 377, 3
-  size: 135, 26
-  orig: 186, 28
-  offset: 32, 0
+  xy: 236, 3
+  size: 66, 13
+  orig: 93, 14
+  offset: 17, 0
   index: -1

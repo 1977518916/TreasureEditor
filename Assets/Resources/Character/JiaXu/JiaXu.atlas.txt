@@ -1,153 +1,118 @@
 
 JiaXu.png
-size: 737,269
+size: 1404,252
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Arm_L
+Arm_1_B
   rotate: false
-  xy: 547, 90
-  size: 51, 51
-  orig: 57, 53
-  offset: 0, 2
+  xy: 1016, 13
+  size: 144, 104
+  orig: 154, 105
+  offset: 10, 0
   index: -1
-Arm_R
-  rotate: true
-  xy: 376, 8
-  size: 62, 56
-  orig: 71, 56
-  offset: 9, 0
+Arm_B
+  rotate: false
+  xy: 746, 14
+  size: 147, 97
+  orig: 148, 97
+  offset: 0, 0
+  index: -1
+Arm_F
+  rotate: false
+  xy: 1195, 91
+  size: 125, 159
+  orig: 125, 159
+  offset: 0, 0
   index: -1
 Body
   rotate: false
-  xy: 607, 174
-  size: 100, 93
-  orig: 148, 99
-  offset: 27, 6
+  xy: 573, 82
+  size: 171, 168
+  orig: 234, 189
+  offset: 25, 0
   index: -1
-DaoGuang
+Eye1
   rotate: false
-  xy: 2, 11
-  size: 128, 256
-  orig: 128, 256
+  xy: 573, 9
+  size: 154, 71
+  orig: 154, 72
   offset: 0, 0
   index: -1
-Decoration_1
+Eye2
   rotate: false
-  xy: 709, 212
-  size: 26, 55
-  orig: 28, 58
-  offset: 1, 2
-  index: -1
-Dimian1
-  rotate: false
-  xy: 244, 5
-  size: 64, 65
-  orig: 64, 65
+  xy: 1194, 18
+  size: 154, 71
+  orig: 154, 72
   offset: 0, 0
   index: -1
-Dust_1
+Hair1
   rotate: false
-  xy: 132, 50
-  size: 94, 217
-  orig: 100, 225
-  offset: 6, 0
-  index: -1
-Dust_2
-  rotate: true
-  xy: 607, 80
-  size: 92, 100
-  orig: 95, 111
-  offset: 1, 2
-  index: -1
-Eye_L
-  rotate: false
-  xy: 659, 9
-  size: 53, 69
-  orig: 53, 69
+  xy: 746, 113
+  size: 268, 137
+  orig: 269, 137
   offset: 0, 0
   index: -1
-Eye_L_1
-  rotate: true
-  xy: 547, 6
-  size: 72, 69
-  orig: 80, 69
-  offset: 8, 0
-  index: -1
-Eye_R
+Hand_B
   rotate: false
-  xy: 618, 6
-  size: 39, 72
-  orig: 39, 72
+  xy: 1162, 87
+  size: 30, 30
+  orig: 30, 30
   offset: 0, 0
   index: -1
-Eye_R_1
+Hand_F
   rotate: false
-  xy: 310, 6
-  size: 64, 64
-  orig: 64, 64
+  xy: 1162, 87
+  size: 30, 30
+  orig: 30, 30
   offset: 0, 0
-  index: -1
-Feet_L
-  rotate: true
-  xy: 228, 51
-  size: 19, 14
-  orig: 19, 14
-  offset: 0, 0
-  index: -1
-Feet_R
-  rotate: true
-  xy: 518, 124
-  size: 17, 15
-  orig: 17, 15
-  offset: 0, 0
-  index: -1
-Glow
-  rotate: false
-  xy: 434, 6
-  size: 111, 111
-  orig: 128, 128
-  offset: 9, 8
-  index: -1
-Guan
-  rotate: true
-  xy: 518, 143
-  size: 124, 87
-  orig: 127, 89
-  offset: 2, 1
-  index: -1
-Hair_B
-  rotate: true
-  xy: 390, 119
-  size: 148, 126
-  orig: 150, 126
-  offset: 2, 0
   index: -1
 Head
   rotate: true
-  xy: 228, 72
-  size: 195, 160
-  orig: 226, 171
+  xy: 2, 2
+  size: 248, 334
+  orig: 248, 338
   offset: 0, 0
   index: -1
-JianJia_L
+JianJia_B
   rotate: false
-  xy: 176, 7
-  size: 59, 41
-  orig: 59, 41
-  offset: 0, 0
+  xy: 1322, 94
+  size: 78, 70
+  orig: 81, 82
+  offset: 2, 0
   index: -1
-JianJia_R
-  rotate: true
-  xy: 132, 2
-  size: 46, 42
-  orig: 46, 42
+JianJia_F
+  rotate: false
+  xy: 895, 41
+  size: 93, 70
+  orig: 97, 82
+  offset: 2, 0
+  index: -1
+Mao
+  rotate: false
+  xy: 338, 26
+  size: 233, 224
+  orig: 234, 224
   offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 390, 85
-  size: 32, 32
-  orig: 32, 32
+  xy: 1162, 69
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+ShiPin
+  rotate: true
+  xy: 1322, 166
+  size: 84, 73
+  orig: 84, 73
+  offset: 0, 0
+  index: -1
+WuQi
+  rotate: false
+  xy: 1016, 119
+  size: 177, 131
+  orig: 178, 131
   offset: 0, 0
   index: -1

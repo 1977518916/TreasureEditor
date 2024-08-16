@@ -1,0 +1,69 @@
+
+PaTa_baoxiang.png
+size: 134,90
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pata_baoxiang_001
+  rotate: true
+  xy: 116, 60
+  size: 6, 7
+  orig: 54, 45
+  offset: 31, 7
+  index: -1
+pata_baoxiang_002
+  rotate: true
+  xy: 116, 68
+  size: 20, 15
+  orig: 54, 45
+  offset: 20, 7
+  index: -1
+pata_baoxiang_003
+  rotate: false
+  xy: 88, 2
+  size: 29, 21
+  orig: 54, 45
+  offset: 11, 7
+  index: -1
+pata_baoxiang_004
+  rotate: true
+  xy: 88, 58
+  size: 30, 26
+  orig: 54, 45
+  offset: 10, 7
+  index: -1
+pata_baoxiang_005
+  rotate: true
+  xy: 88, 25
+  size: 31, 24
+  orig: 54, 45
+  offset: 8, 10
+  index: -1
+pata_baoxiang_006
+  rotate: true
+  xy: 114, 27
+  size: 29, 18
+  orig: 54, 45
+  offset: 8, 16
+  index: -1
+pata_baoxiang_007
+  rotate: true
+  xy: 119, 7
+  size: 18, 12
+  orig: 54, 45
+  offset: 9, 22
+  index: -1
+pata_baoxiang_008
+  rotate: false
+  xy: 125, 61
+  size: 6, 5
+  orig: 54, 45
+  offset: 10, 29
+  index: -1
+pata_xingxing
+  rotate: false
+  xy: 2, 5
+  size: 84, 83
+  orig: 88, 88
+  offset: 2, 2
+  index: -1

@@ -1,125 +1,125 @@
 
 JiangWei.png
-size: 273,682
+size: 452,110
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 01
-  rotate: true
-  xy: 190, 414
-  size: 119, 61
-  orig: 119, 61
+  rotate: false
+  xy: 236, 2
+  size: 60, 31
+  orig: 60, 31
   offset: 0, 0
   index: -1
 02
   rotate: false
-  xy: 68, 223
-  size: 33, 43
-  orig: 33, 43
+  xy: 92, 2
+  size: 17, 22
+  orig: 17, 22
   offset: 0, 0
   index: -1
 03
-  rotate: true
-  xy: 104, 316
-  size: 81, 41
-  orig: 81, 41
+  rotate: false
+  xy: 111, 3
+  size: 41, 21
+  orig: 41, 21
   offset: 0, 0
   index: -1
 04
   rotate: true
-  xy: 104, 399
-  size: 104, 52
-  orig: 104, 52
+  xy: 392, 3
+  size: 52, 26
+  orig: 52, 26
   offset: 0, 0
   index: -1
 05
-  rotate: false
-  xy: 2, 505
-  size: 186, 175
-  orig: 191, 175
+  rotate: true
+  xy: 2, 15
+  size: 93, 88
+  orig: 96, 88
   offset: 0, 0
   index: -1
 06
   rotate: true
-  xy: 140, 110
-  size: 163, 131
-  orig: 163, 135
-  offset: 0, 4
+  xy: 92, 26
+  size: 82, 66
+  orig: 82, 68
+  offset: 0, 2
   index: -1
 07
   rotate: false
-  xy: 2, 2
-  size: 122, 157
-  orig: 139, 157
-  offset: 17, 0
+  xy: 160, 29
+  size: 62, 79
+  orig: 70, 79
+  offset: 8, 0
   index: -1
 08
   rotate: false
-  xy: 2, 161
-  size: 61, 39
-  orig: 61, 43
+  xy: 154, 4
+  size: 31, 20
+  orig: 31, 22
   offset: 0, 0
   index: -1
 09
   rotate: true
-  xy: 68, 164
-  size: 55, 60
-  orig: 62, 62
-  offset: 7, 2
+  xy: 420, 27
+  size: 28, 30
+  orig: 31, 31
+  offset: 3, 1
   index: -1
 10
-  rotate: true
-  xy: 253, 449
-  size: 84, 16
-  orig: 84, 16
+  rotate: false
+  xy: 2, 5
+  size: 42, 8
+  orig: 42, 8
   offset: 0, 0
   index: -1
 11
   rotate: true
-  xy: 158, 275
-  size: 137, 111
-  orig: 141, 111
-  offset: 4, 0
+  xy: 265, 39
+  size: 69, 56
+  orig: 71, 56
+  offset: 2, 0
   index: -1
 12
   rotate: true
-  xy: 190, 535
-  size: 145, 77
-  orig: 147, 85
-  offset: 0, 8
+  xy: 224, 35
+  size: 73, 39
+  orig: 74, 43
+  offset: 0, 4
   index: -1
 13
   rotate: false
-  xy: 158, 478
-  size: 25, 25
-  orig: 25, 26
+  xy: 420, 12
+  size: 13, 13
+  orig: 13, 13
   offset: 0, 0
   index: -1
 DaoGuang01
-  rotate: true
-  xy: 2, 268
-  size: 235, 100
-  orig: 278, 114
-  offset: 12, 7
+  rotate: false
+  xy: 332, 57
+  size: 118, 51
+  orig: 139, 57
+  offset: 6, 3
   index: -1
 DaoGuang02
   rotate: false
-  xy: 126, 2
-  size: 117, 106
-  orig: 128, 128
-  offset: 3, 11
+  xy: 332, 2
+  size: 58, 53
+  orig: 64, 64
+  offset: 2, 5
   index: -1
 DaoGuang03
-  rotate: false
-  xy: 104, 221
-  size: 34, 93
-  orig: 51, 96
-  offset: 9, 2
+  rotate: true
+  xy: 187, 9
+  size: 18, 47
+  orig: 26, 48
+  offset: 4, 1
   index: -1
 Shadow
   rotate: false
-  xy: 2, 202
-  size: 64, 64
-  orig: 64, 64
+  xy: 298, 5
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1

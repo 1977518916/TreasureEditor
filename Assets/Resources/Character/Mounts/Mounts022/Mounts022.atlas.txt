@@ -1,125 +1,125 @@
 
 Mounts022.png
-size: 1244,1244
+size: 648,648
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Shadow
   rotate: false
-  xy: 526, 240
-  size: 32, 32
-  orig: 32, 32
+  xy: 628, 341
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 hu1
-  rotate: true
-  xy: 573, 240
-  size: 259, 206
-  orig: 259, 206
+  rotate: false
+  xy: 359, 141
+  size: 130, 103
+  orig: 130, 103
   offset: 0, 0
   index: -1
 hu10
-  rotate: true
-  xy: 780, 36
-  size: 128, 171
-  orig: 128, 171
+  rotate: false
+  xy: 339, 53
+  size: 64, 86
+  orig: 64, 86
   offset: 0, 0
   index: -1
 hu11
-  rotate: false
-  xy: 289, 3
-  size: 235, 269
-  orig: 235, 269
+  rotate: true
+  xy: 222, 171
+  size: 118, 135
+  orig: 118, 135
   offset: 0, 0
   index: -1
 hu12
-  rotate: false
-  xy: 573, 501
-  size: 222, 308
-  orig: 222, 308
+  rotate: true
+  xy: 367, 246
+  size: 111, 154
+  orig: 111, 154
   offset: 0, 0
   index: -1
 hu13
   rotate: false
-  xy: 2, 811
-  size: 728, 431
-  orig: 728, 431
+  xy: 2, 428
+  size: 364, 216
+  orig: 364, 216
   offset: 0, 0
   index: -1
 hu14
-  rotate: false
-  xy: 797, 645
-  size: 265, 205
-  orig: 265, 205
+  rotate: true
+  xy: 523, 224
+  size: 133, 103
+  orig: 133, 103
   offset: 0, 0
   index: -1
 hu15
   rotate: true
-  xy: 781, 251
-  size: 191, 245
-  orig: 191, 246
-  offset: 0, 1
+  xy: 2, 31
+  size: 96, 123
+  orig: 96, 123
+  offset: 0, 0
   index: -1
 hu16
-  rotate: false
-  xy: 781, 166
-  size: 366, 83
-  orig: 366, 144
+  rotate: true
+  xy: 131, 46
+  size: 183, 42
+  orig: 183, 72
   offset: 0, 0
   index: -1
 hu2
   rotate: false
-  xy: 953, 18
-  size: 159, 146
-  orig: 159, 146
+  xy: 257, 96
+  size: 80, 73
+  orig: 80, 73
   offset: 0, 0
   index: -1
 hu3
   rotate: true
-  xy: 1053, 463
-  size: 171, 159
-  orig: 171, 159
+  xy: 175, 83
+  size: 86, 80
+  orig: 86, 80
   offset: 0, 0
   index: -1
 hu4
   rotate: true
-  xy: 797, 444
-  size: 199, 254
-  orig: 199, 254
+  xy: 2, 129
+  size: 100, 127
+  orig: 100, 127
   offset: 0, 0
   index: -1
 hu5
-  rotate: false
-  xy: 2, 274
-  size: 569, 535
-  orig: 569, 535
+  rotate: true
+  xy: 368, 359
+  size: 285, 268
+  orig: 285, 268
   offset: 0, 0
   index: -1
 hu6
   rotate: false
-  xy: 732, 852
-  size: 436, 390
-  orig: 436, 390
+  xy: 2, 231
+  size: 218, 195
+  orig: 218, 195
   offset: 0, 0
   index: -1
 hu7
   rotate: true
-  xy: 526, 35
-  size: 203, 252
-  orig: 203, 252
+  xy: 491, 120
+  size: 102, 126
+  orig: 102, 126
   offset: 0, 0
   index: -1
 hu8
   rotate: false
-  xy: 2, 2
-  size: 285, 270
-  orig: 285, 270
+  xy: 222, 291
+  size: 143, 135
+  orig: 143, 135
   offset: 0, 0
   index: -1
 hu9
   rotate: false
-  xy: 1064, 636
-  size: 101, 214
-  orig: 101, 214
+  xy: 405, 32
+  size: 51, 107
+  orig: 51, 107
   offset: 0, 0
   index: -1

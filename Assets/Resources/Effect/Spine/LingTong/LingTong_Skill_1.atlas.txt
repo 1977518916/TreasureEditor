@@ -1,34 +1,55 @@
 
 LingTong_Skill_1.png
-size: 256,256
+size: 476,302
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-DaoGuang
-  rotate: true
-  xy: 2, 181
-  size: 46, 192
-  orig: 48, 192
-  offset: 0, 0
-  index: -1
-DaoGuang1
-  rotate: true
-  xy: 2, 2
-  size: 102, 189
-  orig: 102, 189
-  offset: 0, 0
-  index: -1
-Fog
+images/LingTong_skill1_001
   rotate: false
-  xy: 2, 106
-  size: 124, 73
-  orig: 124, 73
-  offset: 0, 0
+  xy: 337, 2
+  size: 102, 73
+  orig: 270, 175
+  offset: 76, 22
   index: -1
-Path
+images/LingTong_skill1_002
+  rotate: true
+  xy: 237, 13
+  size: 138, 98
+  orig: 270, 175
+  offset: 67, 14
+  index: -1
+images/LingTong_skill1_003
   rotate: false
-  xy: 2, 229
-  size: 82, 24
-  orig: 96, 24
-  offset: 9, 0
+  xy: 2, 14
+  size: 233, 137
+  orig: 270, 175
+  offset: 20, 8
+  index: -1
+images/LingTong_skill1_004
+  rotate: false
+  xy: 2, 153
+  size: 260, 147
+  orig: 270, 175
+  offset: 10, 10
+  index: -1
+images/LingTong_skill1_005
+  rotate: false
+  xy: 264, 166
+  size: 206, 134
+  orig: 270, 175
+  offset: 43, 14
+  index: -1
+images/LingTong_skill1_006
+  rotate: false
+  xy: 337, 77
+  size: 107, 87
+  orig: 270, 175
+  offset: 75, 61
+  index: -1
+images/LingTong_skill1_jian_001
+  rotate: false
+  xy: 446, 30
+  size: 28, 134
+  orig: 29, 137
+  offset: 1, 1
   index: -1

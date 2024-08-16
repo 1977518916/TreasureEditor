@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LvMeng_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 7ce17bfaeb152c0489b98859195b562b, type: 2}
+  - {fileID: 11400000, guid: c3865c5cf09ef154ebff033736bb0a18, type: 2}
   scale: 0.01
   skeletonJSON: {fileID: 4900000, guid: 0da78acaa2f490e428f04c402500280a, type: 3}
   isUpgradingBlendModeMaterials: 0

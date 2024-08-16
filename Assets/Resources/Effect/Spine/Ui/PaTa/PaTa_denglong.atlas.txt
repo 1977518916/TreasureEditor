@@ -1,0 +1,132 @@
+
+PaTa_denglong.png
+size: 131,75
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/denglong
+  rotate: false
+  xy: 0, 2
+  size: 54, 73
+  orig: 62, 78
+  offset: 2, 5
+  index: -1
+images/denglongsui
+  rotate: false
+  xy: 56, 43
+  size: 11, 32
+  orig: 11, 32
+  offset: 0, 0
+  index: -1
+images/pata_denglong_001
+  rotate: false
+  xy: 85, 56
+  size: 13, 19
+  orig: 25, 35
+  offset: 6, 6
+  index: -1
+images/pata_denglong_002
+  rotate: false
+  xy: 100, 56
+  size: 13, 19
+  orig: 25, 35
+  offset: 6, 6
+  index: -1
+images/pata_denglong_003
+  rotate: false
+  xy: 69, 56
+  size: 14, 19
+  orig: 25, 35
+  offset: 5, 6
+  index: -1
+images/pata_denglong_004
+  rotate: false
+  xy: 115, 56
+  size: 13, 19
+  orig: 25, 35
+  offset: 5, 6
+  index: -1
+images/pata_denglong_005
+  rotate: false
+  xy: 56, 0
+  size: 13, 19
+  orig: 25, 35
+  offset: 5, 6
+  index: -1
+images/pata_denglong_006
+  rotate: false
+  xy: 118, 36
+  size: 13, 18
+  orig: 25, 35
+  offset: 5, 6
+  index: -1
+images/pata_denglong_007
+  rotate: false
+  xy: 70, 36
+  size: 14, 18
+  orig: 25, 35
+  offset: 5, 6
+  index: -1
+images/pata_denglong_008
+  rotate: false
+  xy: 86, 36
+  size: 14, 18
+  orig: 25, 35
+  offset: 5, 6
+  index: -1
+images/pata_denglong_009
+  rotate: false
+  xy: 102, 36
+  size: 14, 18
+  orig: 25, 35
+  offset: 5, 6
+  index: -1
+images/pata_denglong_010
+  rotate: false
+  xy: 71, 1
+  size: 14, 18
+  orig: 25, 35
+  offset: 5, 6
+  index: -1
+images/pata_denglong_011
+  rotate: true
+  xy: 70, 21
+  size: 13, 19
+  orig: 25, 35
+  offset: 5, 6
+  index: -1
+images/pata_denglong_012
+  rotate: false
+  xy: 56, 21
+  size: 12, 20
+  orig: 25, 35
+  offset: 6, 6
+  index: -1
+images/pata_denglong_013
+  rotate: true
+  xy: 91, 21
+  size: 13, 19
+  orig: 25, 35
+  offset: 6, 6
+  index: -1
+images/pata_denglong_014
+  rotate: true
+  xy: 87, 6
+  size: 13, 19
+  orig: 25, 35
+  offset: 6, 6
+  index: -1
+images/pata_denglong_015
+  rotate: true
+  xy: 112, 21
+  size: 13, 19
+  orig: 25, 35
+  offset: 6, 6
+  index: -1
+images/pata_denglong_016
+  rotate: true
+  xy: 112, 21
+  size: 13, 19
+  orig: 25, 35
+  offset: 6, 6
+  index: -1

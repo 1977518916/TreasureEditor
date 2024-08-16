@@ -1,111 +1,111 @@
 
 HuangGai_Skill_1.png
-size: 1024,512
+size: 891,283
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 BaoDian_01
   rotate: true
-  xy: 669, 94
-  size: 34, 51
+  xy: 826, 2
+  size: 32, 48
   orig: 64, 128
-  offset: 14, 0
+  offset: 15, 0
   index: -1
 BaoDian_02
   rotate: false
-  xy: 586, 138
-  size: 56, 94
+  xy: 770, 32
+  size: 54, 89
   orig: 64, 128
-  offset: 2, 2
+  offset: 4, 4
   index: -1
 BaoDian_03
-  rotate: false
-  xy: 669, 130
-  size: 61, 102
+  rotate: true
+  xy: 672, 62
+  size: 59, 96
   orig: 64, 128
-  offset: 1, 13
+  offset: 2, 16
   index: -1
 BaoDian_04
   rotate: false
-  xy: 521, 201
-  size: 63, 93
+  xy: 827, 106
+  size: 62, 88
   orig: 64, 128
-  offset: 1, 29
+  offset: 2, 31
   index: -1
 BaoDian_05
-  rotate: true
-  xy: 676, 307
-  size: 62, 85
+  rotate: false
+  xy: 591, 40
+  size: 61, 79
   orig: 64, 128
-  offset: 2, 43
+  offset: 3, 45
   index: -1
 BaoDian_06
-  rotate: true
-  xy: 602, 234
-  size: 64, 73
+  rotate: false
+  xy: 826, 36
+  size: 61, 68
   orig: 64, 128
-  offset: 0, 55
+  offset: 3, 58
   index: -1
 BaoDian_07
   rotate: false
-  xy: 677, 248
-  size: 64, 57
+  xy: 654, 6
+  size: 60, 54
   orig: 64, 128
-  offset: 0, 71
+  offset: 3, 74
   index: -1
 BaoDian_08
-  rotate: false
-  xy: 521, 152
-  size: 59, 47
+  rotate: true
+  xy: 716, 5
+  size: 55, 43
   orig: 64, 128
-  offset: 2, 81
+  offset: 4, 83
   index: -1
 Boom
   rotate: false
-  xy: 288, 46
-  size: 379, 90
+  xy: 510, 196
+  size: 376, 85
   orig: 379, 100
-  offset: 0, 10
+  offset: 3, 11
   index: -1
 Dimian
-  rotate: true
-  xy: 2, 87
-  size: 282, 284
+  rotate: false
+  xy: 2, 3
+  size: 281, 278
   orig: 284, 284
-  offset: 2, 0
+  offset: 3, 3
   index: -1
 Fog_1
-  rotate: false
-  xy: 602, 300
+  rotate: true
+  xy: 510, 42
   size: 72, 69
   orig: 85, 85
   offset: 7, 8
   index: -1
 Fog_2
-  rotate: true
-  xy: 173, 6
+  rotate: false
+  xy: 510, 116
   size: 79, 78
   orig: 85, 85
   offset: 4, 4
   index: -1
 Fog_3
   rotate: false
-  xy: 521, 296
+  xy: 591, 121
   size: 79, 73
   orig: 85, 85
   offset: 2, 5
   index: -1
 Glow
   rotate: false
-  xy: 288, 138
-  size: 231, 231
+  xy: 285, 58
+  size: 223, 223
   orig: 256, 256
-  offset: 13, 12
+  offset: 17, 16
   index: -1
 Line
   rotate: false
-  xy: 2, 2
-  size: 169, 83
+  xy: 672, 123
+  size: 153, 71
   orig: 179, 89
-  offset: 4, 3
+  offset: 13, 9
   index: -1

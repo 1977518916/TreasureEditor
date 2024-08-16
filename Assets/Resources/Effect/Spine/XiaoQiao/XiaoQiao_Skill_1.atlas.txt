@@ -1,41 +1,41 @@
 
 XiaoQiao_Skill_1.png
-size: 512,512
+size: 391,332
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 DaoGuang
   rotate: true
-  xy: 120, 230
-  size: 105, 127
+  xy: 2, 11
+  size: 102, 126
   orig: 128, 128
-  offset: 0, 1
+  offset: 0, 2
   index: -1
 Glow
   rotate: false
-  xy: 249, 219
-  size: 116, 116
+  xy: 130, 2
+  size: 111, 111
   orig: 128, 128
-  offset: 6, 6
+  offset: 9, 8
   index: -1
 GuangZhu
   rotate: false
-  xy: 166, 2
+  xy: 2, 115
   size: 226, 215
   orig: 226, 215
   offset: 0, 0
   index: -1
 Snow
   rotate: false
-  xy: 2, 231
-  size: 116, 104
+  xy: 243, 68
+  size: 114, 101
   orig: 116, 104
-  offset: 0, 0
+  offset: 1, 2
   index: -1
 Yuan
   rotate: false
-  xy: 2, 66
-  size: 162, 162
+  xy: 230, 171
+  size: 159, 159
   orig: 162, 162
-  offset: 0, 0
+  offset: 1, 1
   index: -1

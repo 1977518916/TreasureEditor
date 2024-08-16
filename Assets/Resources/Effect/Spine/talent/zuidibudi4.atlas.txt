@@ -1,0 +1,111 @@
+
+zuidibudi4.png
+size: 392,301
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 2, 73
+  size: 226, 85
+  orig: 242, 85
+  offset: 8, 0
+  index: -1
+UI/images/001
+  rotate: true
+  xy: 236, 7
+  size: 90, 67
+  orig: 99, 70
+  offset: 1, 1
+  index: -1
+UI/images/004
+  rotate: true
+  xy: 305, 7
+  size: 90, 67
+  orig: 99, 70
+  offset: 1, 0
+  index: -1
+UI/images/007
+  rotate: false
+  xy: 295, 234
+  size: 95, 65
+  orig: 99, 70
+  offset: 1, 0
+  index: -1
+UI/images/010
+  rotate: false
+  xy: 295, 169
+  size: 95, 63
+  orig: 99, 70
+  offset: 1, 0
+  index: -1
+UI/images/013
+  rotate: true
+  xy: 89, 101
+  size: 98, 64
+  orig: 99, 70
+  offset: 1, 0
+  index: -1
+UI/images/016
+  rotate: true
+  xy: 89, 201
+  size: 98, 66
+  orig: 99, 70
+  offset: 1, 0
+  index: -1
+UI/images/019
+  rotate: true
+  xy: 157, 203
+  size: 96, 67
+  orig: 99, 70
+  offset: 0, 0
+  index: -1
+UI/images/022
+  rotate: true
+  xy: 168, 4
+  size: 96, 66
+  orig: 99, 70
+  offset: 0, 0
+  index: -1
+UI/images/025
+  rotate: true
+  xy: 226, 204
+  size: 95, 67
+  orig: 99, 70
+  offset: 1, 1
+  index: -1
+UI/images/028
+  rotate: true
+  xy: 223, 106
+  size: 95, 68
+  orig: 99, 70
+  offset: 1, 0
+  index: -1
+UI/images/031
+  rotate: true
+  xy: 155, 102
+  size: 97, 66
+  orig: 99, 70
+  offset: 1, 1
+  index: -1
+UI/images/034
+  rotate: true
+  xy: 98, 2
+  size: 97, 68
+  orig: 99, 70
+  offset: 1, 1
+  index: -1
+UI/images/037
+  rotate: false
+  xy: 2, 2
+  size: 94, 69
+  orig: 99, 70
+  offset: 1, 1
+  index: -1
+UI/images/038
+  rotate: false
+  xy: 293, 99
+  size: 90, 68
+  orig: 99, 70
+  offset: 1, 1
+  index: -1

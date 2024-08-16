@@ -1,118 +1,76 @@
 
 LuJi.png
-size: 400,400
+size: 548,548
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Arm_L
+1
+  rotate: false
+  xy: 481, 63
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+10
   rotate: true
-  xy: 192, 3
-  size: 59, 69
-  orig: 59, 69
+  xy: 311, 242
+  size: 303, 148
+  orig: 303, 148
   offset: 0, 0
   index: -1
-Arm_R
-  rotate: false
-  xy: 119, 2
-  size: 71, 60
-  orig: 74, 66
-  offset: 3, 4
-  index: -1
-BoWen
+2
   rotate: true
-  xy: 252, 162
-  size: 115, 114
-  orig: 128, 128
-  offset: 7, 6
+  xy: 2, 109
+  size: 134, 220
+  orig: 134, 220
+  offset: 0, 0
   index: -1
-Body
-  rotate: false
-  xy: 2, 50
-  size: 115, 110
-  orig: 131, 120
-  offset: 12, 10
-  index: -1
-Dian
-  rotate: false
-  xy: 342, 38
-  size: 52, 52
-  orig: 64, 64
-  offset: 6, 6
-  index: -1
-Eye_L
+3
   rotate: true
-  xy: 347, 103
-  size: 57, 36
-  orig: 57, 36
+  xy: 224, 80
+  size: 163, 76
+  orig: 163, 76
   offset: 0, 0
   index: -1
-Eye_L_1
+4
+  rotate: false
+  xy: 125, 2
+  size: 163, 76
+  orig: 163, 76
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 2, 245
+  size: 307, 300
+  orig: 307, 300
+  offset: 0, 0
+  index: -1
+6
   rotate: true
-  xy: 278, 92
-  size: 68, 67
-  orig: 68, 67
+  xy: 481, 95
+  size: 45, 30
+  orig: 45, 30
   offset: 0, 0
   index: -1
-Eye_R
+7
   rotate: false
-  xy: 2, 10
-  size: 38, 38
-  orig: 38, 38
-  offset: 0, 0
+  xy: 302, 142
+  size: 199, 98
+  orig: 207, 98
+  offset: 8, 0
   index: -1
-Eye_R_1
+8
   rotate: false
-  xy: 278, 28
-  size: 62, 62
-  orig: 62, 62
+  xy: 302, 10
+  size: 177, 130
+  orig: 189, 134
   offset: 0, 0
   index: -1
-Feet_L
+9
   rotate: true
-  xy: 370, 359
-  size: 17, 14
-  orig: 17, 14
-  offset: 0, 0
-  index: -1
-Feet_R
-  rotate: true
-  xy: 370, 378
-  size: 17, 15
-  orig: 17, 15
-  offset: 0, 0
-  index: -1
-Glow
-  rotate: false
-  xy: 252, 279
-  size: 116, 116
-  orig: 128, 128
-  offset: 6, 6
-  index: -1
-Hand_R
-  rotate: false
-  xy: 368, 253
-  size: 23, 24
-  orig: 23, 24
-  offset: 0, 0
-  index: -1
-Head
-  rotate: false
-  xy: 2, 162
-  size: 248, 233
-  orig: 249, 236
-  offset: 0, 1
-  index: -1
-Shadow
-  rotate: false
-  xy: 342, 4
-  size: 32, 32
-  orig: 32, 32
-  offset: 0, 0
-  index: -1
-Zhang
-  rotate: true
-  xy: 119, 64
-  size: 96, 157
-  orig: 96, 157
+  xy: 2, 3
+  size: 104, 121
+  orig: 104, 121
   offset: 0, 0
   index: -1

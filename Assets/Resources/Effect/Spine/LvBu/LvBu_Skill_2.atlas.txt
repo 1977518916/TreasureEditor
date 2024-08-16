@@ -1,0 +1,125 @@
+
+LvBu_Skill_2.png
+size: 468,422
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/lvbu_Skill_2_a_001
+  rotate: true
+  xy: 2, 277
+  size: 143, 140
+  orig: 159, 150
+  offset: 6, 0
+  index: -1
+images/lvbu_Skill_2_a_002
+  rotate: true
+  xy: 2, 137
+  size: 138, 137
+  orig: 159, 150
+  offset: 12, 1
+  index: -1
+images/lvbu_Skill_2_a_003
+  rotate: false
+  xy: 2, 2
+  size: 137, 133
+  orig: 159, 150
+  offset: 13, 3
+  index: -1
+images/lvbu_Skill_2_a_004
+  rotate: false
+  xy: 141, 146
+  size: 128, 129
+  orig: 159, 150
+  offset: 15, 6
+  index: -1
+images/lvbu_Skill_2_a_005
+  rotate: false
+  xy: 144, 294
+  size: 122, 126
+  orig: 159, 150
+  offset: 19, 8
+  index: -1
+images/lvbu_Skill_2_a_006
+  rotate: false
+  xy: 141, 27
+  size: 121, 117
+  orig: 159, 150
+  offset: 19, 12
+  index: -1
+images/lvbu_Skill_2_a_007
+  rotate: true
+  xy: 271, 166
+  size: 123, 113
+  orig: 159, 150
+  offset: 15, 15
+  index: -1
+images/lvbu_Skill_2_a_008
+  rotate: true
+  xy: 268, 291
+  size: 129, 117
+  orig: 159, 150
+  offset: 11, 13
+  index: -1
+images/lvbu_Skill_2_a_009
+  rotate: true
+  xy: 271, 47
+  size: 117, 110
+  orig: 159, 150
+  offset: 16, 21
+  index: -1
+images/lvbu_Skill_2_b_001
+  rotate: false
+  xy: 264, 4
+  size: 75, 41
+  orig: 114, 135
+  offset: 18, 14
+  index: -1
+images/lvbu_Skill_2_b_002
+  rotate: false
+  xy: 383, 89
+  size: 76, 47
+  orig: 114, 135
+  offset: 19, 14
+  index: -1
+images/lvbu_Skill_2_b_003
+  rotate: false
+  xy: 386, 138
+  size: 75, 49
+  orig: 114, 135
+  offset: 19, 19
+  index: -1
+images/lvbu_Skill_2_b_004
+  rotate: false
+  xy: 387, 282
+  size: 78, 67
+  orig: 114, 135
+  offset: 16, 26
+  index: -1
+images/lvbu_Skill_2_b_005
+  rotate: false
+  xy: 386, 189
+  size: 80, 91
+  orig: 114, 135
+  offset: 14, 26
+  index: -1
+images/lvbu_Skill_2_b_006
+  rotate: true
+  xy: 387, 351
+  size: 69, 79
+  orig: 114, 135
+  offset: 15, 38
+  index: -1
+images/lvbu_Skill_2_b_007
+  rotate: false
+  xy: 383, 37
+  size: 57, 50
+  orig: 114, 135
+  offset: 27, 67
+  index: -1
+images/lvbu_Skill_2_b_008
+  rotate: true
+  xy: 341, 2
+  size: 43, 30
+  orig: 114, 135
+  offset: 41, 86
+  index: -1

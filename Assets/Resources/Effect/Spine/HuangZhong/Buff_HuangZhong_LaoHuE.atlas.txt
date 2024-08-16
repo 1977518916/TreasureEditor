@@ -1,0 +1,48 @@
+
+Buff_HuangZhong_LaoHuE.png
+size: 216,84
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Buff_HuangZhong_LaoHu_yunb_001
+  rotate: true
+  xy: 149, 45
+  size: 36, 63
+  orig: 57, 97
+  offset: 12, 8
+  index: -1
+images/Buff_HuangZhong_LaoHu_yunb_002
+  rotate: false
+  xy: 114, 6
+  size: 33, 75
+  orig: 57, 97
+  offset: 15, 8
+  index: -1
+images/Buff_HuangZhong_LaoHu_yunb_003
+  rotate: false
+  xy: 2, 2
+  size: 34, 79
+  orig: 57, 97
+  offset: 15, 7
+  index: -1
+images/Buff_HuangZhong_LaoHu_yunb_004
+  rotate: false
+  xy: 38, 6
+  size: 35, 75
+  orig: 57, 97
+  offset: 14, 7
+  index: -1
+images/Buff_HuangZhong_LaoHu_yunb_005
+  rotate: false
+  xy: 75, 10
+  size: 37, 71
+  orig: 57, 97
+  offset: 13, 7
+  index: -1
+images/Buff_HuangZhong_LaoHu_yunb_006
+  rotate: true
+  xy: 149, 5
+  size: 38, 54
+  orig: 57, 97
+  offset: 13, 7
+  index: -1

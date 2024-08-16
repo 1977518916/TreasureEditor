@@ -1,0 +1,62 @@
+
+GaoShun_Skill_2.png
+size: 1474,175
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/GaoShun_Skill2_001
+  rotate: false
+  xy: 186, 2
+  size: 182, 171
+  orig: 208, 215
+  offset: 17, 21
+  index: -1
+images/GaoShun_Skill2_002
+  rotate: false
+  xy: 370, 2
+  size: 182, 171
+  orig: 208, 215
+  offset: 17, 21
+  index: -1
+images/GaoShun_Skill2_003
+  rotate: false
+  xy: 554, 2
+  size: 182, 171
+  orig: 208, 215
+  offset: 17, 21
+  index: -1
+images/GaoShun_Skill2_004
+  rotate: false
+  xy: 738, 2
+  size: 182, 171
+  orig: 208, 215
+  offset: 17, 21
+  index: -1
+images/GaoShun_Skill2_005
+  rotate: false
+  xy: 922, 2
+  size: 182, 171
+  orig: 208, 215
+  offset: 17, 21
+  index: -1
+images/GaoShun_Skill2_006
+  rotate: false
+  xy: 1106, 2
+  size: 182, 171
+  orig: 208, 215
+  offset: 17, 21
+  index: -1
+images/GaoShun_Skill2_007
+  rotate: false
+  xy: 1290, 2
+  size: 182, 171
+  orig: 208, 215
+  offset: 17, 21
+  index: -1
+images/GaoShun_Skill2_008
+  rotate: false
+  xy: 2, 2
+  size: 182, 171
+  orig: 208, 215
+  offset: 17, 21
+  index: -1

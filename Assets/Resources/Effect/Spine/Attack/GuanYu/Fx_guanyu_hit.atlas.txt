@@ -1,55 +1,55 @@
 
 Fx_guanyu_hit.png
-size: 193,1055
+size: 519,98
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 GY (1)
-  rotate: true
-  xy: 2, 949
-  size: 104, 111
-  orig: 190, 227
-  offset: 40, 60
+  rotate: false
+  xy: 467, 42
+  size: 50, 54
+  orig: 95, 114
+  offset: 21, 31
   index: -1
 GY (2)
-  rotate: false
+  rotate: true
   xy: 2, 2
-  size: 189, 213
-  orig: 190, 227
-  offset: 0, 9
+  size: 94, 106
+  orig: 95, 114
+  offset: 0, 5
   index: -1
 GY (3)
-  rotate: false
+  rotate: true
   xy: 2, 2
-  size: 189, 213
-  orig: 190, 227
-  offset: 0, 9
+  size: 94, 106
+  orig: 95, 114
+  offset: 0, 5
   index: -1
 GY (4)
-  rotate: false
-  xy: 2, 217
-  size: 186, 207
-  orig: 190, 227
-  offset: 0, 12
+  rotate: true
+  xy: 110, 5
+  size: 91, 102
+  orig: 95, 114
+  offset: 1, 7
   index: -1
 GY (5)
   rotate: false
-  xy: 2, 426
-  size: 173, 192
-  orig: 190, 227
-  offset: 6, 19
+  xy: 214, 2
+  size: 85, 94
+  orig: 95, 114
+  offset: 4, 11
   index: -1
 GY (6)
-  rotate: true
-  xy: 2, 620
-  size: 164, 185
-  orig: 190, 227
-  offset: 10, 23
+  rotate: false
+  xy: 301, 2
+  size: 81, 94
+  orig: 95, 114
+  offset: 6, 11
   index: -1
 GY (7)
-  rotate: true
-  xy: 2, 786
-  size: 161, 185
-  orig: 190, 227
-  offset: 12, 23
+  rotate: false
+  xy: 384, 2
+  size: 81, 94
+  orig: 95, 114
+  offset: 6, 11
   index: -1

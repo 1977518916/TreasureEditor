@@ -1,0 +1,83 @@
+
+Fx_ZhaoMuShouJi_ShouJi.png
+size: 408,164
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_ZhaoMuShouJi_ShouJi_001
+  rotate: false
+  xy: 2, 111
+  size: 48, 48
+  orig: 108, 113
+  offset: 30, 30
+  index: -1
+images/Fx_ZhaoMuShouJi_ShouJi_002
+  rotate: false
+  xy: 52, 102
+  size: 57, 57
+  orig: 108, 113
+  offset: 26, 25
+  index: -1
+images/Fx_ZhaoMuShouJi_ShouJi_003
+  rotate: false
+  xy: 111, 95
+  size: 64, 64
+  orig: 108, 113
+  offset: 22, 22
+  index: -1
+images/Fx_ZhaoMuShouJi_ShouJi_004
+  rotate: false
+  xy: 177, 89
+  size: 70, 70
+  orig: 108, 113
+  offset: 19, 19
+  index: -1
+images/Fx_ZhaoMuShouJi_ShouJi_005
+  rotate: false
+  xy: 249, 85
+  size: 74, 74
+  orig: 108, 113
+  offset: 17, 17
+  index: -1
+images/Fx_ZhaoMuShouJi_ShouJi_006
+  rotate: false
+  xy: 325, 83
+  size: 76, 76
+  orig: 108, 113
+  offset: 16, 16
+  index: -1
+images/Fx_ZhaoMuShouJi_ShouJi_007
+  rotate: false
+  xy: 83, 15
+  size: 78, 78
+  orig: 108, 113
+  offset: 15, 15
+  index: -1
+images/Fx_ZhaoMuShouJi_ShouJi_008
+  rotate: false
+  xy: 244, 4
+  size: 79, 79
+  orig: 108, 113
+  offset: 15, 14
+  index: -1
+images/Fx_ZhaoMuShouJi_ShouJi_009
+  rotate: false
+  xy: 325, 2
+  size: 79, 79
+  orig: 108, 113
+  offset: 14, 15
+  index: -1
+images/Fx_ZhaoMuShouJi_ShouJi_010
+  rotate: false
+  xy: 163, 9
+  size: 79, 78
+  orig: 108, 113
+  offset: 14, 15
+  index: -1
+images/Fx_ZhaoMuShouJi_ShouJi_011
+  rotate: true
+  xy: 2, 22
+  size: 78, 79
+  orig: 108, 113
+  offset: 14, 14
+  index: -1

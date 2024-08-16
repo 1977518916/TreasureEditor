@@ -1,160 +1,160 @@
 
 SunShangXiang.png
-size: 1324,536
+size: 348,524
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 1
-  rotate: false
-  xy: 399, 97
-  size: 276, 437
-  orig: 276, 437
+  rotate: true
+  xy: 2, 184
+  size: 138, 219
+  orig: 138, 219
   offset: 0, 0
   index: -1
 10
   rotate: false
-  xy: 876, 36
-  size: 78, 63
-  orig: 78, 63
+  xy: 223, 290
+  size: 39, 32
+  orig: 39, 32
   offset: 0, 0
   index: -1
 11
   rotate: false
-  xy: 1182, 110
-  size: 69, 51
-  orig: 69, 51
+  xy: 264, 290
+  size: 35, 26
+  orig: 35, 26
   offset: 0, 0
   index: -1
 12
   rotate: true
-  xy: 1186, 25
-  size: 83, 55
-  orig: 83, 55
+  xy: 237, 4
+  size: 42, 28
+  orig: 42, 28
   offset: 0, 0
   index: -1
 13
   rotate: false
-  xy: 992, 349
-  size: 235, 185
-  orig: 235, 185
+  xy: 223, 165
+  size: 118, 93
+  orig: 118, 93
   offset: 0, 0
   index: -1
 14
   rotate: true
-  xy: 992, 163
-  size: 184, 230
-  orig: 184, 230
+  xy: 81, 90
+  size: 92, 115
+  orig: 92, 115
   offset: 0, 0
   index: -1
 15
-  rotate: true
-  xy: 833, 101
-  size: 122, 136
-  orig: 122, 136
+  rotate: false
+  xy: 146, 20
+  size: 61, 68
+  orig: 61, 68
   offset: 0, 0
   index: -1
 16
   rotate: false
-  xy: 677, 201
-  size: 154, 333
-  orig: 154, 333
+  xy: 2, 15
+  size: 77, 167
+  orig: 77, 167
   offset: 0, 0
   index: -1
 17
   rotate: false
-  xy: 833, 225
-  size: 157, 309
-  orig: 157, 309
+  xy: 264, 318
+  size: 79, 155
+  orig: 79, 155
   offset: 0, 0
   index: -1
 18
-  rotate: false
-  xy: 971, 109
-  size: 209, 52
-  orig: 209, 52
+  rotate: true
+  xy: 209, 2
+  size: 105, 26
+  orig: 105, 26
   offset: 0, 0
   index: -1
 19
-  rotate: false
-  xy: 399, 14
-  size: 230, 81
-  orig: 230, 81
+  rotate: true
+  xy: 305, 48
+  size: 115, 41
+  orig: 115, 41
   offset: 0, 0
   index: -1
 2
-  rotate: false
-  xy: 677, 74
-  size: 140, 125
-  orig: 140, 125
+  rotate: true
+  xy: 81, 18
+  size: 70, 63
+  orig: 70, 63
   offset: 0, 0
   index: -1
 20
   rotate: false
-  xy: 631, 17
-  size: 243, 55
-  orig: 243, 55
+  xy: 223, 260
+  size: 122, 28
+  orig: 122, 28
   offset: 0, 0
   index: -1
 21
-  rotate: false
-  xy: 2, 15
-  size: 395, 519
-  orig: 395, 519
+  rotate: true
+  xy: 2, 324
+  size: 198, 260
+  orig: 198, 260
   offset: 0, 0
   index: -1
 3
-  rotate: false
-  xy: 1077, 8
-  size: 107, 99
-  orig: 107, 99
+  rotate: true
+  xy: 198, 109
+  size: 54, 50
+  orig: 54, 50
   offset: 0, 0
   index: -1
 4
-  rotate: true
-  xy: 1229, 374
-  size: 160, 93
-  orig: 160, 93
+  rotate: false
+  xy: 264, 475
+  size: 80, 47
+  orig: 80, 47
   offset: 0, 0
   index: -1
 5
   rotate: false
-  xy: 1253, 112
-  size: 40, 50
-  orig: 40, 50
+  xy: 301, 291
+  size: 20, 25
+  orig: 20, 25
   offset: 0, 0
   index: -1
 6
   rotate: false
-  xy: 1243, 60
-  size: 41, 48
-  orig: 41, 48
+  xy: 323, 292
+  size: 21, 24
+  orig: 21, 24
   offset: 0, 0
   index: -1
 7
   rotate: true
-  xy: 1224, 164
-  size: 80, 89
-  orig: 80, 89
+  xy: 267, 6
+  size: 40, 45
+  orig: 40, 45
   offset: 0, 0
   index: -1
 8
-  rotate: false
-  xy: 1224, 246
-  size: 98, 101
-  orig: 98, 101
+  rotate: true
+  xy: 250, 60
+  size: 49, 51
+  orig: 49, 51
   offset: 0, 0
   index: -1
 9
-  rotate: true
-  xy: 971, 2
-  size: 105, 104
-  orig: 106, 104
+  rotate: false
+  xy: 250, 111
+  size: 53, 52
+  orig: 53, 52
   offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 876, 2
-  size: 32, 32
-  orig: 32, 32
+  xy: 198, 166
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1

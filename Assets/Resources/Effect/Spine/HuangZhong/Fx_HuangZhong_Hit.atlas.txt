@@ -1,97 +1,97 @@
 
 Fx_HuangZhong_Hit.png
-size: 596,1063
+size: 534,291
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 sj (1)
   rotate: false
-  xy: 267, 218
-  size: 116, 87
-  orig: 340, 235
-  offset: 92, 83
+  xy: 375, 245
+  size: 58, 44
+  orig: 170, 118
+  offset: 46, 42
   index: -1
 sj (11)
-  rotate: false
-  xy: 336, 877
-  size: 255, 184
-  orig: 340, 235
-  offset: 16, 31
+  rotate: true
+  xy: 109, 2
+  size: 127, 91
+  orig: 170, 118
+  offset: 8, 16
   index: -1
 sj (13)
-  rotate: false
-  xy: 307, 307
-  size: 287, 199
-  orig: 340, 235
-  offset: 1, 23
+  rotate: true
+  xy: 274, 147
+  size: 142, 99
+  orig: 170, 118
+  offset: 1, 12
   index: -1
 sj (15)
-  rotate: false
-  xy: 2, 355
-  size: 303, 188
-  orig: 340, 235
-  offset: 2, 35
+  rotate: true
+  xy: 180, 139
+  size: 150, 92
+  orig: 170, 118
+  offset: 2, 19
   index: -1
 sj (17)
-  rotate: false
-  xy: 2, 545
-  size: 318, 176
-  orig: 340, 235
-  offset: 3, 38
+  rotate: true
+  xy: 90, 131
+  size: 158, 88
+  orig: 170, 118
+  offset: 2, 19
   index: -1
 sj (19)
-  rotate: false
-  xy: 2, 890
-  size: 332, 171
-  orig: 340, 235
-  offset: 5, 42
+  rotate: true
+  xy: 2, 124
+  size: 165, 86
+  orig: 170, 118
+  offset: 3, 21
   index: -1
 sj (21)
-  rotate: false
-  xy: 2, 723
-  size: 332, 165
-  orig: 340, 235
-  offset: 8, 47
+  rotate: true
+  xy: 202, 4
+  size: 133, 83
+  orig: 170, 118
+  offset: 36, 23
   index: -1
 sj (23)
-  rotate: false
-  xy: 322, 508
-  size: 265, 153
-  orig: 340, 235
-  offset: 74, 55
+  rotate: true
+  xy: 287, 13
+  size: 132, 77
+  orig: 170, 118
+  offset: 37, 27
   index: -1
 sj (25)
-  rotate: false
-  xy: 2, 218
-  size: 263, 135
-  orig: 340, 235
-  offset: 74, 67
+  rotate: true
+  xy: 366, 14
+  size: 131, 69
+  orig: 170, 118
+  offset: 37, 33
   index: -1
 sj (3)
-  rotate: true
-  xy: 336, 663
-  size: 212, 233
-  orig: 340, 235
-  offset: 77, 0
+  rotate: false
+  xy: 2, 7
+  size: 105, 115
+  orig: 170, 118
+  offset: 39, 1
   index: -1
 sj (5)
-  rotate: false
-  xy: 385, 131
-  size: 177, 174
-  orig: 340, 235
-  offset: 71, 36
+  rotate: true
+  xy: 437, 2
+  size: 88, 87
+  orig: 170, 118
+  offset: 36, 18
   index: -1
 sj (7)
-  rotate: true
-  xy: 183, 24
-  size: 192, 180
-  orig: 340, 235
-  offset: 63, 35
+  rotate: false
+  xy: 437, 200
+  size: 95, 89
+  orig: 170, 118
+  offset: 32, 18
   index: -1
 sj (9)
   rotate: true
-  xy: 2, 2
-  size: 214, 179
-  orig: 340, 235
-  offset: 39, 35
+  xy: 437, 92
+  size: 106, 89
+  orig: 170, 118
+  offset: 20, 18
   index: -1

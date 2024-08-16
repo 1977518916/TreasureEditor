@@ -1,0 +1,27 @@
+
+Fx_KeHeCheng.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Glow_01
+  rotate: false
+  xy: 2, 2
+  size: 72, 90
+  orig: 72, 90
+  offset: 0, 0
+  index: -1
+Glow_02
+  rotate: false
+  xy: 173, 3
+  size: 73, 89
+  orig: 73, 89
+  offset: 0, 0
+  index: -1
+Plane_01
+  rotate: false
+  xy: 76, 25
+  size: 95, 67
+  orig: 95, 67
+  offset: 0, 0
+  index: -1

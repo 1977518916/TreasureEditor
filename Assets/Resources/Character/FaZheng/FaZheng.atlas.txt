@@ -1,195 +1,139 @@
 
 FaZheng.png
-size: 309,947
+size: 1120,276
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-01
+1
   rotate: true
-  xy: 254, 745
-  size: 97, 39
-  orig: 97, 39
+  xy: 895, 39
+  size: 75, 61
+  orig: 75, 61
   offset: 0, 0
-  index: -1
-02
-  rotate: true
-  xy: 245, 570
-  size: 119, 61
-  orig: 119, 61
-  offset: 0, 0
-  index: -1
-03
-  rotate: true
-  xy: 254, 844
-  size: 101, 47
-  orig: 101, 47
-  offset: 0, 0
-  index: -1
-04
-  rotate: true
-  xy: 2, 730
-  size: 215, 250
-  orig: 217, 250
-  offset: 2, 0
-  index: -1
-05
-  rotate: false
-  xy: 56, 5
-  size: 26, 25
-  orig: 26, 25
-  offset: 0, 0
-  index: -1
-06
-  rotate: true
-  xy: 230, 469
-  size: 99, 66
-  orig: 100, 73
-  offset: 1, 4
-  index: -1
-07
-  rotate: true
-  xy: 124, 227
-  size: 70, 78
-  orig: 70, 78
-  offset: 0, 0
-  index: -1
-08
-  rotate: true
-  xy: 230, 660
-  size: 68, 13
-  orig: 68, 13
-  offset: 0, 0
-  index: -1
-09
-  rotate: false
-  xy: 2, 184
-  size: 120, 113
-  orig: 127, 115
-  offset: 6, 2
   index: -1
 10
-  rotate: true
-  xy: 180, 27
-  size: 50, 55
-  orig: 51, 56
-  offset: 1, 1
-  index: -1
-11
-  rotate: true
-  xy: 254, 691
-  size: 52, 53
-  orig: 64, 53
+  rotate: false
+  xy: 2, 12
+  size: 193, 261
+  orig: 193, 261
   offset: 0, 0
   index: -1
-DaoGuang
+11
   rotate: false
-  xy: 214, 257
-  size: 91, 97
-  orig: 128, 128
-  offset: 37, 29
+  xy: 961, 6
+  size: 153, 121
+  orig: 154, 121
+  offset: 1, 0
   index: -1
-Fog1
+12
   rotate: true
-  xy: 101, 2
-  size: 38, 40
-  orig: 64, 64
-  offset: 12, 3
+  xy: 838, 116
+  size: 157, 121
+  orig: 157, 121
+  offset: 0, 0
   index: -1
-Fog2
-  rotate: true
-  xy: 2, 24
-  size: 50, 52
-  orig: 64, 64
-  offset: 7, 3
-  index: -1
-Fog3
-  rotate: true
-  xy: 247, 25
-  size: 54, 58
-  orig: 64, 64
-  offset: 3, 4
-  index: -1
-Fog4
-  rotate: true
-  xy: 247, 81
-  size: 55, 58
-  orig: 64, 64
-  offset: 5, 5
-  index: -1
-Fog5
-  rotate: true
-  xy: 183, 79
-  size: 57, 62
-  orig: 64, 64
-  offset: 5, 1
-  index: -1
-Fog6
-  rotate: true
-  xy: 118, 101
-  size: 58, 63
-  orig: 64, 64
-  offset: 2, 1
-  index: -1
-Fog7
-  rotate: true
-  xy: 118, 42
-  size: 57, 60
-  orig: 64, 64
-  offset: 4, 1
-  index: -1
-Fog8
+13
   rotate: false
-  xy: 143, 12
-  size: 29, 28
-  orig: 64, 64
-  offset: 28, 33
+  xy: 197, 51
+  size: 220, 222
+  orig: 320, 262
+  offset: 5, 35
   index: -1
-Glow
+14
   rotate: true
-  xy: 2, 503
-  size: 225, 226
-  orig: 256, 256
-  offset: 16, 14
+  xy: 197, 2
+  size: 47, 62
+  orig: 47, 63
+  offset: 0, 1
   index: -1
-GlowQuan
-  rotate: true
-  xy: 2, 299
-  size: 202, 210
-  orig: 256, 256
-  offset: 28, 18
+15
+  rotate: false
+  xy: 626, 11
+  size: 125, 91
+  orig: 130, 91
+  offset: 2, 0
   index: -1
-LvQuan
+16
   rotate: true
-  xy: 214, 356
-  size: 111, 85
-  orig: 128, 128
-  offset: 7, 35
+  xy: 961, 129
+  size: 144, 156
+  orig: 144, 162
+  offset: 0, 0
   index: -1
-LvQuan1
+17
   rotate: true
-  xy: 204, 138
-  size: 117, 100
-  orig: 128, 128
-  offset: 5, 22
+  xy: 487, 2
+  size: 87, 94
+  orig: 87, 94
+  offset: 0, 0
   index: -1
-MoDian
-  rotate: true
-  xy: 56, 32
-  size: 42, 43
-  orig: 64, 64
-  offset: 11, 11
+18
+  rotate: false
+  xy: 593, 104
+  size: 115, 169
+  orig: 116, 169
+  offset: 1, 0
   index: -1
-SanShe
+19
+  rotate: false
+  xy: 419, 91
+  size: 172, 182
+  orig: 182, 182
+  offset: 0, 0
+  index: -1
+2
   rotate: true
-  xy: 2, 76
-  size: 106, 114
-  orig: 128, 128
-  offset: 11, 7
+  xy: 261, 4
+  size: 45, 55
+  orig: 47, 58
+  offset: 0, 3
+  index: -1
+4
+  rotate: false
+  xy: 453, 65
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 453, 65
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 753, 8
+  size: 140, 102
+  orig: 163, 105
+  offset: 23, 0
+  index: -1
+7
+  rotate: true
+  xy: 710, 112
+  size: 161, 126
+  orig: 162, 126
+  offset: 1, 0
+  index: -1
+8
+  rotate: true
+  xy: 318, 5
+  size: 44, 167
+  orig: 44, 167
+  offset: 0, 0
+  index: -1
+9
+  rotate: true
+  xy: 583, 7
+  size: 82, 41
+  orig: 84, 42
+  offset: 2, 0
   index: -1
 Shadow
   rotate: false
-  xy: 124, 161
-  size: 64, 64
-  orig: 64, 64
+  xy: 419, 57
+  size: 32, 32
+  orig: 32, 32
   offset: 0, 0
   index: -1

@@ -1,41 +1,41 @@
 
 heroskill_2_3.png
-size: 1024,512
+size: 416,568
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 BaGua
   rotate: false
-  xy: 2, 220
-  size: 256, 256
+  xy: 2, 25
+  size: 245, 246
   orig: 256, 256
-  offset: 0, 0
+  offset: 6, 5
   index: -1
 BaoDian1
-  rotate: false
-  xy: 260, 220
-  size: 256, 256
+  rotate: true
+  xy: 155, 326
+  size: 240, 234
   orig: 256, 256
-  offset: 0, 0
+  offset: 6, 10
   index: -1
 QiMian
   rotate: true
-  xy: 297, 2
+  xy: 249, 108
   size: 216, 165
   orig: 216, 165
   offset: 0, 0
   index: -1
 QiZi
-  rotate: true
-  xy: 2, 66
-  size: 152, 293
+  rotate: false
+  xy: 2, 273
+  size: 151, 293
   orig: 154, 295
   offset: 1, 1
   index: -1
 Yuan_Big_Glow
   rotate: false
-  xy: 464, 111
-  size: 106, 107
+  xy: 249, 2
+  size: 102, 104
   orig: 128, 128
-  offset: 11, 10
+  offset: 13, 12
   index: -1

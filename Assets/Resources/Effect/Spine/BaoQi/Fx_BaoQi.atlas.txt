@@ -1,54 +1,54 @@
 
 Fx_BaoQi.png
-size: 1343,127
+size: 492,380
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 BaoDian1
   rotate: true
-  xy: 1132, 3
+  xy: 124, 5
   size: 122, 118
   orig: 128, 128
   offset: 5, 2
   index: -1
 BaoDian2
   rotate: false
-  xy: 1007, 2
+  xy: 124, 129
   size: 123, 123
   orig: 128, 128
   offset: 2, 0
   index: -1
 BaoQi_01
-  rotate: true
-  xy: 509, 5
+  rotate: false
+  xy: 2, 3
   size: 120, 249
   orig: 128, 256
   offset: 3, 5
   index: -1
 BaoQi_02
-  rotate: true
-  xy: 2, 2
+  rotate: false
+  xy: 256, 124
   size: 123, 251
   orig: 128, 256
   offset: 3, 5
   index: -1
 BaoQi_03
   rotate: true
-  xy: 255, 4
+  xy: 2, 254
   size: 121, 252
   orig: 128, 256
   offset: 2, 4
   index: -1
 BaoQi_04
   rotate: true
-  xy: 760, 5
+  xy: 244, 2
   size: 120, 245
   orig: 128, 256
   offset: 2, 7
   index: -1
 Yuan
   rotate: true
-  xy: 1252, 9
+  xy: 381, 259
   size: 116, 89
   orig: 128, 128
   offset: 7, 5

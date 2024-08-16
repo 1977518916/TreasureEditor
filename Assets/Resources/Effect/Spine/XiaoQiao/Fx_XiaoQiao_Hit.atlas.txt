@@ -1,97 +1,97 @@
 
 Fx_XiaoQiao_Hit.png
-size: 671,521
+size: 484,180
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 新建文件夹 (8)/sj (1)
   rotate: false
-  xy: 516, 84
-  size: 107, 109
-  orig: 183, 189
-  offset: 39, 46
+  xy: 429, 124
+  size: 53, 53
+  orig: 92, 95
+  offset: 20, 24
   index: -1
 新建文件夹 (8)/sj (11)
-  rotate: false
-  xy: 2, 349
-  size: 177, 170
-  orig: 183, 188
-  offset: 2, 11
+  rotate: true
+  xy: 2, 90
+  size: 87, 84
+  orig: 92, 94
+  offset: 2, 6
   index: -1
 新建文件夹 (8)/sj (13)
   rotate: true
-  xy: 181, 344
-  size: 175, 170
-  orig: 183, 188
-  offset: 2, 11
+  xy: 2, 2
+  size: 86, 84
+  orig: 92, 94
+  offset: 2, 6
   index: -1
 新建文件夹 (8)/sj (15)
-  rotate: true
-  xy: 2, 176
-  size: 171, 170
-  orig: 183, 188
-  offset: 2, 11
+  rotate: false
+  xy: 173, 93
+  size: 84, 84
+  orig: 92, 94
+  offset: 2, 6
   index: -1
 新建文件夹 (8)/sj (17)
   rotate: false
-  xy: 353, 351
-  size: 168, 168
-  orig: 183, 188
-  offset: 2, 11
+  xy: 259, 94
+  size: 83, 83
+  orig: 92, 94
+  offset: 2, 6
   index: -1
 新建文件夹 (8)/sj (19)
   rotate: false
-  xy: 346, 4
-  size: 168, 168
-  orig: 183, 188
-  offset: 2, 11
+  xy: 259, 9
+  size: 83, 83
+  orig: 92, 94
+  offset: 2, 6
   index: -1
 新建文件夹 (8)/sj (21)
   rotate: true
-  xy: 172, 4
-  size: 167, 166
-  orig: 183, 188
-  offset: 3, 12
+  xy: 344, 95
+  size: 82, 83
+  orig: 92, 94
+  offset: 2, 6
   index: -1
 新建文件夹 (8)/sj (23)
   rotate: true
-  xy: 516, 195
-  size: 154, 153
-  orig: 183, 188
-  offset: 9, 19
+  xy: 344, 20
+  size: 73, 74
+  orig: 92, 94
+  offset: 7, 11
   index: -1
 新建文件夹 (8)/sj (25)
-  rotate: false
-  xy: 516, 4
-  size: 109, 78
-  orig: 183, 188
-  offset: 24, 33
+  rotate: true
+  xy: 429, 67
+  size: 55, 39
+  orig: 92, 94
+  offset: 12, 16
   index: -1
 新建文件夹 (8)/sj (3)
-  rotate: true
-  xy: 523, 403
-  size: 116, 115
-  orig: 183, 188
-  offset: 34, 43
+  rotate: false
+  xy: 420, 8
+  size: 57, 57
+  orig: 92, 94
+  offset: 18, 22
   index: -1
 新建文件夹 (8)/sj (5)
   rotate: false
-  xy: 346, 174
-  size: 168, 168
-  orig: 183, 188
-  offset: 2, 11
+  xy: 174, 8
+  size: 83, 83
+  orig: 92, 94
+  offset: 2, 6
   index: -1
 新建文件夹 (8)/sj (7)
   rotate: false
-  xy: 2, 2
-  size: 168, 172
-  orig: 183, 188
-  offset: 2, 8
+  xy: 88, 91
+  size: 83, 86
+  orig: 92, 94
+  offset: 2, 4
   index: -1
 新建文件夹 (8)/sj (9)
   rotate: false
-  xy: 174, 173
-  size: 170, 169
-  orig: 183, 188
-  offset: 2, 11
+  xy: 88, 5
+  size: 84, 84
+  orig: 92, 94
+  offset: 2, 6
   index: -1

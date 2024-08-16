@@ -1,0 +1,195 @@
+
+BiSha_texiao.png
+size: 496,360
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/BiSha_texiao_A_001
+  rotate: false
+  xy: 170, 13
+  size: 55, 30
+  orig: 86, 119
+  offset: 16, 12
+  index: -1
+images/BiSha_texiao_A_002
+  rotate: false
+  xy: 427, 75
+  size: 55, 49
+  orig: 86, 119
+  offset: 16, 13
+  index: -1
+images/BiSha_texiao_A_003
+  rotate: true
+  xy: 427, 126
+  size: 49, 67
+  orig: 86, 119
+  offset: 19, 16
+  index: -1
+images/BiSha_texiao_A_004
+  rotate: false
+  xy: 382, 5
+  size: 43, 83
+  orig: 86, 119
+  offset: 22, 19
+  index: -1
+images/BiSha_texiao_B_001
+  rotate: true
+  xy: 241, 2
+  size: 44, 91
+  orig: 86, 133
+  offset: 22, 27
+  index: -1
+images/BiSha_texiao_B_002
+  rotate: false
+  xy: 296, 267
+  size: 47, 91
+  orig: 86, 133
+  offset: 20, 27
+  index: -1
+images/BiSha_texiao_B_003
+  rotate: false
+  xy: 375, 90
+  size: 46, 85
+  orig: 86, 133
+  offset: 20, 27
+  index: -1
+images/BiSha_texiao_B_004
+  rotate: true
+  xy: 392, 264
+  size: 46, 88
+  orig: 86, 133
+  offset: 20, 27
+  index: -1
+images/BiSha_texiao_B_005
+  rotate: false
+  xy: 325, 86
+  size: 48, 86
+  orig: 86, 133
+  offset: 19, 27
+  index: -1
+images/BiSha_texiao_B_006
+  rotate: true
+  xy: 392, 312
+  size: 46, 89
+  orig: 86, 133
+  offset: 20, 27
+  index: -1
+images/BiSha_texiao_B_007
+  rotate: false
+  xy: 334, 3
+  size: 46, 81
+  orig: 86, 133
+  offset: 20, 27
+  index: -1
+images/BiSha_texiao_B_008
+  rotate: false
+  xy: 312, 174
+  size: 47, 91
+  orig: 86, 133
+  offset: 20, 27
+  index: -1
+images/BiSha_texiao_B_009
+  rotate: false
+  xy: 345, 267
+  size: 45, 91
+  orig: 86, 133
+  offset: 21, 27
+  index: -1
+images/BiSha_texiao_C_001
+  rotate: false
+  xy: 361, 177
+  size: 69, 85
+  orig: 103, 160
+  offset: 22, 36
+  index: -1
+images/BiSha_texiao_C_002
+  rotate: false
+  xy: 241, 48
+  size: 82, 96
+  orig: 103, 160
+  offset: 12, 29
+  index: -1
+images/BiSha_texiao_C_003
+  rotate: false
+  xy: 85, 24
+  size: 83, 104
+  orig: 103, 160
+  offset: 10, 25
+  index: -1
+images/BiSha_texiao_C_004
+  rotate: false
+  xy: 82, 130
+  size: 83, 106
+  orig: 103, 160
+  offset: 9, 24
+  index: -1
+images/BiSha_texiao_C_005
+  rotate: false
+  xy: 2, 8
+  size: 81, 107
+  orig: 103, 160
+  offset: 9, 24
+  index: -1
+images/BiSha_texiao_C_006
+  rotate: false
+  xy: 114, 252
+  size: 79, 106
+  orig: 103, 160
+  offset: 9, 25
+  index: -1
+images/BiSha_texiao_C_007
+  rotate: false
+  xy: 167, 146
+  size: 75, 104
+  orig: 103, 160
+  offset: 10, 27
+  index: -1
+images/BiSha_texiao_C_008
+  rotate: false
+  xy: 170, 45
+  size: 69, 99
+  orig: 103, 160
+  offset: 11, 28
+  index: -1
+images/BiSha_texiao_C_009
+  rotate: false
+  xy: 244, 166
+  size: 66, 91
+  orig: 103, 160
+  offset: 12, 29
+  index: -1
+images/BiSha_texiao_C_010
+  rotate: true
+  xy: 432, 202
+  size: 60, 61
+  orig: 103, 160
+  offset: 16, 30
+  index: -1
+images/BiSha_texiao_C_011
+  rotate: false
+  xy: 2, 4
+  size: 2, 2
+  orig: 103, 160
+  offset: 66, 58
+  index: -1
+images/BiSha_texiao_D_001
+  rotate: true
+  xy: 2, 238
+  size: 120, 110
+  orig: 128, 128
+  offset: 4, 9
+  index: -1
+images/BiSha_texiao_E_001
+  rotate: false
+  xy: 2, 117
+  size: 78, 119
+  orig: 88, 125
+  offset: 5, 0
+  index: -1
+images/BiSha_texiao_F_001
+  rotate: false
+  xy: 195, 259
+  size: 99, 99
+  orig: 103, 103
+  offset: 2, 2
+  index: -1

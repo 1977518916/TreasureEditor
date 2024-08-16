@@ -1,0 +1,111 @@
+
+CaiWenJi.png
+size: 633,515
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 401, 340
+  size: 173, 212
+  orig: 188, 212
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 401, 173
+  size: 70, 57
+  orig: 70, 57
+  offset: 0, 0
+  index: -1
+11
+  rotate: true
+  xy: 2, 2
+  size: 223, 131
+  orig: 225, 131
+  offset: 0, 0
+  index: -1
+12
+  rotate: true
+  xy: 198, 229
+  size: 109, 117
+  orig: 110, 117
+  offset: 0, 0
+  index: -1
+13
+  rotate: true
+  xy: 2, 227
+  size: 286, 194
+  orig: 286, 194
+  offset: 0, 0
+  index: -1
+14
+  rotate: false
+  xy: 476, 53
+  size: 147, 118
+  orig: 150, 118
+  offset: 3, 0
+  index: -1
+2
+  rotate: false
+  xy: 476, 15
+  size: 32, 36
+  orig: 32, 36
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 510, 15
+  size: 32, 36
+  orig: 32, 36
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 198, 341
+  size: 98, 172
+  orig: 98, 172
+  offset: 0, 0
+  index: -1
+5
+  rotate: true
+  xy: 501, 173
+  size: 165, 120
+  orig: 165, 120
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 317, 232
+  size: 182, 106
+  orig: 182, 106
+  offset: 0, 0
+  index: -1
+7
+  rotate: true
+  xy: 298, 354
+  size: 159, 73
+  orig: 159, 73
+  offset: 0, 0
+  index: -1
+8
+  rotate: true
+  xy: 401, 12
+  size: 159, 73
+  orig: 159, 74
+  offset: 0, 1
+  index: -1
+9
+  rotate: false
+  xy: 135, 11
+  size: 264, 214
+  orig: 288, 227
+  offset: 14, 1
+  index: -1
+Shadow
+  rotate: false
+  xy: 615, 497
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,146 @@
+
+Fx_ZhuanShuTouXiang.png
+size: 117,428
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_ZhuanShuTouXiang_001
+  rotate: true
+  xy: 2, 114
+  size: 30, 59
+  orig: 87, 80
+  offset: 8, 10
+  index: -1
+images/Fx_ZhuanShuTouXiang_002
+  rotate: true
+  xy: 2, 402
+  size: 24, 63
+  orig: 87, 80
+  offset: 9, 10
+  index: -1
+images/Fx_ZhuanShuTouXiang_003
+  rotate: true
+  xy: 2, 214
+  size: 32, 61
+  orig: 87, 80
+  offset: 10, 12
+  index: -1
+images/Fx_ZhuanShuTouXiang_004
+  rotate: true
+  xy: 2, 47
+  size: 41, 54
+  orig: 87, 80
+  offset: 11, 20
+  index: -1
+images/Fx_ZhuanShuTouXiang_005
+  rotate: false
+  xy: 66, 262
+  size: 49, 50
+  orig: 87, 80
+  offset: 12, 24
+  index: -1
+images/Fx_ZhuanShuTouXiang_006
+  rotate: true
+  xy: 67, 368
+  size: 58, 47
+  orig: 87, 80
+  offset: 13, 26
+  index: -1
+images/Fx_ZhuanShuTouXiang_007
+  rotate: false
+  xy: 2, 90
+  size: 59, 22
+  orig: 87, 80
+  offset: 15, 51
+  index: -1
+images/Fx_ZhuanShuTouXiang_008
+  rotate: false
+  xy: 2, 180
+  size: 60, 32
+  orig: 87, 80
+  offset: 18, 40
+  index: -1
+images/Fx_ZhuanShuTouXiang_009
+  rotate: false
+  xy: 63, 60
+  size: 52, 41
+  orig: 87, 80
+  offset: 26, 30
+  index: -1
+images/Fx_ZhuanShuTouXiang_010
+  rotate: true
+  xy: 64, 103
+  size: 42, 51
+  orig: 87, 80
+  offset: 35, 20
+  index: -1
+images/Fx_ZhuanShuTouXiang_011
+  rotate: true
+  xy: 2, 358
+  size: 42, 62
+  orig: 87, 80
+  offset: 36, 9
+  index: -1
+images/Fx_ZhuanShuTouXiang_012
+  rotate: true
+  xy: 2, 295
+  size: 29, 62
+  orig: 87, 80
+  offset: 48, 5
+  index: -1
+images/Fx_ZhuanShuTouXiang_013
+  rotate: true
+  xy: 2, 326
+  size: 30, 62
+  orig: 87, 80
+  offset: 46, 4
+  index: -1
+images/Fx_ZhuanShuTouXiang_014
+  rotate: true
+  xy: 58, 19
+  size: 39, 54
+  orig: 87, 80
+  offset: 36, 4
+  index: -1
+images/Fx_ZhuanShuTouXiang_015
+  rotate: false
+  xy: 66, 314
+  size: 49, 52
+  orig: 87, 80
+  offset: 25, 4
+  index: -1
+images/Fx_ZhuanShuTouXiang_016
+  rotate: true
+  xy: 65, 202
+  size: 58, 46
+  orig: 87, 80
+  offset: 15, 4
+  index: -1
+images/Fx_ZhuanShuTouXiang_017
+  rotate: false
+  xy: 2, 248
+  size: 61, 45
+  orig: 87, 80
+  offset: 10, 5
+  index: -1
+images/Fx_ZhuanShuTouXiang_018
+  rotate: false
+  xy: 2, 146
+  size: 60, 32
+  orig: 87, 80
+  offset: 10, 5
+  index: -1
+images/Fx_ZhuanShuTouXiang_019
+  rotate: false
+  xy: 2, 2
+  size: 53, 43
+  orig: 87, 80
+  offset: 10, 5
+  index: -1
+images/Fx_ZhuanShuTouXiang_020
+  rotate: false
+  xy: 64, 147
+  size: 51, 53
+  orig: 87, 80
+  offset: 8, 6
+  index: -1

@@ -1,0 +1,62 @@
+
+Fx_ZhangJiao_hit.png
+size: 190,143
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_ZhangJiao_Attack_001
+  rotate: false
+  xy: 151, 104
+  size: 37, 37
+  orig: 82, 81
+  offset: 27, 19
+  index: -1
+images/Fx_ZhangJiao_Attack_002
+  rotate: false
+  xy: 128, 24
+  size: 44, 43
+  orig: 82, 81
+  offset: 19, 17
+  index: -1
+images/Fx_ZhangJiao_Attack_003
+  rotate: false
+  xy: 70, 7
+  size: 56, 58
+  orig: 82, 81
+  offset: 14, 10
+  index: -1
+images/Fx_ZhangJiao_Attack_004
+  rotate: false
+  xy: 2, 2
+  size: 66, 63
+  orig: 82, 81
+  offset: 10, 10
+  index: -1
+images/Fx_ZhangJiao_Attack_005
+  rotate: false
+  xy: 2, 67
+  size: 73, 74
+  orig: 82, 81
+  offset: 6, 4
+  index: -1
+images/Fx_ZhangJiao_Attack_006
+  rotate: false
+  xy: 77, 69
+  size: 72, 72
+  orig: 82, 81
+  offset: 7, 5
+  index: -1
+images/Fx_ZhangJiao_Attack_007
+  rotate: false
+  xy: 151, 69
+  size: 31, 33
+  orig: 82, 81
+  offset: 28, 22
+  index: -1
+images/Fx_ZhangJiao_Attack_008
+  rotate: false
+  xy: 128, 2
+  size: 23, 20
+  orig: 82, 81
+  offset: 41, 26
+  index: -1

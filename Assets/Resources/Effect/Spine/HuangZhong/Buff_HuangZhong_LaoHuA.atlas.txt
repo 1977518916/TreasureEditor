@@ -1,0 +1,111 @@
+
+Buff_HuangZhong_LaoHuA.png
+size: 116,184
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Buff_HuangZhong_LaoHu_piaodai_001
+  rotate: false
+  xy: 2, 37
+  size: 35, 34
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_002
+  rotate: false
+  xy: 2, 145
+  size: 36, 35
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_003
+  rotate: false
+  xy: 40, 145
+  size: 36, 35
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_004
+  rotate: false
+  xy: 2, 2
+  size: 35, 33
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_005
+  rotate: false
+  xy: 40, 74
+  size: 36, 33
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_006
+  rotate: false
+  xy: 40, 109
+  size: 36, 34
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_007
+  rotate: false
+  xy: 78, 72
+  size: 35, 35
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_008
+  rotate: false
+  xy: 77, 36
+  size: 35, 34
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_009
+  rotate: false
+  xy: 39, 2
+  size: 35, 34
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_010
+  rotate: false
+  xy: 78, 145
+  size: 36, 35
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_011
+  rotate: false
+  xy: 78, 109
+  size: 36, 34
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_012
+  rotate: false
+  xy: 76, 2
+  size: 35, 32
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_013
+  rotate: false
+  xy: 2, 73
+  size: 36, 33
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_014
+  rotate: false
+  xy: 2, 108
+  size: 36, 35
+  orig: 65, 49
+  offset: 17, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_piaodai_015
+  rotate: true
+  xy: 40, 38
+  size: 34, 35
+  orig: 65, 49
+  offset: 17, 9
+  index: -1

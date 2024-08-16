@@ -1,110 +1,61 @@
 
 Fx_DaQiao_Attack.png
-size: 1005,160
+size: 605,137
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 001
-  rotate: true
-  xy: 608, 11
+  rotate: false
+  xy: 151, 4
   size: 147, 65
   orig: 159, 68
   offset: 9, 0
   index: -1
-002
-  rotate: true
-  xy: 808, 13
-  size: 145, 64
-  orig: 159, 68
-  offset: 10, 0
-  index: -1
 003
-  rotate: true
-  xy: 940, 14
-  size: 144, 63
+  rotate: false
+  xy: 2, 72
+  size: 143, 63
   orig: 159, 68
   offset: 11, 2
   index: -1
-004
-  rotate: true
-  xy: 874, 13
-  size: 145, 64
-  orig: 159, 68
-  offset: 11, 3
-  index: -1
 005
-  rotate: true
-  xy: 542, 7
-  size: 151, 64
+  rotate: false
+  xy: 147, 72
+  size: 150, 63
   orig: 159, 68
   offset: 8, 3
   index: -1
-006
-  rotate: true
-  xy: 408, 3
-  size: 155, 63
-  orig: 159, 68
-  offset: 4, 4
-  index: -1
 007
-  rotate: true
-  xy: 207, 2
+  rotate: false
+  xy: 299, 71
   size: 156, 64
   orig: 159, 68
   offset: 2, 3
   index: -1
-008
-  rotate: true
-  xy: 2, 2
-  size: 156, 66
-  orig: 159, 68
-  offset: 1, 1
-  index: -1
 009
-  rotate: true
-  xy: 140, 3
+  rotate: false
+  xy: 300, 4
   size: 155, 65
   orig: 159, 68
   offset: 1, 0
   index: -1
-010
-  rotate: true
-  xy: 273, 3
-  size: 155, 64
-  orig: 159, 68
-  offset: 0, 1
-  index: -1
 011
-  rotate: true
-  xy: 675, 12
-  size: 146, 65
+  rotate: false
+  xy: 457, 71
+  size: 146, 64
   orig: 159, 68
   offset: 10, 1
   index: -1
-012
-  rotate: true
-  xy: 339, 11
-  size: 147, 67
-  orig: 159, 68
-  offset: 11, 0
-  index: -1
 013
-  rotate: true
-  xy: 473, 13
+  rotate: false
+  xy: 457, 2
   size: 145, 67
   orig: 159, 68
   offset: 13, 0
   index: -1
-014
-  rotate: true
-  xy: 70, 8
-  size: 150, 68
-  orig: 159, 68
-  offset: 9, 0
-  index: -1
 015
-  rotate: true
-  xy: 742, 11
+  rotate: false
+  xy: 2, 6
   size: 147, 64
   orig: 159, 68
   offset: 10, 3

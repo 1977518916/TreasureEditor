@@ -1,174 +1,174 @@
 
 ZhenJi.png
-size: 1640,504
+size: 412,524
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Body
   rotate: false
-  xy: 563, 239
-  size: 238, 263
-  orig: 238, 264
-  offset: 0, 1
+  xy: 284, 389
+  size: 119, 132
+  orig: 119, 132
+  offset: 0, 0
   index: -1
 DiaoMao1
-  rotate: true
-  xy: 997, 360
-  size: 142, 223
-  orig: 142, 223
+  rotate: false
+  xy: 2, 66
+  size: 71, 112
+  orig: 71, 112
   offset: 0, 0
   index: -1
 DiaoMao2
-  rotate: true
-  xy: 1540, 93
-  size: 129, 79
-  orig: 130, 79
-  offset: 1, 0
+  rotate: false
+  xy: 248, 23
+  size: 65, 40
+  orig: 65, 40
+  offset: 0, 0
   index: -1
 DiaoMao3
   rotate: true
-  xy: 1222, 381
-  size: 121, 212
-  orig: 121, 212
+  xy: 2, 3
+  size: 61, 106
+  orig: 61, 106
   offset: 0, 0
   index: -1
 Eye1
   rotate: false
-  xy: 997, 281
-  size: 225, 77
-  orig: 225, 77
+  xy: 201, 65
+  size: 113, 39
+  orig: 113, 39
   offset: 0, 0
   index: -1
 Eye2
-  rotate: true
-  xy: 781, 21
-  size: 216, 41
-  orig: 218, 43
-  offset: 1, 1
+  rotate: false
+  xy: 75, 67
+  size: 108, 21
+  orig: 109, 22
+  offset: 1, 0
   index: -1
 Hair1
   rotate: true
-  xy: 824, 11
-  size: 100, 178
-  orig: 100, 178
+  xy: 110, 15
+  size: 50, 89
+  orig: 50, 89
   offset: 0, 0
   index: -1
 Hair2
-  rotate: true
-  xy: 1004, 25
-  size: 94, 147
-  orig: 94, 147
+  rotate: false
+  xy: 357, 43
+  size: 47, 74
+  orig: 47, 74
   offset: 0, 0
   index: -1
 Hair3
-  rotate: true
-  xy: 824, 113
-  size: 173, 151
-  orig: 174, 151
-  offset: 1, 0
+  rotate: false
+  xy: 83, 196
+  size: 87, 76
+  orig: 87, 76
+  offset: 0, 0
   index: -1
 Hand_B
-  rotate: false
-  xy: 1390, 3
-  size: 120, 90
-  orig: 120, 92
-  offset: 0, 2
+  rotate: true
+  xy: 201, 3
+  size: 60, 45
+  orig: 60, 46
+  offset: 0, 1
   index: -1
 Hand_F
   rotate: false
-  xy: 1153, 41
-  size: 101, 78
-  orig: 101, 79
+  xy: 357, 2
+  size: 51, 39
+  orig: 51, 40
   offset: 0, 0
   index: -1
 Head
   rotate: false
-  xy: 2, 8
-  size: 559, 494
-  orig: 561, 494
+  xy: 2, 274
+  size: 280, 247
+  orig: 281, 247
   offset: 0, 0
   index: -1
 PiaoDai1
   rotate: false
-  xy: 1596, 289
-  size: 40, 72
-  orig: 48, 74
-  offset: 8, 2
+  xy: 257, 236
+  size: 20, 36
+  orig: 24, 37
+  offset: 4, 1
   index: -1
 PiaoDai2
-  rotate: false
-  xy: 1224, 301
-  size: 203, 78
-  orig: 208, 86
-  offset: 2, 0
+  rotate: true
+  xy: 316, 9
+  size: 102, 39
+  orig: 104, 43
+  offset: 1, 0
   index: -1
 PiaoDai3
-  rotate: false
-  xy: 1270, 2
-  size: 118, 121
-  orig: 118, 121
+  rotate: true
+  xy: 349, 119
+  size: 59, 61
+  orig: 59, 61
   offset: 0, 0
   index: -1
 PiaoDai4
   rotate: false
-  xy: 1145, 121
-  size: 123, 158
-  orig: 132, 159
-  offset: 9, 1
+  xy: 218, 128
+  size: 62, 80
+  orig: 66, 80
+  offset: 4, 0
   index: -1
 PiaoDai5
-  rotate: false
-  xy: 803, 288
-  size: 192, 214
-  orig: 195, 214
+  rotate: true
+  xy: 284, 180
+  size: 96, 107
+  orig: 98, 107
   offset: 0, 0
   index: -1
 Qiu
   rotate: false
-  xy: 1410, 95
-  size: 128, 127
-  orig: 130, 129
-  offset: 1, 1
+  xy: 282, 113
+  size: 65, 65
+  orig: 65, 65
+  offset: 0, 0
   index: -1
 Qiu1
   rotate: false
-  xy: 563, 21
-  size: 216, 216
-  orig: 218, 218
-  offset: 1, 1
+  xy: 284, 278
+  size: 109, 109
+  orig: 109, 109
+  offset: 0, 0
   index: -1
 Shadow
   rotate: false
-  xy: 1596, 255
-  size: 32, 32
-  orig: 32, 32
+  xy: 393, 260
+  size: 16, 16
+  orig: 16, 16
   offset: 0, 0
   index: -1
 ShuiHhuan1
   rotate: false
-  xy: 1429, 224
-  size: 165, 137
-  orig: 167, 139
-  offset: 1, 1
+  xy: 172, 210
+  size: 83, 62
+  orig: 84, 70
+  offset: 0, 7
   index: -1
 ShuiHhuan2
-  rotate: false
-  xy: 1436, 363
-  size: 191, 139
-  orig: 193, 141
+  rotate: true
+  xy: 75, 90
+  size: 96, 69
+  orig: 97, 71
   offset: 1, 1
   index: -1
 ShuiHhuan3
   rotate: true
-  xy: 1270, 125
-  size: 174, 138
-  orig: 176, 140
-  offset: 1, 1
+  xy: 146, 106
+  size: 88, 70
+  orig: 88, 70
+  offset: 0, 0
   index: -1
 ShuiHhuan4
-  rotate: false
-  xy: 977, 121
-  size: 166, 158
-  orig: 168, 160
-  offset: 1, 1
+  rotate: true
+  xy: 2, 188
+  size: 84, 79
+  orig: 84, 80
+  offset: 0, 0
   index: -1

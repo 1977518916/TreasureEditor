@@ -1,0 +1,13 @@
+
+Fx_LingTong_hit.png
+size: 138,143
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_LingTong_hit
+  rotate: false
+  xy: 2, 2
+  size: 134, 139
+  orig: 136, 142
+  offset: 1, 2
+  index: -1

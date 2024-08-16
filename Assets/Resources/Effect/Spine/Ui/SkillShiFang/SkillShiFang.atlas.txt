@@ -1,76 +1,216 @@
 
 SkillShiFang.png
-size: 1604,236
+size: 496,388
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Bai
   rotate: false
-  xy: 1128, 115
-  size: 118, 119
-  orig: 120, 121
-  offset: 1, 1
+  xy: 368, 60
+  size: 60, 61
+  orig: 60, 61
+  offset: 0, 0
   index: -1
 BaiGlow
   rotate: false
-  xy: 1248, 115
-  size: 118, 119
-  orig: 128, 129
-  offset: 5, 5
+  xy: 430, 64
+  size: 60, 61
+  orig: 64, 65
+  offset: 2, 2
   index: -1
 Bian
-  rotate: false
-  xy: 1368, 115
-  size: 118, 119
-  orig: 120, 121
-  offset: 1, 1
-  index: -1
-Boom_01
   rotate: true
-  xy: 1488, 120
-  size: 114, 113
-  orig: 256, 256
-  offset: 71, 71
+  xy: 430, 2
+  size: 60, 61
+  orig: 60, 61
+  offset: 0, 0
   index: -1
-Boom_02
+images/BiSha_texiao_A_001
   rotate: true
-  xy: 928, 34
-  size: 200, 198
-  orig: 256, 256
-  offset: 28, 29
+  xy: 267, 78
+  size: 55, 30
+  orig: 86, 119
+  offset: 16, 12
   index: -1
-Boom_03
+images/BiSha_texiao_A_002
+  rotate: false
+  xy: 323, 9
+  size: 55, 49
+  orig: 86, 119
+  offset: 16, 13
+  index: -1
+images/BiSha_texiao_A_003
   rotate: true
-  xy: 704, 10
-  size: 224, 222
-  orig: 256, 256
-  offset: 16, 17
+  xy: 299, 72
+  size: 49, 67
+  orig: 86, 119
+  offset: 19, 16
   index: -1
-Boom_04
+images/BiSha_texiao_A_004
   rotate: false
-  xy: 2, 2
-  size: 232, 232
-  orig: 256, 256
-  offset: 12, 12
+  xy: 436, 218
+  size: 43, 83
+  orig: 86, 119
+  offset: 22, 19
   index: -1
-Boom_05
+images/BiSha_texiao_B_001
   rotate: false
-  xy: 236, 2
-  size: 232, 232
-  orig: 256, 256
-  offset: 12, 12
+  xy: 204, 134
+  size: 44, 91
+  orig: 86, 133
+  offset: 22, 27
   index: -1
-Boom_06
+images/BiSha_texiao_B_002
   rotate: false
-  xy: 470, 2
-  size: 232, 232
-  orig: 256, 256
-  offset: 12, 12
+  xy: 250, 135
+  size: 47, 91
+  orig: 86, 133
+  offset: 20, 27
   index: -1
-Path
+images/BiSha_texiao_B_003
   rotate: true
-  xy: 1128, 49
-  size: 64, 124
-  orig: 64, 128
-  offset: 0, 1
+  xy: 180, 86
+  size: 46, 85
+  orig: 86, 133
+  offset: 20, 27
+  index: -1
+images/BiSha_texiao_B_004
+  rotate: false
+  xy: 440, 128
+  size: 46, 88
+  orig: 86, 133
+  offset: 20, 27
+  index: -1
+images/BiSha_texiao_B_005
+  rotate: true
+  xy: 2, 17
+  size: 48, 86
+  orig: 86, 133
+  offset: 19, 27
+  index: -1
+images/BiSha_texiao_B_006
+  rotate: false
+  xy: 392, 127
+  size: 46, 89
+  orig: 86, 133
+  offset: 20, 27
+  index: -1
+images/BiSha_texiao_B_007
+  rotate: true
+  xy: 177, 38
+  size: 46, 81
+  orig: 86, 133
+  offset: 20, 27
+  index: -1
+images/BiSha_texiao_B_008
+  rotate: true
+  xy: 299, 170
+  size: 47, 91
+  orig: 86, 133
+  offset: 20, 27
+  index: -1
+images/BiSha_texiao_B_009
+  rotate: true
+  xy: 299, 123
+  size: 45, 91
+  orig: 86, 133
+  offset: 21, 27
+  index: -1
+images/BiSha_texiao_C_001
+  rotate: true
+  xy: 90, 17
+  size: 69, 85
+  orig: 103, 160
+  offset: 22, 36
+  index: -1
+images/BiSha_texiao_C_002
+  rotate: true
+  xy: 338, 219
+  size: 82, 96
+  orig: 103, 160
+  offset: 12, 29
+  index: -1
+images/BiSha_texiao_C_003
+  rotate: true
+  xy: 354, 303
+  size: 83, 104
+  orig: 103, 160
+  offset: 10, 25
+  index: -1
+images/BiSha_texiao_C_004
+  rotate: false
+  xy: 2, 67
+  size: 83, 106
+  orig: 103, 160
+  offset: 9, 24
+  index: -1
+images/BiSha_texiao_C_005
+  rotate: true
+  xy: 245, 305
+  size: 81, 107
+  orig: 103, 160
+  offset: 9, 24
+  index: -1
+images/BiSha_texiao_C_006
+  rotate: true
+  xy: 124, 227
+  size: 79, 106
+  orig: 103, 160
+  offset: 9, 25
+  index: -1
+images/BiSha_texiao_C_007
+  rotate: true
+  xy: 232, 228
+  size: 75, 104
+  orig: 103, 160
+  offset: 10, 27
+  index: -1
+images/BiSha_texiao_C_008
+  rotate: true
+  xy: 103, 156
+  size: 69, 99
+  orig: 103, 160
+  offset: 11, 28
+  index: -1
+images/BiSha_texiao_C_009
+  rotate: true
+  xy: 87, 88
+  size: 66, 91
+  orig: 103, 160
+  offset: 12, 29
+  index: -1
+images/BiSha_texiao_C_010
+  rotate: true
+  xy: 260, 10
+  size: 60, 61
+  orig: 103, 160
+  offset: 16, 30
+  index: -1
+images/BiSha_texiao_C_011
+  rotate: false
+  xy: 392, 123
+  size: 2, 2
+  orig: 103, 160
+  offset: 66, 58
+  index: -1
+images/BiSha_texiao_D_001
+  rotate: false
+  xy: 2, 276
+  size: 120, 110
+  orig: 128, 128
+  offset: 4, 9
+  index: -1
+images/BiSha_texiao_E_001
+  rotate: true
+  xy: 124, 308
+  size: 78, 119
+  orig: 88, 125
+  offset: 5, 0
+  index: -1
+images/BiSha_texiao_F_001
+  rotate: false
+  xy: 2, 175
+  size: 99, 99
+  orig: 103, 103
+  offset: 2, 2
   index: -1

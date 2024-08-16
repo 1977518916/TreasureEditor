@@ -1,0 +1,153 @@
+
+Buff_HuangZhong_LaoHuC.png
+size: 484,200
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Buff_HuangZhong_LaoHu_guang_001
+  rotate: true
+  xy: 244, 2
+  size: 88, 92
+  orig: 98, 109
+  offset: 5, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizia_001
+  rotate: true
+  xy: 379, 148
+  size: 50, 54
+  orig: 86, 68
+  offset: 26, 7
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizia_002
+  rotate: true
+  xy: 2, 7
+  size: 64, 34
+  orig: 86, 68
+  offset: 15, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizia_003
+  rotate: false
+  xy: 379, 6
+  size: 43, 34
+  orig: 86, 68
+  offset: 35, 8
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizia_004
+  rotate: true
+  xy: 434, 70
+  size: 52, 44
+  orig: 86, 68
+  offset: 25, 8
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizia_005
+  rotate: true
+  xy: 154, 23
+  size: 58, 38
+  orig: 86, 68
+  offset: 18, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizia_006
+  rotate: false
+  xy: 435, 124
+  size: 45, 39
+  orig: 86, 68
+  offset: 33, 6
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizia_007
+  rotate: false
+  xy: 379, 94
+  size: 53, 52
+  orig: 86, 68
+  offset: 25, 7
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizia_008
+  rotate: false
+  xy: 379, 42
+  size: 53, 50
+  orig: 86, 68
+  offset: 24, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizia_009
+  rotate: false
+  xy: 435, 165
+  size: 46, 33
+  orig: 86, 68
+  offset: 32, 8
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizia_010
+  rotate: true
+  xy: 434, 26
+  size: 42, 43
+  orig: 86, 68
+  offset: 35, 6
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizib_001
+  rotate: true
+  xy: 194, 2
+  size: 87, 48
+  orig: 145, 81
+  offset: 21, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizib_002
+  rotate: true
+  xy: 324, 100
+  size: 98, 53
+  orig: 145, 81
+  offset: 19, 8
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizib_003
+  rotate: true
+  xy: 167, 91
+  size: 107, 56
+  orig: 145, 81
+  offset: 20, 8
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizib_004
+  rotate: true
+  xy: 69, 82
+  size: 116, 48
+  orig: 145, 81
+  offset: 21, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizib_005
+  rotate: true
+  xy: 269, 97
+  size: 101, 53
+  orig: 145, 81
+  offset: 22, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizib_006
+  rotate: false
+  xy: 38, 11
+  size: 114, 60
+  orig: 145, 81
+  offset: 20, 8
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizib_007
+  rotate: true
+  xy: 2, 73
+  size: 125, 65
+  orig: 145, 81
+  offset: 20, 8
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizib_008
+  rotate: true
+  xy: 338, 3
+  size: 95, 39
+  orig: 145, 81
+  offset: 21, 8
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizib_009
+  rotate: true
+  xy: 225, 92
+  size: 106, 42
+  orig: 145, 81
+  offset: 21, 9
+  index: -1
+images/Buff_HuangZhong_LaoHu_lizib_010
+  rotate: true
+  xy: 119, 83
+  size: 115, 46
+  orig: 145, 81
+  offset: 21, 9
+  index: -1

@@ -1,0 +1,83 @@
+
+Fx_CaoFang_Attack.png
+size: 328,117
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/Fx_CaoFang_Attack_pd_001
+  rotate: true
+  xy: 148, 95
+  size: 20, 144
+  orig: 61, 180
+  offset: 20, 27
+  index: -1
+images/Fx_CaoFang_Attack_pd_002
+  rotate: true
+  xy: 2, 2
+  size: 23, 143
+  orig: 61, 180
+  offset: 20, 27
+  index: -1
+images/Fx_CaoFang_Attack_pd_003
+  rotate: true
+  xy: 147, 2
+  size: 23, 142
+  orig: 61, 180
+  offset: 20, 27
+  index: -1
+images/Fx_CaoFang_Attack_pd_004
+  rotate: true
+  xy: 2, 27
+  size: 21, 144
+  orig: 61, 180
+  offset: 19, 27
+  index: -1
+images/Fx_CaoFang_Attack_pd_005
+  rotate: true
+  xy: 148, 27
+  size: 21, 144
+  orig: 61, 180
+  offset: 19, 27
+  index: -1
+images/Fx_CaoFang_Attack_pd_006
+  rotate: true
+  xy: 2, 74
+  size: 20, 143
+  orig: 61, 180
+  offset: 18, 27
+  index: -1
+images/Fx_CaoFang_Attack_pd_007
+  rotate: true
+  xy: 2, 51
+  size: 21, 143
+  orig: 61, 180
+  offset: 18, 27
+  index: -1
+images/Fx_CaoFang_Attack_pd_008
+  rotate: true
+  xy: 147, 73
+  size: 20, 144
+  orig: 61, 180
+  offset: 18, 27
+  index: -1
+images/Fx_CaoFang_Attack_pd_009
+  rotate: true
+  xy: 2, 96
+  size: 19, 144
+  orig: 61, 180
+  offset: 19, 27
+  index: -1
+images/Fx_CaoFang_Attack_pd_010
+  rotate: true
+  xy: 147, 50
+  size: 21, 144
+  orig: 61, 180
+  offset: 20, 27
+  index: -1
+images/Fx_CaoFang_Attack_wq_001
+  rotate: false
+  xy: 294, 12
+  size: 32, 103
+  orig: 32, 103
+  offset: 0, 0
+  index: -1

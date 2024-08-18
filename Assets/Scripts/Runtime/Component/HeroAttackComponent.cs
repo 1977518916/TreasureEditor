@@ -1,3 +1,4 @@
+using Runtime.Manager;
 using Tao_Framework.Core.Event;
 using UnityEngine;
 
@@ -6,6 +7,9 @@ using UnityEngine;
 /// </summary>
 public class HeroAttackComponent : AttackComponent
 {
+
+    public float AttackInterval { get; set; }
+
     /// <summary>
     /// 子弹
     /// </summary>
@@ -15,11 +19,11 @@ public class HeroAttackComponent : AttackComponent
     /// 攻击次数
     /// </summary>
     private int attackCount;
-    
+
     /// <summary>
     /// 英雄实体
     /// </summary>
-    private HeroEntity heroEntity;
+    private readonly HeroEntity heroEntity;
 
     /// <summary>
     /// 英雄攻击组件的构造函数
@@ -37,13 +41,13 @@ public class HeroAttackComponent : AttackComponent
     /// <summary>
     /// 攻击
     /// </summary>
-    /// <param name="point"> 目标点 </param>
-    public void Attack(Vector2 point)
+    public void Attack(float time, Vector2 point)
     {
         var bulletObj = Object.Instantiate(bullet);
-        
+        // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
+        //bulletObj.GetComponent<BulletEntity>().BoomObject = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData());
     }
-
+    
     /// <summary>
     /// 减少攻击次数
     /// </summary>

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Runtime.Data;
 using Sirenix.OdinInspector;
 using Tools;
@@ -12,6 +13,8 @@ public class HeroEntity : MonoBehaviour, Entity
     [ReadOnly]
     public long EntityId { get; set; }
     
+    public List<IComponent> AllComponentList { get; set; }
+
     /// <summary>
     /// 英雄数据
     /// </summary>
@@ -46,6 +49,15 @@ public class HeroEntity : MonoBehaviour, Entity
         heroObj = hero;
     }
     
+    /// <summary>
+    /// 获取英雄数据
+    /// </summary>
+    /// <returns></returns>
+    public HeroData GetHeroData()
+    {
+        return data;
+    }
+
     /// <summary>
     /// 设置英雄位置
     /// </summary>

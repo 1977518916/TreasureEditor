@@ -19,4 +19,18 @@ public interface Entity
     /// 初始化
     /// </summary>
     public void Init();
+
+    /// <summary>
+    /// 获取指定组件
+    /// </summary>
+    /// <returns></returns>
+    public IComponent GetSpecifyComponent(ComponentType componentType);
+
+    /// <summary>
+    /// 检测是否是指定组件
+    /// </summary>
+    /// <param name="component"> 组件 </param>
+    /// <param name="componentType"> 组件类型 </param>
+    /// <returns></returns>
+    public bool IsSpecifyComponent(IComponent component, ComponentType componentType);
 }

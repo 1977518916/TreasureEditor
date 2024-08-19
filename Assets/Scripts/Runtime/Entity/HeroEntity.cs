@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Runtime.Data;
 using Sirenix.OdinInspector;
@@ -24,6 +25,11 @@ public class HeroEntity : MonoBehaviour, Entity
     /// 英雄对象
     /// </summary>
     private GameObject heroObj;
+
+    /// <summary>
+    /// 攻击位置
+    /// </summary>
+    private Transform attackFireLocation;   
     
     /// <summary>
     /// 初始化
@@ -32,21 +38,61 @@ public class HeroEntity : MonoBehaviour, Entity
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
     }
+
+    /// <summary>
+    /// 获取指定组件
+    /// </summary>
+    /// <param name="componentType"></param>
+    /// <returns></returns>
+    public IComponent GetSpecifyComponent(ComponentType componentType)
+    {
+        foreach (var iComponent in AllComponentList)
+        {
+            if (IsSpecifyComponent(iComponent, componentType))
+            {
+                return iComponent;
+            }
+        }
+
+        return null;
+    }
     
+    /// <summary>
+    /// 检测是否是指定组件
+    /// </summary>
+    /// <param name="component"></param>
+    /// <param name="componentType"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentOutOfRangeException"></exception>
+    public bool IsSpecifyComponent(IComponent component, ComponentType componentType)
+    {
+        return componentType switch
+        {
+            ComponentType.AttackComponent => component is AttackComponent,
+            ComponentType.MoveComponent => component is MoveComponent,
+            ComponentType.RayComponent => false,
+            ComponentType.StatusComponent => component is StatusComponent,
+            ComponentType.DetectComponent => component is DetectComponent,
+            _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
+        };
+    }
+
     private void Start()
     {
         Init();
     }
-    
+
     /// <summary>
     /// 初始化英雄
     /// </summary>
     /// <param name="heroData"></param>
     /// <param name="hero"></param>
-    public void InitHero(HeroData heroData, GameObject hero)
+    /// <param name="fireLocation"> 开火口 </param>
+    public void InitHero(HeroData heroData, GameObject hero, Transform fireLocation)
     {
         data = heroData;
         heroObj = hero;
+        attackFireLocation = fireLocation;
     }
     
     /// <summary>
@@ -64,5 +110,10 @@ public class HeroEntity : MonoBehaviour, Entity
     private void SetHeroLocation(int locationIndex)
     {
         BattleManager.Instance.SetPrefabLocation(heroObj, locationIndex);
+    }
+
+    public Transform GetFireLocation()
+    {
+        return attackFireLocation;
     }
 }

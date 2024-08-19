@@ -1,6 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using Runtime.Data;
+using Runtime.Manager;
 using UnityEngine;
 
 public class EntitySystem : MonoBehaviour
@@ -18,8 +18,13 @@ public class EntitySystem : MonoBehaviour
     /// <summary>
     /// 所有实体
     /// </summary>
-    public List<Entity> AllEntityList = new List<Entity>();
-    
+    private readonly List<Entity> allEntityList = new List<Entity>();
+
+    private void Start()
+    {
+        
+    }
+
     private void Update()
     {
         currentTime += Time.time;
@@ -34,12 +39,23 @@ public class EntitySystem : MonoBehaviour
     /// </summary>
     private void EntityUpdate(float time)
     {
-        foreach (var entity in AllEntityList)
+        foreach (var entity in allEntityList)
         {
             foreach (var component in entity.AllComponentList)
             {
-                (component as BulletMoveComponent)?.Move(time);
+                (component as BulletMoveComponent)?.Tick(time);
             }
         }
+    }
+
+    /// <summary>
+    /// 生成实体
+    /// </summary>
+    /// <param name="type"> 类型 </param>
+    /// <param name="data"> 数据 </param>
+    /// <param name="index"> 位置 </param>
+    private void GenerateEntity(DataType.HeroPositionType type, HeroData data, int index)
+    {
+        
     }
 }

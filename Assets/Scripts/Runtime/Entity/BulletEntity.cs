@@ -29,6 +29,32 @@ public class BulletEntity : MonoBehaviour, Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
     }
 
+    public IComponent GetSpecifyComponent(ComponentType componentType)
+    {
+        foreach (var iComponent in AllComponentList)
+        {
+            if (IsSpecifyComponent(iComponent, componentType))
+            {
+                return iComponent;
+            }
+        }
+
+        return null;
+    }
+    
+    public bool IsSpecifyComponent(IComponent component, ComponentType componentType)
+    {
+        return componentType switch
+        {
+            ComponentType.AttackComponent => component is AttackComponent,
+            ComponentType.MoveComponent => component is MoveComponent,
+            ComponentType.RayComponent => false,
+            ComponentType.StatusComponent => component is StatusComponent,
+            ComponentType.DetectComponent => component is DetectComponent,
+            _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
+        };
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         var entity = other.GetComponent<Entity>();

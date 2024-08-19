@@ -13,5 +13,6 @@ namespace Runtime.Data
         [FormerlySerializedAs("heroType")]
         public HeroTypeEnum heroTypeEnum = HeroTypeEnum.Null;
         public BulletType bulletType;
+        public BulletMoveType bulletMoveType;
     }
 }

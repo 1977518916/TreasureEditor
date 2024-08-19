@@ -21,7 +21,11 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// 所有战斗底座
     /// </summary>
     public List<RectTransform> BattleBaseList = new List<RectTransform>();
+
+    //public 
     
+    #region Command
+
     /// <summary>
     /// 生成一个场景中的预制体对象并放置在特定底座位置
     /// 生成的预制体 最好是 英雄对象
@@ -54,4 +58,8 @@ public class BattleManager : MonoSingleton<BattleManager>
         if (value > 6) return;
         battleBG.sprite = AssetsLoadManager.Load<Sprite>(DataManager.MapTexturePath + value);
     }
+
+    #endregion
+    
+    
 }

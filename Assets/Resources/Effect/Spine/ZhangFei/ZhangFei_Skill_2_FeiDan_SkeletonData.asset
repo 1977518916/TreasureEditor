@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: ZhangFei_Skill_2_FeiDan_SkeletonData
+  m_Name: zhangfei_skill_2_feidan_skeletondata
   m_EditorClassIdentifier: 
   atlasAssets:
   - {fileID: 11400000, guid: 5ea06f7e4adc2a94ba112bb9435eba84, type: 2}

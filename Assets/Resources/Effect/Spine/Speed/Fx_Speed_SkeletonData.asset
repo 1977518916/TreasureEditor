@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: Fx_Speed_SkeletonData
+  m_Name: fx_speed_skeletondata
   m_EditorClassIdentifier: 
   atlasAssets:
   - {fileID: 11400000, guid: 053ee4c80c97ccf48ab04392a843bb85, type: 2}

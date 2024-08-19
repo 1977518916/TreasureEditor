@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: Bossbth_SkeletonData
+  m_Name: bossbth_skeletondata
   m_EditorClassIdentifier: 
   atlasAssets:
   - {fileID: 11400000, guid: ab429c1ec05c8864d8c21f6777fd958c, type: 2}

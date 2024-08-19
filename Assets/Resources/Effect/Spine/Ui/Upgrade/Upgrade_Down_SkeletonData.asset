@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: Upgrade_Down_SkeletonData
+  m_Name: upgrade_down_skeletondata
   m_EditorClassIdentifier: 
   atlasAssets:
   - {fileID: 11400000, guid: 2888f7574f00ceb47a91cc94cd368f54, type: 2}

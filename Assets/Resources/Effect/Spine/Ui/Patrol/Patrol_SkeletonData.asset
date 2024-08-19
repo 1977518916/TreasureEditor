@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: Patrol_SkeletonData
+  m_Name: patrol_skeletondata
   m_EditorClassIdentifier: 
   atlasAssets:
   - {fileID: 11400000, guid: 29f4b900c5193a744a75f5d68302aea5, type: 2}

@@ -73,11 +73,13 @@ namespace Runtime.UI
                 {
                     heroType.value = (int)heroData.heroTypeEnum;
                     heroParent.ClearChild();
+                    bulletParent.ClearChild();
                     if(heroData.heroTypeEnum == HeroTypeEnum.Null)
                     {
                         return;
                     }
                     AssetsLoadManager.LoadHero(heroData.heroTypeEnum, heroParent);
+                    AssetsLoadManager.LoadBullet(heroData, bulletParent);
                 };
 
                 TMP_Dropdown bulletType = transform.FindGet<TMP_Dropdown>("bulletField");

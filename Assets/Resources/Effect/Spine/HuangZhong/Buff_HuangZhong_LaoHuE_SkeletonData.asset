@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: Buff_HuangZhong_LaoHuE_SkeletonData
+  m_Name: buff_huangzhong_laohue_skeletondata
   m_EditorClassIdentifier: 
   atlasAssets:
   - {fileID: 11400000, guid: 6908e8c8a20647640a47fbe39a3fe0cd, type: 2}

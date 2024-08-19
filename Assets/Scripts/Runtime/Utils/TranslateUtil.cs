@@ -40,8 +40,6 @@ namespace Runtime.Utils
                     return "陆绩";
                 case HeroTypeEnum.LuSu:
                     return "鲁肃";
-                case HeroTypeEnum.LuXun:
-                    return "陆逊";
                 case HeroTypeEnum.LvBu:
                     return "吕布";
                 case HeroTypeEnum.LvMeng:
@@ -60,18 +58,18 @@ namespace Runtime.Utils
                     return "文丑";
                 case HeroTypeEnum.XiaoQiao:
                     return "小乔";
-                case HeroTypeEnum.XuChu:
-                    return "许褚";
+                // case HeroTypeEnum.XuChu:
+                //     return "许褚";
                 case HeroTypeEnum.XunYou:
                     return "荀攸";
-                case HeroTypeEnum.XunYu:
-                    return "荀彧";
-                case HeroTypeEnum.XuShu:
-                    return "徐庶";
+                // case HeroTypeEnum.XunYu:
+                //     return "荀彧";
+                // case HeroTypeEnum.XuShu:
+                //     return "徐庶";
                 case HeroTypeEnum.YuJin:
                     return "于禁";
-                case HeroTypeEnum.ZhangFei:
-                    return "张飞";
+                // case HeroTypeEnum.ZhangFei:
+                //     return "张飞";
                 case HeroTypeEnum.ZhangJiao:
                     return "张角";
                 case HeroTypeEnum.ZhaoYun:

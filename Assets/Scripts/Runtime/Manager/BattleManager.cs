@@ -23,9 +23,19 @@ public class BattleManager : MonoSingleton<BattleManager>
     public List<RectTransform> BattleBaseList = new List<RectTransform>();
     
     /// <summary>
+    /// 所有英雄血条和CD条
+    /// </summary>
+    public List<RectTransform> HeroStatusList = new List<RectTransform>();
+    
+    /// <summary>
     /// 英雄根节点预制体
     /// </summary>
-    public GameObject HeroRootPrefab; 
+    public GameObject HeroRootPrefab;
+    
+    /// <summary>
+    /// 英雄父对象
+    /// </summary>
+    public RectTransform HeroParent;
     
     #region Command
 
@@ -38,8 +48,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     [Command]
     public void SetPrefabLocation(GameObject root, int value)
     {
-        var obj = Instantiate(root, transform);
-        obj.GetComponent<RectTransform>().position = new Vector3(BattleBaseList[value].position.x, BattleBaseList[value].position.y + 10f);
+        root.GetComponent<RectTransform>().position = new Vector3(BattleBaseList[value].position.x, BattleBaseList[value].position.y + 10f);
     }
     
     /// <summary>
@@ -62,7 +71,33 @@ public class BattleManager : MonoSingleton<BattleManager>
         battleBG.sprite = AssetsLoadManager.Load<Sprite>(DataManager.MapTexturePath + value);
     }
 
+    /// <summary>
+    /// 获取英雄状态UI对象
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public (GameObject HpBg, GameObject CdBg, Image Hp, Image Cd) GetHeroStatus(int value)
+    {
+        if (value > 4) return default;
+        var heroStatus = HeroStatusList[value];
+        var hpBg = heroStatus.Find("HP_BG").gameObject;
+        var cdBg = heroStatus.Find("AttackCD_BG").gameObject;
+        var hp = heroStatus.Find("HP_BG/HP").GetComponent<Image>();
+        var cd = heroStatus.Find("AttackCD_BG/AttackCD").GetComponent<Image>();
+        return (hpBg, cdBg, hp, cd);
+    }
+    
+    /// <summary>
+    /// 获取开火点
+    /// </summary>
+    /// <param name="index"></param>
+    /// <returns></returns>
+    public RectTransform GetFirePoint(int index)
+    {
+        return BattleBaseList[index].Find("FirePoint").GetComponent<RectTransform>();
+    }
+
     #endregion
-    
-    
+
+
 }

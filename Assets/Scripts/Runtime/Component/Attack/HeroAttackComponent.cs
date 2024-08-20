@@ -49,7 +49,7 @@ public class HeroAttackComponent : AttackComponent
     /// <param name="attackCountValue"> 攻击次数总数 </param>
     /// <param name="entity"> 英雄实体 </param>
     /// <param name="attackCd"> 攻击CD </param>
-    private HeroAttackComponent(int attackCountValue, HeroEntity entity, float attackCd)
+    public HeroAttackComponent(int attackCountValue, HeroEntity entity, float attackCd)
     {
         attackMaxCount = attackCountValue;
         attackCount = attackCountValue;

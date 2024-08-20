@@ -10,9 +10,16 @@ public class SquareRayComponent : IRayComponent
     private Vector2 size;
 
     private float angle;
-
+    
     private Collider2D hitObject;
 
+    public SquareRayComponent(Vector2 point, Vector2 size, float angle)
+    {
+        this.point = point;
+        this.size = size;
+        this.angle = angle;
+    }
+    
     public bool IsObjectDetected(string targetTag, LayerMask layerMask)
     {
         var hit = Physics2D.OverlapBox(point, size, angle, layerMask);

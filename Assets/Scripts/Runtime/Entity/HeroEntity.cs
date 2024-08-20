@@ -116,4 +116,6 @@ public class HeroEntity : MonoBehaviour, Entity
     {
         return attackFireLocation;
     }
+    
+    
 }

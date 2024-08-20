@@ -13,7 +13,7 @@ namespace Runtime.UI
     public class LevelArea : MonoBehaviour
     {
         private TMP_Dropdown dropdown, typeDropDown, mapDropDown;
-        private TMP_InputField amount;
+        private TMP_InputField amount, time, timeInterval;
         private LevelData levelData;
         private Transform enemyParent;
         private Image bg;
@@ -24,6 +24,8 @@ namespace Runtime.UI
             typeDropDown = transform.FindGet<TMP_Dropdown>("TimesInfo/Type");
             mapDropDown = transform.FindGet<TMP_Dropdown>("MapDrop");
             amount = transform.FindGet<TMP_InputField>("TimesInfo/Amount");
+            time = transform.FindGet<TMP_InputField>("TimesInfo/TimeField");
+            timeInterval = transform.FindGet<TMP_InputField>("TimesInfo/DelayTimeField");
             enemyParent = transform.Find("TimesInfo/EnemyParent");
             bg = transform.FindGet<Image>("bg");
             transform.FindGet<Button>("DeleteButton").onClick.AddListener(DeleteTimes);
@@ -61,6 +63,8 @@ namespace Runtime.UI
             ShowTimeData(dropdown.value);
 
             amount.onValueChanged.AddListener(content => CurrentData.amount = int.Parse(content));
+            time.onValueChanged.AddListener(t => CurrentData.time = float.Parse(t));
+            timeInterval.onValueChanged.AddListener(t => CurrentData.makeTime = float.Parse(t));
         }
 
         private void ShowMap(int _ = 0)
@@ -71,6 +75,9 @@ namespace Runtime.UI
         private void ShowTimeData(int index)
         {
             amount.SetTextWithoutNotify(CurrentData.amount.ToString());
+            timeInterval.SetTextWithoutNotify(CurrentData.makeTime.ToString());
+            time.SetTextWithoutNotify(CurrentData.time.ToString());
+
             typeDropDown.value = (int)CurrentData.enemyType;
             ShowEnemy();
         }

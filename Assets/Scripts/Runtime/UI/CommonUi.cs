@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using Runtime.Extensions;
+using Runtime.Manager;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Runtime.UI
 {
@@ -6,6 +9,7 @@ namespace Runtime.UI
     {
         private void Awake()
         {
+            transform.FindGet<Button>("EnterLevel").onClick.AddListener(BattleSceneManager.LoadBattleScene);
         }
     }
 }

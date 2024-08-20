@@ -49,13 +49,13 @@ public class EntitySystem : MonoBehaviour
     }
 
     /// <summary>
-    /// 生成实体
+    /// 生成英雄实体
     /// </summary>
-    /// <param name="type"> 类型 </param>
+    /// <param name="type"> 位置 </param>
     /// <param name="data"> 数据 </param>
-    /// <param name="index"> 位置 </param>
-    private void GenerateEntity(DataType.HeroPositionType type, HeroData data, int index)
+    private void GenerateEntity(DataType.HeroPositionType type, HeroData data)
     {
+        var hero = Instantiate(BattleManager.Instance.HeroRootPrefab);
         
     }
 }

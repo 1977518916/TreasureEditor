@@ -21,8 +21,11 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// 所有战斗底座
     /// </summary>
     public List<RectTransform> BattleBaseList = new List<RectTransform>();
-
-    //public 
+    
+    /// <summary>
+    /// 英雄根节点预制体
+    /// </summary>
+    public GameObject HeroRootPrefab; 
     
     #region Command
 

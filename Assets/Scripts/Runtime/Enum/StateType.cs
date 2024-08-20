@@ -9,11 +9,6 @@ public enum StateType
     Idle,
 
     /// <summary>
-    /// 走路
-    /// </summary>
-    Walk,
-
-    /// <summary>
     /// 跑
     /// </summary>
     Run,

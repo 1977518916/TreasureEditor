@@ -13,5 +13,5 @@ public struct StateConvert
     /// <summary>
     /// 可以改变的状态 或者说 可以由当前状态切换过去的状态
     /// </summary>
-    public List<StateType> ChangeState;
+    public List<IState> ChangeState;
 }

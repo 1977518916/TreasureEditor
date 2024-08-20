@@ -24,7 +24,7 @@ public interface Entity
     /// 获取指定组件
     /// </summary>
     /// <returns></returns>
-    public IComponent GetSpecifyComponent(ComponentType componentType);
+    public T GetSpecifyComponent<T>(ComponentType componentType) where T : IComponent;
 
     /// <summary>
     /// 检测是否是指定组件

@@ -29,19 +29,19 @@ public class BulletEntity : MonoBehaviour, Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
     }
 
-    public IComponent GetSpecifyComponent(ComponentType componentType)
+    public T GetSpecifyComponent<T>(ComponentType componentType) where T : IComponent
     {
         foreach (var iComponent in AllComponentList)
         {
             if (IsSpecifyComponent(iComponent, componentType))
             {
-                return iComponent;
+                return (T)iComponent;
             }
         }
 
-        return null;
+        return default;
     }
-    
+
     public bool IsSpecifyComponent(IComponent component, ComponentType componentType)
     {
         return componentType switch

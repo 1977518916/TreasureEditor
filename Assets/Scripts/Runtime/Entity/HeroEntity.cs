@@ -44,17 +44,17 @@ public class HeroEntity : MonoBehaviour, Entity
     /// </summary>
     /// <param name="componentType"></param>
     /// <returns></returns>
-    public IComponent GetSpecifyComponent(ComponentType componentType)
+    public T GetSpecifyComponent<T>(ComponentType componentType) where T: IComponent
     {
         foreach (var iComponent in AllComponentList)
         {
             if (IsSpecifyComponent(iComponent, componentType))
             {
-                return iComponent;
+                return (T)iComponent;
             }
         }
 
-        return null;
+        return default;
     }
     
     /// <summary>

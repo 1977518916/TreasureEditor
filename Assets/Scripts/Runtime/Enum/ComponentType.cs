@@ -23,5 +23,10 @@ public enum ComponentType
     /// <summary>
     /// 检测组件
     /// </summary>
-    DetectComponent
+    DetectComponent,
+    
+    /// <summary>
+    /// 动画组件
+    /// </summary>
+    AnimationComponent
 }

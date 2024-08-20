@@ -9,7 +9,7 @@ public class EntitySystem : MonoBehaviour
     /// 更新帧率  60帧率更新
     /// </summary>
     private const float UpdateTime = 1 / 60f;
-    
+
     /// <summary>
     /// 当前运行时间
     /// </summary>
@@ -22,18 +22,18 @@ public class EntitySystem : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
 
     private void Update()
     {
         currentTime += Time.time;
-        if (currentTime >= UpdateTime)
+        if(currentTime >= UpdateTime)
         {
             EntityUpdate(UpdateTime);
         }
     }
-    
+
     /// <summary>
     /// 实体更新函数
     /// </summary>
@@ -56,6 +56,11 @@ public class EntitySystem : MonoBehaviour
     private void GenerateEntity(DataType.HeroPositionType type, HeroData data)
     {
         var hero = Instantiate(BattleManager.Instance.HeroRootPrefab);
-        
+    }
+
+    private void GenerateEntity(EnemyTypeEnum enemyTypeEnum)
+    {
+        EnemyEntity entity = new EnemyEntity();
+        allEntityList.Add(entity);
     }
 }

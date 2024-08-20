@@ -27,6 +27,14 @@ namespace Runtime.Data
         /// 单波敌人数量
         /// </summary>
         public int amount;
+        /// <summary>
+        /// 当前波出怪间隔
+        /// </summary>
+        public float time = 10;
+        /// <summary>
+        /// 每次生成时的间隔
+        /// </summary>
+        public float makeTime = 1;
         public EnemyTypeEnum enemyType = EnemyTypeEnum.XiaoBing;
     }
 }

@@ -10,7 +10,7 @@ public class DrawingComponent : MonoBehaviour, IComponent
     
     private void Start()
     {
-        detectComponent = (DetectComponent)GetComponent<Entity>().GetSpecifyComponent(ComponentType.DetectComponent);
+        detectComponent = (DetectComponent)GetComponent<  Entity>().GetSpecifyComponent(ComponentType.DetectComponent);
     }
     
     public void Tick(float time)

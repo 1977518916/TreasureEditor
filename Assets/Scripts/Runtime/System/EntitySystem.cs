@@ -28,10 +28,11 @@ public class EntitySystem : MonoBehaviour
     /// <summary>
     /// 战斗管理
     /// </summary>
-    private static BattleManager BattleManager => BattleManager.Instance;
+    private BattleManager battleManager;
 
     private void Start()
     {
+        battleManager = BattleManager.Instance;
         foreach (var heroData in DataManager.HeroDatas)
         {
             GenerateEntity(heroData.Key, heroData.Value);
@@ -70,11 +71,11 @@ public class EntitySystem : MonoBehaviour
         if (data.heroTypeEnum == HeroTypeEnum.Null) return;
         var indexValue = Convert.ToInt32(type);
         // 生成英雄实体
-        var hero = Instantiate(BattleManager.HeroRootPrefab, BattleManager.HeroParent);
+        var hero = Instantiate(battleManager.HeroRootPrefab, battleManager.HeroParent);
         var heroEntity = hero.AddComponent<HeroEntity>();
         var heroModel = AssetsLoadManager.LoadHero(data.heroTypeEnum, hero.GetComponent<RectTransform>());
         heroEntity.Init();
-        heroEntity.InitHero(data, heroModel, BattleManager.GetFirePoint(indexValue));
+        heroEntity.InitHero(data, heroModel, battleManager.GetFirePoint(indexValue));
         // 获取英雄动画对象
         var heroAnima = heroModel.GetComponent<SkeletonGraphic>();
         // 初始化实体动画组件和动画
@@ -125,7 +126,7 @@ public class EntitySystem : MonoBehaviour
 
     private void GenerateEntity(LevelManager.EnemyBean enemyBean)
     {
-        GameObject root = Instantiate(BattleManager.HeroRootPrefab, BattleManager.EnemyParent);
+        GameObject root = Instantiate(battleManager.HeroRootPrefab, battleManager.EnemyParent);
         EnemyEntity entity = root.AddComponent<EnemyEntity>();
         entity.Init();
         var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
@@ -133,5 +134,10 @@ public class EntitySystem : MonoBehaviour
         model.transform.Translate(0, -30, 0, Space.Self);
         InitEntityPosition(entity);
         allEntityDic.Add(entity.EntityId, entity);
+    }
+
+    private void OnDestroy()
+    {
+        EventMgr.Instance.RemoveEvent(GameEvent.MakeEnemy);
     }
 }

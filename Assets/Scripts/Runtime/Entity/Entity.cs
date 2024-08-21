@@ -21,11 +21,6 @@ public interface Entity
     public void Init();
     
     /// <summary>
-    /// 删除
-    /// </summary>
-    public void Destroy();
-    
-    /// <summary>
     /// 获取指定组件
     /// </summary>
     /// <returns></returns>

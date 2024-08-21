@@ -15,11 +15,7 @@ public class EnemyEntity : MonoBehaviour, Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         AllComponentList = new List<IComponent>();
     }
-    public void Destroy()
-    {
-        Destroy(this.gameObject);
-        Destroy(this);
-    }
+
     /// <summary>
     /// 获取指定组件
     /// </summary>

@@ -28,13 +28,7 @@ public class BulletEntity : MonoBehaviour, Entity
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
     }
-
-    public void Destroy()
-    {
-        Destroy(this.gameObject);
-        Destroy(this);
-    }
-
+    
     public T GetSpecifyComponent<T>(ComponentType componentType) where T : IComponent
     {
         foreach (var iComponent in AllComponentList)

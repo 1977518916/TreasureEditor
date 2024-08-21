@@ -39,12 +39,6 @@ public class HeroEntity : MonoBehaviour, Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
     }
     
-    public void Destroy()
-    {
-        Destroy(this.gameObject);
-        Destroy(this);
-    }
-    
     /// <summary>
     /// 获取指定组件
     /// </summary>

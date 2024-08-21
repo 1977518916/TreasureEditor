@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using QFSW.QC;
 using Runtime.Manager;
@@ -104,5 +105,8 @@ public class BattleManager : MonoSingleton<BattleManager>
 
     #endregion
 
-
+    private void OnDestroy()
+    {
+        //DestroyInstance();
+    }
 }

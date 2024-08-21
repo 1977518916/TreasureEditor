@@ -27,6 +27,7 @@ namespace Runtime.UI
             {
                 var t = transform.GetComponentInChildren<Toggle>();
                 t.onValueChanged.AddListener(Action);
+                t.isOn = false;
             }
         }
     }

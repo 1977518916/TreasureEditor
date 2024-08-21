@@ -8,7 +8,7 @@ namespace Runtime.Data
         /// <summary>
         /// 是否显示伤害飘字
         /// </summary>
-        public bool isShowNumber = true;
+        public bool isShowNumber = false;
         /// <summary>
         /// 我方无敌
         /// </summary>

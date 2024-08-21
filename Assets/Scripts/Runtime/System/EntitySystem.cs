@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Runtime.Component.Position;
 using Runtime.Data;
 using Runtime.Manager;
-using Spine;
 using Spine.Unity;
 using Tao_Framework.Core.Event;
 using UnityEngine;
@@ -113,7 +112,6 @@ public class EntitySystem : MonoBehaviour
 	
 	private void InitDetect(HeroEntity heroEntity)
 	{
-        //var detect = new HostileDetectComponent();
         var detect = new HostileDetectComponent("Enemy", LayerMask.GetMask("UI"), DetectRangeType.Square, heroEntity);
         heroEntity.AllComponentList.Add(detect);
     }

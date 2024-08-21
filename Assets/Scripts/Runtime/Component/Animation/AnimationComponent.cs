@@ -12,9 +12,9 @@ public interface AnimationComponent : IComponent
     /// </summary>
     /// <returns></returns>
     public SkeletonGraphic GetSkeletonGraphic();
-    
+
     /// <summary>
     /// 改变动画
     /// </summary>
-    public void ChangeAnima();
+    public void ChangeAnima(StateType stateType, bool isLoop);
 }

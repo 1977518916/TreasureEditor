@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Tao_Framework.Core.Event;
 using UnityEngine;
 
 /// <summary>
@@ -8,33 +9,40 @@ using UnityEngine;
 public class EnemyStatusComponent : StatusComponent
 {
     /// <summary>
-    /// 受击次数
+    /// 受击次数   需要改成血量
     /// </summary>
-    private int hitCount;
+    private int hpValue;
+    
+    /// <summary>
+    /// 最大血量值
+    /// </summary>
+    private int maxHpValue;
 
-    public EnemyStatusComponent(int hitCount)
+    public EnemyStatusComponent(int maxHpValue)
     {
-        this.hitCount = hitCount;
+        this.maxHpValue = maxHpValue;
+        hpValue = this.maxHpValue;
     }
 
     public void Tick(float time)
     {
         
     }
-    
+
     /// <summary>
     /// 每调用一次会扣除一次受击次数并且会 进入 受击状态
     /// </summary>
-    public void Hit()
+    public void Hit(int value)
     {
-        hitCount -= 1;
-        if (hitCount <= 0) 
+        hpValue -= value;
+        if (hpValue > 0) 
         {
-            // 死亡
+            // 伤害飘字
+            // 播放受击动画
+            // 然后退出
+            return;
         }
-        else
-        {
-            // 受击
-        }
+        // 死亡 播放死亡动画 关闭碰撞包围盒  死亡动画播放完以后直接删除实体
+        EventMgr.Instance.TriggerEvent(GameEvent.Common);
     }
 }

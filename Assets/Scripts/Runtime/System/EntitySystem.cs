@@ -81,6 +81,8 @@ public class EntitySystem : MonoBehaviour
         InitEntityStatus(heroEntity, indexValue);
         // 初始化攻击组件
         InitEntityAttack(heroEntity);
+        // 初始化检测组件
+        InitDetect(heroEntity);
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, indexValue);
     }
@@ -104,12 +106,13 @@ public class EntitySystem : MonoBehaviour
         var attack = new HeroAttackComponent(9, heroEntity, 3);
         heroEntity.AllComponentList.Add(attack);
     }
-
-    private void InitDetect()
+    
+    private void InitDetect(HeroEntity heroEntity)
     {
-        //var detect = new HostileDetectComponent();
+        var detect = new HostileDetectComponent("Enemy", LayerMask.GetMask("UI"), DetectRangeType.Square, heroEntity);
+        heroEntity.AllComponentList.Add(detect);
     }
-
+    
     private void GenerateEntity(EnemyTypeEnum enemyTypeEnum)
     {
         EnemyEntity entity = new EnemyEntity();

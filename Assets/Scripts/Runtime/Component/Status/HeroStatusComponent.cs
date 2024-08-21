@@ -60,7 +60,7 @@ public class HeroStatusComponent : StatusComponent
     /// <summary>
     /// 隐藏血条
     /// </summary>
-    public void HideHp()
+    private void HideHp()
     {
         hpParent.SetActive(false);
     }
@@ -109,7 +109,11 @@ public class HeroStatusComponent : StatusComponent
     /// </summary>
     public void Hit(float value)
     {
-        hp.DOFillAmount(value, 0.25f);
+        hp.DOFillAmount(value, 0.25f).onComplete+= () =>
+        {
+            if (hp.fillAmount > 0) return;
+            EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, heroEntity.EntityId);
+        };
     }
 
     /// <summary>

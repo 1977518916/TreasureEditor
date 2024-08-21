@@ -93,6 +93,7 @@ public class HeroEntity : MonoBehaviour, Entity
         data = heroData;
         heroObj = hero;
         attackFireLocation = fireLocation;
+        AllComponentList = new List<IComponent>();
     }
     
     /// <summary>

@@ -179,6 +179,11 @@ namespace Tao_Framework.Core.Event
         /// 技能结束CD
         /// </summary>
         AttackEndCd,
+        
+        /// <summary>
+        /// 实体死亡事件
+        /// </summary>
+        EntityDead
     }
 
     public enum UIEvent

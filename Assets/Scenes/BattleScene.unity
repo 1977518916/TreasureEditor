@@ -1688,7 +1688,12 @@ MonoBehaviour:
   - {fileID: 196808513}
   - {fileID: 1045200609}
   - {fileID: 1049669416}
-  HeroStatusList: []
+  HeroStatusList:
+  - {fileID: 1512273368}
+  - {fileID: 970553201}
+  - {fileID: 1301070028}
+  - {fileID: 796294424}
+  - {fileID: 1626371390}
   HeroRootPrefab: {fileID: 1211662323}
   HeroParent: {fileID: 673703899}
   EnemyParent: {fileID: 924491848}

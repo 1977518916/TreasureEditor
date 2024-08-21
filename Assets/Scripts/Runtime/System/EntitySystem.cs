@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Runtime.Component.Position;
 using Runtime.Data;
 using Runtime.Manager;
@@ -23,7 +24,7 @@ public class EntitySystem : MonoBehaviour
     /// <summary>
     /// 所有实体
     /// </summary>
-    private readonly List<Entity> allEntityList = new List<Entity>();
+    private readonly Dictionary<long, Entity> allEntityDic = new Dictionary<long, Entity>();
 
     /// <summary>
     /// 战斗管理
@@ -37,13 +38,14 @@ public class EntitySystem : MonoBehaviour
         {
             GenerateEntity(heroData.Key, heroData.Value);
         }
+
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GameEvent.MakeEnemy, GenerateEntity);
     }
 
     private void Update()
     {
         currentTime += Time.time;
-        if(currentTime >= UpdateTime)
+        if (currentTime >= UpdateTime)
         {
             EntityUpdate(UpdateTime);
         }
@@ -54,12 +56,9 @@ public class EntitySystem : MonoBehaviour
     /// </summary>
     private void EntityUpdate(float time)
     {
-        foreach (var entity in allEntityList)
+        foreach (var component in allEntityDic.Values.SelectMany(entity => entity.AllComponentList))
         {
-            foreach (var component in entity.AllComponentList)
-            {
-                (component as BulletMoveComponent)?.Tick(time);
-            }
+            (component as BulletMoveComponent)?.Tick(time);
         }
     }
 
@@ -76,17 +75,18 @@ public class EntitySystem : MonoBehaviour
         var hero = Instantiate(battleManager.HeroRootPrefab, battleManager.HeroParent);
         var heroEntity = hero.AddComponent<HeroEntity>();
         var heroModel = AssetsLoadManager.LoadHero(data.heroTypeEnum, hero.GetComponent<RectTransform>());
+        heroEntity.Init();
         heroEntity.InitHero(data, heroModel, battleManager.GetFirePoint(indexValue));
         // 获取英雄动画对象
         var heroAnima = heroModel.GetComponent<SkeletonGraphic>();
         // 初始化实体动画组件和动画
         InitEntityAnima(heroAnima);
         // 初始化实体状态组件
-        InitEntityStatus(heroEntity, indexValue);
+        InitHeroEntityStatus(heroEntity, indexValue);
         // 初始化攻击组件
-        InitEntityAttack(heroEntity);
+        InitHeroEntityAttack(heroEntity);
         // 初始化检测组件
-        InitDetect(heroEntity);
+        InitDetect(heroEntity, "Enemy", "UI");
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, indexValue);
     }
@@ -98,31 +98,33 @@ public class EntitySystem : MonoBehaviour
         skeletonGraphic.AnimationState.SetAnimation(0, "Idle", true);
     }
 
-    private void InitEntityStatus(HeroEntity heroEntity, int value)
+    private void InitHeroEntityStatus(HeroEntity heroEntity, int value)
     {
         var heroStatusUI = BattleManager.Instance.GetHeroStatus(value);
-        var status = new HeroStatusComponent(heroStatusUI.HpBg, heroStatusUI.CdBg, heroStatusUI.Hp, heroStatusUI.Cd, heroEntity);
+        var status = new HeroStatusComponent(heroStatusUI.HpBg, heroStatusUI.CdBg, heroStatusUI.Hp, heroStatusUI.Cd,
+            heroEntity);
         heroEntity.AllComponentList.Add(status);
     }
-
-    private void InitEntityAttack(HeroEntity heroEntity)
+    
+    private void InitHeroEntityAttack(HeroEntity heroEntity)
     {
         var attack = new HeroAttackComponent(9, heroEntity, 3);
         heroEntity.AllComponentList.Add(attack);
     }
-	
-	private void InitDetect(HeroEntity heroEntity)
-	{
-        //var detect = new HostileDetectComponent();
-        var detect = new HostileDetectComponent("Enemy", LayerMask.GetMask("UI"), DetectRangeType.Square, heroEntity);
-        heroEntity.AllComponentList.Add(detect);
+    
+    private void InitDetect(Entity entity, string targetTag, string layerName)
+    {
+        var detect = new HostileDetectComponent(targetTag, LayerMask.GetMask(layerName), DetectRangeType.Square, entity);
+        entity.AllComponentList.Add(detect);
     }
-	private void InitEntityPosition(EnemyEntity entity)
+
+    private void InitEntityPosition(EnemyEntity entity)
     {
         entity.AllComponentList.Add(new RandomPositionComponent());
-        entity.GetSpecifyComponent<RandomPositionComponent>(ComponentType.RandomPositionComponent).RandomizePosition(entity.transform as RectTransform);
+        entity.GetSpecifyComponent<RandomPositionComponent>(ComponentType.RandomPositionComponent)
+            .RandomizePosition(entity.transform as RectTransform);
     }
-    
+
     private void GenerateEntity(LevelManager.EnemyBean enemyBean)
     {
         GameObject root = Instantiate(battleManager.HeroRootPrefab, battleManager.EnemyParent);
@@ -130,9 +132,28 @@ public class EntitySystem : MonoBehaviour
         entity.Init();
         var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
         model.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        model.transform.Translate(0,-30,0,Space.Self);
+        model.transform.Translate(0, -30, 0, Space.Self);
         InitEntityPosition(entity);
-        
-        allEntityList.Add(entity);
+        allEntityDic.Add(entity.EntityId, entity);
+    }
+    
+    /// <summary>
+    /// 删除指定Entity
+    /// </summary>
+    /// <param name="entityID"></param>
+    private void DestroyEntity(long entityID)
+    {
+        if (allEntityDic.TryGetValue(entityID, out var entity))
+        {
+            entity.Destroy();
+        }
+    }
+    
+    private void OnDestroy()
+    {
+        foreach (var id in allEntityDic.Keys)
+        {
+            DestroyEntity(id);
+        }
     }
 }

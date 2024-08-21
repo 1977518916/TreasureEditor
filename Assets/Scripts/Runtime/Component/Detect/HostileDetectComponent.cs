@@ -12,18 +12,18 @@ public class HostileDetectComponent : DetectComponent
     public DetectRangeType DetectRangeType { get; set; }
     
     public IRayComponent IRayComponent { get; set; }
-    
+
     /// <summary>
     /// 英雄实体
     /// </summary>
-    private HeroEntity heroEntity;
+    private Entity entity;
 
-    public HostileDetectComponent(string targetTag, LayerMask layerMask, DetectRangeType type, HeroEntity heroEntity)
+    public HostileDetectComponent(string targetTag, LayerMask layerMask, DetectRangeType type, Entity entity)
     {
         TargetTag = targetTag;
         LayerMask = layerMask;
         DetectRangeType = type;
-        this.heroEntity = heroEntity;
+        this.entity = entity;
         //IRayComponent = new SquareRayComponent();
     }
 

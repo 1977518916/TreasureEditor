@@ -5,7 +5,7 @@ using Runtime.Component.Position;
 using Tools;
 using UnityEngine;
 
-public class EnemyEntity : MonoBehaviour,Entity
+public class EnemyEntity : MonoBehaviour, Entity
 {
     public long EntityId { get; set; }
     public List<IComponent> AllComponentList { get; set; }
@@ -15,7 +15,11 @@ public class EnemyEntity : MonoBehaviour,Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         AllComponentList = new List<IComponent>();
     }
-    
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
+        Destroy(this);
+    }
     /// <summary>
     /// 获取指定组件
     /// </summary>
@@ -33,7 +37,7 @@ public class EnemyEntity : MonoBehaviour,Entity
 
         return default;
     }
-    
+
     /// <summary>
     /// 检测是否是指定组件
     /// </summary>

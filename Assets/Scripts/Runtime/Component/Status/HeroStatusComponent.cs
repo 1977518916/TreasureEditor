@@ -32,7 +32,12 @@ public class HeroStatusComponent : StatusComponent
     /// 英雄实体
     /// </summary>
     private readonly HeroEntity heroEntity;
-
+    
+    /// <summary>
+    /// 最大血条数值
+    /// </summary>
+    private int maxHpValue;
+    
     /// <summary>
     /// 初始化
     /// </summary>

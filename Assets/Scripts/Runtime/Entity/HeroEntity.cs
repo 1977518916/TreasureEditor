@@ -15,7 +15,7 @@ public class HeroEntity : MonoBehaviour, Entity
     public long EntityId { get; set; }
     
     public List<IComponent> AllComponentList { get; set; }
-
+    
     /// <summary>
     /// 英雄数据
     /// </summary>
@@ -38,7 +38,13 @@ public class HeroEntity : MonoBehaviour, Entity
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
     }
-
+    
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
+        Destroy(this);
+    }
+    
     /// <summary>
     /// 获取指定组件
     /// </summary>
@@ -76,12 +82,7 @@ public class HeroEntity : MonoBehaviour, Entity
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }
-
-    private void Start()
-    {
-        Init();
-    }
-
+    
     /// <summary>
     /// 初始化英雄
     /// </summary>

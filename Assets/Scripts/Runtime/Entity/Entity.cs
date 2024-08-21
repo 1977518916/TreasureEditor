@@ -19,7 +19,12 @@ public interface Entity
     /// 初始化
     /// </summary>
     public void Init();
-
+    
+    /// <summary>
+    /// 删除
+    /// </summary>
+    public void Destroy();
+    
     /// <summary>
     /// 获取指定组件
     /// </summary>

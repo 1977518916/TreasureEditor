@@ -149,6 +149,7 @@ namespace Runtime.Manager
             string p = EffectPath + path;
             SkeletonGraphic skeletonAnimation = LoadSkeletonGraphic(p, parent);
             skeletonAnimation.name = @enum.ToString();
+            skeletonAnimation.MatchRectTransformWithBounds();
             skeletonAnimation.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             return skeletonAnimation;
         }

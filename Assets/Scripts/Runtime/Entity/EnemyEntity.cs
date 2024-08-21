@@ -1,16 +1,19 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Runtime.Component.Position;
+using Tools;
 using UnityEngine;
 
-public class EnemyEntity : Entity
+public class EnemyEntity : MonoBehaviour,Entity
 {
     public long EntityId { get; set; }
     public List<IComponent> AllComponentList { get; set; }
 
     public void Init()
     {
-        
+        EntityId = GlobalOnlyID.GetGlobalOnlyID();
+        AllComponentList = new List<IComponent>();
     }
     
     /// <summary>
@@ -47,6 +50,7 @@ public class EnemyEntity : Entity
             ComponentType.RayComponent => false,
             ComponentType.StatusComponent => component is StatusComponent,
             ComponentType.DetectComponent => component is DetectComponent,
+            ComponentType.RandomPositionComponent => component is RandomPositionComponent,
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }

@@ -36,6 +36,11 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// 英雄父对象
     /// </summary>
     public RectTransform HeroParent;
+
+    /// <summary>
+    /// 敌人的父对象
+    /// </summary>
+    public RectTransform EnemyParent;
     
     #region Command
 

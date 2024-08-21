@@ -179,8 +179,11 @@ namespace Tao_Framework.Core.Event
         /// 技能结束CD
         /// </summary>
         AttackEndCd,
-        
-        /// <summary>
+		/// <summary>
+        /// 生成敌人
+        /// </summary>
+        MakeEnemy,
+		/// <summary>
         /// 实体死亡事件
         /// </summary>
         EntityDead

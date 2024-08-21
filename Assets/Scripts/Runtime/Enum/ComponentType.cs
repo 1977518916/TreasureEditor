@@ -28,5 +28,10 @@ public enum ComponentType
     /// <summary>
     /// 动画组件
     /// </summary>
-    AnimationComponent
+    AnimationComponent,
+    
+    /// <summary>
+    /// 随机位置组件
+    /// </summary>
+    RandomPositionComponent,
 }

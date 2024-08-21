@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using Runtime.Component.Position;
 using Runtime.Data;
 using Runtime.Manager;
 using Spine;
 using Spine.Unity;
+using Tao_Framework.Core.Event;
 using UnityEngine;
 
 public class EntitySystem : MonoBehaviour
@@ -22,12 +24,12 @@ public class EntitySystem : MonoBehaviour
     /// 所有实体
     /// </summary>
     private readonly List<Entity> allEntityList = new List<Entity>();
-    
+
     /// <summary>
     /// 战斗管理
     /// </summary>
     private BattleManager battleManager;
-    
+
     private void Start()
     {
         battleManager = BattleManager.Instance;
@@ -35,6 +37,7 @@ public class EntitySystem : MonoBehaviour
         {
             GenerateEntity(heroData.Key, heroData.Value);
         }
+        EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GameEvent.MakeEnemy, GenerateEntity);
     }
 
     private void Update()
@@ -86,36 +89,49 @@ public class EntitySystem : MonoBehaviour
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, indexValue);
     }
-    
+
     private void InitEntityAnima(SkeletonGraphic skeletonGraphic)
     {
         skeletonGraphic.initialFlipX = true;
         skeletonGraphic.Initialize(true);
         skeletonGraphic.AnimationState.SetAnimation(0, "Idle", true);
     }
-    
+
     private void InitEntityStatus(HeroEntity heroEntity, int value)
     {
         var heroStatusUI = BattleManager.Instance.GetHeroStatus(value);
         var status = new HeroStatusComponent(heroStatusUI.HpBg, heroStatusUI.CdBg, heroStatusUI.Hp, heroStatusUI.Cd, heroEntity);
         heroEntity.AllComponentList.Add(status);
     }
-    
+
     private void InitEntityAttack(HeroEntity heroEntity)
     {
         var attack = new HeroAttackComponent(9, heroEntity, 3);
         heroEntity.AllComponentList.Add(attack);
     }
-    
-    private void InitDetect(HeroEntity heroEntity)
-    {
+	
+	private void InitDetect(HeroEntity heroEntity)
+	{
+        //var detect = new HostileDetectComponent();
         var detect = new HostileDetectComponent("Enemy", LayerMask.GetMask("UI"), DetectRangeType.Square, heroEntity);
         heroEntity.AllComponentList.Add(detect);
     }
-    
-    private void GenerateEntity(EnemyTypeEnum enemyTypeEnum)
+	private void InitEntityPosition(EnemyEntity entity)
     {
-        EnemyEntity entity = new EnemyEntity();
+        entity.AllComponentList.Add(new RandomPositionComponent());
+        entity.GetSpecifyComponent<RandomPositionComponent>(ComponentType.RandomPositionComponent).RandomizePosition(entity.transform as RectTransform);
+    }
+    
+    private void GenerateEntity(LevelManager.EnemyBean enemyBean)
+    {
+        GameObject root = Instantiate(battleManager.HeroRootPrefab, battleManager.EnemyParent);
+        EnemyEntity entity = root.AddComponent<EnemyEntity>();
+        entity.Init();
+        var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
+        model.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        model.transform.Translate(0,-30,0,Space.Self);
+        InitEntityPosition(entity);
+        
         allEntityList.Add(entity);
     }
 }

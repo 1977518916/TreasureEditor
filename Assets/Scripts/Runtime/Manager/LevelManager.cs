@@ -1,6 +1,7 @@
-﻿using System;
-using Runtime.Component.Position;
+﻿using System.Collections.Generic;
 using Runtime.Data;
+using Sirenix.OdinInspector.Editor.Validation;
+using Tao_Framework.Core.Event;
 using Tao_Framework.Core.Singleton;
 using UnityEngine;
 
@@ -8,37 +9,76 @@ namespace Runtime.Manager
 {
     public class LevelManager : MonoSingleton<LevelManager>
     {
-        private LevelData levelData;
-        private float currentTime = 0f, targetTime = 0f;
-        private int index = 0;
+        private float currentTime, targetTime;
+        private int index, amount;
+        private Transform enemyParent;
+        private List<TimesData> list;
+        private bool isMaking;
         private void Awake()
         {
-            levelData = DataManager.LevelData;
-            targetTime = levelData.timesDatas[index++].time;
+            list = DataManager.LevelData.timesDatas;
+            targetTime = list[index].time;
         }
 
         private void Update()
         {
-            if(index >= levelData.timesDatas.Count)
+            currentTime += Time.deltaTime;
+            TryNextLayer();
+            TryMakeEnemy();
+        }
+
+        private void TryNextLayer()
+        {
+            if(isMaking || index >= list.Count)
             {
                 return;
             }
-            currentTime += Time.deltaTime;
-            if(currentTime > targetTime)
+            if(currentTime >= targetTime)
             {
-                MakeEnemy();
-                targetTime = currentTime + levelData.timesDatas[index++].time;
+                isMaking = true;
+                amount = list[index].amount;
+            }
+        }
+
+        private void TryMakeEnemy()
+        {
+            if(!isMaking)
+            {
+                return;
+            }
+            if(!(currentTime >= targetTime)) return;
+            MakeEnemy();
+            if(--amount > 0)
+            {
+                currentTime += list[index].makeTime;
+                return;
+            }
+
+            isMaking = false;
+            if(++index < list.Count)
+            {
+                targetTime += list[index].time;
             }
         }
 
         private void MakeEnemy()
         {
-            
+            EventMgr.Instance.TriggerEvent(GameEvent.MakeEnemy, new EnemyBean()
+            {
+                EnemyType = list[index].enemyType,
+                EnemyData = list[index].enemyData
+            });
         }
 
         private void OnDestroy()
         {
             DestroyInstance();
+        }
+
+        public class EnemyBean
+        {
+            public EnemyTypeEnum EnemyType;
+            public UnitData EnemyData;
         }
     }
 }

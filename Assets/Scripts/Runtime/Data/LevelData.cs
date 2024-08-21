@@ -35,6 +35,12 @@ namespace Runtime.Data
         /// 每次生成时的间隔
         /// </summary>
         public float makeTime = 1;
+
+        /// <summary>
+        /// 敌人的生命值攻击力
+        /// </summary>
+        public UnitData enemyData = new UnitData();
+        
         public EnemyTypeEnum enemyType = EnemyTypeEnum.XiaoBing;
     }
 }

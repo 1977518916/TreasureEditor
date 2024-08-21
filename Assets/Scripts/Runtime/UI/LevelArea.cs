@@ -13,7 +13,7 @@ namespace Runtime.UI
     public class LevelArea : MonoBehaviour
     {
         private TMP_Dropdown dropdown, typeDropDown, mapDropDown;
-        private TMP_InputField amount, time, timeInterval;
+        private TMP_InputField amount, time, timeInterval, hp, atk;
         private LevelData levelData;
         private Transform enemyParent;
         private Image bg;
@@ -26,6 +26,8 @@ namespace Runtime.UI
             amount = transform.FindGet<TMP_InputField>("TimesInfo/Amount");
             time = transform.FindGet<TMP_InputField>("TimesInfo/TimeField");
             timeInterval = transform.FindGet<TMP_InputField>("TimesInfo/DelayTimeField");
+            hp = transform.FindGet<TMP_InputField>("TimesInfo/Hp");
+            atk = transform.FindGet<TMP_InputField>("TimesInfo/Atk");
             enemyParent = transform.Find("TimesInfo/EnemyParent");
             bg = transform.FindGet<Image>("bg");
             transform.FindGet<Button>("DeleteButton").onClick.AddListener(DeleteTimes);
@@ -65,6 +67,8 @@ namespace Runtime.UI
             amount.onValueChanged.AddListener(content => CurrentData.amount = int.Parse(content));
             time.onValueChanged.AddListener(t => CurrentData.time = float.Parse(t));
             timeInterval.onValueChanged.AddListener(t => CurrentData.makeTime = float.Parse(t));
+            hp.onValueChanged.AddListener(v => CurrentData.enemyData.hp = int.Parse(v));
+            atk.onValueChanged.AddListener(v => CurrentData.enemyData.atk = int.Parse(v));
         }
 
         private void ShowMap(int _ = 0)
@@ -77,6 +81,8 @@ namespace Runtime.UI
             amount.SetTextWithoutNotify(CurrentData.amount.ToString());
             timeInterval.SetTextWithoutNotify(CurrentData.makeTime.ToString());
             time.SetTextWithoutNotify(CurrentData.time.ToString());
+            hp.SetTextWithoutNotify(CurrentData.enemyData.hp.ToString());
+            atk.SetTextWithoutNotify(CurrentData.enemyData.atk.ToString());
 
             typeDropDown.value = (int)CurrentData.enemyType;
             ShowEnemy();
@@ -103,12 +109,16 @@ namespace Runtime.UI
         {
             levelData.timesDatas.RemoveAt(dropdown.value);
             ShowLevelData();
+            dropdown.SetValueWithoutNotify(0);
+            ShowTimeData(dropdown.value);
         }
 
         private void AddTimes()
         {
             levelData.timesDatas.Add(new TimesData());
             ShowLevelData();
+            dropdown.SetValueWithoutNotify(dropdown.options.Count - 1);
+            ShowTimeData(dropdown.value);
         }
 
         private void Save()

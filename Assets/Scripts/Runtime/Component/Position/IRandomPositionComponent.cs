@@ -4,6 +4,6 @@ namespace Runtime.Component.Position
 {
     public interface IRandomPositionComponent : IComponent
     {
-        void RandomizePosition(Transform character);
+        void RandomizePosition(RectTransform character);
     }
 }

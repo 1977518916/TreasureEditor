@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: XiaoBing_Dun_SkeletonData
+  m_Name: XiaoBing_GongJian_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 6380fc1fb31e4dc4988c03ace4c551e0, type: 2}
+  - {fileID: 11400000, guid: 40547f90170056f448056b7c01fc7351, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: f4c15af66b6f2dc48af954957bfd7e3a, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 9e7aaebb41c3a1f42a1720bf804584d3, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 0

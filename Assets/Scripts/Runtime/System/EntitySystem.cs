@@ -169,7 +169,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         entity.Init();
         allEntityDic.Add(entity.EntityId, entity);
         var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
-        model.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        model.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
         model.transform.Translate(0, -30, 0, Space.Self);
         InitEntityPosition(entity);
         InitEnemyEntityMove(entity, GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform,

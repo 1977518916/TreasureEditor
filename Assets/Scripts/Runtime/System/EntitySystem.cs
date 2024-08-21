@@ -70,6 +70,7 @@ public class EntitySystem : MonoBehaviour
     /// <param name="data"> 数据 </param>
     private void GenerateEntity(DataType.HeroPositionType type, HeroData data)
     {
+        if (data.heroTypeEnum == HeroTypeEnum.Null) return;
         var indexValue = Convert.ToInt32(type);
         // 生成英雄实体
         var hero = Instantiate(battleManager.HeroRootPrefab, battleManager.HeroParent);

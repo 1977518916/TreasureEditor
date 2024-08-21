@@ -158,7 +158,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     private void InitEnemyEntityMove(Entity entity, RectTransform target, RectTransform entityTransform,
         float moveSpeed)
     {
-        entity.AllComponentList.Add(new EnemyMoveComponent(target, entityTransform, moveSpeed));
+        entity.AllComponentList.Add(new EnemyMoveComponent((EnemyEntity)entity, target, entityTransform, moveSpeed));
     }
 
     private void GenerateEntity(LevelManager.EnemyBean enemyBean)
@@ -173,20 +173,25 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         model.transform.Translate(0, -30, 0, Space.Self);
         InitEntityPosition(entity);
         InitEnemyEntityMove(entity, GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform,
-            root.GetComponent<RectTransform>(), 10);
+            root.GetComponent<RectTransform>(), 100);
         InitPointDetect(targetId, entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity);
     }
     
     /// <summary>
-    /// 更换目标
+    /// 更换目标  如果返回的结果为-1证明目前需要找的对象没有
     /// </summary>
+    /// <param name="entityType"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentOutOfRangeException"></exception>
     public long ReplaceTarget(EntityType entityType)
     {
         switch (entityType)
         {
             case EntityType.HeroEntity:
+                GetFrontRowHeroID();
                 break;
             case EntityType.EnemyEntity:
+                GetSurviveEnemyID();
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
@@ -220,7 +225,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     /// 获取最前排英雄的ID 如果为-1 则为没有英雄存活
     /// </summary>
     /// <returns></returns>
-    public long GetFrontRowHeroID()
+    private long GetFrontRowHeroID()
     {
         var heroList = GetAllHeroEntity();
         var currentMaxIndex = 0;

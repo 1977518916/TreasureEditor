@@ -42,13 +42,18 @@ public class PointDetectComponent : DetectComponent
         targetEntityId = EntitySystem.Instance.ReplaceTarget(targetEntityType);
     }
     
+    public Entity GetTargetEntity()
+    {
+        return targetEntityId == -1 ? null : EntitySystem.Instance.GetEntity(targetEntityId);
+    }
+
     /// <summary>
     /// 是否离目标非常近  离目标非常近就开始攻击并停止移动
     /// </summary>
     /// <returns></returns>
-    private bool IsVeryClose()
+    public bool IsVeryClose()
     {
-        return Vector2.Distance(target.position, thisRectTransform.position) < 1f;
+        return Vector2.Distance(target.position, thisRectTransform.position) < 120f;
     }
     
     /// <summary>

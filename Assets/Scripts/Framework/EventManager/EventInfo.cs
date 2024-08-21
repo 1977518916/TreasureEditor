@@ -68,7 +68,7 @@ namespace Tao_Framework.Core.Event
     /// <summary>
     /// 游戏事件
     /// </summary>
-    public enum  GameEvent
+    public enum GameEvent
     {
         /// <summary>
         /// 普通事件
@@ -179,14 +179,21 @@ namespace Tao_Framework.Core.Event
         /// 技能结束CD
         /// </summary>
         AttackEndCd,
-		/// <summary>
+
+        /// <summary>
         /// 生成敌人
         /// </summary>
         MakeEnemy,
-		/// <summary>
+
+        /// <summary>
         /// 实体死亡事件
         /// </summary>
-        EntityDead
+        EntityDead,
+
+        /// <summary>
+        /// 更换目标
+        /// </summary>
+        ReplaceTarget
     }
 
     public enum UIEvent

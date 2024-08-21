@@ -26,7 +26,7 @@ namespace Runtime.Manager
         {
             if(heroData.bulletType == BulletType.Self)
             {
-                GameObject gameObject = new GameObject();
+                GameObject gameObject = new GameObject("bullet",typeof(RectTransform));
                 gameObject.transform.SetParent(parent);
                 HeroTypeEnum typeEnum = heroData.heroTypeEnum;
                 var bulletEntity = gameObject.AddComponent<BulletEntity>();
@@ -149,6 +149,7 @@ namespace Runtime.Manager
             string p = EffectPath + path;
             SkeletonGraphic skeletonAnimation = LoadSkeletonGraphic(p, parent);
             skeletonAnimation.name = @enum.ToString();
+            skeletonAnimation.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             return skeletonAnimation;
         }
 

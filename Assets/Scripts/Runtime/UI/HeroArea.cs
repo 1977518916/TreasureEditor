@@ -3,6 +3,7 @@ using Runtime.Data;
 using Runtime.Extensions;
 using Runtime.Manager;
 using Runtime.Utils;
+using Spine.Unity;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -34,7 +35,7 @@ namespace Runtime.UI
                 index = int.Parse(name.Replace("hero", ""));
                 positionType = (DataType.HeroPositionType)(index - 1);
                 heroData = ReadWriteManager.Hero.GetHeroData(positionType);
-                DataManager.HeroDatas.Add(positionType,heroData);
+                DataManager.HeroDatas.Add(positionType, heroData);
                 transform.FindGet<TextMeshProUGUI>("info").SetText($"英雄{index}");
                 heroParent = transform.Find("HeroNode");
                 bulletParent = transform.Find("BulletNode");
@@ -79,7 +80,9 @@ namespace Runtime.UI
                         return;
                     }
                     AssetsLoadManager.LoadHero(heroData.heroTypeEnum, heroParent);
-                    AssetsLoadManager.LoadBullet(heroData, bulletParent);
+                    BulletEntity bulletEntity = AssetsLoadManager.LoadBullet(heroData, bulletParent);
+                    SkeletonGraphic skeletonGraphic = bulletEntity.MoveObject.GetComponent<SkeletonGraphic>();
+                    skeletonGraphic.AnimationState.SetAnimation(0, skeletonGraphic.SkeletonData.Animations.Items[0], true);
                 };
 
                 TMP_Dropdown bulletType = transform.FindGet<TMP_Dropdown>("bulletField");

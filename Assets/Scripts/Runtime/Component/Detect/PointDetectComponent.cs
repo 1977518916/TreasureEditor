@@ -9,7 +9,6 @@ public class PointDetectComponent : DetectComponent
     public string TargetTag { get; set; }
     public LayerMask LayerMask { get; set; }
     public DetectRangeType DetectRangeType { get; set; }
-    public IRayComponent IRayComponent { get; set; }
 
     private long targetEntityId;
 
@@ -20,6 +19,11 @@ public class PointDetectComponent : DetectComponent
     private Entity entity;
 
     private EntityType targetEntityType;
+    
+    /// <summary>
+    /// 检测的距离
+    /// </summary>
+    private float distance;
 
     public PointDetectComponent(long entityId, Entity entity, RectTransform transform, EntityType targetEntityType)
     {
@@ -46,14 +50,14 @@ public class PointDetectComponent : DetectComponent
     {
         return targetEntityId == -1 ? null : EntitySystem.Instance.GetEntity(targetEntityId);
     }
-
+    
     /// <summary>
-    /// 是否离目标非常近  离目标非常近就开始攻击并停止移动
+    /// 是否离目标非常近  离目标非常近就开始攻击并停止移动  敌人目前距离是120f
     /// </summary>
     /// <returns></returns>
     public bool IsVeryClose()
     {
-        return Vector2.Distance(target.position, thisRectTransform.position) < 120f;
+        return Vector2.Distance(target.position, thisRectTransform.position) < distance;
     }
     
     /// <summary>

@@ -95,7 +95,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         // 初始化攻击组件
         InitHeroEntityAttack(heroEntity);
         // 初始化检测组件
-        InitDetect(heroEntity, "Enemy", "UI");
+        InitDetect(heroEntity, "Enemy", "UI", hero.GetComponent<RectTransform>());
         // 初始化英雄移动组件
         InitHeroMove(heroEntity);
         // 设置英雄实体模型到对应位置
@@ -123,9 +123,10 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         heroEntity.AllComponentList.Add(attack);
     }
     
-    private void InitDetect(Entity entity, string targetTag, string layerName)
+    private void InitDetect(Entity entity, string targetTag, string layerName, RectTransform rectTransform)
     {
-        var detect = new HostileDetectComponent(targetTag, LayerMask.GetMask(layerName), DetectRangeType.Square, entity);
+        var detect = new HostileDetectComponent(targetTag, LayerMask.GetMask(new[] { layerName }),
+            DetectRangeType.Square, entity, rectTransform);
         entity.AllComponentList.Add(detect);
     }
     

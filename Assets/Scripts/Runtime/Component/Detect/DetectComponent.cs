@@ -19,9 +19,4 @@ public interface DetectComponent : IComponent
     /// 检测范围类型
     /// </summary>
     public DetectRangeType DetectRangeType { get; set; }
-
-    /// <summary>
-    /// 射线检测组件
-    /// </summary>
-    public IRayComponent IRayComponent { get; set; }
 }

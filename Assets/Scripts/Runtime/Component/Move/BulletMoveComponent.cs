@@ -4,9 +4,9 @@ using UnityEngine;
 public class BulletMoveComponent : MoveComponent
 {
     public RectTransform EntityTransform { get; set; }
-
+    
     public float MoveSpeed { get; set; }
-
+    
     public Vector2 MoveDirection { get; set; }
     
     /// <summary>
@@ -15,7 +15,7 @@ public class BulletMoveComponent : MoveComponent
     private readonly BulletMoveType moveType;
     
     public bool ContinueMove { get; set; }
-    
+
     /// <summary>
     /// 子弹移动组件
     /// </summary>
@@ -24,6 +24,7 @@ public class BulletMoveComponent : MoveComponent
         this.EntityTransform = transform;
         this.MoveSpeed = moveSpeed;
         this.MoveDirection = moveDirection;
+        ContinueMove = true;
         this.moveType = moveType;
     }
     
@@ -31,7 +32,7 @@ public class BulletMoveComponent : MoveComponent
     {
         Move(time);
     }
-
+    
     /// <summary>
     /// 移动处理
     /// </summary>

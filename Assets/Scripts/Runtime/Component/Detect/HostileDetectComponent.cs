@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// 敌对检测
+/// 敌对检测   改为距离检测 射线检测作废
 /// </summary>
 public class HostileDetectComponent : DetectComponent
 {
@@ -11,22 +11,19 @@ public class HostileDetectComponent : DetectComponent
     
     public DetectRangeType DetectRangeType { get; set; }
     
-    public IRayComponent IRayComponent { get; set; }
-
     /// <summary>
     /// 英雄实体
     /// </summary>
     private Entity entity;
-
-    public HostileDetectComponent(string targetTag, LayerMask layerMask, DetectRangeType type, Entity entity)
+    
+    public HostileDetectComponent(string targetTag, LayerMask layerMask, DetectRangeType type, Entity entity, RectTransform entityRectTransform)
     {
         TargetTag = targetTag;
         LayerMask = layerMask;
         DetectRangeType = type;
         this.entity = entity;
-        //IRayComponent = new SquareRayComponent();
     }
-
+    
     public void Tick(float time)
     {
         

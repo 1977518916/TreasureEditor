@@ -105,6 +105,11 @@ public class BattleManager : MonoSingleton<BattleManager>
 
     #endregion
 
+    private void Start()
+    {
+        GetComponent<Canvas>().worldCamera = Camera.main;
+    }
+
     private void OnDestroy()
     {
         //DestroyInstance();

@@ -130,7 +130,7 @@ public class EntitySystem : MonoBehaviour
         EnemyEntity entity = root.AddComponent<EnemyEntity>();
         entity.Init();
         var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
-        model.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        model.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
         model.transform.Translate(0, -30, 0, Space.Self);
         InitEntityPosition(entity);
         allEntityDic.Add(entity.EntityId, entity);

@@ -9,7 +9,7 @@ public class EnemyAttackComponent : AttackComponent
     public bool IsInAttackInterval { get; set; }
     public float LastAttackTime { get; set; }
     public float AttackInterval { get; set; }
-
+    
     private EnemyEntity entity;
 
     public EnemyAttackComponent(float attackInterval, EnemyEntity entity)
@@ -26,12 +26,10 @@ public class EnemyAttackComponent : AttackComponent
             IsInAttackInterval = !(LastAttackTime - Time.time >= AttackInterval);
         }
     }
-
+    
     public void Attack(float time, Vector2 point)
     {
-        if (IsInAttackInterval) return;
-        //var bulletEntity = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData());
-        // bulletEntity.AllComponentList.Add(new BulletMoveComponent(entity.GetComponent<RectTransform>(), 1f, point,
-        //     BulletMoveType.SingleTargetMove));
+        if (IsInAttackInterval) return; 
+        AssetsLoadManager.Load<GameObject>("Prefabs/Small_EnemyAttackBox");
     }
 }

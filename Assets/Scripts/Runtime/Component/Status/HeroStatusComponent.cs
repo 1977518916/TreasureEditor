@@ -39,6 +39,11 @@ public class HeroStatusComponent : StatusComponent
     private int maxHpValue;
     
     /// <summary>
+    /// 当前血量数值
+    /// </summary>
+    private int currentHpValue;
+    
+    /// <summary>
     /// 初始化
     /// </summary>
     /// <param name="hpParent"> 血条父对象 </param>
@@ -53,6 +58,8 @@ public class HeroStatusComponent : StatusComponent
         this.hp = hp;
         this.attackCd = attackCd;
         heroEntity = entity;
+        maxHpValue = entity.GetHeroData().hp;
+        currentHpValue = maxHpValue;
         ResetStatus();
         EventMgr.Instance.RegisterEvent<long>(GameEvent.AttackStartCd, WaitAttackCd);
     }
@@ -112,9 +119,11 @@ public class HeroStatusComponent : StatusComponent
     /// <summary>
     /// 受击 血量扣到指定进度
     /// </summary>
-    public void Hit(float value)
+    public void Hit(int value)
     {
-        hp.DOFillAmount(value, 0.25f).onComplete+= () =>
+        currentHpValue -= value;
+        var percentage = (float)currentHpValue / maxHpValue;
+        hp.DOFillAmount(percentage, 0.25f).onComplete += () =>
         {
             if (hp.fillAmount > 0) return;
             EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, heroEntity.EntityId);

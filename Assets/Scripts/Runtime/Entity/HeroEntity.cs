@@ -29,7 +29,12 @@ public class HeroEntity : MonoBehaviour, Entity
     /// <summary>
     /// 攻击位置
     /// </summary>
-    private Transform attackFireLocation;   
+    private RectTransform attackFireLocation;
+    
+    /// <summary>
+    /// 是否存活
+    /// </summary>
+    private bool isSurvive;
     
     /// <summary>
     /// 初始化
@@ -53,7 +58,7 @@ public class HeroEntity : MonoBehaviour, Entity
                 return (T)iComponent;
             }
         }
-
+        
         return default;
     }
     
@@ -76,21 +81,21 @@ public class HeroEntity : MonoBehaviour, Entity
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }
-    
+
     /// <summary>
     /// 初始化英雄
     /// </summary>
     /// <param name="heroData"></param>
     /// <param name="hero"></param>
     /// <param name="fireLocation"> 开火口 </param>
-    public void InitHero(HeroData heroData, GameObject hero, Transform fireLocation)
+    public void InitHero(HeroData heroData, GameObject hero, RectTransform fireLocation)
     {
         data = heroData;
         heroObj = hero;
         attackFireLocation = fireLocation;
         AllComponentList = new List<IComponent>();
     }
-    
+
     /// <summary>
     /// 获取英雄数据
     /// </summary>
@@ -98,6 +103,11 @@ public class HeroEntity : MonoBehaviour, Entity
     public HeroData GetHeroData()
     {
         return data;
+    }
+
+    public bool GetIsSurvive()
+    {
+        return isSurvive;
     }
 
     /// <summary>
@@ -108,7 +118,7 @@ public class HeroEntity : MonoBehaviour, Entity
         BattleManager.Instance.SetPrefabLocation(heroObj, locationIndex);
     }
 
-    public Transform GetFireLocation()
+    public RectTransform GetFireLocation()
     {
         return attackFireLocation;
     }

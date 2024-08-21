@@ -6,9 +6,10 @@ using Runtime.Data;
 using Runtime.Manager;
 using Spine.Unity;
 using Tao_Framework.Core.Event;
+using Tao_Framework.Core.Singleton;
 using UnityEngine;
 
-public class EntitySystem : MonoBehaviour
+public class EntitySystem : MonoSingleton<EntitySystem>
 {
     /// <summary>
     /// 更新帧率  60帧率更新
@@ -57,8 +58,16 @@ public class EntitySystem : MonoBehaviour
     {
         foreach (var component in allEntityDic.Values.SelectMany(entity => entity.AllComponentList))
         {
-            (component as BulletMoveComponent)?.Tick(time);
+            component.Tick(time);
         }
+    }
+
+    /// <summary>
+    /// 获取指定实体
+    /// </summary>
+    public Entity GetEntity(long entityId)
+    {
+        return allEntityDic.GetValueOrDefault(entityId);
     }
 
     /// <summary>
@@ -76,6 +85,7 @@ public class EntitySystem : MonoBehaviour
         var heroModel = AssetsLoadManager.LoadHero(data.heroTypeEnum, hero.GetComponent<RectTransform>());
         heroEntity.Init();
         heroEntity.InitHero(data, heroModel, battleManager.GetFirePoint(indexValue));
+        allEntityDic.Add(heroEntity.EntityId, heroEntity);
         // 获取英雄动画对象
         var heroAnima = heroModel.GetComponent<SkeletonGraphic>();
         // 初始化实体动画组件和动画
@@ -86,6 +96,8 @@ public class EntitySystem : MonoBehaviour
         InitHeroEntityAttack(heroEntity);
         // 初始化检测组件
         InitDetect(heroEntity, "Enemy", "UI");
+        // 初始化英雄移动组件
+        InitHeroMove(heroEntity);
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, indexValue);
     }
@@ -96,7 +108,7 @@ public class EntitySystem : MonoBehaviour
         skeletonGraphic.Initialize(true);
         skeletonGraphic.AnimationState.SetAnimation(0, "Idle", true);
     }
-
+    
     private void InitHeroEntityStatus(HeroEntity heroEntity, int value)
     {
         var heroStatusUI = BattleManager.Instance.GetHeroStatus(value);
@@ -116,6 +128,25 @@ public class EntitySystem : MonoBehaviour
         var detect = new HostileDetectComponent(targetTag, LayerMask.GetMask(layerName), DetectRangeType.Square, entity);
         entity.AllComponentList.Add(detect);
     }
+    
+    private void InitHeroMove(HeroEntity entity)
+    {
+        var move = new HeroMoveComponent(entity.GetComponent<RectTransform>());
+        entity.AllComponentList.Add(move);
+    }
+
+    /// <summary>
+    /// 初始化点检测
+    /// </summary>
+    /// <param name="enemyId"></param>
+    /// <param name="entity"></param>
+    /// <param name="entityTransform"></param>
+    /// <param name="targetEntityType"></param>
+    private void InitPointDetect(long enemyId, Entity entity, RectTransform entityTransform, EntityType targetEntityType)
+    {
+        var detect = new PointDetectComponent(enemyId, entity, entityTransform, targetEntityType);
+        entity.AllComponentList.Add(detect);
+    }
 
     private void InitEntityPosition(EnemyEntity entity)
     {
@@ -124,16 +155,117 @@ public class EntitySystem : MonoBehaviour
             .RandomizePosition(entity.transform as RectTransform);
     }
 
+    private void InitEnemyEntityMove(Entity entity, RectTransform target, RectTransform entityTransform,
+        float moveSpeed)
+    {
+        entity.AllComponentList.Add(new EnemyMoveComponent(target, entityTransform, moveSpeed));
+    }
+
     private void GenerateEntity(LevelManager.EnemyBean enemyBean)
     {
+        var targetId = GetFrontRowHeroID();
         GameObject root = Instantiate(battleManager.HeroRootPrefab, battleManager.EnemyParent);
         EnemyEntity entity = root.AddComponent<EnemyEntity>();
         entity.Init();
+        allEntityDic.Add(entity.EntityId, entity);
         var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
         model.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         model.transform.Translate(0, -30, 0, Space.Self);
         InitEntityPosition(entity);
-        allEntityDic.Add(entity.EntityId, entity);
+        InitEnemyEntityMove(entity, GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform,
+            root.GetComponent<RectTransform>(), 10);
+        InitPointDetect(targetId, entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity);
+    }
+    
+    /// <summary>
+    /// 更换目标
+    /// </summary>
+    public long ReplaceTarget(EntityType entityType)
+    {
+        switch (entityType)
+        {
+            case EntityType.HeroEntity:
+                break;
+            case EntityType.EnemyEntity:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
+        }
+
+        return default;
+    }
+    
+    /// <summary>
+    /// 获取存活英雄的ID
+    /// </summary>
+    /// <returns></returns>
+    public long GetSurviveHeroID()
+    {
+        foreach (var kEntity in allEntityDic)
+        {
+            if (kEntity.Value is HeroEntity && kEntity.Value != null)
+            {
+                var hero = (HeroEntity)kEntity.Value;
+                if (hero.GetIsSurvive())
+                {
+                    return hero.EntityId;
+                }
+            }
+        }
+
+        return default;
+    }
+    
+    /// <summary>
+    /// 获取最前排英雄的ID 如果为-1 则为没有英雄存活
+    /// </summary>
+    /// <returns></returns>
+    public long GetFrontRowHeroID()
+    {
+        var heroList = GetAllHeroEntity();
+        var currentMaxIndex = 0;
+        HeroEntity maxIndexHero = null;
+        foreach (var entity in heroList)
+        {
+            if ((int)entity.GetHeroData().heroTypeEnum > currentMaxIndex)
+            {
+                currentMaxIndex = (int)entity.GetHeroData().heroTypeEnum;
+                maxIndexHero = entity;
+            }
+        }
+
+        return maxIndexHero != null ? maxIndexHero.EntityId : -1;
+    }
+
+    public List<HeroEntity> GetAllHeroEntity()
+    {
+        var heroList = new List<HeroEntity>();
+        foreach (var eValue in allEntityDic.Values)
+        {
+            if (eValue is HeroEntity)
+            {
+                heroList.Add((HeroEntity)eValue);
+            }
+        }
+
+        return heroList;
+    }
+
+    /// <summary>
+    ///  获取存活的敌人的ID
+    /// </summary>
+    /// <returns></returns>
+    public long GetSurviveEnemyID()
+    {
+        foreach (var kEntity in allEntityDic)
+        {
+            if (kEntity.Value is EnemyEntity)
+            {
+                return kEntity.Key;
+            }
+        }
+
+        return default;
     }
 
     private void OnDestroy()

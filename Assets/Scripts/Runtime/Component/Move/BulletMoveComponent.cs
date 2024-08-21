@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BulletMoveComponent : MoveComponent
 {
-    public Transform EntityTransform { get; set; }
+    public RectTransform EntityTransform { get; set; }
 
     public float MoveSpeed { get; set; }
 
@@ -13,11 +13,13 @@ public class BulletMoveComponent : MoveComponent
     /// 移动类型
     /// </summary>
     private readonly BulletMoveType moveType;
-
+    
+    public bool ContinueMove { get; set; }
+    
     /// <summary>
     /// 子弹移动组件
     /// </summary>
-    public BulletMoveComponent(Transform transform, float moveSpeed, Vector2 moveDirection, BulletMoveType moveType)
+    public BulletMoveComponent(RectTransform transform, float moveSpeed, Vector2 moveDirection, BulletMoveType moveType)
     {
         this.EntityTransform = transform;
         this.MoveSpeed = moveSpeed;
@@ -46,12 +48,13 @@ public class BulletMoveComponent : MoveComponent
                 throw new ArgumentOutOfRangeException();
         }
     }
-
+    
     /// <summary>
     /// 单个子弹朝目标放心移动
     /// </summary>
     private void SingleTargetMove(float time)
     {
+        if (!ContinueMove) return;
         EntityTransform.up = MoveDirection;
         EntityTransform.Translate(EntityTransform.up * time * MoveSpeed);
     }

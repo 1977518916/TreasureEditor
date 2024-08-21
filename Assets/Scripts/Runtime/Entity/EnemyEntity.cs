@@ -9,7 +9,7 @@ public class EnemyEntity : MonoBehaviour, Entity
 {
     public long EntityId { get; set; }
     public List<IComponent> AllComponentList { get; set; }
-
+    
     public void Init()
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
@@ -33,7 +33,7 @@ public class EnemyEntity : MonoBehaviour, Entity
 
         return default;
     }
-
+    
     /// <summary>
     /// 检测是否是指定组件
     /// </summary>

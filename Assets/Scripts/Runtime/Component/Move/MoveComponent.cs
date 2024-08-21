@@ -8,7 +8,7 @@ public interface MoveComponent : IComponent
     /// <summary>
     /// 实体移动组件
     /// </summary>
-    public Transform EntityTransform { get; set; }
+    public RectTransform EntityTransform { get; set; }
 
     /// <summary>
     /// 移动速度
@@ -24,4 +24,9 @@ public interface MoveComponent : IComponent
     /// 移动函数
     /// </summary>
     public void Move(float time);
+    
+    /// <summary>
+    /// 是否继续移动
+    /// </summary>
+    public bool ContinueMove { get; set; }
 }

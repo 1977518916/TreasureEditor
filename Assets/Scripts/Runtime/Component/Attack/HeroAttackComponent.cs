@@ -82,6 +82,7 @@ public class HeroAttackComponent : AttackComponent
     public void Attack(float time, Vector2 point)
     {
         if (isInAttackCd) return;
+        if (IsInAttackInterval) return;
         // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
         var bulletEntity = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData());
         bulletEntity.AllComponentList.Add(new BulletMoveComponent(heroEntity.GetFireLocation(), 1f, point,

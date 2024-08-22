@@ -28,7 +28,7 @@ public class HeroStateMachineComponent : StateMachineComponent
         StateConvertDic = stateConvertDic;
         AllStateDic = allStateDic;
     }
-
+    
     public void ChangeState(StateType changeState)
     {
         QuitState();

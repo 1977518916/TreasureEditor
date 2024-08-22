@@ -204,6 +204,22 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         hitState.Init(animationComponent);
         deadState.Init(animationComponent);
         idleState.Init(animationComponent);
+        var stateConvertDic = new Dictionary<StateType, List<StateType>>
+        {
+            { StateType.Idle, new List<StateType> { StateType.Attack, StateType.Hit, StateType.Dead } },
+            { StateType.Run, new List<StateType> { StateType.Attack, StateType.Hit } },
+            { StateType.Attack, new List<StateType> { StateType.Idle, StateType.Dead } },
+            { StateType.Hit, new List<StateType> { StateType.Idle, StateType.Dead } }
+        };
+        var allState = new Dictionary<StateType, IState>
+        {
+            { StateType.Idle, idleState },
+            { StateType.Run, moveState },
+            { StateType.Attack, attackState },
+            { StateType.Hit, hitState },
+            { StateType.Dead, deadState }
+        };
+        stateMachine.Init(entity, moveState, stateConvertDic, allState);
         entity.AllComponentList.Add(stateMachine);
     }
 

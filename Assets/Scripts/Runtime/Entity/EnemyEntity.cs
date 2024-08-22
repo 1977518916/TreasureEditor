@@ -25,7 +25,7 @@ public class EnemyEntity : MonoBehaviour, Entity
             iComponent.Release();
         }
 
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
     
     /// <summary>
@@ -65,6 +65,7 @@ public class EnemyEntity : MonoBehaviour, Entity
             ComponentType.RandomPositionComponent => component is RandomPositionComponent,
             ComponentType.AnimationComponent => component is AnimationComponent,
             ComponentType.StateMachineComponent => component is StateMachineComponent,
+            ComponentType.DeadComponent => component is DeadComponent,
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }

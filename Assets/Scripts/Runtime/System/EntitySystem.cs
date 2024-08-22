@@ -221,7 +221,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         var stateConvertDic = new Dictionary<StateType, List<StateType>>
         {
             { StateType.Idle, new List<StateType> { StateType.Attack, StateType.Hit, StateType.Dead } },
-            { StateType.Run, new List<StateType> { StateType.Attack, StateType.Hit } },
+            { StateType.Run, new List<StateType> { StateType.Attack, StateType.Hit, StateType.Dead } },
             { StateType.Attack, new List<StateType> { StateType.Idle, StateType.Dead } },
             { StateType.Hit, new List<StateType> { StateType.Idle, StateType.Dead } }
         };

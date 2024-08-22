@@ -15,7 +15,15 @@ public class DeadState : IState
     {
         AnimationComponent.ChangeAnima(StateType.Dead, false, () =>
         {
-            stateMachineComponent.Entity.GetSpecifyComponent<DeadComponent>(ComponentType.DeadComponent).Dead();
+            if (stateMachineComponent.Entity is HeroEntity) 
+            {
+                stateMachineComponent.Entity.GetSpecifyComponent<HeroDeadComponent>(ComponentType.DeadComponent).Dead();
+            }
+            
+            if (stateMachineComponent.Entity is EnemyEntity)
+            {
+                stateMachineComponent.Entity.GetSpecifyComponent<EnemyDeadComponent>(ComponentType.DeadComponent).Dead();
+            }
             Debug.Log($"死亡动画结束");
         });
     }

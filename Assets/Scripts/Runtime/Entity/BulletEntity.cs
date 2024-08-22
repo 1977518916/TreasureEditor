@@ -80,7 +80,7 @@ public class BulletEntity : MonoBehaviour, Entity
 
         return default;
     }
-
+    
     public bool IsSpecifyComponent(IComponent component, ComponentType componentType)
     {
         return componentType switch
@@ -92,6 +92,7 @@ public class BulletEntity : MonoBehaviour, Entity
             ComponentType.DetectComponent => component is DetectComponent,
             ComponentType.AnimationComponent => component is AnimationComponent,
             ComponentType.StateMachineComponent => component is StateMachineComponent,
+            ComponentType.DeadComponent => component is DeadComponent,
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }
@@ -126,6 +127,7 @@ public class BulletEntity : MonoBehaviour, Entity
             default:
                 throw new ArgumentOutOfRangeException();
         }
+
         currentTriggerCount++;
         if (currentTriggerCount == triggerDeadCount)
         {

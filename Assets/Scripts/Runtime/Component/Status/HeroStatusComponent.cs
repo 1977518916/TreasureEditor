@@ -71,7 +71,7 @@ public class HeroStatusComponent : StatusComponent
 
     public void Release()
     {
-        
+        EventMgr.Instance.RemoveEvent(GameEvent.AttackStartCd);
     }
 
     /// <summary>

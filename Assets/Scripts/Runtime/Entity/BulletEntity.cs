@@ -166,7 +166,7 @@ public class BulletEntity : MonoBehaviour, Entity
     {
         return entity is HeroEntity;
     }
-
+    
     /// <summary>
     /// 是否是敌人实体
     /// </summary>

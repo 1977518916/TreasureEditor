@@ -80,9 +80,7 @@ namespace Runtime.UI
                         return;
                     }
                     AssetsLoadManager.LoadHero(heroData.heroTypeEnum, heroParent);
-                    BulletEntity bulletEntity = AssetsLoadManager.LoadBullet(heroData, bulletParent);
-                    SkeletonGraphic skeletonGraphic = bulletEntity.MoveObject.GetComponent<SkeletonGraphic>();
-                    skeletonGraphic.AnimationState.SetAnimation(0, skeletonGraphic.SkeletonData.Animations.Items[0], true);
+                    AssetsLoadManager.LoadBullet(heroData, bulletParent);
                 };
 
                 TMP_Dropdown bulletType = transform.FindGet<TMP_Dropdown>("bulletField");

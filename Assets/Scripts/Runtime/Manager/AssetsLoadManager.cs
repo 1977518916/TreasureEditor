@@ -122,6 +122,8 @@ namespace Runtime.Manager
                 bulletEntity.transform.localScale = Vector3.one;
                 bulletEntity.transform.localPosition = Vector3.zero;
                 bulletEntity.MoveObject.transform.eulerAngles = new Vector3(0, 0, -90);
+                SkeletonGraphic skeletonGraphic = bulletEntity.MoveObject.GetComponent<SkeletonGraphic>();
+                skeletonGraphic.AnimationState.SetAnimation(0, skeletonGraphic.SkeletonData.Animations.Items[0], true);
                 bulletEntity.Init();
                 return bulletEntity;
             }

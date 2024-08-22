@@ -34,4 +34,9 @@ public enum ComponentType
     /// 随机位置组件
     /// </summary>
     RandomPositionComponent,
+    
+    /// <summary>
+    /// 状态机组件
+    /// </summary>
+    StateMachineComponent,
 }

@@ -6,57 +6,32 @@ using System.Linq;
 /// </summary>
 public class EnemyStateMachineComponent : StateMachineComponent
 {
-    public IState CurrentState { get; set; }
-    
-    public IState LastState { get; set; }
-    
-    public List<StateConvert> StateConvertList { get; set; }
-    
-    /// <summary>
-    /// 敌人实体
-    /// </summary>
-    private EnemyEntity enemyEntity;
-    
-    /// <summary>
-    /// 动画组件
-    /// </summary>
-    private AnimationComponent animationComponent;
-    
-    public void Init(Entity entity, IState initState, List<StateConvert> stateConverts)
-    {
-        this.enemyEntity = (EnemyEntity)entity;
-        animationComponent = entity.GetSpecifyComponent<AnimationComponent>(ComponentType.AnimationComponent);
-        CurrentState = initState;
-        StateConvertList = stateConverts;
-        CurrentState.Init(animationComponent);
-    }
-    
-    public void ChangeState(IState changeState)
-    {
-        LastState = CurrentState;
-        CurrentState = changeState;
-        CurrentState.Init(animationComponent);
-        CurrentState.Enter();
-    }
-    
-    public void TryChangeState(IState changeState)
-    {
-        foreach (var stateConvert in from stateConvert in StateConvertList
-                 where stateConvert.CurrentState == CurrentState.StateType
-                 from state in stateConvert.ChangeState.Where(state => state.StateType == changeState.StateType)
-                 select stateConvert)
-        {
-            ChangeState(changeState);
-        }
-    }
-    
     public void Tick(float time)
     {
-        CurrentState.Tick();
+        throw new System.NotImplementedException();
     }
 
     public void Release()
     {
-        
+        throw new System.NotImplementedException();
+    }
+
+    public StateType CurrentState { get; set; }
+    public StateType LastState { get; set; }
+    public Dictionary<StateType, List<StateType>> StateConvertDic { get; set; }
+    public Dictionary<StateType, IState> AllStateDic { get; set; }
+    public void Init(Entity entity, IState initState, Dictionary<StateType, List<StateType>> stateConvertDic, Dictionary<StateType, IState> allStateDic)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void ChangeState(StateType changeState)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void TryChangeState(StateType changeState)
+    {
+        throw new System.NotImplementedException();
     }
 }

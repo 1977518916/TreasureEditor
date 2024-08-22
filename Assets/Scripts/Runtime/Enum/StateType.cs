@@ -3,6 +3,8 @@
 /// </summary>
 public enum StateType
 {
+    None = -1,
+
     /// <summary>
     /// 待机
     /// </summary>

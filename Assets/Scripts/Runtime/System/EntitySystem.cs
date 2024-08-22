@@ -167,22 +167,6 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         attackState.Init(animationComponent);
         hitState.Init(animationComponent);
         deadState.Init(animationComponent);
-        var stateConvert = new List<StateConvert>
-        {
-            new()
-            {
-                CurrentState = StateType.Idle, ChangeState = new List<IState> { attackState, hitState, deadState }
-            },
-            new()
-            {
-                CurrentState = StateType.Attack, ChangeState = new List<IState> { idleState, hitState, deadState }
-            },
-            new()
-            {
-                CurrentState = StateType.Hit, ChangeState = new List<IState> { idleState, deadState }
-            }
-        };
-        stateMachine.Init(entity, idleState, stateConvert);
     }
     
     private void InitEntityPosition(EnemyEntity entity)

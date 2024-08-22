@@ -6,51 +6,46 @@ using System.Linq;
 /// </summary>
 public class HeroStateMachineComponent : StateMachineComponent
 {
-    public IState CurrentState { get; set; }
-    
-    public IState LastState { get; set; }
-    
-    public List<StateConvert> StateConvertList { get; set; }
-
     private HeroEntity heroEntity;
 
     private AnimationComponent animationComponent;
-    
-    public void Init(Entity entity, IState initState, List<StateConvert> stateConverts)
+
+    private IState currentState;
+
+    public StateType CurrentState { get; set; }
+    public StateType LastState { get; set; }
+    public Dictionary<StateType, List<StateType>> StateConvertDic { get; set; }
+    public Dictionary<StateType, IState> AllStateDic { get; set; }
+
+    public void Init(Entity entity, IState initState, Dictionary<StateType, List<StateType>> stateConvertDic,
+        Dictionary<StateType, IState> allStateDic)
     {
         heroEntity = (HeroEntity)entity;
         animationComponent = heroEntity.GetSpecifyComponent<AnimationComponent>(ComponentType.AnimationComponent);
-        CurrentState = initState;
-        StateConvertList = stateConverts;
-        CurrentState.Init(animationComponent);
+        currentState = initState;
+        CurrentState = initState.StateType;
+        LastState = StateType.None;
+        StateConvertDic = stateConvertDic;
+        AllStateDic = allStateDic;
     }
-    
-    public void ChangeState(IState changeState)
+
+    public void ChangeState(StateType changeState)
     {
-        LastState = CurrentState;
-        CurrentState = changeState;
-        CurrentState.Init(animationComponent);
-        CurrentState.Enter();
+
     }
-    
-    public void TryChangeState(IState changeState)
+
+    public void TryChangeState(StateType changeState)
     {
-        foreach (var stateConvert in from stateConvert in StateConvertList
-                 where stateConvert.CurrentState == CurrentState.StateType
-                 from state in stateConvert.ChangeState.Where(state => state.StateType == changeState.StateType)
-                 select stateConvert)
-        {
-            ChangeState(changeState);
-        }
+
     }
     
     public void Tick(float time)
     {
-        CurrentState.Tick();
+        currentState.Tick();
     }
 
     public void Release()
     {
-        
+
     }
 }

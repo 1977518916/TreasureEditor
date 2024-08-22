@@ -103,6 +103,8 @@ public class HeroAttackComponent : AttackComponent
         if (isInAttackCd) return;
         if (IsInAttackInterval) return;
         // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
+        heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
+            .TryChangeState(StateType.Attack);
         var bulletEntity = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData());
         bulletEntity.GetComponent<RectTransform>().parent = BattleManager.Instance.GetBulletParent();
         bulletEntity.GetComponent<RectTransform>().position = heroEntity.GetFireLocation().position;

@@ -8,12 +8,12 @@ public class EnemyStateMachineComponent : StateMachineComponent
 {
     public void Tick(float time)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void Release()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public StateType CurrentState { get; set; }

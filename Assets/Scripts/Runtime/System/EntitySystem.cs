@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using Runtime.Component.Position;
@@ -22,10 +23,10 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     private float currentTime;
 
     /// <summary>
-    /// 所有实体
+    /// 实体字典  ID对应对象
     /// </summary>
-    private readonly Dictionary<long, Entity> allEntityDic = new Dictionary<long, Entity>();
-
+    private readonly ConcurrentDictionary<long, Entity> allEntityDic = new ConcurrentDictionary<long, Entity>();
+    
     /// <summary>
     /// 战斗管理
     /// </summary>
@@ -56,9 +57,12 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     /// </summary>
     private void EntityUpdate(float time)
     {
-        foreach (var component in allEntityDic.Values.SelectMany(entity => entity.AllComponentList))
+        foreach (var entity in allEntityDic.Values)
         {
-            component.Tick(time);
+            foreach (var iComponent in entity.AllComponentList)
+            {
+                iComponent.Tick(time);
+            }
         }
     }
 
@@ -85,7 +89,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         var heroModel = AssetsLoadManager.LoadHero(data.heroTypeEnum, hero.GetComponent<RectTransform>());
         heroEntity.Init();
         heroEntity.InitHero(data, heroModel, battleManager.GetFirePoint(indexValue));
-        allEntityDic.Add(heroEntity.EntityId, heroEntity);
+        AddEntity(heroEntity.EntityId, heroEntity);
         // 获取英雄动画对象
         var heroAnima = heroModel.GetComponent<SkeletonGraphic>();
         // 初始化实体动画组件和动画
@@ -95,7 +99,8 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         // 初始化检测组件
         InitPointDetect(heroEntity, hero.GetComponent<RectTransform>(), EntityType.EnemyEntity, 1000f);
         // 初始化攻击组件
-        InitHeroEntityAttack(heroEntity, heroEntity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent));
+        InitHeroEntityAttack(heroEntity,
+            heroEntity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent));
         // 初始化英雄移动组件
         InitHeroMove(heroEntity);
         // 初始化英雄状态机组件 和 动画组件
@@ -103,14 +108,14 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, indexValue);
     }
-    
+
     private void InitEntityAnima(SkeletonGraphic skeletonGraphic)
     {
         skeletonGraphic.initialFlipX = true;
         skeletonGraphic.Initialize(true);
         skeletonGraphic.AnimationState.SetAnimation(0, "Idle", true);
     }
-    
+
     private void InitHeroEntityStatus(HeroEntity heroEntity, int value)
     {
         var heroStatusUI = BattleManager.Instance.GetHeroStatus(value);
@@ -119,7 +124,8 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         heroEntity.AllComponentList.Add(status);
     }
 
-    private AnimationComponent InitHeroEntityAnimation(long entityId, SkeletonGraphic skeletonGraphic, HeroEntity heroEntity)
+    private AnimationComponent InitHeroEntityAnimation(long entityId, SkeletonGraphic skeletonGraphic,
+        HeroEntity heroEntity)
     {
         var anima = new HeroAnimationComponent(entityId, skeletonGraphic);
         heroEntity.AllComponentList.Add(anima);
@@ -139,12 +145,13 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     /// <param name="entityTransform"></param>
     /// <param name="targetEntityType"></param>
     /// <param name="distance"></param>
-    private void InitPointDetect(Entity entity, RectTransform entityTransform, EntityType targetEntityType, float distance)
+    private void InitPointDetect(Entity entity, RectTransform entityTransform, EntityType targetEntityType,
+        float distance)
     {
         var detect = new PointDetectComponent(entity, entityTransform, targetEntityType, distance);
         entity.AllComponentList.Add(detect);
     }
-    
+
     private void InitHeroMove(HeroEntity entity)
     {
         var move = new HeroMoveComponent(entity.GetComponent<RectTransform>());
@@ -167,9 +174,24 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         attackState.Init(animationComponent);
         hitState.Init(animationComponent);
         deadState.Init(animationComponent);
+        var stateConvertDic = new Dictionary<StateType, List<StateType>>
+        {
+            { StateType.Idle, new List<StateType> { StateType.Attack, StateType.Hit, StateType.Dead } },
+            { StateType.Attack, new List<StateType> { StateType.Idle, StateType.Dead } },
+            { StateType.Hit, new List<StateType> { StateType.Idle, StateType.Dead } }
+        };
+        var allState = new Dictionary<StateType, IState>
+        {
+            { StateType.Idle, idleState },
+            { StateType.Attack, attackState },
+            { StateType.Hit, hitState },
+            { StateType.Dead, deadState }
+        };
+        stateMachine.Init(entity, idleState, stateConvertDic, allState);
+        entity.AllComponentList.Add(stateMachine);
     }
 
-    private void InitEnemyState(EnemyEntity entity, AnimationComponent animationComponent)   
+    private void InitEnemyState(EnemyEntity entity, AnimationComponent animationComponent)
     {
         var stateMachine = new EnemyStateMachineComponent();
         var attackState = new AttackState();
@@ -182,29 +204,11 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         hitState.Init(animationComponent);
         deadState.Init(animationComponent);
         idleState.Init(animationComponent);
-        var stateConvert = new List<StateConvert>
-        {
-            new StateConvert
-            {
-                CurrentState = StateType.Idle, ChangeState = new List<IState> { attackState, hitState, deadState }
-            },
-            new StateConvert
-            {
-                CurrentState = StateType.Attack, ChangeState = new List<IState> { idleState, hitState, deadState }
-            },
-            new StateConvert
-            {
-                CurrentState = StateType.Hit, ChangeState = new List<IState> { idleState, deadState }
-            },
-            new StateConvert
-            {
-                CurrentState = StateType.Run, ChangeState = new List<IState> { idleState, deadState, attackState }
-            },
-        };
-        stateMachine.Init(entity, moveState, stateConvert);
+        entity.AllComponentList.Add(stateMachine);
     }
-    
-    private AnimationComponent InitEnemyEntityAnimation(long entityId, SkeletonGraphic skeletonGraphic, EnemyEntity entity)
+
+    private AnimationComponent InitEnemyEntityAnimation(long entityId, SkeletonGraphic skeletonGraphic,
+        EnemyEntity entity)
     {
         var anima = new EnemyAnimationComponent(entityId, skeletonGraphic);
         entity.AllComponentList.Add(anima);
@@ -230,7 +234,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         GameObject root = Instantiate(battleManager.HeroRootPrefab, battleManager.EnemyParent);
         EnemyEntity entity = root.AddComponent<EnemyEntity>();
         entity.Init();
-        allEntityDic.Add(entity.EntityId, entity);
+        AddEntity(entity.EntityId, entity);
         var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
         var anim = model.GetComponent<SkeletonGraphic>();
 
@@ -239,14 +243,15 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         // 初始化敌人位置
         InitEntityPosition(entity);
         // 初始化敌人移动
-        InitEnemyEntityMove(entity, GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform,
+        InitEnemyEntityMove(entity,
+            GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform,
             root.GetComponent<RectTransform>(), 100);
         // 初始化敌人检测
-        InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity,120f);
+        InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 120f);
         // 初始化敌人状态机组件 和 动画组件
-        InitEnemyState(entity,InitEnemyEntityAnimation(entity.EntityId,anim,entity));
+        InitEnemyState(entity, InitEnemyEntityAnimation(entity.EntityId, anim, entity));
         //初始化敌人攻击
-        entity.AllComponentList.Add(new EnemyAttackComponent(1,entity));
+        entity.AllComponentList.Add(new EnemyAttackComponent(1, entity));
         //初始化敌人状态
         entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp));
     }
@@ -273,7 +278,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
         return default;
     }
-    
+
     /// <summary>
     /// 获取存活英雄的ID
     /// </summary>
@@ -294,7 +299,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
         return -1;
     }
-    
+
     /// <summary>
     /// 获取最前排英雄的ID 如果为-1 则为没有英雄存活
     /// </summary>
@@ -319,17 +324,17 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     public List<HeroEntity> GetAllHeroEntity()
     {
         var heroList = new List<HeroEntity>();
-        foreach (var eValue in allEntityDic.Values)
+        foreach (var entity in allEntityDic.Values) 
         {
-            if (eValue is HeroEntity)
+            if (entity is HeroEntity)
             {
-                heroList.Add((HeroEntity)eValue);
+                heroList.Add((HeroEntity)entity);
             }
         }
 
         return heroList;
     }
-    
+
     /// <summary>
     /// 获取实体类型
     /// </summary>
@@ -364,9 +369,9 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     /// <param name="entity"></param>
     public void AddEntity(long entityId, Entity entity)
     {
-        allEntityDic.Add(entityId, entity);
+        allEntityDic.GetOrAdd(entityId, entity);
     }
-
+    
     /// <summary>
     /// 获取目标类型是否有存活的敌人
     /// </summary>
@@ -393,11 +398,12 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
     private void OnDestroy()
     {
-        foreach (var e in allEntityDic.Values)
+        foreach (var entity in allEntityDic.Values) 
         {
-            e.Release();
+            entity.Release();
         }
-
+        
+        allEntityDic.Clear();
         EventMgr.Instance.RemoveEvent(GameEvent.MakeEnemy);
     }
 }

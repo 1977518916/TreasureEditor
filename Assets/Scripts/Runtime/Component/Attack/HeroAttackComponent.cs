@@ -111,7 +111,7 @@ public class HeroAttackComponent : AttackComponent
         bulletEntity.GetComponent<RectTransform>().position = heroEntity.GetFireLocation().position;
         bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), 150f,
             point, BulletMoveType.SingleTargetMove));
-        bulletEntity.InitBullet(EntityType.EnemyEntity, heroEntity.GetHeroData().atk);
+        bulletEntity.InitBullet(EntityType.EnemyEntity, heroEntity.GetHeroData().atk, 2);
         EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
         LastAttackTime = Time.time;
         IsInAttackInterval = true;

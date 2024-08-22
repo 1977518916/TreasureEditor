@@ -30,6 +30,7 @@ public class EnemyStateMachineComponent : StateMachineComponent
         LastState = StateType.None;
         StateConvertDic = stateConvertDic;
         AllStateDic = allStateDic;
+        EnterState(initState);
     }
 
     public void ChangeState(StateType changeState)

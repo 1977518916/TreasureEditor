@@ -81,8 +81,13 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     /// <param name="data"> 数据 </param>
     private void GenerateEntity(DataType.HeroPositionType type, HeroData data)
     {
-        if (data.heroTypeEnum == HeroTypeEnum.Null) return;
         var indexValue = Convert.ToInt32(type);
+        if (data.heroTypeEnum == HeroTypeEnum.Null)
+        {
+            InitNullHeroStatus(indexValue);
+            return;
+        }
+        
         // 生成英雄实体
         var hero = Instantiate(battleManager.HeroAndEnemyRootPrefab, battleManager.HeroParent);
         hero.tag = "Hero";
@@ -100,7 +105,8 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         // 初始化检测组件
         InitPointDetect(heroEntity, hero.GetComponent<RectTransform>(), EntityType.EnemyEntity, 1500f);
         // 初始化攻击组件
-        InitHeroEntityAttack(heroEntity, heroEntity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent));
+        InitHeroEntityAttack(heroEntity,
+            heroEntity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent));
         // 初始化英雄移动组件
         InitHeroMove(heroEntity);
         // 初始化英雄状态机组件 和 动画组件
@@ -109,6 +115,13 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         InitHeroDead(heroEntity.EntityId, heroEntity);
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, indexValue);
+    }
+
+    private void InitNullHeroStatus(int value)
+    {
+        var heroStatusUI = BattleManager.Instance.GetHeroStatus(value);
+        heroStatusUI.HpBg.SetActive(false);
+        heroStatusUI.CdBg.SetActive(false);
     }
 
     private void InitEntityAnima(SkeletonGraphic skeletonGraphic)
@@ -283,7 +296,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         // 初始化敌人死亡组件
         InitEnemyDead(entity.EntityId, entity);
         //初始化敌人攻击
-        entity.AllComponentList.Add(new EnemyAttackComponent(1, entity));
+        entity.AllComponentList.Add(new EnemyAttackComponent(1, enemyBean.EnemyData.atk, entity));
         //初始化敌人状态
         entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp, entity));
     }

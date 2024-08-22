@@ -12,10 +12,13 @@ public class EnemyAttackComponent : AttackComponent
     
     private EnemyEntity entity;
 
-    public EnemyAttackComponent(float attackInterval, EnemyEntity entity)
+    private readonly int hurt;
+
+    public EnemyAttackComponent(float attackInterval, int hurt, EnemyEntity entity)
     {
         AttackInterval = attackInterval;
         this.entity = entity;
+        this.hurt = hurt;
     }
 
     public void Tick(float time)
@@ -34,7 +37,10 @@ public class EnemyAttackComponent : AttackComponent
 
     public void Attack(float time, Vector2 point)
     {
-        if (IsInAttackInterval) return; 
-        AssetsLoadManager.Load<GameObject>("Prefabs/Small_EnemyAttackBox");
+        if (IsInAttackInterval) return;
+        var bullet = AssetsLoadManager.Load<GameObject>("Prefabs/Small_EnemyAttackBox");
+        var bulletEnemy = bullet.AddComponent<BulletEntity>();
+        bulletEnemy.Init();
+        bulletEnemy.InitBullet(EntityType.BulletEnemy, hurt, 1);
     }
 }

@@ -50,11 +50,13 @@ public class BulletEntity : MonoBehaviour, Entity
     /// <summary>
     /// 初始化子弹
     /// </summary>
-    public void InitBullet(EntityType entityType, int hurt, int triggerCount)
+    public void InitBullet(EntityType targetType, int hurt, int triggerCount, RectTransform bulletPos, RectTransform parent)
     {
         bulletHurt = hurt;
-        targetEntityType = entityType;
+        targetEntityType = targetType;
         triggerDeadCount = triggerCount;
+        GetComponent<RectTransform>().parent = parent;
+        GetComponent<RectTransform>().position = bulletPos.position;
         GenerateAttackBox();
     }
 
@@ -65,6 +67,7 @@ public class BulletEntity : MonoBehaviour, Entity
             iComponent.Release();
         }
 
+        AllComponentList.Clear();
         Destroy(this.gameObject);
     }
 
@@ -102,8 +105,8 @@ public class BulletEntity : MonoBehaviour, Entity
     /// </summary>
     private void GenerateAttackBox()
     {
+        if (targetEntityType == EntityType.HeroEntity) return;
         var box = gameObject.AddComponent<BoxCollider2D>();
-        var size = transform.GetChild(0).GetComponent<RectTransform>().rect.size;
         box.isTrigger = true;
         box.size = new Vector2(50f, 50f);
     }

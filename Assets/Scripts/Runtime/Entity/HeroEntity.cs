@@ -39,6 +39,11 @@ public class HeroEntity : MonoBehaviour, Entity
     private bool isSurvive;
     
     /// <summary>
+    /// 位置索引
+    /// </summary>
+    private int locationIndex;
+    
+    /// <summary>
     /// 初始化
     /// </summary>
     public void Init()
@@ -49,12 +54,11 @@ public class HeroEntity : MonoBehaviour, Entity
 
     public void Release()
     {
+        GetComponent<Collider2D>().enabled = false;
         foreach (var iComponent in AllComponentList)
         {
             iComponent.Release();
         }
-
-        Destroy(this.gameObject);
     }
 
     /// <summary>
@@ -104,12 +108,24 @@ public class HeroEntity : MonoBehaviour, Entity
     /// <param name="heroData"></param>
     /// <param name="hero"></param>
     /// <param name="fireLocation"> 开火口 </param>
-    public void InitHero(HeroData heroData, GameObject hero, RectTransform fireLocation)
+    /// <param name="index"></param>
+    public void InitHero(HeroData heroData, GameObject hero, RectTransform fireLocation, int index)
     {
+        this.locationIndex = index;
         data = heroData;
         heroObj = hero;
+        isSurvive = true;
         attackFireLocation = fireLocation;
         AllComponentList = new List<IComponent>();
+    }
+    
+    /// <summary>
+    /// 获取位置索引
+    /// </summary>
+    /// <returns></returns>
+    public int GetLocationIndex()
+    {
+        return locationIndex;
     }
 
     /// <summary>
@@ -125,7 +141,12 @@ public class HeroEntity : MonoBehaviour, Entity
     {
         return isSurvive;
     }
-    
+
+    public void UpdateSurvive(bool survive)
+    {
+        isSurvive = survive;
+    }
+
     public RectTransform GetFireLocation()
     {
         return attackFireLocation;

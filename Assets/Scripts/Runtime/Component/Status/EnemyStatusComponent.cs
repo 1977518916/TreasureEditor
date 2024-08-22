@@ -45,6 +45,9 @@ public class EnemyStatusComponent : StatusComponent
     /// </summary>
     public void Hit(int value)
     {
+        BattleManager.Instance.GenerateHurtProstitute(
+            entity.GetSpecifyComponent<EnemyMoveComponent>(ComponentType.MoveComponent).EntityTransform.position,
+            value, 3f);
         hpValue -= value;
         if (hpValue > 0)
         {

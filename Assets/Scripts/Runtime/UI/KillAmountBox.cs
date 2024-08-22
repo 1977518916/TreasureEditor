@@ -21,6 +21,11 @@ namespace Runtime.UI
             EventMgr.Instance.RegisterEvent<long>(GameEvent.EntityDead,UpdateAmount);
         }
 
+        private void OnDisable()
+        {
+            EventMgr.Instance.RemoveEvent(GameEvent.EntityDead);
+        }
+
         private void UpdateAmount(long entityId)
         {
             if (entitySystem.GetEntityType(entityId) != EntityType.EnemyEntity) return;

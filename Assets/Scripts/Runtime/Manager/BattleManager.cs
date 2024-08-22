@@ -48,6 +48,11 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// </summary>
     public RectTransform BulletParent;
     
+    /// <summary>
+    /// 伤害飘字父节点
+    /// </summary>
+    public RectTransform HurtProstituteParent;
+    
     #region Command
 
     /// <summary>
@@ -118,6 +123,14 @@ public class BattleManager : MonoSingleton<BattleManager>
     private void Start()
     {
         GetComponent<Canvas>().worldCamera = Camera.main;
+    }
+
+    public void GenerateHurtProstitute(Vector2 location, int hurt, float surviveTime)
+    {
+        var hurtProstitutePrefab = AssetsLoadManager.Load<GameObject>("Prefabs/HurtProstitute");
+        var hurtProstitute = Instantiate(hurtProstitutePrefab);
+        hurtProstitute.GetComponent<RectTransform>().parent = HurtProstituteParent;
+        hurtProstitute.GetComponent<HurtProstitute>().SetData(location, hurt, surviveTime);
     }
 
     private void OnDestroy()

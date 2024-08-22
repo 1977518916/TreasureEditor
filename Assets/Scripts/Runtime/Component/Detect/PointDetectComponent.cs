@@ -37,14 +37,14 @@ public class PointDetectComponent : DetectComponent
 
     public void Tick(float time)
     {
-        if (EntitySystem.Instance.GetTargetTypeSurviveEntity(targetEntityType))
+        if (EntitySystem.Instance.GetTargetTypeSurviveEntity(targetEntityType) && target == null) 
         {
             switch (targetEntityType)
             {
                 case EntityType.None:
                     break;
                 case EntityType.HeroEntity:
-                    targetEntityId = EntitySystem.Instance.GetSurviveHeroID();
+                    targetEntityId = EntitySystem.Instance.GetFrontRowHeroID();
                     break;
                 case EntityType.EnemyEntity:
                     targetEntityId = EntitySystem.Instance.GetSurviveEnemyID();

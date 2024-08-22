@@ -121,21 +121,31 @@ public class HeroStatusComponent : StatusComponent
             EventMgr.Instance.TriggerEvent(GameEvent.AttackEndCd, heroEntity.EntityId);
         };
     }
-    
+
     /// <summary>
     /// 受击 血量扣到指定进度
     /// </summary>
     public void Hit(int value)
     {
+        BattleManager.Instance.GenerateHurtProstitute(
+            heroEntity.GetSpecifyComponent<HeroMoveComponent>(ComponentType.MoveComponent).EntityTransform.position,
+            value, 3f);
         currentHpValue -= value;
         var percentage = (float)currentHpValue / maxHpValue;
-        hp.DOFillAmount(percentage, 0.25f).onComplete += () =>
+        if (currentHpValue >= 0)
         {
-            if (hp.fillAmount > 0) return;
-            EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, heroEntity.EntityId);
-        };
+            heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
+                .TryChangeState(StateType.Hit);
+        }
+        
+        hp.DOFillAmount(percentage, 0.25f);
+        if (currentHpValue > 0) return;
+        heroEntity.UpdateSurvive(false);
+        heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
+            .TryChangeState(StateType.Dead);
+        EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, heroEntity.EntityId);
     }
-    
+
     /// <summary>
     /// 重置状态
     /// </summary>

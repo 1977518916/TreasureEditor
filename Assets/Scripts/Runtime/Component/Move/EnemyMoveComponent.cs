@@ -46,9 +46,9 @@ public class EnemyMoveComponent : MoveComponent
     
     public void Release()
     {
-        
+        EventMgr.Instance.RemoveEvent(GameEvent.EntityDead);
     }
-
+    
     public void Move(float time)
     {
         if (!ContinueMove) return;

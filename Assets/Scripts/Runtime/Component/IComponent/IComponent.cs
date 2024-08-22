@@ -1,3 +1,5 @@
+using System;
+
 /// <summary>
 /// 组件接口
 /// </summary>

@@ -107,11 +107,11 @@ public class HeroAttackComponent : AttackComponent
         heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
             .TryChangeState(StateType.Attack);
         var bulletEntity = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData());
-        bulletEntity.GetComponent<RectTransform>().parent = BattleManager.Instance.GetBulletParent();
-        bulletEntity.GetComponent<RectTransform>().position = heroEntity.GetFireLocation().position;
+        // 先初始化 再添加组件
+        bulletEntity.InitBullet(EntityType.EnemyEntity, heroEntity.GetHeroData().atk, 2, heroEntity.GetFireLocation(),
+            BattleManager.Instance.GetBulletParent());
         bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), 800f,
             point, BulletMoveType.SingleTargetMove));
-        bulletEntity.InitBullet(EntityType.EnemyEntity, heroEntity.GetHeroData().atk, 2);
         EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
         LastAttackTime = Time.time;
         IsInAttackInterval = true;

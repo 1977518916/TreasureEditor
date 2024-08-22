@@ -94,7 +94,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         var heroEntity = hero.AddComponent<HeroEntity>();
         var heroModel = AssetsLoadManager.LoadHero(data.heroTypeEnum, hero.GetComponent<RectTransform>());
         heroEntity.Init();
-        heroEntity.InitHero(data, heroModel, battleManager.GetFirePoint(indexValue));
+        heroEntity.InitHero(data, heroModel, battleManager.GetFirePoint(indexValue), indexValue);
         AddEntity(heroEntity.EntityId, heroEntity);
         // 获取英雄动画对象
         var heroAnima = heroModel.GetComponent<SkeletonGraphic>();
@@ -290,13 +290,14 @@ public class EntitySystem : MonoSingleton<EntitySystem>
             GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform,
             root.GetComponent<RectTransform>(), 10f);
         // 初始化敌人检测
-        InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 120f);
+        InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 150f);
         // 初始化敌人状态机组件 和 动画组件
         InitEnemyState(entity, InitEnemyEntityAnimation(entity.EntityId, anim, entity));
         // 初始化敌人死亡组件
         InitEnemyDead(entity.EntityId, entity);
         //初始化敌人攻击
-        entity.AllComponentList.Add(new EnemyAttackComponent(1, enemyBean.EnemyData.atk, entity));
+        entity.AllComponentList.Add(new EnemyAttackComponent(3f, enemyBean.EnemyData.atk, entity,
+            entity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent)));
         //初始化敌人状态
         entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp, entity));
     }
@@ -312,18 +313,16 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         switch (entityType)
         {
             case EntityType.HeroEntity:
-                GetFrontRowHeroID();
-                break;
+                return GetFrontRowHeroID();
             case EntityType.EnemyEntity:
-                GetSurviveEnemyID();
-                break;
+                return GetSurviveEnemyID();
             default:
                 throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
         }
 
         return default;
     }
-
+    
     /// <summary>
     /// 获取存活英雄的ID
     /// </summary>
@@ -344,23 +343,23 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
         return -1;
     }
-
+    
     /// <summary>
     /// 获取最前排英雄的ID 如果为-1 则为没有英雄存活
     /// </summary>
     /// <returns></returns>
-    private long GetFrontRowHeroID()
+    public long GetFrontRowHeroID()
     {
+        if (GetSurviveHeroID() == -1) return -1;
         var heroList = GetAllHeroEntity();
         var currentMaxIndex = 0;
         HeroEntity maxIndexHero = null;
         foreach (var entity in heroList)
         {
-            if ((int)entity.GetHeroData().heroTypeEnum > currentMaxIndex)
-            {
-                currentMaxIndex = (int)entity.GetHeroData().heroTypeEnum;
-                maxIndexHero = entity;
-            }
+            if (!entity.GetIsSurvive()) continue;
+            if (entity.GetLocationIndex() <= currentMaxIndex) continue;
+            currentMaxIndex = entity.GetLocationIndex();
+            maxIndexHero = entity;
         }
 
         return maxIndexHero != null ? maxIndexHero.EntityId : -1;
@@ -389,7 +388,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     {
         return allEntityDic.TryGetValue(entityId, out var entity) ? entity.EntityType : EntityType.None;
     }
-
+    
     /// <summary>
     ///  获取存活的敌人的ID
     /// </summary>
@@ -443,12 +442,12 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
     public void HeroDead(long entityId)
     {
-        if (allEntityDic.Remove(entityId, out var entity))  
+        if (allEntityDic.TryGetValue(entityId, out var entity))
         {
-            
+            entity.Release();
         }
     }
-    
+
     public void EnemyDead(long entityId)
     {
         if (allEntityDic.Remove(entityId, out var entity))

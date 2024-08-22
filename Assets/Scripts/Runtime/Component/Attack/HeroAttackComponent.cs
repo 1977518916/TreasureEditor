@@ -87,9 +87,7 @@ public class HeroAttackComponent : AttackComponent
         
         if (pointDetectComponent.IsVeryClose())
         {
-            Attack(1,
-                pointDetectComponent.GetTarget()
-                    .position); //(pointDetectComponent.GetTarget().position - heroEntity.GetFireLocation().position).normalized);
+            Attack(1, pointDetectComponent.GetTarget().position);
         }
     }
     
@@ -111,8 +109,9 @@ public class HeroAttackComponent : AttackComponent
         var bulletEntity = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData());
         bulletEntity.GetComponent<RectTransform>().parent = BattleManager.Instance.GetBulletParent();
         bulletEntity.GetComponent<RectTransform>().position = heroEntity.GetFireLocation().position;
-        bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), 100f,
+        bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), 150f,
             point, BulletMoveType.SingleTargetMove));
+        bulletEntity.InitBullet(EntityType.EnemyEntity);
         EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
         LastAttackTime = Time.time;
         IsInAttackInterval = true;

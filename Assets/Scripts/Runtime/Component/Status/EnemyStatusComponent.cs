@@ -17,11 +17,17 @@ public class EnemyStatusComponent : StatusComponent
     /// 最大血量值
     /// </summary>
     private int maxHpValue;
+    
+    /// <summary>
+    /// 自身entity
+    /// </summary>
+    private Entity entity;
 
-    public EnemyStatusComponent(int maxHpValue)
+    public EnemyStatusComponent(int maxHpValue, Entity entity)
     {
         this.maxHpValue = maxHpValue;
         hpValue = this.maxHpValue;
+        this.entity = entity;
     }
 
     public void Tick(float time)
@@ -40,14 +46,15 @@ public class EnemyStatusComponent : StatusComponent
     public void Hit(int value)
     {
         hpValue -= value;
-        if (hpValue > 0) 
+        if (hpValue > 0)
         {
             // 伤害飘字
             // 播放受击动画
             // 然后退出
             return;
         }
+
         // 死亡 播放死亡动画 关闭碰撞包围盒  死亡动画播放完以后直接删除实体
-        EventMgr.Instance.TriggerEvent(GameEvent.Common);
+        EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, entity.EntityId);
     }
 }

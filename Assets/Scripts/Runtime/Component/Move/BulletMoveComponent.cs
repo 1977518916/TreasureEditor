@@ -16,6 +16,8 @@ public class BulletMoveComponent : MoveComponent
     
     public bool ContinueMove { get; set; }
 
+    private Vector2 ThisTransform;
+    
     /// <summary>
     /// 子弹移动组件
     /// </summary>
@@ -26,6 +28,7 @@ public class BulletMoveComponent : MoveComponent
         this.MoveDirection = moveDirection;
         ContinueMove = true;
         this.moveType = moveType;
+        ThisTransform = new Vector2(EntityTransform.position.x, EntityTransform.position.y);
     }
     
     public void Tick(float time)
@@ -60,11 +63,12 @@ public class BulletMoveComponent : MoveComponent
     /// </summary>
     private void SingleTargetMove(float time)
     {
-        Vector2 targetDir = MoveDirection - new Vector2(EntityTransform.position.x, EntityTransform.position.y);
-        // float angle = Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg;
-        // EntityTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
-        // EntityTransform.Translate(targetDir.normalized * time * MoveSpeed);
-        EntityTransform.up = targetDir.normalized;
-        EntityTransform.Translate(-EntityTransform.right * MoveSpeed * time);
+        Vector3 direction = MoveDirection - ThisTransform;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        EntityTransform.rotation = Quaternion.AngleAxis(angle, Vector2.up);
+        EntityTransform.position += EntityTransform.right * MoveSpeed * Time.deltaTime;
+        // Vector2 targetDir = MoveDirection - ThisTransform;
+        // EntityTransform.up = targetDir.normalized;
+        // EntityTransform.Translate(-EntityTransform.right * MoveSpeed * time);
     }
 }

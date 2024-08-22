@@ -84,7 +84,8 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         if (data.heroTypeEnum == HeroTypeEnum.Null) return;
         var indexValue = Convert.ToInt32(type);
         // 生成英雄实体
-        var hero = Instantiate(battleManager.HeroRootPrefab, battleManager.HeroParent);
+        var hero = Instantiate(battleManager.HeroAndEnemyRootPrefab, battleManager.HeroParent);
+        hero.tag = "Hero";
         var heroEntity = hero.AddComponent<HeroEntity>();
         var heroModel = AssetsLoadManager.LoadHero(data.heroTypeEnum, hero.GetComponent<RectTransform>());
         heroEntity.Init();
@@ -97,10 +98,9 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         // 初始化实体状态组件
         InitHeroEntityStatus(heroEntity, indexValue);
         // 初始化检测组件
-        InitPointDetect(heroEntity, hero.GetComponent<RectTransform>(), EntityType.EnemyEntity, 1000f);
+        InitPointDetect(heroEntity, hero.GetComponent<RectTransform>(), EntityType.EnemyEntity, 1500f);
         // 初始化攻击组件
-        InitHeroEntityAttack(heroEntity,
-            heroEntity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent));
+        InitHeroEntityAttack(heroEntity, heroEntity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent));
         // 初始化英雄移动组件
         InitHeroMove(heroEntity);
         // 初始化英雄状态机组件 和 动画组件
@@ -231,7 +231,8 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     private void GenerateEntity(LevelManager.EnemyBean enemyBean)
     {
         var targetId = GetFrontRowHeroID();
-        GameObject root = Instantiate(battleManager.HeroRootPrefab, battleManager.EnemyParent);
+        GameObject root = Instantiate(battleManager.HeroAndEnemyRootPrefab, battleManager.EnemyParent);
+        root.tag = "Enemy";
         EnemyEntity entity = root.AddComponent<EnemyEntity>();
         entity.Init();
         AddEntity(entity.EntityId, entity);
@@ -245,7 +246,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         // 初始化敌人移动
         InitEnemyEntityMove(entity,
             GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform,
-            root.GetComponent<RectTransform>(), 20f);
+            root.GetComponent<RectTransform>(), 10f);
         // 初始化敌人检测
         InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 120f);
         // 初始化敌人状态机组件 和 动画组件
@@ -253,7 +254,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         //初始化敌人攻击
         entity.AllComponentList.Add(new EnemyAttackComponent(1, entity));
         //初始化敌人状态
-        entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp));
+        entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp, entity));
     }
 
     /// <summary>

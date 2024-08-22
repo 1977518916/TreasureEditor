@@ -23,7 +23,7 @@ public class BulletEntity : MonoBehaviour, Entity
     /// <summary>
     /// 目标实体类型  对哪种目标造成伤害
     /// </summary>
-    private EntityType entityType;
+    public EntityType targetEntityType;
     
     /// <summary>
     /// 子弹伤害
@@ -35,9 +35,17 @@ public class BulletEntity : MonoBehaviour, Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.BulletEnemy;
         AllComponentList = new List<IComponent>();
+    }
+
+    /// <summary>
+    /// 初始化子弹
+    /// </summary>
+    public void InitBullet(EntityType entityType)
+    {
+        targetEntityType = entityType;
         GenerateAttackBox();
     }
-    
+
     public void Release()
     {
         foreach (var iComponent in AllComponentList)
@@ -84,13 +92,16 @@ public class BulletEntity : MonoBehaviour, Entity
         var box = gameObject.AddComponent<BoxCollider2D>();
         var size = transform.GetChild(0).GetComponent<RectTransform>().rect.size;
         box.isTrigger = true;
-        box.size = size;
+        box.size = new Vector2(50f, 50f);
     }
-
-    private void OnTriggerEnter(Collider other)
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
         var entity = other.GetComponent<Entity>();
-        switch (entityType)
+        if (entity == null) return;
+        if (entity.EntityType != targetEntityType) return;
+        Debug.Log($"击中目标");
+        switch (targetEntityType)
         {
             case EntityType.HeroEntity:
                 if (IsHeroEntity(entity))
@@ -117,11 +128,11 @@ public class BulletEntity : MonoBehaviour, Entity
                 // 扣血
                 statusComponent.Hit(bulletHurt);
             }
-
+            
             break;
         }
     }
-
+    
     /// <summary>
     /// 是否是英雄实体
     /// </summary>

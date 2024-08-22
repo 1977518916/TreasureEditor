@@ -27,11 +27,11 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// 所有英雄血条和CD条
     /// </summary>
     public List<RectTransform> HeroStatusList = new List<RectTransform>();
-    
+
     /// <summary>
     /// 英雄根节点预制体
     /// </summary>
-    public GameObject HeroRootPrefab;
+    public GameObject HeroAndEnemyRootPrefab;
     
     /// <summary>
     /// 英雄父对象

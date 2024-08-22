@@ -11,9 +11,13 @@ public class AttackState : IState
         AnimationComponent = animationComponent;
     }
     
-    public void Enter()
+    public void Enter(StateMachineComponent stateMachineComponent)
     {
-        AnimationComponent.ChangeAnima(StateType.Attack, false, () => { Debug.Log($"攻击动画结束"); });
+        AnimationComponent.ChangeAnima(StateType.Attack, false, () =>
+        {
+            Debug.Log($"攻击动画结束");
+            stateMachineComponent.TryChangeState(StateType.Idle);
+        });
     }
 
     public void Tick()
@@ -24,5 +28,9 @@ public class AttackState : IState
     public void Exit()
     {
         
+    }
+    public int Priority()
+    {
+        return 8;
     }
 }

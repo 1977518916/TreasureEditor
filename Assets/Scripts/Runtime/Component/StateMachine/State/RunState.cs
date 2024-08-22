@@ -11,7 +11,7 @@ public class RunState : IState
         AnimationComponent = animationComponent;
     }
     
-    public void Enter()
+    public void Enter(StateMachineComponent stateMachineComponent)
     {
         AnimationComponent.ChangeAnima(StateType.Run, true, () => { Debug.Log($"结束跑步动画"); });
     }
@@ -24,5 +24,10 @@ public class RunState : IState
     public void Exit()
     {
 
+    }
+    
+    public int Priority()
+    {
+        return 2;
     }
 }

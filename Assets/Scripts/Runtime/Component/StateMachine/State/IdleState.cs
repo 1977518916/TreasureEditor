@@ -14,7 +14,7 @@ public class IdleState : IState
         AnimationComponent = animationComponent;
     }
     
-    public void Enter()
+    public void Enter(StateMachineComponent stateMachineComponent)
     {
         AnimationComponent.ChangeAnima(StateType.Idle, true, () => { Debug.Log($"结束一次待机动画"); });
     }
@@ -27,5 +27,9 @@ public class IdleState : IState
     public void Exit()
     {
         
+    }
+    public int Priority()
+    {
+        return 0;
     }
 }

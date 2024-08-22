@@ -8,7 +8,7 @@ public class EnemyStateMachineComponent : StateMachineComponent
 {
     public void Tick(float time)
     {
-        
+        currentState.Tick();
     }
 
     public void Release()
@@ -20,18 +20,41 @@ public class EnemyStateMachineComponent : StateMachineComponent
     public StateType LastState { get; set; }
     public Dictionary<StateType, List<StateType>> StateConvertDic { get; set; }
     public Dictionary<StateType, IState> AllStateDic { get; set; }
+    private IState currentState;
     public void Init(Entity entity, IState initState, Dictionary<StateType, List<StateType>> stateConvertDic, Dictionary<StateType, IState> allStateDic)
     {
-        
+        currentState = initState;
+        CurrentState = initState.StateType;
+        LastState = StateType.None;
+        StateConvertDic = stateConvertDic;
+        AllStateDic = allStateDic;
     }
 
     public void ChangeState(StateType changeState)
     {
-        
+        QuitState();
+        EnterState(AllStateDic[changeState]);
     }
 
     public void TryChangeState(StateType changeState)
     {
-        
+        if(!StateConvertDic[changeState].Contains(changeState) || currentState.Priority() > AllStateDic[changeState].Priority())
+        {
+            return;
+        }
+        QuitState();
+        EnterState(AllStateDic[changeState]);
+    }
+    
+    private void EnterState(IState state)
+    {
+        currentState = state;
+        state.Enter(this);
+    }
+
+    private void QuitState()
+    {
+        LastState = CurrentState;
+        currentState.Exit();
     }
 }

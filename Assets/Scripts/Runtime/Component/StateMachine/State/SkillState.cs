@@ -10,7 +10,7 @@ public class SkillState : IState
         AnimationComponent = animationComponent;
     }
     
-    public void Enter()
+    public void Enter(StateMachineComponent stateMachineComponent)
     {
 
     }
@@ -23,5 +23,9 @@ public class SkillState : IState
     public void Exit()
     {
         
+    }
+    public int Priority()
+    {
+        return 9;
     }
 }

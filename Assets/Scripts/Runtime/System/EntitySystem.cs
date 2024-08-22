@@ -168,7 +168,49 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         hitState.Init(animationComponent);
         deadState.Init(animationComponent);
     }
+
+    private void InitEnemyState(EnemyEntity entity, AnimationComponent animationComponent)   
+    {
+        var stateMachine = new EnemyStateMachineComponent();
+        var attackState = new AttackState();
+        var hitState = new HitState();
+        var deadState = new DeadState();
+        var moveState = new RunState();
+        var idleState = new IdleState();
+        moveState.Init(animationComponent);
+        attackState.Init(animationComponent);
+        hitState.Init(animationComponent);
+        deadState.Init(animationComponent);
+        idleState.Init(animationComponent);
+        var stateConvert = new List<StateConvert>
+        {
+            new StateConvert
+            {
+                CurrentState = StateType.Idle, ChangeState = new List<IState> { attackState, hitState, deadState }
+            },
+            new StateConvert
+            {
+                CurrentState = StateType.Attack, ChangeState = new List<IState> { idleState, hitState, deadState }
+            },
+            new StateConvert
+            {
+                CurrentState = StateType.Hit, ChangeState = new List<IState> { idleState, deadState }
+            },
+            new StateConvert
+            {
+                CurrentState = StateType.Run, ChangeState = new List<IState> { idleState, deadState, attackState }
+            },
+        };
+        stateMachine.Init(entity, moveState, stateConvert);
+    }
     
+    private AnimationComponent InitEnemyEntityAnimation(long entityId, SkeletonGraphic skeletonGraphic, EnemyEntity entity)
+    {
+        var anima = new EnemyAnimationComponent(entityId, skeletonGraphic);
+        entity.AllComponentList.Add(anima);
+        return anima;
+    }
+
     private void InitEntityPosition(EnemyEntity entity)
     {
         entity.AllComponentList.Add(new RandomPositionComponent());
@@ -190,14 +232,25 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         entity.Init();
         allEntityDic.Add(entity.EntityId, entity);
         var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
+        var anim = model.GetComponent<SkeletonGraphic>();
+
         model.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
         model.transform.Translate(0, -30, 0, Space.Self);
+        // 初始化敌人位置
         InitEntityPosition(entity);
+        // 初始化敌人移动
         InitEnemyEntityMove(entity, GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform,
             root.GetComponent<RectTransform>(), 100);
-        InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 120f);
+        // 初始化敌人检测
+        InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity,120f);
+        // 初始化敌人状态机组件 和 动画组件
+        InitEnemyState(entity,InitEnemyEntityAnimation(entity.EntityId,anim,entity));
+        //初始化敌人攻击
+        entity.AllComponentList.Add(new EnemyAttackComponent(1,entity));
+        //初始化敌人状态
+        entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp));
     }
-    
+
     /// <summary>
     /// 更换目标  如果返回的结果为-1证明目前需要找的对象没有
     /// </summary>

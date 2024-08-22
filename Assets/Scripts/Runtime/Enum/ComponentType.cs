@@ -26,6 +26,11 @@ public enum ComponentType
     DetectComponent,
     
     /// <summary>
+    /// 死亡组件
+    /// </summary>
+    DeadComponent,
+    
+    /// <summary>
     /// 动画组件
     /// </summary>
     AnimationComponent,

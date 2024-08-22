@@ -18,12 +18,12 @@ namespace Runtime.UI
         {
             entitySystem = EntitySystem.Instance;
             amount.SetText(currentAmount.ToString());
-            EventMgr.Instance.RegisterEvent<int>(GameEvent.EntityDead,UpdateAmount);
+            EventMgr.Instance.RegisterEvent<long>(GameEvent.EntityDead,UpdateAmount);
         }
 
-        private void UpdateAmount(int entityId)
+        private void UpdateAmount(long entityId)
         {
-            
+            if (entitySystem.GetEntityType(entityId) != EntityType.EnemyEntity) return;
             currentAmount++;
             amount.SetText(currentAmount.ToString());
         }

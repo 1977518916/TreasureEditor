@@ -427,7 +427,23 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
         return false;
     }
+
+    public void HeroDead(long entityId)
+    {
+        if (allEntityDic.Remove(entityId, out var entity))  
+        {
+            
+        }
+    }
     
+    public void EnemyDead(long entityId)
+    {
+        if (allEntityDic.Remove(entityId, out var entity))
+        {
+            entity.Release();
+        }
+    }
+
     private void OnDestroy()
     {
         foreach (var entity in allEntityDic.Values) 

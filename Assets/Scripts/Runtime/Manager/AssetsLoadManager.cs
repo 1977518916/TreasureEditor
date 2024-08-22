@@ -121,6 +121,7 @@ namespace Runtime.Manager
                 }
                 bulletEntity.transform.localScale = Vector3.one;
                 bulletEntity.transform.localPosition = Vector3.zero;
+                bulletEntity.MoveObject.transform.eulerAngles = new Vector3(0, 0, -90);
                 bulletEntity.Init();
                 return bulletEntity;
             }

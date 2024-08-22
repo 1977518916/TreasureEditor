@@ -65,7 +65,7 @@ public class BulletMoveComponent : MoveComponent
     {
         Vector3 direction = MoveDirection - ThisTransform;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        EntityTransform.rotation = Quaternion.AngleAxis(angle, Vector2.up);
+        EntityTransform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         EntityTransform.position += EntityTransform.right * MoveSpeed * Time.deltaTime;
         // Vector2 targetDir = MoveDirection - ThisTransform;
         // EntityTransform.up = targetDir.normalized;

@@ -11,7 +11,7 @@ public class EnemyStateMachineComponent : StateMachineComponent
         currentState.Tick();
     }
 
-    public void Release()
+    public void Release()  
     {
         
     }

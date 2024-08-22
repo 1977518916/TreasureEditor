@@ -22,16 +22,16 @@ public class EnemyStateMachineComponent : StateMachineComponent
     public Dictionary<StateType, IState> AllStateDic { get; set; }
     public void Init(Entity entity, IState initState, Dictionary<StateType, List<StateType>> stateConvertDic, Dictionary<StateType, IState> allStateDic)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void ChangeState(StateType changeState)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void TryChangeState(StateType changeState)
     {
-        throw new System.NotImplementedException();
+        
     }
 }

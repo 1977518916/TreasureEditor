@@ -24,12 +24,18 @@ public class BulletEntity : MonoBehaviour, Entity
     /// 目标实体类型  对哪种目标造成伤害
     /// </summary>
     private EntityType entityType;
-
+    
+    /// <summary>
+    /// 子弹伤害
+    /// </summary>
+    private int bulletHurt;
+    
     public void Init()
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.BulletEnemy;
         AllComponentList = new List<IComponent>();
+        GenerateAttackBox();
     }
     
     public void Release()
@@ -38,7 +44,7 @@ public class BulletEntity : MonoBehaviour, Entity
         {
             iComponent.Release();
         }
-
+        
         Destroy(this.gameObject);
     }
     
@@ -70,6 +76,17 @@ public class BulletEntity : MonoBehaviour, Entity
         };
     }
     
+    /// <summary>
+    /// 生成攻击检测包围盒
+    /// </summary>
+    private void GenerateAttackBox()
+    {
+        var box = gameObject.AddComponent<BoxCollider2D>();
+        var size = transform.GetChild(0).GetComponent<RectTransform>().rect.size;
+        box.isTrigger = true;
+        box.size = size;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         var entity = other.GetComponent<Entity>();
@@ -95,15 +112,16 @@ public class BulletEntity : MonoBehaviour, Entity
     {
         foreach (var component in entity.AllComponentList)
         {
-            if (component is StatusComponent)
+            if (component is StatusComponent statusComponent)
             {
                 // 扣血
+                statusComponent.Hit(bulletHurt);
             }
 
             break;
         }
     }
-    
+
     /// <summary>
     /// 是否是英雄实体
     /// </summary>

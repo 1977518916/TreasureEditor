@@ -245,7 +245,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         // 初始化敌人移动
         InitEnemyEntityMove(entity,
             GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform,
-            root.GetComponent<RectTransform>(), 100);
+            root.GetComponent<RectTransform>(), 20f);
         // 初始化敌人检测
         InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 120f);
         // 初始化敌人状态机组件 和 动画组件
@@ -395,7 +395,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
         return false;
     }
-
+    
     private void OnDestroy()
     {
         foreach (var entity in allEntityDic.Values) 

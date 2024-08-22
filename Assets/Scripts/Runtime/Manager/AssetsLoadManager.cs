@@ -26,11 +26,13 @@ namespace Runtime.Manager
         {
             if(heroData.bulletType == BulletType.Self)
             {
-                GameObject gameObject = new GameObject("bullet",typeof(RectTransform));
+                GameObject gameObject = new GameObject("bullet",typeof(RectTransform))
+                {
+                    layer = 5
+                };
                 gameObject.transform.SetParent(parent);
                 HeroTypeEnum typeEnum = heroData.heroTypeEnum;
                 var bulletEntity = gameObject.AddComponent<BulletEntity>();
-                bulletEntity.Init();
                 string path;
                 switch(typeEnum)
                 {
@@ -119,6 +121,7 @@ namespace Runtime.Manager
                 }
                 bulletEntity.transform.localScale = Vector3.one;
                 bulletEntity.transform.localPosition = Vector3.zero;
+                bulletEntity.Init();
                 return bulletEntity;
             }
             return null;

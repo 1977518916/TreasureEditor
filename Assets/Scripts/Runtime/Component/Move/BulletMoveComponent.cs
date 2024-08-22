@@ -60,7 +60,11 @@ public class BulletMoveComponent : MoveComponent
     /// </summary>
     private void SingleTargetMove(float time)
     {
-        EntityTransform.up = MoveDirection;
-        EntityTransform.Translate(EntityTransform.up * time * MoveSpeed);
+        Vector2 targetDir = MoveDirection - new Vector2(EntityTransform.position.x, EntityTransform.position.y);
+        // float angle = Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg;
+        // EntityTransform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
+        // EntityTransform.Translate(targetDir.normalized * time * MoveSpeed);
+        EntityTransform.up = targetDir.normalized;
+        EntityTransform.Translate(-EntityTransform.right * MoveSpeed * time);
     }
 }

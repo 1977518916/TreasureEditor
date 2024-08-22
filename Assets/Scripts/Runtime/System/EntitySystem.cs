@@ -136,6 +136,18 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         entity.AllComponentList.Add(move);
     }
 
+    private void InitHeroStateMachine(HeroEntity entity)
+    {
+        var stateMachine = new HeroStateMachineComponent();
+        var idleState = new IdleState();
+        var attackState = new AttackState();
+        var hitState = new HitState();
+        var deadState = new DeadState();
+        var stateConvert = new List<StateConvert>();
+        stateConvert.Add(new StateConvert { CurrentState = StateType.Idle });
+        stateMachine.Init(entity, idleState, stateConvert);
+    }
+    
     /// <summary>
     /// 初始化点检测
     /// </summary>
@@ -286,6 +298,11 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
     private void OnDestroy()
     {
+        foreach (var e in allEntityDic.Values)
+        {
+            e.Release();
+        }
+
         EventMgr.Instance.RemoveEvent(GameEvent.MakeEnemy);
     }
 }

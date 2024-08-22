@@ -46,7 +46,17 @@ public class HeroEntity : MonoBehaviour, Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.HeroEntity;
     }
-    
+
+    public void Release()
+    {
+        foreach (var iComponent in AllComponentList)
+        {
+            iComponent.Release();
+        }
+
+        Destroy(this.gameObject);
+    }
+
     /// <summary>
     /// 获取指定组件
     /// </summary>
@@ -112,19 +122,9 @@ public class HeroEntity : MonoBehaviour, Entity
     {
         return isSurvive;
     }
-
-    /// <summary>
-    /// 设置英雄位置
-    /// </summary>
-    private void SetHeroLocation(int locationIndex)
-    {
-        BattleManager.Instance.SetPrefabLocation(heroObj, locationIndex);
-    }
-
+    
     public RectTransform GetFireLocation()
     {
         return attackFireLocation;
     }
-    
-    
 }

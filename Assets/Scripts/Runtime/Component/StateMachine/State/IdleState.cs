@@ -11,14 +11,15 @@ public class IdleState : IState
 
     public void Init(SkeletonGraphic skeletonGraphic)
     {
-        skeletonGraphic.AnimationState.SetAnimation(0, "Idle", false).Complete += entry =>
-        {
-            Debug.Log($"Idle动画结束了");
-        };
+        SkeletonGraphic = skeletonGraphic;
     }
 
     public void Enter()
     {
+        SkeletonGraphic.AnimationState.SetAnimation(0, "Idle", false).Complete += entry =>
+        {
+            Debug.Log($"Idle动画结束了");
+        };
     }
 
     public void Tick()

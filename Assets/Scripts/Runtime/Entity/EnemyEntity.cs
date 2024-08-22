@@ -17,7 +17,17 @@ public class EnemyEntity : MonoBehaviour, Entity
         EntityType = EntityType.EnemyEntity;
         AllComponentList = new List<IComponent>();
     }
+    
+    public void Release()
+    {
+        foreach (var iComponent in AllComponentList)
+        {
+            iComponent.Release();
+        }
 
+        Destroy(this.gameObject);
+    }
+    
     /// <summary>
     /// 获取指定组件
     /// </summary>

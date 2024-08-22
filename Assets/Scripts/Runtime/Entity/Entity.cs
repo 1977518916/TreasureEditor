@@ -26,6 +26,11 @@ public interface Entity
     public void Init();
     
     /// <summary>
+    /// 释放
+    /// </summary>
+    public void Release();
+    
+    /// <summary>
     /// 获取指定组件
     /// </summary>
     /// <returns></returns>

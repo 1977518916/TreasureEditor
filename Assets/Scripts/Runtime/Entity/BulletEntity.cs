@@ -31,6 +31,16 @@ public class BulletEntity : MonoBehaviour, Entity
         EntityType = EntityType.BulletEnemy;
     }
     
+    public void Release()
+    {
+        foreach (var iComponent in AllComponentList)
+        {
+            iComponent.Release();
+        }
+
+        Destroy(this.gameObject);
+    }
+    
     public T GetSpecifyComponent<T>(ComponentType componentType) where T : IComponent
     {
         foreach (var iComponent in AllComponentList)

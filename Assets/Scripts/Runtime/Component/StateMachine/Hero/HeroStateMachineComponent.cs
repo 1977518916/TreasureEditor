@@ -36,7 +36,7 @@ public class HeroStateMachineComponent : StateMachineComponent
 
     public void TryChangeState(StateType changeState)
     {
-        if(!StateConvertDic[changeState].Contains(changeState) || currentState.Priority() > AllStateDic[changeState].Priority())
+        if(!StateConvertDic[CurrentState].Contains(changeState) || currentState.Priority() > AllStateDic[changeState].Priority())
         {
             return;
         }

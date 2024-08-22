@@ -66,6 +66,7 @@ public class PointDetectComponent : DetectComponent
 
     private void TargetDead(long targetId)
     {
+        target = null;
         if (EntitySystem.Instance.GetEntityType(targetId) != targetEntityType) return;
         targetEntityId = EntitySystem.Instance.ReplaceTarget(targetEntityType);
         var targetEntity = GetTargetEntity();
@@ -95,6 +96,7 @@ public class PointDetectComponent : DetectComponent
     public bool IsVeryClose()
     {
         if (targetEntityId == -1) return false;
+        if (target == null) return false;
         return Vector2.Distance(target.position, thisRectTransform.position) < distance;
     }
     

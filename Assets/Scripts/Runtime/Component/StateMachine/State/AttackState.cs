@@ -19,7 +19,7 @@ public class AttackState : IState
             stateMachineComponent.ChangeState(StateType.Idle);
         });
     }
-
+    
     public void Tick()
     {
         

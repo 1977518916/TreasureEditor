@@ -30,7 +30,7 @@ public class EnemyStateMachineComponent : StateMachineComponent
         StateConvertList = stateConverts;
         CurrentState.Init(animationComponent);
     }
-
+    
     public void ChangeState(IState changeState)
     {
         LastState = CurrentState;

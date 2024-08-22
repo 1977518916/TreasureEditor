@@ -29,6 +29,7 @@ public class BulletEntity : MonoBehaviour, Entity
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.BulletEnemy;
+        AllComponentList = new List<IComponent>();
     }
     
     public void Release()

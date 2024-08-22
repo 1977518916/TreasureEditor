@@ -30,6 +30,7 @@ namespace Runtime.Manager
                 gameObject.transform.SetParent(parent);
                 HeroTypeEnum typeEnum = heroData.heroTypeEnum;
                 var bulletEntity = gameObject.AddComponent<BulletEntity>();
+                bulletEntity.Init();
                 string path;
                 switch(typeEnum)
                 {

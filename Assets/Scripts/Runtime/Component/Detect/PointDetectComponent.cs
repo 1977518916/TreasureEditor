@@ -1,3 +1,4 @@
+using System;
 using Tao_Framework.Core.Event;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class PointDetectComponent : DetectComponent
     public LayerMask LayerMask { get; set; }
     public DetectRangeType DetectRangeType { get; set; }
 
-    private long targetEntityId;
+    private long targetEntityId = -1;
 
     private RectTransform thisRectTransform;
 
@@ -25,22 +26,39 @@ public class PointDetectComponent : DetectComponent
     /// </summary>
     private float distance;
     
-    public PointDetectComponent(long entityId, Entity entity, RectTransform transform, EntityType targetEntityType)
+    public PointDetectComponent(Entity entity, RectTransform transform, EntityType targetEntityType, float distance)
     {
-        targetEntityId = entityId;
         this.entity = entity;
+        this.distance = distance;
         this.targetEntityType = targetEntityType;
         thisRectTransform = transform;
-        target = EntitySystem.Instance.GetEntity(targetEntityId)
-            .GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform;
         EventMgr.Instance.RegisterEvent<long>(GameEvent.EntityDead, TargetDead);
     }
-    
+
     public void Tick(float time)
     {
-        
+        if (EntitySystem.Instance.GetTargetTypeSurviveEntity(targetEntityType))
+        {
+            switch (targetEntityType)
+            {
+                case EntityType.None:
+                    break;
+                case EntityType.HeroEntity:
+                    targetEntityId = EntitySystem.Instance.GetSurviveHeroID();
+                    break;
+                case EntityType.EnemyEntity:
+                    targetEntityId = EntitySystem.Instance.GetSurviveEnemyID();
+                    break;
+                case EntityType.BulletEnemy:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
+            GetTargetRectTransform();
+        }
     }
-    
+
     public void Release()
     {
         EventMgr.Instance.RemoveEvent(GameEvent.EntityDead);
@@ -56,6 +74,14 @@ public class PointDetectComponent : DetectComponent
         }
     }
     
+    private void GetTargetRectTransform()
+    {
+        if (targetEntityId != -1 && target == null)  
+        {
+            target = GetTargetEntity().GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform;
+        }
+    }
+    
     private Entity GetTargetEntity()
     {
         return targetEntityId == -1 ? null : EntitySystem.Instance.GetEntity(targetEntityId);
@@ -67,6 +93,7 @@ public class PointDetectComponent : DetectComponent
     /// <returns></returns>
     public bool IsVeryClose()
     {
+        if (targetEntityId == -1) return false;
         return Vector2.Distance(target.position, thisRectTransform.position) < distance;
     }
     

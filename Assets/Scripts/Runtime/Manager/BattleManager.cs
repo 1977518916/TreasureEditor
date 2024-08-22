@@ -43,6 +43,11 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// </summary>
     public RectTransform EnemyParent;
     
+    /// <summary>
+    /// 子弹父对象
+    /// </summary>
+    public RectTransform BulletParent;
+    
     #region Command
 
     /// <summary>
@@ -104,6 +109,11 @@ public class BattleManager : MonoSingleton<BattleManager>
     }
 
     #endregion
+    
+    public RectTransform GetBulletParent()
+    {
+        return BulletParent;
+    }
 
     private void Start()
     {

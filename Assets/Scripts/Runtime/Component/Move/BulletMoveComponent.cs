@@ -60,7 +60,6 @@ public class BulletMoveComponent : MoveComponent
     /// </summary>
     private void SingleTargetMove(float time)
     {
-        if (!ContinueMove) return;
         EntityTransform.up = MoveDirection;
         EntityTransform.Translate(EntityTransform.up * time * MoveSpeed);
     }

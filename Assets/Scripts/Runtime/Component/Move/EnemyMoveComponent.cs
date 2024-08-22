@@ -21,6 +21,9 @@ public class EnemyMoveComponent : MoveComponent
     /// </summary>
     private RectTransform target;
     
+    /// <summary>
+    /// 点检测组件
+    /// </summary>
     private PointDetectComponent pointDetectComponent;
     
     public EnemyMoveComponent(EnemyEntity entity,RectTransform target, RectTransform entityTransform, float moveSpeed)
@@ -36,11 +39,11 @@ public class EnemyMoveComponent : MoveComponent
     
     public void Tick(float time)
     {
-        pointDetectComponent = entity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent);
+        pointDetectComponent ??= entity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent);
         ContinueMove = !pointDetectComponent.IsVeryClose();
         Move(time);
     }
-
+    
     public void Release()
     {
         
@@ -51,7 +54,7 @@ public class EnemyMoveComponent : MoveComponent
         if (!ContinueMove) return;
         EntityTransform.Translate(MoveDirection * MoveSpeed * time);
     }
-
+    
     private void ReplaceTarget(Entity e)
     {
         target = e.GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform;

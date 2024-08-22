@@ -92,10 +92,10 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         InitEntityAnima(heroAnima);
         // 初始化实体状态组件
         InitHeroEntityStatus(heroEntity, indexValue);
-        // 初始化攻击组件
-        InitHeroEntityAttack(heroEntity);
         // 初始化检测组件
-        InitDetect(heroEntity, "Enemy", "UI", hero.GetComponent<RectTransform>());
+        InitPointDetect(heroEntity, hero.GetComponent<RectTransform>(), EntityType.EnemyEntity, 1000f);
+        // 初始化攻击组件
+        InitHeroEntityAttack(heroEntity, heroEntity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent));
         // 初始化英雄移动组件
         InitHeroMove(heroEntity);
         // 初始化英雄状态机组件 和 动画组件
@@ -126,16 +126,22 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         return anima;
     }
 
-    private void InitHeroEntityAttack(HeroEntity heroEntity)
+    private void InitHeroEntityAttack(HeroEntity heroEntity, PointDetectComponent pointDetectComponent)
     {
-        var attack = new HeroAttackComponent(9, heroEntity, 3);
+        var attack = new HeroAttackComponent(9, 1.5f, 3, heroEntity, pointDetectComponent);
         heroEntity.AllComponentList.Add(attack);
     }
-    
-    private void InitDetect(Entity entity, string targetTag, string layerName, RectTransform rectTransform)
+
+    /// <summary>
+    /// 初始化点检测
+    /// </summary>
+    /// <param name="entity"></param>
+    /// <param name="entityTransform"></param>
+    /// <param name="targetEntityType"></param>
+    /// <param name="distance"></param>
+    private void InitPointDetect(Entity entity, RectTransform entityTransform, EntityType targetEntityType, float distance)
     {
-        var detect = new HostileDetectComponent(targetTag, LayerMask.GetMask(new[] { layerName }),
-            DetectRangeType.Square, entity, rectTransform);
+        var detect = new PointDetectComponent(entity, entityTransform, targetEntityType, distance);
         entity.AllComponentList.Add(detect);
     }
     
@@ -179,19 +185,6 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         stateMachine.Init(entity, idleState, stateConvert);
     }
     
-    /// <summary>
-    /// 初始化点检测
-    /// </summary>
-    /// <param name="enemyId"></param>
-    /// <param name="entity"></param>
-    /// <param name="entityTransform"></param>
-    /// <param name="targetEntityType"></param>
-    private void InitPointDetect(long enemyId, Entity entity, RectTransform entityTransform, EntityType targetEntityType)
-    {
-        var detect = new PointDetectComponent(enemyId, entity, entityTransform, targetEntityType);
-        entity.AllComponentList.Add(detect);
-    }
-
     private void InitEntityPosition(EnemyEntity entity)
     {
         entity.AllComponentList.Add(new RandomPositionComponent());
@@ -218,7 +211,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         InitEntityPosition(entity);
         InitEnemyEntityMove(entity, GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform,
             root.GetComponent<RectTransform>(), 100);
-        InitPointDetect(targetId, entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity);
+        InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 120f);
     }
     
     /// <summary>
@@ -262,7 +255,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
             }
         }
 
-        return default;
+        return -1;
     }
     
     /// <summary>
@@ -324,7 +317,41 @@ public class EntitySystem : MonoSingleton<EntitySystem>
             }
         }
 
-        return default;
+        return -1;
+    }
+    
+    /// <summary>
+    /// 添加实体进入管理
+    /// </summary>
+    /// <param name="entityId"></param>
+    /// <param name="entity"></param>
+    public void AddEntity(long entityId, Entity entity)
+    {
+        allEntityDic.Add(entityId, entity);
+    }
+
+    /// <summary>
+    /// 获取目标类型是否有存活的敌人
+    /// </summary>
+    /// <param name="entityType"></param>
+    /// <returns></returns>
+    public bool GetTargetTypeSurviveEntity(EntityType entityType)
+    {
+        switch (entityType)
+        {
+            case EntityType.None:
+                break;
+            case EntityType.HeroEntity:
+                return GetSurviveHeroID() != -1;
+            case EntityType.EnemyEntity:
+                return GetSurviveEnemyID() != -1;
+            case EntityType.BulletEnemy:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
+        }
+
+        return false;
     }
 
     private void OnDestroy()

@@ -1778,6 +1778,7 @@ MonoBehaviour:
   HeroRootPrefab: {fileID: 1211662323}
   HeroParent: {fileID: 673703899}
   EnemyParent: {fileID: 924491848}
+  BulletParent: {fileID: 58156329}
 --- !u!1 &570508703
 GameObject:
   m_ObjectHideFlags: 0

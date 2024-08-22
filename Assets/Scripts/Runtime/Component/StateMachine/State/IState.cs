@@ -23,7 +23,7 @@ public interface IState
     /// <summary>
     /// 进入状态
     /// </summary>
-    public void Enter();
+    public void Enter(StateMachineComponent stateMachine);
     
     /// <summary>
     /// 更新状态
@@ -34,4 +34,10 @@ public interface IState
     /// 退出状态
     /// </summary>
     public void Exit();
+
+    /// <summary>
+    /// 优先级,优先级大的状态不会被优先级小的状态所改变(同级可改变)
+    /// </summary>
+    /// <returns></returns>
+    public int Priority();
 }

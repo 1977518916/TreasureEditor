@@ -11,7 +11,7 @@ public class DeadState : IState
         AnimationComponent = animationComponent;
     }
     
-    public void Enter()
+    public void Enter(StateMachineComponent stateMachineComponent)
     {
         AnimationComponent.ChangeAnima(StateType.Dead, false, () => { Debug.Log($"死亡动画结束"); });
     }
@@ -24,5 +24,9 @@ public class DeadState : IState
     public void Exit()
     {
 
+    }
+    public int Priority()
+    {
+        return 10;
     }
 }

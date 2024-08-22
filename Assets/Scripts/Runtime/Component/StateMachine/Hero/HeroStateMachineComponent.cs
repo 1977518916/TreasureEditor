@@ -31,12 +31,30 @@ public class HeroStateMachineComponent : StateMachineComponent
 
     public void ChangeState(StateType changeState)
     {
-
+        QuitState();
+        EnterState(AllStateDic[changeState]);
     }
 
     public void TryChangeState(StateType changeState)
     {
+        if(!StateConvertDic[changeState].Contains(changeState) || currentState.Priority() > AllStateDic[changeState].Priority())
+        {
+            return;
+        }
+        QuitState();
+        EnterState(AllStateDic[changeState]);
+    }
 
+    private void EnterState(IState state)
+    {
+        currentState = state;
+        state.Enter(this);
+    }
+
+    private void QuitState()
+    {
+        LastState = CurrentState;
+        currentState.Exit();
     }
     
     public void Tick(float time)

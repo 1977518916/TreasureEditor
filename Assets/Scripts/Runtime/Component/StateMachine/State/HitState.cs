@@ -11,9 +11,13 @@ public class HitState : IState
         AnimationComponent = animationComponent;
     }
     
-    public void Enter()
+    public void Enter(StateMachineComponent stateMachineComponent)
     {
-        AnimationComponent.ChangeAnima(StateType.Hit, false, () => { Debug.Log($"受击动画结束"); });
+        AnimationComponent.ChangeAnima(StateType.Hit, false, () =>
+        {
+            Debug.Log($"受击动画结束");
+            stateMachineComponent.TryChangeState(stateMachineComponent.LastState);
+        });
     }
     
     public void Tick()
@@ -24,5 +28,9 @@ public class HitState : IState
     public void Exit()
     {
         
+    }
+    public int Priority()
+    {
+        return 7;
     }
 }

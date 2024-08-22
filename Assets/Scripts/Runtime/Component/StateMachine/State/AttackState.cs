@@ -16,7 +16,7 @@ public class AttackState : IState
         AnimationComponent.ChangeAnima(StateType.Attack, false, () =>
         {
             Debug.Log($"攻击动画结束");
-            stateMachineComponent.TryChangeState(StateType.Idle);
+            stateMachineComponent.ChangeState(StateType.Idle);
         });
     }
 

@@ -16,7 +16,7 @@ public class HitState : IState
         AnimationComponent.ChangeAnima(StateType.Hit, false, () =>
         {
             Debug.Log($"受击动画结束");
-            stateMachineComponent.TryChangeState(stateMachineComponent.LastState);
+            stateMachineComponent.ChangeState(stateMachineComponent.LastState);
         });
     }
     

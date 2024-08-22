@@ -98,10 +98,12 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         InitDetect(heroEntity, "Enemy", "UI", hero.GetComponent<RectTransform>());
         // 初始化英雄移动组件
         InitHeroMove(heroEntity);
+        // 初始化英雄动画组件
+        InitHeroStateMachine(heroEntity, heroAnima);
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, indexValue);
     }
-
+    
     private void InitEntityAnima(SkeletonGraphic skeletonGraphic)
     {
         skeletonGraphic.initialFlipX = true;
@@ -135,16 +137,38 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         var move = new HeroMoveComponent(entity.GetComponent<RectTransform>());
         entity.AllComponentList.Add(move);
     }
-
-    private void InitHeroStateMachine(HeroEntity entity)
+    
+    /// <summary>
+    /// 初始化英雄状态机
+    /// </summary>
+    /// <param name="entity"></param>
+    /// <param name="skeletonGraphic"></param>
+    private void InitHeroStateMachine(HeroEntity entity, SkeletonGraphic skeletonGraphic)
     {
         var stateMachine = new HeroStateMachineComponent();
         var idleState = new IdleState();
         var attackState = new AttackState();
         var hitState = new HitState();
         var deadState = new DeadState();
-        var stateConvert = new List<StateConvert>();
-        stateConvert.Add(new StateConvert { CurrentState = StateType.Idle });
+        idleState.Init(skeletonGraphic);
+        attackState.Init(skeletonGraphic);
+        hitState.Init(skeletonGraphic);
+        deadState.Init(skeletonGraphic);
+        var stateConvert = new List<StateConvert>
+        {
+            new()
+            {
+                CurrentState = StateType.Idle, ChangeState = new List<IState> { attackState, hitState, deadState }
+            },
+            new()
+            {
+                CurrentState = StateType.Attack, ChangeState = new List<IState> { idleState, hitState, deadState }
+            },
+            new()
+            {
+                CurrentState = StateType.Hit, ChangeState = new List<IState> { idleState, deadState }
+            }
+        };
         stateMachine.Init(entity, idleState, stateConvert);
     }
     

@@ -1,4 +1,5 @@
 using Spine.Unity;
+using UnityEngine;
 
 public class DeadState : IState
 {
@@ -7,12 +8,15 @@ public class DeadState : IState
 
     public void Init(SkeletonGraphic skeletonGraphic)
     {
-        
+        SkeletonGraphic = skeletonGraphic;
     }
-
+    
     public void Enter()
     {
-
+        SkeletonGraphic.AnimationState.SetAnimation(0, "Dead", false).Complete += entry =>
+        {
+            Debug.Log($"Dead动画结束了");
+        };
     }
 
     public void Tick()

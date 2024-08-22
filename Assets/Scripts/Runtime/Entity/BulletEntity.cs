@@ -129,7 +129,7 @@ public class BulletEntity : MonoBehaviour, Entity
         currentTriggerCount++;
         if (currentTriggerCount == triggerDeadCount)
         {
-            EntitySystem.Instance.EnemyDead(entity.EntityId);
+            EntitySystem.Instance.EnemyDead(EntityId);
         }
     }
 

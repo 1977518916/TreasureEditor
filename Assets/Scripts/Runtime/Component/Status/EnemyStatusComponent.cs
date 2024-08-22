@@ -53,7 +53,6 @@ public class EnemyStatusComponent : StatusComponent
             // 伤害飘字
             // 播放受击动画
             // 然后退出
-            return;
         }
         else
         {

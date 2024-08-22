@@ -40,8 +40,9 @@ public class BulletEntity : MonoBehaviour, Entity
     /// <summary>
     /// 初始化子弹
     /// </summary>
-    public void InitBullet(EntityType entityType)
+    public void InitBullet(EntityType entityType, int hurt)
     {
+        bulletHurt = hurt;
         targetEntityType = entityType;
         GenerateAttackBox();
     }
@@ -115,24 +116,29 @@ public class BulletEntity : MonoBehaviour, Entity
                 throw new ArgumentOutOfRangeException();
         }
     }
-    
+
     /// <summary>
     /// 伤害实体
     /// </summary>
     private void HurtEntity(Entity entity)
     {
-        foreach (var component in entity.AllComponentList)
+        switch (targetEntityType)
         {
-            if (component is StatusComponent statusComponent)
-            {
-                // 扣血
-                statusComponent.Hit(bulletHurt);
-            }
-            
-            break;
+            case EntityType.None:
+                break;
+            case EntityType.HeroEntity:
+                entity.GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(bulletHurt);
+                break;
+            case EntityType.EnemyEntity:
+                entity.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit(bulletHurt);
+                break;
+            case EntityType.BulletEnemy:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
     }
-    
+
     /// <summary>
     /// 是否是英雄实体
     /// </summary>

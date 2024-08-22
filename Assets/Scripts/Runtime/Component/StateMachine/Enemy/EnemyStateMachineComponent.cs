@@ -20,9 +20,11 @@ public class EnemyStateMachineComponent : StateMachineComponent
     public StateType LastState { get; set; }
     public Dictionary<StateType, List<StateType>> StateConvertDic { get; set; }
     public Dictionary<StateType, IState> AllStateDic { get; set; }
+    public Entity Entity { get; set; }
     private IState currentState;
     public void Init(Entity entity, IState initState, Dictionary<StateType, List<StateType>> stateConvertDic, Dictionary<StateType, IState> allStateDic)
     {
+        Entity = entity;
         currentState = initState;
         CurrentState = initState.StateType;
         LastState = StateType.None;
@@ -38,7 +40,7 @@ public class EnemyStateMachineComponent : StateMachineComponent
 
     public void TryChangeState(StateType changeState)
     {
-        if(!StateConvertDic[changeState].Contains(changeState) || currentState.Priority() > AllStateDic[changeState].Priority())
+        if(!StateConvertDic[CurrentState].Contains(changeState) || currentState.Priority() > AllStateDic[changeState].Priority())
         {
             return;
         }

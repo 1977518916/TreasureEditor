@@ -105,6 +105,8 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         InitHeroMove(heroEntity);
         // 初始化英雄状态机组件 和 动画组件
         InitHeroStateMachine(heroEntity, InitHeroEntityAnimation(heroEntity.EntityId, heroAnima, heroEntity));
+        // 初始化死亡组件
+        InitHeroDead(heroEntity.EntityId, heroEntity);
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, indexValue);
     }
@@ -131,10 +133,22 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         heroEntity.AllComponentList.Add(anima);
         return anima;
     }
+    
+    private void InitHeroDead(long entityId, HeroEntity entity)
+    {
+        var dead = new HeroDeadComponent(entityId);
+        entity.AllComponentList.Add(dead);
+    }
+    
+    private void InitEnemyDead(long entityId, EnemyEntity entity)
+    {
+        var dead = new EnemyDeadComponent(entityId);
+        entity.AllComponentList.Add(dead);
+    }
 
     private void InitHeroEntityAttack(HeroEntity heroEntity, PointDetectComponent pointDetectComponent)
     {
-        var attack = new HeroAttackComponent(9, 1.5f, 3, heroEntity, pointDetectComponent);
+        var attack = new HeroAttackComponent(heroEntity.GetHeroData().bulletAmount, 2.5f, 3, heroEntity, pointDetectComponent);
         heroEntity.AllComponentList.Add(attack);
     }
 
@@ -254,7 +268,6 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         AddEntity(entity.EntityId, entity);
         var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
         var anim = model.GetComponent<SkeletonGraphic>();
-
         model.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
         model.transform.Translate(0, -30, 0, Space.Self);
         // 初始化敌人位置
@@ -267,6 +280,8 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 120f);
         // 初始化敌人状态机组件 和 动画组件
         InitEnemyState(entity, InitEnemyEntityAnimation(entity.EntityId, anim, entity));
+        // 初始化敌人死亡组件
+        InitEnemyDead(entity.EntityId, entity);
         //初始化敌人攻击
         entity.AllComponentList.Add(new EnemyAttackComponent(1, entity));
         //初始化敌人状态

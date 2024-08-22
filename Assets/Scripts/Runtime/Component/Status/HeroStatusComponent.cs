@@ -116,11 +116,12 @@ public class HeroStatusComponent : StatusComponent
         attackCd.fillAmount = 0;
         attackCd.DOFillAmount(1, 3f).onComplete += () =>
         {
+            HideAttackCd();
             // 通知继续攻击的事件
             EventMgr.Instance.TriggerEvent(GameEvent.AttackEndCd, heroEntity.EntityId);
         };
     }
-
+    
     /// <summary>
     /// 受击 血量扣到指定进度
     /// </summary>
@@ -134,7 +135,7 @@ public class HeroStatusComponent : StatusComponent
             EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, heroEntity.EntityId);
         };
     }
-
+    
     /// <summary>
     /// 重置状态
     /// </summary>

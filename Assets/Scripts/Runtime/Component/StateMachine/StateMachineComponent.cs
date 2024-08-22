@@ -24,6 +24,11 @@ public interface StateMachineComponent : IComponent
     /// 所有状态字典
     /// </summary>
     public Dictionary<StateType, IState> AllStateDic { get; set; }
+    
+    /// <summary>
+    /// 实体
+    /// </summary>
+    public Entity Entity { get; set; }
 
     /// <summary>
     /// 初始化

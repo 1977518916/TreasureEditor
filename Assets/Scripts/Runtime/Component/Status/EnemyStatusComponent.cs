@@ -48,6 +48,8 @@ public class EnemyStatusComponent : StatusComponent
         hpValue -= value;
         if (hpValue > 0)
         {
+            entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent)
+                .TryChangeState(StateType.Hit);
             // 伤害飘字
             // 播放受击动画
             // 然后退出

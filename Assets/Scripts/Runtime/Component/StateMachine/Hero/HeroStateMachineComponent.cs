@@ -6,8 +6,6 @@ using System.Linq;
 /// </summary>
 public class HeroStateMachineComponent : StateMachineComponent
 {
-    private HeroEntity heroEntity;
-
     private AnimationComponent animationComponent;
 
     private IState currentState;
@@ -16,12 +14,13 @@ public class HeroStateMachineComponent : StateMachineComponent
     public StateType LastState { get; set; }
     public Dictionary<StateType, List<StateType>> StateConvertDic { get; set; }
     public Dictionary<StateType, IState> AllStateDic { get; set; }
+    public Entity Entity { get; set; }
 
     public void Init(Entity entity, IState initState, Dictionary<StateType, List<StateType>> stateConvertDic,
         Dictionary<StateType, IState> allStateDic)
     {
-        heroEntity = (HeroEntity)entity;
-        animationComponent = heroEntity.GetSpecifyComponent<AnimationComponent>(ComponentType.AnimationComponent);
+        Entity = entity;
+        animationComponent = entity.GetSpecifyComponent<AnimationComponent>(ComponentType.AnimationComponent);
         currentState = initState;
         CurrentState = initState.StateType;
         LastState = StateType.None;

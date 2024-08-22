@@ -1,4 +1,6 @@
+using System;
 using Spine.Unity;
+using UnityEngine;
 
 public interface AnimationComponent : IComponent
 {
@@ -16,5 +18,5 @@ public interface AnimationComponent : IComponent
     /// <summary>
     /// 改变动画
     /// </summary>
-    public void ChangeAnima(StateType stateType, bool isLoop);
+    public void ChangeAnima(StateType stateType, bool isLoop, Action action);
 }

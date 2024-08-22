@@ -3,13 +3,13 @@ using Spine.Unity;
 public class SkillState : IState
 {
     public StateType StateType => StateType.Skill;
-    public SkeletonGraphic SkeletonGraphic { get; set; }
-
-    public void Init(SkeletonGraphic skeletonGraphic)
+    public AnimationComponent AnimationComponent { get; set; }
+    
+    public void Init(AnimationComponent animationComponent)
     {
-        
+        AnimationComponent = animationComponent;
     }
-
+    
     public void Enter()
     {
 

@@ -4,19 +4,16 @@ using UnityEngine;
 public class RunState : IState
 {
     public StateType StateType => StateType.Run;
-    public SkeletonGraphic SkeletonGraphic { get; set; }
-    
-    public void Init(SkeletonGraphic skeletonGraphic)
+    public AnimationComponent AnimationComponent { get; set; }
+
+    public void Init(AnimationComponent animationComponent)
     {
-        SkeletonGraphic = skeletonGraphic;
+        AnimationComponent = animationComponent;
     }
     
     public void Enter()
     {
-        SkeletonGraphic.AnimationState.SetAnimation(0, "Run", false).Complete += entry =>
-        {
-            Debug.Log($"Run动画结束了");
-        };
+        AnimationComponent.ChangeAnima(StateType.Run, true, () => { Debug.Log($"结束跑步动画"); });
     }
 
     public void Tick()

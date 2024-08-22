@@ -98,8 +98,8 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         InitDetect(heroEntity, "Enemy", "UI", hero.GetComponent<RectTransform>());
         // 初始化英雄移动组件
         InitHeroMove(heroEntity);
-        // 初始化英雄动画组件
-        InitHeroStateMachine(heroEntity, heroAnima);
+        // 初始化英雄状态机组件 和 动画组件
+        InitHeroStateMachine(heroEntity, InitHeroEntityAnimation(heroEntity.EntityId, heroAnima, heroEntity));
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, indexValue);
     }
@@ -118,7 +118,14 @@ public class EntitySystem : MonoSingleton<EntitySystem>
             heroEntity);
         heroEntity.AllComponentList.Add(status);
     }
-    
+
+    private AnimationComponent InitHeroEntityAnimation(long entityId, SkeletonGraphic skeletonGraphic, HeroEntity heroEntity)
+    {
+        var anima = new HeroAnimationComponent(entityId, skeletonGraphic);
+        heroEntity.AllComponentList.Add(anima);
+        return anima;
+    }
+
     private void InitHeroEntityAttack(HeroEntity heroEntity)
     {
         var attack = new HeroAttackComponent(9, heroEntity, 3);
@@ -137,23 +144,23 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         var move = new HeroMoveComponent(entity.GetComponent<RectTransform>());
         entity.AllComponentList.Add(move);
     }
-    
+
     /// <summary>
     /// 初始化英雄状态机
     /// </summary>
     /// <param name="entity"></param>
-    /// <param name="skeletonGraphic"></param>
-    private void InitHeroStateMachine(HeroEntity entity, SkeletonGraphic skeletonGraphic)
+    /// <param name="animationComponent"></param>
+    private void InitHeroStateMachine(HeroEntity entity, AnimationComponent animationComponent)
     {
         var stateMachine = new HeroStateMachineComponent();
         var idleState = new IdleState();
         var attackState = new AttackState();
         var hitState = new HitState();
         var deadState = new DeadState();
-        idleState.Init(skeletonGraphic);
-        attackState.Init(skeletonGraphic);
-        hitState.Init(skeletonGraphic);
-        deadState.Init(skeletonGraphic);
+        idleState.Init(animationComponent);
+        attackState.Init(animationComponent);
+        hitState.Init(animationComponent);
+        deadState.Init(animationComponent);
         var stateConvert = new List<StateConvert>
         {
             new()

@@ -7,19 +7,16 @@ using UnityEngine;
 public class IdleState : IState
 {
     public StateType StateType => StateType.Idle;
-    public SkeletonGraphic SkeletonGraphic { get; set; }
+    public AnimationComponent AnimationComponent { get; set; }
     
-    public void Init(SkeletonGraphic skeletonGraphic)
+    public void Init(AnimationComponent animationComponent)
     {
-        SkeletonGraphic = skeletonGraphic;
+        AnimationComponent = animationComponent;
     }
     
     public void Enter()
     {
-        SkeletonGraphic.AnimationState.SetAnimation(0, "Idle", false).Complete += entry =>
-        {
-            Debug.Log($"Idle动画结束了");
-        };
+        AnimationComponent.ChangeAnima(StateType.Idle, true, () => { Debug.Log($"结束一次待机动画"); });
     }
     
     public void Tick()

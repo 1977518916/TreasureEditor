@@ -28,9 +28,10 @@ public class HeroAnimationComponent : AnimationComponent
         return SkeletonGraphic;
     }
 
-    public void ChangeAnima(StateType stateType, bool isLoop)
+    public void ChangeAnima(StateType stateType, bool isLoop, Action action)
     {
-        SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop);
+        SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop).Complete +=
+            entry => action?.Invoke();
     }
     
     private string GetAnimaName(StateType stateType)

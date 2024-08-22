@@ -4,19 +4,16 @@ using UnityEngine;
 public class HitState : IState
 {
     public StateType StateType => StateType.Hit;
-    public SkeletonGraphic SkeletonGraphic { get; set; }
-    
-    public void Init(SkeletonGraphic skeletonGraphic)
+    public AnimationComponent AnimationComponent { get; set; }
+
+    public void Init(AnimationComponent animationComponent)
     {
-        SkeletonGraphic = skeletonGraphic;
+        AnimationComponent = animationComponent;
     }
     
     public void Enter()
     {
-        SkeletonGraphic.AnimationState.SetAnimation(0, "Hit", false).Complete += entry =>
-        {
-            Debug.Log($"Hit动画结束了");
-        };
+        AnimationComponent.ChangeAnima(StateType.Hit, false, () => { Debug.Log($"受击动画结束"); });
     }
     
     public void Tick()

@@ -4,19 +4,16 @@ using UnityEngine;
 public class AttackState : IState
 {
     public StateType StateType => StateType.Attack;
-    public SkeletonGraphic SkeletonGraphic { get; set; }
+    public AnimationComponent AnimationComponent { get; set; }
     
-    public void Init(SkeletonGraphic skeletonGraphic)
+    public void Init(AnimationComponent animationComponent)
     {
-        SkeletonGraphic = skeletonGraphic;
+        AnimationComponent = animationComponent;
     }
     
     public void Enter()
     {
-        SkeletonGraphic.AnimationState.SetAnimation(0, "Attack", false).Complete += entry =>
-        {
-            Debug.Log($"Attack动画结束了");
-        };
+        AnimationComponent.ChangeAnima(StateType.Attack, false, () => { Debug.Log($"攻击动画结束"); });
     }
 
     public void Tick()

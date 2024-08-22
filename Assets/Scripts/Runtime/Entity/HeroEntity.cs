@@ -91,6 +91,7 @@ public class HeroEntity : MonoBehaviour, Entity
             ComponentType.RayComponent => false,
             ComponentType.StatusComponent => component is StatusComponent,
             ComponentType.DetectComponent => component is DetectComponent,
+            ComponentType.AnimationComponent => component is AnimationComponent,
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }

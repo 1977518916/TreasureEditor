@@ -22,14 +22,14 @@ public class HeroStateMachineComponent : StateMachineComponent
         animationComponent = heroEntity.GetSpecifyComponent<AnimationComponent>(ComponentType.AnimationComponent);
         CurrentState = initState;
         StateConvertList = stateConverts;
-        CurrentState.Init(animationComponent.GetSkeletonGraphic());
+        CurrentState.Init(animationComponent);
     }
-
+    
     public void ChangeState(IState changeState)
     {
         LastState = CurrentState;
         CurrentState = changeState;
-        CurrentState.Init(animationComponent.GetSkeletonGraphic());
+        CurrentState.Init(animationComponent);
         CurrentState.Enter();
     }
     

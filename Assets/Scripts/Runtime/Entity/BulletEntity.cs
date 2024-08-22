@@ -53,7 +53,7 @@ public class BulletEntity : MonoBehaviour, Entity
 
         return default;
     }
-
+    
     public bool IsSpecifyComponent(IComponent component, ComponentType componentType)
     {
         return componentType switch
@@ -63,6 +63,7 @@ public class BulletEntity : MonoBehaviour, Entity
             ComponentType.RayComponent => false,
             ComponentType.StatusComponent => component is StatusComponent,
             ComponentType.DetectComponent => component is DetectComponent,
+            ComponentType.AnimationComponent => component is AnimationComponent,
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }

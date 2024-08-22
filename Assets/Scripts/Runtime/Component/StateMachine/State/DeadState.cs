@@ -4,19 +4,16 @@ using UnityEngine;
 public class DeadState : IState
 {
     public StateType StateType => StateType.Dead;
-    public SkeletonGraphic SkeletonGraphic { get; set; }
+    public AnimationComponent AnimationComponent { get; set; }
 
-    public void Init(SkeletonGraphic skeletonGraphic)
+    public void Init(AnimationComponent animationComponent)
     {
-        SkeletonGraphic = skeletonGraphic;
+        AnimationComponent = animationComponent;
     }
     
     public void Enter()
     {
-        SkeletonGraphic.AnimationState.SetAnimation(0, "Dead", false).Complete += entry =>
-        {
-            Debug.Log($"Dead动画结束了");
-        };
+        AnimationComponent.ChangeAnima(StateType.Dead, false, () => { Debug.Log($"死亡动画结束"); });
     }
 
     public void Tick()

@@ -11,14 +11,14 @@ public interface IState
     public StateType StateType { get; }
     
     /// <summary>
-    /// 动画文件
+    /// 动画组件
     /// </summary>
-    public SkeletonGraphic SkeletonGraphic { set; }
+    public AnimationComponent AnimationComponent { get; set; }
 
     /// <summary>
     /// 初始化
     /// </summary>
-    public void Init(SkeletonGraphic skeletonGraphic);
+    public void Init(AnimationComponent animationComponent);
 
     /// <summary>
     /// 进入状态

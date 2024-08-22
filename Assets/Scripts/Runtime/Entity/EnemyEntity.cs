@@ -8,11 +8,13 @@ using UnityEngine;
 public class EnemyEntity : MonoBehaviour, Entity
 {
     public long EntityId { get; set; }
+    public EntityType EntityType { get; set; }
     public List<IComponent> AllComponentList { get; set; }
     
     public void Init()
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
+        EntityType = EntityType.EnemyEntity;
         AllComponentList = new List<IComponent>();
     }
 

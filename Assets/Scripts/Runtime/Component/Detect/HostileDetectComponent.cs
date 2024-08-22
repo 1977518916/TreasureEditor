@@ -28,4 +28,9 @@ public class HostileDetectComponent : DetectComponent
     {
         
     }
+
+    public void Release()
+    {
+        
+    }
 }

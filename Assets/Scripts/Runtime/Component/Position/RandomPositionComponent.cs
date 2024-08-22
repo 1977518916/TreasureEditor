@@ -10,6 +10,11 @@ namespace Runtime.Component.Position
 
         }
 
+        public void Release()
+        {
+            
+        }
+
         public void RandomizePosition(RectTransform character)
         {
             RectTransform transform = character.parent as RectTransform;

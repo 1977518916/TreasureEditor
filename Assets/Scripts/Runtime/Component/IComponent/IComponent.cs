@@ -4,4 +4,6 @@
 public interface IComponent
 {
     public void Tick(float time);
+    
+    public void Release();
 }

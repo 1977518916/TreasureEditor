@@ -6,6 +6,7 @@ using UnityEngine;
 public class BulletEntity : MonoBehaviour, Entity
 {
     public long EntityId { get; set; }
+    public EntityType EntityType { get; set; }
 
     public List<IComponent> AllComponentList { get; set; }
 
@@ -27,6 +28,7 @@ public class BulletEntity : MonoBehaviour, Entity
     public void Init()
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
+        EntityType = EntityType.BulletEnemy;
     }
     
     public T GetSpecifyComponent<T>(ComponentType componentType) where T : IComponent

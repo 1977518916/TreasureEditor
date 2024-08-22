@@ -54,4 +54,9 @@ public class EnemyStateMachineComponent : StateMachineComponent
     {
         CurrentState.Tick();
     }
+
+    public void Release()
+    {
+        
+    }
 }

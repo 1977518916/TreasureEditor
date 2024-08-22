@@ -48,4 +48,9 @@ public class HeroStateMachineComponent : StateMachineComponent
     {
         CurrentState.Tick();
     }
+
+    public void Release()
+    {
+        
+    }
 }

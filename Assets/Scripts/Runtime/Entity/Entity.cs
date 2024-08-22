@@ -9,6 +9,11 @@ public interface Entity
     /// 实体ID
     /// </summary>
     public long EntityId { get; set; }
+    
+    /// <summary>
+    /// 实体类型
+    /// </summary>
+    public EntityType EntityType { get; set; }
 
     /// <summary>
     /// 所有组件

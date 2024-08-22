@@ -17,7 +17,12 @@ public class HeroAnimationComponent : AnimationComponent
     {
         
     }
-    
+
+    public void Release()
+    {
+        
+    }
+
     public SkeletonGraphic GetSkeletonGraphic()
     {
         return SkeletonGraphic;

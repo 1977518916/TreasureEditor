@@ -40,7 +40,12 @@ public class EnemyMoveComponent : MoveComponent
         ContinueMove = !pointDetectComponent.IsVeryClose();
         Move(time);
     }
-    
+
+    public void Release()
+    {
+        
+    }
+
     public void Move(float time)
     {
         if (!ContinueMove) return;

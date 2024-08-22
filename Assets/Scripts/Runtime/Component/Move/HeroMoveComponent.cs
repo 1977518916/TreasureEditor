@@ -16,6 +16,11 @@ public class HeroMoveComponent : MoveComponent
         
     }
 
+    public void Release()
+    {
+        
+    }
+
     public RectTransform EntityTransform { get; set; }
     public float MoveSpeed { get; set; }
     public Vector2 MoveDirection { get; set; }

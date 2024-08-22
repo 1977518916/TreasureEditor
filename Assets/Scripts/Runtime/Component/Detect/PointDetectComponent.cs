@@ -24,7 +24,7 @@ public class PointDetectComponent : DetectComponent
     /// 检测的距离
     /// </summary>
     private float distance;
-
+    
     public PointDetectComponent(long entityId, Entity entity, RectTransform transform, EntityType targetEntityType)
     {
         targetEntityId = entityId;
@@ -41,12 +41,22 @@ public class PointDetectComponent : DetectComponent
         
     }
     
+    public void Release()
+    {
+        EventMgr.Instance.RemoveEvent(GameEvent.EntityDead);
+    }
+
     private void TargetDead(long targetId)
     {
         targetEntityId = EntitySystem.Instance.ReplaceTarget(targetEntityType);
+        var targetEntity = GetTargetEntity();
+        if (targetEntity != null)
+        {
+            target = targetEntity.GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform;
+        }
     }
     
-    public Entity GetTargetEntity()
+    private Entity GetTargetEntity()
     {
         return targetEntityId == -1 ? null : EntitySystem.Instance.GetEntity(targetEntityId);
     }

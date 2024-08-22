@@ -21,6 +21,11 @@ public class EnemyAnimationComponent : AnimationComponent
 
     }
 
+    public void Release()
+    {
+        
+    }
+
     public SkeletonGraphic GetSkeletonGraphic()
     {
         return SkeletonGraphic;

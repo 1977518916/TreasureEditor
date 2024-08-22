@@ -69,6 +69,11 @@ public class HeroStatusComponent : StatusComponent
         
     }
 
+    public void Release()
+    {
+        
+    }
+
     /// <summary>
     /// 隐藏血条
     /// </summary>

@@ -29,6 +29,11 @@ public class EnemyStatusComponent : StatusComponent
         
     }
 
+    public void Release()
+    {
+        
+    }
+
     /// <summary>
     /// 每调用一次会扣除一次受击次数并且会 进入 受击状态
     /// </summary>

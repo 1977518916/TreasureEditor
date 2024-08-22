@@ -256,6 +256,16 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
         return heroList;
     }
+    
+    /// <summary>
+    /// 获取实体类型
+    /// </summary>
+    /// <param name="entityId"></param>
+    /// <returns></returns>
+    public EntityType GetEntityType(long entityId)
+    {
+        return allEntityDic.TryGetValue(entityId, out var entity) ? entity.EntityType : EntityType.None;
+    }
 
     /// <summary>
     ///  获取存活的敌人的ID

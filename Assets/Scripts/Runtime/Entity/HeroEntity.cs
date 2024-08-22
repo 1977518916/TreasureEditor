@@ -13,7 +13,9 @@ public class HeroEntity : MonoBehaviour, Entity
     [ShowInInspector]
     [ReadOnly]
     public long EntityId { get; set; }
-    
+
+    public EntityType EntityType { get; set; }
+
     public List<IComponent> AllComponentList { get; set; }
     
     /// <summary>
@@ -42,6 +44,7 @@ public class HeroEntity : MonoBehaviour, Entity
     public void Init()
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
+        EntityType = EntityType.HeroEntity;
     }
     
     /// <summary>

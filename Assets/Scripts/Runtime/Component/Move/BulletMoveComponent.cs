@@ -32,7 +32,12 @@ public class BulletMoveComponent : MoveComponent
     {
         Move(time);
     }
-    
+
+    public void Release()
+    {
+        
+    }
+
     /// <summary>
     /// 移动处理
     /// </summary>

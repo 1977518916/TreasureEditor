@@ -75,7 +75,12 @@ public class HeroAttackComponent : AttackComponent
                 attackCount = attackMaxCount;
         }
     }
-    
+
+    public void Release()
+    {
+        
+    }
+
     /// <summary>
     /// 攻击
     /// </summary>

@@ -26,7 +26,12 @@ public class EnemyAttackComponent : AttackComponent
             IsInAttackInterval = !(LastAttackTime - Time.time >= AttackInterval);
         }
     }
-    
+
+    public void Release()
+    {
+        
+    }
+
     public void Attack(float time, Vector2 point)
     {
         if (IsInAttackInterval) return; 

@@ -19,6 +19,6 @@ public class HeroDeadComponent : DeadComponent
     
     public void Dead()
     {
-        
+        EntitySystem.Instance.HeroDead(EntityID);
     }
 }

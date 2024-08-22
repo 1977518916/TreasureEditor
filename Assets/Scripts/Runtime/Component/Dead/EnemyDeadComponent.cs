@@ -9,12 +9,12 @@ public class EnemyDeadComponent : DeadComponent
     
     public void Dead()
     {
-        
+        EntitySystem.Instance.EnemyDead(EntityID);
     }
 
     public void Tick(float time)
     {
-
+        
     }
 
     public void Release()

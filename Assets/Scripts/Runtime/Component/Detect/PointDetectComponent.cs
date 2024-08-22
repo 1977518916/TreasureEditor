@@ -66,6 +66,7 @@ public class PointDetectComponent : DetectComponent
 
     private void TargetDead(long targetId)
     {
+        if (EntitySystem.Instance.GetEntityType(targetId) != targetEntityType) return;
         targetEntityId = EntitySystem.Instance.ReplaceTarget(targetEntityType);
         var targetEntity = GetTargetEntity();
         if (targetEntity != null)

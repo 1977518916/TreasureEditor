@@ -116,7 +116,6 @@ public class BulletEntity : MonoBehaviour, Entity
         var entity = other.GetComponent<Entity>();
         if (entity == null) return;
         if (entity.EntityType != targetEntityType) return;
-        Debug.Log($"击中{targetEntityType}目标");
         switch (targetEntityType)
         {
             case EntityType.HeroEntity:

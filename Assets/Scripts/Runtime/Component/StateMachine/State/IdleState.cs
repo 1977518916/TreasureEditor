@@ -16,7 +16,7 @@ public class IdleState : IState
     
     public void Enter(StateMachineComponent stateMachineComponent)
     {
-        AnimationComponent.ChangeAnima(StateType.Idle, true, () => { Debug.Log($"结束一次待机动画"); });
+        AnimationComponent.ChangeAnima(StateType.Idle, true, () => {});
     }
     
     public void Tick()

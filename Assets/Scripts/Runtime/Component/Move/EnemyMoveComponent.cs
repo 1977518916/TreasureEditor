@@ -33,7 +33,11 @@ public class EnemyMoveComponent : MoveComponent
         MoveSpeed = moveSpeed;
         EntityTransform = entityTransform;
         ContinueMove = true;
-        MoveDirection = (this.target.position - EntityTransform.position).normalized;
+        if (this.target == null)
+        {
+            MoveDirection = (this.target.position - EntityTransform.position).normalized;
+        }
+
         EventMgr.Instance.RegisterEvent<Entity>(this.entity.EntityId, GameEvent.ReplaceTarget, ReplaceTarget);
     }
     

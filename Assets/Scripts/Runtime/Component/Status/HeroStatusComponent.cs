@@ -61,7 +61,7 @@ public class HeroStatusComponent : StatusComponent
         maxHpValue = entity.GetHeroData().hp;
         currentHpValue = maxHpValue;
         ResetStatus();
-        EventMgr.Instance.RegisterEvent<long>(GameEvent.AttackStartCd, WaitAttackCd);
+        EventMgr.Instance.RegisterEvent<long>(heroEntity.EntityId, GameEvent.AttackStartCd, WaitAttackCd);
     }
     
     public void Tick(float time)
@@ -71,7 +71,7 @@ public class HeroStatusComponent : StatusComponent
 
     public void Release()
     {
-        EventMgr.Instance.RemoveEvent(GameEvent.AttackStartCd);
+        EventMgr.Instance.RemoveEvent(heroEntity.EntityId, GameEvent.AttackStartCd);
     }
 
     /// <summary>

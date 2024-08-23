@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Linq;
 using Tao_Framework.Core.Singleton;
 using UnityTimer;
 
@@ -10,135 +12,197 @@ namespace Tao_Framework.Core.Event
         /// <summary>
         /// 游戏事件 无参 字典
         /// </summary>
-        private readonly Dictionary<GameEvent, IEventInfo> _gameEventDic = new Dictionary<GameEvent, IEventInfo>();
+        private ConcurrentDictionary<long, List<EventData>> _gameEventDic = new ConcurrentDictionary<long, List<EventData>>();
 
         /// <summary>
         /// UI事件字典
         /// </summary>
-        private readonly Dictionary<UIEvent, IEventInfo> _uiEventDic = new Dictionary<UIEvent, IEventInfo>();
+        private ConcurrentDictionary<long, List<UIEventData>> _uiEventDic = new ConcurrentDictionary<long, List<UIEventData>>();
 
         /// <summary>
         /// 注册事件 游戏事件 无参
         /// </summary>
+        /// <param name="entityID"></param>
         /// <param name="key"></param>
         /// <param name="action"></param>
-        public void RegisterEvent(GameEvent key, Action action)
+        public void RegisterEvent(long entityID, GameEvent key, Action action)
         {
-            if (_gameEventDic.TryGetValue(key, out var value))
+            if (_gameEventDic.TryGetValue(entityID, out var value))
             {
-                (value as EventInfo)?.Add(action);
+                value.Add(new EventData
+                {
+                    GameEvent = key,
+                    EventInfo = new EventInfo(action)
+                });
             }
             else
             {
-                _gameEventDic.Add(key, new EventInfo(action));
+                _gameEventDic.GetOrAdd(entityID, new List<EventData>
+                {
+                    new()
+                    {
+                        GameEvent = key,
+                        EventInfo = new EventInfo(action)
+                    }
+                });
             }
         }
 
         /// <summary>
         /// 注册事件 UI事件 无参
         /// </summary>
+        /// <param name="entityID"></param>
         /// <param name="key"></param>
         /// <param name="action"></param>
-        public void RegisterEvent(UIEvent key, Action action)
+        public void RegisterEvent(long entityID, UIEvent key, Action action)
         {
-            if (_uiEventDic.TryGetValue(key, out var value))
+            if (_uiEventDic.TryGetValue(entityID, out var value))
             {
-                (value as EventInfo)?.Add(action);
+                value.Add(new UIEventData()
+                {
+                    UIEvent = key,
+                    EventInfo = new EventInfo(action)
+                });
             }
             else
             {
-                _uiEventDic.Add(key, new EventInfo(action));
+                _uiEventDic.GetOrAdd(entityID, new List<UIEventData>
+                {
+                    new()
+                    {
+                        UIEvent = key,
+                        EventInfo = new EventInfo(action)
+                    }
+                });
             }
         }
-        
+
         /// <summary>
         /// 注册事件 游戏事件 带参数的
         /// </summary>
+        /// <param name="entityID"></param>
         /// <param name="key"></param>
         /// <param name="action"></param>
         /// <typeparam name="T"></typeparam>
-        public void RegisterEvent<T>(GameEvent key, Action<T> action)
+        public void RegisterEvent<T>(long entityID, GameEvent key, Action<T> action)
         {
-            if (_gameEventDic.TryGetValue(key, out var value))
+            if (_gameEventDic.TryGetValue(entityID, out var value))
             {
-                (value as EventInfo<T>)?.Add(action);
+                value.Add(new EventData
+                {
+                    GameEvent = key,
+                    EventInfo = new EventInfo<T>(action)
+                });
             }
             else
             {
-                _gameEventDic.Add(key, new EventInfo<T>(action));
+                _gameEventDic.GetOrAdd(entityID, new List<EventData>
+                {
+                    new()
+                    {
+                        GameEvent = key,
+                        EventInfo = new EventInfo<T>(action)
+                    }
+                });
             }
         }
-        
+
         /// <summary>
         /// 注册事件 UI事件 带参数的
         /// </summary>
+        /// <param name="entityID"></param>
         /// <param name="key"></param>
         /// <param name="action"></param>
         /// <typeparam name="T"></typeparam>
-        public void RegisterEvent<T>(UIEvent key, Action<T> action)
+        public void RegisterEvent<T>(long entityID, UIEvent key, Action<T> action)
         {
-            if (_uiEventDic.TryGetValue(key, out var value))
+            if (_uiEventDic.TryGetValue(entityID, out var value))
             {
-                (value as EventInfo<T>)?.Add(action);
+                value.Add(new UIEventData()
+                {
+                    UIEvent = key,
+                    EventInfo = new EventInfo<T>(action)
+                });
             }
             else
             {
-                _uiEventDic.Add(key, new EventInfo<T>(action));
+                _uiEventDic.GetOrAdd(entityID, new List<UIEventData>
+                {
+                    new()
+                    {
+                        UIEvent = key,
+                        EventInfo = new EventInfo<T>(action)
+                    }
+                });
             }
         }
 
         /// <summary>
         /// 清除事件 但是不移除对应的key
         /// </summary>
+        /// <param name="entityID"></param>
         /// <param name="key"></param>
-        public void ClearEvent(GameEvent key)
+        public void ClearEvent(long entityID, GameEvent key)
         {
-            if (_gameEventDic.TryGetValue(key, out var value))
+            if (!_gameEventDic.TryGetValue(entityID, out var value)) return;
+            foreach (var eventData in value.Where(eventData => eventData.GameEvent == key))
             {
-                (value as EventInfo)?.Clear();
+                (eventData.EventInfo as EventInfo)?.Clear();
             }
         }
 
         /// <summary>
         /// 清除事件 但是不移除对应的key
         /// </summary>
+        /// <param name="entityID"></param>
         /// <param name="key"></param>
-        public void ClearEvent(UIEvent key)
+        public void ClearEvent(long entityID, UIEvent key)
         {
-            if (_uiEventDic.TryGetValue(key, out var value))
+            if (!_uiEventDic.TryGetValue(entityID, out var value)) return;
+            foreach (var eventData in value.Where(eventData => eventData.UIEvent == key))
             {
-                (value as EventInfo)?.Clear();
+                (eventData.EventInfo as EventInfo)?.Clear();
             }
         }
 
         /// <summary>
         /// 移除事件
         /// </summary>
+        /// <param name="entityID"></param>
         /// <param name="key"></param>
-        public void RemoveEvent(GameEvent key)
+        public void RemoveEvent(long entityID, GameEvent key)
         {
-            if (!_gameEventDic.ContainsKey(key)) return;
-            _gameEventDic.Remove(key);
+            if (!_gameEventDic.TryGetValue(entityID, out var value)) return;
+            foreach (var eventData in value.Where(eventData => eventData.GameEvent == key).ToList())
+            {
+                value.Remove(eventData);
+            }
         }
 
         /// <summary>
         /// 移除事件
         /// </summary>
+        /// <param name="entityID"></param>
         /// <param name="key"></param>
-        public void RemoveEvent(UIEvent key)
+        public void RemoveEvent(long entityID, UIEvent key)
         {
-            if (!_uiEventDic.ContainsKey(key)) return;
-            _uiEventDic.Remove(key);
+            if (!_uiEventDic.TryGetValue(entityID, out var value)) return;
+            foreach (var eventData in value.Where(eventData => eventData.UIEvent == key).ToList())
+            {
+                value.Remove(eventData);
+            }
         }
-
+        
         /// <summary>
         /// 触发无参事件
         /// </summary>
         /// <param name="key"></param>
         public void TriggerEvent(GameEvent key)
         {
-            if (!_gameEventDic.TryGetValue(key, out var value)) return;
-            (value as EventInfo)?.Invoke();
+            foreach (var eventData in _gameEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.GameEvent == key)))
+            {
+                (eventData.EventInfo as EventInfo)?.Invoke();
+            }
         }
 
         /// <summary>
@@ -148,8 +212,10 @@ namespace Tao_Framework.Core.Event
         /// <param name="time"></param>
         public void TriggerEvent(GameEvent key, float time)
         {
-            if (!_gameEventDic.TryGetValue(key, out var eventInfo)) return;
-            Timer.Register(time, () => (eventInfo as EventInfo)?.Invoke());
+            foreach (var eventData in _gameEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.GameEvent == key)))
+            {
+                Timer.Register(time, () => (eventData.EventInfo as EventInfo)?.Invoke());
+            }
         }
 
         /// <summary>
@@ -160,8 +226,10 @@ namespace Tao_Framework.Core.Event
         /// <param name="time"></param>
         public void TriggerEvent<T>(GameEvent key, T value, float time)
         {
-            if (!_gameEventDic.TryGetValue(key, out var eventInfo)) return;
-            Timer.Register(time, () => (eventInfo as EventInfo<T>)?.Invoke(value));
+            foreach (var eventData in _gameEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.GameEvent == key)))
+            {
+                Timer.Register(time, () => (eventData.EventInfo as EventInfo<T>)?.Invoke(value));
+            }
         }
 
         /// <summary>
@@ -170,8 +238,10 @@ namespace Tao_Framework.Core.Event
         /// <param name="key"></param>
         public void TriggerEvent(UIEvent key)
         {
-            if (!_uiEventDic.TryGetValue(key, out var value)) return;
-            (value as EventInfo)?.Invoke();
+            foreach (var eventData in _uiEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.UIEvent == key)))
+            {
+                (eventData.EventInfo as EventInfo)?.Invoke();
+            }
         }
 
         /// <summary>
@@ -182,8 +252,10 @@ namespace Tao_Framework.Core.Event
         /// <typeparam name="T"></typeparam>
         public void TriggerEvent<T>(GameEvent key, T value)
         {
-            if (!_gameEventDic.TryGetValue(key, out var eventInfo)) return;
-            (eventInfo as EventInfo<T>)?.Invoke(value);
+            foreach (var eventData in _gameEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.GameEvent == key)))
+            {
+                (eventData.EventInfo as EventInfo<T>)?.Invoke(value);
+            }
         }
 
         /// <summary>
@@ -194,8 +266,16 @@ namespace Tao_Framework.Core.Event
         /// <typeparam name="T"></typeparam>
         public void TriggerEvent<T>(UIEvent key, T value)
         {
-            if (!_uiEventDic.TryGetValue(key, out var eventInfo)) return;
-            (value as EventInfo<T>)?.Invoke(value);
+            foreach (var eventData in _uiEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.UIEvent == key)))
+            {
+                (eventData.EventInfo as EventInfo<T>)?.Invoke(value);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            _gameEventDic.Clear();
+            _uiEventDic.Clear();
         }
     }
 }

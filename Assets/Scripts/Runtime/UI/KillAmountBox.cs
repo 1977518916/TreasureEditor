@@ -18,17 +18,17 @@ namespace Runtime.UI
         {
             entitySystem = EntitySystem.Instance;
             amount.SetText(currentAmount.ToString());
-            EventMgr.Instance.RegisterEvent<long>(GameEvent.EntityDead,UpdateAmount);
+            EventMgr.Instance.RegisterEvent<EntityType>(GetHashCode(),GameEvent.EntityDead,UpdateAmount);
         }
 
         private void OnDisable()
         {
-            EventMgr.Instance.RemoveEvent(GameEvent.EntityDead);
+            EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.EntityDead);
         }
-
-        private void UpdateAmount(long entityId)
+        
+        private void UpdateAmount(EntityType entityType)
         {
-            if (entitySystem.GetEntityType(entityId) != EntityType.EnemyEntity) return;
+            if (entityType != EntityType.EnemyEntity) return;
             currentAmount++;
             amount.SetText(currentAmount.ToString());
         }

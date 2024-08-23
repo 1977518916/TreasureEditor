@@ -39,8 +39,8 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         {
             GenerateEntity(heroData.Key, heroData.Value);
         }
-        
-        EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GameEvent.MakeEnemy, GenerateEntity);
+
+        EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy, GenerateEntity);
     }
     
     private void Update()
@@ -458,6 +458,6 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         }
         
         allEntityDic.Clear();
-        EventMgr.Instance.RemoveEvent(GameEvent.MakeEnemy);
+        EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.MakeEnemy);
     }
 }

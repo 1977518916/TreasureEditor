@@ -34,7 +34,7 @@ public class EnemyMoveComponent : MoveComponent
         EntityTransform = entityTransform;
         ContinueMove = true;
         MoveDirection = (this.target.position - EntityTransform.position).normalized;
-        EventMgr.Instance.RegisterEvent<Entity>(GameEvent.ReplaceTarget, ReplaceTarget);
+        EventMgr.Instance.RegisterEvent<Entity>(this.entity.EntityId, GameEvent.ReplaceTarget, ReplaceTarget);
     }
     
     public void Tick(float time)
@@ -46,7 +46,7 @@ public class EnemyMoveComponent : MoveComponent
     
     public void Release()
     {
-        EventMgr.Instance.RemoveEvent(GameEvent.EntityDead);
+        EventMgr.Instance.RemoveEvent(entity.EntityId, GameEvent.ReplaceTarget);
     }
     
     public void Move(float time)

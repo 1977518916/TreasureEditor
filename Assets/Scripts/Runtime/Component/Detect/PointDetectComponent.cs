@@ -32,9 +32,9 @@ public class PointDetectComponent : DetectComponent
         this.distance = distance;
         this.targetEntityType = targetEntityType;
         thisRectTransform = transform;
-        EventMgr.Instance.RegisterEvent<long>(GameEvent.EntityDead, TargetDead);
+        EventMgr.Instance.RegisterEvent<EntityType>(this.entity.EntityId, GameEvent.EntityDead, TargetDead);
     }
-
+    
     public void Tick(float time)
     {
         if (EntitySystem.Instance.GetTargetTypeSurviveEntity(targetEntityType) && target == null) 
@@ -61,12 +61,12 @@ public class PointDetectComponent : DetectComponent
 
     public void Release()
     {
-        EventMgr.Instance.RemoveEvent(GameEvent.EntityDead);
+        EventMgr.Instance.RemoveEvent(entity.EntityId, GameEvent.EntityDead);
     }
 
-    private void TargetDead(long targetId)
+    private void TargetDead(EntityType entityType)
     {
-        if (EntitySystem.Instance.GetEntityType(targetId) != targetEntityType) return;
+        if (entityType != targetEntityType) return;
         target = null;
         targetEntityId = EntitySystem.Instance.ReplaceTarget(targetEntityType);
         var targetEntity = GetTargetEntity();

@@ -33,7 +33,14 @@ public class HeroAnimationComponent : AnimationComponent
     {
         if (stateType == StateType.Hit)
         {
-            SkeletonGraphic.gameObject.GetComponent<Renderer>().material.SetFloat("_FillPhase", 0.5f);
+            foreach (var animation in SkeletonGraphic.AnimationState.Data.SkeletonData.Animations)
+            {
+                if (animation.Name == "Hit") 
+                {
+                    SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop).Complete +=
+                        entry => action?.Invoke();
+                }
+            }
         }
         else
         {

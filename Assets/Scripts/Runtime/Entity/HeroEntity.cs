@@ -55,10 +55,7 @@ public class HeroEntity : MonoBehaviour, Entity
     public void Release()
     {
         GetComponent<Collider2D>().enabled = false;
-        foreach (var iComponent in AllComponentList)
-        {
-            iComponent.Release();
-        }
+        AllComponentList.Clear();
     }
 
     /// <summary>

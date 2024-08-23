@@ -300,6 +300,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
             entity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent)));
         //初始化敌人状态
         entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp, entity));
+        // Debug.Log("敌人数量"+battleManager.EnemyParent.childCount);
     }
     
     /// <summary>

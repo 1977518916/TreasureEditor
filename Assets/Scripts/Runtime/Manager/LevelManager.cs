@@ -49,7 +49,7 @@ namespace Runtime.Manager
             MakeEnemy();
             if(--amount > 0)
             {
-                currentTime += list[index].makeTime;
+                targetTime += list[index].makeTime;
                 return;
             }
 

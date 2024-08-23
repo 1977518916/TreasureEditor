@@ -286,9 +286,10 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         // 初始化敌人位置
         InitEntityPosition(entity);
         // 初始化敌人移动
-        InitEnemyEntityMove(entity,
-            GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform,
-            root.GetComponent<RectTransform>(), 10f);
+        var targetRect = targetId == -1
+            ? null
+            : GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform;
+        InitEnemyEntityMove(entity, targetRect, root.GetComponent<RectTransform>(), 10f);
         // 初始化敌人检测
         InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 150f);
         // 初始化敌人状态机组件 和 动画组件

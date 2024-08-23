@@ -55,6 +55,7 @@ public class PointDetectComponent : DetectComponent
                     throw new ArgumentOutOfRangeException();
             }
 
+            if (targetEntityId == -1) return;
             GetTargetRectTransform();
         }
     }

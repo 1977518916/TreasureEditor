@@ -124,6 +124,7 @@ namespace Runtime.Manager
                 bulletEntity.MoveObject.transform.eulerAngles = new Vector3(0, 0, -90);
                 SkeletonGraphic skeletonGraphic = bulletEntity.MoveObject.GetComponent<SkeletonGraphic>();
                 skeletonGraphic.AnimationState.SetAnimation(0, skeletonGraphic.SkeletonData.Animations.Items[0], true);
+                skeletonGraphic.MatchRectTransformWithBounds();
                 bulletEntity.Init();
                 return bulletEntity;
             }
@@ -156,7 +157,6 @@ namespace Runtime.Manager
             string p = EffectPath + path;
             SkeletonGraphic skeletonAnimation = LoadSkeletonGraphic(p, parent);
             skeletonAnimation.name = @enum.ToString();
-            skeletonAnimation.MatchRectTransformWithBounds();
             skeletonAnimation.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             return skeletonAnimation;
         }

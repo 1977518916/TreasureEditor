@@ -13,18 +13,16 @@ public class DeadState : IState
     
     public void Enter(StateMachineComponent stateMachineComponent)
     {
-        AnimationComponent.ChangeAnima(StateType.Dead, false, () =>
+        AnimationComponent.ChangeAnima(StateType.Dead, false, () => { });
+        if (stateMachineComponent.Entity is HeroEntity) 
         {
-            if (stateMachineComponent.Entity is HeroEntity) 
-            {
-                stateMachineComponent.Entity.GetSpecifyComponent<HeroDeadComponent>(ComponentType.DeadComponent).Dead();
-            }
+            stateMachineComponent.Entity.GetSpecifyComponent<HeroDeadComponent>(ComponentType.DeadComponent).Dead();
+        }
             
-            if (stateMachineComponent.Entity is EnemyEntity)
-            {
-                stateMachineComponent.Entity.GetSpecifyComponent<EnemyDeadComponent>(ComponentType.DeadComponent).Dead();
-            }
-        });
+        if (stateMachineComponent.Entity is EnemyEntity)
+        {
+            stateMachineComponent.Entity.GetSpecifyComponent<EnemyDeadComponent>(ComponentType.DeadComponent).Dead();
+        }
     }
 
     public void Tick()

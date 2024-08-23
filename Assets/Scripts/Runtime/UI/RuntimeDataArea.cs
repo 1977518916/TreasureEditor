@@ -2,33 +2,45 @@
 using Runtime.Data;
 using Runtime.Extensions;
 using Runtime.Manager;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Runtime.UI
 {
     public class RuntimeDataArea : MonoBehaviour
     {
-
+        private Toggle self, enemy, numberShow;
+        private GameData gameData;
         private void Awake()
         {
-            DataManager.GameData = ReadWriteManager.Read("GameRunTimeData", new GameData());
-            
-            transform.FindAdd<ToggleData>("Units/Self").Action = invicible => DataManager.GameData.isInvicibleSelf = invicible;
-            transform.FindAdd<ToggleData>("Units/Enemy").Action = invicible => DataManager.GameData.isInvicibleEnemy = invicible;
-            transform.FindAdd<ToggleData>("Other/NumberShow").Action = show => DataManager.GameData.isShowNumber = show;
+            DataManager.GameData ??= ReadWriteManager.Read("GameRunTimeData", new GameData());
+            gameData = DataManager.GameData;
+
+            self = transform.FindGetInChildren<Toggle>("Units/Self");
+            self.onValueChanged.AddListener(invicible => { gameData.isInvicibleSelf = invicible; });
+
+            enemy = transform.FindGetInChildren<Toggle>("Units/Enemy");
+            enemy.onValueChanged.AddListener(invicible => gameData.isInvicibleEnemy = invicible);
+
+            numberShow = transform.FindGetInChildren<Toggle>("Other/NumberShow");
+            numberShow.onValueChanged.AddListener(show => gameData.isShowNumber = show);
+
+            transform.FindGet<Button>("Save").onClick.AddListener(() =>
+            {
+                ReadWriteManager.Write("GameRunTimeData", JsonUtility.ToJson(gameData));
+            });
         }
 
-        private class ToggleData : MonoBehaviour
+        private void OnEnable()
         {
-            public UnityAction<bool> Action;
-            private void Start()
-            {
-                var t = transform.GetComponentInChildren<Toggle>();
-                t.onValueChanged.AddListener(Action);
-                t.isOn = false;
-            }
+            self.isOn = gameData.isInvicibleSelf;
+
+
+            enemy.isOn = gameData.isInvicibleEnemy;
+
+
+            numberShow.isOn = gameData.isShowNumber;
         }
     }
 }

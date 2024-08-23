@@ -1,5 +1,6 @@
 using System;
 using Spine.Unity;
+using UnityEngine;
 
 public class HeroAnimationComponent : AnimationComponent
 {
@@ -30,8 +31,15 @@ public class HeroAnimationComponent : AnimationComponent
 
     public void ChangeAnima(StateType stateType, bool isLoop, Action action)
     {
-        SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop).Complete +=
-            entry => action?.Invoke();
+        if (stateType == StateType.Hit)
+        {
+            SkeletonGraphic.gameObject.GetComponent<Renderer>().material.SetFloat("_FillPhase", 0.5f);
+        }
+        else
+        {
+            SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop).Complete +=
+                entry => action?.Invoke();
+        }
     }
     
     private string GetAnimaName(StateType stateType)

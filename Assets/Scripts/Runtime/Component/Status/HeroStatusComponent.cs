@@ -127,9 +127,6 @@ public class HeroStatusComponent : StatusComponent
     /// </summary>
     public void Hit(int value)
     {
-        // BattleManager.Instance.GenerateHurtProstitute(
-        //     heroEntity.GetSpecifyComponent<HeroMoveComponent>(ComponentType.MoveComponent).EntityTransform.position,
-        //     value, 3f);
         currentHpValue -= value;
         var percentage = (float)currentHpValue / maxHpValue;
         if (currentHpValue >= 0)
@@ -143,7 +140,7 @@ public class HeroStatusComponent : StatusComponent
         heroEntity.UpdateSurvive(false);
         heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
             .TryChangeState(StateType.Dead);
-        EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, heroEntity.EntityId);
+        EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, EntityType.HeroEntity);
     }
 
     /// <summary>

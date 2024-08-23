@@ -123,6 +123,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     private void Start()
     {
         GetComponent<Canvas>().worldCamera = Camera.main;
+        battleBG.sprite = AssetsLoadManager.LoadBg(DataManager.LevelData.mapType);
     }
     
     public void GenerateHurtProstitute(Vector2 location, int hurt, float surviveTime)

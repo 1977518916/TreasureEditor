@@ -57,6 +57,7 @@ public class EnemyAttackComponent : AttackComponent
             entity.GetComponent<RectTransform>(), BattleManager.Instance.GetBulletParent());
         entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent)
             .TryChangeState(StateType.Attack);
+        EntitySystem.Instance.AddEntity(bulletEnemy.EntityId, bulletEnemy);
         LastAttackTime = Time.time;
         IsInAttackInterval = true;
     }

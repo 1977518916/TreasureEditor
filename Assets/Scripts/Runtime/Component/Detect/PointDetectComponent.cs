@@ -73,6 +73,10 @@ public class PointDetectComponent : DetectComponent
         if (targetEntity != null)
         {
             target = targetEntity.GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform;
+            if (targetEntityType == EntityType.HeroEntity)
+            {
+                EventMgr.Instance.TriggerEvent(GameEvent.ReplaceTarget, targetEntity);
+            }
         }
     }
     

@@ -52,6 +52,7 @@ namespace Runtime.UI
                 clear.onClick.AddListener(() =>
                 {
                     heroData = new HeroData();
+                    DataManager.HeroDatas[positionType] = heroData;
                     ReadWriteManager.Hero.SaveHeroData(positionType, null);
                     updateAction.Invoke();
                 });

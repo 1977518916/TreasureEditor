@@ -193,7 +193,17 @@ namespace Tao_Framework.Core.Event
         /// <summary>
         /// 更换目标
         /// </summary>
-        ReplaceTarget
+        ReplaceTarget,
+        
+        /// <summary>
+        /// 英雄无敌
+        /// </summary>
+        HeroInvincible,
+        
+        /// <summary>
+        /// 敌人无敌
+        /// </summary>
+        EnemyInvincible
     }
 
     public enum UIEvent
@@ -201,6 +211,16 @@ namespace Tao_Framework.Core.Event
         /// <summary>
         /// UI普通事件
         /// </summary>
-        UICommon
+        UICommon,
+        
+        /// <summary>
+        /// 关闭伤害飘字
+        /// </summary>
+        HideHurtProstitute,
+        
+        /// <summary>
+        /// 显示伤害飘字
+        /// </summary>
+        ShowHurtProstitute
     }
 }

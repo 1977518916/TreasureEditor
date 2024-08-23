@@ -124,9 +124,10 @@ public class BattleManager : MonoSingleton<BattleManager>
     {
         GetComponent<Canvas>().worldCamera = Camera.main;
     }
-
+    
     public void GenerateHurtProstitute(Vector2 location, int hurt, float surviveTime)
     {
+        if (!DataManager.GameData.isShowNumber) return;
         var hurtProstitutePrefab = AssetsLoadManager.Load<GameObject>("Prefabs/HurtProstitute");
         var hurtProstitute = Instantiate(hurtProstitutePrefab);
         hurtProstitute.GetComponent<RectTransform>().parent = HurtProstituteParent;

@@ -31,7 +31,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     /// 战斗管理
     /// </summary>
     private BattleManager battleManager;
-
+    
     private void Start()
     {
         battleManager = BattleManager.Instance;
@@ -39,10 +39,10 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         {
             GenerateEntity(heroData.Key, heroData.Value);
         }
-
+        
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GameEvent.MakeEnemy, GenerateEntity);
     }
-
+    
     private void Update()
     {
         currentTime += Time.time;
@@ -301,7 +301,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         //初始化敌人状态
         entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp, entity));
     }
-
+    
     /// <summary>
     /// 更换目标  如果返回的结果为-1证明目前需要找的对象没有
     /// </summary>
@@ -319,15 +319,13 @@ public class EntitySystem : MonoSingleton<EntitySystem>
             default:
                 throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
         }
-
-        return default;
     }
     
     /// <summary>
     /// 获取存活英雄的ID
     /// </summary>
     /// <returns></returns>
-    public long GetSurviveHeroID()
+    private long GetSurviveHeroID()
     {
         foreach (var kEntity in allEntityDic)
         {
@@ -357,7 +355,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         foreach (var entity in heroList)
         {
             if (!entity.GetIsSurvive()) continue;
-            if (entity.GetLocationIndex() <= currentMaxIndex) continue;
+            if (entity.GetLocationIndex() < currentMaxIndex) continue;
             currentMaxIndex = entity.GetLocationIndex();
             maxIndexHero = entity;
         }
@@ -365,18 +363,14 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         return maxIndexHero != null ? maxIndexHero.EntityId : -1;
     }
 
-    public List<HeroEntity> GetAllHeroEntity()
+    private List<HeroEntity> GetAllHeroEntity()
     {
-        var heroList = new List<HeroEntity>();
-        foreach (var entity in allEntityDic.Values) 
-        {
-            if (entity is HeroEntity)
-            {
-                heroList.Add((HeroEntity)entity);
-            }
-        }
-
-        return heroList;
+        return allEntityDic.Values.OfType<HeroEntity>().ToList();
+    }
+    
+    private List<EnemyEntity> GetAllEnemyEntity()
+    {
+        return allEntityDic.Values.OfType<EnemyEntity>().ToList();
     }
 
     /// <summary>
@@ -455,7 +449,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
             entity.Release();
         }
     }
-
+    
     private void OnDestroy()
     {
         foreach (var entity in allEntityDic.Values) 

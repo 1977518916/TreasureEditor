@@ -55,7 +55,7 @@ public class BulletEntity : MonoBehaviour, Entity
         bulletHurt = hurt;
         targetEntityType = targetType;
         triggerDeadCount = triggerCount;
-        GetComponent<RectTransform>().parent = parent;
+        GetComponent<RectTransform>().SetParent(parent);
         GetComponent<RectTransform>().position = bulletPos.position;
         GenerateAttackBox();
     }

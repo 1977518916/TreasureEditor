@@ -24,7 +24,6 @@ public class DeadState : IState
             {
                 stateMachineComponent.Entity.GetSpecifyComponent<EnemyDeadComponent>(ComponentType.DeadComponent).Dead();
             }
-            Debug.Log($"死亡动画结束");
         });
     }
 

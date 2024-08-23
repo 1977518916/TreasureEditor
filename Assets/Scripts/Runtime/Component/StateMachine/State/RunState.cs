@@ -13,7 +13,7 @@ public class RunState : IState
     
     public void Enter(StateMachineComponent stateMachineComponent)
     {
-        AnimationComponent.ChangeAnima(StateType.Run, true, () => { Debug.Log($"结束跑步动画"); });
+        AnimationComponent.ChangeAnima(StateType.Run, true, () => {});
     }
 
     public void Tick()

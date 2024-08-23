@@ -64,7 +64,7 @@ namespace Runtime.Manager
                         break;
                     case HeroTypeEnum.GaoShun:
                     case HeroTypeEnum.GuanYu:
-                    case HeroTypeEnum.LvBu:
+                    // case HeroTypeEnum.LvBu:
                     case HeroTypeEnum.LvMeng:
                         path = $"attack/{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_attack_skeletondata";
                         bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
@@ -105,10 +105,10 @@ namespace Runtime.Manager
                         path = $"{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_hit_skeletondata";
                         bulletEntity.BoomObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
                         break;
-                    case HeroTypeEnum.SunShangXiang: //资源路径最奇怪的一个
-                        path = CharacterPath + $"Fx{typeEnum.ToString()}_attack_skeletondata";
-                        bulletEntity.MoveObject = LoadSkeletonGraphic(path, parent).GameObject();
-                        break;
+                    // case HeroTypeEnum.SunShangXiang: //资源路径最奇怪的一个 Assets/Resources/Character/SunShangXiang/Fx_SunShangXiang_Attack.png
+                    //     path = CharacterPath + $"{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_Attack_Skeletondata";
+                    //     bulletEntity.MoveObject = LoadSkeletonGraphic(path, parent).GameObject();
+                    //     break;
                     case HeroTypeEnum.HuangZhong:
                     case HeroTypeEnum.PangTong:
                     default:

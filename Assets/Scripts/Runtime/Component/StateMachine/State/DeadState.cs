@@ -29,10 +29,10 @@ public class DeadState : IState
     {
 
     }
-
+    
     public void Exit()
     {
-
+        
     }
     public int Priority()
     {

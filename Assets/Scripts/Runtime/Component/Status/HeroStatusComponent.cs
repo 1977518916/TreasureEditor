@@ -127,6 +127,7 @@ public class HeroStatusComponent : StatusComponent
     /// </summary>
     public void Hit(int value)
     {
+        if (!heroEntity.GetIsSurvive()) return;
         currentHpValue -= value;
         var percentage = (float)currentHpValue / maxHpValue;
         hp.DOFillAmount(percentage, 0.15f);

@@ -33,7 +33,7 @@ public class EnemyMoveComponent : MoveComponent
         MoveSpeed = moveSpeed;
         EntityTransform = entityTransform;
         ContinueMove = true;
-        if (this.target == null)
+        if (target != null) 
         {
             MoveDirection = (this.target.position - EntityTransform.position).normalized;
         }

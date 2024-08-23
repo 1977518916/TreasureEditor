@@ -16,6 +16,6 @@ namespace Runtime.Data
         /// <summary>
         /// 敌人无敌
         /// </summary>
-        public bool isInvicibleEnemy = false;
+        public bool isInvicibleEnemy = true;
     }
 }

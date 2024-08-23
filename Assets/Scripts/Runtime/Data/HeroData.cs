@@ -9,10 +9,10 @@ namespace Runtime.Data
         /// <summary>
         /// 子弹数量
         /// </summary>
-        public int bulletAmount;
+        public int bulletAmount = 10;
         [FormerlySerializedAs("heroType")]
         public HeroTypeEnum heroTypeEnum = HeroTypeEnum.Null;
-        public BulletType bulletType;
+        public BulletType bulletType = BulletType.Self;
         public BulletMoveType bulletMoveType;
     }
 }

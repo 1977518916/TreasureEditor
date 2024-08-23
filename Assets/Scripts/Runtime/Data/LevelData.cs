@@ -26,7 +26,7 @@ namespace Runtime.Data
         /// <summary>
         /// 单波敌人数量
         /// </summary>
-        public int amount;
+        public int amount = 3;
         /// <summary>
         /// 当前波出怪间隔
         /// </summary>

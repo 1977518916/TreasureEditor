@@ -1,13 +1,16 @@
 using System;
 using Spine.Unity;
 using UnityEngine;
+using AnimationState = Spine.AnimationState;
 
 public class HeroAnimationComponent : AnimationComponent
 {
     private long entityId;
     
     public SkeletonGraphic SkeletonGraphic { get; set; }
-
+    
+    private AnimationState.TrackEntryDelegate  animaAction;
+    
     public HeroAnimationComponent(long entityId, SkeletonGraphic skeletonGraphic)
     {
         this.entityId = entityId;
@@ -28,24 +31,17 @@ public class HeroAnimationComponent : AnimationComponent
     {
         return SkeletonGraphic;
     }
-
+    
     public void ChangeAnima(StateType stateType, bool isLoop, Action action)
     {
-        if (stateType == StateType.Hit)
+        SkeletonGraphic.AnimationState.Complete -= animaAction;
+        animaAction = entry =>
         {
-            foreach (var animation in SkeletonGraphic.AnimationState.Data.SkeletonData.Animations)
-            {
-                if (animation.Name == "Hit") 
-                {
-                    SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop).Complete +=
-                        entry => action?.Invoke();
-                }
-            }
-        }
-        else
+            action?.Invoke();
+        };
+        if (stateType != StateType.Hit)
         {
-            SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop).Complete +=
-                entry => action?.Invoke();
+            SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop).Complete += animaAction;
         }
     }
     
@@ -54,16 +50,20 @@ public class HeroAnimationComponent : AnimationComponent
         switch (stateType)
         {
             case StateType.Idle:
+                Debug.Log($"{entityId}:进入Idle状态");
                 return "Idle";
             case StateType.Run:
                 return "Run";
             case StateType.Attack:
+                Debug.Log($"{entityId}:进入Attack状态");
                 return "Attack";
             case StateType.Skill:
                 return "Skill";
             case StateType.Hit:
+                Debug.Log($"{entityId}:进入Hit状态");
                 return "Hit";
             case StateType.Dead:
+                Debug.Log($"{entityId}:进入Dead状态");
                 return "Dead";
             default:
                 throw new ArgumentOutOfRangeException(nameof(stateType), stateType, null);

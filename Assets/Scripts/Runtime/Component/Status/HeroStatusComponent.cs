@@ -131,16 +131,18 @@ public class HeroStatusComponent : StatusComponent
         currentHpValue -= value;
         var percentage = (float)currentHpValue / maxHpValue;
         hp.DOFillAmount(percentage, 0.15f);
-        if (currentHpValue >= 0)
+        if (currentHpValue > 0)
         {
             heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
                 .TryChangeState(StateType.Hit);
         }
-        if (currentHpValue > 0) return;
-        heroEntity.UpdateSurvive(false);
-        heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
-            .TryChangeState(StateType.Dead);
-        EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, EntityType.HeroEntity);
+        else
+        {
+            heroEntity.UpdateSurvive(false);
+            heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
+                .TryChangeState(StateType.Dead);
+            EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, EntityType.HeroEntity);
+        }
     }
 
     /// <summary>

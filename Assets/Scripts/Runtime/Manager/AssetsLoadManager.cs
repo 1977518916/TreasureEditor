@@ -133,7 +133,7 @@ namespace Runtime.Manager
 
         public static Sprite LoadBg(MapTypeEnum mapTypeEnum)
         {
-            return Resources.Load<Sprite>(DataManager.MapTexturePath + ((int)mapTypeEnum + 1));
+            return Resources.Load<Sprite>(DataManager.MapTexturePath + (int)mapTypeEnum);
         }
 
         public static SkeletonGraphic LoadSkeletonGraphic(string path, Transform parent = null)

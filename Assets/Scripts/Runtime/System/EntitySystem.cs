@@ -449,14 +449,14 @@ public class EntitySystem : MonoSingleton<EntitySystem>
             entity.Release();
         }
     }
-    
-    private void OnDestroy()
+
+    public void Destroy()
     {
-        foreach (var entity in allEntityDic.Values) 
+        foreach (var entity in allEntityDic.Values)
         {
             entity.Release();
         }
-        
+
         allEntityDic.Clear();
         EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.MakeEnemy);
     }

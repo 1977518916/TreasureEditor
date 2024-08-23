@@ -20,7 +20,6 @@ public class EnemyEntity : MonoBehaviour, Entity
     
     public void Release()
     {
-        AllComponentList.Clear();
         Destroy(gameObject);
     }
     

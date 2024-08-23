@@ -62,11 +62,6 @@ public class BulletEntity : MonoBehaviour, Entity
 
     public void Release()
     {
-        foreach (var iComponent in AllComponentList)
-        {
-            iComponent.Release();
-        }
-
         AllComponentList.Clear();
         Destroy(this.gameObject);
     }

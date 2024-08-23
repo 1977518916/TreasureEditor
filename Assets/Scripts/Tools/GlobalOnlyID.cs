@@ -20,7 +20,7 @@ namespace Tools
             long uniqueNumericIdentifier = timestamp * 100000 + randomSuffix; // 将时间戳左移五位，然后加上随机数
 
             // 将唯一数字标识符转换为字符串并输出
-            Debug.Log("全局唯一ID是: " + uniqueNumericIdentifier);
+            //Debug.Log("全局唯一ID是: " + uniqueNumericIdentifier);
 
             return uniqueNumericIdentifier;
         }

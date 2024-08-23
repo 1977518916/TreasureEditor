@@ -51,10 +51,14 @@ public class HeroEntity : MonoBehaviour, Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.HeroEntity;
     }
-
+    
     public void Release()
     {
-        GetComponent<Collider2D>().enabled = false;
+        if (GetComponent<Collider2D>() != null)
+        {
+            GetComponent<Collider2D>().enabled = false;
+        }
+        
         AllComponentList.Clear();
     }
 

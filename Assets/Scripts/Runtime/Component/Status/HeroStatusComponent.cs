@@ -127,9 +127,9 @@ public class HeroStatusComponent : StatusComponent
     /// </summary>
     public void Hit(int value)
     {
-        BattleManager.Instance.GenerateHurtProstitute(
-            heroEntity.GetSpecifyComponent<HeroMoveComponent>(ComponentType.MoveComponent).EntityTransform.position,
-            value, 3f);
+        // BattleManager.Instance.GenerateHurtProstitute(
+        //     heroEntity.GetSpecifyComponent<HeroMoveComponent>(ComponentType.MoveComponent).EntityTransform.position,
+        //     value, 3f);
         currentHpValue -= value;
         var percentage = (float)currentHpValue / maxHpValue;
         if (currentHpValue >= 0)

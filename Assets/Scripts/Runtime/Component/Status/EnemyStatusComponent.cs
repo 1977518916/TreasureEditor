@@ -39,7 +39,7 @@ public class EnemyStatusComponent : StatusComponent
     {
         
     }
-
+    
     /// <summary>
     /// 每调用一次会扣除一次受击次数并且会 进入 受击状态
     /// </summary>
@@ -47,7 +47,7 @@ public class EnemyStatusComponent : StatusComponent
     {
         BattleManager.Instance.GenerateHurtProstitute(
             entity.GetSpecifyComponent<EnemyMoveComponent>(ComponentType.MoveComponent).EntityTransform.position,
-            value, 3f);
+            value, 1.5f);
         hpValue -= value;
         if (hpValue > 0)
         {

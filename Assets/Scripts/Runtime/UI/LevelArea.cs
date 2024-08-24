@@ -12,8 +12,23 @@ namespace Runtime.UI
 {
     public class LevelArea : MonoBehaviour
     {
-        private TMP_Dropdown dropdown, typeDropDown, mapDropDown;
-        private TMP_InputField amount, time, timeInterval, hp, atk;
+        private TMP_Dropdown dropdown,
+            typeDropDown,
+            mapDropDown,
+            selectWhichBossDrop,
+            selectBossModel,
+            selectBossBullet;
+
+        private TMP_InputField amount,
+            time,
+            timeInterval,
+            hp,
+            atk,
+            bossGenerateTime,
+            bossHp,
+            bossAttack;
+
+        private Button addBossBtn, removeBossBtn;
         private LevelData levelData;
         private Transform enemyParent;
         private Image bg;
@@ -29,14 +44,14 @@ namespace Runtime.UI
             hp = transform.FindGet<TMP_InputField>("TimesInfo/Hp");
             atk = transform.FindGet<TMP_InputField>("TimesInfo/Atk");
             enemyParent = transform.Find("TimesInfo/EnemyParent");
-            bg = transform.FindGet<Image>("bg");
+            bg = transform.parent.FindGet<Image>("bg");
             transform.FindGet<Button>("DeleteButton").onClick.AddListener(DeleteTimes);
             transform.FindGet<Button>("AddButton").onClick.AddListener(AddTimes);
             transform.FindGet<Button>("Delete").onClick.AddListener(Delete);
             transform.FindGet<Button>("Save").onClick.AddListener(Save);
             Init();
         }
-
+        
         private void Init()
         {
             levelData = ReadWriteManager.Level.GetLevelData();
@@ -69,6 +84,26 @@ namespace Runtime.UI
             timeInterval.onValueChanged.AddListener(t => CurrentData.makeTime = float.Parse(t));
             hp.onValueChanged.AddListener(v => CurrentData.enemyData.hp = int.Parse(v));
             atk.onValueChanged.AddListener(v => CurrentData.enemyData.atk = int.Parse(v));
+        }
+        
+        /// <summary>
+        /// Boss UI初始化
+        /// </summary>
+        private void BossUiInit()
+        {
+            addBossBtn = transform.FindGet<Button>("BossInfo/AddBossBtn");
+            removeBossBtn = transform.FindGet<Button>("BossInfo/RemoveBossBtn");
+            selectWhichBossDrop = transform.FindGet<TMP_Dropdown>("BossInfo/BossSelectDrop");
+            selectBossModel = transform.FindGet<TMP_Dropdown>("BossInfo/BossPanel/BossModelDrop");
+            selectBossBullet = transform.FindGet<TMP_Dropdown>("BossInfo/BossPanel/BossData/BossBulletTable/BossBulletDrop");
+            bossGenerateTime = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/GenerateTimeTable/BossAttackInputField");
+            bossAttack = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/BossAttackTable/BossAttackInputField");
+            bossHp = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/BossHpTable/BossHpInputField");
+
+            addBossBtn.onClick.AddListener(() =>
+            {
+                // 保存一次Boss数据
+            });
         }
 
         private void ShowMap(int _ = 0)

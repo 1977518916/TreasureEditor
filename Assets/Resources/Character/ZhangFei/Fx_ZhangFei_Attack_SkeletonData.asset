@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fx_ZhangFei_Attack_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 66f1ab44d2c08d340af7e5e7c05ca06c, type: 2}
+  - {fileID: 11400000, guid: 6ecb22b8c159f2b43a768132ec553a11, type: 2}
   scale: 0.01
   skeletonJSON: {fileID: 4900000, guid: 2a38d351e82918b4aa726d6eec4b3d80, type: 3}
   isUpgradingBlendModeMaterials: 0

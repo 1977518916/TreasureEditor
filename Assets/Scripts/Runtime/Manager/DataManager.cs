@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using QFSW.QC;
 using Runtime.Data;
 using Spine.Unity;
@@ -66,19 +67,42 @@ namespace Runtime.Manager
         public static List<SkeletonDataAsset> GetSpecifyEntityEffect(Enum entityEnum)
         {
             var name = entityEnum.ToString();
+            if (AllEffectDic.Count == 0)
+                InitAllEffectData();
+
+            
+            
             return default;
         }
 
         /// <summary>
-        /// 初始化所有特效数据
+        /// 初始化所有动画文件数据
         /// </summary>
         private static void InitAllEffectData()
         {
-            var allEffect = Resources.LoadAll<SkeletonDataAsset>("Effect/Spine");
-            foreach (var entityName in Enum.GetNames(typeof(BossType)))
+            var allEffect = Resources.LoadAll<SkeletonDataAsset>("");
+            foreach (var dataAsset in allEffect)
             {
-                
+                if (dataAsset.name.Contains($"Attack".ToLower()) || dataAsset.name.Contains($"Hit".ToLower()))
+                {
+                    Debug.Log(dataAsset.name);
+                }
             }
+            foreach (BossType entityName in Enum.GetValues(typeof(BossType)))
+            {
+                EffectClassify(entityName, allEffect);
+            }
+        }
+        
+        /// <summary>
+        /// 特效文件根据角色分类
+        /// </summary>
+        private static void EffectClassify(BossType type, IEnumerable<SkeletonDataAsset> dataList)
+        {
+            var skeletonDataList = dataList.Where(dataAsset => dataAsset.name.ToLower().Contains(type.ToString().ToLower())).ToList();
+            if (AllEffectDic.TryAdd(type, skeletonDataList)) return;
+            AllEffectDic[type] = null;
+            AllEffectDic[type] = skeletonDataList;
         }
     }
 }

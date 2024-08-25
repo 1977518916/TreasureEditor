@@ -30,7 +30,7 @@ namespace Runtime.UI
 
         private Button addBossBtn, removeBossBtn;
         private LevelData levelData;
-        private Transform enemyParent;
+        private Transform enemyParent, bossModelParent;
         private Image bg;
         private TimesData CurrentData => levelData.timesDatas[dropdown.value];
         private void Awake()
@@ -127,6 +127,12 @@ namespace Runtime.UI
         {
             enemyParent.ClearChild();
             AssetsLoadManager.LoadEnemy(CurrentData.enemyType, enemyParent);
+        }
+
+        private void ShowBoss()
+        {
+            bossModelParent.ClearChild();
+            //AssetsLoadManager.LoadEnemy()
         }
 
         private void ShowLevelData()

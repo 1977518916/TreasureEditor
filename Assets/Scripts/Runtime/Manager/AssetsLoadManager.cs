@@ -21,7 +21,12 @@ namespace Runtime.Manager
         {
             return LoadCharacterSkeletonOfEnum(enemyTypeEnum, parent).GameObject();
         }
-
+        
+        public static GameObject LoadBoss(BossType bossType, Transform parent)
+        {
+            return LoadCharacterSkeletonOfEnum(bossType, parent).GameObject();
+        }
+        
         public static BulletEntity LoadBullet(HeroData heroData, Transform parent = null)
         {
             if(heroData.bulletType == BulletType.Self)
@@ -130,6 +135,20 @@ namespace Runtime.Manager
             }
             return null;
         }
+        
+        public static BulletEntity LoadBullet(string entityName, Transform parent = null)
+        {
+            var gameObject = new GameObject("bullet",typeof(RectTransform))
+            {
+                layer = 5
+            };
+            gameObject.transform.SetParent(parent);
+            var bulletEntity = gameObject.AddComponent<BulletEntity>();
+            var path = "";
+            // path = $"{typeEnum.ToString().ToLower()}/fx_{typeEnum.ToString().ToLower()}_attack_skeletondata";
+            // bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
+            return bulletEntity;
+        }
 
         public static Sprite LoadBg(MapTypeEnum mapTypeEnum)
         {
@@ -160,9 +179,7 @@ namespace Runtime.Manager
             skeletonAnimation.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             return skeletonAnimation;
         }
-
-
-
+        
         public static T Load<T>(string path) where T : Object
         {
             return Resources.Load<T>(path);

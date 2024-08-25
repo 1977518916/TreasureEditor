@@ -24,6 +24,7 @@ namespace Runtime.UI
             timeInterval,
             hp,
             atk,
+            speed,
             bossGenerateTime,
             bossHp,
             bossAttack;
@@ -43,6 +44,7 @@ namespace Runtime.UI
             timeInterval = transform.FindGet<TMP_InputField>("TimesInfo/DelayTimeField");
             hp = transform.FindGet<TMP_InputField>("TimesInfo/Hp");
             atk = transform.FindGet<TMP_InputField>("TimesInfo/Atk");
+            speed = transform.FindGet<TMP_InputField>("TimesInfo/Speed");
             enemyParent = transform.Find("TimesInfo/EnemyParent");
             bg = transform.parent.FindGet<Image>("bg");
             transform.FindGet<Button>("DeleteButton").onClick.AddListener(DeleteTimes);
@@ -52,7 +54,7 @@ namespace Runtime.UI
             Init();
             DataManager.GetSpecifyEntityEffect(BossType.Null);
         }
-        
+
         private void Init()
         {
             levelData = ReadWriteManager.Level.GetLevelData();
@@ -85,8 +87,9 @@ namespace Runtime.UI
             timeInterval.onValueChanged.AddListener(t => CurrentData.makeTime = float.Parse(t));
             hp.onValueChanged.AddListener(v => CurrentData.enemyData.hp = int.Parse(v));
             atk.onValueChanged.AddListener(v => CurrentData.enemyData.atk = int.Parse(v));
+            speed.onValueChanged.AddListener(v => CurrentData.enemyData.speed = float.Parse(v));
         }
-        
+
         /// <summary>
         /// Boss UI初始化
         /// </summary>
@@ -119,7 +122,7 @@ namespace Runtime.UI
             time.SetTextWithoutNotify(CurrentData.time.ToString());
             hp.SetTextWithoutNotify(CurrentData.enemyData.hp.ToString());
             atk.SetTextWithoutNotify(CurrentData.enemyData.atk.ToString());
-
+            speed.SetTextWithoutNotify(CurrentData.enemyData.speed.ToString());
             typeDropDown.value = (int)CurrentData.enemyType;
             ShowEnemy();
         }

@@ -77,7 +77,7 @@ namespace Runtime.Manager
         public class EnemyBean
         {
             public EnemyTypeEnum EnemyType;
-            public UnitData EnemyData;
+            public EnemyData EnemyData;
         }
     }
 }

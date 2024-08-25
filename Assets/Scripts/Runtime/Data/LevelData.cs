@@ -27,10 +27,12 @@ namespace Runtime.Data
         /// 单波敌人数量
         /// </summary>
         public int amount = 3;
+        
         /// <summary>
         /// 当前波出怪间隔
         /// </summary>
         public float time = 10;
+        
         /// <summary>
         /// 每次生成时的间隔
         /// </summary>
@@ -39,7 +41,7 @@ namespace Runtime.Data
         /// <summary>
         /// 敌人的生命值攻击力
         /// </summary>
-        public UnitData enemyData = new UnitData();
+        public EnemyData enemyData = new EnemyData();
         
         public EnemyTypeEnum enemyType = EnemyTypeEnum.XiaoBing;
     }

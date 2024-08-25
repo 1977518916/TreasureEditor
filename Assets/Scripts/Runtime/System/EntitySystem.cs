@@ -161,7 +161,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
     private void InitHeroEntityAttack(HeroEntity heroEntity, PointDetectComponent pointDetectComponent)
     {
-        var attack = new HeroAttackComponent(heroEntity.GetHeroData().bulletAmount, 2.5f, 3, heroEntity, pointDetectComponent);
+        var attack = new HeroAttackComponent(heroEntity.GetHeroData().bulletAmount, heroEntity.GetHeroData().atkInterval, 3, heroEntity, pointDetectComponent);
         heroEntity.AllComponentList.Add(attack);
     }
 
@@ -293,7 +293,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
                 .EntityTransform;
         }
         
-        InitEnemyEntityMove(entity, targetRect, root.GetComponent<RectTransform>(), 10f);
+        InitEnemyEntityMove(entity, targetRect, root.GetComponent<RectTransform>(), enemyBean.EnemyData.speed);
         // 初始化敌人检测
         InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 150f);
         // 初始化敌人状态机组件 和 动画组件

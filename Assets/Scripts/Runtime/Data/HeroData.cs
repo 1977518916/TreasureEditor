@@ -14,5 +14,9 @@ namespace Runtime.Data
         public HeroTypeEnum heroTypeEnum = HeroTypeEnum.Null;
         public BulletType bulletType = BulletType.Self;
         public BulletMoveType bulletMoveType;
+        /// <summary>
+        /// 攻击间隔
+        /// </summary>
+        public float atkInterval = 2;
     }
 }

@@ -141,15 +141,13 @@ namespace Runtime.Manager
         
         public static BulletEntity LoadBullet(EntityModelType entityModelType, Transform parent = null)
         {
-            var gameObject = new GameObject("bullet", typeof(RectTransform))
+            var gameObject = new GameObject($"{entityModelType.ToString()}_Bullet", typeof(RectTransform))
             {
                 layer = 5
             };
             gameObject.transform.SetParent(parent);
             var bulletEntity = gameObject.AddComponent<BulletEntity>();
-            var path = "";
-            bulletEntity.MoveObject =
-                LoadBulletSkeletonOfEnum(entityModelType, path, gameObject.transform).GameObject();
+            bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(entityModelType, gameObject.transform).GameObject();
             return bulletEntity;
         }
 

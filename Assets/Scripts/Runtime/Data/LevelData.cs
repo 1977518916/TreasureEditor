@@ -13,11 +13,16 @@ namespace Runtime.Data
         {
             new TimesData()
         };
-
+        
         /// <summary>
         /// 地图类型
         /// </summary>
         public MapTypeEnum mapType;
+
+        /// <summary>
+        /// Boss的数据 目前整个关卡只支持单个Boss
+        /// </summary>
+        public BossData BossData;
     }
 
     [Serializable]
@@ -44,5 +49,39 @@ namespace Runtime.Data
         public EnemyData enemyData = new EnemyData();
         
         public EnemyTypeEnum enemyType = EnemyTypeEnum.XiaoBing;
+    }
+
+    [Serializable]
+    public class BossData
+    {
+        /// <summary>
+        /// Boss 的模型
+        /// </summary>
+        public EntityModelType EntityModelType { get; set; }
+
+        /// <summary>
+        /// Boss 的子弹 或 叫做攻击方式
+        /// </summary>
+        public BulletType BulletType { get; set; }
+
+        /// <summary>
+        /// 生成时间
+        /// </summary>
+        public float Time = 30f;
+
+        /// <summary>
+        /// 攻击力
+        /// </summary>
+        public int Atk = 100;
+        
+        /// <summary>
+        /// 血量
+        /// </summary>
+        public int Hp = 500;
+
+        /// <summary>
+        /// 移动速度
+        /// </summary>
+        public float RunSpeed = 30f;
     }
 }

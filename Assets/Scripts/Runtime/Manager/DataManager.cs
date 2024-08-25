@@ -128,5 +128,15 @@ namespace Runtime.Manager
                 AllEntityAttackSpineDic[type] = data;
             }
         }
+        
+        /// <summary>
+        /// 对应实体是否拥有子弹
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static bool EntityIsHaveBullet(EntityModelType type)
+        {
+            return AllEntityAttackSpineDic.ContainsKey(type);
+        }
     }
 }

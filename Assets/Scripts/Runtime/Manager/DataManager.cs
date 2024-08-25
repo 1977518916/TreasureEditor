@@ -78,10 +78,11 @@ namespace Runtime.Manager
         /// 获取指定实体的子弹动画文件
         /// </summary>
         /// <param name="modelType"></param>
+        /// <param name="asset"></param>
         /// <returns></returns>
-        public static SkeletonDataAsset GetSpecifyEntityBulletSpine(EntityModelType modelType)
+        public static bool GetSpecifyEntityBulletSpine(EntityModelType modelType, out SkeletonDataAsset asset)
         {
-            return AllEntityAttackSpineDic.TryGetValue(modelType, out var bulletSpine) ? bulletSpine : null;
+            return AllEntityAttackSpineDic.TryGetValue(modelType, out asset);
         }
 
         /// <summary>

@@ -138,8 +138,8 @@ namespace Runtime.Manager
             }
             return null;
         }
-
-        public static BulletEntity LoadBullet(string entityName, Transform parent = null)
+        
+        public static BulletEntity LoadBullet(EntityModelType entityModelType, Transform parent = null)
         {
             var gameObject = new GameObject("bullet", typeof(RectTransform))
             {
@@ -148,8 +148,8 @@ namespace Runtime.Manager
             gameObject.transform.SetParent(parent);
             var bulletEntity = gameObject.AddComponent<BulletEntity>();
             var path = "";
-            // path = $"{typeEnum.ToString().ToLower()}/fx_{typeEnum.ToString().ToLower()}_attack_skeletondata";
-            // bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
+            bulletEntity.MoveObject =
+                LoadBulletSkeletonOfEnum(entityModelType, path, gameObject.transform).GameObject();
             return bulletEntity;
         }
 
@@ -194,8 +194,7 @@ namespace Runtime.Manager
         
         public static SkeletonGraphic LoadSkeletonGraphic(SkeletonDataAsset asset, Transform parent = null)
         {
-            SkeletonGraphic skeletonGraphic =
-                SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
+            SkeletonGraphic skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
             return skeletonGraphic;
         }
 
@@ -216,10 +215,11 @@ namespace Runtime.Manager
             skeletonAnimation.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             return skeletonAnimation;
         }
-        
+
         private static SkeletonGraphic LoadBulletSkeletonOfEnum(EntityModelType entityModelType, Transform parent = null)
         {
-            var anima = LoadSkeletonGraphic(DataManager.GetSpecifyEntityBulletSpine(entityModelType), parent);
+            if (!DataManager.GetSpecifyEntityBulletSpine(entityModelType, out var dataAsset)) return null;
+            var anima = LoadSkeletonGraphic(dataAsset, parent);
             anima.name = entityModelType.ToString();
             anima.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             return anima;

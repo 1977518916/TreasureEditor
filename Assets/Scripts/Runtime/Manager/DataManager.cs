@@ -29,6 +29,12 @@ namespace Runtime.Manager
             new Dictionary<EntityModelType, SkeletonDataAsset>();
         
         /// <summary>
+        /// 实体寻常动画
+        /// </summary>
+        private static readonly Dictionary<EntityModelType, SkeletonDataAsset> EntityCommonSpineDic =
+            new Dictionary<EntityModelType, SkeletonDataAsset>();
+        
+        /// <summary>
         /// 关卡数据
         /// </summary>
         public static LevelData LevelData;
@@ -93,7 +99,7 @@ namespace Runtime.Manager
             var allEffect = Resources.LoadAll<SkeletonDataAsset>("");
             foreach (EntityModelType entityName in Enum.GetValues(typeof(EntityModelType)))
             {
-                EffectClassify(entityName, allEffect);
+                SpineClassify(entityName, allEffect);
             }
 
             foreach (var data in AllSpineDic)
@@ -103,9 +109,9 @@ namespace Runtime.Manager
         }
 
         /// <summary>
-        /// 特效文件根据角色分类
+        /// 动画文件根据角色分类
         /// </summary>
-        private static void EffectClassify(EntityModelType type, IEnumerable<SkeletonDataAsset> dataList)
+        private static void SpineClassify(EntityModelType type, IEnumerable<SkeletonDataAsset> dataList)
         {
             var skeletonDataList = dataList.Where(dataAsset => dataAsset.name.ToLower().Contains(type.ToString().ToLower())).ToList();
             if (AllSpineDic.TryAdd(type, skeletonDataList)) return;
@@ -113,6 +119,25 @@ namespace Runtime.Manager
             AllSpineDic[type] = skeletonDataList;
         }
         
+        /// <summary>
+        /// 初始化所有实体的寻常动画
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="entitySpine"></param>
+        private static void InitAllEntityCommonSpine(EntityModelType type, List<SkeletonDataAsset> entitySpine)
+        {
+            foreach (var data in entitySpine.Where(data =>
+                         data.name.ToLower().Contains(type.ToString().ToLower()) &&
+                         !data.name.ToLower().Contains("attack") &&
+                         !data.name.ToLower().Contains("hit") &&
+                         !data.name.ToLower().Contains("skill"))) 
+            {
+                if (AllEntityAttackSpineDic.TryAdd(type, data))
+                    return;
+                AllEntityAttackSpineDic[type] = data;
+            }
+        }
+
         /// <summary>
         /// 分类对应实体的攻击动画文件
         /// </summary>

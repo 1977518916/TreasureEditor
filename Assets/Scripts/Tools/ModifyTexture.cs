@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using Spine;
 using Spine.Unity;
 using UnityEditor;
 using UnityEngine;
@@ -19,10 +16,23 @@ public class ModifyTexture : MonoBehaviour
         {
             foreach (var spineAtlasAsset in skeletonAtlasList)
             {
-                if (skeletonDataAsset.name.Replace("_SkeletonData","").Equals(spineAtlasAsset.name.Replace("_Atlas", "")))
+                if(skeletonDataAsset.name.Replace("_SkeletonData", "").Equals(spineAtlasAsset.name.Replace("_Atlas", "")))
                 {
                     skeletonDataAsset.atlasAssets[0] = spineAtlasAsset;
                 }
+            }
+        }
+        
+        var texture2ds = Resources.LoadAll<Texture2D>("");
+        foreach (Texture2D texture2d in texture2ds)
+        {
+            string path = AssetDatabase.GetAssetPath(texture2d);
+            TextureImporter textureImporter = AssetImporter.GetAtPath(path) as TextureImporter;
+            if(textureImporter != null)
+            {
+                textureImporter.isReadable = true;
+                textureImporter.alphaIsTransparency = true;
+                AssetDatabase.ImportAsset(path);
             }
         }
     }

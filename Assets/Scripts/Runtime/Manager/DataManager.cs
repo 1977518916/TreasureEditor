@@ -17,10 +17,16 @@ namespace Runtime.Manager
             new Dictionary<DataType.HeroPositionType, HeroData>();
         
         /// <summary>
-        /// 所有的特效资源
+        /// 所有的动画资源
         /// </summary>
-        private static readonly Dictionary<BossType, List<SkeletonDataAsset>> AllEffectDic =
+        private static readonly Dictionary<BossType, List<SkeletonDataAsset>> AllSpineDic =
             new Dictionary<BossType, List<SkeletonDataAsset>>();
+        
+        /// <summary>
+        /// 所有实体攻击动画字典
+        /// </summary>
+        private static readonly Dictionary<BossType, SkeletonDataAsset> AllEntityAttackDic =
+            new Dictionary<BossType, SkeletonDataAsset>();
         
         /// <summary>
         /// 关卡数据
@@ -67,11 +73,8 @@ namespace Runtime.Manager
         public static List<SkeletonDataAsset> GetSpecifyEntityEffect(Enum entityEnum)
         {
             var name = entityEnum.ToString();
-            if (AllEffectDic.Count == 0)
+            if (AllSpineDic.Count == 0)
                 InitAllEffectData();
-
-            
-            
             return default;
         }
 
@@ -81,28 +84,44 @@ namespace Runtime.Manager
         private static void InitAllEffectData()
         {
             var allEffect = Resources.LoadAll<SkeletonDataAsset>("");
-            foreach (var dataAsset in allEffect)
-            {
-                if (dataAsset.name.Contains($"Attack".ToLower()) || dataAsset.name.Contains($"Hit".ToLower()))
-                {
-                    Debug.Log(dataAsset.name);
-                }
-            }
             foreach (BossType entityName in Enum.GetValues(typeof(BossType)))
             {
                 EffectClassify(entityName, allEffect);
             }
+
+            foreach (var data in AllSpineDic)
+            {
+                InitAllEntityAttackSpine(data.Key, data.Value);
+            }
+
+            Debug.Log(AllEntityAttackDic);
         }
-        
+
         /// <summary>
         /// 特效文件根据角色分类
         /// </summary>
         private static void EffectClassify(BossType type, IEnumerable<SkeletonDataAsset> dataList)
         {
             var skeletonDataList = dataList.Where(dataAsset => dataAsset.name.ToLower().Contains(type.ToString().ToLower())).ToList();
-            if (AllEffectDic.TryAdd(type, skeletonDataList)) return;
-            AllEffectDic[type] = null;
-            AllEffectDic[type] = skeletonDataList;
+            if (AllSpineDic.TryAdd(type, skeletonDataList)) return;
+            AllSpineDic[type] = null;
+            AllSpineDic[type] = skeletonDataList;
+        }
+        
+        /// <summary>
+        /// 分类对应实体的攻击动画文件
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="entitySpine"></param>
+        private static void InitAllEntityAttackSpine(BossType type, List<SkeletonDataAsset> entitySpine)
+        {
+            foreach (var data in entitySpine.Where(data => data.name.ToLower().Contains(type.ToString().ToLower()) &&
+                                                           data.name.ToLower().Contains("attack")))
+            {
+                if (AllEntityAttackDic.TryAdd(type, data))
+                    return;
+                AllEntityAttackDic[type] = data;
+            }
         }
     }
 }

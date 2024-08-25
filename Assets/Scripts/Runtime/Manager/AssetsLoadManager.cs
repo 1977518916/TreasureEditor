@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Data;
 using Runtime.Data;
 using Spine.Unity;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using File = System.IO.File;
 using Object = UnityEngine.Object;
 
 namespace Runtime.Manager
@@ -12,6 +14,7 @@ namespace Runtime.Manager
     {
         private const string CharacterPath = "Character/";
         private const string EffectPath = "Effect/Spine/";
+        private const string ExternalPath = "/External/";
         public static GameObject LoadHero(HeroTypeEnum heroTypeEnum, Transform parent)
         {
             return LoadCharacterSkeletonOfEnum(heroTypeEnum, parent).GameObject();
@@ -21,17 +24,17 @@ namespace Runtime.Manager
         {
             return LoadCharacterSkeletonOfEnum(enemyTypeEnum, parent).GameObject();
         }
-        
+
         public static GameObject LoadBoss(BossType bossType, Transform parent)
         {
             return LoadCharacterSkeletonOfEnum(bossType, parent).GameObject();
         }
-        
+
         public static BulletEntity LoadBullet(HeroData heroData, Transform parent = null)
         {
             if(heroData.bulletType == BulletType.Self)
             {
-                GameObject gameObject = new GameObject("bullet",typeof(RectTransform))
+                GameObject gameObject = new GameObject("bullet", typeof(RectTransform))
                 {
                     layer = 5
                 };
@@ -135,10 +138,10 @@ namespace Runtime.Manager
             }
             return null;
         }
-        
+
         public static BulletEntity LoadBullet(string entityName, Transform parent = null)
         {
-            var gameObject = new GameObject("bullet",typeof(RectTransform))
+            var gameObject = new GameObject("bullet", typeof(RectTransform))
             {
                 layer = 5
             };
@@ -152,7 +155,34 @@ namespace Runtime.Manager
 
         public static Sprite LoadBg(MapTypeEnum mapTypeEnum)
         {
-            return Resources.Load<Sprite>(DataManager.MapTexturePath + (int)mapTypeEnum);
+            if(mapTypeEnum != MapTypeEnum.Other)
+            {
+                return Resources.Load<Sprite>(DataManager.MapTexturePath + (int)mapTypeEnum);
+            }
+            byte[] fileData = LoadExternalMap();
+            Texture2D texture2D = new Texture2D(2, 2);
+            texture2D.filterMode = FilterMode.Bilinear;
+            if(texture2D.LoadImage(fileData))
+            {
+                return Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
+            }
+            throw new DataException("外部地图数据读取错误!");
+
+        }
+
+        private static byte[] LoadExternalMap()
+        {
+            string path = Application.dataPath + ExternalPath + "map.png";
+            if(File.Exists(path))
+            {
+                return File.ReadAllBytes(path);
+            }
+            path = Application.dataPath + ExternalPath + "map.jpg";    
+            if(File.Exists(path))
+            {
+                return File.ReadAllBytes(path);
+            }
+            throw new DataException("未找到外部地图!");
         }
 
         public static SkeletonGraphic LoadSkeletonGraphic(string path, Transform parent = null)
@@ -179,7 +209,7 @@ namespace Runtime.Manager
             skeletonAnimation.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             return skeletonAnimation;
         }
-        
+
         public static T Load<T>(string path) where T : Object
         {
             return Resources.Load<T>(path);

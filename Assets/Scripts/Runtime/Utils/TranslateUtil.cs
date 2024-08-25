@@ -1,5 +1,8 @@
 ﻿using System;
 using Runtime.Data;
+using Spine;
+using Spine.Unity;
+using UnityEngine;
 
 namespace Runtime.Utils
 {
@@ -222,78 +225,13 @@ namespace Runtime.Utils
             }
         }
 
+        /// <summary>
+        /// 获取Boss自身子弹的路径
+        /// </summary>
+        /// <param name="bossType"></param>
+        /// <returns></returns>
         public static string GetBossSelfBulletPath(BossType bossType)
         {
-            switch (bossType)
-            {
-                case BossType.Null:
-                    return "";
-                case BossType.CaiWenJi:
-                case BossType.CaoFang:
-                case BossType.DaQiao:
-                case BossType.FaZheng:
-                case BossType.GanNing:
-                case BossType.GaoShun:
-                case BossType.GuanYinPing:
-                    break;
-                case BossType.GuanYu:
-                    break;
-                case BossType.GuoJia:
-                    break;
-                case BossType.HuangGai:
-                    break;
-                case BossType.HuangZhong:
-                    break;
-                case BossType.JiangWei:
-                    break;
-                case BossType.JiaXu:
-                    break;
-                case BossType.LingTong:
-                    break;
-                case BossType.LuJi:
-                    break;
-                case BossType.LuSu:
-                    break;
-                case BossType.LvMeng:
-                    break;
-                case BossType.MaDai:
-                    break;
-                case BossType.MaSu:
-                    break;
-                case BossType.PangTong:
-                    break;
-                case BossType.TaiShiCi:
-                    break;
-                case BossType.WenChou:
-                    break;
-                case BossType.XiaoQiao:
-                    break;
-                case BossType.XunYou:
-                    break;
-                case BossType.YuJin:
-                    break;
-                case BossType.ZhangJiao:
-                    break;
-                case BossType.ZhaoYun:
-                    break;
-                case BossType.ZhenJi:
-                    break;
-                case BossType.ZhouYu:
-                    break;
-                case BossType.ZhuGeJin:
-                    break;
-                case BossType.ZhuGeLiang:
-                    break;
-                case BossType.ZhuRong:
-                    break;
-                case BossType.DongZhuo:
-                    break;
-                case BossType.QingLong:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(bossType), bossType, null);
-            }
-
             return "";
         }
     }

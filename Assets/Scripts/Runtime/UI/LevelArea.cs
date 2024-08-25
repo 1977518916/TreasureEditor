@@ -50,6 +50,7 @@ namespace Runtime.UI
             transform.FindGet<Button>("Delete").onClick.AddListener(Delete);
             transform.FindGet<Button>("Save").onClick.AddListener(Save);
             Init();
+            DataManager.GetSpecifyEntityEffect(BossType.Null);
         }
         
         private void Init()

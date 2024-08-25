@@ -51,6 +51,11 @@ public class HeroEntity : MonoBehaviour, Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.HeroEntity;
     }
+
+    public void Dead()
+    {
+        
+    }
     
     public void Release()
     {
@@ -79,7 +84,7 @@ public class HeroEntity : MonoBehaviour, Entity
         
         return default;
     }
-    
+
     /// <summary>
     /// 检测是否是指定组件
     /// </summary>
@@ -119,7 +124,7 @@ public class HeroEntity : MonoBehaviour, Entity
         attackFireLocation = fireLocation;
         AllComponentList = new List<IComponent>();
     }
-    
+
     /// <summary>
     /// 获取位置索引
     /// </summary>

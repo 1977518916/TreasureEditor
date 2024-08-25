@@ -34,12 +34,12 @@ public class BulletEntity : MonoBehaviour, Entity
     /// 多少次触发检测会销毁子弹
     /// </summary>
     private int triggerDeadCount;
-    
+
     /// <summary>
     /// 当前触发次数
     /// </summary>
     private int currentTriggerCount;
-    
+
     public void Init()
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
@@ -70,7 +70,7 @@ public class BulletEntity : MonoBehaviour, Entity
     {
         foreach (var iComponent in AllComponentList)
         {
-            if (IsSpecifyComponent(iComponent, componentType))
+            if(IsSpecifyComponent(iComponent, componentType))
             {
                 return (T)iComponent;
             }
@@ -78,7 +78,7 @@ public class BulletEntity : MonoBehaviour, Entity
 
         return default;
     }
-    
+
     public bool IsSpecifyComponent(IComponent component, ComponentType componentType)
     {
         return componentType switch
@@ -100,7 +100,7 @@ public class BulletEntity : MonoBehaviour, Entity
     /// </summary>
     private void GenerateAttackBox()
     {
-        if (targetEntityType == EntityType.HeroEntity) return;
+        if(targetEntityType == EntityType.HeroEntity) return;
         var box = gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
         box.size = new Vector2(50f, 50f);
@@ -109,26 +109,26 @@ public class BulletEntity : MonoBehaviour, Entity
     private void OnTriggerEnter2D(Collider2D other)
     {
         var entity = other.GetComponent<Entity>();
-        if (entity == null) return;
-        if (entity.EntityType != targetEntityType) return;
-        switch (targetEntityType)
+        if(entity == null) return;
+        if(entity.EntityType != targetEntityType) return;
+        switch(targetEntityType)
         {
             case EntityType.HeroEntity:
-                if (IsHeroEntity(entity))
+                if(IsHeroEntity(entity))
                     HurtEntity(entity);
                 break;
             case EntityType.EnemyEntity:
-                if (IsEnemyEntity(entity))
+                if(IsEnemyEntity(entity))
                     HurtEntity(entity);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
-        
+
         currentTriggerCount++;
-        if (currentTriggerCount == triggerDeadCount)
+        if(currentTriggerCount == triggerDeadCount)
         {
-            EntitySystem.Instance.EnemyDead(EntityId);
+            EntitySystem.Instance.ReleaseEntity(EntityId);
         }
     }
 
@@ -137,7 +137,7 @@ public class BulletEntity : MonoBehaviour, Entity
     /// </summary>
     private void HurtEntity(Entity entity)
     {
-        switch (targetEntityType)
+        switch(targetEntityType)
         {
             case EntityType.None:
                 break;
@@ -153,7 +153,7 @@ public class BulletEntity : MonoBehaviour, Entity
                 throw new ArgumentOutOfRangeException();
         }
     }
-    
+
     /// <summary>
     /// 是否是英雄实体
     /// </summary>
@@ -163,7 +163,7 @@ public class BulletEntity : MonoBehaviour, Entity
     {
         return entity is HeroEntity;
     }
-    
+
     /// <summary>
     /// 是否是敌人实体
     /// </summary>

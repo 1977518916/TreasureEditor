@@ -1,6 +1,6 @@
 namespace Runtime.Data
 {
-    public enum BossType
+    public enum EntityModelType
     {
         Null,
         CaiWenJi,

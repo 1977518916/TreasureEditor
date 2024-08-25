@@ -24,12 +24,12 @@ namespace Runtime.Manager
         {
             return LoadCharacterSkeletonOfEnum(enemyTypeEnum, parent).GameObject();
         }
-
-        public static GameObject LoadBoss(BossType bossType, Transform parent)
+        
+        public static GameObject LoadBoss(EntityModelType entityModelType, Transform parent)
         {
-            return LoadCharacterSkeletonOfEnum(bossType, parent).GameObject();
+            return LoadCharacterSkeletonOfEnum(entityModelType, parent).GameObject();
         }
-
+        
         public static BulletEntity LoadBullet(HeroData heroData, Transform parent = null)
         {
             if(heroData.bulletType == BulletType.Self)
@@ -191,6 +191,13 @@ namespace Runtime.Manager
             SkeletonGraphic skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
             return skeletonGraphic;
         }
+        
+        public static SkeletonGraphic LoadSkeletonGraphic(SkeletonDataAsset asset, Transform parent = null)
+        {
+            SkeletonGraphic skeletonGraphic =
+                SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
+            return skeletonGraphic;
+        }
 
         private static SkeletonGraphic LoadCharacterSkeletonOfEnum(Enum @enum, Transform parent)
         {
@@ -208,6 +215,14 @@ namespace Runtime.Manager
             skeletonAnimation.name = @enum.ToString();
             skeletonAnimation.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             return skeletonAnimation;
+        }
+        
+        private static SkeletonGraphic LoadBulletSkeletonOfEnum(EntityModelType entityModelType, Transform parent = null)
+        {
+            var anima = LoadSkeletonGraphic(DataManager.GetSpecifyEntityBulletSpine(entityModelType), parent);
+            anima.name = entityModelType.ToString();
+            anima.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            return anima;
         }
 
         public static T Load<T>(string path) where T : Object

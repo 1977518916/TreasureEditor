@@ -137,104 +137,94 @@ namespace Runtime.Utils
             }
         }
 
-        public static string TranslateUi(BossType bossType)
+        public static string TranslateUi(EntityModelType modelType)
         {
-            switch(bossType)
+            switch (modelType)
             {
-                case BossType.CaiWenJi:
+                case EntityModelType.CaiWenJi:
                     return "蔡文姬";
-                case BossType.CaoFang:
+                case EntityModelType.CaoFang:
                     return "曹芳";
-                case BossType.DaQiao:
+                case EntityModelType.DaQiao:
                     return "大乔";
-                case BossType.FaZheng:
+                case EntityModelType.FaZheng:
                     return "法正";
-                case BossType.GanNing:
+                case EntityModelType.GanNing:
                     return "甘宁";
-                case BossType.GaoShun:
+                case EntityModelType.GaoShun:
                     return "高顺";
-                case BossType.GuanYinPing:
+                case EntityModelType.GuanYinPing:
                     return "关银屏";
-                case BossType.GuanYu:
+                case EntityModelType.GuanYu:
                     return "关羽";
-                case BossType.GuoJia:
+                case EntityModelType.GuoJia:
                     return "郭嘉";
-                case BossType.HuangGai:
+                case EntityModelType.HuangGai:
                     return "黄盖";
-                case BossType.HuangZhong:
+                case EntityModelType.HuangZhong:
                     return "黄忠";
-                case BossType.JiangWei:
+                case EntityModelType.JiangWei:
                     return "姜维";
-                case BossType.JiaXu:
+                case EntityModelType.JiaXu:
                     return "贾诩";
-                case BossType.LingTong:
+                case EntityModelType.LingTong:
                     return "凌统";
-                case BossType.LuJi:
+                case EntityModelType.LuJi:
                     return "陆绩";
-                case BossType.LuSu:
+                case EntityModelType.LuSu:
                     return "鲁肃";
-                // case BossType.LvBu:
+                // case EntityModelType.LvBu:
                 //     return "吕布";
-                case BossType.LvMeng:
+                case EntityModelType.LvMeng:
                     return "吕蒙";
-                case BossType.MaDai:
+                case EntityModelType.MaDai:
                     return "马岱";
-                case BossType.MaSu:
+                case EntityModelType.MaSu:
                     return "马谡";
-                case BossType.PangTong:
+                case EntityModelType.PangTong:
                     return "庞统";
-                // case BossType.SunShangXiang:
+                // case EntityModelType.SunShangXiang:
                 //     return "孙尚香";
-                case BossType.TaiShiCi:
+                case EntityModelType.TaiShiCi:
                     return "太史慈";
-                case BossType.WenChou:
+                case EntityModelType.WenChou:
                     return "文丑";
-                case BossType.XiaoQiao:
+                case EntityModelType.XiaoQiao:
                     return "小乔";
-                // case BossType.XuChu:
+                // case EntityModelType.XuChu:
                 //     return "许褚";
-                case BossType.XunYou:
+                case EntityModelType.XunYou:
                     return "荀攸";
-                // case BossType.XunYu:
+                // case EntityModelType.XunYu:
                 //     return "荀彧";
-                // case BossType.XuShu:
+                // case EntityModelType.XuShu:
                 //     return "徐庶";
-                case BossType.YuJin:
+                case EntityModelType.YuJin:
                     return "于禁";
                 // case HeroTypeEnum.ZhangFei:
                 //     return "张飞";
-                case BossType.ZhangJiao:
+                case EntityModelType.ZhangJiao:
                     return "张角";
-                case BossType.ZhaoYun:
+                case EntityModelType.ZhaoYun:
                     return "赵云";
-                case BossType.ZhenJi:
+                case EntityModelType.ZhenJi:
                     return "甄姬";
-                case BossType.ZhouYu:
+                case EntityModelType.ZhouYu:
                     return "周瑜";
-                case BossType.ZhuGeJin:
+                case EntityModelType.ZhuGeJin:
                     return "诸葛瑾";
-                case BossType.ZhuGeLiang:
+                case EntityModelType.ZhuGeLiang:
                     return "诸葛亮";
-                case BossType.ZhuRong:
+                case EntityModelType.ZhuRong:
                     return "祝融";
-                case BossType.DongZhuo:
+                case EntityModelType.DongZhuo:
                     return "董卓";
-                case BossType.QingLong:
+                case EntityModelType.QingLong:
                     return "青龙";
-                case BossType.Null:
+                case EntityModelType.Null:
                 default:
                     return "无";
             }
-        }
-
-        /// <summary>
-        /// 获取Boss自身子弹的路径
-        /// </summary>
-        /// <param name="bossType"></param>
-        /// <returns></returns>
-        public static string GetBossSelfBulletPath(BossType bossType)
-        {
-            return "";
         }
     }
 }

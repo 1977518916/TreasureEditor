@@ -15,18 +15,18 @@ namespace Runtime.Manager
         /// </summary>
         public static readonly Dictionary<DataType.HeroPositionType, HeroData> HeroDatas =
             new Dictionary<DataType.HeroPositionType, HeroData>();
-        
+
         /// <summary>
         /// 所有的动画资源
         /// </summary>
-        private static readonly Dictionary<BossType, List<SkeletonDataAsset>> AllSpineDic =
-            new Dictionary<BossType, List<SkeletonDataAsset>>();
-        
+        private static readonly Dictionary<EntityModelType, List<SkeletonDataAsset>> AllSpineDic =
+            new Dictionary<EntityModelType, List<SkeletonDataAsset>>();
+
         /// <summary>
         /// 所有实体攻击动画字典
         /// </summary>
-        private static readonly Dictionary<BossType, SkeletonDataAsset> AllEntityAttackDic =
-            new Dictionary<BossType, SkeletonDataAsset>();
+        private static readonly Dictionary<EntityModelType, SkeletonDataAsset> AllEntityAttackSpineDic =
+            new Dictionary<EntityModelType, SkeletonDataAsset>();
         
         /// <summary>
         /// 关卡数据
@@ -65,26 +65,32 @@ namespace Runtime.Manager
         /// 预制体路径
         /// </summary>
         public const string PrefabPath = "Prefabs/";
+        
+        /// <summary>
+        /// 初始化数据
+        /// </summary>
+        public static void InitData()
+        {
+            InitAllSpineData();
+        }
 
         /// <summary>
-        /// 获取指定实体的所有特效动画相关资源文件
+        /// 获取指定实体的子弹动画文件
         /// </summary>
+        /// <param name="modelType"></param>
         /// <returns></returns>
-        public static List<SkeletonDataAsset> GetSpecifyEntityEffect(Enum entityEnum)
+        public static SkeletonDataAsset GetSpecifyEntityBulletSpine(EntityModelType modelType)
         {
-            var name = entityEnum.ToString();
-            if (AllSpineDic.Count == 0)
-                InitAllEffectData();
-            return default;
+            return AllEntityAttackSpineDic.TryGetValue(modelType, out var bulletSpine) ? bulletSpine : null;
         }
 
         /// <summary>
         /// 初始化所有动画文件数据
         /// </summary>
-        private static void InitAllEffectData()
+        private static void InitAllSpineData()
         {
             var allEffect = Resources.LoadAll<SkeletonDataAsset>("");
-            foreach (BossType entityName in Enum.GetValues(typeof(BossType)))
+            foreach (EntityModelType entityName in Enum.GetValues(typeof(EntityModelType)))
             {
                 EffectClassify(entityName, allEffect);
             }
@@ -93,14 +99,12 @@ namespace Runtime.Manager
             {
                 InitAllEntityAttackSpine(data.Key, data.Value);
             }
-
-            Debug.Log(AllEntityAttackDic);
         }
 
         /// <summary>
         /// 特效文件根据角色分类
         /// </summary>
-        private static void EffectClassify(BossType type, IEnumerable<SkeletonDataAsset> dataList)
+        private static void EffectClassify(EntityModelType type, IEnumerable<SkeletonDataAsset> dataList)
         {
             var skeletonDataList = dataList.Where(dataAsset => dataAsset.name.ToLower().Contains(type.ToString().ToLower())).ToList();
             if (AllSpineDic.TryAdd(type, skeletonDataList)) return;
@@ -113,14 +117,14 @@ namespace Runtime.Manager
         /// </summary>
         /// <param name="type"></param>
         /// <param name="entitySpine"></param>
-        private static void InitAllEntityAttackSpine(BossType type, List<SkeletonDataAsset> entitySpine)
+        private static void InitAllEntityAttackSpine(EntityModelType type, List<SkeletonDataAsset> entitySpine)
         {
             foreach (var data in entitySpine.Where(data => data.name.ToLower().Contains(type.ToString().ToLower()) &&
                                                            data.name.ToLower().Contains("attack")))
             {
-                if (AllEntityAttackDic.TryAdd(type, data))
+                if (AllEntityAttackSpineDic.TryAdd(type, data))
                     return;
-                AllEntityAttackDic[type] = data;
+                AllEntityAttackSpineDic[type] = data;
             }
         }
     }

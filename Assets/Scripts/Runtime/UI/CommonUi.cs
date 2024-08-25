@@ -9,6 +9,7 @@ namespace Runtime.UI
     {
         private void Awake()
         {
+            DataManager.InitData();
             transform.FindGet<Button>("EnterLevel").onClick.AddListener(BattleSceneManager.LoadBattleScene);
         }
     }

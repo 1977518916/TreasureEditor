@@ -26,12 +26,12 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     /// 实体字典  ID对应对象
     /// </summary>
     private readonly ConcurrentDictionary<long, Entity> allEntityDic = new ConcurrentDictionary<long, Entity>();
-    
+    private readonly ConcurrentDictionary<long, Entity> deadEntityDic = new ConcurrentDictionary<long, Entity>();
     /// <summary>
     /// 战斗管理
     /// </summary>
     private BattleManager battleManager;
-    
+
     private void Start()
     {
         battleManager = BattleManager.Instance;
@@ -42,11 +42,11 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy, GenerateEntity);
     }
-    
+
     private void Update()
     {
         currentTime += Time.time;
-        if (currentTime >= UpdateTime)
+        if(currentTime >= UpdateTime)
         {
             EntityUpdate(UpdateTime);
         }
@@ -82,12 +82,12 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     private void GenerateEntity(DataType.HeroPositionType type, HeroData data)
     {
         var indexValue = Convert.ToInt32(type);
-        if (data.heroTypeEnum == HeroTypeEnum.Null)
+        if(data.heroTypeEnum == HeroTypeEnum.Null)
         {
             InitNullHeroStatus(indexValue);
             return;
         }
-        
+
         // 生成英雄实体
         var hero = Instantiate(battleManager.HeroAndEnemyRootPrefab, battleManager.HeroParent);
         hero.tag = "Hero";
@@ -146,13 +146,13 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         heroEntity.AllComponentList.Add(anima);
         return anima;
     }
-    
+
     private void InitHeroDead(long entityId, HeroEntity entity)
     {
         var dead = new HeroDeadComponent(entityId);
         entity.AllComponentList.Add(dead);
     }
-    
+
     private void InitEnemyDead(long entityId, EnemyEntity entity)
     {
         var dead = new EnemyDeadComponent(entityId);
@@ -203,16 +203,43 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         deadState.Init(animationComponent);
         var stateConvertDic = new Dictionary<StateType, List<StateType>>
         {
-            { StateType.Idle, new List<StateType> { StateType.Attack, StateType.Hit, StateType.Dead } },
-            { StateType.Attack, new List<StateType> { StateType.Idle, StateType.Dead } },
-            { StateType.Hit, new List<StateType> { StateType.Idle, StateType.Dead } }
+            {
+                StateType.Idle, new List<StateType>
+                {
+                    StateType.Attack,
+                    StateType.Hit,
+                    StateType.Dead
+                }
+            },
+            {
+                StateType.Attack, new List<StateType>
+                {
+                    StateType.Idle,
+                    StateType.Dead
+                }
+            },
+            {
+                StateType.Hit, new List<StateType>
+                {
+                    StateType.Idle,
+                    StateType.Dead
+                }
+            }
         };
         var allState = new Dictionary<StateType, IState>
         {
-            { StateType.Idle, idleState },
-            { StateType.Attack, attackState },
-            { StateType.Hit, hitState },
-            { StateType.Dead, deadState }
+            {
+                StateType.Idle, idleState
+            },
+            {
+                StateType.Attack, attackState
+            },
+            {
+                StateType.Hit, hitState
+            },
+            {
+                StateType.Dead, deadState
+            }
         };
         stateMachine.Init(entity, idleState, stateConvertDic, allState);
         entity.AllComponentList.Add(stateMachine);
@@ -233,18 +260,54 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         idleState.Init(animationComponent);
         var stateConvertDic = new Dictionary<StateType, List<StateType>>
         {
-            { StateType.Idle, new List<StateType> { StateType.Attack, StateType.Hit, StateType.Dead } },
-            { StateType.Run, new List<StateType> { StateType.Attack, StateType.Hit, StateType.Dead } },
-            { StateType.Attack, new List<StateType> { StateType.Idle, StateType.Dead } },
-            { StateType.Hit, new List<StateType> { StateType.Idle, StateType.Dead } }
+            {
+                StateType.Idle, new List<StateType>
+                {
+                    StateType.Attack,
+                    StateType.Hit,
+                    StateType.Dead
+                }
+            },
+            {
+                StateType.Run, new List<StateType>
+                {
+                    StateType.Attack,
+                    StateType.Hit,
+                    StateType.Dead
+                }
+            },
+            {
+                StateType.Attack, new List<StateType>
+                {
+                    StateType.Idle,
+                    StateType.Dead
+                }
+            },
+            {
+                StateType.Hit, new List<StateType>
+                {
+                    StateType.Idle,
+                    StateType.Dead
+                }
+            }
         };
         var allState = new Dictionary<StateType, IState>
         {
-            { StateType.Idle, idleState },
-            { StateType.Run, moveState },
-            { StateType.Attack, attackState },
-            { StateType.Hit, hitState },
-            { StateType.Dead, deadState }
+            {
+                StateType.Idle, idleState
+            },
+            {
+                StateType.Run, moveState
+            },
+            {
+                StateType.Attack, attackState
+            },
+            {
+                StateType.Hit, hitState
+            },
+            {
+                StateType.Dead, deadState
+            }
         };
         stateMachine.Init(entity, moveState, stateConvertDic, allState);
         entity.AllComponentList.Add(stateMachine);
@@ -287,12 +350,12 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         InitEntityPosition(entity);
         // 初始化敌人移动
         RectTransform targetRect = null;
-        if (targetId != -1)
+        if(targetId != -1)
         {
             targetRect = GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent)
                 .EntityTransform;
         }
-        
+
         InitEnemyEntityMove(entity, targetRect, root.GetComponent<RectTransform>(), enemyBean.EnemyData.speed);
         // 初始化敌人检测
         InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 150f);
@@ -307,7 +370,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp, entity));
         // Debug.Log("敌人数量"+battleManager.EnemyParent.childCount);
     }
-    
+
     /// <summary>
     /// 更换目标  如果返回的结果为-1证明目前需要找的对象没有
     /// </summary>
@@ -316,7 +379,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     /// <exception cref="ArgumentOutOfRangeException"></exception>
     public long ReplaceTarget(EntityType entityType)
     {
-        switch (entityType)
+        switch(entityType)
         {
             case EntityType.HeroEntity:
                 return GetFrontRowHeroID();
@@ -326,7 +389,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
                 throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
         }
     }
-    
+
     /// <summary>
     /// 获取存活英雄的ID
     /// </summary>
@@ -335,10 +398,10 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     {
         foreach (var kEntity in allEntityDic)
         {
-            if (kEntity.Value is HeroEntity && kEntity.Value != null)
+            if(kEntity.Value is HeroEntity && kEntity.Value != null)
             {
                 var hero = (HeroEntity)kEntity.Value;
-                if (hero.GetIsSurvive())
+                if(hero.GetIsSurvive())
                 {
                     return hero.EntityId;
                 }
@@ -347,21 +410,21 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
         return -1;
     }
-    
+
     /// <summary>
     /// 获取最前排英雄的ID 如果为-1 则为没有英雄存活
     /// </summary>
     /// <returns></returns>
     public long GetFrontRowHeroID()
     {
-        if (GetSurviveHeroID() == -1) return -1;
+        if(GetSurviveHeroID() == -1) return -1;
         var heroList = GetAllHeroEntity();
         var currentMaxIndex = 0;
         HeroEntity maxIndexHero = null;
         foreach (var entity in heroList)
         {
-            if (!entity.GetIsSurvive()) continue;
-            if (entity.GetLocationIndex() < currentMaxIndex) continue;
+            if(!entity.GetIsSurvive()) continue;
+            if(entity.GetLocationIndex() < currentMaxIndex) continue;
             currentMaxIndex = entity.GetLocationIndex();
             maxIndexHero = entity;
         }
@@ -373,7 +436,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     {
         return allEntityDic.Values.OfType<HeroEntity>().ToList();
     }
-    
+
     private List<EnemyEntity> GetAllEnemyEntity()
     {
         return allEntityDic.Values.OfType<EnemyEntity>().ToList();
@@ -388,7 +451,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     {
         return allEntityDic.TryGetValue(entityId, out var entity) ? entity.EntityType : EntityType.None;
     }
-    
+
     /// <summary>
     ///  获取存活的敌人的ID
     /// </summary>
@@ -397,7 +460,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     {
         foreach (var kEntity in allEntityDic)
         {
-            if (kEntity.Value is EnemyEntity)
+            if(kEntity.Value is EnemyEntity)
             {
                 return kEntity.Key;
             }
@@ -405,7 +468,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
         return -1;
     }
-    
+
     /// <summary>
     /// 添加实体进入管理
     /// </summary>
@@ -415,7 +478,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     {
         allEntityDic.GetOrAdd(entityId, entity);
     }
-    
+
     /// <summary>
     /// 获取目标类型是否有存活的敌人
     /// </summary>
@@ -423,7 +486,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
     /// <returns></returns>
     public bool GetTargetTypeSurviveEntity(EntityType entityType)
     {
-        switch (entityType)
+        switch(entityType)
         {
             case EntityType.None:
                 break;
@@ -442,15 +505,38 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
     public void HeroDead(long entityId)
     {
-        if (allEntityDic.TryGetValue(entityId, out var entity))
+        if(allEntityDic.Remove(entityId, out var entity))
         {
-            entity.Release();
+            HeroEntity heroEntity = entity as HeroEntity;
+            heroEntity.Dead();
+            deadEntityDic.TryAdd(entityId, entity);
         }
     }
 
     public void EnemyDead(long entityId)
     {
-        if (allEntityDic.Remove(entityId, out var entity))
+        if(allEntityDic.Remove(entityId, out var entity))
+        {
+            EnemyEntity enemyEntity = entity as EnemyEntity;
+            enemyEntity.Dead();
+            deadEntityDic.TryAdd(entityId, entity);
+        }
+    }
+
+    public void ReleaseEntity(long entityId)
+    {
+        if(allEntityDic.Remove(entityId, out var entity))
+        {
+            entity.Release();
+        }
+    }
+
+    /// <summary>
+    /// 将已死亡的实体单位释放
+    /// </summary>
+    public void DeadEntityRelease(long entityId)
+    {
+        if(deadEntityDic.Remove(entityId, out var entity))
         {
             entity.Release();
         }

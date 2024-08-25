@@ -10,7 +10,7 @@ namespace Runtime.Utils
     {
         public static string TranslateUi(HeroTypeEnum heroTypeEnum)
         {
-            switch (heroTypeEnum)
+            switch(heroTypeEnum)
             {
                 case HeroTypeEnum.CaiWenJi:
                     return "蔡文姬";
@@ -96,7 +96,7 @@ namespace Runtime.Utils
 
         public static string TranslateUi(EnemyTypeEnum enemyTypeEnum)
         {
-            switch (enemyTypeEnum)
+            switch(enemyTypeEnum)
             {
                 case EnemyTypeEnum.DunBing:
                     return "盾兵";
@@ -117,8 +117,10 @@ namespace Runtime.Utils
 
         public static string TranslateUi(MapTypeEnum mapTypeEnum)
         {
-            switch (mapTypeEnum)
+            switch(mapTypeEnum)
             {
+                case MapTypeEnum.Other:
+                    return $"外部地图";
                 default:
                     return $"地图{(int)mapTypeEnum + 1}";
             }
@@ -126,7 +128,7 @@ namespace Runtime.Utils
 
         public static string TranslateUi(BulletType bulletType)
         {
-            switch (bulletType)
+            switch(bulletType)
             {
                 case BulletType.Self:
                 default:
@@ -134,10 +136,10 @@ namespace Runtime.Utils
                     return "自身子弹";
             }
         }
-        
+
         public static string TranslateUi(BossType bossType)
         {
-            switch (bossType)
+            switch(bossType)
             {
                 case BossType.CaiWenJi:
                     return "蔡文姬";

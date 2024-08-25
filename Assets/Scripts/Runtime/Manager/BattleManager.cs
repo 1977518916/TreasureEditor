@@ -12,17 +12,17 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// 战斗背景
     /// </summary>
     public Image battleBG;
-    
+
     /// <summary>
     /// 战斗底座父对象
     /// </summary>
     public GameObject BattleCoordinates;
-    
+
     /// <summary>
     /// 所有战斗底座
     /// </summary>
     public List<RectTransform> BattleBaseList = new List<RectTransform>();
-    
+
     /// <summary>
     /// 所有英雄血条和CD条
     /// </summary>
@@ -32,7 +32,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// 英雄根节点预制体
     /// </summary>
     public GameObject HeroAndEnemyRootPrefab;
-    
+
     /// <summary>
     /// 英雄父对象
     /// </summary>
@@ -42,17 +42,17 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// 敌人的父对象
     /// </summary>
     public RectTransform EnemyParent;
-    
+
     /// <summary>
     /// 子弹父对象
     /// </summary>
     public RectTransform BulletParent;
-    
+
     /// <summary>
     /// 伤害飘字父节点
     /// </summary>
     public RectTransform HurtProstituteParent;
-    
+
     #region Command
 
     /// <summary>
@@ -66,7 +66,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     {
         root.GetComponent<RectTransform>().position = new Vector3(BattleBaseList[value].position.x, BattleBaseList[value].position.y + 10f);
     }
-    
+
     /// <summary>
     /// 展示战斗底座
     /// </summary>
@@ -83,7 +83,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     [Command]
     public void SetBattleBG(int value)
     {
-        if (value > 6) return;
+        if(value > 6) return;
         battleBG.sprite = AssetsLoadManager.Load<Sprite>(DataManager.MapTexturePath + value);
     }
 
@@ -94,7 +94,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// <returns></returns>
     public (GameObject HpBg, GameObject CdBg, Image Hp, Image Cd) GetHeroStatus(int value)
     {
-        if (value > 4) return default;
+        if(value > 4) return default;
         var heroStatus = HeroStatusList[value];
         var hpBg = heroStatus.Find("HP_BG").gameObject;
         var cdBg = heroStatus.Find("AttackCD_BG").gameObject;
@@ -102,7 +102,7 @@ public class BattleManager : MonoSingleton<BattleManager>
         var cd = heroStatus.Find("AttackCD_BG/AttackCD").GetComponent<Image>();
         return (hpBg, cdBg, hp, cd);
     }
-    
+
     /// <summary>
     /// 获取开火点
     /// </summary>
@@ -114,7 +114,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     }
 
     #endregion
-    
+
     public RectTransform GetBulletParent()
     {
         return BulletParent;
@@ -125,13 +125,13 @@ public class BattleManager : MonoSingleton<BattleManager>
         GetComponent<Canvas>().worldCamera = Camera.main;
         battleBG.sprite = AssetsLoadManager.LoadBg(DataManager.LevelData.mapType);
     }
-    
+
     public void GenerateHurtProstitute(Vector2 location, int hurt, float surviveTime)
     {
-        if (!DataManager.GameData.isShowNumber) return;
+        if(!DataManager.GameData.isShowNumber) return;
         var hurtProstitutePrefab = AssetsLoadManager.Load<GameObject>("Prefabs/HurtProstitute");
         var hurtProstitute = Instantiate(hurtProstitutePrefab);
-        hurtProstitute.GetComponent<RectTransform>().parent = HurtProstituteParent;
+        hurtProstitute.GetComponent<RectTransform>().SetParent(HurtProstituteParent);
         hurtProstitute.GetComponent<HurtProstitute>().SetData(location, hurt, surviveTime);
     }
 

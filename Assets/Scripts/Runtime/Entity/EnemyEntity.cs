@@ -10,23 +10,27 @@ public class EnemyEntity : MonoBehaviour, Entity
     public long EntityId { get; set; }
     public EntityType EntityType { get; set; }
     public List<IComponent> AllComponentList { get; set; }
-    
+
     public void Init()
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.EnemyEntity;
         AllComponentList = new List<IComponent>();
     }
-    
+
     public void Release()
+    {
+        Destroy(gameObject);
+    }
+    public void Dead()
     {
         foreach (var iComponent in AllComponentList)
         {
             iComponent?.Release();
         }
-        Destroy(gameObject);
+        GetComponent<Collider2D>().enabled = false;
     }
-    
+
     /// <summary>
     /// 获取指定组件
     /// </summary>
@@ -36,7 +40,7 @@ public class EnemyEntity : MonoBehaviour, Entity
     {
         foreach (var iComponent in AllComponentList)
         {
-            if (IsSpecifyComponent(iComponent, componentType))
+            if(IsSpecifyComponent(iComponent, componentType))
             {
                 return (T)iComponent;
             }
@@ -44,7 +48,7 @@ public class EnemyEntity : MonoBehaviour, Entity
 
         return default;
     }
-    
+
     /// <summary>
     /// 检测是否是指定组件
     /// </summary>

@@ -8,6 +8,7 @@
         Map4,
         Map5,
         Map6,
-        Map7
+        Map7,
+        Other
     }
 }

@@ -104,6 +104,13 @@ public class HeroAttackComponent : AttackComponent
         if (isInAttackCd) return;
         if (IsInAttackInterval) return;
         // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
+        
+        MakeBullet(point);
+        ReduceAttackCount();
+    }
+
+    private void MakeBullet(Vector2 point)
+    {
         heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
             .TryChangeState(StateType.Attack);
         var bulletEntity = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData());
@@ -116,7 +123,6 @@ public class HeroAttackComponent : AttackComponent
         EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
         LastAttackTime = Time.time;
         IsInAttackInterval = true;
-        ReduceAttackCount();
     }
     
     /// <summary>

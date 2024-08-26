@@ -43,7 +43,7 @@ public class BulletEntity : MonoBehaviour, Entity
     public void Init()
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
-        EntityType = EntityType.BulletEnemy;
+        EntityType = EntityType.BulletEntity;
         AllComponentList = new List<IComponent>();
     }
 
@@ -147,7 +147,7 @@ public class BulletEntity : MonoBehaviour, Entity
             case EntityType.EnemyEntity:
                 entity.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit(bulletHurt);
                 break;
-            case EntityType.BulletEnemy:
+            case EntityType.BulletEntity:
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

@@ -494,7 +494,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
                 return GetSurviveHeroID() != -1;
             case EntityType.EnemyEntity:
                 return GetSurviveEnemyID() != -1;
-            case EntityType.BulletEnemy:
+            case EntityType.BulletEntity:
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);

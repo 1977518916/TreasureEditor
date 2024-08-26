@@ -14,9 +14,14 @@ public enum EntityType
     /// 敌人实体
     /// </summary>
     EnemyEntity,
-    
+
     /// <summary>
     /// 子弹实体
     /// </summary>
-    BulletEnemy
+    BulletEntity,
+
+    /// <summary>
+    /// boss实体
+    /// </summary>
+    BoosEntity
 }

@@ -1,6 +1,6 @@
-using System.Collections.Generic;
-using Runtime.Component.Position;
 using Runtime.Data;
+using Runtime.Component.Attack;
+using Runtime.Component.Position;
 using Runtime.Manager;
 using UnityEngine;
 
@@ -29,15 +29,23 @@ public partial class EntitySystem
         InitEnemyState(entity, InitEnemyEntityAnimation(entity.EntityId, bossAnima, entity));
         // 初始化固定距离移动组件
         InitFixedDistanceComponent(entity, entity.GetComponent<RectTransform>(), data);
+        //初始化攻击组件
+        InitBossAtk(entity, data);
     }
-    
+
     private void InitBossPosition(Entity entity, RectTransform rectTransform)
     {
         entity.AllComponentList.Add(new RandomPositionComponent());
         entity.GetSpecifyComponent<RandomPositionComponent>(ComponentType.RandomPositionComponent)
             .BossPosition(rectTransform);
     }
-    
+
+    private void InitBossAtk(BossEntity entity, BossData data)
+    {
+        BossAttackComponent bossAttackComponent = new BossAttackComponent(2, data.Atk, entity, entity.transform as RectTransform, data.BulletType);
+        entity.AllComponentList.Add(bossAttackComponent);
+    }
+
     /// <summary>
     /// 初始化固定距离移动组件
     /// </summary>

@@ -52,7 +52,8 @@ public class EnemyAttackComponent : AttackComponent
         if (IsInAttackInterval) return;
         
         entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
-        pointDetectComponent.GetTarget().GetComponent<HeroEntity>().GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(hurt);
+        pointDetectComponent.GetTarget().GetComponent<HeroEntity>().
+            GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(DataManager.GameData.isInvicibleSelf ? 1 : hurt);
         LastAttackTime = Time.time;
         IsInAttackInterval = true;
     }

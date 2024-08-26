@@ -86,7 +86,7 @@ namespace Runtime.Component.Attack
             if(TryGetAtkedEntity(out var hero))
             {
                 entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
-                hero.GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(hurt);
+                hero.GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(DataManager.GameData.isInvicibleSelf ? 1 : hurt);
             }
             LastAttackTime = Time.time;
             IsInAttackInterval = true;

@@ -240,6 +240,35 @@ namespace Runtime.UI
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        private void UpdateBulletDrop(EntityModelType modelType)
+        {
+            selectBossBullet.options.Clear();
+            if (modelType is EntityModelType.DongZhuo or EntityModelType.QingLong)
+            {
+                var option = new TMP_Dropdown.OptionData
+                {
+                    text = "攻击动画"
+                };
+                selectBossBullet.options.Add(option);
+            }
+            else
+            {
+                var option = new TMP_Dropdown.OptionData
+                {
+                    text = "自身子弹"
+                };
+                var option1 = new TMP_Dropdown.OptionData
+                {
+                    text = "攻击动画"
+                };
+                selectBossBullet.options.Add(option);
+                selectBossBullet.options.Add(option1);
+            }
+        }
+
+        /// <summary>
         /// 更新Boss模型选项下拉框
         /// </summary>
         private void UpdateBossModelTypeDropdown()

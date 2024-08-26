@@ -354,7 +354,7 @@ namespace Runtime.UI
 
         private bool IsHoldTheBullet(EntityModelType modelType)
         {
-            return modelType is not (EntityModelType.DongZhuo or EntityModelType.QingLong or EntityModelType.Null);
+            return modelType is not (EntityModelType.DongZhuo or EntityModelType.Null);
         }
         
         private IEnumerator Wait()
@@ -406,11 +406,9 @@ namespace Runtime.UI
         {
             HideBossModel();
             var boss = AssetsLoadManager.LoadBoss(entityModelType, bossModelParent);
-            if (entityModelType is EntityModelType.DongZhuo or EntityModelType.QingLong)
+            if (entityModelType is EntityModelType.DongZhuo )
             {
-                boss.GetComponent<RectTransform>().localScale = entityModelType == EntityModelType.DongZhuo
-                    ? new Vector3(0.5f, 0.5f, 1f)
-                    : new Vector3(0.25f, 0.25f, 1f);
+                boss.GetComponent<RectTransform>().localScale = new Vector3(0.5f, 0.5f, 1f);
             }
         }
         
@@ -425,7 +423,7 @@ namespace Runtime.UI
         private void ShowBossBulletModel(EntityModelType entityModelType)
         {
             HideBossBulletModel();
-            if (entityModelType is EntityModelType.DongZhuo or EntityModelType.QingLong or EntityModelType.Null)
+            if (entityModelType is EntityModelType.DongZhuo or EntityModelType.Null)
             {
                 return;
             }

@@ -130,7 +130,7 @@ public partial class EntitySystem
                 StateType.Idle, idleState
             },
             {
-                StateType.Run, entityModelType == EntityModelType.QingLong ? idleState : runState
+                StateType.Run, runState
             },
             {
                 StateType.Attack, attackState
@@ -142,7 +142,7 @@ public partial class EntitySystem
                 StateType.Dead, deadState
             }
         };
-        stateMachine.Init(entity, entityModelType == EntityModelType.QingLong ? idleState : runState, stateConvertDic, allState);
+        stateMachine.Init(entity, runState, stateConvertDic, allState);
         entity.AllComponentList.Add(stateMachine);
     }
 }

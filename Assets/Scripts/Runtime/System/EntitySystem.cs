@@ -466,7 +466,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     {
         foreach (var kEntity in allEntityDic)
         {
-            if(kEntity.Value is EnemyEntity)
+            if (kEntity.Value is EnemyEntity or BossEntity) 
             {
                 return kEntity.Key;
             }

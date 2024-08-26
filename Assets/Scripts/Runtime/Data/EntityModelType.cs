@@ -36,6 +36,6 @@ namespace Runtime.Data
         ZhuGeLiang,
         ZhuRong,
         DongZhuo,
-        QingLong
+        //QingLong
     }
 }

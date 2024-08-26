@@ -219,8 +219,8 @@ namespace Runtime.Utils
                     return "祝融";
                 case EntityModelType.DongZhuo:
                     return "董卓";
-                case EntityModelType.QingLong:
-                    return "青龙";
+                // case EntityModelType.QingLong:
+                //     return "青龙";
                 case EntityModelType.Null:
                 default:
                     return "无";

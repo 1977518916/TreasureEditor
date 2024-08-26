@@ -23,6 +23,8 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// </summary>
     private float currentTime;
 
+    private Timer timer;
+    
     /// <summary>
     /// 实体字典  ID对应对象
     /// </summary>
@@ -40,10 +42,10 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         {
             GenerateEntity(heroData.Key, heroData.Value);
         }
-        
-        Timer.Register(DataManager.LevelData.BossData.Time, () =>
+
+        timer = Timer.Register(DataManager.LevelData.BossData.Time, () =>
         {
-            if (DataManager.LevelData.BossData.EntityModelType == EntityModelType.Null) return; 
+            if (DataManager.LevelData.BossData.EntityModelType == EntityModelType.Null) return;
             GenerateBossEntity(DataManager.LevelData.BossData.EntityModelType, DataManager.LevelData.BossData);
         });
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy, GenerateEntity);
@@ -556,7 +558,8 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         {
             entity.Release();
         }
-
+        timer?.Cancel();
+        timer = null;
         allEntityDic.Clear();
         EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.MakeEnemy);
     }

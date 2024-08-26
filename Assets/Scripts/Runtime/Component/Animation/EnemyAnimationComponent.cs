@@ -33,8 +33,14 @@ public class EnemyAnimationComponent : AnimationComponent
     
     public void ChangeAnima(StateType stateType, bool isLoop, Action action)
     {
-        SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop).Complete +=
-            entry => action?.Invoke();
+        foreach (var animation in SkeletonGraphic.AnimationState.Data.SkeletonData.Animations.Items)
+        {
+            if (animation.Name.ToLower().Equals(stateType.ToString().ToLower()))
+            {
+                SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop).Complete +=
+                    entry => action?.Invoke();
+            }   
+        }
     }
     
     private string GetAnimaName(StateType stateType)

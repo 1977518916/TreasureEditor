@@ -1781,12 +1781,12 @@ MonoBehaviour:
   - {fileID: 796294424}
   - {fileID: 1626371390}
   HeroAndEnemyRootPrefab: {fileID: 1211662323}
-  BossRootPrefab: {fileID: 0}
+  BossRootPrefab: {fileID: 745774016}
   HeroParent: {fileID: 673703899}
   EnemyParent: {fileID: 924491848}
   BulletParent: {fileID: 58156329}
-  hurtTextPrefabParent: {fileID: 0}
-  BossParent: {fileID: 0}
+  hurtTextPrefabParent: {fileID: 1014089111}
+  BossParent: {fileID: 1612338888}
 --- !u!1 &570508703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,7 +2642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1014089111}
   m_Layer: 5
-  m_Name: HurtProstituteParent
+  m_Name: HurtTextParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

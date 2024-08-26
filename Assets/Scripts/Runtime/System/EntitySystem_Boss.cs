@@ -27,7 +27,8 @@ public partial class EntitySystem
         InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 500f);
         // 初始化敌人状态机组件 和 动画组件
         InitEnemyState(entity, InitEnemyEntityAnimation(entity.EntityId, bossAnima, entity));
-        
+        // 初始化固定距离移动组件
+        InitFixedDistanceComponent(entity, entity.GetComponent<RectTransform>(), data);
         // 初始化出生点组件
         InitBossPosition(entity);
     }
@@ -37,5 +38,17 @@ public partial class EntitySystem
         entity.AllComponentList.Add(new RandomPositionComponent());
         entity.GetSpecifyComponent<RandomPositionComponent>(ComponentType.RandomPositionComponent)
             .BossPosition(entity.GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform);
+    }
+    
+    /// <summary>
+    /// 初始化固定距离移动组件
+    /// </summary>
+    /// <param name="entity"></param>
+    /// <param name="rectTransform"></param>
+    /// <param name="data"></param>
+    private void InitFixedDistanceComponent(Entity entity, RectTransform rectTransform, BossData data)
+    {
+        entity.AllComponentList.Add(new FixedDistanceComponent(rectTransform, data.RunSpeed, new Vector2(-1f, 0f),
+            new Vector2(-45f, 0f)));
     }
 }

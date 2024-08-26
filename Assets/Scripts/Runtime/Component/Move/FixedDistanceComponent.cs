@@ -16,7 +16,7 @@ public class FixedDistanceComponent : MoveComponent
     public float MoveSpeed { get; set; }
     public bool ContinueMove { get; set; }
     public Vector2 MoveDirection { get; set; }
-    private Vector2 targetLocation;
+    private readonly Vector2 targetLocation;
     /// <summary>
     /// 固定距离移动  用于只会移动一段固定距离的逻辑
     /// </summary>

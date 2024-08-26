@@ -11,11 +11,14 @@ public class EnemyEntity : MonoBehaviour, Entity
     public EntityType EntityType { get; set; }
     public List<IComponent> AllComponentList { get; set; }
 
+    public bool IsSurvive { get; private set; }
+
     public void Init()
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.EnemyEntity;
         AllComponentList = new List<IComponent>();
+        IsSurvive = true;
     }
 
     public void Release()
@@ -29,6 +32,11 @@ public class EnemyEntity : MonoBehaviour, Entity
             iComponent?.Release();
         }
         GetComponent<Collider2D>().enabled = false;
+    }
+
+    public void SetSurvive(bool survive)
+    {
+        IsSurvive = survive;
     }
 
     /// <summary>

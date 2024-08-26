@@ -33,6 +33,8 @@ public partial class EntitySystem
         InitBossAtk(entity, data);
         // 初始化Boss状态组件
         InitBossStatusComponent(entity, data);
+        // 死亡
+        InitEnemyDead(entity.EntityId, entity);
     }
 
     private void InitBossAtk(BossEntity entity, BossData data)
@@ -136,7 +138,7 @@ public partial class EntitySystem
                 StateType.Attack, attackState
             },
             {
-                StateType.Hit, hitState
+                StateType.Hit, entityModelType == EntityModelType.DongZhuo ? idleState : hitState
             },
             {
                 StateType.Dead, deadState

@@ -159,7 +159,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         entity.AllComponentList.Add(dead);
     }
 
-    private void InitEnemyDead(long entityId, EnemyEntity entity)
+    private void InitEnemyDead(long entityId, Entity entity)
     {
         var dead = new EnemyDeadComponent(entityId);
         entity.AllComponentList.Add(dead);
@@ -466,10 +466,13 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     {
         foreach (var kEntity in allEntityDic)
         {
-            if (kEntity.Value is EnemyEntity or BossEntity) 
+            if (kEntity.Value is not (EnemyEntity or BossEntity)) continue;
+            if (kEntity.Value is BossEntity { IsSurvive: true } or EnemyEntity { IsSurvive: true })
             {
                 return kEntity.Key;
             }
+            
+            return -1;
         }
 
         return -1;
@@ -520,20 +523,10 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     
     public void EnemyDead(long entityId)
     {
-        if(allEntityDic.Remove(entityId, out var entity))
+        if (allEntityDic.Remove(entityId, out var entity))
         {
-            EnemyEntity enemyEntity = entity as EnemyEntity;
-            enemyEntity?.Dead();
-            deadEntityDic.TryAdd(entityId, entity);
-        }
-    }
-    
-    public void BossDead(long entityId)
-    {
-        if (allEntityDic.Remove(entityId, out var entity))  
-        {
-            BossEntity bossEntity = entity as BossEntity;
-            bossEntity?.Dead();
+            (entity as EnemyEntity)?.Dead();
+            (entity as BossEntity)?.Dead();
             deadEntityDic.TryAdd(entityId, entity);
         }
     }

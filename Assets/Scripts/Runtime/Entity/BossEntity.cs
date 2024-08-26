@@ -12,6 +12,11 @@ public class BossEntity : MonoBehaviour, Entity
     public List<IComponent> AllComponentList { get; set; }
     
     /// <summary>
+    /// 是否存活
+    /// </summary>
+    public bool IsSurvive { get; private set; }
+
+    /// <summary>
     /// Boss数据
     /// </summary>
     private BossData data;
@@ -26,6 +31,7 @@ public class BossEntity : MonoBehaviour, Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.EnemyEntity;
         AllComponentList = new List<IComponent>();
+        IsSurvive = true;
     }
     
     public void InitBoss(BossData bossData)
@@ -38,10 +44,19 @@ public class BossEntity : MonoBehaviour, Entity
     {
         AllComponentList.Clear();
     }
-    
+
+    public void SetSurvive(bool survive)
+    {
+        IsSurvive = survive;
+    }
+
     public void Dead()
     {
-        
+        foreach (var iComponent in AllComponentList)
+        {
+            iComponent?.Release();
+        }
+        GetComponent<Collider2D>().enabled = false;
     }
 
     public RectTransform GetEntityTransform()

@@ -277,6 +277,7 @@ namespace Runtime.UI
         private void UpdateBossGenerateTime(string generateTime)
         {
             bossGenerateTime.text = generateTime;
+            levelData.BossData.Time = Convert.ToSingle(bossGenerateTime.text);
         }
         
         /// <summary>
@@ -286,6 +287,7 @@ namespace Runtime.UI
         private void UpdateBossAttack(string bossAtk)
         {
             bossAttack.text = bossAtk;
+            levelData.BossData.Atk = Convert.ToInt32(bossAttack.text);
         }
         
         /// <summary>
@@ -295,6 +297,7 @@ namespace Runtime.UI
         private void UpdateBossHp(string bossHpValue)
         {
             bossHp.text = bossHpValue;
+            levelData.BossData.Hp = Convert.ToInt32(bossHp.text);
         }   
         
         /// <summary>
@@ -304,6 +307,7 @@ namespace Runtime.UI
         private void UpdateBossRunSpeed(string bossRunSpeed)
         {
             bossRun.text = bossRunSpeed;
+            levelData.BossData.RunSpeed = Convert.ToSingle(bossRun.text);
         }
 
         /// <summary>
@@ -328,6 +332,7 @@ namespace Runtime.UI
             selectBossBullet.onValueChanged.RemoveAllListeners();
             selectBossBullet.onValueChanged.AddListener(value =>
             {
+                levelData.BossData.BulletType = value != -1 ? (BulletType)value : BulletType.NoEntity;
                 if (IsHoldTheBullet(levelData.BossData.EntityModelType))   
                 {
                     switch (value)
@@ -345,7 +350,6 @@ namespace Runtime.UI
                     HideBossBulletModel();
                 }
             });
-            //StartCoroutine(Wait());
         }
 
         private bool IsHoldTheBullet(EntityModelType modelType)
@@ -389,7 +393,7 @@ namespace Runtime.UI
 
                 ShowBoss((EntityModelType)value);
             });
-
+            
             selectBossModel.value = levelData.BossData.EntityModelType == EntityModelType.Null
                 ? 1
                 : (int)levelData.BossData.EntityModelType;

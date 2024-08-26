@@ -213,6 +213,33 @@ namespace Runtime.UI
         }
         
         /// <summary>
+        /// 更新Boss生成时间
+        /// </summary>
+        /// <param name="generateTime"></param>
+        private void UpdateBossGenerateTime(string generateTime)
+        {
+            bossGenerateTime.text = generateTime;
+        }
+        
+        /// <summary>
+        /// 更新Boss攻击力
+        /// </summary>
+        /// <param name="bossAtk"></param>
+        private void UpdateBossAttack(string bossAtk)
+        {
+            bossAttack.text = bossAtk;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bossHpValue"></param>
+        private void UpdateBossHp(string bossHpValue)
+        {
+            bossHp.text = bossHpValue;
+        }
+
+        /// <summary>
         /// 更新Boss模型选项下拉框
         /// </summary>
         private void UpdateBossModelTypeDropdown()
@@ -225,7 +252,7 @@ namespace Runtime.UI
                 };
                 selectBossModel.options.Add(option);
             }
-
+            
             selectBossModel.onValueChanged.AddListener(value =>
             {
                 if (value == 0)
@@ -237,7 +264,7 @@ namespace Runtime.UI
                 ShowBoss((EntityModelType)value);
             });
         }
-
+        
         /// <summary>
         /// 显示Boss模型
         /// </summary>
@@ -252,7 +279,7 @@ namespace Runtime.UI
                     : new Vector3(0.25f, 0.25f, 1f);
             }
         }
-
+        
         /// <summary>
         /// 隐藏Boss模型,也是删除
         /// </summary>

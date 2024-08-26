@@ -24,7 +24,7 @@ public partial class EntitySystem
         entity.InitBoss(data);
         AddEntity(entity.EntityId, entity);
         // 初始化敌人检测
-        InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 500f);
+        InitPointDetect(entity, entity.GetEntityTransform(), EntityType.HeroEntity, 500f);
         // 初始化敌人状态机组件 和 动画组件
         InitEnemyState(entity, InitEnemyEntityAnimation(entity.EntityId, bossAnima, entity));
         // 初始化固定距离移动组件

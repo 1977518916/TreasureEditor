@@ -41,4 +41,13 @@ public class FixedDistanceComponent : MoveComponent
             ContinueMove = false;
         }
     }
+
+    /// <summary>
+    /// 是否还在继续移动
+    /// </summary>
+    /// <returns></returns>
+    public bool IsContinueMove()
+    {
+        return ContinueMove;
+    }
 }

@@ -43,6 +43,11 @@ public class BossEntity : MonoBehaviour, Entity
         
     }
 
+    public RectTransform GetEntityTransform()
+    {
+        return rectTransform;
+    }
+
     public T GetSpecifyComponent<T>(ComponentType componentType) where T : IComponent
     {
         foreach (var iComponent in AllComponentList)

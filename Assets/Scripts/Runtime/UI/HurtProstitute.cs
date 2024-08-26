@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HurtProstitute : MonoBehaviour
+public class HurtText : MonoBehaviour
 {
     public void SetData(Vector2 location, int hurt, float surviveTime)
     {

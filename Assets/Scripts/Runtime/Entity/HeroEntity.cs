@@ -50,11 +50,7 @@ public class HeroEntity : MonoBehaviour, Entity
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.HeroEntity;
-    }
-
-    public void Dead()
-    {
-        
+        AllComponentList = new List<IComponent>();
     }
     
     public void Release()
@@ -122,7 +118,6 @@ public class HeroEntity : MonoBehaviour, Entity
         heroObj = hero;
         isSurvive = true;
         attackFireLocation = fireLocation;
-        AllComponentList = new List<IComponent>();
     }
 
     /// <summary>

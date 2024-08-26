@@ -10,7 +10,7 @@ using Tao_Framework.Core.Event;
 using Tao_Framework.Core.Singleton;
 using UnityEngine;
 
-public class EntitySystem : MonoSingleton<EntitySystem>
+public partial class EntitySystem : MonoSingleton<EntitySystem>
 {
     /// <summary>
     /// 更新帧率  60帧率更新
@@ -130,7 +130,7 @@ public class EntitySystem : MonoSingleton<EntitySystem>
         skeletonGraphic.Initialize(true);
         skeletonGraphic.AnimationState.SetAnimation(0, "Idle", true);
     }
-
+    
     private void InitHeroEntityStatus(HeroEntity heroEntity, int value)
     {
         var heroStatusUI = BattleManager.Instance.GetHeroStatus(value);
@@ -502,23 +502,32 @@ public class EntitySystem : MonoSingleton<EntitySystem>
 
         return false;
     }
-
+    
     public void HeroDead(long entityId)
     {
         if(allEntityDic.Remove(entityId, out var entity))
         {
             HeroEntity heroEntity = entity as HeroEntity;
-            heroEntity.Dead();
             deadEntityDic.TryAdd(entityId, entity);
         }
     }
-
+    
     public void EnemyDead(long entityId)
     {
         if(allEntityDic.Remove(entityId, out var entity))
         {
             EnemyEntity enemyEntity = entity as EnemyEntity;
-            enemyEntity.Dead();
+            enemyEntity?.Dead();
+            deadEntityDic.TryAdd(entityId, entity);
+        }
+    }
+    
+    public void BossDead(long entityId)
+    {
+        if (allEntityDic.Remove(entityId, out var entity))  
+        {
+            BossEntity bossEntity = entity as BossEntity;
+            bossEntity?.Dead();
             deadEntityDic.TryAdd(entityId, entity);
         }
     }

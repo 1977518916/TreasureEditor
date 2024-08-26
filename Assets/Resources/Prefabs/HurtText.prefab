@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1829463438483067161}
   - component: {fileID: 4214047905389795397}
   m_Layer: 5
-  m_Name: HurtProstitute
+  m_Name: HurtText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

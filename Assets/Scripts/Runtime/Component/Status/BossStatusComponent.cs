@@ -6,7 +6,7 @@ using UnityEngine;
 /// <summary>
 /// 敌人分为
 /// </summary>
-public class EnemyStatusComponent : StatusComponent
+public class BossStatusComponent : StatusComponent
 {
     /// <summary>
     /// 血量
@@ -22,8 +22,8 @@ public class EnemyStatusComponent : StatusComponent
     /// 自身entity
     /// </summary>
     private Entity entity;
-
-    public EnemyStatusComponent(int maxHpValue, Entity entity)
+    
+    public BossStatusComponent(int maxHpValue, Entity entity)
     {
         this.maxHpValue = maxHpValue;
         hpValue = this.maxHpValue;

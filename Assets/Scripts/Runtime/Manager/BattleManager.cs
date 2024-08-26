@@ -32,7 +32,12 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// 英雄根节点预制体
     /// </summary>
     public GameObject HeroAndEnemyRootPrefab;
-
+    
+    /// <summary>
+    /// Boss根节点预制体
+    /// </summary>
+    public GameObject BossRootPrefab;
+    
     /// <summary>
     /// 英雄父对象
     /// </summary>
@@ -51,8 +56,13 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// <summary>
     /// 伤害飘字父节点
     /// </summary>
-    public RectTransform HurtProstituteParent;
-
+    public RectTransform hurtTextPrefabParent;
+    
+    /// <summary>
+    /// Boss父对象
+    /// </summary>
+    public RectTransform BossParent;
+    
     #region Command
 
     /// <summary>
@@ -126,13 +136,13 @@ public class BattleManager : MonoSingleton<BattleManager>
         battleBG.sprite = AssetsLoadManager.LoadBg(DataManager.LevelData.mapType);
     }
 
-    public void GenerateHurtProstitute(Vector2 location, int hurt, float surviveTime)
+    public void GenerateHurtText(Vector2 location, int hurt, float surviveTime)
     {
-        if(!DataManager.GameData.isShowNumber) return;
-        var hurtProstitutePrefab = AssetsLoadManager.Load<GameObject>("Prefabs/HurtProstitute");
-        var hurtProstitute = Instantiate(hurtProstitutePrefab);
-        hurtProstitute.GetComponent<RectTransform>().SetParent(HurtProstituteParent);
-        hurtProstitute.GetComponent<HurtProstitute>().SetData(location, hurt, surviveTime);
+        if (!DataManager.GameData.isShowNumber) return;
+        var hurtTextPrefab = AssetsLoadManager.Load<GameObject>("Prefabs/HurtText");
+        var hurtProstitute = Instantiate(hurtTextPrefab);
+        hurtProstitute.GetComponent<RectTransform>().SetParent(hurtTextPrefabParent);
+        hurtProstitute.GetComponent<HurtText>().SetData(location, hurt, surviveTime);
     }
 
     private void OnDestroy()

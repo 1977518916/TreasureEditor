@@ -241,8 +241,8 @@ namespace Runtime.Manager
             skeletonAnimation.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             return skeletonAnimation;
         }
-
-        private static SkeletonGraphic LoadBulletSkeletonOfEnum(EntityModelType entityModelType, Transform parent = null)
+        
+        public static SkeletonGraphic LoadBulletSkeletonOfEnum(EntityModelType entityModelType, Transform parent = null)
         {
             if (!DataManager.GetSpecifyEntityBulletSpine(entityModelType, out var dataAsset)) return null;
             var anima = LoadSkeletonGraphic(dataAsset, parent);

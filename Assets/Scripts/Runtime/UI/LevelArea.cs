@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Runtime.Data;
 using Runtime.Extensions;
@@ -32,7 +33,7 @@ namespace Runtime.UI
 
         private Button addBossBtn, removeBossBtn;
         private LevelData levelData;
-        private Transform enemyParent, bossModelParent;
+        private Transform enemyParent, bossModelParent, bossBulletModelParent;
         private Image bg;
         private TimesData CurrentData => levelData.timesDatas[dropdown.value];
 
@@ -145,9 +146,10 @@ namespace Runtime.UI
 
         private void Save()
         {
+            BossUIDataUpdate();
             ReadWriteManager.Level.SaveLevelData(levelData);
         }
-
+        
         private void Delete()
         {
             ReadWriteManager.Level.SaveLevelData(null);
@@ -157,21 +159,7 @@ namespace Runtime.UI
         }
 
         #region BossUI
-
-        /// <summary>
-        /// Boss UI初始化
-        /// </summary>
-        private void BossUiInit()
-        {
-            BossUIFind();
-            addBossBtn.onClick.AddListener(() =>
-            {
-                // 更新一次Boss数据面板 如果已经有数据了就不会再次更新 现在只支持单个Boss
-
-            });
-            UpdateBossModelTypeDropdown();
-        }
-
+        
         /// <summary>
         /// Boss UI 查找
         /// </summary>
@@ -181,6 +169,7 @@ namespace Runtime.UI
             removeBossBtn = transform.FindGet<Button>("BossInfo/RemoveBossBtn");
             selectWhichBossDrop = transform.FindGet<TMP_Dropdown>("BossInfo/BossSelectDrop");
             bossModelParent = transform.Find("BossInfo/BossPanel/BossModel");
+            bossBulletModelParent = transform.Find("BossInfo/BossPanel/BossBulletModel");
             selectBossModel = transform.FindGet<TMP_Dropdown>("BossInfo/BossPanel/BossModelDrop");
             selectBossBullet = transform.FindGet<TMP_Dropdown>("BossInfo/BossPanel/BossData/BossBulletTable/BossBulletDrop");
             bossGenerateTime = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/GenerateTimeTable/GenerateTimeInputField");
@@ -188,6 +177,54 @@ namespace Runtime.UI
             bossHp = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/BossHpTable/BossHpInputField");
             bossRun = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossRunSpeedTable/BossRunSpeedInputField");
             selectBossModel.ClearOptions();
+            selectBossBullet.ClearOptions();
+            selectWhichBossDrop.ClearOptions();
+            addBossBtn.gameObject.SetActive(levelData.BossData.EntityModelType == EntityModelType.Null);
+            removeBossBtn.gameObject.SetActive(levelData.BossData.EntityModelType != EntityModelType.Null);
+            HideBossModel();
+            HideBossBulletModel();
+            UpdateBossHp($"{levelData.BossData.Hp}");
+            UpdateBossAttack($"{levelData.BossData.Atk}");
+            UpdateBossGenerateTime($"{levelData.BossData.Time}");
+            UpdateBossRunSpeed($"{levelData.BossData.RunSpeed}");
+        }
+        
+        /// <summary>
+        /// Boss UI初始化
+        /// </summary>
+        private void BossUiInit()
+        {
+            levelData.BossData ??= new BossData();
+            BossUIFind();
+            BossUiBindAction();
+            
+        }
+        
+        private void BossUiBindAction()
+        {
+            addBossBtn.onClick.AddListener(AddBossAction);
+            removeBossBtn.onClick.AddListener(ClearBossUIData);
+            UpdateBulletDrop();
+            UpdateBossModelTypeDropdown(levelData.BossData.EntityModelType != EntityModelType.Null);
+            bossGenerateTime.onValueChanged.AddListener(UpdateBossGenerateTime);
+            bossAttack.onValueChanged.AddListener(UpdateBossAttack);
+            bossHp.onValueChanged.AddListener(UpdateBossHp);
+            bossRun.onValueChanged.AddListener(UpdateBossRunSpeed);
+        }
+        
+        private void AddBossAction()
+        {
+            addBossBtn.gameObject.SetActive(false);
+            removeBossBtn.gameObject.SetActive(true);
+            selectBossModel.options.Clear();
+            selectBossBullet.options.Clear();
+            selectWhichBossDrop.options.Clear();
+            UpdateBossHp($"{levelData.BossData.Hp}");
+            UpdateBossAttack($"{levelData.BossData.Atk}");
+            UpdateBossGenerateTime($"{levelData.BossData.Time}");
+            UpdateBossRunSpeed($"{levelData.BossData.RunSpeed}");
+            UpdateBulletDrop();
+            UpdateBossModelTypeDropdown(true);
         }
 
         /// <summary>
@@ -195,21 +232,42 @@ namespace Runtime.UI
         /// </summary>
         private void BossUIDataUpdate()
         {
-            
+            levelData.BossData.Atk = Convert.ToInt32(bossAttack.text);
+            levelData.BossData.Hp = Convert.ToInt32(bossHp.text);
+            levelData.BossData.Time = Convert.ToSingle(bossGenerateTime.text);
+            levelData.BossData.RunSpeed = Convert.ToSingle(bossRun.text);
+            levelData.BossData.EntityModelType = (EntityModelType)selectBossModel.value;
+            levelData.BossData.BulletType = IsHoldTheBullet((EntityModelType)selectBossModel.value)
+                ? (BulletType)selectBossModel.value
+                : BulletType.NoEntity;
         }
-
+        
         /// <summary>
         /// 重置BossUI
         /// </summary>
         private void ClearBossUIData()
         {
+            levelData.BossData = new BossData();
             selectBossModel.options.Clear();
+            selectBossBullet.options.Clear();
+            selectWhichBossDrop.options.Clear();
             selectBossModel.onValueChanged.RemoveAllListeners();
             var option = new TMP_Dropdown.OptionData
             {
                 text = TranslateUtil.TranslateUi(EntityModelType.Null)
             };
             selectBossModel.options.Add(option);
+            selectBossModel.value = 0;
+            selectBossBullet.onValueChanged.RemoveAllListeners();
+            selectBossBullet.options.Add(option);
+            addBossBtn.gameObject.SetActive(true);
+            removeBossBtn.gameObject.SetActive(false);
+            bossGenerateTime.text = $"{levelData.BossData.Time}";
+            bossAttack.text = $"{levelData.BossData.Atk}";
+            bossHp.text = $"{levelData.BossData.Hp}";
+            bossRun.text = $"{levelData.BossData.RunSpeed}";
+            HideBossModel();
+            HideBossBulletModel();
         }
         
         /// <summary>
@@ -229,50 +287,87 @@ namespace Runtime.UI
         {
             bossAttack.text = bossAtk;
         }
-
+        
         /// <summary>
-        /// 
+        /// 更新Boss血量
         /// </summary>
         /// <param name="bossHpValue"></param>
         private void UpdateBossHp(string bossHpValue)
         {
             bossHp.text = bossHpValue;
+        }   
+        
+        /// <summary>
+        /// 更新Boss移动速度
+        /// </summary>
+        /// <param name="bossRunSpeed"></param>
+        private void UpdateBossRunSpeed(string bossRunSpeed)
+        {
+            bossRun.text = bossRunSpeed;
         }
 
         /// <summary>
-        /// 
+        /// 更新子弹下拉框
         /// </summary>
-        private void UpdateBulletDrop(EntityModelType modelType)
+        private void UpdateBulletDrop()
         {
-            selectBossBullet.options.Clear();
-            if (modelType is EntityModelType.DongZhuo or EntityModelType.QingLong)
+            selectBossBullet.value = -1;
+            if (selectBossBullet.options.Count == 0) 
             {
-                var option = new TMP_Dropdown.OptionData
-                {
-                    text = "攻击动画"
-                };
-                selectBossBullet.options.Add(option);
-            }
-            else
-            {
-                var option = new TMP_Dropdown.OptionData
+                var self = new TMP_Dropdown.OptionData
                 {
                     text = "自身子弹"
                 };
-                var option1 = new TMP_Dropdown.OptionData
+                var anima = new TMP_Dropdown.OptionData
                 {
                     text = "攻击动画"
                 };
-                selectBossBullet.options.Add(option);
-                selectBossBullet.options.Add(option1);
+                selectBossBullet.options.Add(self);
+                selectBossBullet.options.Add(anima);
             }
+            selectBossBullet.onValueChanged.RemoveAllListeners();
+            selectBossBullet.onValueChanged.AddListener(value =>
+            {
+                if (IsHoldTheBullet(levelData.BossData.EntityModelType))   
+                {
+                    switch (value)
+                    {
+                        case 0:
+                            ShowBossBulletModel(levelData.BossData.EntityModelType);
+                            return;
+                        case 1:
+                            HideBossBulletModel();
+                            return;
+                    }
+                }
+                else
+                {
+                    HideBossBulletModel();
+                }
+            });
+            //StartCoroutine(Wait());
+        }
+
+        private bool IsHoldTheBullet(EntityModelType modelType)
+        {
+            return modelType is not (EntityModelType.DongZhuo or EntityModelType.QingLong or EntityModelType.Null);
+        }
+        
+        private IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(0.5f);
+            selectBossBullet.value = (int)levelData.BossData.BulletType;
         }
 
         /// <summary>
         /// 更新Boss模型选项下拉框
         /// </summary>
-        private void UpdateBossModelTypeDropdown()
+        private void UpdateBossModelTypeDropdown(bool isInit = false)
         {
+            selectBossModel.options.Clear();
+            selectBossModel.ClearOptions();
+            selectBossModel.onValueChanged.RemoveAllListeners();
+            if (!isInit) return;
             foreach (EntityModelType entityModelName in Enum.GetValues(typeof(EntityModelType)))
             {
                 var option = new TMP_Dropdown.OptionData
@@ -281,19 +376,25 @@ namespace Runtime.UI
                 };
                 selectBossModel.options.Add(option);
             }
-            
+
             selectBossModel.onValueChanged.AddListener(value =>
             {
+                levelData.BossData.EntityModelType = (EntityModelType)value;
+                UpdateBulletDrop();
                 if (value == 0)
                 {
                     HideBossModel();
                     return;
                 }
-                
+
                 ShowBoss((EntityModelType)value);
             });
+
+            selectBossModel.value = levelData.BossData.EntityModelType == EntityModelType.Null
+                ? 1
+                : (int)levelData.BossData.EntityModelType;
         }
-        
+
         /// <summary>
         /// 显示Boss模型
         /// </summary>
@@ -315,6 +416,21 @@ namespace Runtime.UI
         private void HideBossModel()
         {
             bossModelParent.ClearChild();
+        }
+            
+        private void ShowBossBulletModel(EntityModelType entityModelType)
+        {
+            HideBossBulletModel();
+            if (entityModelType is EntityModelType.DongZhuo or EntityModelType.QingLong or EntityModelType.Null)
+            {
+                return;
+            }
+            AssetsLoadManager.LoadBulletSkeletonOfEnum(entityModelType, bossBulletModelParent);
+        }
+
+        private void HideBossBulletModel()
+        {
+            bossBulletModelParent.ClearChild();
         }
 
         #endregion

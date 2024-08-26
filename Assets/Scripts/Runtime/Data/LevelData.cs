@@ -57,12 +57,12 @@ namespace Runtime.Data
         /// <summary>
         /// Boss 的模型
         /// </summary>
-        public EntityModelType EntityModelType { get; set; }
+        public EntityModelType EntityModelType;
 
         /// <summary>
         /// Boss 的子弹 或 叫做攻击方式
         /// </summary>
-        public BulletType BulletType { get; set; }
+        public BulletType BulletType;
 
         /// <summary>
         /// 生成时间

@@ -24,7 +24,7 @@ public class BossEntity : MonoBehaviour, Entity
     public void Init()
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
-        EntityType = EntityType.BoosEntity;
+        EntityType = EntityType.EnemyEntity;
         AllComponentList = new List<IComponent>();
     }
     

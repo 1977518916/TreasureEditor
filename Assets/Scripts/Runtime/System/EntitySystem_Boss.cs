@@ -39,8 +39,7 @@ public partial class EntitySystem
         BossAttackComponent bossAttackComponent = new BossAttackComponent(2, data.Atk, entity, entity.transform as RectTransform, data.BulletType);
         entity.AllComponentList.Add(bossAttackComponent);
     }
-
-
+    
     private void InitBossPosition(Entity entity, RectTransform rectTransform)
     {
         entity.AllComponentList.Add(new RandomPositionComponent());

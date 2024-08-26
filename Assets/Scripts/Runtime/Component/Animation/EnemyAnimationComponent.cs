@@ -30,7 +30,7 @@ public class EnemyAnimationComponent : AnimationComponent
     {
         return SkeletonGraphic;
     }
-
+    
     public void ChangeAnima(StateType stateType, bool isLoop, Action action)
     {
         SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop).Complete +=
@@ -53,6 +53,8 @@ public class EnemyAnimationComponent : AnimationComponent
                 return "Hit";
             case StateType.Dead:
                 return "Dead";
+            case StateType.Appear:
+                return "Appear";
             default:
                 throw new ArgumentOutOfRangeException(nameof(stateType), stateType, null);
         }

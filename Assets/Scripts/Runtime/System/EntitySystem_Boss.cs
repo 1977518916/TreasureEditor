@@ -26,7 +26,7 @@ public partial class EntitySystem
         // 初始化出生点组件
         InitBossPosition(entity, entity.GetEntityTransform());
         // 初始化敌人状态机组件 和 动画组件
-        InitEnemyState(entity, InitEnemyEntityAnimation(entity.EntityId, bossAnima, entity));
+        InitBossStateMachine(entity, InitEnemyEntityAnimation(entity.EntityId, bossAnima, entity), modelType);
         // 初始化固定距离移动组件
         InitFixedDistanceComponent(entity, entity.GetComponent<RectTransform>(), data);
     }
@@ -48,5 +48,81 @@ public partial class EntitySystem
     {
         entity.AllComponentList.Add(new FixedDistanceComponent(rectTransform, data.RunSpeed, new Vector2(-1f, 0f),
             new Vector2(-45f, 0f)));
+    }
+    
+    /// <summary>
+    /// 初始化Boss状态机
+    /// </summary>
+    /// <param name="entity"></param>
+    /// <param name="animationComponent"></param>
+    /// <param name="entityModelType"></param>
+    private void InitBossStateMachine(Entity entity, AnimationComponent animationComponent,
+        EntityModelType entityModelType)
+
+    {
+        var stateMachine = new EnemyStateMachineComponent();
+        var attackState = new AttackState();
+        var hitState = new HitState();
+        var deadState = new DeadState();
+        var runState = new RunState();
+        var idleState = new IdleState();
+        runState.Init(animationComponent);
+        attackState.Init(animationComponent);
+        hitState.Init(animationComponent);
+        deadState.Init(animationComponent);
+        idleState.Init(animationComponent);
+        var stateConvertDic = new Dictionary<StateType, List<StateType>>
+        {
+            {
+                StateType.Idle, new List<StateType>
+                {
+                    StateType.Attack,
+                    StateType.Hit,
+                    StateType.Dead
+                }
+            },
+            {
+                StateType.Run, new List<StateType>
+                {
+                    StateType.Attack,
+                    StateType.Hit,
+                    StateType.Dead
+                }
+            },
+            {
+                StateType.Attack, new List<StateType>
+                {
+                    StateType.Idle,
+                    StateType.Dead
+                }
+            },
+            {
+                StateType.Hit, new List<StateType>
+                {
+                    StateType.Idle,
+                    StateType.Dead
+                }
+            }
+        };
+        var allState = new Dictionary<StateType, IState>
+        {
+            {
+                StateType.Idle, idleState
+            },
+            {
+                StateType.Run, entityModelType == EntityModelType.QingLong ? idleState : runState
+            },
+            {
+                StateType.Attack, attackState
+            },
+            {
+                StateType.Hit, hitState
+            },
+            {
+                StateType.Dead, deadState
+            }
+        };
+        stateMachine.Init(entity, entityModelType == EntityModelType.QingLong ? idleState : runState, stateConvertDic, allState);
+        entity.AllComponentList.Add(stateMachine);
     }
 }

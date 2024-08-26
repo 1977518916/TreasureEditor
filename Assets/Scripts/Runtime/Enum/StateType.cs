@@ -33,5 +33,10 @@ public enum StateType
     /// <summary>
     /// 死亡
     /// </summary>
-    Dead
+    Dead,
+    
+    /// <summary>
+    /// 出现 登场
+    /// </summary>
+    Appear
 }

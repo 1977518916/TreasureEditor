@@ -375,7 +375,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp, entity));
         // Debug.Log("敌人数量"+battleManager.EnemyParent.childCount);
     }
-
+    
     /// <summary>
     /// 更换目标  如果返回的结果为-1证明目前需要找的对象没有
     /// </summary>

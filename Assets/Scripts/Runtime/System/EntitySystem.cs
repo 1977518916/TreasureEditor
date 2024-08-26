@@ -245,7 +245,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         entity.AllComponentList.Add(stateMachine);
     }
 
-    private void InitEnemyState(EnemyEntity entity, AnimationComponent animationComponent)
+    private void InitEnemyState(Entity entity, AnimationComponent animationComponent)
     {
         var stateMachine = new EnemyStateMachineComponent();
         var attackState = new AttackState();
@@ -314,20 +314,20 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     }
 
     private AnimationComponent InitEnemyEntityAnimation(long entityId, SkeletonGraphic skeletonGraphic,
-        EnemyEntity entity)
+        Entity entity)
     {
         var anima = new EnemyAnimationComponent(entityId, skeletonGraphic);
         entity.AllComponentList.Add(anima);
         return anima;
     }
 
-    private void InitEntityPosition(EnemyEntity entity)
+    private void InitEntityPosition(Entity entity)
     {
         entity.AllComponentList.Add(new RandomPositionComponent());
         entity.GetSpecifyComponent<RandomPositionComponent>(ComponentType.RandomPositionComponent)
-            .RandomizePosition(entity.transform as RectTransform);
+            .RandomizePosition(entity.GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform);
     }
-
+    
     private void InitEnemyEntityMove(Entity entity, RectTransform target, RectTransform entityTransform,
         float moveSpeed)
     {

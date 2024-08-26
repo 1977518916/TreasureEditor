@@ -43,6 +43,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         
         Timer.Register(DataManager.LevelData.BossData.Time, () =>
         {
+            if (DataManager.LevelData.BossData.EntityModelType == EntityModelType.Null) return; 
             GenerateBossEntity(DataManager.LevelData.BossData.EntityModelType, DataManager.LevelData.BossData);
         });
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy, GenerateEntity);

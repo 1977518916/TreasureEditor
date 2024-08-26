@@ -38,11 +38,10 @@ namespace Runtime.Component.Attack
                 // 攻击间隔的时间减去当前时间 如果大于攻击间隔时间 则证明攻击间隔时间结束了 那么就需要退出攻击间隔状态  所以 IsInAttackInterval 此时等于 false
                 IsInAttackInterval = !(Time.time - LastAttackTime >= AttackInterval);
             }
-            Attack();
-            // if(!distanceComponent.IsContinueMove())
-            // {
-            //     Attack();
-            // }
+            if(!distanceComponent.IsContinueMove())
+            {
+                Attack();
+            }
         }
 
         public void Release()

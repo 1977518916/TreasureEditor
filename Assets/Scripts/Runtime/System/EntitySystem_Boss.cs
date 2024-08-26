@@ -17,7 +17,6 @@ public partial class EntitySystem
     /// <param name="data"></param>
     private void GenerateBossEntity(EntityModelType modelType, BossData data)
     {
-        var targetId = GetFrontRowHeroID();
         var root = Instantiate(battleManager.BossRootPrefab, battleManager.BossParent);
         var entity = root.AddComponent<BossEntity>();
         var bossAnima = AssetsLoadManager.LoadSkeletonGraphic(modelType, entity.transform);
@@ -32,6 +31,8 @@ public partial class EntitySystem
         InitFixedDistanceComponent(entity, entity.GetComponent<RectTransform>(), data);
         // 初始化攻击
         InitBossAtk(entity, data);
+        // 初始化Boss状态组件
+        InitBossStatusComponent(entity, data);
     }
 
     private void InitBossAtk(BossEntity entity, BossData data)
@@ -57,6 +58,16 @@ public partial class EntitySystem
     {
         entity.AllComponentList.Add(new FixedDistanceComponent(rectTransform, data.RunSpeed, new Vector2(-1f, 0f),
             new Vector2(93f, 0f)));
+    }
+    
+    /// <summary>
+    /// 初始化Boss状态组件
+    /// </summary>
+    /// <param name="entity"></param>
+    /// <param name="data"></param>
+    private void InitBossStatusComponent(Entity entity, BossData data)
+    {
+        entity.AllComponentList.Add(new EnemyStatusComponent(data.Hp, entity));
     }
 
     /// <summary>

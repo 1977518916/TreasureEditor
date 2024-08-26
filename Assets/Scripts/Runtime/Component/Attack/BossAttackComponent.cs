@@ -19,7 +19,7 @@ namespace Runtime.Component.Attack
 
         private EntityModelType entityModelType;
         private BulletType atkType;
-        public BossAttackComponent(float attackInterval, int hurt, Entity entity, RectTransform rectTransform, BulletType dataBulletType)
+        public BossAttackComponent(float attackInterval, int hurt, Entity entity, RectTransform rectTransform, BulletType dataBulletType,EntityModelType modelType)
         {
             AttackInterval = attackInterval;
             this.entity = entity;
@@ -27,6 +27,7 @@ namespace Runtime.Component.Attack
             IsInAttackInterval = false;
             this.rectTransform = rectTransform;
             atkType = dataBulletType;
+            entityModelType = modelType;
             distanceComponent = this.entity.GetSpecifyComponent<FixedDistanceComponent>(ComponentType.MoveComponent);
         }
 
@@ -37,11 +38,11 @@ namespace Runtime.Component.Attack
                 // 攻击间隔的时间减去当前时间 如果大于攻击间隔时间 则证明攻击间隔时间结束了 那么就需要退出攻击间隔状态  所以 IsInAttackInterval 此时等于 false
                 IsInAttackInterval = !(Time.time - LastAttackTime >= AttackInterval);
             }
-
-            if(!distanceComponent.IsContinueMove())
-            {
-                Attack();
-            }
+            Attack();
+            // if(!distanceComponent.IsContinueMove())
+            // {
+            //     Attack();
+            // }
         }
 
         public void Release()
@@ -68,11 +69,12 @@ namespace Runtime.Component.Attack
             var bulletHurt = DataManager.GameData.isInvicibleSelf ? 1 : hurt;
             // 先初始化 再添加组件
             bulletEntity.Init();
-            bulletEntity.InitBullet(EntityType.EnemyEntity, bulletHurt, 2, rectTransform,
+            bulletEntity.InitBullet(EntityType.HeroEntity, bulletHurt, 2, rectTransform,
                 BattleManager.Instance.GetBulletParent());
             bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), 800f,
                 GetAtkPosition(GetAtkedEntity()), BulletMoveType.SingleTargetMove));
             EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
+            
             LastAttackTime = Time.time;
             IsInAttackInterval = true;
         }

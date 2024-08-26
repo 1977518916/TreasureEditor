@@ -36,7 +36,7 @@ public partial class EntitySystem
 
     private void InitBossAtk(BossEntity entity, BossData data)
     {
-        BossAttackComponent bossAttackComponent = new BossAttackComponent(2, data.Atk, entity, entity.transform as RectTransform, data.BulletType);
+        BossAttackComponent bossAttackComponent = new BossAttackComponent(2, data.Atk, entity, entity.transform as RectTransform, data.BulletType, data.EntityModelType);
         entity.AllComponentList.Add(bossAttackComponent);
     }
     

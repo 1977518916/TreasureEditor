@@ -23,21 +23,19 @@ public partial class EntitySystem
         entity.Init();
         entity.InitBoss(data);
         AddEntity(entity.EntityId, entity);
-        // 初始化敌人检测
-        InitPointDetect(entity, entity.GetEntityTransform(), EntityType.HeroEntity, 500f);
+        // 初始化出生点组件
+        InitBossPosition(entity, entity.GetEntityTransform());
         // 初始化敌人状态机组件 和 动画组件
         InitEnemyState(entity, InitEnemyEntityAnimation(entity.EntityId, bossAnima, entity));
         // 初始化固定距离移动组件
         InitFixedDistanceComponent(entity, entity.GetComponent<RectTransform>(), data);
-        // 初始化出生点组件
-        InitBossPosition(entity);
     }
-
-    private void InitBossPosition(Entity entity)
+    
+    private void InitBossPosition(Entity entity, RectTransform rectTransform)
     {
         entity.AllComponentList.Add(new RandomPositionComponent());
         entity.GetSpecifyComponent<RandomPositionComponent>(ComponentType.RandomPositionComponent)
-            .BossPosition(entity.GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform);
+            .BossPosition(rectTransform);
     }
     
     /// <summary>

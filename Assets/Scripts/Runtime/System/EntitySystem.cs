@@ -9,6 +9,7 @@ using Spine.Unity;
 using Tao_Framework.Core.Event;
 using Tao_Framework.Core.Singleton;
 using UnityEngine;
+using UnityTimer;
 
 public partial class EntitySystem : MonoSingleton<EntitySystem>
 {
@@ -39,7 +40,11 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         {
             GenerateEntity(heroData.Key, heroData.Value);
         }
-
+        
+        Timer.Register(DataManager.LevelData.BossData.Time, () =>
+        {
+            GenerateBossEntity(DataManager.LevelData.BossData.EntityModelType, DataManager.LevelData.BossData);
+        });
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy, GenerateEntity);
     }
 
@@ -321,11 +326,11 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         return anima;
     }
 
-    private void InitEntityPosition(Entity entity)
+    private void InitEntityPosition(Entity entity, RectTransform rectTransform)
     {
         entity.AllComponentList.Add(new RandomPositionComponent());
         entity.GetSpecifyComponent<RandomPositionComponent>(ComponentType.RandomPositionComponent)
-            .RandomizePosition(entity.GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform);
+            .RandomizePosition(rectTransform);
     }
     
     private void InitEnemyEntityMove(Entity entity, RectTransform target, RectTransform entityTransform,
@@ -347,7 +352,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         model.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
         model.transform.Translate(0, -30, 0, Space.Self);
         // 初始化敌人位置
-        InitEntityPosition(entity);
+        InitEntityPosition(entity, entity.GetComponent<RectTransform>());
         // 初始化敌人移动
         RectTransform targetRect = null;
         if(targetId != -1)

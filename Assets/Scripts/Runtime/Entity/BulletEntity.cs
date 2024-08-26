@@ -105,7 +105,7 @@ public class BulletEntity : MonoBehaviour, Entity
         box.isTrigger = true;
         box.size = new Vector2(50f, 50f);
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         var entity = other.GetComponent<Entity>();
@@ -118,7 +118,7 @@ public class BulletEntity : MonoBehaviour, Entity
                     HurtEntity(entity);
                 break;
             case EntityType.EnemyEntity:
-                if(IsEnemyEntity(entity))
+                if (IsEnemyEntity(entity) || IsBoss(entity)) 
                     HurtEntity(entity);
                 break;
             default:
@@ -148,6 +148,7 @@ public class BulletEntity : MonoBehaviour, Entity
                 entity.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit(bulletHurt);
                 break;
             case EntityType.BulletEntity:
+                entity.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit(bulletHurt);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -172,5 +173,15 @@ public class BulletEntity : MonoBehaviour, Entity
     private bool IsEnemyEntity(Entity entity)
     {
         return entity is EnemyEntity;
+    }   
+    
+    /// <summary>
+    /// 是否是Boss
+    /// </summary>
+    /// <param name="entity"></param>
+    /// <returns></returns>
+    private bool IsBoss(Entity entity)
+    {
+        return entity as BossEntity;
     }
 }

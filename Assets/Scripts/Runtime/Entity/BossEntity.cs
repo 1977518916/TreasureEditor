@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Runtime.Component.Position;
 using Runtime.Data;
 using Tools;
 using UnityEngine;
@@ -73,6 +74,7 @@ public class BossEntity : MonoBehaviour, Entity
             ComponentType.AnimationComponent => component is AnimationComponent,
             ComponentType.StateMachineComponent => component is StateMachineComponent,
             ComponentType.DeadComponent => component is DeadComponent,
+            ComponentType.RandomPositionComponent => component is RandomPositionComponent,
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }

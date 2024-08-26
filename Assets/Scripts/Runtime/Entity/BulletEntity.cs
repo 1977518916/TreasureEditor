@@ -100,7 +100,6 @@ public class BulletEntity : MonoBehaviour, Entity
     /// </summary>
     private void GenerateAttackBox()
     {
-        if(targetEntityType == EntityType.HeroEntity) return;
         var box = gameObject.AddComponent<BoxCollider2D>();
         box.isTrigger = true;
         box.size = new Vector2(50f, 50f);

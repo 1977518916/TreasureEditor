@@ -50,14 +50,9 @@ public class EnemyAttackComponent : AttackComponent
     public void Attack(float time, Vector2 point)
     {
         if (IsInAttackInterval) return;
-        var bullet = Object.Instantiate(AssetsLoadManager.Load<GameObject>("Prefabs/Small_EnemyAttackBox"));
-        var bulletEnemy = bullet.AddComponent<BulletEntity>();
-        bulletEnemy.Init();
-        bulletEnemy.InitBullet(EntityType.HeroEntity, DataManager.GameData.isInvicibleSelf ? 1 : hurt, 1,
-            entity.GetComponent<RectTransform>(), BattleManager.Instance.GetBulletParent());
-        entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent)
-            .TryChangeState(StateType.Attack);
-        EntitySystem.Instance.AddEntity(bulletEnemy.EntityId, bulletEnemy);
+        
+        entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
+        pointDetectComponent.GetTarget().GetComponent<HeroEntity>().GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(hurt);
         LastAttackTime = Time.time;
         IsInAttackInterval = true;
     }

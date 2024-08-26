@@ -30,6 +30,7 @@ public class FixedDistanceComponent : MoveComponent
         MoveSpeed = moveSpeed;
         MoveDirection = moveDirection;
         this.targetLocation = targetLocation;
+        ContinueMove = true;
     }
 
     public void Move(float time)

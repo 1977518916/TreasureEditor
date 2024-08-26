@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Runtime.Component.Attack;
 using Runtime.Component.Position;
 using Runtime.Data;
 using Runtime.Manager;
@@ -29,15 +30,24 @@ public partial class EntitySystem
         InitBossStateMachine(entity, InitEnemyEntityAnimation(entity.EntityId, bossAnima, entity), modelType);
         // 初始化固定距离移动组件
         InitFixedDistanceComponent(entity, entity.GetComponent<RectTransform>(), data);
+        // 初始化攻击
+        InitBossAtk(entity, data);
     }
-    
+
+    private void InitBossAtk(BossEntity entity, BossData data)
+    {
+        BossAttackComponent bossAttackComponent = new BossAttackComponent(2, data.Atk, entity, entity.transform as RectTransform, data.BulletType);
+        entity.AllComponentList.Add(bossAttackComponent);
+    }
+
+
     private void InitBossPosition(Entity entity, RectTransform rectTransform)
     {
         entity.AllComponentList.Add(new RandomPositionComponent());
         entity.GetSpecifyComponent<RandomPositionComponent>(ComponentType.RandomPositionComponent)
             .BossPosition(rectTransform);
     }
-    
+
     /// <summary>
     /// 初始化固定距离移动组件
     /// </summary>
@@ -49,7 +59,7 @@ public partial class EntitySystem
         entity.AllComponentList.Add(new FixedDistanceComponent(rectTransform, data.RunSpeed, new Vector2(-1f, 0f),
             new Vector2(-45f, 0f)));
     }
-    
+
     /// <summary>
     /// 初始化Boss状态机
     /// </summary>

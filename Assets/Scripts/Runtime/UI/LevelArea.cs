@@ -184,8 +184,7 @@ namespace Runtime.UI
             selectBossModel = transform.FindGet<TMP_Dropdown>("BossInfo/BossPanel/BossModelDrop");
             selectBossBullet = transform.FindGet<TMP_Dropdown>("BossInfo/BossPanel/BossData/BossBulletTable/BossBulletDrop");
             bossGenerateTime = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/GenerateTimeTable/GenerateTimeInputField");
-            bossAttack =
-                transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/BossAttackTable/BossAttackInputField");
+            bossAttack = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/BossAttackTable/BossAttackInputField");
             bossHp = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/BossHpTable/BossHpInputField");
             bossRun = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossRunSpeedTable/BossRunSpeedInputField");
             selectBossModel.ClearOptions();
@@ -245,7 +244,13 @@ namespace Runtime.UI
         private void ShowBoss(EntityModelType entityModelType)
         {
             HideBossModel();
-            AssetsLoadManager.LoadBoss(entityModelType, bossModelParent);
+            var boss = AssetsLoadManager.LoadBoss(entityModelType, bossModelParent);
+            if (entityModelType is EntityModelType.DongZhuo or EntityModelType.QingLong)
+            {
+                boss.GetComponent<RectTransform>().localScale = entityModelType == EntityModelType.DongZhuo
+                    ? new Vector3(0.5f, 0.5f, 1f)
+                    : new Vector3(0.25f, 0.25f, 1f);
+            }
         }
 
         /// <summary>

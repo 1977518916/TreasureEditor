@@ -90,6 +90,17 @@ namespace Runtime.Manager
         {
             return AllEntityAttackSpineDic.TryGetValue(modelType, out asset);
         }
+        
+        /// <summary>
+        /// 获取指定实体的寻常动画
+        /// </summary>
+        /// <param name="modelType"></param>
+        /// <param name="asset"></param>
+        /// <returns></returns>
+        public static bool GetSpecifyEntityCommonSpine(EntityModelType modelType, out SkeletonDataAsset asset)
+        {
+            return EntityCommonSpineDic.TryGetValue(modelType, out asset);
+        }
 
         /// <summary>
         /// 初始化所有动画文件数据
@@ -105,6 +116,7 @@ namespace Runtime.Manager
             foreach (var data in AllSpineDic)
             {
                 InitAllEntityAttackSpine(data.Key, data.Value);
+                InitAllEntityCommonSpine(data.Key, data.Value);
             }
         }
 
@@ -132,9 +144,9 @@ namespace Runtime.Manager
                          !data.name.ToLower().Contains("hit") &&
                          !data.name.ToLower().Contains("skill"))) 
             {
-                if (AllEntityAttackSpineDic.TryAdd(type, data))
+                if (EntityCommonSpineDic.TryAdd(type, data))
                     return;
-                AllEntityAttackSpineDic[type] = data;
+                EntityCommonSpineDic[type] = data;
             }
         }
 

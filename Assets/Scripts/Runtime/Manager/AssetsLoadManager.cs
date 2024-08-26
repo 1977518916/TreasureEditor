@@ -27,7 +27,7 @@ namespace Runtime.Manager
         
         public static GameObject LoadBoss(EntityModelType entityModelType, Transform parent)
         {
-            return LoadCharacterSkeletonOfEnum(entityModelType, parent).GameObject();
+            return LoadEntityModelSkeleton(entityModelType, parent, StateType.Idle).GameObject();
         }
         
         public static BulletEntity LoadBullet(HeroData heroData, Transform parent = null)
@@ -189,7 +189,20 @@ namespace Runtime.Manager
             SkeletonGraphic skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
             return skeletonGraphic;
         }
-        
+
+        public static SkeletonGraphic LoadSkeletonGraphic(EntityModelType type, Transform parent = null)
+        {
+            if (DataManager.GetSpecifyEntityCommonSpine(type, out var asset))
+            {
+
+                return SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
+            }
+            else
+            {
+                throw new Exception($"没有这个模型对应的寻常动画文件,请检查： {type}");
+            }
+        }
+
         public static SkeletonGraphic LoadSkeletonGraphic(SkeletonDataAsset asset, Transform parent = null)
         {
             SkeletonGraphic skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
@@ -203,6 +216,21 @@ namespace Runtime.Manager
             skeletonAnimation.AnimationState.SetAnimation(0, "Idle", true);
             skeletonAnimation.name = @enum.ToString();
             return skeletonAnimation;
+        }
+        
+        /// <summary>
+        /// 加载实体模型 并播放传入的动画类型
+        /// </summary>
+        /// <param name="modelType"></param>
+        /// <param name="parent"></param>
+        /// <param name="stateType"></param>
+        /// <returns></returns>
+        private static SkeletonGraphic LoadEntityModelSkeleton(EntityModelType modelType, Transform parent, StateType stateType)
+        {
+            var skeletonAnima = LoadSkeletonGraphic(modelType, parent);
+            skeletonAnima.AnimationState.SetAnimation(0, stateType.ToString(), true);
+            skeletonAnima.name = $"{modelType}_Model";
+            return skeletonAnima;
         }
 
         private static SkeletonGraphic LoadBulletSkeletonOfEnum(Enum @enum, string path, Transform parent = null)

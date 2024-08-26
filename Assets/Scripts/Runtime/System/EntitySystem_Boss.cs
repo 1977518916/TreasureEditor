@@ -57,7 +57,7 @@ public partial class EntitySystem
     private void InitFixedDistanceComponent(Entity entity, RectTransform rectTransform, BossData data)
     {
         entity.AllComponentList.Add(new FixedDistanceComponent(rectTransform, data.RunSpeed, new Vector2(-1f, 0f),
-            new Vector2(-45f, 0f)));
+            new Vector2(93f, 0f)));
     }
 
     /// <summary>

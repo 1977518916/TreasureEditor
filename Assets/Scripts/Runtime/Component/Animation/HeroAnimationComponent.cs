@@ -25,7 +25,8 @@ public class HeroAnimationComponent : AnimationComponent
 
     public void Release()
     {
-        
+        animaTimer?.Cancel();
+        animaTimer = null;
     }
 
     public SkeletonGraphic GetSkeletonGraphic()

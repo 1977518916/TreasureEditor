@@ -205,7 +205,10 @@ namespace Runtime.Manager
 
         public static SkeletonGraphic LoadSkeletonGraphic(SkeletonDataAsset asset, Transform parent = null)
         {
-            SkeletonGraphic skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
+            SkeletonGraphic skeletonGraphic =
+                SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Load<Material>("Material/SkeletonGraphicDefault"));
+            skeletonGraphic.AnimationState.SetAnimation(0, skeletonGraphic.SkeletonData.Animations.Items[0].Name,
+                false);
             return skeletonGraphic;
         }
 

@@ -27,6 +27,8 @@ namespace Runtime.Manager
         /// </summary>
         private static readonly Dictionary<EntityModelType, SkeletonDataAsset> AllEntityAttackSpineDic =
             new Dictionary<EntityModelType, SkeletonDataAsset>();
+
+        private static readonly Dictionary<EntityModelType, SkeletonDataAsset[]> AllEntitySkillSpineDic = new Dictionary<EntityModelType, SkeletonDataAsset[]>();
         
         /// <summary>
         /// 实体寻常动画
@@ -118,6 +120,8 @@ namespace Runtime.Manager
                 InitAllEntityAttackSpine(data.Key, data.Value);
                 InitAllEntityCommonSpine(data.Key, data.Value);
             }
+            
+            
         }
 
         /// <summary>
@@ -174,6 +178,15 @@ namespace Runtime.Manager
         public static bool EntityIsHaveBullet(EntityModelType type)
         {
             return AllEntityAttackSpineDic.ContainsKey(type);
+        }
+
+        private static void InitAllEntitySkillSpine(EntityModelType type, List<SkeletonDataAsset> entitySpine)
+        {
+            foreach (SkeletonDataAsset asset in entitySpine.Where(data => data.name.ToLower().Contains(type.ToString().ToLower()) && 
+                                                                          data.name.ToLower().Contains("skill")))
+            {
+                
+            }
         }
     }
 }

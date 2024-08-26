@@ -49,7 +49,7 @@ public class PointDetectComponent : DetectComponent
                 case EntityType.EnemyEntity:
                     targetEntityId = EntitySystem.Instance.GetSurviveEnemyID();
                     break;
-                case EntityType.BulletEnemy:
+                case EntityType.BulletEntity:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

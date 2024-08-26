@@ -7,7 +7,6 @@ namespace Editor
 {
     public class AtkNameCaseConverter
     {
-        private const string Path = "Assets/Resources/Effect";
 
         [MenuItem("插件/一键攻击特效命名小写")]
         private static void CaseFile()

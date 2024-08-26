@@ -19,7 +19,7 @@ namespace Runtime.Component.Attack
 
         private EntityModelType entityModelType;
         private BulletType atkType;
-        public BossAttackComponent(float attackInterval, int hurt, Entity entity, RectTransform rectTransform, BulletType dataBulletType,EntityModelType modelType)
+        public BossAttackComponent(float attackInterval, int hurt, Entity entity, RectTransform rectTransform, BulletType dataBulletType, EntityModelType modelType)
         {
             AttackInterval = attackInterval;
             this.entity = entity;
@@ -62,34 +62,47 @@ namespace Runtime.Component.Attack
 
         private void BulletAttack()
         {
-            // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
-            entity.GetSpecifyComponent<StateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
-            var bulletEntity = AssetsLoadManager.LoadBullet(entityModelType);
-            var bulletHurt = DataManager.GameData.isInvicibleSelf ? 1 : hurt;
-            // 先初始化 再添加组件
-            bulletEntity.Init();
-            bulletEntity.InitBullet(EntityType.HeroEntity, bulletHurt, 2, rectTransform,
-                BattleManager.Instance.GetBulletParent());
-            bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), 800f,
-                GetAtkPosition(GetAtkedEntity()), BulletMoveType.SingleTargetMove));
-            EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
-            
+            if(TryGetAtkedEntity(out var hero))
+            {
+                // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
+                entity.GetSpecifyComponent<StateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
+                var bulletEntity = AssetsLoadManager.LoadBullet(entityModelType);
+                var bulletHurt = DataManager.GameData.isInvicibleSelf ? 1 : hurt;
+                // 先初始化 再添加组件
+                bulletEntity.Init();
+                bulletEntity.InitBullet(EntityType.HeroEntity, bulletHurt, 2, rectTransform,
+                    BattleManager.Instance.GetBulletParent());
+                bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), 800f,
+                    GetAtkPosition(hero), BulletMoveType.SingleTargetMove));
+                EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
+            }
+
             LastAttackTime = Time.time;
             IsInAttackInterval = true;
         }
 
         private void MeleeAttack()
         {
-            entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
-            GetAtkedEntity().GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(hurt);
+            if(TryGetAtkedEntity(out var hero))
+            {
+                entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
+                hero.GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(hurt);
+            }
             LastAttackTime = Time.time;
             IsInAttackInterval = true;
         }
 
-        private HeroEntity GetAtkedEntity()
+        private bool TryGetAtkedEntity(out HeroEntity heroEntity)
         {
             EntitySystem entitySystem = EntitySystem.Instance;
-            return entitySystem.GetEntity(entitySystem.GetFrontRowHeroID()) as HeroEntity;
+            long id = entitySystem.GetFrontRowHeroID();
+            if(id == -1)
+            {
+                heroEntity = null;
+                return false;
+            }
+            heroEntity = entitySystem.GetEntity(id) as HeroEntity;
+            return true;
         }
 
         private Vector2 GetAtkPosition(HeroEntity hero)

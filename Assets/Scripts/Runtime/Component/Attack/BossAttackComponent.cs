@@ -67,6 +67,7 @@ namespace Runtime.Component.Attack
             var bulletEntity = AssetsLoadManager.LoadBullet(entityModelType);
             var bulletHurt = DataManager.GameData.isInvicibleSelf ? 1 : hurt;
             // 先初始化 再添加组件
+            bulletEntity.Init();
             bulletEntity.InitBullet(EntityType.EnemyEntity, bulletHurt, 2, rectTransform,
                 BattleManager.Instance.GetBulletParent());
             bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), 800f,

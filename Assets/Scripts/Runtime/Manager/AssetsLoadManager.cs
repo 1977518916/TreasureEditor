@@ -148,6 +148,7 @@ namespace Runtime.Manager
             gameObject.transform.SetParent(parent);
             var bulletEntity = gameObject.AddComponent<BulletEntity>();
             bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(entityModelType, gameObject.transform).GameObject();
+            bulletEntity.MoveObject.transform.eulerAngles = new Vector3(0, 0, -90);
             return bulletEntity;
         }
 

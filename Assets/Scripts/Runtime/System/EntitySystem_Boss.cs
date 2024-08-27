@@ -20,6 +20,7 @@ public partial class EntitySystem
         var root = Instantiate(battleManager.BossRootPrefab, battleManager.BossParent);
         var entity = root.AddComponent<BossEntity>();
         var bossAnima = AssetsLoadManager.LoadSkeletonGraphic(modelType, entity.transform);
+        bossAnima.transform.localScale *= data.modelScale;
         entity.Init();
         entity.InitBoss(data);
         AddEntity(entity.EntityId, entity);

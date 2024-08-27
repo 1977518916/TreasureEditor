@@ -13,18 +13,9 @@ public class DeadState : IState
     
     public void Enter(StateMachineComponent stateMachineComponent)
     {
-        if (stateMachineComponent.Entity is HeroEntity)
-        {
-            stateMachineComponent.Entity.GetSpecifyComponent<HeroDeadComponent>(ComponentType.DeadComponent).Dead();
-        }
-
-        if (stateMachineComponent.Entity is EnemyEntity or BossEntity) 
-        {
-            stateMachineComponent.Entity.GetSpecifyComponent<EnemyDeadComponent>(ComponentType.DeadComponent).Dead();
-        }
         AnimationComponent.ChangeAnima(StateType.Dead, false, () =>
         {
-            EntitySystem.Instance.DeadEntityRelease(stateMachineComponent.Entity.EntityId);
+            EntitySystem.Instance.ReleaseEntity(stateMachineComponent.Entity.EntityId);
         });
     }
 

@@ -115,6 +115,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         hero.tag = "Hero";
         var heroEntity = hero.AddComponent<HeroEntity>();
         var heroModel = AssetsLoadManager.LoadHero(data.heroTypeEnum, hero.GetComponent<RectTransform>());
+        heroModel.GetComponent<RectTransform>().localScale *= data.modelScale;
         heroEntity.Init();
         heroEntity.InitHero(data, heroModel, battleManager.GetFirePoint(indexValue), indexValue);
         AddEntity(heroEntity.EntityId, heroEntity);
@@ -367,7 +368,9 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         AddEntity(entity.EntityId, entity);
         var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
         var anim = model.GetComponent<SkeletonGraphic>();
-        model.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        var scale = new Vector3(0.3f, 0.3f, 1f);
+        root.transform.localScale *= enemyBean.EnemyData.modelScale;
+        model.transform.localScale = scale * enemyBean.EnemyData.modelScale;
         model.transform.Translate(0, -30, 0, Space.Self);
         // 初始化敌人位置
         InitEntityPosition(entity, entity.GetComponent<RectTransform>());
@@ -552,17 +555,6 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     public void ReleaseEntity(long entityId)
     {
         if (allEntityDic.TryGetValue(entityId, out var entity))
-        {
-            entity.ReadyRelease = true;
-        }
-    }
-
-    /// <summary>
-    /// 将已死亡的实体单位释放
-    /// </summary>
-    public void DeadEntityRelease(long entityId)
-    {
-        if(deadEntityDic.Remove(entityId, out var entity))
         {
             entity.ReadyRelease = true;
         }

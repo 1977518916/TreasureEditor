@@ -388,7 +388,9 @@ namespace Runtime.UI
             selectBossBullet.onValueChanged.RemoveAllListeners();
             selectBossBullet.onValueChanged.AddListener(value =>
             {
-                levelData.BossData.BulletType = value != -1 ? (BulletType)value : BulletType.NoEntity;
+                levelData.BossData.BulletType = value != -1
+                    ? IsHoldTheBullet(levelData.BossData.EntityModelType) ? (BulletType)value : BulletType.NoEntity
+                    : BulletType.NoEntity;
                 if (IsHoldTheBullet(levelData.BossData.EntityModelType))   
                 {
                     switch (value)

@@ -546,8 +546,6 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         if(allEntityDic.Remove(entityId, out var entity))
         {
             entity.ReadyRelease = true;
-            (entity as EnemyEntity)?.Dead();
-            (entity as BossEntity)?.Dead();
             deadEntityDic.TryAdd(entityId, entity);
         }
     }

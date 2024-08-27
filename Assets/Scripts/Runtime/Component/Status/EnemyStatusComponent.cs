@@ -57,6 +57,8 @@ public class EnemyStatusComponent : StatusComponent
         {
             (entity as BossEntity)?.SetSurvive(false);
             (entity as EnemyEntity)?.SetSurvive(false);
+            (entity as BossEntity)?.SetColliderEnabled(false);
+            (entity as EnemyEntity)?.SetColliderEnabled(false);
             // 死亡 播放死亡动画 关闭碰撞包围盒  死亡动画播放完以后直接删除实体
             EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, EntityType.EnemyEntity);
             entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent)

@@ -32,9 +32,10 @@ public class EnemyEntity : MonoBehaviour, Entity
         }
         Destroy(gameObject);
     }
-    public void Dead()
+    
+    public void SetColliderEnabled(bool isEnabled)
     {
-        
+        GetComponent<Collider2D>().enabled = isEnabled;
     }
 
     public void SetSurvive(bool survive)

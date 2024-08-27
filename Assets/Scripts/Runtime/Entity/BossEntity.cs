@@ -44,6 +44,11 @@ public class BossEntity : MonoBehaviour, Entity
     
     public void Release()
     {
+        foreach (var iComponent in AllComponentList)
+        {
+            iComponent?.Release();
+        }
+        GetComponent<Collider2D>().enabled = false;
         AllComponentList.Clear();
     }
 
@@ -52,13 +57,9 @@ public class BossEntity : MonoBehaviour, Entity
         IsSurvive = survive;
     }
 
-    public void Dead()
+    public void SetColliderEnabled(bool isEnabled)
     {
-        foreach (var iComponent in AllComponentList)
-        {
-            iComponent?.Release();
-        }
-        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Collider2D>().enabled = isEnabled;
     }
 
     public RectTransform GetEntityTransform()

@@ -111,6 +111,10 @@ namespace Runtime.UI
                 TMP_InputField atkInterval = transform.FindGet<TMP_InputField>("AtkIntervalField");
                 atkInterval.onValueChanged.AddListener(content => heroData.atkInterval = float.Parse(content));
                 updateAction += () => atkInterval.SetTextWithoutNotify(heroData.atkInterval.ToString());
+                
+                TMP_InputField amountField = transform.FindGet<TMP_InputField>("AmountField");
+                amountField.onValueChanged.AddListener(content => heroData.shooterAmount = int.Parse(content));
+                updateAction += () => amountField.SetTextWithoutNotify(heroData.shooterAmount.ToString());
             }
         }
     }

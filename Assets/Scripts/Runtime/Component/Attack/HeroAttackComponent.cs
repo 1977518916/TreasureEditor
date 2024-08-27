@@ -9,104 +9,138 @@ using UnityEngine;
 public class HeroAttackComponent : AttackComponent
 {
     public bool IsInAttackInterval { get; set; }
-    
+
     public float LastAttackTime { get; set; }
 
     public float AttackInterval { get; set; }
-    
+
     /// <summary>
     /// 攻击最大次数 也就是每次CD结束以后恢复的攻击次数
     /// </summary>
     private int attackMaxCount;
-    
+
+    /// <summary>
+    /// 射出的子弹数量
+    /// </summary>
+    private int bulletAmount;
+
     /// <summary>
     /// 攻击次数  每次攻击次数归0时进入攻击CD中
     /// </summary>
     private int attackCount;
-    
+
     /// <summary>
     /// 攻击CD
     /// </summary>
     private float attackCd;
-    
+
     /// <summary>
     /// 是否处于攻击CD
     /// </summary>
     private bool isInAttackCd;
-    
+
     /// <summary>
     /// 攻击开始CD的时间
     /// </summary>
     private float attackStartCdTime;
-    
+
     /// <summary>
     /// 英雄实体
     /// </summary>
     private readonly HeroEntity heroEntity;
-    
+
     /// <summary>
     /// 点检测组件
     /// </summary>
     private PointDetectComponent pointDetectComponent;
-    
+
     /// <summary>
     /// 英雄攻击组件的构造函数
     /// </summary>
     /// <param name="attackCountValue"> 攻击次数总数 </param>
-    /// <param name="entity"> 英雄实体 </param>
+    /// <param name="bulletAmount"> 每次射出的子弹数量</param>
     /// <param name="attackInterval"> 攻击间隔时间 </param>
     /// <param name="attackCd"> 攻击CD </param>
+    /// <param name="entity"> 英雄实体 </param>
     /// <param name="pointDetectComponent"></param>
-    public HeroAttackComponent(int attackCountValue, float attackInterval, float attackCd, HeroEntity entity, PointDetectComponent pointDetectComponent)
+    public HeroAttackComponent(int attackCountValue, int bulletAmount, float attackInterval, float attackCd, HeroEntity entity, PointDetectComponent pointDetectComponent)
     {
         attackMaxCount = attackCountValue;
         AttackInterval = attackInterval;
         attackCount = attackCountValue;
         heroEntity = entity;
+        this.bulletAmount = bulletAmount;
         this.attackCd = attackCd;
         IsInAttackInterval = false;
         isInAttackCd = false;
         this.pointDetectComponent = pointDetectComponent;
     }
-    
+
     public void Tick(float time)
     {
-        if (IsInAttackInterval)
+        if(IsInAttackInterval)
         {
             // 攻击间隔的时间减去当前时间 如果大于攻击间隔时间 则证明攻击间隔时间结束了 那么就需要退出攻击间隔状态  所以 IsInAttackInterval 此时等于 false
             IsInAttackInterval = !(Time.time - LastAttackTime >= AttackInterval);
         }
-        
-        if (isInAttackCd)
+
+        if(isInAttackCd)
         {
             // 攻击开始计时CD的时间减去当前时间 如果大于攻击CD 则证明攻击CD结束了 那么就需要推出CD状态  所以 isInAttackCd 此时等于 false
             isInAttackCd = !(Time.time - attackStartCdTime >= attackCd);
-            if (!isInAttackCd)
+            if(!isInAttackCd)
                 attackCount = attackMaxCount;
         }
-        
-        if (pointDetectComponent.IsVeryClose())
+
+        if(pointDetectComponent.IsVeryClose())
         {
             Attack(1, pointDetectComponent.GetTarget().position);
         }
     }
-    
+
     public void Release()
     {
-        
+
     }
-    
+
     /// <summary>
     /// 攻击
     /// </summary>
     public void Attack(float time, Vector2 point)
     {
-        if (isInAttackCd) return;
-        if (IsInAttackInterval) return;
+        if(isInAttackCd) return;
+        if(IsInAttackInterval) return;
         // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
-        
         MakeBullet(point);
+        
+        float deviation = 10;
+        for(int i = 1; i < bulletAmount; i++)
+        {
+            float rate = ((i + 1) / 0b10) * Mathf.Pow(-1, i);
+            MakeBullet(GetOtherPoint(deviation * rate, point));
+        }
+
         ReduceAttackCount();
+    }
+
+    private Vector2 GetOtherPoint(float angle, Vector2 pointB)
+    {
+        Vector2 pointA = new Vector2(heroEntity.GetFireLocation().position.x, heroEntity.GetFireLocation().position.y);
+        Vector2 AB = pointB - pointA;
+        float lengthAB = AB.magnitude;
+        float lengthAC = Mathf.Cos(Mathf.Deg2Rad * angle) * lengthAB;
+        Vector2 unitAB = AB / lengthAB;
+        float cosAngle = Mathf.Cos(angle * Mathf.Deg2Rad);
+        float sinAngle = Mathf.Sin(angle * Mathf.Deg2Rad);
+        Matrix4x4 rotationMatrix = new Matrix4x4(
+            new Vector4(cosAngle, -sinAngle, 0, 0),
+            new Vector4(sinAngle, cosAngle, 0, 0),
+            new Vector4(0, 0, 1, 0),
+            new Vector4(0, 0, 0, 1)
+        );
+
+        Vector2 rotatedVector = rotationMatrix.MultiplyVector(unitAB * lengthAC);
+        return pointA + new Vector2(rotatedVector.x, rotatedVector.y);
     }
 
     private void MakeBullet(Vector2 point)
@@ -125,14 +159,14 @@ public class HeroAttackComponent : AttackComponent
         LastAttackTime = Time.time;
         IsInAttackInterval = true;
     }
-    
+
     /// <summary>
     /// 减少攻击次数
     /// </summary>
     private void ReduceAttackCount()
     {
         attackCount -= 1;
-        if (attackCount > 0) return;
+        if(attackCount > 0) return;
         isInAttackCd = true;
         attackStartCdTime = Time.time;
         // 发送 攻击CD开始事件  并传入实体ID 以便于知道是谁

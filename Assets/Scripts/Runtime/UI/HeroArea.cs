@@ -115,6 +115,29 @@ namespace Runtime.UI
                 TMP_InputField amountField = transform.FindGet<TMP_InputField>("AmountField");
                 amountField.onValueChanged.AddListener(content => heroData.shooterAmount = int.Parse(content));
                 updateAction += () => amountField.SetTextWithoutNotify(heroData.shooterAmount.ToString());
+
+                var modelScaleField = transform.FindGet<TMP_InputField>("ScaleField");
+                modelScaleField.onValueChanged.AddListener(value =>
+                {
+                    if (string.IsNullOrEmpty(value)) 
+                    {
+                        return;
+                    }
+
+                    var validValue = Convert.ToSingle(value) > 0
+                        ? Convert.ToSingle(value) <= 2 ? Convert.ToSingle(value) : 2f
+                        : 0.1f;
+                    heroData.modelScale = validValue;
+                    if (heroParent.GetChild(0) != null)
+                    {
+                        heroParent.GetChild(0).transform.localScale = new Vector3(validValue, validValue, 1f);
+                    }
+                });
+                modelScaleField.onEndEdit.AddListener(value =>
+                {
+                    modelScaleField.SetTextWithoutNotify($"{heroData.modelScale}");
+                });
+                updateAction += () => modelScaleField.SetTextWithoutNotify($"{heroData.modelScale}");
             }
         }
     }

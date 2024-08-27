@@ -26,10 +26,12 @@ namespace Runtime.UI
             hp,
             atk,
             speed,
+            enemyScale,
             bossGenerateTime,
             bossHp,
             bossRun,
-            bossAttack;
+            bossAttack,
+            bossScale;
 
         private Button addBossBtn, removeBossBtn;
         private LevelData levelData;
@@ -41,13 +43,14 @@ namespace Runtime.UI
         {
             dropdown = transform.FindGet<TMP_Dropdown>("LevelDrop");
             typeDropDown = transform.FindGet<TMP_Dropdown>("TimesInfo/Type");
-            mapDropDown = transform.FindGet<TMP_Dropdown>("MapDrop");
+            mapDropDown = transform.parent.FindGet<TMP_Dropdown>("MapDrop");
             amount = transform.FindGet<TMP_InputField>("TimesInfo/Amount");
             time = transform.FindGet<TMP_InputField>("TimesInfo/TimeField");
             timeInterval = transform.FindGet<TMP_InputField>("TimesInfo/DelayTimeField");
             hp = transform.FindGet<TMP_InputField>("TimesInfo/Hp");
             atk = transform.FindGet<TMP_InputField>("TimesInfo/Atk");
             speed = transform.FindGet<TMP_InputField>("TimesInfo/Speed");
+            enemyScale = transform.FindGet<TMP_InputField>("TimesInfo/ScaleInput");
             enemyParent = transform.Find("TimesInfo/EnemyParent");
             bg = transform.parent.FindGet<Image>("bg");
             transform.FindGet<Button>("DeleteButton").onClick.AddListener(DeleteTimes);
@@ -92,8 +95,29 @@ namespace Runtime.UI
             hp.onValueChanged.AddListener(v => CurrentData.enemyData.hp = int.Parse(v));
             atk.onValueChanged.AddListener(v => CurrentData.enemyData.atk = int.Parse(v));
             speed.onValueChanged.AddListener(v => CurrentData.enemyData.speed = float.Parse(v));
-        }
+            enemyScale.onValueChanged.AddListener(value =>
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    return;
+                }
 
+                var validValue = Convert.ToSingle(value) > 0
+                    ? Convert.ToSingle(value) <= 2 ? Convert.ToSingle(value) : 2f
+                    : 0.1f;
+                CurrentData.enemyData.modelScale = validValue;
+                if (enemyParent.GetChild(0) != null)
+                {
+                    enemyParent.GetChild(0).transform.localScale = new Vector3(validValue, validValue, 1f);
+                }
+            });
+            enemyScale.onEndEdit.AddListener(value =>
+            {
+                enemyScale.SetTextWithoutNotify($"{CurrentData.enemyData.modelScale}");
+            });
+            enemyScale.SetTextWithoutNotify($"{CurrentData.enemyData.modelScale}");
+        }
+        
         private void ShowMap(int _ = 0)
         {
             bg.sprite = AssetsLoadManager.LoadBg(levelData.mapType);
@@ -176,6 +200,7 @@ namespace Runtime.UI
             bossAttack = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/BossAttackTable/BossAttackInputField");
             bossHp = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/BossHpTable/BossHpInputField");
             bossRun = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossRunSpeedTable/BossRunSpeedInputField");
+            bossScale = transform.FindGet<TMP_InputField>("BossInfo/BossPanel/BossData/SizeTable/SizeInputField");
             selectBossModel.ClearOptions();
             selectBossBullet.ClearOptions();
             selectWhichBossDrop.ClearOptions();
@@ -187,6 +212,7 @@ namespace Runtime.UI
             UpdateBossAttack($"{levelData.BossData.Atk}");
             UpdateBossGenerateTime($"{levelData.BossData.Time}");
             UpdateBossRunSpeed($"{levelData.BossData.RunSpeed}");
+            bossScale.SetTextWithoutNotify($"{levelData.BossData.modelScale}");
         }
         
         /// <summary>
@@ -210,6 +236,7 @@ namespace Runtime.UI
             bossAttack.onValueChanged.AddListener(UpdateBossAttack);
             bossHp.onValueChanged.AddListener(UpdateBossHp);
             bossRun.onValueChanged.AddListener(UpdateBossRunSpeed);
+            BindBossModelScaleInputEvent();
         }
         
         private void AddBossAction()
@@ -223,6 +250,7 @@ namespace Runtime.UI
             UpdateBossAttack($"{levelData.BossData.Atk}");
             UpdateBossGenerateTime($"{levelData.BossData.Time}");
             UpdateBossRunSpeed($"{levelData.BossData.RunSpeed}");
+            bossScale.SetTextWithoutNotify($"{levelData.BossData.modelScale}");
             UpdateBulletDrop();
             UpdateBossModelTypeDropdown(true);
         }
@@ -266,8 +294,36 @@ namespace Runtime.UI
             bossAttack.text = $"{levelData.BossData.Atk}";
             bossHp.text = $"{levelData.BossData.Hp}";
             bossRun.text = $"{levelData.BossData.RunSpeed}";
+            bossScale.SetTextWithoutNotify($"{levelData.BossData.modelScale}");
             HideBossModel();
             HideBossBulletModel();
+        }
+
+        /// <summary>
+        /// 更新Boss模型大小
+        /// </summary>
+        private void BindBossModelScaleInputEvent()
+        {
+            bossScale.onValueChanged.AddListener(value =>
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    return;
+                }
+                
+                var validValue = Convert.ToSingle(value) > 0
+                    ? Convert.ToSingle(value) <= 2 ? Convert.ToSingle(value) : 2f
+                    : 0.1f;
+                levelData.BossData.modelScale = validValue;
+                if (bossModelParent.GetChild(0) != null)
+                {
+                    bossModelParent.GetChild(0).transform.localScale = new Vector3(validValue, validValue, 1f);
+                }
+            });
+            bossScale.onEndEdit.AddListener(value =>
+            {
+                bossScale.SetTextWithoutNotify($"{levelData.BossData.modelScale}");
+            });
         }
         
         /// <summary>
@@ -309,7 +365,7 @@ namespace Runtime.UI
             bossRun.text = bossRunSpeed;
             levelData.BossData.RunSpeed = Convert.ToSingle(bossRun.text);
         }
-
+        
         /// <summary>
         /// 更新子弹下拉框
         /// </summary>

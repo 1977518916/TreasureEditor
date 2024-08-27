@@ -42,7 +42,7 @@ namespace Runtime.Data
         /// 每次生成时的间隔
         /// </summary>
         public float makeTime = 1;
-
+        
         /// <summary>
         /// 敌人的生命值攻击力
         /// </summary>
@@ -78,7 +78,12 @@ namespace Runtime.Data
         /// 血量
         /// </summary>
         public int Hp = 500;
-
+        
+        /// <summary>
+        /// 模型大小
+        /// </summary>
+        public float modelScale = 1f;
+        
         /// <summary>
         /// 移动速度
         /// </summary>

@@ -22,5 +22,9 @@ namespace Runtime.Data
         /// 攻击间隔
         /// </summary>
         public float atkInterval = 2;
+        /// <summary>
+        /// 模型大小
+        /// </summary>
+        public float modelScale = 1;
     }
 }

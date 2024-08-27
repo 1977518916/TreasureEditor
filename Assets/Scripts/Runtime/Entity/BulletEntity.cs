@@ -78,7 +78,7 @@ public class BulletEntity : MonoBehaviour, Entity
 
         return default;
     }
-
+    
     public bool IsSpecifyComponent(IComponent component, ComponentType componentType)
     {
         return componentType switch
@@ -94,7 +94,7 @@ public class BulletEntity : MonoBehaviour, Entity
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }
-
+    
     /// <summary>
     /// 生成攻击检测包围盒
     /// </summary>
@@ -108,8 +108,8 @@ public class BulletEntity : MonoBehaviour, Entity
     private void OnTriggerEnter2D(Collider2D other)
     {
         var entity = other.GetComponent<Entity>();
-        if(entity == null) return;
-        if(entity.EntityType != targetEntityType) return;
+        if (entity == null) return;
+        if (entity.EntityType != targetEntityType) return;
         switch(targetEntityType)
         {
             case EntityType.HeroEntity:
@@ -123,7 +123,7 @@ public class BulletEntity : MonoBehaviour, Entity
             default:
                 throw new ArgumentOutOfRangeException();
         }
-
+        
         currentTriggerCount++;
         if(currentTriggerCount == triggerDeadCount)
         {

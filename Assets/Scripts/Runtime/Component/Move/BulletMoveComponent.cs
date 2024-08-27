@@ -17,6 +17,16 @@ public class BulletMoveComponent : MoveComponent
     public bool ContinueMove { get; set; }
 
     private Vector2 ThisTransform;
+
+    /// <summary>
+    /// 子弹初始位置
+    /// </summary>
+    private Vector2 startLocation;
+
+    /// <summary>
+    /// 从多远距离开始计时
+    /// </summary>
+    private float startTimeDirection;
     
     /// <summary>
     /// 子弹移动组件

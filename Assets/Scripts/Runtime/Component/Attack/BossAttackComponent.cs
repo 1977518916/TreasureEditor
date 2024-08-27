@@ -62,6 +62,8 @@ namespace Runtime.Component.Attack
 
         private void BulletAttack()
         {
+            LastAttackTime = Time.time;
+            IsInAttackInterval = true;
             if(TryGetAtkedEntity(out var hero))
             {
                 // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
@@ -77,20 +79,17 @@ namespace Runtime.Component.Attack
                 bulletEntity.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));
                 EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
             }
-
-            LastAttackTime = Time.time;
-            IsInAttackInterval = true;
         }
 
         private void MeleeAttack()
         {
-            if(TryGetAtkedEntity(out var hero))
+            LastAttackTime = Time.time;
+            IsInAttackInterval = true;
+            if (TryGetAtkedEntity(out var hero))
             {
                 entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
                 hero.GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(DataManager.GameData.isInvicibleSelf ? 1 : hurt);
             }
-            LastAttackTime = Time.time;
-            IsInAttackInterval = true;
         }
 
         private bool TryGetAtkedEntity(out HeroEntity heroEntity)

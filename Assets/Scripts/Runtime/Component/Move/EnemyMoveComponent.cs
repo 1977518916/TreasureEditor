@@ -61,6 +61,7 @@ public class EnemyMoveComponent : MoveComponent
     
     private void ReplaceTarget(Entity e)
     {
+        if (e == null) return;
         target = e.GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform;
         MoveDirection = (this.target.position - EntityTransform.position).normalized;
     }

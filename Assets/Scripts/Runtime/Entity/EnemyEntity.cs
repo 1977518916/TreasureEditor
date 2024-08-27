@@ -25,15 +25,16 @@ public class EnemyEntity : MonoBehaviour, Entity
 
     public void Release()
     {
-        Destroy(gameObject);
-    }
-    public void Dead()
-    {
+        GetComponent<Collider2D>().enabled = false;
         foreach (var iComponent in AllComponentList)
         {
             iComponent?.Release();
         }
-        GetComponent<Collider2D>().enabled = false;
+        Destroy(gameObject);
+    }
+    public void Dead()
+    {
+        
     }
 
     public void SetSurvive(bool survive)

@@ -7,9 +7,13 @@ namespace Runtime.Data
     public class HeroData : UnitData
     {
         /// <summary>
-        /// 子弹数量
+        /// 弹夹数量
         /// </summary>
         public int bulletAmount = 10;
+        /// <summary>
+        /// 每次射出的子弹数量
+        /// </summary>
+        public int shooterAmount = 1;
         [FormerlySerializedAs("heroType")]
         public HeroTypeEnum heroTypeEnum = HeroTypeEnum.Null;
         public BulletType bulletType = BulletType.Self;

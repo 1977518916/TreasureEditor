@@ -24,7 +24,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     private float currentTime;
 
     private Timer timer;
-    
+
     /// <summary>
     /// 实体字典  ID对应对象
     /// </summary>
@@ -45,7 +45,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
         timer = Timer.Register(DataManager.LevelData.BossData.Time, () =>
         {
-            if (DataManager.LevelData.BossData.EntityModelType == EntityModelType.Null) return;
+            if(DataManager.LevelData.BossData.EntityModelType == EntityModelType.Null) return;
             GenerateBossEntity(DataManager.LevelData.BossData.EntityModelType, DataManager.LevelData.BossData);
         });
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy, GenerateEntity);
@@ -138,7 +138,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         skeletonGraphic.Initialize(true);
         skeletonGraphic.AnimationState.SetAnimation(0, "Idle", true);
     }
-    
+
     private void InitHeroEntityStatus(HeroEntity heroEntity, int value)
     {
         var heroStatusUI = BattleManager.Instance.GetHeroStatus(value);
@@ -169,7 +169,8 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
     private void InitHeroEntityAttack(HeroEntity heroEntity, PointDetectComponent pointDetectComponent)
     {
-        var attack = new HeroAttackComponent(heroEntity.GetHeroData().bulletAmount, heroEntity.GetHeroData().atkInterval, 3, heroEntity, pointDetectComponent);
+        HeroData data = heroEntity.GetHeroData();
+        var attack = new HeroAttackComponent(data.bulletAmount, data.shooterAmount, data.atkInterval, 3, heroEntity, pointDetectComponent);
         heroEntity.AllComponentList.Add(attack);
     }
 
@@ -335,7 +336,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         entity.GetSpecifyComponent<RandomPositionComponent>(ComponentType.RandomPositionComponent)
             .RandomizePosition(rectTransform);
     }
-    
+
     private void InitEnemyEntityMove(Entity entity, RectTransform target, RectTransform entityTransform,
         float moveSpeed)
     {
@@ -378,7 +379,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp, entity));
         // Debug.Log("敌人数量"+battleManager.EnemyParent.childCount);
     }
-    
+
     /// <summary>
     /// 更换目标  如果返回的结果为-1证明目前需要找的对象没有
     /// </summary>
@@ -468,12 +469,12 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     {
         foreach (var kEntity in allEntityDic)
         {
-            if (kEntity.Value is not (EnemyEntity or BossEntity)) continue;
-            if (kEntity.Value is BossEntity { IsSurvive: true } or EnemyEntity { IsSurvive: true })
+            if(kEntity.Value is not (EnemyEntity or BossEntity)) continue;
+            if(kEntity.Value is BossEntity { IsSurvive: true } or EnemyEntity { IsSurvive: true })
             {
                 return kEntity.Key;
             }
-            
+
             return -1;
         }
 
@@ -513,7 +514,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
         return false;
     }
-    
+
     public void HeroDead(long entityId)
     {
         if(allEntityDic.Remove(entityId, out var entity))
@@ -522,10 +523,10 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
             deadEntityDic.TryAdd(entityId, entity);
         }
     }
-    
+
     public void EnemyDead(long entityId)
     {
-        if (allEntityDic.Remove(entityId, out var entity))
+        if(allEntityDic.Remove(entityId, out var entity))
         {
             (entity as EnemyEntity)?.Dead();
             (entity as BossEntity)?.Dead();

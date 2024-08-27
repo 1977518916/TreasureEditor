@@ -461,11 +461,7 @@ namespace Runtime.UI
         private void ShowBoss(EntityModelType entityModelType)
         {
             HideBossModel();
-            var boss = AssetsLoadManager.LoadBoss(entityModelType, bossModelParent);
-            if (entityModelType is EntityModelType.DongZhuo )
-            {
-                boss.GetComponent<RectTransform>().localScale = new Vector3(0.5f, 0.5f, 1f);
-            }
+            AssetsLoadManager.LoadBoss(entityModelType, bossModelParent);
         }
         
         /// <summary>

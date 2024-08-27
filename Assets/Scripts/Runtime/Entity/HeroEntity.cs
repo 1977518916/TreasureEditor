@@ -17,7 +17,8 @@ public class HeroEntity : MonoBehaviour, Entity
     public EntityType EntityType { get; set; }
 
     public List<IComponent> AllComponentList { get; set; }
-    
+    public bool ReadyRelease { get; set; }
+
     /// <summary>
     /// 英雄数据
     /// </summary>
@@ -51,6 +52,7 @@ public class HeroEntity : MonoBehaviour, Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.HeroEntity;
         AllComponentList = new List<IComponent>();
+        ReadyRelease = false;
     }
     
     public void Release()

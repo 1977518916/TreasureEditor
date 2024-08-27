@@ -19,6 +19,11 @@ public interface Entity
     /// 所有组件
     /// </summary>
     public List<IComponent> AllComponentList { get; set; }
+    
+    /// <summary>
+    /// 是否准备释放
+    /// </summary>
+    public bool ReadyRelease { get; set; }
 
     /// <summary>
     /// 初始化

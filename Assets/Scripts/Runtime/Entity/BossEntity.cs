@@ -10,7 +10,8 @@ public class BossEntity : MonoBehaviour, Entity
     public long EntityId { get; set; }
     public EntityType EntityType { get; private set; }
     public List<IComponent> AllComponentList { get; set; }
-    
+    public bool ReadyRelease { get; set; }
+
     /// <summary>
     /// 是否存活
     /// </summary>
@@ -32,6 +33,7 @@ public class BossEntity : MonoBehaviour, Entity
         EntityType = EntityType.EnemyEntity;
         AllComponentList = new List<IComponent>();
         IsSurvive = true;
+        ReadyRelease = false;
     }
     
     public void InitBoss(BossData bossData)

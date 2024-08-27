@@ -67,8 +67,22 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     {
         foreach (var entity in allEntityDic.Values)
         {
+            if (entity.ReadyRelease)
+            {
+                allEntityDic.TryRemove(entity.EntityId, out var releaseEntity);
+                releaseEntity.Release();
+                continue;
+            }
+
             foreach (var iComponent in entity.AllComponentList)
             {
+                if (entity.ReadyRelease)
+                {
+                    allEntityDic.TryRemove(entity.EntityId, out var releaseEntity);
+                    releaseEntity.Release();
+                    break;
+                }
+
                 iComponent.Tick(time);
             }
         }
@@ -510,7 +524,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
             default:
                 throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
         }
-
+        
         return false;
     }
     
@@ -518,7 +532,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     {
         if(allEntityDic.Remove(entityId, out var entity))
         {
-            HeroEntity heroEntity = entity as HeroEntity;
+            entity.ReadyRelease = true;
             deadEntityDic.TryAdd(entityId, entity);
         }
     }
@@ -527,17 +541,18 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     {
         if (allEntityDic.Remove(entityId, out var entity))
         {
+            entity.ReadyRelease = true;
             (entity as EnemyEntity)?.Dead();
             (entity as BossEntity)?.Dead();
             deadEntityDic.TryAdd(entityId, entity);
         }
     }
-
+    
     public void ReleaseEntity(long entityId)
     {
-        if(allEntityDic.Remove(entityId, out var entity))
+        if (allEntityDic.TryGetValue(entityId, out var entity))
         {
-            entity.Release();
+            entity.ReadyRelease = true;
         }
     }
 
@@ -548,10 +563,10 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     {
         if(deadEntityDic.Remove(entityId, out var entity))
         {
-            entity.Release();
+            entity.ReadyRelease = true;
         }
     }
-
+    
     public void Destroy()
     {
         foreach (var entity in allEntityDic.Values)

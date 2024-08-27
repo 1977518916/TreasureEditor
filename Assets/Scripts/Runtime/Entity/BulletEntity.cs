@@ -9,6 +9,7 @@ public class BulletEntity : MonoBehaviour, Entity
     public EntityType EntityType { get; set; }
 
     public List<IComponent> AllComponentList { get; set; }
+    public bool ReadyRelease { get; set; }
 
     /// <summary>
     /// 移动时播放的动画物体
@@ -45,6 +46,7 @@ public class BulletEntity : MonoBehaviour, Entity
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
         EntityType = EntityType.BulletEntity;
         AllComponentList = new List<IComponent>();
+        ReadyRelease = false;
     }
 
     /// <summary>
@@ -62,8 +64,12 @@ public class BulletEntity : MonoBehaviour, Entity
 
     public void Release()
     {
+        foreach (var iComponent in AllComponentList)
+        {
+            iComponent.Release();
+        }
         AllComponentList.Clear();
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 
     public T GetSpecifyComponent<T>(ComponentType componentType) where T : IComponent

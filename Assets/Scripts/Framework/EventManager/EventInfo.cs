@@ -194,16 +194,21 @@ namespace Tao_Framework.Core.Event
         /// 更换目标
         /// </summary>
         ReplaceTarget,
-        
+
         /// <summary>
         /// 英雄无敌
         /// </summary>
         HeroInvincible,
-        
+
         /// <summary>
         /// 敌人无敌
         /// </summary>
-        EnemyInvincible
+        EnemyInvincible,
+
+        /// <summary>
+        /// 超出死亡距离
+        /// </summary>
+        ExceedDeadDirection
     }
 
     public enum UIEvent

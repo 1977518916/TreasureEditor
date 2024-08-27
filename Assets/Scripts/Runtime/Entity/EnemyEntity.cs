@@ -10,6 +10,7 @@ public class EnemyEntity : MonoBehaviour, Entity
     public long EntityId { get; set; }
     public EntityType EntityType { get; set; }
     public List<IComponent> AllComponentList { get; set; }
+    public bool ReadyRelease { get; set; }
 
     public bool IsSurvive { get; private set; }
 
@@ -19,6 +20,7 @@ public class EnemyEntity : MonoBehaviour, Entity
         EntityType = EntityType.EnemyEntity;
         AllComponentList = new List<IComponent>();
         IsSurvive = true;
+        ReadyRelease = false;
     }
 
     public void Release()

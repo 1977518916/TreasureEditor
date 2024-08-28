@@ -52,6 +52,8 @@ public class EnemyStatusComponent : StatusComponent
         {
             entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent)
                 .TryChangeState(StateType.Hit);
+            (entity as EnemyEntity)?.GetSpecifyComponent<EnemyMoveComponent>(ComponentType.MoveComponent)
+                ?.StopMove(0.2f);
         }
         else
         {
@@ -59,10 +61,12 @@ public class EnemyStatusComponent : StatusComponent
             (entity as EnemyEntity)?.SetSurvive(false);
             (entity as BossEntity)?.SetColliderEnabled(false);
             (entity as EnemyEntity)?.SetColliderEnabled(false);
-            // 死亡 播放死亡动画 关闭碰撞包围盒  死亡动画播放完以后直接删除实体
-            EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, EntityType.EnemyEntity);
             entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent)
                 .TryChangeState(StateType.Dead);
+            (entity as EnemyEntity)?.GetSpecifyComponent<EnemyMoveComponent>(ComponentType.MoveComponent)
+                ?.StopMove(1f);
+            (entity as BossEntity)?.GetSpecifyComponent<FixedDistanceComponent>(ComponentType.MoveComponent)
+                ?.StopMove(1f);
         }
     }
 }

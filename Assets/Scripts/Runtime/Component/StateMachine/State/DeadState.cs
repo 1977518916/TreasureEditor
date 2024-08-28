@@ -1,4 +1,5 @@
 using Spine.Unity;
+using Tao_Framework.Core.Event;
 using UnityEngine;
 
 public class DeadState : IState
@@ -15,6 +16,8 @@ public class DeadState : IState
     {
         AnimationComponent.ChangeAnima(StateType.Dead, false, () =>
         {
+            // 死亡 播放死亡动画 关闭碰撞包围盒  死亡动画播放完以后直接删除实体
+            EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, stateMachineComponent.Entity.EntityType);
             EntitySystem.Instance.ReleaseEntity(stateMachineComponent.Entity.EntityId);
         });
     }

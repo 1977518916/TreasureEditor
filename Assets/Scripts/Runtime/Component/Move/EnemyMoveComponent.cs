@@ -1,5 +1,6 @@
 using Tao_Framework.Core.Event;
 using UnityEngine;
+using UnityTimer;
 
 /// <summary>
 /// 敌人移动组件
@@ -14,6 +15,11 @@ public class EnemyMoveComponent : MoveComponent
     
     public bool ContinueMove { get; set; }
 
+    /// <summary>
+    /// 是否停止移动
+    /// </summary>
+    private bool isStopMove;
+    
     private EnemyEntity entity;
     
     /// <summary>
@@ -25,6 +31,11 @@ public class EnemyMoveComponent : MoveComponent
     /// 点检测组件
     /// </summary>
     private PointDetectComponent pointDetectComponent;
+    
+    /// <summary>
+    /// 定时器
+    /// </summary>
+    private Timer timer;
     
     public EnemyMoveComponent(EnemyEntity entity,RectTransform target, RectTransform entityTransform, float moveSpeed)
     {
@@ -51,11 +62,14 @@ public class EnemyMoveComponent : MoveComponent
     public void Release()
     {
         EventMgr.Instance.RemoveEvent(entity.EntityId, GameEvent.ReplaceTarget);
+        timer?.Cancel();
+        timer = null;
     }
     
     public void Move(float time)
     {
         if (!ContinueMove) return;
+        if (isStopMove) return;
         EntityTransform.Translate(MoveDirection * MoveSpeed * time);
     }
     
@@ -64,5 +78,16 @@ public class EnemyMoveComponent : MoveComponent
         if (e == null) return;
         target = e.GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform;
         MoveDirection = (this.target.position - EntityTransform.position).normalized;
+    }
+
+    /// <summary>
+    /// 停止移动
+    /// </summary>
+    /// <param name="time"></param>
+    public void StopMove(float time)
+    {
+        isStopMove = true;
+        timer?.Cancel();
+        timer = Timer.Register(time, () => isStopMove = false);
     }
 }

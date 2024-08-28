@@ -178,8 +178,8 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
     private void InitEnemyDead(long entityId, Entity entity)
     {
-        var dead = new EnemyDeadComponent(entityId);
-        entity.AllComponentList.Add(dead);
+        // var dead = new EnemyDeadComponent(entityId);
+        // entity.AllComponentList.Add(dead);
     }
 
     private void InitHeroEntityAttack(HeroEntity heroEntity, PointDetectComponent pointDetectComponent)
@@ -530,24 +530,6 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         }
         
         return false;
-    }
-
-    public void HeroDead(long entityId)
-    {
-        if(allEntityDic.Remove(entityId, out var entity))
-        {
-            entity.ReadyRelease = true;
-            deadEntityDic.TryAdd(entityId, entity);
-        }
-    }
-
-    public void EnemyDead(long entityId)
-    {
-        if(allEntityDic.Remove(entityId, out var entity))
-        {
-            entity.ReadyRelease = true;
-            deadEntityDic.TryAdd(entityId, entity);
-        }
     }
     
     public void ReleaseEntity(long entityId)

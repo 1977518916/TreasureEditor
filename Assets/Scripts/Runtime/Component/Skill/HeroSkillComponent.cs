@@ -1,4 +1,5 @@
 ﻿using Runtime.Manager;
+using Runtime.System;
 using Runtime.Utils;
 using Tao_Framework.Core.Event;
 using UnityEngine;
@@ -58,6 +59,7 @@ namespace Runtime.Component.Skill
         {
             StateType stateType = id == 1 ? StateType.Skill_1 : StateType.Skill_2;
             entity.GetSpecifyComponent<StateMachineComponent>(ComponentType.StateMachineComponent).ChangeState(stateType);
+            SkillSystem.Instance.ShowSkill(1, null, entity);
         }
     }
 }

@@ -88,6 +88,7 @@ namespace Runtime.UI
                     heroType.value = (int)heroData.modelType;
                     heroParent.ClearChild();
                     bulletParent.ClearChild();
+                    heroType.RefreshShownValue();
                     if(heroData.modelType == EntityModelType.Null)
                     {
                         return;
@@ -103,7 +104,11 @@ namespace Runtime.UI
                     bulletType.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(value)));
                 }
                 bulletType.onValueChanged.AddListener(i => heroData.bulletType = (BulletType)i);
-                updateAction += () => { bulletType.value = (int)heroData.bulletType; };
+                updateAction += () =>
+                {
+                    bulletType.value = (int)heroData.bulletType;
+                    bulletType.RefreshShownValue();
+                };
             }
 
             private void InitNumberField()

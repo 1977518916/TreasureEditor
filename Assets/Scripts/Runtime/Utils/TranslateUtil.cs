@@ -45,16 +45,17 @@ namespace Runtime.Utils
         {
             switch(bulletType)
             {
+                case BulletType.NoEntity:
+                    return "攻击动画";
                 case BulletType.Self:
                 default:
-
                     return "自身子弹";
             }
         }
 
         public static string TranslateUi(EntityModelType modelType)
         {
-            switch (modelType)
+            switch(modelType)
             {
                 case EntityModelType.CaiWenJi:
                     return "蔡文姬";

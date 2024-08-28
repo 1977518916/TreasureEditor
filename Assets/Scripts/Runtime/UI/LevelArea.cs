@@ -148,6 +148,7 @@ namespace Runtime.UI
             atk.SetTextWithoutNotify(CurrentData.enemyData.atk.ToString());
             speed.SetTextWithoutNotify(CurrentData.enemyData.speed.ToString());
             typeDropDown.value = (int)CurrentData.enemyType;
+            typeDropDown.RefreshShownValue();
             ShowEnemy();
         }
 
@@ -165,7 +166,7 @@ namespace Runtime.UI
             {
                 dropdown.options.Add(new TMP_Dropdown.OptionData($"第{i++}波"));
             }
-
+            dropdown.RefreshShownValue();
         }
 
         private void DeleteTimes()

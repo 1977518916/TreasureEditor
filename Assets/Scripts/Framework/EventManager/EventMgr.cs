@@ -204,7 +204,7 @@ namespace Tao_Framework.Core.Event
                 (eventData.EventInfo as EventInfo)?.Invoke();
             }
         }
-
+        
         /// <summary>
         /// 延时无参事件触发
         /// </summary>
@@ -212,10 +212,13 @@ namespace Tao_Framework.Core.Event
         /// <param name="time"></param>
         public void TriggerEvent(GameEvent key, float time)
         {
-            foreach (var eventData in _gameEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.GameEvent == key)))
+            Timer.Register(time, () =>
             {
-                Timer.Register(time, () => (eventData.EventInfo as EventInfo)?.Invoke());
-            }
+                foreach (var eventData in _gameEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.GameEvent == key)))
+                {
+                    (eventData.EventInfo as EventInfo)?.Invoke();
+                }
+            });
         }
 
         /// <summary>

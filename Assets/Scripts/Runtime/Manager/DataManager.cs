@@ -4,6 +4,7 @@ using System.Linq;
 using QFSW.QC;
 using Runtime.Data;
 using Spine.Unity;
+using Tao_Framework.Core.Event;
 using UnityEngine;
 
 namespace Runtime.Manager
@@ -122,7 +123,7 @@ namespace Runtime.Manager
                 InitAllEntitySkillSpine(data.Key, data.Value);
             }
 
-
+            EventMgr.Instance.TriggerEvent(GameEvent.DataInitEnd, 0.15f);
         }
 
         /// <summary>

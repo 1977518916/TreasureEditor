@@ -67,6 +67,7 @@ public class EnemyStatusComponent : StatusComponent
                 ?.StopMove(1f);
             (entity as BossEntity)?.GetSpecifyComponent<FixedDistanceComponent>(ComponentType.MoveComponent)
                 ?.StopMove(1f);
+            Debug.Log($"当前死亡对象ID：{entity.EntityId}");
         }
     }
 }

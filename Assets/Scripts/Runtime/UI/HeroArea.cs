@@ -4,6 +4,7 @@ using Runtime.Extensions;
 using Runtime.Manager;
 using Runtime.Utils;
 using Spine.Unity;
+using Tao_Framework.Core.Event;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,14 +16,25 @@ namespace Runtime.UI
     {
         private void Awake()
         {
+            EventMgr.Instance.RegisterEvent(GetHashCode(), GameEvent.DataInitEnd, Init);
+        }
+
+        private void OnDestroy()
+        {
+            EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.DataInitEnd);
+        }
+
+        private void Init()
+        {
             foreach (Transform child in transform)
             {
                 if(child.name.Contains("hero"))
                 {
                     child.AddComponent<Hero>();
                 }
-            }
+            }    
         }
+
         private class Hero : MonoBehaviour
         {
             private HeroData heroData;

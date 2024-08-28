@@ -23,14 +23,17 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// 当前运行时间
     /// </summary>
     private float currentTime;
-
+    
+    /// <summary>
+    /// 计时器
+    /// </summary>
     private Timer timer;
 
     /// <summary>
     /// 实体字典  ID对应对象
     /// </summary>
     private readonly ConcurrentDictionary<long, Entity> allEntityDic = new ConcurrentDictionary<long, Entity>();
-    private readonly ConcurrentDictionary<long, Entity> deadEntityDic = new ConcurrentDictionary<long, Entity>();
+
     /// <summary>
     /// 战斗管理
     /// </summary>
@@ -46,16 +49,16 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
         timer = Timer.Register(DataManager.LevelData.BossData.Time, () =>
         {
-            if(DataManager.LevelData.BossData.EntityModelType == EntityModelType.Null) return;
+            if (DataManager.LevelData.BossData.EntityModelType == EntityModelType.Null) return;
             GenerateBossEntity(DataManager.LevelData.BossData.EntityModelType, DataManager.LevelData.BossData);
         });
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy, GenerateEntity);
     }
-
+    
     private void Update()
     {
         currentTime += Time.time;
-        if(currentTime >= UpdateTime)
+        if (currentTime >= UpdateTime)
         {
             EntityUpdate(UpdateTime);
         }
@@ -105,7 +108,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     private void GenerateEntity(DataType.HeroPositionType type, HeroData data)
     {
         var indexValue = Convert.ToInt32(type);
-        if(data.modelType == EntityModelType.Null)
+        if (data.modelType == EntityModelType.Null)
         {
             InitNullHeroStatus(indexValue);
             return;
@@ -194,7 +197,8 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     private void InitHeroEntityAttack(HeroEntity heroEntity, PointDetectComponent pointDetectComponent)
     {
         HeroData data = heroEntity.GetHeroData();
-        var attack = new HeroAttackComponent(data.bulletAmount, data.shooterAmount, data.atkInterval, 3, heroEntity, pointDetectComponent);
+        var attack = new HeroAttackComponent(data.bulletAmount, data.shooterAmount, data.atkInterval, 3, heroEntity,
+            pointDetectComponent);
         heroEntity.AllComponentList.Add(attack);
     }
 
@@ -411,7 +415,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         InitEntityPosition(entity, entity.GetComponent<RectTransform>());
         // 初始化敌人移动
         RectTransform targetRect = null;
-        if(targetId != -1)
+        if (targetId != -1)
         {
             targetRect = GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent)
                 .EntityTransform;
@@ -440,7 +444,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// <exception cref="ArgumentOutOfRangeException"></exception>
     public long ReplaceTarget(EntityType entityType)
     {
-        switch(entityType)
+        switch (entityType)
         {
             case EntityType.HeroEntity:
                 return GetFrontRowHeroID();
@@ -459,10 +463,10 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     {
         foreach (var kEntity in allEntityDic)
         {
-            if(kEntity.Value is HeroEntity && kEntity.Value != null)
+            if (kEntity.Value is HeroEntity && kEntity.Value != null)
             {
                 var hero = (HeroEntity)kEntity.Value;
-                if(hero.GetIsSurvive())
+                if (hero.GetIsSurvive())
                 {
                     return hero.EntityId;
                 }
@@ -478,14 +482,14 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// <returns></returns>
     public long GetFrontRowHeroID()
     {
-        if(GetSurviveHeroID() == -1) return -1;
+        if (GetSurviveHeroID() == -1) return -1;
         var heroList = GetAllHeroEntity();
         var currentMaxIndex = 0;
         HeroEntity maxIndexHero = null;
         foreach (var entity in heroList)
         {
-            if(!entity.GetIsSurvive()) continue;
-            if(entity.GetLocationIndex() < currentMaxIndex) continue;
+            if (!entity.GetIsSurvive()) continue;
+            if (entity.GetLocationIndex() < currentMaxIndex) continue;
             currentMaxIndex = entity.GetLocationIndex();
             maxIndexHero = entity;
         }
@@ -521,8 +525,8 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     {
         foreach (var kEntity in allEntityDic)
         {
-            if(kEntity.Value is not (EnemyEntity or BossEntity)) continue;
-            if(kEntity.Value is BossEntity { IsSurvive: true } or EnemyEntity { IsSurvive: true })
+            if (kEntity.Value is not (EnemyEntity or BossEntity)) continue;
+            if (kEntity.Value is BossEntity { IsSurvive: true } or EnemyEntity { IsSurvive: true })
             {
                 return kEntity.Key;
             }
@@ -550,7 +554,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// <returns></returns>
     public bool GetTargetTypeSurviveEntity(EntityType entityType)
     {
-        switch(entityType)
+        switch (entityType)
         {
             case EntityType.None:
                 break;
@@ -566,7 +570,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
         return false;
     }
-    
+
     public void ReleaseEntity(long entityId)
     {
         if (allEntityDic.TryGetValue(entityId, out var entity))
@@ -581,6 +585,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         {
             entity.Release();
         }
+
         timer?.Cancel();
         timer = null;
         allEntityDic.Clear();

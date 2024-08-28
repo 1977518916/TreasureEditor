@@ -74,7 +74,12 @@ namespace Tao_Framework.Core.Event
         /// 普通事件
         /// </summary>
         Common,
-
+        
+        /// <summary>
+        /// 数据初始化完成
+        /// </summary>
+        DataInitEnd,
+        
         /// <summary>
         /// 飞机开火事件
         /// </summary>

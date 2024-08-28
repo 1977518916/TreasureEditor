@@ -5,6 +5,7 @@ using Runtime.Data;
 using Runtime.Extensions;
 using Runtime.Manager;
 using Runtime.Utils;
+using Tao_Framework.Core.Event;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,8 +39,25 @@ namespace Runtime.UI
         private Transform enemyParent, bossModelParent, bossBulletModelParent;
         private Image bg;
         private TimesData CurrentData => levelData.timesDatas[dropdown.value];
-
+        
         private void Awake()
+        {
+            EventMgr.Instance.RegisterEvent(GetHashCode(), GameEvent.DataInitEnd, Init);
+        }
+
+        private void OnDestroy()
+        {
+            EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.DataInitEnd);
+        }
+
+        private void Init()
+        {
+            EnemyUiFind();
+            EnemyUiInit();
+            BossUiInit();
+        }
+
+        private void EnemyUiFind()
         {
             dropdown = transform.FindGet<TMP_Dropdown>("LevelDrop");
             typeDropDown = transform.FindGet<TMP_Dropdown>("TimesInfo/Type");
@@ -57,11 +75,9 @@ namespace Runtime.UI
             transform.FindGet<Button>("AddButton").onClick.AddListener(AddTimes);
             transform.FindGet<Button>("Delete").onClick.AddListener(Delete);
             transform.FindGet<Button>("Save").onClick.AddListener(Save);
-            Init();
-            BossUiInit();
         }
 
-        private void Init()
+        private void EnemyUiInit()
         {
             levelData = ReadWriteManager.Level.GetLevelData();
             DataManager.LevelData = levelData;

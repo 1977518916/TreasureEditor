@@ -139,9 +139,9 @@ public class HeroStatusComponent : StatusComponent
         else
         {
             heroEntity.UpdateSurvive(false);
+            heroEntity.GetComponent<Collider2D>().enabled = false;
             heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
                 .TryChangeState(StateType.Dead);
-            EventMgr.Instance.TriggerEvent(GameEvent.EntityDead, EntityType.HeroEntity);
         }
     }
 

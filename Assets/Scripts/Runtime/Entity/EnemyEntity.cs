@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Runtime.Component.Position;
+using Sirenix.OdinInspector;
 using Tools;
 using UnityEngine;
 
 public class EnemyEntity : MonoBehaviour, Entity
 {
+    [ShowInInspector]
     public long EntityId { get; set; }
     public EntityType EntityType { get; set; }
     public List<IComponent> AllComponentList { get; set; }

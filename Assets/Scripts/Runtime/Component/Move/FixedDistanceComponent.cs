@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityTimer;
 
 public class FixedDistanceComponent : MoveComponent
 {
@@ -9,7 +10,8 @@ public class FixedDistanceComponent : MoveComponent
 
     public void Release()
     {
-        
+        timer?.Cancel();
+        timer = null;
     }
 
     public RectTransform EntityTransform { get; set; }
@@ -17,6 +19,14 @@ public class FixedDistanceComponent : MoveComponent
     public bool ContinueMove { get; set; }
     public Vector2 MoveDirection { get; set; }
     private readonly Vector2 targetLocation;
+    /// <summary>
+    /// 定时器
+    /// </summary>
+    private Timer timer;
+    /// <summary>
+    /// 是否停止移动
+    /// </summary>
+    private bool isStopMove;
     /// <summary>
     /// 固定距离移动  用于只会移动一段固定距离的逻辑
     /// </summary>
@@ -36,6 +46,7 @@ public class FixedDistanceComponent : MoveComponent
     public void Move(float time)
     {
         if (!ContinueMove) return;
+        if (isStopMove) return;
         EntityTransform.Translate(MoveDirection * MoveSpeed * time);
         if (Vector2.Distance(EntityTransform.anchoredPosition, targetLocation) <= 1f)
         {
@@ -50,5 +61,16 @@ public class FixedDistanceComponent : MoveComponent
     public bool IsContinueMove()
     {
         return ContinueMove;
+    }
+    
+    /// <summary>
+    /// 停止移动
+    /// </summary>
+    /// <param name="time"></param>
+    public void StopMove(float time)
+    {
+        isStopMove = true;
+        timer?.Cancel();
+        timer = Timer.Register(time, () => isStopMove = false);
     }
 }

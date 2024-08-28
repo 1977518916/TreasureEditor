@@ -68,7 +68,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     {
         foreach (var entity in allEntityDic.Values)
         {
-            if(entity.ReadyRelease)
+            if (entity.ReadyRelease)
             {
                 allEntityDic.TryRemove(entity.EntityId, out var releaseEntity);
                 releaseEntity.Release();
@@ -77,7 +77,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
             foreach (var iComponent in entity.AllComponentList)
             {
-                if(entity.ReadyRelease)
+                if (entity.ReadyRelease)
                 {
                     allEntityDic.TryRemove(entity.EntityId, out var releaseEntity);
                     releaseEntity.Release();
@@ -187,8 +187,8 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
     private void InitEnemyDead(long entityId, Entity entity)
     {
-        var dead = new EnemyDeadComponent(entityId);
-        entity.AllComponentList.Add(dead);
+        // var dead = new EnemyDeadComponent(entityId);
+        // entity.AllComponentList.Add(dead);
     }
 
     private void InitHeroEntityAttack(HeroEntity heroEntity, PointDetectComponent pointDetectComponent)
@@ -566,28 +566,10 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
         return false;
     }
-
-    public void HeroDead(long entityId)
-    {
-        if(allEntityDic.Remove(entityId, out var entity))
-        {
-            entity.ReadyRelease = true;
-            deadEntityDic.TryAdd(entityId, entity);
-        }
-    }
-
-    public void EnemyDead(long entityId)
-    {
-        if(allEntityDic.Remove(entityId, out var entity))
-        {
-            entity.ReadyRelease = true;
-            deadEntityDic.TryAdd(entityId, entity);
-        }
-    }
-
+    
     public void ReleaseEntity(long entityId)
     {
-        if(allEntityDic.TryGetValue(entityId, out var entity))
+        if (allEntityDic.TryGetValue(entityId, out var entity))
         {
             entity.ReadyRelease = true;
         }

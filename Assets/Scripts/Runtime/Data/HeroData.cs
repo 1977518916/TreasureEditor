@@ -14,8 +14,7 @@ namespace Runtime.Data
         /// 每次射出的子弹数量
         /// </summary>
         public int shooterAmount = 1;
-        [FormerlySerializedAs("heroType")]
-        public HeroTypeEnum heroTypeEnum = HeroTypeEnum.Null;
+        public EntityModelType modelType = EntityModelType.Null;
         public BulletType bulletType = BulletType.Self;
         public BulletMoveType bulletMoveType;
         /// <summary>

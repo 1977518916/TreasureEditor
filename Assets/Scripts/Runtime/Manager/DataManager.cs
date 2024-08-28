@@ -54,12 +54,12 @@ namespace Runtime.Manager
             List<GameObject> gameObjects = new List<GameObject>();
             foreach ((DataType.HeroPositionType key, HeroData value) in HeroDatas)
             {
-                if(value.heroTypeEnum == HeroTypeEnum.Null)
+                if(value.modelType == EntityModelType.Null)
                 {
                     gameObjects.Add(null);
                     continue;
                 }
-                gameObjects.Add(AssetsLoadManager.LoadHero(value.heroTypeEnum, null));
+                gameObjects.Add(AssetsLoadManager.LoadHero(value.modelType, null));
             }
             return gameObjects;
         }

@@ -62,26 +62,26 @@ namespace Runtime.UI
             {
                 TMP_Dropdown heroType = transform.FindGet<TMP_Dropdown>("typeField");
                 heroType.ClearOptions();
-                foreach (HeroTypeEnum value in Enum.GetValues(typeof(HeroTypeEnum)))
+                foreach (EntityModelType value in Enum.GetValues(typeof(EntityModelType)))
                 {
                     heroType.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(value)));
                 }
                 heroType.onValueChanged.AddListener(i =>
                 {
-                    heroData.heroTypeEnum = (HeroTypeEnum)i;
+                    heroData.modelType = (EntityModelType)i;
                     updateAction.Invoke();
                 });
                 updateAction += () =>
                 {
-                    heroType.value = (int)heroData.heroTypeEnum;
+                    heroType.value = (int)heroData.modelType;
                     heroParent.ClearChild();
                     bulletParent.ClearChild();
-                    if(heroData.heroTypeEnum == HeroTypeEnum.Null)
+                    if(heroData.modelType == EntityModelType.Null)
                     {
                         return;
                     }
-                    AssetsLoadManager.LoadHero(heroData.heroTypeEnum, heroParent);
-                    AssetsLoadManager.LoadBullet(heroData, bulletParent);
+                    AssetsLoadManager.LoadHero(heroData.modelType, heroParent);
+                    AssetsLoadManager.LoadBullet(heroData.modelType, bulletParent);
                 };
 
                 TMP_Dropdown bulletType = transform.FindGet<TMP_Dropdown>("bulletField");

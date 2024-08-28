@@ -105,7 +105,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     private void GenerateEntity(DataType.HeroPositionType type, HeroData data)
     {
         var indexValue = Convert.ToInt32(type);
-        if(data.heroTypeEnum == HeroTypeEnum.Null)
+        if(data.modelType == EntityModelType.Null)
         {
             InitNullHeroStatus(indexValue);
             return;
@@ -115,7 +115,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         var hero = Instantiate(battleManager.HeroAndEnemyRootPrefab, battleManager.HeroParent);
         hero.tag = "Hero";
         var heroEntity = hero.AddComponent<HeroEntity>();
-        var heroModel = AssetsLoadManager.LoadHero(data.heroTypeEnum, hero.GetComponent<RectTransform>());
+        var heroModel = AssetsLoadManager.LoadHero(data.modelType, hero.GetComponent<RectTransform>());
         heroModel.GetComponent<RectTransform>().localScale *= data.modelScale;
         heroEntity.Init();
         heroEntity.InitHero(data, heroModel, battleManager.GetFirePoint(indexValue), indexValue);

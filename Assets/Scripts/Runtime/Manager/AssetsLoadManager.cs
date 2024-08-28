@@ -15,9 +15,9 @@ namespace Runtime.Manager
         private const string CharacterPath = "Character/";
         private const string EffectPath = "Effect/Spine/";
         private const string ExternalPath = "/External/";
-        public static GameObject LoadHero(HeroTypeEnum heroTypeEnum, Transform parent)
+        public static GameObject LoadHero(EntityModelType heroTypeEnum, Transform parent)
         {
-            return LoadCharacterSkeletonOfEnum(heroTypeEnum, parent).GameObject();
+            return LoadEntityModelSkeleton(heroTypeEnum, parent, StateType.Idle).GameObject();
         }
 
         public static GameObject LoadEnemy(EnemyTypeEnum enemyTypeEnum, Transform parent)
@@ -30,115 +30,6 @@ namespace Runtime.Manager
             return LoadEntityModelSkeleton(entityModelType, parent, StateType.Idle).GameObject();
         }
         
-        public static BulletEntity LoadBullet(HeroData heroData, Transform parent = null)
-        {
-            if(heroData.bulletType == BulletType.Self)
-            {
-                GameObject gameObject = new GameObject("bullet", typeof(RectTransform))
-                {
-                    layer = 5
-                };
-                gameObject.transform.SetParent(parent);
-                HeroTypeEnum typeEnum = heroData.heroTypeEnum;
-                var bulletEntity = gameObject.AddComponent<BulletEntity>();
-                string path;
-                switch(typeEnum)
-                {
-                    case HeroTypeEnum.CaiWenJi:
-                    case HeroTypeEnum.CaoFang:
-                    case HeroTypeEnum.DaQiao:
-                    case HeroTypeEnum.GuanYinPing:
-                    case HeroTypeEnum.JiangWei:
-                    case HeroTypeEnum.JiaXu:
-                    case HeroTypeEnum.TaiShiCi:
-                    case HeroTypeEnum.WenChou:
-                    case HeroTypeEnum.XunYou:
-                    case HeroTypeEnum.YuJin:
-                    case HeroTypeEnum.ZhuGeJin:
-                    case HeroTypeEnum.ZhuRong:
-                    case HeroTypeEnum.HuangGai:
-                        path = $"{typeEnum.ToString().ToLower()}/fx_{typeEnum.ToString().ToLower()}_attack_skeletondata";
-                        bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        break;
-                    case HeroTypeEnum.FaZheng:
-                        path = $"attack/{typeEnum.ToString()}/fx_{typeEnum.ToString()}_attack2_skeletondata";
-                        bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        path = $"attack/{typeEnum.ToString()}/fx_{typeEnum.ToString()}_hit_skeletondata";
-                        bulletEntity.BoomObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        break;
-                    case HeroTypeEnum.GanNing:
-                        path = $"attack/{typeEnum.ToString()}/fx_{typeEnum.ToString()}1_attack_skeletondata";
-                        bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        break;
-                    case HeroTypeEnum.GaoShun:
-                    case HeroTypeEnum.GuanYu:
-                    // case HeroTypeEnum.LvBu:
-                    case HeroTypeEnum.LvMeng:
-                        path = $"attack/{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_attack_skeletondata";
-                        bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        break;
-                    case HeroTypeEnum.GuoJia:
-                    case HeroTypeEnum.LuSu:
-                    case HeroTypeEnum.MaDai:
-                    case HeroTypeEnum.ZhaoYun:
-                    case HeroTypeEnum.ZhenJi:
-                        path = $"attack/{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_attack_skeletondata";
-                        bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        path = $"attack/{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_hit_skeletondata";
-                        bulletEntity.BoomObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        break;
-                    case HeroTypeEnum.ZhangJiao:
-                    case HeroTypeEnum.ZhouYu:
-                    case HeroTypeEnum.ZhuGeLiang:
-                        path = $"attack/{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_attack_skeletondata";
-                        bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        path = $"attack/{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_hit_skeletondata";
-                        bulletEntity.BoomObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        break;
-                    case HeroTypeEnum.LingTong:
-                        path = $"attack/{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_attack_skeletondata";
-                        bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        path = $"{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_hit_skeletondata";
-                        bulletEntity.BoomObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        break;
-                    case HeroTypeEnum.XiaoQiao:
-                        path = $"attack/{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_attack_skeletondata";
-                        bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        path = $"{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_hit_skeletondata";
-                        bulletEntity.BoomObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        break;
-                    case HeroTypeEnum.LuJi:
-                        path = $"{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_attack_skeletondata";
-                        bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        path = $"{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_hit_skeletondata";
-                        bulletEntity.BoomObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        break;
-                    // case HeroTypeEnum.SunShangXiang: //资源路径最奇怪的一个 Assets/Resources/Character/SunShangXiang/Fx_SunShangXiang_Attack.png
-                    //     path = CharacterPath + $"{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_Attack_Skeletondata";
-                    //     bulletEntity.MoveObject = LoadSkeletonGraphic(path, parent).GameObject();
-                    //     break;
-                    case HeroTypeEnum.HuangZhong:
-                    case HeroTypeEnum.PangTong:
-                    default:
-                        path = $"{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_attack_skeletondata";
-                        bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        path = $"{typeEnum.ToString()}/Fx_{typeEnum.ToString()}_hit_skeletondata";
-                        bulletEntity.BoomObject = LoadBulletSkeletonOfEnum(heroData.heroTypeEnum, path, gameObject.transform).GameObject();
-                        break;
-
-                }
-                bulletEntity.transform.localScale = Vector3.one;
-                bulletEntity.transform.localPosition = Vector3.zero;
-                bulletEntity.MoveObject.transform.eulerAngles = new Vector3(0, 0, -90);
-                SkeletonGraphic skeletonGraphic = bulletEntity.MoveObject.GetComponent<SkeletonGraphic>();
-                skeletonGraphic.AnimationState.SetAnimation(0, skeletonGraphic.SkeletonData.Animations.Items[0], true);
-                skeletonGraphic.MatchRectTransformWithBounds();
-                bulletEntity.Init();
-                return bulletEntity;
-            }
-            return null;
-        }
-        
         public static BulletEntity LoadBullet(EntityModelType entityModelType, Transform parent = null)
         {
             var gameObject = new GameObject($"{entityModelType.ToString()}_Bullet", typeof(RectTransform))
@@ -146,6 +37,8 @@ namespace Runtime.Manager
                 layer = 5
             };
             gameObject.transform.SetParent(parent);
+            gameObject.transform.localPosition = Vector3.zero;
+            gameObject.transform.localScale = Vector3.one;
             var bulletEntity = gameObject.AddComponent<BulletEntity>();
             bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(entityModelType, gameObject.transform).GameObject();
             bulletEntity.MoveObject.transform.eulerAngles = new Vector3(0, 0, -90);

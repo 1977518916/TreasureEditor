@@ -47,7 +47,7 @@ namespace Runtime.Component.Skill
                     int skillId = keyCodeValue - (int)positionType * 2 - (int)KeyCode.Alpha1 + 1;
                     if(skillId is < 3 and > 0)
                     {
-                        Debug.Log(TranslateUtil.TranslateUi(entity.GetHeroData().heroTypeEnum) + "释放技能" + skillId);
+                        Debug.Log(TranslateUtil.TranslateUi(entity.GetHeroData().modelType) + "释放技能" + skillId);
                         UseSkill(skillId);
                     }
                     break;

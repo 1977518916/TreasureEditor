@@ -40,18 +40,16 @@ public class HeroAnimationComponent : AnimationComponent
         if (stateType == StateType.Hit) return;
         foreach (var animation in SkeletonGraphic.AnimationState.Data.SkeletonData.Animations.Items)
         {
-            if (animation.Name.ToLower().Equals(stateType.ToString().ToLower())) 
-            {
-                SkeletonGraphic.AnimationState.SetAnimation(0, animation.Name, isLoop);
-                animaTimer = Timer.Register(SkeletonGraphic.AnimationState.Data.SkeletonData.FindAnimation(animation.Name).Duration,
-                    () =>
+            if (!animation.Name.ToLower().Equals(stateType.ToString().ToLower())) continue;
+            SkeletonGraphic.AnimationState.SetAnimation(0, animation.Name, isLoop);
+            animaTimer = Timer.Register(SkeletonGraphic.AnimationState.Data.SkeletonData.FindAnimation(animation.Name).Duration,
+                () =>
+                {
+                    if (SkeletonGraphic != null) 
                     {
-                        if (SkeletonGraphic != null) 
-                        {
-                            action?.Invoke();
-                        }
-                    }, isLooped: isLoop);       
-            }   
+                        action?.Invoke();
+                    }
+                }, isLooped: isLoop);
         }
     }
     

@@ -1,5 +1,6 @@
 using System;
 using Spine.Unity;
+using UnityTimer;
 
 public class EnemyAnimationComponent : AnimationComponent
 {
@@ -7,7 +8,9 @@ public class EnemyAnimationComponent : AnimationComponent
     /// 实体ID
     /// </summary>
     private long entityId;
-
+    
+    private Timer animaTimer;
+    
     public SkeletonGraphic SkeletonGraphic { get; set; }
 
     public EnemyAnimationComponent(long entityId,SkeletonGraphic skeletonGraphic)
@@ -33,13 +36,19 @@ public class EnemyAnimationComponent : AnimationComponent
     
     public void ChangeAnima(StateType stateType, bool isLoop, Action action)
     {
+        animaTimer?.Cancel();
         foreach (var animation in SkeletonGraphic.AnimationState.Data.SkeletonData.Animations.Items)
         {
-            if (animation.Name.ToLower().Equals(stateType.ToString().ToLower()))
-            {
-                SkeletonGraphic.AnimationState.SetAnimation(0, animation.Name, isLoop).Complete +=
-                    entry => action?.Invoke();
-            }   
+            if (!animation.Name.ToLower().Equals(stateType.ToString().ToLower())) continue;
+            SkeletonGraphic.AnimationState.SetAnimation(0, animation.Name, isLoop);
+            animaTimer = Timer.Register(SkeletonGraphic.AnimationState.Data.SkeletonData.FindAnimation(animation.Name).Duration,
+                () =>
+                {
+                    if (SkeletonGraphic != null) 
+                    {
+                        action?.Invoke();
+                    }
+                }, isLooped: isLoop);
         }
     }
     

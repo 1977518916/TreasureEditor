@@ -110,6 +110,8 @@ public class HeroAttackComponent : AttackComponent
     {
         if(isInAttackCd) return;
         if(IsInAttackInterval) return;
+        heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
+            .TryChangeState(StateType.Attack);
         // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
         MakeBullet(point);
         
@@ -145,8 +147,6 @@ public class HeroAttackComponent : AttackComponent
 
     private void MakeBullet(Vector2 point)
     {
-        heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
-            .TryChangeState(StateType.Attack);
         var bulletEntity = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData());
         var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : heroEntity.GetHeroData().atk;
         // 先初始化 再添加组件

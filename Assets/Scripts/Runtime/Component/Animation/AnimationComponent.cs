@@ -19,4 +19,12 @@ public interface AnimationComponent : IComponent
     /// 改变动画
     /// </summary>
     public void ChangeAnima(StateType stateType, bool isLoop, Action action);
+    
+    /// <summary>
+    /// 是否含有该动画
+    /// </summary>
+    /// <param name="stateType"></param>
+    /// <param name="action"></param>
+    /// <returns></returns>
+    public bool HasAnimation(StateType stateType, Action<bool> action = null);
 }

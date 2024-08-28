@@ -44,4 +44,9 @@ public enum ComponentType
     /// 状态机组件
     /// </summary>
     StateMachineComponent,
+    
+    /// <summary>
+    /// 技能释放组件
+    /// </summary>
+    SkillComponent,
 }

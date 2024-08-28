@@ -1,4 +1,5 @@
 ﻿using System;
+using Tao_Framework.Core.Event;
 using Tao_Framework.Core.Singleton;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ namespace Runtime.Manager
         {
             TryQuitBattle();
             TryShowHideRunTimeData();
+            TryUseSkill();
         }
 
         private void TryQuitBattle()
@@ -24,7 +26,7 @@ namespace Runtime.Manager
 
         private void TryShowHideRunTimeData()
         {
-            if(!Input.GetKeyDown(KeyCode.Alpha1))
+            if(!Input.GetKeyDown(KeyCode.P))
             {
                 return;
             }
@@ -34,6 +36,16 @@ namespace Runtime.Manager
                 return;
             }
             runDataUI.SetActive(!runDataUI.activeSelf);
+        }
+
+        private void TryUseSkill()
+        {
+            for(int i = (int)KeyCode.Alpha0; i <= (int)KeyCode.Alpha9; i++)
+            {
+                if(!Input.GetKeyDown((KeyCode)i)) continue;
+                EventMgr.Instance.TriggerEvent(GameEvent.InvokeSkill, (KeyCode)i);
+                break;
+            }
         }
     }
 }

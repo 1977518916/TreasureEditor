@@ -37,12 +37,26 @@ public class EnemyAnimationComponent : AnimationComponent
         {
             if (animation.Name.ToLower().Equals(stateType.ToString().ToLower()))
             {
-                SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop).Complete +=
+                SkeletonGraphic.AnimationState.SetAnimation(0, animation.Name, isLoop).Complete +=
                     entry => action?.Invoke();
             }   
         }
     }
     
+    public bool HasAnimation(StateType stateType, Action<bool> action = null)
+    {
+        foreach (var animation in SkeletonGraphic.AnimationState.Data.SkeletonData.Animations.Items)
+        {
+            if (animation.Name.ToLower().Equals(stateType.ToString().ToLower()))
+            {
+                action?.Invoke(true);
+                return true;
+            }   
+        }
+        action?.Invoke(false);
+        return false;
+    }
+
     private string GetAnimaName(StateType stateType)
     {
         switch (stateType)
@@ -53,15 +67,13 @@ public class EnemyAnimationComponent : AnimationComponent
                 return "Run";
             case StateType.Attack:
                 return "Attack";
-            case StateType.Skill:
-                return "Skill";
             case StateType.Hit:
                 return "Hit";
             case StateType.Dead:
                 return "Dead";
             case StateType.Appear:
                 return "Appear";
-            default:
+            default://敌人动画目前仅包括上述这些
                 throw new ArgumentOutOfRangeException(nameof(stateType), stateType, null);
         }
     }

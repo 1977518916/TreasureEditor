@@ -28,14 +28,14 @@ namespace Runtime.Manager
         private static readonly Dictionary<EntityModelType, SkeletonDataAsset> AllEntityAttackSpineDic =
             new Dictionary<EntityModelType, SkeletonDataAsset>();
 
-        private static readonly Dictionary<EntityModelType, SkeletonDataAsset[]> AllEntitySkillSpineDic = new Dictionary<EntityModelType, SkeletonDataAsset[]>();
-        
+        private static readonly Dictionary<EntityModelType, SkeletonDataAsset> AllEntitySkill1SpineDic = new Dictionary<EntityModelType, SkeletonDataAsset>();
+        private static readonly Dictionary<EntityModelType, SkeletonDataAsset> AllEntitySkill2SpineDic = new Dictionary<EntityModelType, SkeletonDataAsset>();
         /// <summary>
         /// 实体寻常动画
         /// </summary>
         private static readonly Dictionary<EntityModelType, SkeletonDataAsset> EntityCommonSpineDic =
             new Dictionary<EntityModelType, SkeletonDataAsset>();
-        
+
         /// <summary>
         /// 关卡数据
         /// </summary>
@@ -73,7 +73,7 @@ namespace Runtime.Manager
         /// 预制体路径
         /// </summary>
         public const string PrefabPath = "Prefabs/";
-        
+
         /// <summary>
         /// 初始化数据
         /// </summary>
@@ -92,7 +92,7 @@ namespace Runtime.Manager
         {
             return AllEntityAttackSpineDic.TryGetValue(modelType, out asset);
         }
-        
+
         /// <summary>
         /// 获取指定实体的寻常动画
         /// </summary>
@@ -119,9 +119,10 @@ namespace Runtime.Manager
             {
                 InitAllEntityAttackSpine(data.Key, data.Value);
                 InitAllEntityCommonSpine(data.Key, data.Value);
+                InitAllEntitySkillSpine(data.Key, data.Value);
             }
-            
-            
+
+
         }
 
         /// <summary>
@@ -130,11 +131,11 @@ namespace Runtime.Manager
         private static void SpineClassify(EntityModelType type, IEnumerable<SkeletonDataAsset> dataList)
         {
             var skeletonDataList = dataList.Where(dataAsset => dataAsset.name.ToLower().Contains(type.ToString().ToLower())).ToList();
-            if (AllSpineDic.TryAdd(type, skeletonDataList)) return;
+            if(AllSpineDic.TryAdd(type, skeletonDataList)) return;
             AllSpineDic[type] = null;
             AllSpineDic[type] = skeletonDataList;
         }
-        
+
         /// <summary>
         /// 初始化所有实体的寻常动画
         /// </summary>
@@ -146,9 +147,9 @@ namespace Runtime.Manager
                          data.name.ToLower().Contains(type.ToString().ToLower()) &&
                          !data.name.ToLower().Contains("attack") &&
                          !data.name.ToLower().Contains("hit") &&
-                         !data.name.ToLower().Contains("skill"))) 
+                         !data.name.ToLower().Contains("skill")))
             {
-                if (EntityCommonSpineDic.TryAdd(type, data))
+                if(EntityCommonSpineDic.TryAdd(type, data))
                     return;
                 EntityCommonSpineDic[type] = data;
             }
@@ -164,12 +165,12 @@ namespace Runtime.Manager
             foreach (var data in entitySpine.Where(data => data.name.ToLower().Contains(type.ToString().ToLower()) &&
                                                            data.name.ToLower().Contains("attack")))
             {
-                if (AllEntityAttackSpineDic.TryAdd(type, data))
+                if(AllEntityAttackSpineDic.TryAdd(type, data))
                     return;
                 AllEntityAttackSpineDic[type] = data;
             }
         }
-        
+
         /// <summary>
         /// 对应实体是否拥有子弹
         /// </summary>
@@ -182,10 +183,18 @@ namespace Runtime.Manager
 
         private static void InitAllEntitySkillSpine(EntityModelType type, List<SkeletonDataAsset> entitySpine)
         {
-            foreach (SkeletonDataAsset asset in entitySpine.Where(data => data.name.ToLower().Contains(type.ToString().ToLower()) && 
+            foreach (SkeletonDataAsset asset in entitySpine.Where(data => data.name.ToLower().Contains(type.ToString().ToLower()) &&
                                                                           data.name.ToLower().Contains("skill")))
             {
-                
+                if(asset.name.Contains("1") && !asset.name.Contains("buff"))
+                {
+                    AllEntitySkill1SpineDic.TryAdd(type, asset);
+                    continue;
+                }
+                if(asset.name.Contains("2"))
+                {
+                    AllEntitySkill2SpineDic.TryAdd(type, asset);
+                }
             }
         }
     }

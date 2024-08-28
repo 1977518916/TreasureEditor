@@ -42,8 +42,8 @@ public class HeroAnimationComponent : AnimationComponent
         {
             if (animation.Name.ToLower().Equals(stateType.ToString().ToLower())) 
             {
-                SkeletonGraphic.AnimationState.SetAnimation(0, GetAnimaName(stateType), isLoop);
-                animaTimer = Timer.Register(SkeletonGraphic.AnimationState.Data.SkeletonData.FindAnimation(GetAnimaName(stateType)).Duration,
+                SkeletonGraphic.AnimationState.SetAnimation(0, animation.Name, isLoop);
+                animaTimer = Timer.Register(SkeletonGraphic.AnimationState.Data.SkeletonData.FindAnimation(animation.Name).Duration,
                     () =>
                     {
                         if (SkeletonGraphic != null) 
@@ -53,6 +53,20 @@ public class HeroAnimationComponent : AnimationComponent
                     }, isLooped: isLoop);       
             }   
         }
+    }
+    
+    public bool HasAnimation(StateType stateType, Action<bool> action = null)
+    {
+        foreach (var animation in SkeletonGraphic.AnimationState.Data.SkeletonData.Animations.Items)
+        {
+            if (animation.Name.ToLower().Equals(stateType.ToString().ToLower()))
+            {
+                action?.Invoke(true);
+                return true;
+            }   
+        }
+        action?.Invoke(false);
+        return false;
     }
 
     private string GetAnimaName(StateType stateType)
@@ -65,7 +79,7 @@ public class HeroAnimationComponent : AnimationComponent
                 return "Run";
             case StateType.Attack:
                 return "Attack";
-            case StateType.Skill:
+            case StateType.Skill_1:
                 return "Skill";
             case StateType.Hit:
                 return "Hit";

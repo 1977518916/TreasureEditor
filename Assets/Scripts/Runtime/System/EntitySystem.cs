@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using Runtime.Component.Position;
+using Runtime.Component.Skill;
 using Runtime.Data;
 using Runtime.Manager;
 using Spine.Unity;
@@ -67,7 +68,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     {
         foreach (var entity in allEntityDic.Values)
         {
-            if (entity.ReadyRelease)
+            if(entity.ReadyRelease)
             {
                 allEntityDic.TryRemove(entity.EntityId, out var releaseEntity);
                 releaseEntity.Release();
@@ -76,7 +77,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
             foreach (var iComponent in entity.AllComponentList)
             {
-                if (entity.ReadyRelease)
+                if(entity.ReadyRelease)
                 {
                     allEntityDic.TryRemove(entity.EntityId, out var releaseEntity);
                     releaseEntity.Release();
@@ -138,6 +139,14 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         InitHeroDead(heroEntity.EntityId, heroEntity);
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, indexValue);
+        // 初始化技能组件
+        InitSkill(type, heroEntity);
+    }
+
+    private void InitSkill(DataType.HeroPositionType positionType, HeroEntity heroEntity)
+    {
+        HeroSkillComponent skillComponent = new HeroSkillComponent(positionType, heroEntity);
+        heroEntity.AllComponentList.Add(skillComponent);
     }
 
     private void InitNullHeroStatus(int value)
@@ -221,10 +230,14 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         var attackState = new AttackState();
         var hitState = new HitState();
         var deadState = new DeadState();
+        var skill1State = new Skill1State();
+        var skill2State = new Skill2State();
         idleState.Init(animationComponent);
         attackState.Init(animationComponent);
         hitState.Init(animationComponent);
         deadState.Init(animationComponent);
+        skill1State.Init(animationComponent);
+        skill2State.Init(animationComponent);
         var stateConvertDic = new Dictionary<StateType, List<StateType>>
         {
             {
@@ -248,7 +261,23 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
                     StateType.Idle,
                     StateType.Dead
                 }
-            }
+            },
+            {
+                StateType.Skill_1, new List<StateType>()
+                {
+                    StateType.Idle,
+                    StateType.Dead,
+                    StateType.Attack
+                }
+            },
+            {
+                StateType.Skill_2, new List<StateType>()
+                {
+                    StateType.Idle,
+                    StateType.Dead,
+                    StateType.Attack
+                }
+            },
         };
         var allState = new Dictionary<StateType, IState>
         {
@@ -263,6 +292,12 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
             },
             {
                 StateType.Dead, deadState
+            },
+            {
+                StateType.Skill_1, skill1State
+            },
+            {
+                StateType.Skill_2, skill2State
             }
         };
         stateMachine.Init(entity, idleState, stateConvertDic, allState);
@@ -528,7 +563,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
             default:
                 throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
         }
-        
+
         return false;
     }
 
@@ -549,15 +584,15 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
             deadEntityDic.TryAdd(entityId, entity);
         }
     }
-    
+
     public void ReleaseEntity(long entityId)
     {
-        if (allEntityDic.TryGetValue(entityId, out var entity))
+        if(allEntityDic.TryGetValue(entityId, out var entity))
         {
             entity.ReadyRelease = true;
         }
     }
-    
+
     public void Destroy()
     {
         foreach (var entity in allEntityDic.Values)

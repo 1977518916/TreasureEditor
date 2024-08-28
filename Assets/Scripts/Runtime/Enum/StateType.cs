@@ -21,9 +21,24 @@ public enum StateType
     Attack,
 
     /// <summary>
-    /// 技能
+    /// 技能1引导
     /// </summary>
-    Skill,
+    Skill_1_Guide,
+    
+    /// <summary>
+    /// 技能1释放
+    /// </summary>
+    Skill_1,
+    
+    /// <summary>
+    /// 技能1结束
+    /// </summary>
+    Skill_1_End,
+    
+    /// <summary>
+    /// 技能2
+    /// </summary>
+    Skill_2,
 
     /// <summary>
     /// 受击
@@ -34,7 +49,7 @@ public enum StateType
     /// 死亡
     /// </summary>
     Dead,
-    
+
     /// <summary>
     /// 出现 登场
     /// </summary>

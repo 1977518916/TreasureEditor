@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Runtime.Component.Skill;
 using Runtime.Data;
 using Sirenix.OdinInspector;
 using Tools;
@@ -102,6 +103,7 @@ public class HeroEntity : MonoBehaviour, Entity
             ComponentType.AnimationComponent => component is AnimationComponent,
             ComponentType.StateMachineComponent => component is StateMachineComponent,
             ComponentType.DeadComponent => component is DeadComponent,
+            ComponentType.SkillComponent => component is SkillComponent,
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }

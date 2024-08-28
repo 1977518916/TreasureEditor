@@ -208,7 +208,12 @@ namespace Tao_Framework.Core.Event
         /// <summary>
         /// 超出死亡距离
         /// </summary>
-        ExceedDeadDirection
+        ExceedDeadDirection,
+        
+        /// <summary>
+        /// 调用英雄使用技能
+        /// </summary>
+        InvokeSkill,
     }
 
     public enum UIEvent

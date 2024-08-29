@@ -497,7 +497,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         return maxIndexHero != null ? maxIndexHero.EntityId : -1;
     }
 
-    private List<HeroEntity> GetAllHeroEntity()
+    public List<HeroEntity> GetAllHeroEntity()
     {
         return allEntityDic.Values.OfType<HeroEntity>().ToList();
     }

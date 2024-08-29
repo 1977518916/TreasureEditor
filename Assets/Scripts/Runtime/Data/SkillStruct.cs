@@ -19,9 +19,9 @@ namespace Runtime.Data
         [Tooltip("绑定的技能表现层")]
         public string key;
         [Tooltip("技能效果")]
-        public SkillEffectType skillEffectType;
+        public SkillEffectType skillEffectType = SkillEffectType.Attack;
         [Tooltip("技能运动类型")]
-        public SkillMoveType skillMoveType;
+        public SkillMoveType skillMoveType = SkillMoveType.Bullet;
         [Tooltip("技能释放的量")]
         public int amount = 1;
     }
@@ -33,7 +33,7 @@ namespace Runtime.Data
     {
         Cure,
         Attack,
-        
+
     }
     /// <summary>
     /// 技能的表现类型
@@ -41,6 +41,6 @@ namespace Runtime.Data
     public enum SkillMoveType
     {
         Bullet,
-        
+
     }
 }

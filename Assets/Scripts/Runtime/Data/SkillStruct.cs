@@ -11,6 +11,18 @@ namespace Runtime.Data
         /// 对应
         /// </summary>
         public List<SkillData> skillDatas;
+
+        public SkillData GetSkillDataOfKey(string key)
+        {
+            foreach (SkillData skillData in skillDatas)
+            {
+                if(skillData.key.Equals(key))
+                {
+                    return skillData;
+                }
+            }
+            return null;
+        }
     }
 
     [Serializable]
@@ -24,6 +36,10 @@ namespace Runtime.Data
         public SkillMoveType skillMoveType = SkillMoveType.Bullet;
         [Tooltip("技能释放的量")]
         public int amount = 1;
+        [Tooltip("ui展示时的缩放大小")]
+        public float showScale;
+        [Tooltip("展示时位置的偏移")]
+        public Vector2 showPosition;
     }
 
     /// <summary>

@@ -10,7 +10,7 @@ namespace Runtime.Extensions
             return childTransform.gameObject.AddComponent<TMono>();
         }
         
-        public static TMono FindGet<TMono>(this Transform self, string path) where TMono : MonoBehaviour
+        public static TMono FindGet<TMono>(this Transform self, string path)
         {
             Transform childTransform = self.Find(path);
             return childTransform.gameObject.GetComponent<TMono>();

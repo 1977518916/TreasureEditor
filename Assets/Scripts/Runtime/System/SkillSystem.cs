@@ -21,7 +21,7 @@ namespace Runtime.System
         private void Start()
         {
             heroEntities = EntitySystem.Instance.GetAllHeroEntity();
-            EventMgr.Instance.RegisterEvent<KeyCode>(GetHashCode(), GameEvent.InvokeSkill, HandEvent);        
+            EventMgr.Instance.RegisterEvent<KeyCode>(GetHashCode(), GameEvent.InvokeSkill, HandEvent);
         }
 
 
@@ -93,7 +93,14 @@ namespace Runtime.System
             BulletEntity bulletEntity = skeleton.gameObject.AddComponent<BulletEntity>();
             bulletEntity.InitBullet(EntityType.EnemyEntity, heroData.atk, 9999,
                 entity.GetFireLocation(), BattleManager.Instance.GetBulletParent());
+        }
 
+        private void MakeCure(bool isMult)
+        {
+            foreach (HeroEntity heroEntity in heroEntities)
+            {
+                
+            }
         }
     }
 }

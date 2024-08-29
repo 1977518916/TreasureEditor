@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AllSkillData
   m_EditorClassIdentifier: 
   skillDatas:
-  - key: 
+  - key: skill1
     skillEffectType: 0
     skillMoveType: 0
     amount: 1

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using QFSW.QC;
 using Runtime.Data;
+using Sirenix.Utilities;
 using Spine.Unity;
 using Tao_Framework.Core.Event;
 using UnityEngine;
@@ -29,8 +30,13 @@ namespace Runtime.Manager
         private static readonly Dictionary<EntityModelType, SkeletonDataAsset> AllEntityAttackSpineDic =
             new Dictionary<EntityModelType, SkeletonDataAsset>();
 
-        private static readonly Dictionary<EntityModelType, SkeletonDataAsset> AllEntitySkill1SpineDic = new Dictionary<EntityModelType, SkeletonDataAsset>();
-        private static readonly Dictionary<EntityModelType, SkeletonDataAsset> AllEntitySkill2SpineDic = new Dictionary<EntityModelType, SkeletonDataAsset>();
+        public static readonly Dictionary<string, SkeletonDataAsset> AllEntitySkillSpineDic = new Dictionary<string, SkeletonDataAsset>();
+
+        /// <summary>
+        /// 技能数据
+        /// </summary>
+        public static SkillStruct SkillStruct { get; private set; }
+
         /// <summary>
         /// 实体寻常动画
         /// </summary>
@@ -81,6 +87,7 @@ namespace Runtime.Manager
         public static void InitData()
         {
             InitAllSpineData();
+            SkillStruct = AssetsLoadManager.Load<SkillStruct>("Config/AllSkillData.json");
         }
 
         /// <summary>
@@ -120,8 +127,9 @@ namespace Runtime.Manager
             {
                 InitAllEntityAttackSpine(data.Key, data.Value);
                 InitAllEntityCommonSpine(data.Key, data.Value);
-                InitAllEntitySkillSpine(data.Key, data.Value);
             }
+            InitAllEntitySkillSpine(allEffect);
+
 
             EventMgr.Instance.TriggerEvent(GameEvent.DataInitEnd, 0.15f);
         }
@@ -182,20 +190,11 @@ namespace Runtime.Manager
             return AllEntityAttackSpineDic.ContainsKey(type);
         }
 
-        private static void InitAllEntitySkillSpine(EntityModelType type, List<SkeletonDataAsset> entitySpine)
+        private static void InitAllEntitySkillSpine(SkeletonDataAsset[] allEffect)
         {
-            foreach (SkeletonDataAsset asset in entitySpine.Where(data => data.name.ToLower().Contains(type.ToString().ToLower()) &&
-                                                                          data.name.ToLower().Contains("skill")))
+            foreach (SkeletonDataAsset asset in allEffect.Where(data => data.name.Contains("skill")))
             {
-                if(asset.name.Contains("1") && !asset.name.Contains("buff"))
-                {
-                    AllEntitySkill1SpineDic.TryAdd(type, asset);
-                    continue;
-                }
-                if(asset.name.Contains("2"))
-                {
-                    AllEntitySkill2SpineDic.TryAdd(type, asset);
-                }
+                AllEntitySkillSpineDic.Add(asset.name, asset);
             }
         }
     }

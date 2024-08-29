@@ -6,8 +6,8 @@ public interface BulletAttribute : AttributeComponent
     /// <summary>
     /// 子弹特性
     /// </summary>
-    public BulletAttributeType AttributeType { get; set; }
-    
+    public BulletAttributeType AttributeType { get; }
+
     /// <summary>
     /// 执行特效效果
     /// </summary>

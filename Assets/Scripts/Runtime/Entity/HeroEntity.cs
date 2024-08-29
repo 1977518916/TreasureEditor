@@ -104,6 +104,7 @@ public class HeroEntity : MonoBehaviour, Entity
             ComponentType.StateMachineComponent => component is StateMachineComponent,
             ComponentType.DeadComponent => component is DeadComponent,
             ComponentType.SkillComponent => component is SkillComponent,
+            ComponentType.Attribute => component is AttributeComponent,
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }

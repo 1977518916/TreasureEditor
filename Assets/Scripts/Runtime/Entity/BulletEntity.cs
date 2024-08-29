@@ -71,7 +71,7 @@ public class BulletEntity : MonoBehaviour, Entity
         AllComponentList.Clear();
         Destroy(gameObject);
     }
-
+    
     public T GetSpecifyComponent<T>(ComponentType componentType) where T : IComponent
     {
         foreach (var iComponent in AllComponentList)
@@ -97,6 +97,7 @@ public class BulletEntity : MonoBehaviour, Entity
             ComponentType.AnimationComponent => component is AnimationComponent,
             ComponentType.StateMachineComponent => component is StateMachineComponent,
             ComponentType.DeadComponent => component is DeadComponent,
+            ComponentType.Attribute => component is AttributeComponent,
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }
@@ -130,11 +131,7 @@ public class BulletEntity : MonoBehaviour, Entity
                 throw new ArgumentOutOfRangeException();
         }
         
-        currentTriggerCount++;
-        if(currentTriggerCount == triggerDeadCount)
-        {
-            EntitySystem.Instance.ReleaseEntity(EntityId);
-        }
+        GetSpecifyComponent<BulletAttribute>(ComponentType.Attribute).Execute();
     }
 
     /// <summary>

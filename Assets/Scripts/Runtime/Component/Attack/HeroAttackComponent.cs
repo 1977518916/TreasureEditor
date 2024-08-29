@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using Runtime.Manager;
 using Tao_Framework.Core.Event;
@@ -160,6 +161,37 @@ public class HeroAttackComponent : AttackComponent
         EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
         LastAttackTime = Time.time;
         IsInAttackInterval = true;
+    }
+    
+    /// <summary>
+    /// 添加子弹特性
+    /// </summary>
+    /// <param name="entity"></param>
+    /// <param name="attributeType"></param>
+    /// <exception cref="ArgumentOutOfRangeException"></exception>
+    private void AddBulletAttribute(Entity entity, BulletAttributeType attributeType)
+    {
+        switch (attributeType)
+        {
+            case BulletAttributeType.Penetrate:
+                entity.AllComponentList.Add(new BulletPenetrateAttribute(2));
+                break;
+            case BulletAttributeType.Rebound:
+                entity.AllComponentList.Add(new BulletReboundAttribute(2));
+                break;
+            case BulletAttributeType.Refraction:
+                entity.AllComponentList.Add(new BulletRefractionAttribute(2));
+                break;
+            case BulletAttributeType.Bomb:
+                
+                break;
+            case BulletAttributeType.Boomerang:
+                break;
+            case BulletAttributeType.Split:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(attributeType), attributeType, null);
+        }
     }
 
     /// <summary>

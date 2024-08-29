@@ -83,6 +83,7 @@ public class EnemyEntity : MonoBehaviour, Entity
             ComponentType.AnimationComponent => component is AnimationComponent,
             ComponentType.StateMachineComponent => component is StateMachineComponent,
             ComponentType.DeadComponent => component is DeadComponent,
+            ComponentType.Attribute => component is AttributeComponent,
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }

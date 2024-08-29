@@ -49,4 +49,9 @@ public enum ComponentType
     /// 技能释放组件
     /// </summary>
     SkillComponent,
+    
+    /// <summary>
+    /// 特性
+    /// </summary>
+    Attribute
 }

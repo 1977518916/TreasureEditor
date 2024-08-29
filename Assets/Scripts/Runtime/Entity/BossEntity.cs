@@ -93,6 +93,7 @@ public class BossEntity : MonoBehaviour, Entity
             ComponentType.StateMachineComponent => component is StateMachineComponent,
             ComponentType.DeadComponent => component is DeadComponent,
             ComponentType.RandomPositionComponent => component is RandomPositionComponent,
+            ComponentType.Attribute => component is AttributeComponent,
             _ => throw new ArgumentOutOfRangeException(nameof(componentType), componentType, null)
         };
     }

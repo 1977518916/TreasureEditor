@@ -75,7 +75,7 @@ namespace Runtime.Component.Attack
                 bulletEntity.InitBullet(EntityType.HeroEntity, bulletHurt, 2, rectTransform,
                     BattleManager.Instance.GetBulletParent());
                 bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(),
-                    800f, GetAtkPosition(hero), BulletMoveType.SingleTargetMove, 2000f));
+                    800f, GetAtkPosition(hero), BulletMoveType.RectilinearMotion, 2000f));
                 bulletEntity.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));
                 EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
             }

@@ -65,8 +65,8 @@ public class BulletMoveComponent : MoveComponent
     {
         switch (moveType)
         {
-            case BulletMoveType.SingleTargetMove:
-                SingleTargetMove(time);
+            case BulletMoveType.RectilinearMotion:
+                RectilinearMotion(time);
                 break;
             case BulletMoveType.ParabolaTargetMove:
                 break;
@@ -74,18 +74,18 @@ public class BulletMoveComponent : MoveComponent
                 throw new ArgumentOutOfRangeException();
         }
     }
-    
+
     /// <summary>
     /// 单个子弹朝目标放心移动
     /// </summary>
-    private void SingleTargetMove(float time)
+    private void RectilinearMotion(float time)
     {
         Vector3 direction = MoveDirection - ThisTransform;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         EntityTransform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         EntityTransform.position += EntityTransform.right * MoveSpeed * Time.deltaTime;
     }
-    
+
     /// <summary>
     /// 是否超出开始倒计时死亡的距离
     /// </summary>

@@ -53,6 +53,20 @@ namespace Runtime.Utils
             }
         }
 
+        public static string TranslateUi(BulletAttributeType attributeType)
+        {
+            return attributeType switch
+            {
+                BulletAttributeType.Penetrate => "穿透",
+                BulletAttributeType.Rebound => "反弹",
+                BulletAttributeType.Refraction => "弹射",
+                BulletAttributeType.Bomb => "爆炸",
+                BulletAttributeType.Boomerang => "回旋",
+                BulletAttributeType.Split => "分裂",
+                _ => throw new ArgumentOutOfRangeException(nameof(attributeType), attributeType, null)
+            };
+        }
+
         public static string TranslateUi(EntityModelType modelType)
         {
             switch(modelType)

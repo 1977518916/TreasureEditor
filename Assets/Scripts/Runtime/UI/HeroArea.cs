@@ -109,6 +109,18 @@ namespace Runtime.UI
                     bulletType.value = (int)heroData.bulletType;
                     bulletType.RefreshShownValue();
                 };
+                var bulletAttribute = transform.FindGet<TMP_Dropdown>("bulletAttributeField");
+                bulletAttribute.options.Clear();
+                foreach (BulletAttributeType value in Enum.GetValues(typeof(BulletAttributeType)))
+                {
+                    bulletAttribute.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(value)));
+                }
+                bulletAttribute.onValueChanged.AddListener(i => heroData.bulletAttributeType = (BulletAttributeType)i);
+                updateAction += () =>
+                {
+                    bulletAttribute.value = (int)heroData.bulletAttributeType;
+                    bulletAttribute.RefreshShownValue();
+                };
             }
 
             private void InitNumberField()

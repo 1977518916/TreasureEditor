@@ -91,8 +91,8 @@ namespace Runtime.System
         {
             HeroData heroData = entity.GetHeroData();
             BulletEntity bulletEntity = skeleton.gameObject.AddComponent<BulletEntity>();
-            bulletEntity.InitBullet(EntityType.EnemyEntity, heroData.atk, 9999,
-                entity.GetFireLocation(), BattleManager.Instance.GetBulletParent());
+            bulletEntity.InitBullet(EntityType.EnemyEntity, heroData.atk, BulletAttributeType.Penetrate,
+                entity.GetFireLocation().position, BattleManager.Instance.GetBulletParent());
         }
 
         private void MakeCure(bool isMult)

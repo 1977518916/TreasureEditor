@@ -20,8 +20,9 @@ public class BulletPenetrateAttribute : BulletAttribute
     /// </summary>
     private int penetrateCount;
 
-    public BulletPenetrateAttribute(int count)
+    public BulletPenetrateAttribute(int count, BulletEntity entity)
     {
+        bulletEntity = entity;
         penetrateCount = count;
     }
 

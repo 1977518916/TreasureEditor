@@ -72,12 +72,12 @@ namespace Runtime.Component.Attack
                 var bulletHurt = DataManager.GameData.isInvicibleSelf ? 1 : hurt;
                 // 先初始化 再添加组件
                 bulletEntity.Init();
-                bulletEntity.InitBullet(EntityType.HeroEntity, bulletHurt, 2, rectTransform,
+                bulletEntity.InitBullet(EntityType.HeroEntity, bulletHurt, BulletAttributeType.Penetrate,
+                    rectTransform.anchoredPosition,
                     BattleManager.Instance.GetBulletParent());
                 bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(),
                     800f, GetAtkPosition(hero), BulletMoveType.RectilinearMotion, 2000f));
                 bulletEntity.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));
-                EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
             }
         }
 

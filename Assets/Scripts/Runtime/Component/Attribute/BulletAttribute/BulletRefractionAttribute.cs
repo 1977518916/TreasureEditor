@@ -12,8 +12,11 @@ public class BulletRefractionAttribute : BulletAttribute
     /// </summary>
     private int refractionCount;
 
-    public BulletRefractionAttribute(int count)
+    private BulletEntity bulletEntity;
+
+    public BulletRefractionAttribute(int count, BulletEntity entity)
     {
+        bulletEntity = entity;
         refractionCount = count;
     }
 
@@ -26,10 +29,14 @@ public class BulletRefractionAttribute : BulletAttribute
     {
 
     }
-
-
+    
     public void Execute()
     {
-        
+        refractionCount -= 1;
+        bulletEntity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent).MoveDirection =
+            EntitySystem.Instance.GetEntity(EntitySystem.Instance.GetSurviveEnemyID())
+                .GetSpecifyComponent<EnemyMoveComponent>(ComponentType.MoveComponent).EntityTransform.anchoredPosition;
+        if (refractionCount == 0)
+            EntitySystem.Instance.ReleaseEntity(bulletEntity.EntityId);
     }
 }

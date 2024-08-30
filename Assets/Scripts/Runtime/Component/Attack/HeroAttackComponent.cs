@@ -149,45 +149,43 @@ public class HeroAttackComponent : AttackComponent
     private void MakeBullet(Vector2 point)
     {
         var bulletEntity = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData().modelType);
-        bulletEntity.Init();
-        
         var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : heroEntity.GetHeroData().atk;
-        // 先初始化 再添加组件
-        bulletEntity.InitBullet(EntityType.EnemyEntity, bulletHurt, 2, heroEntity.GetFireLocation(),
-            BattleManager.Instance.GetBulletParent());
+        bulletEntity.InitBullet(EntityType.EnemyEntity, bulletHurt, heroEntity.GetHeroData().bulletAttributeType,
+            heroEntity.GetFireLocation().position, BattleManager.Instance.GetBulletParent());
         bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), 800f,
             point, BulletMoveType.RectilinearMotion, 2000f));
         bulletEntity.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));
-        EntitySystem.Instance.AddEntity(bulletEntity.EntityId, bulletEntity);
         LastAttackTime = Time.time;
         IsInAttackInterval = true;
+        AddBulletAttribute(bulletEntity, heroEntity.GetHeroData().bulletAttributeType);
     }
-    
+
     /// <summary>
     /// 添加子弹特性
     /// </summary>
     /// <param name="entity"></param>
     /// <param name="attributeType"></param>
     /// <exception cref="ArgumentOutOfRangeException"></exception>
-    private void AddBulletAttribute(Entity entity, BulletAttributeType attributeType)
+    private void AddBulletAttribute(BulletEntity entity, BulletAttributeType attributeType)
     {
         switch (attributeType)
         {
             case BulletAttributeType.Penetrate:
-                entity.AllComponentList.Add(new BulletPenetrateAttribute(2));
+                entity.AllComponentList.Add(new BulletPenetrateAttribute(2, entity));
                 break;
             case BulletAttributeType.Rebound:
-                entity.AllComponentList.Add(new BulletReboundAttribute(2));
+                entity.AllComponentList.Add(new BulletReboundAttribute(2, entity));
                 break;
             case BulletAttributeType.Refraction:
-                entity.AllComponentList.Add(new BulletRefractionAttribute(2));
+                entity.AllComponentList.Add(new BulletRefractionAttribute(2, entity));
                 break;
-            case BulletAttributeType.Bomb:
-                
-                break;
-            case BulletAttributeType.Boomerang:
-                break;
+            //case BulletAttributeType.Bomb:
+                //entity.AllComponentList.Add(new BulletBombAttribute());
+                //break;
             case BulletAttributeType.Split:
+                entity.AllComponentList.Add(new BulletSplitAttribute(3, entity, heroEntity.GetHeroData(),
+                    entity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent).EntityTransform.anchoredPosition,
+                    entity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent).MoveDirection));
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(attributeType), attributeType, null);

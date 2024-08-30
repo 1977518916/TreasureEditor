@@ -17,13 +17,11 @@ public partial class EntitySystem
     /// <param name="data"></param>
     private void GenerateBossEntity(EntityModelType modelType, BossData data)
     {
-        var root = Instantiate(battleManager.BossRootPrefab, battleManager.BossParent);
-        var entity = root.AddComponent<BossEntity>();
+        var root = Instantiate(BattleManager.BossRootPrefab, BattleManager.BossParent);
+        var entity = CreateEntity<BossEntity>(EntityType.BossEntity, root);
         var bossAnima = AssetsLoadManager.LoadSkeletonGraphic(modelType, entity.transform);
         bossAnima.transform.localScale *= data.modelScale;
-        entity.Init();
         entity.InitBoss(data);
-        AddEntity(entity.EntityId, entity);
         // 初始化出生点组件
         InitBossPosition(entity, entity.GetEntityTransform());
         // 初始化敌人状态机组件 和 动画组件

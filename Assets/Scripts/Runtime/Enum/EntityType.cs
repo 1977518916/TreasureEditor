@@ -23,5 +23,10 @@ public enum EntityType
     /// <summary>
     /// boss实体
     /// </summary>
-    BoosEntity
+    BossEntity,
+
+    /// <summary>
+    /// 爆炸物实体
+    /// </summary>
+    BoomEntity
 }

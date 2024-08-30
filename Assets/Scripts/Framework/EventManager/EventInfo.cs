@@ -219,6 +219,11 @@ namespace Tao_Framework.Core.Event
         /// 调用英雄使用技能
         /// </summary>
         InvokeSkill,
+        
+        /// <summary>
+        /// 进入战斗
+        /// </summary>
+        EnterBattle,
     }
 
     public enum UIEvent

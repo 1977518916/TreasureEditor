@@ -63,6 +63,11 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// </summary>
     public RectTransform BossParent;
     
+    /// <summary>
+    /// 子弹衍生物父对象
+    /// </summary>
+    public RectTransform BulletDerivativeParent;
+    
     #region Command
 
     /// <summary>

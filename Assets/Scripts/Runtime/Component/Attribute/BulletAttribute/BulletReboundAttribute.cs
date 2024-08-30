@@ -20,9 +20,10 @@ public class BulletReboundAttribute : BulletAttribute
     /// </summary>
     private int reboundCount;
 
-    public BulletReboundAttribute(int count)
+    public BulletReboundAttribute(int count, BulletEntity entity)
     {
         reboundCount = count;
+        bulletEntity = entity;
     }
 
     public void Tick(float time)
@@ -37,6 +38,10 @@ public class BulletReboundAttribute : BulletAttribute
     
     public void Execute()
     {
-        
+        reboundCount -= 1;
+        var move = bulletEntity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent);
+        move.MoveDirection = new Vector2(-move.MoveDirection.x, move.MoveDirection.y);
+        if (reboundCount == 0)
+            EntitySystem.Instance.ReleaseEntity(bulletEntity.EntityId);
     }
 }

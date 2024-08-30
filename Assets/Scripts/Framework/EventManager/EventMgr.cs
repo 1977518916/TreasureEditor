@@ -199,9 +199,13 @@ namespace Tao_Framework.Core.Event
         /// <param name="key"></param>
         public void TriggerEvent(GameEvent key)
         {
-            foreach (var eventData in _gameEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.GameEvent == key)))
+            foreach (var keyValue in _gameEventDic)
             {
-                (eventData.EventInfo as EventInfo)?.Invoke();
+                CopyList(keyValue.Value, out var outList);
+                foreach (var eventData in outList.Where(eventData => eventData.GameEvent == key))
+                {
+                    (eventData.EventInfo as EventInfo)?.Invoke();
+                }
             }
         }
         
@@ -214,9 +218,13 @@ namespace Tao_Framework.Core.Event
         {
             Timer.Register(time, () =>
             {
-                foreach (var eventData in _gameEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.GameEvent == key)))
+                foreach (var keyValue in _gameEventDic)
                 {
-                    (eventData.EventInfo as EventInfo)?.Invoke();
+                    CopyList(keyValue.Value, out var outList);
+                    foreach (var eventData in outList.Where(eventData => eventData.GameEvent == key))
+                    {
+                        (eventData.EventInfo as EventInfo)?.Invoke();
+                    }
                 }
             });
         }
@@ -229,10 +237,17 @@ namespace Tao_Framework.Core.Event
         /// <param name="time"></param>
         public void TriggerEvent<T>(GameEvent key, T value, float time)
         {
-            foreach (var eventData in _gameEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.GameEvent == key)))
+            Timer.Register(time, () =>
             {
-                Timer.Register(time, () => (eventData.EventInfo as EventInfo<T>)?.Invoke(value));
-            }
+                foreach (var keyValue in _gameEventDic)
+                {
+                    CopyList(keyValue.Value, out var outList);
+                    foreach (var eventData in outList.Where(eventData => eventData.GameEvent == key))
+                    {
+                        (eventData.EventInfo as EventInfo<T>)?.Invoke(value);
+                    }
+                }
+            });
         }
 
         /// <summary>
@@ -241,9 +256,13 @@ namespace Tao_Framework.Core.Event
         /// <param name="key"></param>
         public void TriggerEvent(UIEvent key)
         {
-            foreach (var eventData in _uiEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.UIEvent == key)))
+            foreach (var keyValue in _uiEventDic)
             {
-                (eventData.EventInfo as EventInfo)?.Invoke();
+                CopyList(keyValue.Value, out var outList);
+                foreach (var eventData in outList.Where(eventData => eventData.UIEvent == key))
+                {
+                    (eventData.EventInfo as EventInfo)?.Invoke();
+                }
             }
         }
 
@@ -255,9 +274,13 @@ namespace Tao_Framework.Core.Event
         /// <typeparam name="T"></typeparam>
         public void TriggerEvent<T>(GameEvent key, T value)
         {
-            foreach (var eventData in _gameEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.GameEvent == key)))
+            foreach (var keyValue in _gameEventDic)
             {
-                (eventData.EventInfo as EventInfo<T>)?.Invoke(value);
+                CopyList(keyValue.Value, out var outList);
+                foreach (var eventData in outList.Where(eventData => eventData.GameEvent == key))
+                {
+                    (eventData.EventInfo as EventInfo<T>)?.Invoke(value);
+                }
             }
         }
 
@@ -269,10 +292,27 @@ namespace Tao_Framework.Core.Event
         /// <typeparam name="T"></typeparam>
         public void TriggerEvent<T>(UIEvent key, T value)
         {
-            foreach (var eventData in _uiEventDic.SelectMany(ev => ev.Value.Where(eventData => eventData.UIEvent == key)))
+            foreach (var keyValue in _uiEventDic)
             {
-                (eventData.EventInfo as EventInfo<T>)?.Invoke(value);
+                CopyList(keyValue.Value, out var outList);
+                foreach (var eventData in outList.Where(eventData => eventData.UIEvent == key))
+                {
+                    (eventData.EventInfo as EventInfo<T>)?.Invoke(value);
+                }
             }
+        }
+
+        /// <summary>
+        /// 深拷贝一个列表
+        /// </summary>
+        /// <param name="copyList"></param>
+        /// <param name="outList"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        private List<T> CopyList<T>(List<T> copyList, out List<T> outList)
+        {
+            outList = copyList.ToList();
+            return outList;
         }
 
         private void OnDestroy()

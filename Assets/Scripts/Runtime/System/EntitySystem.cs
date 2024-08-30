@@ -37,11 +37,27 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// <summary>
     /// 战斗管理
     /// </summary>
-    private BattleManager battleManager;
+    private static BattleManager BattleManager => BattleManager.Instance;
 
+    /// <summary>
+    /// 实体类型和对应的实体类
+    /// </summary>
+    private readonly Dictionary<EntityType, Type> entityTypeDic = new Dictionary<EntityType, Type>
+    {
+        { EntityType.HeroEntity, typeof(HeroEntity) },
+        { EntityType.EnemyEntity, typeof(EnemyEntity) },
+        { EntityType.BulletEntity, typeof(BulletEntity) },
+        { EntityType.BossEntity, typeof(BossEntity) },
+        { EntityType.BoomEntity, typeof(BoomEntity) }
+    };
+    
     private void Start()
     {
-        battleManager = BattleManager.Instance;
+        EventMgr.Instance.RegisterEvent(GetHashCode(), GameEvent.EnterBattle, InitBattle);
+    }
+    
+    private void InitBattle()
+    {
         foreach (var heroData in DataManager.HeroDatas)
         {
             GenerateEntity(heroData.Key, heroData.Value);
@@ -54,7 +70,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         });
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy, GenerateEntity);
     }
-    
+
     private void Update()
     {
         currentTime += Time.time;
@@ -93,6 +109,28 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     }
 
     /// <summary>
+    /// 创建实体
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public T CreateEntity<T>(EntityType entityType, GameObject entity) where T : Entity, new()
+    {
+        Entity e;
+        if (entityTypeDic.TryGetValue(entityType, out var value))
+        {
+            e = entity.AddComponent(value) as Entity;
+            e!.Init();
+            AddEntity(e.EntityId, e);
+        }
+        else
+        {
+            throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
+        }
+
+        return (T)e;
+    }
+
+    /// <summary>
     /// 获取指定实体
     /// </summary>
     public Entity GetEntity(long entityId)
@@ -115,14 +153,12 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         }
 
         // 生成英雄实体
-        var hero = Instantiate(battleManager.HeroAndEnemyRootPrefab, battleManager.HeroParent);
+        var hero = Instantiate(BattleManager.HeroAndEnemyRootPrefab, BattleManager.HeroParent);
         hero.tag = "Hero";
-        var heroEntity = hero.AddComponent<HeroEntity>();
+        var heroEntity = CreateEntity<HeroEntity>(EntityType.HeroEntity, hero);
         var heroModel = AssetsLoadManager.LoadHero(data.modelType, hero.GetComponent<RectTransform>());
         heroModel.GetComponent<RectTransform>().localScale *= data.modelScale;
-        heroEntity.Init();
-        heroEntity.InitHero(data, heroModel, battleManager.GetFirePoint(indexValue), indexValue);
-        AddEntity(heroEntity.EntityId, heroEntity);
+        heroEntity.InitHero(data, heroModel, BattleManager.GetFirePoint(indexValue), indexValue);
         // 获取英雄动画对象
         var heroAnima = heroModel.GetComponent<SkeletonGraphic>();
         // 初始化实体动画组件和动画
@@ -400,11 +436,9 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     private void GenerateEntity(LevelManager.EnemyBean enemyBean)
     {
         var targetId = GetFrontRowHeroID();
-        GameObject root = Instantiate(battleManager.HeroAndEnemyRootPrefab, battleManager.EnemyParent);
+        GameObject root = Instantiate(BattleManager.HeroAndEnemyRootPrefab, BattleManager.EnemyParent);
         root.tag = "Enemy";
-        EnemyEntity entity = root.AddComponent<EnemyEntity>();
-        entity.Init();
-        AddEntity(entity.EntityId, entity);
+        var entity = CreateEntity<EnemyEntity>(EntityType.EnemyEntity, root);
         var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
         var anim = model.GetComponent<SkeletonGraphic>();
         var scale = new Vector3(0.3f, 0.3f, 1f);
@@ -542,7 +576,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// </summary>
     /// <param name="entityId"></param>
     /// <param name="entity"></param>
-    public void AddEntity(long entityId, Entity entity)
+    private void AddEntity(long entityId, Entity entity)
     {
         allEntityDic.GetOrAdd(entityId, entity);
     }
@@ -590,5 +624,6 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         timer = null;
         allEntityDic.Clear();
         EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.MakeEnemy);
+        EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.EnterBattle);
     }
 }

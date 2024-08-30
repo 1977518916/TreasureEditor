@@ -6,7 +6,7 @@ using UnityEngine;
 public class BulletEntity : MonoBehaviour, Entity
 {
     public long EntityId { get; set; }
-    public EntityType EntityType { get; set; }
+    public EntityType EntityType => EntityType.BulletEntity;
 
     public List<IComponent> AllComponentList { get; set; }
     public bool ReadyRelease { get; set; }
@@ -30,21 +30,15 @@ public class BulletEntity : MonoBehaviour, Entity
     /// 子弹伤害
     /// </summary>
     private int bulletHurt;
-
+    
     /// <summary>
-    /// 多少次触发检测会销毁子弹
+    /// 子弹特性
     /// </summary>
-    private int triggerDeadCount;
-
-    /// <summary>
-    /// 当前触发次数
-    /// </summary>
-    private int currentTriggerCount;
-
+    private BulletAttributeType attributeType;
+    
     public void Init()
     {
         EntityId = GlobalOnlyID.GetGlobalOnlyID();
-        EntityType = EntityType.BulletEntity;
         AllComponentList = new List<IComponent>();
         ReadyRelease = false;
     }
@@ -52,13 +46,13 @@ public class BulletEntity : MonoBehaviour, Entity
     /// <summary>
     /// 初始化子弹
     /// </summary>
-    public void InitBullet(EntityType targetType, int hurt, int triggerCount, RectTransform bulletPos, RectTransform parent)
+    public void InitBullet(EntityType targetType, int hurt, BulletAttributeType bulletAttributeType, Vector2 bulletLocation, RectTransform parent)
     {
         bulletHurt = hurt;
         targetEntityType = targetType;
-        triggerDeadCount = triggerCount;
+        attributeType = bulletAttributeType;
         GetComponent<RectTransform>().SetParent(parent);
-        GetComponent<RectTransform>().position = bulletPos.position;
+        GetComponent<RectTransform>().position = bulletLocation;
         GenerateAttackBox();
     }
 
@@ -114,24 +108,75 @@ public class BulletEntity : MonoBehaviour, Entity
     
     private void OnTriggerEnter2D(Collider2D other)
     {
+        switch (attributeType)
+        {
+            case BulletAttributeType.Penetrate:
+                Penetrate(other);
+                break;
+            case BulletAttributeType.Rebound:
+                Rebound(other);
+                break;
+            case BulletAttributeType.Refraction:
+                Refraction(other);
+                break;
+            // case BulletAttributeType.Bomb:
+            //     break;
+            case BulletAttributeType.Split:
+                Split(other);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    /// <summary>
+    /// 是否伤害实体
+    /// </summary>
+    private bool IsHurtEntity(Collider2D other)
+    {
         var entity = other.GetComponent<Entity>();
-        if (entity == null) return;
-        if (entity.EntityType != targetEntityType) return;
+        if (entity == null) return false;
+        if (entity.EntityType != targetEntityType) return false;
         switch(targetEntityType)
         {
             case EntityType.HeroEntity:
                 if(IsHeroEntity(entity))
                     HurtEntity(entity);
-                break;
+                return true;
             case EntityType.EnemyEntity:
                 if (IsEnemyEntity(entity) || IsBoss(entity)) 
                     HurtEntity(entity);
-                break;
+                return true;
             default:
                 throw new ArgumentOutOfRangeException();
         }
-        
-        GetSpecifyComponent<BulletAttribute>(ComponentType.Attribute).Execute();
+    }
+
+    private void Penetrate(Collider2D other)
+    {
+        if (IsHurtEntity(other))
+            GetSpecifyComponent<BulletPenetrateAttribute>(ComponentType.Attribute).Execute();
+    }
+
+    private void Rebound(Collider2D other)
+    {
+        IsHurtEntity(other);
+        if (other.CompareTag("Boundary")) 
+        {
+            GetSpecifyComponent<BulletReboundAttribute>(ComponentType.Attribute).Execute();
+        }
+    }
+
+    private void Refraction(Collider2D other)
+    {
+        if (IsHurtEntity(other))
+            GetSpecifyComponent<BulletRefractionAttribute>(ComponentType.Attribute).Execute();
+    }
+
+    private void Split(Collider2D other)
+    {
+        if (IsHurtEntity(other))
+            GetSpecifyComponent<BulletSplitAttribute>(ComponentType.Attribute).Execute();
     }
 
     /// <summary>

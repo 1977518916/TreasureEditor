@@ -22,8 +22,10 @@ namespace Runtime.Manager
 
         public static void QuitBattle()
         {
-            EntitySystem.Instance.Destroy();
-            SceneManager.UnloadSceneAsync(BattleSceneName);
+            EntitySystem.Instance.Destroy(() =>
+            {
+                SceneManager.UnloadSceneAsync(BattleSceneName);
+            });
         }
 
     }

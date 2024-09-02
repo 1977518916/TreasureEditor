@@ -5796,7 +5796,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -18576,12 +18576,14 @@ MonoBehaviour:
       skillMoveType: 0
       amount: 1
       showScale: 0
+      showPosition: {x: 0, y: 0}
     skillData2:
       key: 
       skillEffectType: 1
       skillMoveType: 0
       amount: 1
       showScale: 0
+      showPosition: {x: 0, y: 0}
   skillId: 0
 --- !u!114 &1826735963
 MonoBehaviour:

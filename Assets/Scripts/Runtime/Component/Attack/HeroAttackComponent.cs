@@ -148,7 +148,9 @@ public class HeroAttackComponent : AttackComponent
 
     private void MakeBullet(Vector2 point)
     {
-        var bulletEntity = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData().modelType);
+        var bulletGo = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData().modelType);
+        var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity,bulletGo);
+        bulletEntity.MoveObject = bulletGo.transform.GetChild(0).gameObject;
         var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : heroEntity.GetHeroData().atk;
         bulletEntity.InitBullet(EntityType.EnemyEntity, bulletHurt, heroEntity.GetHeroData().bulletAttributeType,
             heroEntity.GetFireLocation().position, BattleManager.Instance.GetBulletParent());

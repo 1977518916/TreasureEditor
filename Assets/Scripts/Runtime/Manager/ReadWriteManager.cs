@@ -1,4 +1,5 @@
 ﻿using Runtime.Data;
+using UnityEditor;
 using UnityEngine;
 
 namespace Runtime.Manager
@@ -20,11 +21,13 @@ namespace Runtime.Manager
             PlayerPrefs.SetString(key, value);
             PlayerPrefs.Save();
         }
-
+        
+        [MenuItem("插件/清除所有数据")]
         public static void Clear()
         {
             PlayerPrefs.DeleteAll();
         }
+        
         #region Hero
 
         public static class Hero

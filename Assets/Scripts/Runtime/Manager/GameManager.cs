@@ -1,4 +1,5 @@
 using QFSW.QC;
+using RenderHeads.Media.AVProMovieCapture;
 using Runtime.Manager;
 using Tao_Framework.Core.Singleton;
 using UnityEngine;
@@ -14,11 +15,11 @@ public class GameManager : MonoSingleton<GameManager>
     /// 控制台程序
     /// </summary>
     public GameObject quantumConsole;
-    
+
     /// <summary>
     /// 录制
     /// </summary>
-    public GameObject recording;
+    public CaptureGUI recordingGUI;
     
     private void Update()
     {
@@ -29,7 +30,8 @@ public class GameManager : MonoSingleton<GameManager>
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            recording.SetActive(!recording.activeSelf);
+            recordingGUI.gameObject.SetActive(!recordingGUI.gameObject.activeSelf);
+            recordingGUI.ShowUI = true;
         }
     }
 

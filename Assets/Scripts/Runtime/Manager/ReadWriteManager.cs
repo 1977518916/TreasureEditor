@@ -9,10 +9,11 @@ namespace Runtime.Manager
         public static T Read<T>(string key, T defaultValue = null) where T : class
         {
             string content = PlayerPrefs.GetString(key, "");
-            if(content.Length < 1)
+            if (content.Length < 1)
             {
                 return defaultValue;
             }
+
             return JsonUtility.FromJson<T>(content);
         }
 
@@ -21,13 +22,16 @@ namespace Runtime.Manager
             PlayerPrefs.SetString(key, value);
             PlayerPrefs.Save();
         }
-        
+
+#if UNITY_EDITOR
         [MenuItem("插件/清除所有数据")]
         public static void Clear()
         {
             PlayerPrefs.DeleteAll();
         }
-        
+#endif
+
+
         #region Hero
 
         public static class Hero
@@ -45,7 +49,7 @@ namespace Runtime.Manager
         }
 
         #endregion
-        
+
         #region LevelData
 
         public static class Level

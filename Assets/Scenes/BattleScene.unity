@@ -2162,7 +2162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showFPS: {fileID: 1927182561}
   quantumConsole: {fileID: 1074895454}
-  recording: {fileID: 1849662816}
+  recordingGUI: {fileID: 1849662816}
 --- !u!1 &673703898
 GameObject:
   m_ObjectHideFlags: 0
@@ -4468,16 +4468,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3724701471392951962, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
+      propertyPath: _showUI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724701471392951962, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
       propertyPath: _movieCapture
       value: 
       objectReference: {fileID: 533357090}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
---- !u!1 &1849662816 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3724701471392951960, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
+--- !u!114 &1849662816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3724701471392951962, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
   m_PrefabInstance: {fileID: 1849662815}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca3e27221be35d41a4ff608f4ef327e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1927182561
 GameObject:
   m_ObjectHideFlags: 0

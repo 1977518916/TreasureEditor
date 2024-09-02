@@ -802,7 +802,7 @@ namespace RenderHeads.Media.AVProMovieCapture
 			_lastEncodedMinutes = _lastEncodedSeconds = _lastEncodedFrame = 0;
 			if (_whenRecordingAutoHideUI)
 			{
-				_showUI = false;
+				_showUI = true;
 			}
 			if (_movieCapture != null)
 			{

@@ -6,7 +6,7 @@ using Runtime.Manager;
 using UnityEngine;
 
 /// <summary>
-/// 分类出来写Boss的逻辑
+/// 实体系统 Boss模块
 /// </summary>
 public partial class EntitySystem
 {
@@ -32,8 +32,6 @@ public partial class EntitySystem
         InitBossAtk(entity, data);
         // 初始化Boss状态组件
         InitBossStatusComponent(entity, data);
-        // 死亡
-        InitEnemyDead(entity.EntityId, entity);
     }
 
     private void InitBossAtk(BossEntity entity, BossData data)

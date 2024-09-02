@@ -24,7 +24,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// 当前运行时间
     /// </summary>
     private float currentTime;
-    
+
     /// <summary>
     /// 计时器
     /// </summary>
@@ -52,13 +52,16 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         { EntityType.BossEntity, typeof(BossEntity) },
         { EntityType.BoomEntity, typeof(BoomEntity) }
     };
-    
+
     private void Start()
     {
-        EventMgr.Instance.RegisterEvent(GetHashCode(), GameEvent.EnterBattle, InitBattle);
+        EventMgr.Instance.RegisterEvent(GetHashCode(), GameEvent.EnterBattle, EnterBattle);
     }
-    
-    private void InitBattle()
+
+    /// <summary>
+    /// 进入战斗场景
+    /// </summary>
+    private void EnterBattle()
     {
         foreach (var heroData in DataManager.HeroDatas)
         {
@@ -70,9 +73,10 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
             if (DataManager.LevelData.BossData.EntityModelType == EntityModelType.Null) return;
             GenerateBossEntity(DataManager.LevelData.BossData.EntityModelType, DataManager.LevelData.BossData);
         });
-        EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy, GenerateEnemyEntity);
+        EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy,
+            GenerateEnemyEntity);
     }
-    
+
     private void Update()
     {
         currentTime += Time.time;
@@ -141,220 +145,6 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     }
 
     /// <summary>
-    /// 生成英雄实体
-    /// </summary>
-    /// <param name="type"> 位置 </param>
-    /// <param name="data"> 数据 </param>
-    private void GenerateEntity(DataType.HeroPositionType type, HeroData data)
-    {
-        var indexValue = Convert.ToInt32(type);
-        if (data.modelType == EntityModelType.Null)
-        {
-            InitNullHeroStatus(indexValue);
-            return;
-        }
-
-        // 生成英雄实体
-        var hero = Instantiate(BattleManager.HeroAndEnemyRootPrefab, BattleManager.HeroParent);
-        hero.tag = "Hero";
-        var heroEntity = CreateEntity<HeroEntity>(EntityType.HeroEntity, hero);
-        var heroModel = AssetsLoadManager.LoadHero(data.modelType, hero.GetComponent<RectTransform>());
-        heroModel.GetComponent<RectTransform>().localScale *= data.modelScale;
-        heroEntity.InitHero(data, heroModel, BattleManager.GetFirePoint(indexValue), indexValue);
-        // 获取英雄动画对象
-        var heroAnima = heroModel.GetComponent<SkeletonGraphic>();
-        // 初始化实体动画组件和动画
-        InitEntityAnima(heroAnima);
-        // 初始化实体状态组件
-        InitHeroEntityStatus(heroEntity, indexValue);
-        // 初始化检测组件
-        InitPointDetect(heroEntity, hero.GetComponent<RectTransform>(), EntityType.EnemyEntity, 1500f);
-        // 初始化攻击组件
-        InitHeroEntityAttack(heroEntity,
-            heroEntity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent));
-        // 初始化英雄移动组件
-        InitHeroMove(heroEntity);
-        // 初始化英雄状态机组件 和 动画组件
-        InitHeroStateMachine(heroEntity, InitHeroEntityAnimation(heroEntity.EntityId, heroAnima, heroEntity));
-        // 初始化死亡组件
-        InitHeroDead(heroEntity.EntityId, heroEntity);
-        // 设置英雄实体模型到对应位置
-        BattleManager.Instance.SetPrefabLocation(hero, indexValue);
-        // 初始化技能组件
-        InitSkill(type, heroEntity);
-    }
-
-    private void InitSkill(DataType.HeroPositionType positionType, HeroEntity heroEntity)
-    {
-        HeroSkillComponent skillComponent = new HeroSkillComponent(positionType, heroEntity);
-        heroEntity.AllComponentList.Add(skillComponent);
-    }
-
-    private void InitNullHeroStatus(int value)
-    {
-        var heroStatusUI = BattleManager.Instance.GetHeroStatus(value);
-        heroStatusUI.HpBg.SetActive(false);
-        heroStatusUI.CdBg.SetActive(false);
-    }
-
-    private void InitEntityAnima(SkeletonGraphic skeletonGraphic)
-    {
-        skeletonGraphic.initialFlipX = true;
-        skeletonGraphic.Initialize(true);
-        skeletonGraphic.AnimationState.SetAnimation(0, "Idle", true);
-    }
-
-    private void InitHeroEntityStatus(HeroEntity heroEntity, int value)
-    {
-        var heroStatusUI = BattleManager.Instance.GetHeroStatus(value);
-        var status = new HeroStatusComponent(heroStatusUI.HpBg, heroStatusUI.CdBg, heroStatusUI.Hp, heroStatusUI.Cd,
-            heroEntity);
-        heroEntity.AllComponentList.Add(status);
-    }
-
-    private AnimationComponent InitHeroEntityAnimation(long entityId, SkeletonGraphic skeletonGraphic,
-        HeroEntity heroEntity)
-    {
-        var anima = new HeroAnimationComponent(entityId, skeletonGraphic);
-        heroEntity.AllComponentList.Add(anima);
-        return anima;
-    }
-
-    private void InitHeroDead(long entityId, HeroEntity entity)
-    {
-        var dead = new HeroDeadComponent(entityId);
-        entity.AllComponentList.Add(dead);
-    }
-
-    private void InitEnemyDead(long entityId, Entity entity)
-    {
-        // var dead = new EnemyDeadComponent(entityId);
-        // entity.AllComponentList.Add(dead);
-    }
-
-    private void InitHeroEntityAttack(HeroEntity heroEntity, PointDetectComponent pointDetectComponent)
-    {
-        HeroData data = heroEntity.GetHeroData();
-        var attack = new HeroAttackComponent(data.bulletAmount, data.shooterAmount, data.atkInterval, 3, heroEntity,
-            pointDetectComponent);
-        heroEntity.AllComponentList.Add(attack);
-    }
-
-    /// <summary>
-    /// 初始化点检测
-    /// </summary>
-    /// <param name="entity"></param>
-    /// <param name="entityTransform"></param>
-    /// <param name="targetEntityType"></param>
-    /// <param name="distance"></param>
-    private void InitPointDetect(Entity entity, RectTransform entityTransform, EntityType targetEntityType,
-        float distance)
-    {
-        var detect = new PointDetectComponent(entity, entityTransform, targetEntityType, distance);
-        entity.AllComponentList.Add(detect);
-    }
-
-    private void InitHeroMove(HeroEntity entity)
-    {
-        var move = new HeroMoveComponent(entity.GetComponent<RectTransform>());
-        entity.AllComponentList.Add(move);
-    }
-
-    /// <summary>
-    /// 初始化英雄状态机
-    /// </summary>
-    /// <param name="entity"></param>
-    /// <param name="animationComponent"></param>
-    private void InitHeroStateMachine(HeroEntity entity, AnimationComponent animationComponent)
-    {
-        var stateMachine = new HeroStateMachineComponent();
-        var idleState = new IdleState();
-        var attackState = new AttackState();
-        var hitState = new HitState();
-        var deadState = new DeadState();
-        var skill1State = new Skill1State();
-        var skill2State = new Skill2State();
-        idleState.Init(animationComponent);
-        attackState.Init(animationComponent);
-        hitState.Init(animationComponent);
-        deadState.Init(animationComponent);
-        skill1State.Init(animationComponent);
-        skill2State.Init(animationComponent);
-        var stateConvertDic = new Dictionary<StateType, List<StateType>>
-        {
-            {
-                StateType.Idle, new List<StateType>
-                {
-                    StateType.Attack,
-                    StateType.Hit,
-                    StateType.Dead
-                }
-            },
-            {
-                StateType.Attack, new List<StateType>
-                {
-                    StateType.Idle,
-                    StateType.Dead
-                }
-            },
-            {
-                StateType.Hit, new List<StateType>
-                {
-                    StateType.Idle,
-                    StateType.Dead
-                }
-            },
-            {
-                StateType.Skill_1, new List<StateType>()
-                {
-                    StateType.Idle,
-                    StateType.Dead,
-                    StateType.Attack
-                }
-            },
-            {
-                StateType.Skill_2, new List<StateType>()
-                {
-                    StateType.Idle,
-                    StateType.Dead,
-                    StateType.Attack
-                }
-            },
-        };
-        var allState = new Dictionary<StateType, IState>
-        {
-            {
-                StateType.Idle, idleState
-            },
-            {
-                StateType.Attack, attackState
-            },
-            {
-                StateType.Hit, hitState
-            },
-            {
-                StateType.Dead, deadState
-            },
-            {
-                StateType.Skill_1, skill1State
-            },
-            {
-                StateType.Skill_2, skill2State
-            }
-        };
-        stateMachine.Init(entity, idleState, stateConvertDic, allState);
-        entity.AllComponentList.Add(stateMachine);
-    }
-    
-    private AnimationComponent InitEnemyEntityAnimation(long entityId, SkeletonGraphic skeletonGraphic,
-        Entity entity)
-    {
-        var anima = new EnemyAnimationComponent(entityId, skeletonGraphic);
-        entity.AllComponentList.Add(anima);
-        return anima;
-    }
-    
-    /// <summary>
     /// 更换目标  如果返回的结果为-1证明目前需要找的对象没有
     /// </summary>
     /// <param name="entityType"></param>
@@ -414,25 +204,14 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
         return maxIndexHero != null ? maxIndexHero.EntityId : -1;
     }
-
+    
+    /// <summary>
+    /// 获取所有英雄实体
+    /// </summary>
+    /// <returns></returns>
     public List<HeroEntity> GetAllHeroEntity()
     {
         return allEntityDic.Values.OfType<HeroEntity>().ToList();
-    }
-
-    private List<EnemyEntity> GetAllEnemyEntity()
-    {
-        return allEntityDic.Values.OfType<EnemyEntity>().ToList();
-    }
-
-    /// <summary>
-    /// 获取实体类型
-    /// </summary>
-    /// <param name="entityId"></param>
-    /// <returns></returns>
-    public EntityType GetEntityType(long entityId)
-    {
-        return allEntityDic.TryGetValue(entityId, out var entity) ? entity.EntityType : EntityType.None;
     }
 
     /// <summary>
@@ -488,7 +267,11 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
         return false;
     }
-
+    
+    /// <summary>
+    /// 释放实体
+    /// </summary>
+    /// <param name="entityId"></param>
     public void ReleaseEntity(long entityId)
     {
         if (allEntityDic.TryGetValue(entityId, out var entity))
@@ -497,6 +280,10 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         }
     }
     
+    /// <summary>
+    /// 定义的销毁函数主要用来退出场景时使用
+    /// </summary>
+    /// <param name="action"></param>
     public void Destroy(Action action)
     {
         foreach (var entity in allEntityDic.Values)
@@ -510,7 +297,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         allEntityDic.Clear();
         action?.Invoke();
     }
-
+    
     private void OnDestroy()
     {
         EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.EnterBattle);

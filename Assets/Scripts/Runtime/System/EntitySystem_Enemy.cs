@@ -5,7 +5,7 @@ using Spine.Unity;
 using UnityEngine;
 
 /// <summary>
-/// 实体系统 敌人相关分布类
+/// 实体系统 敌人模块
 /// </summary>
 public partial class EntitySystem
 {
@@ -40,15 +40,27 @@ public partial class EntitySystem
         InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 150f);
         // 初始化敌人状态机组件 和 动画组件
         InitEnemyState(entity, InitEnemyEntityAnimation(entity.EntityId, anim, entity));
-        // 初始化敌人死亡组件
-        InitEnemyDead(entity.EntityId, entity);
         //初始化敌人攻击
         entity.AllComponentList.Add(new EnemyAttackComponent(3f, enemyBean.EnemyData.atk, entity,
             entity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent)));
         //初始化敌人状态
         entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp, entity));
     }
-
+    
+    /// <summary>
+    /// 初始化敌人动画组件
+    /// </summary>
+    /// <param name="entityId"></param>
+    /// <param name="skeletonGraphic"></param>
+    /// <param name="entity"></param>
+    /// <returns></returns>
+    private AnimationComponent InitEnemyEntityAnimation(long entityId, SkeletonGraphic skeletonGraphic, Entity entity)
+    {
+        var anima = new EnemyAnimationComponent(entityId, skeletonGraphic);
+        entity.AllComponentList.Add(anima);
+        return anima;
+    }
+    
     /// <summary>
     /// 初始化敌人实体移动组件
     /// </summary>

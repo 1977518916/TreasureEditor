@@ -15,11 +15,21 @@ public class GameManager : MonoSingleton<GameManager>
     /// </summary>
     public GameObject quantumConsole;
     
+    /// <summary>
+    /// 录制
+    /// </summary>
+    public GameObject recording;
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.BackQuote))
         {
             quantumConsole.SetActive(!quantumConsole.activeSelf);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            recording.SetActive(!recording.activeSelf);
         }
     }
 

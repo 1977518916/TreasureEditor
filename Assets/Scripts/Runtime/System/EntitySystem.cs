@@ -6,6 +6,7 @@ using Runtime.Component.Position;
 using Runtime.Component.Skill;
 using Runtime.Data;
 using Runtime.Manager;
+using Sirenix.OdinInspector;
 using Spine.Unity;
 using Tao_Framework.Core.Event;
 using Tao_Framework.Core.Singleton;
@@ -32,6 +33,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// <summary>
     /// 实体字典  ID对应对象
     /// </summary>
+    [ShowInInspector]
     private readonly ConcurrentDictionary<long, Entity> allEntityDic = new ConcurrentDictionary<long, Entity>();
 
     /// <summary>
@@ -613,7 +615,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         }
     }
 
-    public void Destroy()
+    public void Destroy(Action action)
     {
         foreach (var entity in allEntityDic.Values)
         {
@@ -625,5 +627,6 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         allEntityDic.Clear();
         EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.MakeEnemy);
         EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.EnterBattle);
+        action?.Invoke();
     }
 }

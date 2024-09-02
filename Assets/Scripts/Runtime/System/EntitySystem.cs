@@ -627,7 +627,9 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         allEntityDic.Clear();
         action?.Invoke();
     }
-
+    
+    //private void 
+    
     private void OnDestroy()
     {
         EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.MakeEnemy);

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 51709565}
   - component: {fileID: 51709567}
   - component: {fileID: 51709566}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HP_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 58156329}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BulletParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 86820183}
   - component: {fileID: 86820185}
   - component: {fileID: 86820184}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: AttackCD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -797,7 +797,7 @@ GameObject:
   - component: {fileID: 165742562}
   - component: {fileID: 165742564}
   - component: {fileID: 165742563}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HP_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,7 +874,7 @@ GameObject:
   - component: {fileID: 166532587}
   - component: {fileID: 166532589}
   - component: {fileID: 166532588}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +950,7 @@ GameObject:
   - component: {fileID: 169440221}
   - component: {fileID: 169440223}
   - component: {fileID: 169440222}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BattleBase_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1027,7 +1027,7 @@ GameObject:
   - component: {fileID: 196808513}
   - component: {fileID: 196808515}
   - component: {fileID: 196808514}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BattleBase_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 260430965}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 264913638}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1176,7 +1176,7 @@ GameObject:
   - component: {fileID: 271618808}
   - component: {fileID: 271618810}
   - component: {fileID: 271618809}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: AttackCD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1252,7 +1252,7 @@ GameObject:
   - component: {fileID: 319173437}
   - component: {fileID: 319173439}
   - component: {fileID: 319173438}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HP_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1329,7 +1329,7 @@ GameObject:
   - component: {fileID: 326743475}
   - component: {fileID: 326743477}
   - component: {fileID: 326743476}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: AttackCD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1405,7 +1405,7 @@ GameObject:
   - component: {fileID: 378666351}
   - component: {fileID: 378666352}
   - component: {fileID: 378666353}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HeroAvatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1483,7 +1483,7 @@ GameObject:
   - component: {fileID: 386144891}
   - component: {fileID: 386144892}
   - component: {fileID: 386144893}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Boundary_Down
   m_TagString: Boundary
   m_Icon: {fileID: 0}
@@ -1568,7 +1568,7 @@ GameObject:
   - component: {fileID: 450834579}
   - component: {fileID: 450834581}
   - component: {fileID: 450834580}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Anima
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1660,7 +1660,7 @@ GameObject:
   - component: {fileID: 459915520}
   - component: {fileID: 459915521}
   - component: {fileID: 459915522}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Boundary_Top
   m_TagString: Boundary
   m_Icon: {fileID: 0}
@@ -1745,7 +1745,7 @@ GameObject:
   - component: {fileID: 494630555}
   - component: {fileID: 494630557}
   - component: {fileID: 494630556}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1823,7 +1823,7 @@ GameObject:
   - component: {fileID: 505163838}
   - component: {fileID: 505163837}
   - component: {fileID: 505163841}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1974,14 +1974,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Recording
       objectReference: {fileID: 0}
-    - target: {fileID: 3852622126357445190, guid: 0c05306522b16e84587a29395ef6b194, type: 3}
-      propertyPath: _tag
-      value: BattleCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 3852622126357445190, guid: 0c05306522b16e84587a29395ef6b194, type: 3}
-      propertyPath: _selectBy
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 3852622126357445191, guid: 0c05306522b16e84587a29395ef6b194, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2050,7 +2042,7 @@ GameObject:
   - component: {fileID: 570508704}
   - component: {fileID: 570508706}
   - component: {fileID: 570508705}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: AttackCD_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2172,7 +2164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 673703899}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HeroParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2210,7 +2202,7 @@ GameObject:
   - component: {fileID: 703183685}
   - component: {fileID: 703183687}
   - component: {fileID: 703183686}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: AttackCD_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2288,7 +2280,7 @@ GameObject:
   - component: {fileID: 745774020}
   - component: {fileID: 745774019}
   - component: {fileID: 745774021}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BossRootPrefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2370,6 +2362,22 @@ PrefabInstance:
     - target: {fileID: 5147062264597942832, guid: 2f86889485673394ab60fcf6920d911d, type: 3}
       propertyPath: m_Name
       value: KillBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 5147062264597942832, guid: 2f86889485673394ab60fcf6920d911d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686341502893034896, guid: 2f86889485673394ab60fcf6920d911d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792890424342997727, guid: 2f86889485673394ab60fcf6920d911d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973787678672647220, guid: 2f86889485673394ab60fcf6920d911d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7309743647625139290, guid: 2f86889485673394ab60fcf6920d911d, type: 3}
       propertyPath: m_Pivot.x
@@ -2517,7 +2525,7 @@ GameObject:
   - component: {fileID: 770371345}
   - component: {fileID: 770371347}
   - component: {fileID: 770371346}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HP_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2592,7 +2600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 796294424}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HeroStatus_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2669,7 +2677,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 64
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2705,7 +2713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820157763}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2741,7 +2749,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 879371599}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: StatusBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2782,7 +2790,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 924491848}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: EnemyParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2818,7 +2826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 935162613}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BulletDerivativeParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2854,7 +2862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 970553201}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HeroStatus_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2892,7 +2900,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 996932618}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2930,7 +2938,7 @@ GameObject:
   - component: {fileID: 1010936706}
   - component: {fileID: 1010936708}
   - component: {fileID: 1010936707}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BattleBase_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3005,7 +3013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1014089111}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HurtTextParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3041,7 +3049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022281589}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BattleCoordinates
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3128,7 +3136,7 @@ GameObject:
   - component: {fileID: 1045200609}
   - component: {fileID: 1045200611}
   - component: {fileID: 1045200610}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BattleBase_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3205,7 +3213,7 @@ GameObject:
   - component: {fileID: 1049669416}
   - component: {fileID: 1049669418}
   - component: {fileID: 1049669417}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BattleBase_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3288,7 +3296,7 @@ GameObject:
   - component: {fileID: 1211662326}
   - component: {fileID: 1211662328}
   - component: {fileID: 1211662327}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: RootPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3371,7 +3379,7 @@ GameObject:
   - component: {fileID: 1234313631}
   - component: {fileID: 1234313633}
   - component: {fileID: 1234313632}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: AttackCD_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3446,7 +3454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1301070028}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HeroStatus_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3486,7 +3494,7 @@ GameObject:
   - component: {fileID: 1304121444}
   - component: {fileID: 1304121446}
   - component: {fileID: 1304121445}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3562,7 +3570,7 @@ GameObject:
   - component: {fileID: 1326929936}
   - component: {fileID: 1326929938}
   - component: {fileID: 1326929937}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: AttackCD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3638,7 +3646,7 @@ GameObject:
   - component: {fileID: 1365162503}
   - component: {fileID: 1365162504}
   - component: {fileID: 1365162505}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Boundary_Left
   m_TagString: Boundary
   m_Icon: {fileID: 0}
@@ -3723,7 +3731,7 @@ GameObject:
   - component: {fileID: 1392293861}
   - component: {fileID: 1392293863}
   - component: {fileID: 1392293862}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: AttackCD_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3800,7 +3808,7 @@ GameObject:
   - component: {fileID: 1430716722}
   - component: {fileID: 1430716724}
   - component: {fileID: 1430716723}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3876,7 +3884,7 @@ GameObject:
   - component: {fileID: 1467641304}
   - component: {fileID: 1467641305}
   - component: {fileID: 1467641306}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Boundary_Right
   m_TagString: Boundary
   m_Icon: {fileID: 0}
@@ -3961,7 +3969,7 @@ GameObject:
   - component: {fileID: 1486152813}
   - component: {fileID: 1486152815}
   - component: {fileID: 1486152814}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4035,7 +4043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1512273368}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HeroStatus_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4073,7 +4081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1513777404}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4111,7 +4119,7 @@ GameObject:
   - component: {fileID: 1599607399}
   - component: {fileID: 1599607401}
   - component: {fileID: 1599607400}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4185,7 +4193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1612338888}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BossParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4221,7 +4229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1626371390}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HeroStatus_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4259,7 +4267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1639212792}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4298,7 +4306,7 @@ GameObject:
   - component: {fileID: 1690127850}
   - component: {fileID: 1690127852}
   - component: {fileID: 1690127851}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: HP_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4419,10 +4427,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GUI
       objectReference: {fileID: 0}
-    - target: {fileID: 3724701471392951960, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3724701471392951961, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -4466,10 +4470,6 @@ PrefabInstance:
     - target: {fileID: 3724701471392951961, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3724701471392951962, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
-      propertyPath: _showUI
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3724701471392951962, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
       propertyPath: _movieCapture
@@ -4543,7 +4543,7 @@ GameObject:
   - component: {fileID: 1984426080}
   - component: {fileID: 1984426082}
   - component: {fileID: 1984426081}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: AttackCD_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4620,7 +4620,7 @@ GameObject:
   - component: {fileID: 2141619398}
   - component: {fileID: 2141619400}
   - component: {fileID: 2141619399}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: AttackCD
   m_TagString: Untagged
   m_Icon: {fileID: 0}

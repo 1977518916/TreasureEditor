@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc4cbb9957c704f912cd32368f81dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectBy: 0
-  _scanFrequency: 0
+  _selectBy: 3
+  _scanFrequency: 2
   _scanHiddenCameras: 0
-  _tag: MainCamera
+  _tag: BattleCamera
   _name: Main Camera
   _camera: {fileID: 0}
 --- !u!114 &3852622126357445189

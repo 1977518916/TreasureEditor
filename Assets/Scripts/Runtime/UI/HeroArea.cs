@@ -58,15 +58,20 @@ namespace Runtime.UI
             }
             private void InitButton()
             {
-                Button save = transform.FindGet<Button>("Save");
-                save.onClick.AddListener(() => ReadWriteManager.Hero.SaveHeroData(positionType, heroData));
-                Button clear = transform.FindGet<Button>("Clear");
-                clear.onClick.AddListener(() =>
+                transform.FindGet<Button>("Save")
+                    .onClick.AddListener(() => ReadWriteManager.Hero.SaveHeroData(positionType, heroData));
+                
+                transform.FindGet<Button>("Clear").onClick.AddListener(() =>
                 {
                     heroData = new HeroData();
                     DataManager.HeroDatas[positionType] = heroData;
                     ReadWriteManager.Hero.SaveHeroData(positionType, null);
                     updateAction.Invoke();
+                });
+                
+                transform.FindGet<Button>("Skill").onClick.AddListener(() =>
+                {
+                    SkillShowUi.Show(heroData);
                 });
             }
 
@@ -83,9 +88,10 @@ namespace Runtime.UI
                     heroData.modelType = (EntityModelType)i;
                     updateAction.Invoke();
                 });
+                
                 updateAction += () =>
                 {
-                    heroType.value = (int)heroData.modelType;
+                    heroType.SetValueWithoutNotify((int)heroData.modelType);
                     heroParent.ClearChild();
                     bulletParent.ClearChild();
                     heroType.RefreshShownValue();

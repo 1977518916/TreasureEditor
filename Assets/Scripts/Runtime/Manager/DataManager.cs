@@ -87,7 +87,7 @@ namespace Runtime.Manager
         public static void InitData()
         {
             InitAllSpineData();
-            SkillStruct = AssetsLoadManager.Load<SkillStruct>("Config/AllSkillData.json");
+            SkillStruct = AssetsLoadManager.Load<SkillStruct>("Config/AllSkillData");
         }
 
         /// <summary>

@@ -28,8 +28,9 @@ namespace Runtime.Data
     [Serializable]
     public class SkillData
     {
+        [Space(10)]
         [Tooltip("绑定的技能表现层")]
-        public string key;
+        public string key = "skill_";
         [Tooltip("技能效果")]
         public SkillEffectType skillEffectType = SkillEffectType.Attack;
         [Tooltip("技能运动类型")]
@@ -37,9 +38,9 @@ namespace Runtime.Data
         [Tooltip("技能释放的量")]
         public int amount = 1;
         [Tooltip("ui展示时的缩放大小")]
-        public float showScale;
+        public float showScale = 0.5f;
         [Tooltip("展示时位置的偏移")]
-        public Vector2 showPosition;
+        public Vector2 showPosition = Vector2.zero;
     }
 
     /// <summary>

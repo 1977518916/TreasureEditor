@@ -45,6 +45,7 @@ namespace Runtime.Manager
         }
 
         #endregion
+        
         #region LevelData
 
         public static class Level

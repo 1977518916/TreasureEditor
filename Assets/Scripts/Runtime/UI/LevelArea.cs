@@ -95,6 +95,7 @@ namespace Runtime.UI
             {
                 mapDropDown.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(value)));
             }
+            mapDropDown.RefreshShownValue();
 
             foreach (EnemyTypeEnum value in Enum.GetValues(typeof(EnemyTypeEnum)))
             {

@@ -10,6 +10,9 @@ using Object = UnityEngine.Object;
 
 namespace Runtime.Manager
 {
+    /// <summary>
+    /// 仅负责资源加载，不负责实体生成相关逻辑
+    /// </summary>
     public static class AssetsLoadManager
     {
         private const string CharacterPath = "Character/";
@@ -29,8 +32,8 @@ namespace Runtime.Manager
         {
             return LoadEntityModelSkeleton(entityModelType, parent, StateType.Idle).GameObject();
         }
-        
-        public static BulletEntity LoadBullet(EntityModelType entityModelType, Transform parent = null)
+
+        public static GameObject LoadBullet(EntityModelType entityModelType, Transform parent = null)
         {
             var gameObject = new GameObject($"{entityModelType.ToString()}_Bullet", typeof(RectTransform))
             {
@@ -39,10 +42,9 @@ namespace Runtime.Manager
             gameObject.transform.SetParent(parent);
             gameObject.transform.localPosition = Vector3.zero;
             gameObject.transform.localScale = Vector3.one;
-            var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, gameObject);
-            bulletEntity.MoveObject = LoadBulletSkeletonOfEnum(entityModelType, gameObject.transform).GameObject();
-            bulletEntity.MoveObject.transform.eulerAngles = new Vector3(0, 0, -90);
-            return bulletEntity;
+            GameObject b = LoadBulletSkeletonOfEnum(entityModelType, gameObject.transform).GameObject();
+            b.transform.eulerAngles = new Vector3(0, 0, -90);
+            return gameObject;
         }
 
         public static Sprite LoadBg(MapTypeEnum mapTypeEnum)

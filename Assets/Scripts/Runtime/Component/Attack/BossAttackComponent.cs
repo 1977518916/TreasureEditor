@@ -68,7 +68,9 @@ namespace Runtime.Component.Attack
             {
                 // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
                 entity.GetSpecifyComponent<StateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
-                var bulletEntity = AssetsLoadManager.LoadBullet(entityModelType);
+                var bulletGo = AssetsLoadManager.LoadBullet(entityModelType);
+                var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity,bulletGo);
+                bulletEntity.MoveObject = bulletGo.transform.GetChild(0).gameObject;
                 var bulletHurt = DataManager.GameData.isInvicibleSelf ? 1 : hurt;
                 // 先初始化 再添加组件
                 bulletEntity.Init();

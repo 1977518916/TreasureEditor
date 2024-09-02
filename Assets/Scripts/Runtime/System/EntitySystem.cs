@@ -70,9 +70,9 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
             if (DataManager.LevelData.BossData.EntityModelType == EntityModelType.Null) return;
             GenerateBossEntity(DataManager.LevelData.BossData.EntityModelType, DataManager.LevelData.BossData);
         });
-        EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy, GenerateEntity);
+        EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy, GenerateEnemyEntity);
     }
-
+    
     private void Update()
     {
         currentTime += Time.time;
@@ -345,75 +345,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         stateMachine.Init(entity, idleState, stateConvertDic, allState);
         entity.AllComponentList.Add(stateMachine);
     }
-
-    private void InitEnemyState(Entity entity, AnimationComponent animationComponent)
-    {
-        var stateMachine = new EnemyStateMachineComponent();
-        var attackState = new AttackState();
-        var hitState = new HitState();
-        var deadState = new DeadState();
-        var moveState = new RunState();
-        var idleState = new IdleState();
-        moveState.Init(animationComponent);
-        attackState.Init(animationComponent);
-        hitState.Init(animationComponent);
-        deadState.Init(animationComponent);
-        idleState.Init(animationComponent);
-        var stateConvertDic = new Dictionary<StateType, List<StateType>>
-        {
-            {
-                StateType.Idle, new List<StateType>
-                {
-                    StateType.Attack,
-                    StateType.Hit,
-                    StateType.Dead
-                }
-            },
-            {
-                StateType.Run, new List<StateType>
-                {
-                    StateType.Attack,
-                    StateType.Hit,
-                    StateType.Dead
-                }
-            },
-            {
-                StateType.Attack, new List<StateType>
-                {
-                    StateType.Idle,
-                    StateType.Dead
-                }
-            },
-            {
-                StateType.Hit, new List<StateType>
-                {
-                    StateType.Idle,
-                    StateType.Dead
-                }
-            }
-        };
-        var allState = new Dictionary<StateType, IState>
-        {
-            {
-                StateType.Idle, idleState
-            },
-            {
-                StateType.Run, moveState
-            },
-            {
-                StateType.Attack, attackState
-            },
-            {
-                StateType.Hit, hitState
-            },
-            {
-                StateType.Dead, deadState
-            }
-        };
-        stateMachine.Init(entity, moveState, stateConvertDic, allState);
-        entity.AllComponentList.Add(stateMachine);
-    }
-
+    
     private AnimationComponent InitEnemyEntityAnimation(long entityId, SkeletonGraphic skeletonGraphic,
         Entity entity)
     {
@@ -421,57 +353,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         entity.AllComponentList.Add(anima);
         return anima;
     }
-
-    private void InitEntityPosition(Entity entity, RectTransform rectTransform)
-    {
-        entity.AllComponentList.Add(new RandomPositionComponent());
-        entity.GetSpecifyComponent<RandomPositionComponent>(ComponentType.RandomPositionComponent)
-            .RandomizePosition(rectTransform);
-    }
-
-    private void InitEnemyEntityMove(Entity entity, RectTransform target, RectTransform entityTransform,
-        float moveSpeed)
-    {
-        entity.AllComponentList.Add(new EnemyMoveComponent((EnemyEntity)entity, target, entityTransform, moveSpeed));
-    }
-
-    private void GenerateEntity(LevelManager.EnemyBean enemyBean)
-    {
-        var targetId = GetFrontRowHeroID();
-        GameObject root = Instantiate(BattleManager.HeroAndEnemyRootPrefab, BattleManager.EnemyParent);
-        root.tag = "Enemy";
-        var entity = CreateEntity<EnemyEntity>(EntityType.EnemyEntity, root);
-        var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
-        var anim = model.GetComponent<SkeletonGraphic>();
-        var scale = new Vector3(0.3f, 0.3f, 1f);
-        root.transform.localScale *= enemyBean.EnemyData.modelScale;
-        model.transform.localScale = scale * enemyBean.EnemyData.modelScale;
-        model.transform.Translate(0, -30, 0, Space.Self);
-        // 初始化敌人位置
-        InitEntityPosition(entity, entity.GetComponent<RectTransform>());
-        // 初始化敌人移动
-        RectTransform targetRect = null;
-        if (targetId != -1)
-        {
-            targetRect = GetEntity(targetId).GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent)
-                .EntityTransform;
-        }
-
-        InitEnemyEntityMove(entity, targetRect, root.GetComponent<RectTransform>(), enemyBean.EnemyData.speed);
-        // 初始化敌人检测
-        InitPointDetect(entity, root.GetComponent<RectTransform>(), EntityType.HeroEntity, 150f);
-        // 初始化敌人状态机组件 和 动画组件
-        InitEnemyState(entity, InitEnemyEntityAnimation(entity.EntityId, anim, entity));
-        // 初始化敌人死亡组件
-        InitEnemyDead(entity.EntityId, entity);
-        //初始化敌人攻击
-        entity.AllComponentList.Add(new EnemyAttackComponent(3f, enemyBean.EnemyData.atk, entity,
-            entity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent)));
-        //初始化敌人状态
-        entity.AllComponentList.Add(new EnemyStatusComponent(enemyBean.EnemyData.hp, entity));
-        // Debug.Log("敌人数量"+battleManager.EnemyParent.childCount);
-    }
-
+    
     /// <summary>
     /// 更换目标  如果返回的结果为-1证明目前需要找的对象没有
     /// </summary>
@@ -627,8 +509,6 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         allEntityDic.Clear();
         action?.Invoke();
     }
-    
-    //private void 
     
     private void OnDestroy()
     {

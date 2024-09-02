@@ -155,7 +155,7 @@ public class BulletEntity : MonoBehaviour, Entity
     private void Penetrate(Collider2D other)
     {
         if (IsHurtEntity(other))
-            GetSpecifyComponent<BulletPenetrateAttribute>(ComponentType.Attribute).Execute();
+            GetSpecifyComponent<BulletPenetrateAttribute>(ComponentType.Attribute)?.Execute();
     }
 
     private void Rebound(Collider2D other)
@@ -163,20 +163,20 @@ public class BulletEntity : MonoBehaviour, Entity
         IsHurtEntity(other);
         if (other.CompareTag("Boundary")) 
         {
-            GetSpecifyComponent<BulletReboundAttribute>(ComponentType.Attribute).Execute();
+            GetSpecifyComponent<BulletReboundAttribute>(ComponentType.Attribute)?.Execute();
         }
     }
 
     private void Refraction(Collider2D other)
     {
         if (IsHurtEntity(other))
-            GetSpecifyComponent<BulletRefractionAttribute>(ComponentType.Attribute).Execute();
+            GetSpecifyComponent<BulletRefractionAttribute>(ComponentType.Attribute)?.Execute();
     }
 
     private void Split(Collider2D other)
     {
         if (IsHurtEntity(other))
-            GetSpecifyComponent<BulletSplitAttribute>(ComponentType.Attribute).Execute();
+            GetSpecifyComponent<BulletSplitAttribute>(ComponentType.Attribute)?.Execute();
     }
 
     /// <summary>

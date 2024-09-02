@@ -496,7 +496,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
             entity.ReadyRelease = true;
         }
     }
-
+    
     public void Destroy(Action action)
     {
         foreach (var entity in allEntityDic.Values)
@@ -504,15 +504,15 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
             entity.Release();
         }
 
+        EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.MakeEnemy);
         timer?.Cancel();
         timer = null;
         allEntityDic.Clear();
         action?.Invoke();
     }
-    
+
     private void OnDestroy()
     {
-        EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.MakeEnemy);
         EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.EnterBattle);
     }
 }

@@ -80,7 +80,7 @@ public class BulletMoveComponent : MoveComponent
     /// </summary>
     private void RectilinearMotion()
     {
-        Vector3 direction = MoveDirection - ThisTransform;
+        Vector2 direction = MoveDirection - ThisTransform;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         EntityTransform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         EntityTransform.anchoredPosition3D += new Vector3((EntityTransform.right * MoveSpeed * Time.deltaTime).x,

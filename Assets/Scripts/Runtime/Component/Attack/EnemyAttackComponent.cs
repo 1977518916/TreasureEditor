@@ -38,7 +38,7 @@ public class EnemyAttackComponent : AttackComponent
 
         if (pointDetectComponent.IsVeryClose())
         {
-            Attack(1, pointDetectComponent.GetTarget().position);
+            Attack(1, pointDetectComponent.GetTarget().anchoredPosition);
         }
     }
 

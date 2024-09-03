@@ -87,8 +87,8 @@ public class BulletSplitAttribute : BulletAttribute
         var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : data.atk;
         splitBullet.InitBullet(EntityType.EnemyEntity, bulletHurt, BulletAttributeType.Penetrate,
             bulletEntity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent).EntityTransform.position, BattleManager.Instance.GetBulletParent());
-        splitBullet.AllComponentList.Add(new BulletMoveComponent(splitBullet.GetComponent<RectTransform>(), 800f,
-            new Vector2(Mathf.Abs(point.x), point.y), BulletMoveType.RectilinearMotion, 2000f));
+        // splitBullet.AllComponentList.Add(new BulletMoveComponent(splitBullet.GetComponent<RectTransform>(), 800f,
+        //     new Vector2(Mathf.Abs(point.x), point.y), BulletMoveType.RectilinearMotion, 2000f));
         splitBullet.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));
         splitBullet.AllComponentList.Add(new BulletPenetrateAttribute(2, splitBullet));
         splitBullet.AllComponentList.Add(new DelayedDeadComponent(1.5f, splitBullet));

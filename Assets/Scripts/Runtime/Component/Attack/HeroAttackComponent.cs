@@ -14,6 +14,10 @@ public class HeroAttackComponent : AttackComponent
     public float LastAttackTime { get; set; }
 
     public float AttackInterval { get; set; }
+    public void Attack(float time, Vector2 point)
+    {
+        
+    }
 
     /// <summary>
     /// 攻击最大次数 也就是每次CD结束以后恢复的攻击次数
@@ -95,7 +99,7 @@ public class HeroAttackComponent : AttackComponent
 
         if(pointDetectComponent.IsVeryClose())
         {
-            Attack(1, pointDetectComponent.GetTarget().position);
+            Attack(1, pointDetectComponent.GetTarget());
         }
     }
 
@@ -107,25 +111,26 @@ public class HeroAttackComponent : AttackComponent
     /// <summary>
     /// 攻击
     /// </summary>
-    public void Attack(float time, Vector2 point)
+    public void Attack(float time, RectTransform target)
     {
-        if(isInAttackCd) return;
-        if(IsInAttackInterval) return;
+        if (isInAttackCd) return;
+        if (IsInAttackInterval) return;
         heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
             .TryChangeState(StateType.Attack);
         // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
-        MakeBullet(point);
-        
+        MakeBullet(target);
+
         float deviation = 10;
-        for(int i = 1; i < bulletAmount; i++)
+        for (int i = 1; i < bulletAmount; i++)
         {
             float rate = ((i + 1) / 0b10) * Mathf.Pow(-1, i);
-            MakeBullet(GetOtherPoint(deviation * rate, point));
+            // MakeBullet(GetOtherPoint(deviation * rate,target.anchoredPosition));
+            // MakeBullet(GetOtherPoint(deviation * rate, target.anchoredPosition));
         }
 
         ReduceAttackCount();
     }
-    
+
     private Vector2 GetOtherPoint(float angle, Vector2 pointB)
     {
         Vector2 pointA = new Vector2(heroEntity.GetFireLocation().x, heroEntity.GetFireLocation().y);
@@ -146,7 +151,7 @@ public class HeroAttackComponent : AttackComponent
         return pointA + new Vector2(rotatedVector.x, rotatedVector.y);
     }
 
-    private void MakeBullet(Vector2 point)
+    private void MakeBullet(RectTransform target)
     {
         var bulletGo = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData().modelType);
         var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
@@ -154,8 +159,8 @@ public class HeroAttackComponent : AttackComponent
         var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : heroEntity.GetHeroData().atk;
         bulletEntity.InitBullet(EntityType.EnemyEntity, bulletHurt, heroEntity.GetHeroData().bulletAttributeType,
             heroEntity.GetFireLocation(), BattleManager.Instance.GetBulletParent());
-        bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), 800f,
-            point, BulletMoveType.RectilinearMotion, 2000f));
+        bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), target,
+            800f, BulletMoveType.RectilinearMotion, 2000f));
         bulletEntity.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));
         LastAttackTime = Time.time;
         IsInAttackInterval = true;

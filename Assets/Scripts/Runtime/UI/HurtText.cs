@@ -11,8 +11,9 @@ public class HurtText : MonoBehaviour
     {
         var rectTransform = GetComponent<RectTransform>();
         GetComponent<Text>().color = Color.white;
-        rectTransform.position = new Vector2(location.x, location.y + 25f);
-        rectTransform.DOMoveY(rectTransform.position.y + 50f, surviveTime);
+        rectTransform.localScale = Vector3.one;
+        rectTransform.anchoredPosition3D = new Vector3(location.x, location.y + 25f, 0f);
+        rectTransform.DOLocalMoveY(rectTransform.localPosition.y + 50f, surviveTime);
         GetComponent<Text>().text = hurt.ToString();
         GetComponent<Text>().DOFade(0, surviveTime).onComplete += () => { Destroy(gameObject); };
     }

@@ -47,7 +47,8 @@ public class FixedDistanceComponent : MoveComponent
     {
         if (!ContinueMove) return;
         if (isStopMove) return;
-        EntityTransform.Translate(MoveDirection * MoveSpeed * time);
+        EntityTransform.anchoredPosition3D +=
+            new Vector3(MoveDirection.x * MoveSpeed * time, MoveDirection.y * MoveSpeed * time, 0f);
         if (Vector2.Distance(EntityTransform.anchoredPosition, targetLocation) <= 1f)
         {
             ContinueMove = false;

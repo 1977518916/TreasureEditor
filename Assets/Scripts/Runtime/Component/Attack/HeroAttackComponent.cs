@@ -118,14 +118,13 @@ public class HeroAttackComponent : AttackComponent
         heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
             .TryChangeState(StateType.Attack);
         // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
-        MakeBullet(target);
+        MakeBullet(target.position);
 
-        float deviation = 10;
+        float deviation = 0.1f;
         for (int i = 1; i < bulletAmount; i++)
         {
             float rate = ((i + 1) / 0b10) * Mathf.Pow(-1, i);
-            // MakeBullet(GetOtherPoint(deviation * rate,target.anchoredPosition));
-            // MakeBullet(GetOtherPoint(deviation * rate, target.anchoredPosition));
+            MakeBullet(GetOtherPoint(deviation * rate,target.position));
         }
 
         ReduceAttackCount();
@@ -151,19 +150,25 @@ public class HeroAttackComponent : AttackComponent
         return pointA + new Vector2(rotatedVector.x, rotatedVector.y);
     }
 
-    private void MakeBullet(RectTransform target)
+    private void MakeBullet(Vector2 targetPoint)
     {
-        var bulletGo = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData().modelType);
-        var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
-        bulletEntity.MoveObject = bulletGo.transform.GetChild(0).gameObject;
-        var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : heroEntity.GetHeroData().atk;
-        bulletEntity.InitBullet(EntityType.EnemyEntity, bulletHurt, heroEntity.GetHeroData().bulletAttributeType,
-            heroEntity.GetFireLocation(), BattleManager.Instance.GetBulletParent());
-        bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), target,
-            800f, BulletMoveType.RectilinearMotion, 2000f));
-        bulletEntity.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));
         LastAttackTime = Time.time;
         IsInAttackInterval = true;
+        var bulletGo = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData().modelType);
+        var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
+        var bulletTran = bulletEntity.GetComponent<RectTransform>();
+        var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : heroEntity.GetHeroData().atk;
+        var fireLocation = heroEntity.GetFireLocation();
+        var bulletParent = BattleManager.Instance.GetBulletParent();
+        var bulletAttributeType = heroEntity.GetHeroData().bulletAttributeType;
+        //--------------------- 初始化 ---------------------------------
+        bulletEntity.InitBullet(EntityType.EnemyEntity, bulletHurt, bulletAttributeType, fireLocation, bulletParent);
+        bulletEntity.MoveObject = bulletGo.transform.GetChild(0).gameObject;
+        //--------------------- 添加组件 ---------------------------------
+        var bulletMove = new BulletMoveComponent(bulletTran, targetPoint, 800f, BulletMoveType.RectilinearMotion, 2000f);
+        var bulletDead = new DelayedDeadComponent(3f, bulletEntity);
+        bulletEntity.AllComponentList.Add(bulletMove);
+        bulletEntity.AllComponentList.Add(bulletDead);
         AddBulletAttribute(bulletEntity, heroEntity.GetHeroData().bulletAttributeType);
     }
 

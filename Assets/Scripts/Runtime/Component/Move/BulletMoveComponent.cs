@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class BulletMoveComponent : MoveComponent
 {
+    /// <summary>
+    /// 自身坐标组件
+    /// </summary>
     public RectTransform EntityTransform { get; set; }
-
+    
+    /// <summary>
+    /// 移动速度
+    /// </summary>
     public float MoveSpeed { get; set; }
-
+    
+    /// <summary>
+    /// 移动方向
+    /// </summary>
     public Vector2 MoveDirection { get; set; }
 
     /// <summary>
     /// 移动类型
     /// </summary>
     private readonly BulletMoveType moveType;
-
+    
+    /// <summary>
+    /// 是否继续移动
+    /// </summary>
     public bool ContinueMove { get; set; }
-
-    private Vector2 ThisTransform;
-
+    
     /// <summary>
     /// 子弹初始位置
     /// </summary>
@@ -30,37 +40,30 @@ public class BulletMoveComponent : MoveComponent
     private float startTimeDirection;
     
     /// <summary>
-    /// 目标位置
+    /// 目标屏幕位置  最终其实转换为了本地位置在使用
     /// </summary>
-    private RectTransform targetLocation;
-
     private Vector2 targetScreenLocation;
 
+    /// <summary>
+    /// 自身屏幕位置  最终其实转换为了本地位置在使用
+    /// </summary>
     private Vector2 sourceScreenLocation;
-    
+
     /// <summary>
     /// 子弹移动组件
     /// </summary>
-    public BulletMoveComponent(RectTransform transform, RectTransform target, float moveSpeed, BulletMoveType moveType,
-        float direction)
+    public BulletMoveComponent(RectTransform transform, Vector2 target, float moveSpeed, BulletMoveType moveType, float direction)
     {
         EntityTransform = transform;
         MoveSpeed = moveSpeed;
         startTimeDirection = direction;
-        targetLocation = target;
         startLocation = transform.anchoredPosition;
         ContinueMove = true;
         this.moveType = moveType;
-        ThisTransform = new Vector2(EntityTransform.anchoredPosition.x, EntityTransform.anchoredPosition.y);
-        
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(EntityTransform,
-            RectTransformUtility.WorldToScreenPoint(GameManager.Instance.BattleCanvas.worldCamera,
-                targetLocation.position), GameManager.Instance.BattleCanvas.worldCamera, out targetScreenLocation);
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(EntityTransform,
-            RectTransformUtility.WorldToScreenPoint(GameManager.Instance.BattleCanvas.worldCamera,
-                EntityTransform.position), GameManager.Instance.BattleCanvas.worldCamera, out sourceScreenLocation);
+        var worldCamera = GameManager.Instance.BattleCanvas.worldCamera;
+        sourceScreenLocation = EntityTransform.ScreenToLocalPoint(worldCamera);
+        targetScreenLocation = EntityTransform.ScreenToLocalPoint(worldCamera, target);
     }
-
 
     public void Tick(float time)
     {

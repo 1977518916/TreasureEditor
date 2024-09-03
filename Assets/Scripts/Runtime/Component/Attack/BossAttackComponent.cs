@@ -70,16 +70,14 @@ namespace Runtime.Component.Attack
                 entity.GetSpecifyComponent<StateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
                 var bulletGo = AssetsLoadManager.LoadBullet(entityModelType);
                 var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity,bulletGo);
-                bulletEntity.MoveObject = bulletGo.transform.GetChild(0).gameObject;
+                var bulletAttributeType = BulletAttributeType.Penetrate;
                 var bulletHurt = DataManager.GameData.isInvicibleSelf ? 1 : hurt;
-                // 先初始化 再添加组件
-                bulletEntity.Init();
-                bulletEntity.InitBullet(EntityType.HeroEntity, bulletHurt, BulletAttributeType.Penetrate,
-                    rectTransform.anchoredPosition,
-                    BattleManager.Instance.GetBulletParent());
-                // bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(),
-                //     800f, GetAtkPosition(hero), BulletMoveType.RectilinearMotion, 2000f));
-                // bulletEntity.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));
+                var bulletParent = BattleManager.Instance.BulletParent;
+                bulletEntity.MoveObject = bulletGo.transform.GetChild(0).gameObject;
+                bulletEntity.InitBullet(EntityType.HeroEntity, bulletHurt, bulletAttributeType, rectTransform.anchoredPosition, bulletParent);
+                bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(),
+                    GetAtkPosition(hero), 800f, BulletMoveType.RectilinearMotion, 2000f));
+                bulletEntity.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));
             }
         }
 

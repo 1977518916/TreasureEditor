@@ -2053,10 +2053,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Recording
       objectReference: {fileID: 0}
-    - target: {fileID: 3852622126357445184, guid: 0c05306522b16e84587a29395ef6b194, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3852622126357445190, guid: 0c05306522b16e84587a29395ef6b194, type: 3}
       propertyPath: _camera
       value: 
@@ -4398,10 +4394,6 @@ PrefabInstance:
     - target: {fileID: 3724701471392951960, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
       propertyPath: m_Name
       value: GUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 3724701471392951960, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3724701471392951961, guid: 59b40e51ae93c244abe2ef418195b0f1, type: 3}
       propertyPath: m_RootOrder

@@ -63,6 +63,7 @@ public class BulletMoveComponent : MoveComponent
         var worldCamera = GameManager.Instance.BattleCanvas.worldCamera;
         sourceScreenLocation = EntityTransform.ScreenToLocalPoint(worldCamera);
         targetScreenLocation = EntityTransform.ScreenToLocalPoint(worldCamera, target);
+        MoveDirection = targetScreenLocation - sourceScreenLocation;
     }
 
     public void Tick(float time)

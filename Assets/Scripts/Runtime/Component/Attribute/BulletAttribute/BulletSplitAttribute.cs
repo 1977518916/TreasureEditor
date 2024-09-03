@@ -48,13 +48,13 @@ public class BulletSplitAttribute : BulletAttribute
 
     public void Execute()
     {
-        float deviation = 10;
+        float deviation = 10f;
         for (var i = 0; i < splitCount; i++)
         {
             var rate = ((i + 1) / 0b10) * Mathf.Pow(-1, i);
             Split(GetOtherPoint(deviation * rate,
                 bulletEntity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent).EntityTransform
-                    .position, direction));
+                    .anchoredPosition, direction));
         }
 
         EntitySystem.Instance.ReleaseEntity(bulletEntity.EntityId);
@@ -78,17 +78,18 @@ public class BulletSplitAttribute : BulletAttribute
         Vector2 rotatedVector = rotationMatrix.MultiplyVector(unitAB * lengthAC);
         return location + new Vector2(rotatedVector.x, rotatedVector.y);
     }
-    
-    private void Split(Vector2 point)
+
+    private void Split(Vector2 target)
     {
         var bulletGo = AssetsLoadManager.LoadBullet(data.modelType);
         var splitBullet = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
         splitBullet.MoveObject = bulletGo.transform.GetChild(0).gameObject;
         var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : data.atk;
         splitBullet.InitBullet(EntityType.EnemyEntity, bulletHurt, BulletAttributeType.Penetrate,
-            bulletEntity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent).EntityTransform.position, BattleManager.Instance.GetBulletParent());
-        // splitBullet.AllComponentList.Add(new BulletMoveComponent(splitBullet.GetComponent<RectTransform>(), 800f,
-        //     new Vector2(Mathf.Abs(point.x), point.y), BulletMoveType.RectilinearMotion, 2000f));
+            bulletEntity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent).EntityTransform.anchoredPosition,
+            BattleManager.Instance.GetBulletParent());
+        splitBullet.AllComponentList.Add(new BulletMoveComponent(splitBullet.GetComponent<RectTransform>(), target,
+            800f, BulletMoveType.RectilinearMotion, 2000f));
         splitBullet.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));
         splitBullet.AllComponentList.Add(new BulletPenetrateAttribute(2, splitBullet));
         splitBullet.AllComponentList.Add(new DelayedDeadComponent(1.5f, splitBullet));

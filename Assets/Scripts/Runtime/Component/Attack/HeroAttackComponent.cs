@@ -125,10 +125,10 @@ public class HeroAttackComponent : AttackComponent
 
         ReduceAttackCount();
     }
-
+    
     private Vector2 GetOtherPoint(float angle, Vector2 pointB)
     {
-        Vector2 pointA = new Vector2(heroEntity.GetFireLocation().position.x, heroEntity.GetFireLocation().position.y);
+        Vector2 pointA = new Vector2(heroEntity.GetFireLocation().x, heroEntity.GetFireLocation().y);
         Vector2 AB = pointB - pointA;
         float lengthAB = AB.magnitude;
         float lengthAC = Mathf.Cos(Mathf.Deg2Rad * angle) * lengthAB;
@@ -149,11 +149,11 @@ public class HeroAttackComponent : AttackComponent
     private void MakeBullet(Vector2 point)
     {
         var bulletGo = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData().modelType);
-        var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity,bulletGo);
+        var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
         bulletEntity.MoveObject = bulletGo.transform.GetChild(0).gameObject;
         var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : heroEntity.GetHeroData().atk;
         bulletEntity.InitBullet(EntityType.EnemyEntity, bulletHurt, heroEntity.GetHeroData().bulletAttributeType,
-            heroEntity.GetFireLocation().position, BattleManager.Instance.GetBulletParent());
+            heroEntity.GetFireLocation(), BattleManager.Instance.GetBulletParent());
         bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(), 800f,
             point, BulletMoveType.RectilinearMotion, 2000f));
         bulletEntity.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));

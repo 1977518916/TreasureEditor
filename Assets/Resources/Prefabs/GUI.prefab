@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movieCapture: {fileID: 0}
   _showUI: 1
-  _whenRecordingAutoHideUI: 1
+  _whenRecordingAutoHideUI: 0
   _guiSkin: {fileID: 11400000, guid: eb821627fb1a0c044a6fd7a6dabe3147, type: 2}

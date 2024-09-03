@@ -102,7 +102,7 @@ public class PointDetectComponent : DetectComponent
     {
         if (targetEntityId == -1) return false;
         if (target == null) return false;
-        return Vector2.Distance(target.position, thisRectTransform.position) < distance;
+        return Vector2.Distance(target.anchoredPosition, thisRectTransform.anchoredPosition) < distance;
     }
     
     /// <summary>

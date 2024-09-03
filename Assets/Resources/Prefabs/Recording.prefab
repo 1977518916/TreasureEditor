@@ -248,7 +248,7 @@ MonoBehaviour:
   _minimumDiskSpaceMB: -1
   _timelineController: {fileID: 0}
   _videoPlayerController: {fileID: 0}
-  _cameraSelector: {fileID: 0}
+  _cameraSelector: {fileID: 3852622126357445190}
   _lastCamera: {fileID: 0}
   _contribCameras: []
-  _useContributingCameras: 1
+  _useContributingCameras: 0

@@ -24,16 +24,11 @@ public class HeroEntity : MonoBehaviour, Entity
     /// 英雄数据
     /// </summary>
     private HeroData data;
-    
-    /// <summary>
-    /// 英雄对象
-    /// </summary>
-    private GameObject heroObj;
 
     /// <summary>
     /// 攻击位置
     /// </summary>
-    private RectTransform attackFireLocation;
+    private Vector2 fireLocation;
     
     /// <summary>
     /// 是否存活
@@ -113,16 +108,14 @@ public class HeroEntity : MonoBehaviour, Entity
     /// 初始化英雄
     /// </summary>
     /// <param name="heroData"></param>
-    /// <param name="hero"></param>
-    /// <param name="fireLocation"> 开火口 </param>
+    /// <param name="fire"></param>
     /// <param name="index"></param>
-    public void InitHero(HeroData heroData, GameObject hero, RectTransform fireLocation, int index)
+    public void InitHero(HeroData heroData, Vector2 fire, int index)
     {
-        this.locationIndex = index;
+        locationIndex = index;
         data = heroData;
-        heroObj = hero;
         isSurvive = true;
-        attackFireLocation = fireLocation;
+        this.fireLocation = fire;
     }
 
     /// <summary>
@@ -152,9 +145,9 @@ public class HeroEntity : MonoBehaviour, Entity
     {
         isSurvive = survive;
     }
-
-    public RectTransform GetFireLocation()
+    
+    public Vector2 GetFireLocation()
     {
-        return attackFireLocation;
+        return fireLocation;
     }
 }

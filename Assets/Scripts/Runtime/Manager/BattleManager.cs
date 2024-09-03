@@ -79,7 +79,8 @@ public class BattleManager : MonoSingleton<BattleManager>
     [Command]
     public void SetPrefabLocation(GameObject root, int value)
     {
-        root.GetComponent<RectTransform>().position = new Vector3(BattleBaseList[value].position.x, BattleBaseList[value].position.y + 10f);
+        root.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(BattleBaseList[value].anchoredPosition.x,
+            BattleBaseList[value].anchoredPosition.y + 10f, 0f);
     }
 
     /// <summary>
@@ -123,9 +124,11 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// </summary>
     /// <param name="index"></param>
     /// <returns></returns>
-    public RectTransform GetFirePoint(int index)
+    public Vector2 GetFirePoint(int index)
     {
-        return BattleBaseList[index].Find("FirePoint").GetComponent<RectTransform>();
+        var fire = BattleBaseList[index].Find("FirePoint").GetComponent<RectTransform>();
+        var fireParent = BattleBaseList[index].Find("FirePoint").parent.GetComponent<RectTransform>();
+        return fire.anchoredPosition + fireParent.anchoredPosition;
     }
 
     #endregion
@@ -137,8 +140,7 @@ public class BattleManager : MonoSingleton<BattleManager>
 
     private void Start()
     {
-        GetComponent<Canvas>().worldCamera = Camera.main;
-        battleBG.sprite = AssetsLoadManager.LoadBg(DataManager.LevelData.mapType);
+        //battleBG.sprite = AssetsLoadManager.LoadBg(DataManager.LevelData.mapType);
     }
 
     public void GenerateHurtText(Vector2 location, int hurt, float surviveTime)

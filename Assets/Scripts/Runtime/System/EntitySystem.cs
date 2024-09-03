@@ -53,10 +53,48 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         { EntityType.BoomEntity, typeof(BoomEntity) }
     };
 
+    #region 生命周期
+
     private void Start()
     {
         EventMgr.Instance.RegisterEvent(GetHashCode(), GameEvent.EnterBattle, EnterBattle);
     }
+    
+    private void Update()
+    {
+        currentTime += Time.time;
+        if (currentTime >= UpdateTime)
+        {
+            EntityUpdate(UpdateTime);
+        }
+    }
+    
+    /// <summary>
+    /// 定义的销毁函数主要用来退出场景时使用
+    /// </summary>
+    /// <param name="action"></param>
+    public void Destroy(Action action)
+    {
+        foreach (var entity in allEntityDic.Values)
+        {
+            entity.Release();
+        }
+
+        EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.MakeEnemy);
+        timer?.Cancel();
+        timer = null;
+        allEntityDic.Clear();
+        action?.Invoke();
+    }
+    
+    private void OnDestroy()
+    {
+        EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.EnterBattle);
+    }
+    
+    #endregion
+
+    #region Event
 
     /// <summary>
     /// 进入战斗场景
@@ -77,15 +115,8 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
             GenerateEnemyEntity);
     }
 
-    private void Update()
-    {
-        currentTime += Time.time;
-        if (currentTime >= UpdateTime)
-        {
-            EntityUpdate(UpdateTime);
-        }
-    }
-
+    #endregion
+    
     /// <summary>
     /// 实体更新函数
     /// </summary>
@@ -135,7 +166,17 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
         return (T)e;
     }
-
+    
+    /// <summary>
+    /// 添加实体进入管理
+    /// </summary>
+    /// <param name="entityId"></param>
+    /// <param name="entity"></param>
+    private void AddEntity(long entityId, Entity entity)
+    {
+        allEntityDic.GetOrAdd(entityId, entity);
+    }
+    
     /// <summary>
     /// 获取指定实体
     /// </summary>
@@ -233,17 +274,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
         return -1;
     }
-
-    /// <summary>
-    /// 添加实体进入管理
-    /// </summary>
-    /// <param name="entityId"></param>
-    /// <param name="entity"></param>
-    private void AddEntity(long entityId, Entity entity)
-    {
-        allEntityDic.GetOrAdd(entityId, entity);
-    }
-
+    
     /// <summary>
     /// 获取目标类型是否有存活的敌人
     /// </summary>
@@ -278,28 +309,5 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         {
             entity.ReadyRelease = true;
         }
-    }
-    
-    /// <summary>
-    /// 定义的销毁函数主要用来退出场景时使用
-    /// </summary>
-    /// <param name="action"></param>
-    public void Destroy(Action action)
-    {
-        foreach (var entity in allEntityDic.Values)
-        {
-            entity.Release();
-        }
-
-        EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.MakeEnemy);
-        timer?.Cancel();
-        timer = null;
-        allEntityDic.Clear();
-        action?.Invoke();
-    }
-    
-    private void OnDestroy()
-    {
-        EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.EnterBattle);
     }
 }

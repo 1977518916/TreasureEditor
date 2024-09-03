@@ -31,7 +31,7 @@ public partial class EntitySystem
         var heroEntity = CreateEntity<HeroEntity>(EntityType.HeroEntity, hero);
         var heroModel = AssetsLoadManager.LoadHero(data.modelType, hero.GetComponent<RectTransform>());
         heroModel.GetComponent<RectTransform>().localScale *= data.modelScale;
-        heroEntity.InitHero(data, heroModel, BattleManager.GetFirePoint(indexValue), indexValue);
+        heroEntity.InitHero(data, BattleManager.GetFirePoint(indexValue), indexValue);
         // 获取英雄动画对象
         var heroAnima = heroModel.GetComponent<SkeletonGraphic>();
         // 初始化实体动画组件和动画

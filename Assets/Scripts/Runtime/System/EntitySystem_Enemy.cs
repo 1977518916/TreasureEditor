@@ -24,7 +24,6 @@ public partial class EntitySystem
         var scale = new Vector3(0.3f, 0.3f, 1f);
         root.transform.localScale *= enemyBean.EnemyData.modelScale;
         model.transform.localScale = scale * enemyBean.EnemyData.modelScale;
-        model.transform.Translate(0, -30, 0, Space.Self);
         // 初始化敌人位置
         InitEntityPosition(entity, entity.GetComponent<RectTransform>());
         // 初始化敌人移动

@@ -52,7 +52,8 @@ public class BulletEntity : MonoBehaviour, Entity
         targetEntityType = targetType;
         attributeType = bulletAttributeType;
         GetComponent<RectTransform>().SetParent(parent);
-        GetComponent<RectTransform>().position = bulletLocation;
+        GetComponent<RectTransform>().localScale = Vector3.one;
+        GetComponent<RectTransform>().anchoredPosition3D = new Vector3(bulletLocation.x, bulletLocation.y, 0f);
         GenerateAttackBox();
     }
 

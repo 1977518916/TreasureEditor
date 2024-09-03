@@ -21,6 +21,19 @@ public class GameManager : MonoSingleton<GameManager>
     /// </summary>
     public CaptureGUI recordingGUI;
     
+    /// <summary>
+    /// 战斗界面画布
+    /// </summary>
+    public Canvas BattleCanvas;
+    
+    /// <summary>
+    /// 战斗界面相机
+    /// </summary>
+    public Camera BattleCamera;
+
+    public Transform fire;
+    public Transform bullet;
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.BackQuote))
@@ -33,6 +46,13 @@ public class GameManager : MonoSingleton<GameManager>
             recordingGUI.gameObject.SetActive(!recordingGUI.gameObject.activeSelf);
             recordingGUI.ShowUI = true;
         }
+
+        SetBattleCanvasCameraRender();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            
+        }
     }
 
     /// <summary>
@@ -42,5 +62,13 @@ public class GameManager : MonoSingleton<GameManager>
     private void IsShowFPS(bool isShow)
     {
         showFPS.SetActive(isShow);
+    }
+    
+    /// <summary>
+    /// 设置战斗界面画布的相机渲染
+    /// </summary>
+    private void SetBattleCanvasCameraRender()
+    {
+        BattleCanvas.worldCamera = BattleCamera;
     }
 }

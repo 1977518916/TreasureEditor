@@ -44,9 +44,9 @@ public class EnemyMoveComponent : MoveComponent
         MoveSpeed = moveSpeed;
         EntityTransform = entityTransform;
         ContinueMove = true;
-        if (target != null) 
+        if (target != null)
         {
-            MoveDirection = (this.target.position - EntityTransform.position).normalized;
+            MoveDirection = (this.target.anchoredPosition - EntityTransform.anchoredPosition).normalized;
         }
 
         EventMgr.Instance.RegisterEvent<Entity>(this.entity.EntityId, GameEvent.ReplaceTarget, ReplaceTarget);
@@ -70,14 +70,15 @@ public class EnemyMoveComponent : MoveComponent
     {
         if (!ContinueMove) return;
         if (isStopMove) return;
-        EntityTransform.Translate(MoveDirection * MoveSpeed * time);
+        EntityTransform.anchoredPosition3D +=
+            new Vector3(MoveDirection.x * MoveSpeed * time, MoveDirection.y * MoveSpeed * time, 0f);
     }
     
     private void ReplaceTarget(Entity e)
     {
         if (e == null) return;
         target = e.GetSpecifyComponent<MoveComponent>(ComponentType.MoveComponent).EntityTransform;
-        MoveDirection = (this.target.position - EntityTransform.position).normalized;
+        MoveDirection = (this.target.anchoredPosition - EntityTransform.anchoredPosition).normalized;
     }
 
     /// <summary>

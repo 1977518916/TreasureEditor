@@ -41,7 +41,7 @@ public class BulletMoveComponent : MoveComponent
         startLocation = transform.anchoredPosition;
         ContinueMove = true;
         this.moveType = moveType;
-        ThisTransform = new Vector2(EntityTransform.position.x, EntityTransform.position.y);
+        ThisTransform = new Vector2(EntityTransform.anchoredPosition.x, EntityTransform.anchoredPosition.y);
     }
     
     public void Tick(float time)
@@ -66,7 +66,7 @@ public class BulletMoveComponent : MoveComponent
         switch (moveType)
         {
             case BulletMoveType.RectilinearMotion:
-                RectilinearMotion(time);
+                RectilinearMotion();
                 break;
             case BulletMoveType.ParabolaTargetMove:
                 break;
@@ -78,12 +78,13 @@ public class BulletMoveComponent : MoveComponent
     /// <summary>
     /// 单个子弹朝目标放心移动
     /// </summary>
-    private void RectilinearMotion(float time)
+    private void RectilinearMotion()
     {
         Vector3 direction = MoveDirection - ThisTransform;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         EntityTransform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        EntityTransform.position += EntityTransform.right * MoveSpeed * Time.deltaTime;
+        EntityTransform.anchoredPosition3D += new Vector3((EntityTransform.right * MoveSpeed * Time.deltaTime).x,
+            (EntityTransform.right * MoveSpeed * Time.deltaTime).y, 0f);
     }
 
     /// <summary>

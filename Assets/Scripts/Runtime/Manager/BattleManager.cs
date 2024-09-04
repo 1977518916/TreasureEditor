@@ -68,6 +68,11 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// </summary>
     public RectTransform BulletDerivativeParent;
     
+    /// <summary>
+    /// 战斗场景UI画布
+    /// </summary>
+    public Canvas UICanvas;
+    
     #region Command
 
     /// <summary>

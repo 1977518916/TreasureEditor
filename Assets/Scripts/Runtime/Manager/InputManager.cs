@@ -26,16 +26,16 @@ namespace Runtime.Manager
         
         private void TryShowHideRunTimeData()
         {
-            // if(!Input.GetKeyDown(KeyCode.P))
-            // {
-            //     return;
-            // }
-            // if(runDataUI == null)
-            // {
-            //     runDataUI = Instantiate(AssetsLoadManager.Load<GameObject>("Prefabs/RunTimeSetting"), canvas.transform);
-            //     return;
-            // }
-            // runDataUI.SetActive(!runDataUI.activeSelf);
+            if(!Input.GetKeyDown(KeyCode.P))
+            {
+                return;
+            }
+            if(runDataUI == null)
+            {
+                runDataUI = Instantiate(AssetsLoadManager.Load<GameObject>("Prefabs/RunTimeSetting"), canvas.transform);
+                return;
+            }
+            runDataUI.SetActive(!runDataUI.activeSelf);
         }
 
         private void TryUseSkill()

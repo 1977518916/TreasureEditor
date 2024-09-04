@@ -51,14 +51,7 @@ namespace Runtime.UI
             foreach (SkeletonDataAsset value in assets.Values)
             {
                 GameObject go = Instantiate(nodePrefab, sklls, false);
-                if(value.name.Contains("53"))
-                {
-                    SkeletonGraphic.NewSkeletonGraphicGameObject(value, go.transform,Graphic.defaultGraphicMaterial);
-                }
-                else
-                {
-                    AssetsLoadManager.LoadSkeletonGraphic(value, go.transform);    
-                }
+                AssetsLoadManager.LoadSkeletonGraphic(value, go.transform);    
                 
                 SkillBtn skill = go.AddComponent<SkillBtn>();
                 skill.gameObject.SetActive(true);
@@ -138,12 +131,12 @@ namespace Runtime.UI
             {
                 if(key.Equals(heroData.skillData1?.key))
                 {
-                    tick.Set1();
+                    tick.Set1(key);
                     return;
                 }
                 if(key.Equals(heroData.skillData2?.key))
                 {
-                    tick.Set2();
+                    tick.Set2(key);
                     return;
                 }
                 tick.SetNone();
@@ -157,16 +150,18 @@ namespace Runtime.UI
                     text = transform.GetComponentInChildren<TextMeshProUGUI>();
                 }
 
-                public void Set1()
+                public void Set1(string s)
                 {
                     ExchangeActive(true);
                     text.SetText(1.ToString());
+                    Debug.Log($"{s}: 作为第一个技能");
                 }
 
-                public void Set2()
+                public void Set2(string s)
                 {
                     ExchangeActive(true);
                     text.SetText(2.ToString());
+                    Debug.Log($"{s}: 作为第二个技能");
                 }
 
                 public void SetNone()

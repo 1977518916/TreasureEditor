@@ -28,5 +28,10 @@ public enum EntityType
     /// <summary>
     /// 爆炸物实体
     /// </summary>
-    BoomEntity
+    BoomEntity,
+    
+    /// <summary>
+    /// 技能实体
+    /// </summary>
+    SkillEntity,
 }

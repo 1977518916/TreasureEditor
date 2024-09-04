@@ -9,11 +9,12 @@ using Tao_Framework.Core.Event;
 using Tao_Framework.Core.Singleton;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.UI;
 using UnityTimer;
 
 namespace Runtime.System
 {
-    public class SkillSystem : MonoSingleton<SkillSystem>
+    public partial class SkillSystem : MonoSingleton<SkillSystem>
     {
         private Timer timer;
         private List<HeroEntity> heroEntities;
@@ -23,7 +24,6 @@ namespace Runtime.System
             heroEntities = EntitySystem.Instance.GetAllHeroEntity();
             EventMgr.Instance.RegisterEvent<KeyCode>(GetHashCode(), GameEvent.InvokeSkill, HandEvent);
         }
-
 
         private void HandEvent(KeyCode key)
         {
@@ -45,7 +45,7 @@ namespace Runtime.System
                     if(skillComponent != null)
                     {
                         int skillId = keyCodeValue % 2;
-                        Debug.Log(TranslateUtil.TranslateUi(skillComponent.entity.GetHeroData().modelType) + "释放技能" + skillId);
+                        Debug.Log(TranslateUtil.TranslateUi(skillComponent.Entity.GetHeroData().modelType) + "释放技能" + skillId);
                         skillComponent.UseSkill(skillId);
                     }
                     break;
@@ -68,38 +68,51 @@ namespace Runtime.System
 
         public void ShowSkill(float triggerTime, SkillData skillData, HeroEntity entity)
         {
-            Timer.Register(triggerTime, () =>
+            Timer.Register(triggerTime, () => { CreateSkill(skillData, entity); });
+        }
+
+        private void CreateSkill(SkillData skillData, HeroEntity entity)
+        {
+            PointDetectComponent pointDetectComponent = entity.GetSpecifyComponent<PointDetectComponent>(ComponentType.DetectComponent);
+            if(!pointDetectComponent.GetTarget())
             {
-                skillData = new SkillData();
-                var skeleton = GetSkeletonGraphic(entity);
-                switch(skillData.skillMoveType)
-                {
-                    case SkillMoveType.Bullet:
-                        MakeBullet(skeleton, entity);
-                        break;
-                }
-            });
-        }
-
-        private SkeletonGraphic GetSkeletonGraphic(HeroEntity entity)
-        {
-            //todo 获取技能表现，暂时没有用子弹代替
-            return AssetsLoadManager.LoadBulletSkeletonOfEnum(EntityModelType.CaiWenJi);
-        }
-
-        private void MakeBullet(SkeletonGraphic skeleton, HeroEntity entity)
-        {
-            HeroData heroData = entity.GetHeroData();
-            BulletEntity bulletEntity = skeleton.gameObject.AddComponent<BulletEntity>();
-            bulletEntity.InitBullet(EntityType.EnemyEntity, heroData.atk, BulletAttributeType.Penetrate, entity.GetFireLocation(), BattleManager.Instance.GetBulletParent());
-        }
-
-        private void MakeCure(bool isMult)
-        {
-            foreach (HeroEntity heroEntity in heroEntities)
-            {
-                
+                return;
             }
+            switch(skillData.skillMoveType)
+            {
+                case SkillMoveType.Bullet:
+                    CreateBullet(skillData, entity, pointDetectComponent);
+                    break;
+                case SkillMoveType.Fall:
+                    CreateFall(skillData, entity, pointDetectComponent);
+                    break;
+                case SkillMoveType.Self:
+                    CreateSelf(skillData, entity);
+                    break;
+                case SkillMoveType.Through:
+                    CreateThrough(skillData, entity, pointDetectComponent);
+                    break;
+                case SkillMoveType.HideRange:
+                    CreateHideRange(skillData, entity, pointDetectComponent);
+                    break;
+            }
+        }
+
+        private GameObject CreateSkillGo(HeroEntity entity, SkillData skillData)
+        {
+            GameObject go = new GameObject($"{skillData.key}");
+            go.AddComponent<RectTransform>();
+            go.transform.SetParent(entity.transform);
+            CreateSkeletonGraphic(skillData, go.transform);
+            return go;
+        }
+
+        private SkeletonGraphic CreateSkeletonGraphic(SkillData skillData, Transform parent = null)
+        {
+            SkeletonGraphic skeletonGraphic = AssetsLoadManager.LoadSkeletonGraphic(DataManager.AllEntitySkillSpineDic[skillData.key], parent);
+            skeletonGraphic.transform.eulerAngles = new Vector3(0, 0, skillData.rotations);
+            skeletonGraphic.AnimationState.SetAnimation(0, skeletonGraphic.SkeletonData.Animations.Items[0].Name, skillData.isLoopPlay);
+            return skeletonGraphic;
         }
     }
 }

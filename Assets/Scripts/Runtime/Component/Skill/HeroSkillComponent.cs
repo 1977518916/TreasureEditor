@@ -1,4 +1,5 @@
-﻿using Runtime.Manager;
+﻿using Runtime.Data;
+using Runtime.Manager;
 using Runtime.System;
 using Runtime.Utils;
 using Tao_Framework.Core.Event;
@@ -9,14 +10,14 @@ namespace Runtime.Component.Skill
 {
     public class HeroSkillComponent : SkillComponent
     {
-        public HeroEntity entity;
+        public readonly HeroEntity Entity;
         public DataType.HeroPositionType positionType;
         public HeroSkillComponent(DataType.HeroPositionType positionType, HeroEntity heroEntity)
         {
-            entity = heroEntity;
+            Entity = heroEntity;
             this.positionType = positionType;
         }
-        
+
         public void Tick(float time)
         {
         }
@@ -26,9 +27,12 @@ namespace Runtime.Component.Skill
 
         public void UseSkill(int id)
         {
-            StateType stateType = id == 1 ? StateType.Skill_1 : StateType.Skill_2;
-            entity.GetSpecifyComponent<StateMachineComponent>(ComponentType.StateMachineComponent).ChangeState(stateType);
-            SkillSystem.Instance.ShowSkill(1, null, entity);
+            StateType stateType = id == 0 ? StateType.Skill_1 : StateType.Skill_2;
+            SkillData skillData = id == 0 ? Entity.GetHeroData().skillData1 : Entity.GetHeroData().skillData2;
+            //避免缓存的技能数据不是最新的
+            skillData = DataManager.SkillStruct.GetSkillDataOfKey(skillData.key);
+            Entity.GetSpecifyComponent<StateMachineComponent>(ComponentType.StateMachineComponent).ChangeState(stateType);
+            SkillSystem.Instance.ShowSkill(1, skillData, Entity);
         }
     }
 }

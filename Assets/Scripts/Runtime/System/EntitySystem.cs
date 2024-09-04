@@ -255,6 +255,11 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         return allEntityDic.Values.OfType<HeroEntity>().ToList();
     }
 
+    public List<EnemyEntity> GetAllEnemyEntity()
+    {
+        return allEntityDic.Values.OfType<EnemyEntity>().ToList();
+    }
+
     /// <summary>
     ///  获取存活的敌人的ID
     /// </summary>

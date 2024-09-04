@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Runtime.Data
@@ -41,6 +42,35 @@ namespace Runtime.Data
         public float showScale = 0.5f;
         [Tooltip("展示时位置的偏移")]
         public Vector2 showPosition = Vector2.zero;
+        [Tooltip("游戏中技能需要旋转的角度")]
+        public float rotations = 0;
+        [Tooltip("是否持续播放动画")]
+        public bool isLoopPlay = true;
+        [ShowIf("HasDamageDelay")]
+        [Tooltip("伤害触发的延迟")]
+        public float damageDelay = 0;
+        [ShowIf("HasRange")]
+        [Tooltip("伤害的范围,0为单体伤害")]
+        public float damageRange = 0;
+
+        private bool HasDamageDelay()
+        {
+            return skillMoveType switch
+            {
+                SkillMoveType.Fall => true,
+                _ => false
+            };
+        }
+
+        private bool HasRange()
+        {
+            return skillMoveType switch
+            {
+                SkillMoveType.Fall => true,
+                SkillMoveType.HideRange => true,
+                _ => false
+            };
+        }
     }
 
     /// <summary>
@@ -50,14 +80,22 @@ namespace Runtime.Data
     {
         Cure,
         Attack,
-
+        Buff,
     }
     /// <summary>
     /// 技能的表现类型
     /// </summary>
     public enum SkillMoveType
     {
+        [InspectorName("子弹移动")]
         Bullet,
-
+        [InspectorName("坠落移动")]
+        Fall,
+        [InspectorName("用作自身不移动")]
+        Self,
+        [InspectorName("贯穿")]
+        Through,
+        [InspectorName("自身消失，并造成范围伤害")]
+        HideRange,
     }
 }

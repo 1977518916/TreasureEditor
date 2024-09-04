@@ -1,0 +1,46 @@
+using Runtime.Data;
+
+/// <summary>
+/// 帮助工具  杂工具类
+/// </summary>
+public static class HelpTools
+{
+    /// <summary>
+    /// 子弹对象是否是Spine动画
+    /// </summary>
+    /// <param name="modelType"></param>
+    /// <returns></returns>
+    public static bool BulletIsSpine(EntityModelType modelType)
+    {
+        return modelType < EntityModelType.XiaoBing_GongJian;
+    }
+
+    /// <summary>
+    /// 子弹预制体路径   可以不断拓展来增加对应不同子弹预制体的路径
+    /// </summary>
+    /// <param name="modelType"></param>
+    /// <returns></returns>
+    public static string BulletPrefabPath(EntityModelType modelType)
+    {
+        return BulletIsArrow(modelType) ? BulletArrowPath() : "";
+    }
+
+    /// <summary>
+    /// 箭 子弹路径
+    /// </summary>
+    /// <returns></returns>
+    private static string BulletArrowPath()
+    {
+        return $"Prefabs/Jian";
+    }
+
+    /// <summary>
+    /// 子弹是否是  箭   只需要一直拓展即可
+    /// </summary>
+    /// <param name="modelType"></param>
+    /// <returns></returns>
+    private static bool BulletIsArrow(EntityModelType modelType)
+    {
+        return modelType == EntityModelType.XiaoBing_GongJian;
+    }
+}

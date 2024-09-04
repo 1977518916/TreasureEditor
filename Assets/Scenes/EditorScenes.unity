@@ -5885,7 +5885,7 @@ Camera:
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 0
+  m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &519420032
@@ -20774,6 +20774,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1004961809}
     m_Modifications:
+    - target: {fileID: 8661354025013897575, guid: 48bdd5e1091751541a5d28de5edef45e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661354025013897575, guid: 48bdd5e1091751541a5d28de5edef45e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661354025344098806, guid: 48bdd5e1091751541a5d28de5edef45e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661354025748710839, guid: 48bdd5e1091751541a5d28de5edef45e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8661354025863788787, guid: 48bdd5e1091751541a5d28de5edef45e, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -20861,6 +20877,10 @@ PrefabInstance:
     - target: {fileID: 8661354025863788796, guid: 48bdd5e1091751541a5d28de5edef45e, type: 3}
       propertyPath: m_Name
       value: RunTimeSetting
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661354026439555019, guid: 48bdd5e1091751541a5d28de5edef45e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48bdd5e1091751541a5d28de5edef45e, type: 3}

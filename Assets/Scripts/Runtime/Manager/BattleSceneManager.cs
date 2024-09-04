@@ -1,4 +1,5 @@
-﻿using Tao_Framework.Core.Event;
+﻿using Runtime.UI;
+using Tao_Framework.Core.Event;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,7 @@ namespace Runtime.Manager
 
         public static void LoadBattleScene()
         {
+            CommonUi.Instance.gameObject.SetActive(false);
             SceneManager.LoadScene(BattleSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += (arg0, mode) =>
             {
@@ -26,6 +28,7 @@ namespace Runtime.Manager
             {
                 SceneManager.UnloadSceneAsync(BattleSceneName);
             });
+            CommonUi.Instance.gameObject.SetActive(true);
         }
 
     }

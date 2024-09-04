@@ -32,19 +32,32 @@ namespace Runtime.Manager
         {
             return LoadEntityModelSkeleton(entityModelType, parent, StateType.Idle).GameObject();
         }
-
-        public static GameObject LoadBullet(EntityModelType entityModelType, Transform parent = null)
+        
+        /// <summary>
+        /// 加载子弹
+        /// </summary>
+        /// <param name="modelType"></param>
+        /// <param name="layer"></param>
+        /// <param name="parent"></param>
+        /// <returns></returns>
+        public static GameObject LoadBullet(EntityModelType modelType, int layer, Transform parent = null)
         {
-            var gameObject = new GameObject($"{entityModelType.ToString()}_Bullet", typeof(RectTransform))
+            var bulletObj = new GameObject($"{modelType.ToString()}_Bullet", typeof(RectTransform)) { layer = layer };
+            bulletObj.transform.SetParent(parent);
+            bulletObj.transform.localPosition = Vector3.zero;
+            bulletObj.transform.localScale = Vector3.one;
+            if (HelpTools.BulletIsSpine(modelType))
             {
-                layer = 5
-            };
-            gameObject.transform.SetParent(parent);
-            gameObject.transform.localPosition = Vector3.zero;
-            gameObject.transform.localScale = Vector3.one;
-            GameObject b = LoadBulletSkeletonOfEnum(entityModelType, gameObject.transform).GameObject();
-            b.transform.eulerAngles = new Vector3(0, 0, -90);
-            return gameObject;
+                var spine = LoadBulletSkeletonOfEnum(modelType, bulletObj.transform).GameObject();
+                spine.transform.eulerAngles = new Vector3(0, 0, -90f);
+            }
+            else
+            {
+                var bullet = Load<GameObject>(HelpTools.BulletPrefabPath(modelType));
+                bullet.transform.SetParent(bulletObj.transform);
+                bullet.transform.eulerAngles = new Vector3(0, 0, 90f);
+            }
+            return bulletObj;
         }
 
         public static Sprite LoadBg(MapTypeEnum mapTypeEnum)

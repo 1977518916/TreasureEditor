@@ -115,11 +115,11 @@ public class HeroAttackComponent : AttackComponent
     {
         if (isInAttackCd) return;
         if (IsInAttackInterval) return;
-        heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent)
-            .TryChangeState(StateType.Attack);
-        // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
+        var stateMachine = heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent);
+        stateMachine.TryChangeState(StateType.Attack);
+        
         MakeBullet(target.position);
-
+        
         float deviation = 0.1f;
         for (int i = 1; i < bulletAmount; i++)
         {
@@ -154,14 +154,14 @@ public class HeroAttackComponent : AttackComponent
     {
         LastAttackTime = Time.time;
         IsInAttackInterval = true;
-        var bulletGo = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData().modelType);
+        var bulletGo = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData().modelType, LayerMask.NameToLayer("BattleUI"));
         var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
         var bulletTran = bulletEntity.GetComponent<RectTransform>();
         var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : heroEntity.GetHeroData().atk;
         var fireLocation = heroEntity.GetFireLocation();
         var bulletParent = BattleManager.Instance.GetBulletParent();
         var bulletAttributeType = heroEntity.GetHeroData().bulletAttributeType;
-        //--------------------- 初始化 ---------------------------------
+        //--------------------- 初始化 ----------------------------------
         bulletEntity.InitBullet(EntityType.EnemyEntity, bulletHurt, bulletAttributeType, fireLocation, bulletParent);
         bulletEntity.MoveObject = bulletGo.transform.GetChild(0).gameObject;
         //--------------------- 添加组件 ---------------------------------

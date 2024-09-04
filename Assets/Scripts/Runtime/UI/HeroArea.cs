@@ -100,7 +100,7 @@ namespace Runtime.UI
                         return;
                     }
                     AssetsLoadManager.LoadHero(heroData.modelType, heroParent);
-                    AssetsLoadManager.LoadBullet(heroData.modelType, bulletParent);
+                    AssetsLoadManager.LoadBullet(heroData.modelType, LayerMask.NameToLayer("UI"), bulletParent);
                 };
 
                 TMP_Dropdown bulletType = transform.FindGet<TMP_Dropdown>("bulletField");

@@ -9,23 +9,23 @@ public class EnemyAttackComponent : AttackComponent
     public bool IsInAttackInterval { get; set; }
     public float LastAttackTime { get; set; }
     public float AttackInterval { get; set; }
-    
-    private EnemyEntity entity;
+
+    private readonly EnemyEntity entity;
 
     private readonly int hurt;
     
     /// <summary>
     /// 点检测组件
     /// </summary>
-    private PointDetectComponent pointDetectComponent;
+    private PointDetectComponent detect;
 
-    public EnemyAttackComponent(float attackInterval, int hurt, EnemyEntity entity, PointDetectComponent pointDetectComponent)
+    public EnemyAttackComponent(float interval, int hurtValue, EnemyEntity e, PointDetectComponent detectComponent)
     {
-        AttackInterval = attackInterval;
-        this.entity = entity;
-        this.hurt = hurt;
+        AttackInterval = interval;
+        entity = e;
+        hurt = hurtValue;
         IsInAttackInterval = false;
-        this.pointDetectComponent = pointDetectComponent;
+        detect = detectComponent;
     }
 
     public void Tick(float time)
@@ -36,9 +36,9 @@ public class EnemyAttackComponent : AttackComponent
             IsInAttackInterval = !(Time.time - LastAttackTime >= AttackInterval);
         }
 
-        if (pointDetectComponent.IsVeryClose())
+        if (detect.IsVeryClose())
         {
-            Attack(1, pointDetectComponent.GetTarget().anchoredPosition);
+            Attack(1, detect.GetTarget().anchoredPosition);
         }
     }
 
@@ -46,15 +46,16 @@ public class EnemyAttackComponent : AttackComponent
     {
         
     }
-
+    
     public void Attack(float time, Vector2 point)
     {
         if (IsInAttackInterval) return;
-        
-        entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
-        pointDetectComponent.GetTarget().GetComponent<HeroEntity>().
-            GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(DataManager.GameData.isInvicibleSelf ? 1 : hurt);
         LastAttackTime = Time.time;
         IsInAttackInterval = true;
+        
+        entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
+        var target = detect.GetTarget().GetComponent<HeroEntity>();
+        var heroStatus = target.GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent);
+        heroStatus.Hit(DataManager.GameData.isInvicibleSelf ? 1 : hurt);
     }
 }

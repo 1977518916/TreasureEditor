@@ -29,13 +29,18 @@ public class BulletRefractionAttribute : BulletAttribute
     {
 
     }
-    
+
     public void Execute()
     {
         refractionCount -= 1;
-        bulletEntity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent).MoveDirection =
-            EntitySystem.Instance.GetEntity(EntitySystem.Instance.GetSurviveEnemyID())
-                .GetSpecifyComponent<EnemyMoveComponent>(ComponentType.MoveComponent).EntityTransform.anchoredPosition;
+        if (EntitySystem.Instance.GetSurviveEnemyID() != -1)
+        {
+            var target = EntitySystem.Instance.GetEntity(EntitySystem.Instance.GetSurviveEnemyID())
+                .GetSpecifyComponent<EnemyMoveComponent>(ComponentType.MoveComponent).EntityTransform;
+            bulletEntity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent)
+                .SetMoveDirection(target.position);
+        }
+
         if (refractionCount == 0)
             EntitySystem.Instance.ReleaseEntity(bulletEntity.EntityId);
     }

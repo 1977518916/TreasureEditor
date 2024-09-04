@@ -103,11 +103,23 @@ public class BulletMoveComponent : MoveComponent
     /// </summary>
     private void RectilinearMotion()
     {
-        Vector2 direction = targetScreenLocation - sourceScreenLocation;
+        Vector2 direction = MoveDirection;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         EntityTransform.rotation = Quaternion.Euler(0f, 0f, angle);
         EntityTransform.anchoredPosition3D += new Vector3((EntityTransform.right * MoveSpeed * Time.deltaTime).x,
             (EntityTransform.right * MoveSpeed * Time.deltaTime).y, 0f);
+    }
+    
+    /// <summary>
+    /// 设置移动方向
+    /// </summary>
+    /// <param name="target"></param>
+    public void SetMoveDirection(Vector2 target)
+    {
+        var worldCamera = GameManager.Instance.BattleCanvas.worldCamera;
+        sourceScreenLocation = EntityTransform.ScreenToLocalPoint(worldCamera);
+        targetScreenLocation = EntityTransform.ScreenToLocalPoint(worldCamera, target);
+        MoveDirection = targetScreenLocation - sourceScreenLocation;
     }
 
     /// <summary>

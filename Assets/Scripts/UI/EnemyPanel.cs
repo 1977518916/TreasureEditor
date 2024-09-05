@@ -8,14 +8,12 @@ namespace QFramework.Example
 	public class EnemyPanelData : UIPanelData
 	{
 	}
-	public partial class EnemyPanel : UIPanel,IController
+	public partial class EnemyPanel : UIPanel
 	{
 		private EnemiesDataModel enemiesDataModel;
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as EnemyPanelData ?? new EnemyPanelData();
-			// please add init code here
-			enemiesDataModel = this.GetModel<EnemiesDataModel>();
 		}
 		
 		protected override void OnOpen(IUIData uiData = null)
@@ -32,10 +30,6 @@ namespace QFramework.Example
 		
 		protected override void OnClose()
 		{
-		}
-		public IArchitecture GetArchitecture()
-		{
-			return ProtectArchitecture.Interface;
 		}
 	}
 }

@@ -1,3 +1,4 @@
+using Runtime.Manager;
 using UnityEngine;
 
 /// <summary>
@@ -67,6 +68,6 @@ public class EnemyRemoteAttackComponent : AttackComponent
         IsInAttackInterval = true;
         
         entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
-        
+        //var bulletGo = AssetsLoadManager.LoadBullet(entity., LayerMask.NameToLayer("BattleUI"));
     }
 }

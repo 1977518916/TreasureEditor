@@ -6,6 +6,11 @@ namespace Runtime.Data
     public class EnemyData : UnitData
     {
         /// <summary>
+        /// 模型类型
+        /// </summary>
+        public EntityModelType modelType;
+
+        /// <summary>
         /// 移动速度
         /// </summary>
         public float speed = 30;

@@ -29,7 +29,7 @@ public class BulletRefractionAttribute : BulletAttribute
     {
 
     }
-
+    
     public void Execute()
     {
         refractionCount -= 1;

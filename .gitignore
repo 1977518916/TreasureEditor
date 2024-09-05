@@ -77,3 +77,7 @@ crashlytics-build.properties
 
 /[Aa]ssets/[Pp]lugins/[Tt]extMesh Pro/[Rr]esources/Fonts & Materials/SIMKAI SDF.asset
 Fonts & Materials
+/Assets/Plugins/TextMesh Pro/Resources/Fonts.meta
+/Assets/Plugins/TextMesh Pro/Resources/Fonts/SIMKAI SDF.asset
+/Assets/Plugins/TextMesh Pro/Resources/Fonts/SIMKAI SDF.asset.meta
+/Assets/Tmp

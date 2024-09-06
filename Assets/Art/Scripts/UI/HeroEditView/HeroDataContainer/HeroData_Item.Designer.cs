@@ -5,6 +5,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using Runtime.Data;
 
 namespace QFramework.Example
 {
@@ -19,7 +20,12 @@ namespace QFramework.Example
 		[SerializeField] public HeroSkillDataEdit HeroSkillData;
 		[SerializeField] public BulletModelDataEdit BulletModelData;
 		[SerializeField] public UnityEngine.UI.Button Delete_Btn;
-
+		
+		/// <summary>
+		/// 英雄数据
+		/// </summary>
+		private HeroData data;
+		
 		public void Clear()
 		{
 			HeroNumber_Text = null;

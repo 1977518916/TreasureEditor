@@ -7,11 +7,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
-using Runtime.Data;
 
 namespace QFramework.Example
 {
-	public partial class HeroSkillDataEdit : UIElement
+	public partial class SkillItem : UIElement
 	{
 		private void Awake()
 		{
@@ -19,16 +18,6 @@ namespace QFramework.Example
 
 		protected override void OnBeforeDestroy()
 		{
-		}
-
-		public void InitView(HeroData heroData)
-		{
-			data = heroData;
-		}
-
-		private void InitSkillBtn()
-		{
-			//SkillOne_Select_Btn.onClick.AddListener(UIKit.OpenPanel<>());
 		}
 	}
 }

@@ -5,24 +5,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
-using Runtime.Data;
 
 namespace QFramework.Example
 {
-	public partial class HeroModelScaleDataEdit
+	public partial class SkillItem
 	{
-		[SerializeField] public TMPro.TMP_InputField ModelScale_Input;
-
-		private HeroData data;
+		[SerializeField] public UnityEngine.UI.Button SkillSelectBtn;
 
 		public void Clear()
 		{
-			ModelScale_Input = null;
+			SkillSelectBtn = null;
 		}
 
 		public override string ComponentName
 		{
-			get { return "HeroModelScaleDataEdit"; }
+			get { return "SkillItem";}
 		}
 	}
 }

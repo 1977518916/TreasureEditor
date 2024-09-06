@@ -19,5 +19,10 @@ namespace QFramework.Example
 		protected override void OnBeforeDestroy()
 		{
 		}
+
+		private void InitView()
+		{
+
+		}
 	}
 }

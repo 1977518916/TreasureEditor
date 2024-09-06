@@ -49,7 +49,7 @@ public partial class EntitySystem
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, index);
         // 初始化技能组件
-        //InitSkill(type, heroEntity);
+        InitSkill(heroEntity);
     }
 
     /// <summary>
@@ -57,9 +57,9 @@ public partial class EntitySystem
     /// </summary>
     /// <param name="positionType"></param>
     /// <param name="heroEntity"></param>
-    private void InitSkill(DataType.HeroPositionType positionType, HeroEntity heroEntity)
+    private void InitSkill(HeroEntity heroEntity)
     {
-        HeroSkillComponent skillComponent = new HeroSkillComponent(positionType, heroEntity);
+        HeroSkillComponent skillComponent = new HeroSkillComponent(heroEntity);
         heroEntity.AllComponentList.Add(skillComponent);
     }
 

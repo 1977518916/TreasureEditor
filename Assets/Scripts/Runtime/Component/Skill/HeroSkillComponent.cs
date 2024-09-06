@@ -11,11 +11,9 @@ namespace Runtime.Component.Skill
     public class HeroSkillComponent : SkillComponent
     {
         public readonly HeroEntity Entity;
-        public DataType.HeroPositionType positionType;
-        public HeroSkillComponent(DataType.HeroPositionType positionType, HeroEntity heroEntity)
+        public HeroSkillComponent(HeroEntity heroEntity)
         {
             Entity = heroEntity;
-            this.positionType = positionType;
         }
 
         public void Tick(float time)

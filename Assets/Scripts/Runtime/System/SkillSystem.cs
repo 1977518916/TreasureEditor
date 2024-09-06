@@ -41,7 +41,7 @@ namespace Runtime.System
                 case KeyCode.Alpha9:
                     Debug.Log($"按下{key}");
                     int keyCodeValue = (int)key + (key == KeyCode.Alpha0 ? 58 : 0) - 49;
-                    HeroSkillComponent skillComponent = GetHeroSkillOfPosition((DataType.HeroPositionType)(keyCodeValue / 2));
+                    HeroSkillComponent skillComponent = GetHeroSkillOfPosition(keyCodeValue / 2);
                     if(skillComponent != null)
                     {
                         int skillId = keyCodeValue % 2;
@@ -52,12 +52,12 @@ namespace Runtime.System
             }
         }
 
-        private HeroSkillComponent GetHeroSkillOfPosition(DataType.HeroPositionType positionType)
+        private HeroSkillComponent GetHeroSkillOfPosition(int index)
         {
             foreach (HeroEntity heroEntity in heroEntities)
             {
                 HeroSkillComponent skillComponent = heroEntity.GetSpecifyComponent<HeroSkillComponent>(ComponentType.SkillComponent);
-                if(skillComponent.positionType == positionType)
+                if(heroEntity.GetHeroData() == DataManager.HeroDataList[index])
                 {
                     return skillComponent;
                 }

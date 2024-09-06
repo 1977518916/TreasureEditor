@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
 
 namespace QFramework.Example
 {
-	// Generate Id:854287ec-5a76-4b9e-aca0-9e1fc6aee2de
+	// Generate Id:af281b6e-6aef-43ea-9e92-19c95f3c35e7
 	public partial class MapEditorView
 	{
 		public const string Name = "MapEditorView";
@@ -16,6 +16,8 @@ namespace QFramework.Example
 		public SelectNode SelectNode;
 		[SerializeField]
 		public UnityEngine.UI.Button CloseButton;
+		[SerializeField]
+		public UnityEngine.UI.Button SaveButton;
 		
 		private MapEditorViewData mPrivateData = null;
 		
@@ -24,6 +26,7 @@ namespace QFramework.Example
 			ScrollView = null;
 			SelectNode = null;
 			CloseButton = null;
+			SaveButton = null;
 			
 			mData = null;
 		}

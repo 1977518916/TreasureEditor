@@ -11,6 +11,7 @@ namespace QFramework.Example
     }
     public partial class MapEditorView : UIPanel
     {
+        Action refreshAction;
         protected override void OnInit(IUIData uiData = null)
         {
             mData = uiData as MapEditorViewData ?? new MapEditorViewData();
@@ -37,12 +38,14 @@ namespace QFramework.Example
         private void Init()
         {
             CloseButton.onClick.AddListener(() => UIKit.HidePanel<MapEditorView>());
+            SaveButton.onClick.AddListener(() => ReadWriteManager.Level.SaveLevelData(DataManager.LevelData));
             InitMaps();
+            refreshAction.Invoke();
         }
 
         private void InitMaps()
         {
-            Action refreshAction = null;
+
             foreach (MapTypeEnum type in Enum.GetValues(typeof(MapTypeEnum)))
             {
                 SelectNode selectNode = Instantiate(SelectNode, ScrollView.content);

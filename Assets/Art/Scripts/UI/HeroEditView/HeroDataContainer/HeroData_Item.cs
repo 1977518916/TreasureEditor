@@ -29,12 +29,25 @@ namespace QFramework.Example
 		public void InitView(int index, HeroData heroData)
 		{
 			data = heroData;
+			gameObject.SetActive(true);
 			InitDeleteBtn(index);
+		}
+		
+		/// <summary>
+		/// 初始化编号
+		/// </summary>
+		/// <param name="index"></param>
+		private void InitNumber(int index)
+		{
+			HeroNumber_Text.text = $"{index + 1}";
 		}
 		
 		
 		
-		
+		/// <summary>
+		/// 初始化删除按钮
+		/// </summary>
+		/// <param name="index"></param>
 		private void InitDeleteBtn(int index)
 		{
 			// 首个英雄无法被删除

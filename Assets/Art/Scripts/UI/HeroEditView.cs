@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using Runtime.Data;
+using Runtime.Manager;
 
 namespace QFramework.Example
 {
@@ -17,7 +19,10 @@ namespace QFramework.Example
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
-			
+			EditContainer.InitView(DataManager.HeroDataList);
+			HeroAdd_Btn.onClick.AddListener(() => EditContainer.AddHeroData(new HeroData()));
+			SaveData_Btn.onClick.AddListener(() => EditContainer.SaveAllHeroData());
+			ResetData_Btn.onClick.AddListener(() => EditContainer.ResetView());
 		}
 		
 		protected override void OnShow()

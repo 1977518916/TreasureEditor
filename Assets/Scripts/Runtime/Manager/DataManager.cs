@@ -46,7 +46,8 @@ namespace Runtime.Manager
         /// <summary>
         /// 关卡数据
         /// </summary>
-        public static LevelData LevelData;
+        public static LevelData LevelData { get; private set; }
+
         /// <summary>
         /// 游戏内的动态数据
         /// </summary>
@@ -84,8 +85,9 @@ namespace Runtime.Manager
         /// <summary>
         /// 初始化数据
         /// </summary>
-        public static void InitData()
+        static DataManager()
         {
+            LevelData = ReadWriteManager.Level.GetLevelData();
             InitAllSpineData();
             SkillStruct = AssetsLoadManager.Load<SkillStruct>("Config/AllSkillData");
         }

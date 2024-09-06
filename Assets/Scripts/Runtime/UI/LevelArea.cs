@@ -39,7 +39,7 @@ namespace Runtime.UI
         private Transform enemyParent, bossModelParent, bossBulletModelParent;
         private Image bg;
         private TimesData CurrentData => levelData.timesDatas[dropdown.value];
-        
+
         private void Awake()
         {
             EventMgr.Instance.RegisterEvent(GetHashCode(), GameEvent.DataInitEnd, Init);
@@ -79,8 +79,7 @@ namespace Runtime.UI
 
         private void EnemyUiInit()
         {
-            levelData = ReadWriteManager.Level.GetLevelData();
-            DataManager.LevelData = levelData;
+            levelData = DataManager.LevelData;
 
             typeDropDown.ClearOptions();
             mapDropDown.ClearOptions();
@@ -114,7 +113,7 @@ namespace Runtime.UI
             speed.onValueChanged.AddListener(v => CurrentData.enemyData.speed = float.Parse(v));
             enemyScale.onValueChanged.AddListener(value =>
             {
-                if (string.IsNullOrEmpty(value))
+                if(string.IsNullOrEmpty(value))
                 {
                     return;
                 }
@@ -123,18 +122,15 @@ namespace Runtime.UI
                     ? Convert.ToSingle(value) <= 2 ? Convert.ToSingle(value) : 2f
                     : 0.1f;
                 CurrentData.enemyData.modelScale = validValue;
-                if (enemyParent.GetChild(0) != null)
+                if(enemyParent.GetChild(0) != null)
                 {
                     enemyParent.GetChild(0).transform.localScale = new Vector3(validValue, validValue, 1f);
                 }
             });
-            enemyScale.onEndEdit.AddListener(value =>
-            {
-                enemyScale.SetTextWithoutNotify($"{CurrentData.enemyData.modelScale}");
-            });
+            enemyScale.onEndEdit.AddListener(value => { enemyScale.SetTextWithoutNotify($"{CurrentData.enemyData.modelScale}"); });
             enemyScale.SetTextWithoutNotify($"{CurrentData.enemyData.modelScale}");
         }
-        
+
         private void ShowMap(int _ = 0)
         {
             bg.sprite = AssetsLoadManager.LoadBg(levelData.mapType);
@@ -191,7 +187,7 @@ namespace Runtime.UI
             BossUIDataUpdate();
             ReadWriteManager.Level.SaveLevelData(levelData);
         }
-        
+
         private void Delete()
         {
             ReadWriteManager.Level.SaveLevelData(null);
@@ -201,7 +197,7 @@ namespace Runtime.UI
         }
 
         #region BossUI
-        
+
         /// <summary>
         /// Boss UI 查找
         /// </summary>
@@ -232,7 +228,7 @@ namespace Runtime.UI
             UpdateBossRunSpeed($"{levelData.BossData.RunSpeed}");
             bossScale.SetTextWithoutNotify($"{levelData.BossData.modelScale}");
         }
-        
+
         /// <summary>
         /// Boss UI初始化
         /// </summary>
@@ -241,9 +237,9 @@ namespace Runtime.UI
             levelData.BossData ??= new BossData();
             BossUIFind();
             BossUiBindAction();
-            
+
         }
-        
+
         private void BossUiBindAction()
         {
             addBossBtn.onClick.AddListener(AddBossAction);
@@ -256,7 +252,7 @@ namespace Runtime.UI
             bossRun.onValueChanged.AddListener(UpdateBossRunSpeed);
             BindBossModelScaleInputEvent();
         }
-        
+
         private void AddBossAction()
         {
             addBossBtn.gameObject.SetActive(false);
@@ -287,7 +283,7 @@ namespace Runtime.UI
                 ? (BulletType)selectBossModel.value
                 : BulletType.NoEntity;
         }
-        
+
         /// <summary>
         /// 重置BossUI
         /// </summary>
@@ -324,26 +320,23 @@ namespace Runtime.UI
         {
             bossScale.onValueChanged.AddListener(value =>
             {
-                if (string.IsNullOrEmpty(value))
+                if(string.IsNullOrEmpty(value))
                 {
                     return;
                 }
-                
+
                 var validValue = Convert.ToSingle(value) > 0
                     ? Convert.ToSingle(value) <= 2 ? Convert.ToSingle(value) : 2f
                     : 0.1f;
                 levelData.BossData.modelScale = validValue;
-                if (bossModelParent.GetChild(0) != null)
+                if(bossModelParent.GetChild(0) != null)
                 {
                     bossModelParent.GetChild(0).transform.localScale = new Vector3(validValue, validValue, 1f);
                 }
             });
-            bossScale.onEndEdit.AddListener(value =>
-            {
-                bossScale.SetTextWithoutNotify($"{levelData.BossData.modelScale}");
-            });
+            bossScale.onEndEdit.AddListener(value => { bossScale.SetTextWithoutNotify($"{levelData.BossData.modelScale}"); });
         }
-        
+
         /// <summary>
         /// 更新Boss生成时间
         /// </summary>
@@ -353,7 +346,7 @@ namespace Runtime.UI
             bossGenerateTime.text = generateTime;
             levelData.BossData.Time = Convert.ToSingle(bossGenerateTime.text);
         }
-        
+
         /// <summary>
         /// 更新Boss攻击力
         /// </summary>
@@ -363,7 +356,7 @@ namespace Runtime.UI
             bossAttack.text = bossAtk;
             levelData.BossData.Atk = Convert.ToInt32(bossAttack.text);
         }
-        
+
         /// <summary>
         /// 更新Boss血量
         /// </summary>
@@ -372,8 +365,8 @@ namespace Runtime.UI
         {
             bossHp.text = bossHpValue;
             levelData.BossData.Hp = Convert.ToInt32(bossHp.text);
-        }   
-        
+        }
+
         /// <summary>
         /// 更新Boss移动速度
         /// </summary>
@@ -383,14 +376,14 @@ namespace Runtime.UI
             bossRun.text = bossRunSpeed;
             levelData.BossData.RunSpeed = Convert.ToSingle(bossRun.text);
         }
-        
+
         /// <summary>
         /// 更新子弹下拉框
         /// </summary>
         private void UpdateBulletDrop()
         {
             selectBossBullet.value = -1;
-            if (selectBossBullet.options.Count == 0) 
+            if(selectBossBullet.options.Count == 0)
             {
                 var self = new TMP_Dropdown.OptionData
                 {
@@ -409,9 +402,9 @@ namespace Runtime.UI
                 levelData.BossData.BulletType = value != -1
                     ? IsHoldTheBullet(levelData.BossData.EntityModelType) ? (BulletType)value : BulletType.NoEntity
                     : BulletType.NoEntity;
-                if (IsHoldTheBullet(levelData.BossData.EntityModelType))   
+                if(IsHoldTheBullet(levelData.BossData.EntityModelType))
                 {
-                    switch (value)
+                    switch(value)
                     {
                         case 0:
                             ShowBossBulletModel(levelData.BossData.EntityModelType);
@@ -432,7 +425,7 @@ namespace Runtime.UI
         {
             return modelType is not (EntityModelType.DongZhuo or EntityModelType.Null);
         }
-        
+
         private IEnumerator Wait()
         {
             yield return new WaitForSeconds(0.5f);
@@ -447,7 +440,7 @@ namespace Runtime.UI
             selectBossModel.options.Clear();
             selectBossModel.ClearOptions();
             selectBossModel.onValueChanged.RemoveAllListeners();
-            if (!isInit) return;
+            if(!isInit) return;
             foreach (EntityModelType entityModelName in Enum.GetValues(typeof(EntityModelType)))
             {
                 var option = new TMP_Dropdown.OptionData
@@ -461,7 +454,7 @@ namespace Runtime.UI
             {
                 levelData.BossData.EntityModelType = (EntityModelType)value;
                 UpdateBulletDrop();
-                if (value == 0)
+                if(value == 0)
                 {
                     HideBossModel();
                     return;
@@ -469,7 +462,7 @@ namespace Runtime.UI
 
                 ShowBoss((EntityModelType)value);
             });
-            
+
             selectBossModel.value = levelData.BossData.EntityModelType == EntityModelType.Null
                 ? 1
                 : (int)levelData.BossData.EntityModelType;
@@ -483,7 +476,7 @@ namespace Runtime.UI
             HideBossModel();
             AssetsLoadManager.LoadBoss(entityModelType, bossModelParent);
         }
-        
+
         /// <summary>
         /// 隐藏Boss模型,也是删除
         /// </summary>
@@ -491,11 +484,11 @@ namespace Runtime.UI
         {
             bossModelParent.ClearChild();
         }
-            
+
         private void ShowBossBulletModel(EntityModelType entityModelType)
         {
             HideBossBulletModel();
-            if (entityModelType is EntityModelType.DongZhuo or EntityModelType.Null)
+            if(entityModelType is EntityModelType.DongZhuo or EntityModelType.Null)
             {
                 return;
             }

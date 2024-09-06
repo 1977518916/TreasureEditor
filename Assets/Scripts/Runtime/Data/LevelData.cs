@@ -49,6 +49,8 @@ namespace Runtime.Data
         public EnemyData enemyData = new EnemyData();
         
         public EnemyTypeEnum enemyType = EnemyTypeEnum.XiaoBing;
+
+        public EnemyType enemyActionType = EnemyType.Melee;
     }
 
     [Serializable]

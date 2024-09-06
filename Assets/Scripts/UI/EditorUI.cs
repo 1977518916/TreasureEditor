@@ -10,7 +10,7 @@ namespace QFramework.Example
 		void Start()
 		{
 			// Code Here
-			UIKit.OpenPanel<EnemyPanel>();
+			UIKit.OpenPanel<EnemyEditorView>();
 		}
 	}
 }

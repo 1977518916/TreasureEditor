@@ -1,20 +1,14 @@
-﻿using System;
-using UnityEngine;
-using Object = UnityEngine.Object;
+﻿using UnityEngine;
 
 namespace Runtime.Extensions
 {
     public static class TransformExtensions
     {
-        public static void ClearChild(this Transform transform, Action<GameObject> action = null)
+        public static void ClearChild(this Transform transform)
         {
-            if(action == null)
-            {
-                action = Object.Destroy;
-            }
             foreach (Transform t in transform)
             {
-                action.Invoke(t.gameObject);
+                UnityEngine.Object.Destroy(t.gameObject);
             }
         }
     }

@@ -19,6 +19,11 @@ namespace QFramework.Example
 		/// </summary>
 		private List<HeroData> currentAllHeroData = new List<HeroData>();
 		
+		/// <summary>
+		/// 当前所有英雄数据视图容器
+		/// </summary>
+		private List<HeroData_Item> currentAllHeroDataViewList = new List<HeroData_Item>();
+		
 		public void Clear()
 		{
 			HeroData_Item = null;

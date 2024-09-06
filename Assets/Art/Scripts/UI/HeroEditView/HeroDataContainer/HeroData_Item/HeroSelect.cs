@@ -19,5 +19,15 @@ namespace QFramework.Example
 		protected override void OnBeforeDestroy()
 		{
 		}
+		
+		public void InitView()
+		{
+			HeroSelect_Btn.onClick.AddListener(() =>
+			{
+				// 打开选择英雄的页面 并绑定对应的事件
+			});
+			
+			
+		}
 	}
 }

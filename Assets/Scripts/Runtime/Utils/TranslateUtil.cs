@@ -30,6 +30,20 @@ namespace Runtime.Utils
             }
         }
 
+        public static string TranslateUi(EnemyType enemyType)
+        {
+            switch(enemyType)
+            {
+                case EnemyType.Buff:
+                    return "buff";
+                case EnemyType.Melee:
+                    return "近战";
+                case EnemyType.Remote:
+                default:
+                    return "远程";
+            }
+        }
+
         public static string TranslateUi(MapTypeEnum mapTypeEnum)
         {
             switch(mapTypeEnum)
@@ -52,7 +66,7 @@ namespace Runtime.Utils
                     return "自身子弹";
             }
         }
-        
+
         public static string TranslateUi(BulletAttributeType attributeType)
         {
             return attributeType switch

@@ -2,18 +2,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
 using Runtime.Data;
+using Runtime.Manager;
 
 namespace QFramework.Example
 {
-	public class EnemyPanelData : UIPanelData
+	public class EnemyEditorViewData : UIPanelData
 	{
+		public LevelData LevelData => DataManager.LevelData;
 	}
-	public partial class EnemyPanel : UIPanel
+	public partial class EnemyEditorView : UIPanel
 	{
-		private EnemiesDataModel enemiesDataModel;
 		protected override void OnInit(IUIData uiData = null)
 		{
-			mData = uiData as EnemyPanelData ?? new EnemyPanelData();
+			mData = uiData as EnemyEditorViewData ?? new EnemyEditorViewData();
+			// please add init code here
+			InitShow();
 		}
 		
 		protected override void OnOpen(IUIData uiData = null)

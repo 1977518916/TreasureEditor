@@ -60,21 +60,30 @@ namespace Runtime.Manager
             return bulletObj;
         }
 
+        /// <summary>
+        /// 加载背景精灵
+        /// </summary>
+        /// <param name="mapTypeEnum">地图枚举</param>
+        /// <returns></returns>
+        /// <exception cref="DataException"></exception>
         public static Sprite LoadBg(MapTypeEnum mapTypeEnum)
         {
             if(mapTypeEnum != MapTypeEnum.Other)
             {
                 return Resources.Load<Sprite>(DataManager.MapTexturePath + (int)mapTypeEnum);
             }
-            byte[] fileData = LoadExternalMap();
             Texture2D texture2D = new Texture2D(2, 2);
             texture2D.filterMode = FilterMode.Bilinear;
-            if(texture2D.LoadImage(fileData))
+            byte[] fileData = LoadExternalMap();
+            if(fileData != null)
             {
-                return Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
+                if(texture2D.LoadImage(fileData))
+                {
+                    return Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
+                }
             }
-            throw new DataException("外部地图数据读取错误!");
-
+            Debug.Log("未加载到自定义地图");
+            return Sprite.Create(Texture2D.normalTexture, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
         }
 
         private static byte[] LoadExternalMap()
@@ -89,7 +98,7 @@ namespace Runtime.Manager
             {
                 return File.ReadAllBytes(path);
             }
-            throw new DataException("未找到外部地图!");
+            return null;
         }
 
         public static SkeletonGraphic LoadSkeletonGraphic(string path, Transform parent = null)

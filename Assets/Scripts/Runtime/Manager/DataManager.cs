@@ -15,8 +15,7 @@ namespace Runtime.Manager
         /// <summary>
         /// 本次使用的英雄列表
         /// </summary>
-        public static readonly Dictionary<DataType.HeroPositionType, HeroData> HeroDatas =
-            new Dictionary<DataType.HeroPositionType, HeroData>();
+        public static readonly List<HeroData> HeroDataList = new List<HeroData>();
 
         /// <summary>
         /// 所有的动画资源
@@ -52,26 +51,7 @@ namespace Runtime.Manager
         /// 游戏内的动态数据
         /// </summary>
         public static GameData GameData;
-        /// <summary>
-        /// 获取当前使用的英雄列表游戏物体
-        /// </summary>
-        /// <returns></returns>
-        [Command]
-        public static List<GameObject> GetHeroes()
-        {
-            List<GameObject> gameObjects = new List<GameObject>();
-            foreach ((DataType.HeroPositionType key, HeroData value) in HeroDatas)
-            {
-                if(value.modelType == EntityModelType.Null)
-                {
-                    gameObjects.Add(null);
-                    continue;
-                }
-                gameObjects.Add(AssetsLoadManager.LoadHero(value.modelType, null));
-            }
-            return gameObjects;
-        }
-
+        
         /// <summary>
         /// 地图素材路径
         /// </summary>

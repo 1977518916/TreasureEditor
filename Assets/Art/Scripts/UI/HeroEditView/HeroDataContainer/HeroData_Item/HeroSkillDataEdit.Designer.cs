@@ -19,7 +19,6 @@ namespace QFramework.Example
 		[SerializeField] public Spine.Unity.SkeletonGraphic SkillTwoView;
 
 		private HeroData data;
-		private Dictionary<string, SkeletonDataAsset> allSkill;
 		
 		public void Clear()
 		{

@@ -47,7 +47,7 @@ namespace Runtime.UI
                 index = int.Parse(name.Replace("hero", ""));
                 positionType = (DataType.HeroPositionType)(index - 1);
                 heroData = ReadWriteManager.Hero.GetHeroData(positionType);
-                DataManager.HeroDatas.Add(positionType, heroData);
+                //DataManager.HeroDatas.Add(positionType, heroData);
                 transform.FindGet<TextMeshProUGUI>("info").SetText($"英雄{index}");
                 heroParent = transform.Find("HeroNode");
                 bulletParent = transform.Find("BulletNode");
@@ -64,7 +64,7 @@ namespace Runtime.UI
                 transform.FindGet<Button>("Clear").onClick.AddListener(() =>
                 {
                     heroData = new HeroData();
-                    DataManager.HeroDatas[positionType] = heroData;
+                    //DataManager.HeroDatas[positionType] = heroData;
                     ReadWriteManager.Hero.SaveHeroData(positionType, null);
                     updateAction.Invoke();
                 });

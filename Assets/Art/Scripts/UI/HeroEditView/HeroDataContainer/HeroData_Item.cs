@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
 using Runtime.Data;
+using Runtime.Manager;
 
 namespace QFramework.Example
 {
@@ -30,7 +31,10 @@ namespace QFramework.Example
 			data = heroData;
 			InitDeleteBtn(index);
 		}
-
+		
+		
+		
+		
 		private void InitDeleteBtn(int index)
 		{
 			// 首个英雄无法被删除
@@ -38,6 +42,7 @@ namespace QFramework.Example
 			// 删除按钮绑定的事件
 			Delete_Btn.onClick.AddListener(() =>
 			{
+				DataManager.HeroDataList.RemoveAt(DataManager.HeroDataList.Count - 1);
 				Destroy(gameObject);
 			});
 		}

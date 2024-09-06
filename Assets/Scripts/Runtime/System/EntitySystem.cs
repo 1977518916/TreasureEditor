@@ -101,11 +101,11 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// </summary>
     private void EnterBattle()
     {
-        foreach (var heroData in DataManager.HeroDatas)
+        for (int i = 0; i < DataManager.HeroDataList.Count; i++)
         {
-            GenerateEntity(heroData.Key, heroData.Value);
+            GenerateEntity(i, DataManager.HeroDataList[i]);
         }
-
+        
         timer = Timer.Register(DataManager.LevelData.BossData.Time, () =>
         {
             if (DataManager.LevelData.BossData.EntityModelType == EntityModelType.Null) return;

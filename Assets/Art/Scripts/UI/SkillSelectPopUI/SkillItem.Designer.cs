@@ -12,6 +12,8 @@ namespace QFramework.Example
 	{
 		[SerializeField] public UnityEngine.UI.Button SkillSelectBtn;
 
+		private string skillKey;
+		
 		public void Clear()
 		{
 			SkillSelectBtn = null;

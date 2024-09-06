@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
@@ -18,6 +19,8 @@ namespace QFramework.Example
 		public SkillItem SkillItem;
 		
 		private SkillSelectPopUIData mPrivateData = null;
+		
+		private List<SkillItem> skillItemList = new List<SkillItem>();
 		
 		protected override void ClearUIComponents()
 		{

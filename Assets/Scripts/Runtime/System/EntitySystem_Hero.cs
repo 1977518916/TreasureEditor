@@ -14,14 +14,13 @@ public partial class EntitySystem
     /// <summary>
     /// 生成英雄实体
     /// </summary>
-    /// <param name="type"> 位置 </param>
+    /// <param name="index"> 位置 </param>
     /// <param name="data"> 数据 </param>
-    private void GenerateEntity(DataType.HeroPositionType type, HeroData data)
+    private void GenerateEntity(int index, HeroData data)
     {
-        var indexValue = Convert.ToInt32(type);
         if (data.modelType == EntityModelType.Null)
         {
-            InitNullHeroStatus(indexValue);
+            InitNullHeroStatus(index);
             return;
         }
 
@@ -31,13 +30,13 @@ public partial class EntitySystem
         var heroEntity = CreateEntity<HeroEntity>(EntityType.HeroEntity, hero);
         var heroModel = AssetsLoadManager.LoadHero(data.modelType, hero.GetComponent<RectTransform>());
         heroModel.GetComponent<RectTransform>().localScale *= data.modelScale;
-        heroEntity.InitHero(data, BattleManager.GetFirePoint(indexValue), indexValue);
+        heroEntity.InitHero(data, BattleManager.GetFirePoint(index), index);
         // 获取英雄动画对象
         var heroAnima = heroModel.GetComponent<SkeletonGraphic>();
         // 初始化实体动画组件和动画
         InitEntityAnima(heroAnima);
         // 初始化实体状态组件
-        InitHeroEntityStatus(heroEntity, indexValue);
+        InitHeroEntityStatus(heroEntity, index);
         // 初始化检测组件
         InitPointDetect(heroEntity, hero.GetComponent<RectTransform>(), EntityType.EnemyEntity, 1500f);
         // 初始化攻击组件
@@ -48,9 +47,9 @@ public partial class EntitySystem
         // 初始化英雄状态机组件 和 动画组件
         InitHeroStateMachine(heroEntity, InitHeroEntityAnimation(heroEntity.EntityId, heroAnima, heroEntity));
         // 设置英雄实体模型到对应位置
-        BattleManager.Instance.SetPrefabLocation(hero, indexValue);
+        BattleManager.Instance.SetPrefabLocation(hero, index);
         // 初始化技能组件
-        InitSkill(type, heroEntity);
+        //InitSkill(type, heroEntity);
     }
 
     /// <summary>

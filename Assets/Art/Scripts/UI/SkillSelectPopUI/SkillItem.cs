@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using Runtime.Manager;
+using Spine.Unity;
 
 namespace QFramework.Example
 {
@@ -18,6 +20,46 @@ namespace QFramework.Example
 
 		protected override void OnBeforeDestroy()
 		{
+		}
+
+		public void InitView(string key, SkeletonDataAsset dataAsset)
+		{
+			skillKey = key;
+			gameObject.SetActive(true);
+			InitSkillSpine(dataAsset);
+		}
+
+		/// <summary>
+		/// 设置技能按钮点击事件
+		/// </summary>
+		/// <param name="click"></param>
+		public void SetSkillBtnEvent(Action<string> click)
+		{
+			SkillSelectBtn.onClick.RemoveAllListeners();
+			SkillSelectBtn.onClick.AddListener(() => click.Invoke(skillKey));
+		}
+		
+		/// <summary>
+		/// 初始化技能Spine
+		/// </summary>
+		/// <param name="dataAsset"></param>
+		private void InitSkillSpine(SkeletonDataAsset dataAsset)
+		{
+			var spine = AssetsLoadManager.LoadSkeletonGraphic(dataAsset, transform);
+			spine.raycastTarget = false;
+			spine.AnimationState.SetAnimation(0, spine.SkeletonData.Animations.Items[0].Name, true);
+			spine.MatchRectTransformWithBounds();
+			var skillData = DataManager.SkillStruct.GetSkillDataOfKey(skillKey);
+			var skillScale = 0.5f;
+			var location = Vector3.zero;
+			if (skillData != null)
+			{
+				skillScale = skillData.showScale;
+				location = skillData.showPosition;
+			}
+
+			spine.transform.localScale = new Vector3(skillScale, skillScale, 1);
+			spine.transform.localPosition = location;
 		}
 	}
 }

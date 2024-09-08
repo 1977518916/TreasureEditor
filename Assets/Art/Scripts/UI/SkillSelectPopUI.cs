@@ -33,7 +33,7 @@ namespace QFramework.Example
 
 		protected override void OnOpen(IUIData uiData = null)
 		{
-			SkillScrollView.normalizedPosition = new Vector2(0, 0);
+			//SkillScrollView.normalizedPosition = new Vector2(0, 0);
 			foreach (var item in skillItemList)
 			{
 				item.SetSkillBtnEvent(mData.ClickAction);

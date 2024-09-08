@@ -38,17 +38,17 @@ namespace QFramework.Example
 			SkillSelectBtn.onClick.RemoveAllListeners();
 			SkillSelectBtn.onClick.AddListener(() => click.Invoke(skillKey));
 		}
-		
+
 		/// <summary>
 		/// 初始化技能Spine
 		/// </summary>
 		/// <param name="dataAsset"></param>
 		private void InitSkillSpine(SkeletonDataAsset dataAsset)
 		{
-			var spine = AssetsLoadManager.LoadSkeletonGraphic(dataAsset, transform);
-			spine.raycastTarget = false;
-			spine.AnimationState.SetAnimation(0, spine.SkeletonData.Animations.Items[0].Name, true);
-			spine.MatchRectTransformWithBounds();
+			SkillSpine.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillKey];
+			SkillSpine.Initialize(true);
+			SkillSpine.raycastTarget = false;
+			SkillSpine.AnimationState.SetAnimation(0, SkillSpine.SkeletonData.Animations.Items[0].Name, true);
 			var skillData = DataManager.SkillStruct.GetSkillDataOfKey(skillKey);
 			var skillScale = 0.5f;
 			var location = Vector3.zero;
@@ -58,8 +58,9 @@ namespace QFramework.Example
 				location = skillData.showPosition;
 			}
 
-			spine.transform.localScale = new Vector3(skillScale, skillScale, 1);
-			spine.transform.localPosition = location;
+			var skillSpineTransform = SkillSpine.transform;
+			skillSpineTransform.localScale = new Vector3(skillScale, skillScale, 1);
+			skillSpineTransform.localPosition = location;
 		}
 	}
 }

@@ -58,10 +58,11 @@ namespace QFramework.Example
 		public void AddHeroData(HeroData heroData)
 		{
 			if (heroDataList.Count >= 5) return;
-			heroDataList.Add(heroData);
 			var heroDataItem = Instantiate(HeroData_Item, transform);
 			heroDataItem.InitView(heroDataList.Count - 1, heroData);
 			heroDataItem.gameObject.SetActive(true);
+			heroDataList.Add(heroData);
+			heroDataViewList.Add(heroDataItem);
 		}
 		
 		/// <summary>
@@ -79,10 +80,9 @@ namespace QFramework.Example
 		/// </summary>
 		public void ResetView()
 		{
-			heroDataList.Clear();
+			ClearAllHeroDataView();
 			heroDataList.Add(new HeroData());
 			DataManager.SetHeroListData(heroDataList);
-			ClearAllHeroDataView();
 			InitView(DataManager.GetHeroDataList());
 		}
 
@@ -105,6 +105,7 @@ namespace QFramework.Example
 				Destroy(item.gameObject);
 			}
 
+			heroDataViewList.Clear();
 			heroDataList.Clear();
 		}
 	}

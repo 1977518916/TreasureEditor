@@ -30,25 +30,27 @@ namespace QFramework.Example
 
 		private void InitSkillBtn()
 		{
-			SkillOne_Select_Btn.onClick.AddListener(() => UIKit.OpenPanel<SkillSelectPopUI>(new SkillSelectPopUIData
-			{
-				ClickAction = skillName =>
+			SkillOne_Select_Btn.onClick.AddListener(() => UIKit.OpenPanel<SkillSelectPopUI>(UILevel.PopUI,
+				new SkillSelectPopUIData
 				{
-					data.skillData1 = DataManager.SkillStruct.GetSkillDataOfKey(skillName);
-					SkillOneView.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillName];
-					UIKit.HidePanel<SkillSelectPopUI>();
-				}
-			}));
+					ClickAction = skillName =>
+					{
+						data.skillData1 = DataManager.SkillStruct.GetSkillDataOfKey(skillName);
+						SkillOneView.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillName];
+						UIKit.HidePanel<SkillSelectPopUI>();
+					}
+				}));
 
-			SkillTwo_Select_Btn.onClick.AddListener(() => UIKit.OpenPanel<SkillSelectPopUI>(new SkillSelectPopUIData
-			{
-				ClickAction = skillName =>
+			SkillTwo_Select_Btn.onClick.AddListener(() => UIKit.OpenPanel<SkillSelectPopUI>(UILevel.PopUI,
+				new SkillSelectPopUIData
 				{
-					data.skillData2 = DataManager.SkillStruct.GetSkillDataOfKey(skillName);
-					SkillTwoView.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillName];
-					UIKit.HidePanel<SkillSelectPopUI>();
-				}
-			}));
+					ClickAction = skillName =>
+					{
+						data.skillData2 = DataManager.SkillStruct.GetSkillDataOfKey(skillName);
+						SkillTwoView.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillName];
+						UIKit.HidePanel<SkillSelectPopUI>();
+					}
+				}));
 		}
 	}
 }

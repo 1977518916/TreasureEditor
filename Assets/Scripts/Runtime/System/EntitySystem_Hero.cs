@@ -49,7 +49,7 @@ public partial class EntitySystem
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, index);
         // 初始化技能组件
-        //InitSkill(type, heroEntity);
+        InitSkill(heroEntity);
     }
 
     /// <summary>

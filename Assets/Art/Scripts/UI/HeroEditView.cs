@@ -18,7 +18,7 @@ namespace QFramework.Example
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
-			EditContainer.InitView(DataManager.HeroDataList);
+			EditContainer.InitView(DataManager.GetHeroDataList());
 			HeroAdd_Btn.onClick.AddListener(() => EditContainer.AddHeroData(new HeroData()));
 			SaveData_Btn.onClick.AddListener(() => EditContainer.SaveAllHeroData());
 			ResetData_Btn.onClick.AddListener(() => EditContainer.ResetView());

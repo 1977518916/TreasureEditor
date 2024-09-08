@@ -150,7 +150,7 @@ public class BattleManager : MonoSingleton<BattleManager>
 
     public void GenerateHurtText(Vector2 location, int hurt, float surviveTime)
     {
-        if (!DataManager.GameData.isShowNumber) return;
+        if (!DataManager.GetRuntimeData().isShowNumber) return;
         var hurtTextPrefab = AssetsLoadManager.Load<GameObject>("Prefabs/HurtText");
         var hurtProstitute = Instantiate(hurtTextPrefab);
         hurtProstitute.GetComponent<RectTransform>().SetParent(hurtTextPrefabParent);

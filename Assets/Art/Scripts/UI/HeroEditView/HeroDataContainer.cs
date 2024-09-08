@@ -25,17 +25,18 @@ namespace QFramework.Example
 		/// <summary>
 		/// 初始化
 		/// </summary>
-		/// <param name="heroDataList"></param>
-		public void InitView(List<HeroData> heroDataList)
+		/// <param name="data"></param>
+		public void InitView(List<HeroData> data)
 		{
-			currentAllHeroData = heroDataList;
+			heroDataList = data;
 			HeroData_Item.gameObject.SetActive(false);
 			if (DetectAndInitData()) return;
 			for (var i = 0; i < heroDataList.Count; i++)
 			{
-				var heroDataItem = Instantiate(HeroData_Item, transform);
-				heroDataItem.InitView(i, heroDataList[i]);
-				heroDataItem.gameObject.SetActive(true);
+				var viewItem = Instantiate(HeroData_Item, transform);
+				viewItem.InitView(i, heroDataList[i]);
+				viewItem.gameObject.SetActive(true);
+				heroDataViewList.Add(viewItem);
 			}
 		}
 
@@ -45,7 +46,7 @@ namespace QFramework.Example
 		/// <returns></returns>
 		private bool DetectAndInitData()
 		{
-			if (currentAllHeroData.Count != 0) return false;
+			if (heroDataList.Count != 0) return false;
 			AddHeroData(new HeroData());
 			return true;
 		}
@@ -56,9 +57,10 @@ namespace QFramework.Example
 		/// <param name="heroData"></param>
 		public void AddHeroData(HeroData heroData)
 		{
-			currentAllHeroData.Add(heroData);
+			if (heroDataList.Count >= 5) return;
+			heroDataList.Add(heroData);
 			var heroDataItem = Instantiate(HeroData_Item, transform);
-			heroDataItem.InitView(currentAllHeroData.Count - 1, heroData);
+			heroDataItem.InitView(heroDataList.Count - 1, heroData);
 			heroDataItem.gameObject.SetActive(true);
 		}
 		
@@ -67,8 +69,9 @@ namespace QFramework.Example
 		/// </summary>
 		public void SaveAllHeroData()
 		{
-			DataManager.HeroDataList.Clear();
-			DataManager.HeroDataList.AddRange(currentAllHeroData.ToArray());
+			DataManager.GetHeroDataList().Clear();
+			DataManager.SetHeroListData(heroDataList);
+			DataManager.SaveHeroData();
 		}
 		
 		/// <summary>
@@ -76,23 +79,33 @@ namespace QFramework.Example
 		/// </summary>
 		public void ResetView()
 		{
-			DataManager.HeroDataList.Clear();
-			DataManager.HeroDataList.Add(new HeroData());
+			heroDataList.Clear();
+			heroDataList.Add(new HeroData());
+			DataManager.SetHeroListData(heroDataList);
 			ClearAllHeroDataView();
-			InitView(DataManager.HeroDataList);
+			InitView(DataManager.GetHeroDataList());
 		}
-		
+
+		/// <summary>
+		/// 删除指定视图和数据
+		/// </summary>
+		public void RemoveAtViewAndData(int index)
+		{
+			heroDataList.RemoveAt(index);
+			heroDataViewList.RemoveAt(index);
+		}
+
 		/// <summary>
 		/// 清除所有英雄数据视图
 		/// </summary>
 		private void ClearAllHeroDataView()
 		{
-			foreach (var heroDataItem in currentAllHeroDataViewList)
+			foreach (var item in heroDataViewList)
 			{
-				Destroy(heroDataItem.gameObject);
+				Destroy(item.gameObject);
 			}
 
-			currentAllHeroDataViewList.Clear();
+			heroDataList.Clear();
 		}
 	}
 }

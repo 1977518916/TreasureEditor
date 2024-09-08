@@ -8,7 +8,7 @@ namespace QFramework.Example
 {
     public class EnemyEditorViewData : UIPanelData
     {
-        public LevelData LevelData => DataManager.LevelData;
+        public LevelData LevelData => DataManager.GetLevelData();
     }
     public partial class EnemyEditorView : UIPanel
     {

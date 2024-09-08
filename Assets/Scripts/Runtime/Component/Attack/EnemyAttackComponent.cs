@@ -56,6 +56,6 @@ public class EnemyAttackComponent : AttackComponent
         entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
         var target = detect.GetTarget().GetComponent<HeroEntity>();
         var heroStatus = target.GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent);
-        heroStatus.Hit(DataManager.GameData.isInvicibleSelf ? 1 : hurt);
+        heroStatus.Hit(DataManager.GetRuntimeData().isInvicibleSelf ? 1 : hurt);
     }
 }

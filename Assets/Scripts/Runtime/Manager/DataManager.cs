@@ -15,7 +15,7 @@ namespace Runtime.Manager
         /// <summary>
         /// 本次使用的英雄列表
         /// </summary>
-        public static readonly List<HeroData> HeroDataList = new List<HeroData>();
+        private static List<HeroData> heroDataList = new List<HeroData>();
 
         /// <summary>
         /// 所有的动画资源
@@ -36,7 +36,7 @@ namespace Runtime.Manager
         /// 技能数据
         /// </summary>
         public static SkillStruct SkillStruct { get; private set; }
-
+        
         /// <summary>
         /// 实体寻常动画
         /// </summary>
@@ -46,12 +46,12 @@ namespace Runtime.Manager
         /// <summary>
         /// 关卡数据
         /// </summary>
-        public static LevelData LevelData { get; private set; }
+        private static LevelData levelData = new LevelData();
 
         /// <summary>
         /// 游戏内的动态数据
         /// </summary>
-        public static GameData GameData;
+        private static GameData gameData = new GameData();
 
         /// <summary>
         /// 地图素材路径
@@ -65,15 +65,37 @@ namespace Runtime.Manager
 
         public static void Init(Action action)
         {
-            // ES3.Init();
-            // ES3.LoadInto("LevelData", LevelData);
-            // ES3.LoadInto("HeroDataList", HeroDataList);
+            ES3.Init();
+            InitReadData();
             InitAllSpineData();
             SkillStruct = AssetsLoadManager.Load<SkillStruct>("Config/AllSkillData");
             action.Invoke();
         }
+
+        /// <summary>
+        /// 初始化读取数据
+        /// </summary>
+        private static void InitReadData()
+        {
+            IsNotData();
+            heroDataList = ReadHeroData();
+            levelData = ReadLevelData();
+            gameData = ReadRuntimeData();
+        }
         
-        
+        /// <summary>
+        /// 如果一开始没有存档的数据就保存一次
+        /// </summary>
+        private static void IsNotData()
+        {
+            if (!ES3.KeyExists(HelpTools.GetEnumValueName<DataType>(DataType.HeroDataList)))
+                SaveHeroData();
+            if (!ES3.KeyExists(HelpTools.GetEnumValueName<DataType>(DataType.LevelData)))
+                SaveLevelData();
+            if (!ES3.KeyExists(HelpTools.GetEnumValueName<DataType>(DataType.RuntimeData)))
+                SaveRuntimeData();
+        }
+
         // Spine相关API
         #region Spine
 
@@ -206,26 +228,116 @@ namespace Runtime.Manager
         /// </summary>
         public static void SaveHeroData()
         {
-            ES3.Save(Enum.GetName(typeof(DataType), DataType.HeroData), HeroDataList);
+            ES3.Save(HelpTools.GetEnumValueName<DataType>(DataType.HeroDataList), heroDataList);
         }
-        
+
         /// <summary>
         /// 读取英雄数据
         /// </summary>
         /// <returns></returns>
-        public static List<HeroData> ReadHeroData()
+        private static List<HeroData> ReadHeroData()
         {
-            var value = new List<HeroData>();
-            ES3.LoadInto(Enum.GetName(typeof(DataType), DataType.HeroData), value);
+            var value = ES3.Load<List<HeroData>>(HelpTools.GetEnumValueName<DataType>(DataType.HeroDataList));
             return value;
         }
-        
+
         /// <summary>
         /// 保存关卡数据
         /// </summary>
         public static void SaveLevelData()
         {
-            
+            ES3.Save(HelpTools.GetEnumValueName<DataType>(DataType.LevelData), levelData);
+        }   
+        
+        /// <summary>
+        /// 读取关卡数据
+        /// </summary>
+        /// <returns></returns>
+        private static LevelData ReadLevelData()
+        {
+            return ES3.Load<LevelData>(HelpTools.GetEnumValueName<DataType>(DataType.LevelData));
+        }
+        
+        /// <summary>
+        /// 保存运行时数据
+        /// </summary>
+        public static void SaveRuntimeData()
+        {
+            ES3.Save(HelpTools.GetEnumValueName<DataType>(DataType.RuntimeData), gameData);
+        }
+        
+        /// <summary>
+        /// 读取运行时数据
+        /// </summary>
+        /// <returns></returns>
+        private static GameData ReadRuntimeData()
+        {
+            return ES3.Load<GameData>(HelpTools.GetEnumValueName<DataType>(DataType.RuntimeData));
+        }
+
+        #endregion
+        
+        // 获取对应数据的接口
+        #region Get
+        
+        /// <summary>
+        /// 获取英雄数据列表
+        /// </summary>
+        /// <returns></returns>
+        public static List<HeroData> GetHeroDataList()
+        {
+            return heroDataList;
+        }
+        
+        /// <summary>
+        /// 获取关卡数据
+        /// </summary>
+        /// <returns></returns>
+        public static LevelData GetLevelData()
+        {
+            return levelData;
+        }
+        
+        /// <summary>
+        /// 获取运行时数据
+        /// </summary>
+        /// <returns></returns>
+        public static GameData GetRuntimeData()
+        {
+            return gameData;
+        }
+
+        #endregion
+        
+        // 设置对应数据的接口
+        #region Set
+        
+        /// <summary>
+        /// 设置英雄列表数据
+        /// </summary>
+        /// <param name="data"></param>
+        public static void SetHeroListData(List<HeroData> data)
+        {
+            heroDataList.Clear();
+            heroDataList.AddRange(data);
+        }
+        
+        /// <summary>
+        /// 设置关卡数据
+        /// </summary>
+        /// <param name="data"></param>
+        public static void SetLevelData(LevelData data)
+        {
+            levelData = data;
+        }
+
+        /// <summary>
+        /// 设置运行时数据
+        /// </summary>
+        /// <param name="data"></param>
+        public static void SetRuntimeData(GameData data)
+        {
+            gameData = data;
         }
 
         #endregion

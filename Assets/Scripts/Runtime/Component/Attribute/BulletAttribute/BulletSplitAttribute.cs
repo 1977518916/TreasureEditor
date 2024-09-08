@@ -84,7 +84,7 @@ public class BulletSplitAttribute : BulletAttribute
         var bulletGo = AssetsLoadManager.LoadBullet(data.modelType, LayerMask.NameToLayer("BattleUI"));
         var splitBullet = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
         splitBullet.MoveObject = bulletGo.transform.GetChild(0).gameObject;
-        var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : data.atk;
+        var bulletHurt = DataManager.GetRuntimeData().isInvicibleEnemy ? 1 : data.atk;
         splitBullet.InitBullet(EntityType.EnemyEntity, bulletHurt, BulletAttributeType.Penetrate,
             bulletEntity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent).EntityTransform.anchoredPosition,
             BattleManager.Instance.GetBulletParent());

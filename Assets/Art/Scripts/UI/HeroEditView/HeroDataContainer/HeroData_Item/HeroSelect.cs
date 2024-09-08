@@ -33,7 +33,11 @@ namespace QFramework.Example
 					ClickAction = modelType =>
 					{
 						data.modelType = modelType;
+						HeroView.transform.localScale = data.modelType == EntityModelType.DongZhuo
+							? new Vector3(0.2f, 0.2f, 1f)
+							: new Vector3(0.5f, 0.5f, 1f);
 						HeroView.skeletonDataAsset = DataManager.GetAllEntityCommonSpine()[data.modelType];
+						HeroView.Initialize(true);
 					}
 				});
 			});

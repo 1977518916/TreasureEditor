@@ -2,12 +2,10 @@
  * 2024.9 HEALER
  ****************************************************************************/
 
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
 using Runtime.Data;
-using Spine.Unity;
 
 namespace QFramework.Example
 {

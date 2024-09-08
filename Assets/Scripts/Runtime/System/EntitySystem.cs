@@ -101,15 +101,15 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// </summary>
     private void EnterBattle()
     {
-        for (int i = 0; i < DataManager.HeroDataList.Count; i++)
+        for (int i = 0; i < DataManager.GetHeroDataList().Count; i++)
         {
-            GenerateEntity(i, DataManager.HeroDataList[i]);
+            GenerateEntity(i, DataManager.GetHeroDataList()[i]);
         }
         
-        timer = Timer.Register(DataManager.LevelData.BossData.Time, () =>
+        timer = Timer.Register(DataManager.GetLevelData().BossData.Time, () =>
         {
-            if (DataManager.LevelData.BossData.EntityModelType == EntityModelType.Null) return;
-            GenerateBossEntity(DataManager.LevelData.BossData.EntityModelType, DataManager.LevelData.BossData);
+            if (DataManager.GetLevelData().BossData.EntityModelType == EntityModelType.Null) return;
+            GenerateBossEntity(DataManager.GetLevelData().BossData.EntityModelType, DataManager.GetLevelData().BossData);
         });
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy,
             GenerateEnemyEntity);

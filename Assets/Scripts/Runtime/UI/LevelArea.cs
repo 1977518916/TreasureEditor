@@ -79,7 +79,7 @@ namespace Runtime.UI
 
         private void EnemyUiInit()
         {
-            levelData = DataManager.LevelData;
+            levelData = DataManager.GetLevelData();
 
             typeDropDown.ClearOptions();
             mapDropDown.ClearOptions();

@@ -14,7 +14,7 @@ namespace QFramework.Example
 		[SerializeField] public TMPro.TMP_InputField ModelScale_Input;
 
 		private HeroData data;
-
+		
 		public void Clear()
 		{
 			ModelScale_Input = null;
@@ -22,7 +22,7 @@ namespace QFramework.Example
 
 		public override string ComponentName
 		{
-			get { return "HeroModelScaleDataEdit"; }
+			get { return "HeroModelScaleDataEdit";}
 		}
 	}
 }

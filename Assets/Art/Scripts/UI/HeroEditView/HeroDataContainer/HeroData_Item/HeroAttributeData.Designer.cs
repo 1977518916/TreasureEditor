@@ -21,7 +21,7 @@ namespace QFramework.Example
 			HeroHpValue_Input = null;
 			HeroAtkValue_Input = null;
 		}
-		
+
 		public override string ComponentName
 		{
 			get { return "HeroAttributeData";}

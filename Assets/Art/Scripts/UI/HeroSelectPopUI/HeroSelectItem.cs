@@ -25,7 +25,11 @@ namespace QFramework.Example
 		public void InitView(EntityModelType modelType, SkeletonDataAsset skeletonData)
 		{
 			HeroView.skeletonDataAsset = skeletonData;
+			HeroView.AnimationState.SetAnimation(0, "Idle", true);
 			entityModelType = modelType;
+			HeroView.transform.localScale = modelType == EntityModelType.DongZhuo
+				? new Vector3(0.25f, 0.25f, 1f)
+				: new Vector3(0.5f, 0.5f, 1f);
 		}
 
 		/// <summary>
@@ -35,7 +39,11 @@ namespace QFramework.Example
 		public void SetSelectBtnEvent(Action<EntityModelType> click)
 		{
 			SelectBtn.onClick.RemoveAllListeners();
-			SelectBtn.onClick.AddListener(() => { click.Invoke(entityModelType); });
+			SelectBtn.onClick.AddListener(() =>
+			{
+				click.Invoke(entityModelType);
+				UIKit.HidePanel<HeroSelectPopUI>();
+			});
 		}
 	}
 }

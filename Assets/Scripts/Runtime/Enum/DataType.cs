@@ -6,7 +6,7 @@ public enum DataType
     /// <summary>
     /// 英雄数据
     /// </summary>
-    HeroData,
+    HeroDataList,
 
     /// <summary>
     /// 关卡数据

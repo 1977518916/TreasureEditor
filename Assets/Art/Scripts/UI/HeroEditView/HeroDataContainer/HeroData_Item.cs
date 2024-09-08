@@ -28,7 +28,6 @@ namespace QFramework.Example
 		/// </summary>
 		public void InitView(int index, HeroData heroData)
 		{
-			data = heroData;
 			gameObject.SetActive(true);
 			InitDeleteBtn(index);
 			InitNumber(index);
@@ -124,7 +123,7 @@ namespace QFramework.Example
 			// 删除按钮绑定的事件
 			Delete_Btn.onClick.AddListener(() =>
 			{
-				DataManager.HeroDataList.RemoveAt(DataManager.HeroDataList.Count - 1);
+				//DataManager.HeroDataList.RemoveAt(DataManager.HeroDataList.Count - 1);
 				Destroy(gameObject);
 			});
 		}

@@ -15,7 +15,7 @@ namespace Runtime.Manager
         private bool isMaking;
         private void Awake()
         {
-            list = DataManager.LevelData.timesDatas;
+            list = DataManager.GetLevelData().timesDatas;
             targetTime = list[index].time;
         }
 

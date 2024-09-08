@@ -1,3 +1,4 @@
+using System;
 using Runtime.Data;
 
 /// <summary>
@@ -42,5 +43,14 @@ public static class HelpTools
     private static bool BulletIsArrow(EntityModelType modelType)
     {
         return modelType == EntityModelType.XiaoBing_GongJian;
+    }
+
+    /// <summary>
+    /// 获取枚举值对应的名字
+    /// </summary>
+    /// <returns></returns>
+    public static string GetEnumValueName<T>(object enumValue)
+    {
+        return Enum.GetName(typeof(T), enumValue);
     }
 }

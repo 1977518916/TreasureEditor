@@ -157,7 +157,7 @@ public class HeroAttackComponent : AttackComponent
         var bulletGo = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData().modelType, LayerMask.NameToLayer("BattleUI"));
         var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
         var bulletTran = bulletEntity.GetComponent<RectTransform>();
-        var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : heroEntity.GetHeroData().atk;
+        var bulletHurt = DataManager.GetRuntimeData().isInvicibleEnemy ? 1 : heroEntity.GetHeroData().atk;
         var fireLocation = heroEntity.GetFireLocation();
         var bulletParent = BattleManager.Instance.GetBulletParent();
         var bulletAttributeType = heroEntity.GetHeroData().bulletAttributeType;

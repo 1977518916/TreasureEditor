@@ -13,16 +13,16 @@ namespace QFramework.Example
 	public partial class HeroDataContainer
 	{
 		[SerializeField] public HeroData_Item HeroData_Item;
-
-		/// <summary>
-		/// 当前所有英雄数据
-		/// </summary>
-		private List<HeroData> currentAllHeroData = new List<HeroData>();
 		
 		/// <summary>
-		/// 当前所有英雄数据视图容器
+		/// 英雄数据列表
 		/// </summary>
-		private List<HeroData_Item> currentAllHeroDataViewList = new List<HeroData_Item>();
+		private List<HeroData> heroDataList = new List<HeroData>();
+
+		/// <summary>
+		/// 英雄数据视图列表
+		/// </summary>
+		private List<HeroData_Item> heroDataViewList = new List<HeroData_Item>();
 		
 		public void Clear()
 		{

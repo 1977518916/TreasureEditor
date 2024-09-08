@@ -38,7 +38,7 @@ namespace QFramework.Example
         private void Init()
         {
             CloseButton.onClick.AddListener(() => UIKit.HidePanel<MapEditorView>());
-            SaveButton.onClick.AddListener(() => ReadWriteManager.Level.SaveLevelData(DataManager.LevelData));
+            SaveButton.onClick.AddListener(() => ReadWriteManager.Level.SaveLevelData(DataManager.GetLevelData()));
             InitMaps();
             refreshAction.Invoke();
         }
@@ -51,8 +51,8 @@ namespace QFramework.Example
                 SelectNode selectNode = Instantiate(SelectNode, ScrollView.content);
                 selectNode.name = type.ToString();
                 selectNode.SetNode(AssetsLoadManager.LoadBg(type),
-                    () => DataManager.LevelData.mapType = type);
-                refreshAction += () => selectNode.SetTick(type == DataManager.LevelData.mapType);
+                    () => DataManager.GetLevelData().mapType = type);
+                refreshAction += () => selectNode.SetTick(type == DataManager.GetLevelData().mapType);
             }
             foreach (Transform o in ScrollView.content)
             {

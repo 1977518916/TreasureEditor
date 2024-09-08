@@ -5,7 +5,7 @@ using QFramework;
 
 namespace QFramework.Example
 {
-	// Generate Id:a25d1f98-9974-4575-9fb1-a4d8a836bed9
+	// Generate Id:8be3c711-5214-4c10-bc0e-1304e7f64ae0
 	public partial class HeroEditView
 	{
 		public const string Name = "HeroEditView";
@@ -17,6 +17,8 @@ namespace QFramework.Example
 		[SerializeField]
 		public UnityEngine.UI.Button ResetData_Btn;
 		[SerializeField]
+		public UnityEngine.UI.Button CloseView_Btn;
+		[SerializeField]
 		public HeroDataContainer EditContainer;
 		
 		private HeroEditViewData mPrivateData = null;
@@ -26,6 +28,7 @@ namespace QFramework.Example
 			HeroAdd_Btn = null;
 			SaveData_Btn = null;
 			ResetData_Btn = null;
+			CloseView_Btn = null;
 			EditContainer = null;
 			
 			mData = null;

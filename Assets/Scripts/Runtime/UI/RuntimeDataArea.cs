@@ -14,8 +14,7 @@ namespace Runtime.UI
         private GameData gameData;
         private void Awake()
         {
-            DataManager.GameData ??= ReadWriteManager.Read("GameRunTimeData", new GameData());
-            gameData = DataManager.GameData;
+            gameData = DataManager.GetRuntimeData();
 
             self = transform.FindGetInChildren<Toggle>("Units/Self");
             self.onValueChanged.AddListener(invicible => { gameData.isInvicibleSelf = invicible; });

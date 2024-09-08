@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
 using Runtime.Data;
+using Runtime.Manager;
 
 namespace QFramework.Example
 {
@@ -24,11 +25,30 @@ namespace QFramework.Example
 		public void InitView(HeroData heroData)
 		{
 			data = heroData;
+			InitSkillBtn();
 		}
 
 		private void InitSkillBtn()
 		{
-			//SkillOne_Select_Btn.onClick.AddListener(UIKit.OpenPanel<>());
+			SkillOne_Select_Btn.onClick.AddListener(() => UIKit.OpenPanel<SkillSelectPopUI>(new SkillSelectPopUIData
+			{
+				ClickAction = skillName =>
+				{
+					data.skillData1 = DataManager.SkillStruct.GetSkillDataOfKey(skillName);
+					SkillOneView.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillName];
+					UIKit.HidePanel<SkillSelectPopUI>();
+				}
+			}));
+
+			SkillTwo_Select_Btn.onClick.AddListener(() => UIKit.OpenPanel<SkillSelectPopUI>(new SkillSelectPopUIData
+			{
+				ClickAction = skillName =>
+				{
+					data.skillData2 = DataManager.SkillStruct.GetSkillDataOfKey(skillName);
+					SkillTwoView.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillName];
+					UIKit.HidePanel<SkillSelectPopUI>();
+				}
+			}));
 		}
 	}
 }

@@ -5,6 +5,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using Runtime.Data;
 
 namespace QFramework.Example
 {
@@ -13,6 +14,8 @@ namespace QFramework.Example
 		[SerializeField] public UnityEngine.UI.Button HeroSelect_Btn;
 		[SerializeField] public Spine.Unity.SkeletonGraphic HeroView;
 
+		private HeroData data;
+		
 		public void Clear()
 		{
 			HeroSelect_Btn = null;

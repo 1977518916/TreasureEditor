@@ -29,7 +29,8 @@ namespace Runtime.Manager
         private static readonly Dictionary<EntityModelType, SkeletonDataAsset> AllEntityAttackSpineDic =
             new Dictionary<EntityModelType, SkeletonDataAsset>();
 
-        public static readonly Dictionary<string, SkeletonDataAsset> AllEntitySkillSpineDic = new Dictionary<string, SkeletonDataAsset>();
+        public static readonly Dictionary<string, SkeletonDataAsset> AllEntitySkillSpineDic =
+            new Dictionary<string, SkeletonDataAsset>();
 
         /// <summary>
         /// 技能数据
@@ -51,7 +52,7 @@ namespace Runtime.Manager
         /// 游戏内的动态数据
         /// </summary>
         public static GameData GameData;
-        
+
         /// <summary>
         /// 地图素材路径
         /// </summary>
@@ -62,15 +63,19 @@ namespace Runtime.Manager
         /// </summary>
         public const string PrefabPath = "Prefabs/";
 
-        /// <summary>
-        /// 初始化数据
-        /// </summary>
-        static DataManager()
+        public static void Init(Action action)
         {
-            LevelData = ReadWriteManager.Level.GetLevelData();
+            // ES3.Init();
+            // ES3.LoadInto("LevelData", LevelData);
+            // ES3.LoadInto("HeroDataList", HeroDataList);
             InitAllSpineData();
             SkillStruct = AssetsLoadManager.Load<SkillStruct>("Config/AllSkillData");
+            action.Invoke();
         }
+        
+        
+        // Spine相关API
+        #region Spine
 
         /// <summary>
         /// 获取指定实体的子弹动画文件
@@ -110,6 +115,7 @@ namespace Runtime.Manager
                 InitAllEntityAttackSpine(data.Key, data.Value);
                 InitAllEntityCommonSpine(data.Key, data.Value);
             }
+
             InitAllEntitySkillSpine(allEffect);
 
 
@@ -121,8 +127,9 @@ namespace Runtime.Manager
         /// </summary>
         private static void SpineClassify(EntityModelType type, IEnumerable<SkeletonDataAsset> dataList)
         {
-            var skeletonDataList = dataList.Where(dataAsset => dataAsset.name.ToLower().Contains(type.ToString().ToLower())).ToList();
-            if(AllSpineDic.TryAdd(type, skeletonDataList)) return;
+            var skeletonDataList = dataList
+                .Where(dataAsset => dataAsset.name.ToLower().Contains(type.ToString().ToLower())).ToList();
+            if (AllSpineDic.TryAdd(type, skeletonDataList)) return;
             AllSpineDic[type] = null;
             AllSpineDic[type] = skeletonDataList;
         }
@@ -140,7 +147,7 @@ namespace Runtime.Manager
                          !data.name.ToLower().Contains("hit") &&
                          !data.name.ToLower().Contains("skill")))
             {
-                if(EntityCommonSpineDic.TryAdd(type, data))
+                if (EntityCommonSpineDic.TryAdd(type, data))
                     return;
                 EntityCommonSpineDic[type] = data;
             }
@@ -156,7 +163,7 @@ namespace Runtime.Manager
             foreach (var data in entitySpine.Where(data => data.name.ToLower().Contains(type.ToString().ToLower()) &&
                                                            data.name.ToLower().Contains("attack")))
             {
-                if(AllEntityAttackSpineDic.TryAdd(type, data))
+                if (AllEntityAttackSpineDic.TryAdd(type, data))
                     return;
                 AllEntityAttackSpineDic[type] = data;
             }
@@ -179,5 +186,48 @@ namespace Runtime.Manager
                 AllEntitySkillSpineDic.Add(asset.name, asset);
             }
         }
+
+        /// <summary>
+        /// 获取所有实体的寻常动画
+        /// </summary>
+        /// <returns></returns>
+        public static Dictionary<EntityModelType, SkeletonDataAsset> GetAllEntityCommonSpine()
+        {
+            return EntityCommonSpineDic;
+        }
+
+        #endregion
+        
+        // 数据存储和读取相关的API
+        #region DataSaveAndRead
+        
+        /// <summary>
+        /// 保存英雄数据
+        /// </summary>
+        public static void SaveHeroData()
+        {
+            ES3.Save(Enum.GetName(typeof(DataType), DataType.HeroData), HeroDataList);
+        }
+        
+        /// <summary>
+        /// 读取英雄数据
+        /// </summary>
+        /// <returns></returns>
+        public static List<HeroData> ReadHeroData()
+        {
+            var value = new List<HeroData>();
+            ES3.LoadInto(Enum.GetName(typeof(DataType), DataType.HeroData), value);
+            return value;
+        }
+        
+        /// <summary>
+        /// 保存关卡数据
+        /// </summary>
+        public static void SaveLevelData()
+        {
+            
+        }
+
+        #endregion
     }
 }

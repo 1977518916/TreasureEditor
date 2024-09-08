@@ -25,7 +25,7 @@ namespace QFramework.Example
 		/// <summary>
 		/// 初始化视图数据
 		/// </summary>
-		private void InitView(HeroData heroData)
+		public void InitView(HeroData heroData)
 		{
 			data = heroData;
 			InitBulletType();

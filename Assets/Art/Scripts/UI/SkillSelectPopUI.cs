@@ -9,10 +9,11 @@ using Spine.Unity;
 
 namespace QFramework.Example
 {
+	/// <summary>
+	/// Init的时候不需要绑定对应的点击事件,因为会在每次OpenView时绑定
+	/// </summary>
 	public class SkillSelectPopUIData : UIPanelData
 	{
-		public Dictionary<string, SkeletonDataAsset> AllSkill;
-		public HeroData Data;
 		public Action<string> ClickAction;
 	}
 	public partial class SkillSelectPopUI : UIPanel
@@ -20,24 +21,28 @@ namespace QFramework.Example
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as SkillSelectPopUIData ?? new SkillSelectPopUIData();
-			// please add init code here
-		}
-		
-		protected override void OnOpen(IUIData uiData = null)
-		{
 			SkillItem.gameObject.SetActive(false);
-			foreach (var item in mData.AllSkill.Values)
+			foreach (var item in DataManager.AllEntitySkillSpineDic.Values)
 			{
 				var skill = Instantiate(SkillItem, Content.transform, false);
 				skill.InitView(item.name, item);
-				skill.SetSkillBtnEvent(mData.ClickAction);
 				skillItemList.Add(skill);
+				skill.gameObject.SetActive(true);
 			}
 		}
-		
-		protected override void OnShow()
+
+		protected override void OnOpen(IUIData uiData = null)
 		{
 			SkillScrollView.normalizedPosition = new Vector2(0, 0);
+			foreach (var item in skillItemList)
+			{
+				item.SetSkillBtnEvent(mData.ClickAction);
+			}
+		}
+
+		protected override void OnShow()
+		{
+			
 		}
 		
 		protected override void OnHide()
@@ -46,18 +51,6 @@ namespace QFramework.Example
 		
 		protected override void OnClose()
 		{
-		}
-		
-		/// <summary>
-		/// 当技能选择弹窗已经存在于UI栈中时 那么第二次打开之前需要重新根据当前点击传入新的点击事件
-		/// </summary>
-		/// <param name="click"></param>
-		public void SetOnClickEvent(Action<string> click)
-		{
-			foreach (var item in skillItemList)
-			{
-				item.SetSkillBtnEvent(click);
-			}
 		}
 	}
 }

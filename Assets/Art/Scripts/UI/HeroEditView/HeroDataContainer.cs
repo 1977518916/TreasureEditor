@@ -21,7 +21,7 @@ namespace QFramework.Example
 		protected override void OnBeforeDestroy()
 		{
 		}
-		
+
 		/// <summary>
 		/// 初始化
 		/// </summary>
@@ -29,13 +29,27 @@ namespace QFramework.Example
 		public void InitView(List<HeroData> heroDataList)
 		{
 			currentAllHeroData = heroDataList;
+			HeroData_Item.gameObject.SetActive(false);
+			if (DetectAndInitData()) return;
 			for (var i = 0; i < heroDataList.Count; i++)
 			{
 				var heroDataItem = Instantiate(HeroData_Item, transform);
 				heroDataItem.InitView(i, heroDataList[i]);
+				heroDataItem.gameObject.SetActive(true);
 			}
 		}
-		
+
+		/// <summary>
+		/// 检测并初始化数据
+		/// </summary>
+		/// <returns></returns>
+		private bool DetectAndInitData()
+		{
+			if (currentAllHeroData.Count != 0) return false;
+			AddHeroData(new HeroData());
+			return true;
+		}
+
 		/// <summary>
 		/// 添加一个英雄数据
 		/// </summary>
@@ -45,6 +59,7 @@ namespace QFramework.Example
 			currentAllHeroData.Add(heroData);
 			var heroDataItem = Instantiate(HeroData_Item, transform);
 			heroDataItem.InitView(currentAllHeroData.Count - 1, heroData);
+			heroDataItem.gameObject.SetActive(true);
 		}
 		
 		/// <summary>

@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using Runtime.Data;
+using Runtime.Manager;
 
 namespace QFramework.Example
 {
@@ -20,14 +22,21 @@ namespace QFramework.Example
 		{
 		}
 		
-		public void InitView()
+		public void InitView(HeroData heroData)
 		{
+			data = heroData;
 			HeroSelect_Btn.onClick.AddListener(() =>
 			{
 				// 打开选择英雄的页面 并绑定对应的事件
+				UIKit.OpenPanel<HeroSelectPopUI>(UILevel.PopUI, new HeroSelectPopUIData
+				{
+					ClickAction = modelType =>
+					{
+						data.modelType = modelType;
+						HeroView.skeletonDataAsset = DataManager.GetAllEntityCommonSpine()[data.modelType];
+					}
+				});
 			});
-			
-			
 		}
 	}
 }

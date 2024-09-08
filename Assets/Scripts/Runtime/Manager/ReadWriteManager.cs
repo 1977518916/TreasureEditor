@@ -36,16 +36,16 @@ namespace Runtime.Manager
 
         public static class Hero
         {
-            public static HeroData GetHeroData(DataType.HeroPositionType heroPositionType)
-            {
-                return Read(heroPositionType.ToString(), new HeroData());
-            }
-
-            public static void SaveHeroData(DataType.HeroPositionType heroPositionType, HeroData heroData)
-            {
-                string content = heroData == null ? "" : JsonUtility.ToJson(heroData);
-                Write(heroPositionType.ToString(), content);
-            }
+            // public static HeroData GetHeroData(DataType.HeroPositionType heroPositionType)
+            // {
+            //     return Read(heroPositionType.ToString(), new HeroData());
+            // }
+            //
+            // public static void SaveHeroData(DataType.HeroPositionType heroPositionType, HeroData heroData)
+            // {
+            //     string content = heroData == null ? "" : JsonUtility.ToJson(heroData);
+            //     Write(heroPositionType.ToString(), content);
+            // }
         }
 
         #endregion
@@ -67,17 +67,5 @@ namespace Runtime.Manager
         }
 
         #endregion
-    }
-
-    public static class DataType
-    {
-        public enum HeroPositionType
-        {
-            Hero1,
-            Hero2,
-            Hero3,
-            Hero4,
-            Hero5,
-        }
     }
 }

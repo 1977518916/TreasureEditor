@@ -14,7 +14,6 @@ namespace QFramework.Example
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as HeroEditViewData ?? new HeroEditViewData();
-			// please add init code here
 		}
 		
 		protected override void OnOpen(IUIData uiData = null)

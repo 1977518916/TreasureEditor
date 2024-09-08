@@ -38,15 +38,15 @@ namespace Runtime.UI
         private class Hero : MonoBehaviour
         {
             private HeroData heroData;
-            private DataType.HeroPositionType positionType;
+            //private DataType.HeroPositionType positionType;
             private int index;
             private Action updateAction;
             private Transform heroParent, bulletParent;
             private void Awake()
             {
                 index = int.Parse(name.Replace("hero", ""));
-                positionType = (DataType.HeroPositionType)(index - 1);
-                heroData = ReadWriteManager.Hero.GetHeroData(positionType);
+                //positionType = (DataType.HeroPositionType)(index - 1);
+                //heroData = ReadWriteManager.Hero.GetHeroData(positionType);
                 //DataManager.HeroDatas.Add(positionType, heroData);
                 transform.FindGet<TextMeshProUGUI>("info").SetText($"英雄{index}");
                 heroParent = transform.Find("HeroNode");
@@ -58,14 +58,14 @@ namespace Runtime.UI
             }
             private void InitButton()
             {
-                transform.FindGet<Button>("Save")
-                    .onClick.AddListener(() => ReadWriteManager.Hero.SaveHeroData(positionType, heroData));
+                // transform.FindGet<Button>("Save")
+                //     .onClick.AddListener(() => ReadWriteManager.Hero.SaveHeroData(positionType, heroData));
                 
                 transform.FindGet<Button>("Clear").onClick.AddListener(() =>
                 {
                     heroData = new HeroData();
                     //DataManager.HeroDatas[positionType] = heroData;
-                    ReadWriteManager.Hero.SaveHeroData(positionType, null);
+                    //ReadWriteManager.Hero.SaveHeroData(positionType, null);
                     updateAction.Invoke();
                 });
                 

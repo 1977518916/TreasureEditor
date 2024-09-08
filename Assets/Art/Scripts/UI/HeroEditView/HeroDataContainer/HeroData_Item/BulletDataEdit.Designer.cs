@@ -5,6 +5,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using Runtime.Data;
 
 namespace QFramework.Example
 {
@@ -14,6 +15,8 @@ namespace QFramework.Example
 		[SerializeField] public TMPro.TMP_InputField AttackInterval_Input;
 		[SerializeField] public TMPro.TMP_InputField SingleBulletNumber_Input;
 
+		private HeroData data;
+		
 		public void Clear()
 		{
 			BulletMaxValue_Input = null;

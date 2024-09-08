@@ -55,11 +55,10 @@ public partial class EntitySystem
     /// <summary>
     /// 初始化技能组件
     /// </summary>
-    /// <param name="positionType"></param>
     /// <param name="heroEntity"></param>
-    private void InitSkill(DataType.HeroPositionType positionType, HeroEntity heroEntity)
+    private void InitSkill(HeroEntity heroEntity)
     {
-        HeroSkillComponent skillComponent = new HeroSkillComponent(positionType, heroEntity);
+        HeroSkillComponent skillComponent = new HeroSkillComponent(heroEntity);
         heroEntity.AllComponentList.Add(skillComponent);
     }
 

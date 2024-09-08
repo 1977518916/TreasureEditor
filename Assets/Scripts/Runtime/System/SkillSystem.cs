@@ -41,30 +41,16 @@ namespace Runtime.System
                 case KeyCode.Alpha9:
                     Debug.Log($"按下{key}");
                     int keyCodeValue = (int)key + (key == KeyCode.Alpha0 ? 58 : 0) - 49;
-                    HeroSkillComponent skillComponent = GetHeroSkillOfPosition((DataType.HeroPositionType)(keyCodeValue / 2));
-                    if(skillComponent != null)
-                    {
-                        int skillId = keyCodeValue % 2;
-                        Debug.Log(TranslateUtil.TranslateUi(skillComponent.Entity.GetHeroData().modelType) + "释放技能" + skillId);
-                        skillComponent.UseSkill(skillId);
-                    }
+                    //HeroSkillComponent skillComponent = GetHeroSkillOfPosition((DataType.HeroPositionType)(keyCodeValue / 2));
+                    // if(skillComponent != null)
+                    // {
+                    //     int skillId = keyCodeValue % 2;
+                    //     Debug.Log(TranslateUtil.TranslateUi(skillComponent.Entity.GetHeroData().modelType) + "释放技能" + skillId);
+                    //     skillComponent.UseSkill(skillId);
+                    // }
                     break;
             }
         }
-
-        private HeroSkillComponent GetHeroSkillOfPosition(DataType.HeroPositionType positionType)
-        {
-            foreach (HeroEntity heroEntity in heroEntities)
-            {
-                HeroSkillComponent skillComponent = heroEntity.GetSpecifyComponent<HeroSkillComponent>(ComponentType.SkillComponent);
-                if(skillComponent.positionType == positionType)
-                {
-                    return skillComponent;
-                }
-            }
-            return null;
-        }
-
 
         public void ShowSkill(float triggerTime, SkillData skillData, HeroEntity entity)
         {

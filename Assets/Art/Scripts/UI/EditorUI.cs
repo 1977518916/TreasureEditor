@@ -10,8 +10,10 @@ namespace QFramework.Example
 
         private void Awake()
         {
-            EnemyEdit_Btn.onClick.AddListener(() => ShowView<EnemyEditorView>());
-            MapEdit_Btn.onClick.AddListener(() => ShowView<MapEditorView>());
+            HeroEdit_Btn.onClick.AddListener(ShowView<HeroEditView>);
+            //BossEdit_Btn.onClick.AddListener(ShowView<>());
+            EnemyEdit_Btn.onClick.AddListener(ShowView<EnemyEditorView>);
+            MapEdit_Btn.onClick.AddListener(ShowView<MapEditorView>);
         }
         protected override void OnInit(IUIData uiData = null)
         {

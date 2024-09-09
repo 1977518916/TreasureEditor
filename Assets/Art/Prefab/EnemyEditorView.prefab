@@ -2037,7 +2037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 250, y: 50}
+  m_AnchoredPosition: {x: 1562, y: 238}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2128580851387286950
@@ -2702,7 +2702,7 @@ MonoBehaviour:
   MarkType: 0
   CustomComponentName: DeleteButton
   CustomComment: 
-  mComponentName: 
+  mComponentName: UnityEngine.UI.Button
 --- !u!1 &2859627638725926883
 GameObject:
   m_ObjectHideFlags: 0
@@ -5152,7 +5152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u51CF\u5C11\u4E00\u6CE2\u654C\u4EBA"
+  m_text: "\u51CF\u5C11\u5F53\u524D\u6CE2\u654C\u4EBA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f3f5894144a20cb498cf7feff08ef5f7, type: 2}
   m_sharedMaterial: {fileID: 6114938744055251145, guid: f3f5894144a20cb498cf7feff08ef5f7, type: 2}

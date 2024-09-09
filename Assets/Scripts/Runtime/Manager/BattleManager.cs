@@ -145,7 +145,7 @@ public class BattleManager : MonoSingleton<BattleManager>
 
     private void Start()
     {
-        //battleBG.sprite = AssetsLoadManager.LoadBg(DataManager.LevelData.mapType);
+        battleBG.sprite = AssetsLoadManager.LoadBg(DataManager.LevelData.mapType);
     }
     
     /// <summary>

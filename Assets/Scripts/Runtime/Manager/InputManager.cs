@@ -47,7 +47,7 @@ namespace Runtime.Manager
         private void AllEnemyEntityDead()
         {
             if (!Input.GetKeyDown(KeyCode.J)) return;
-            DataManager.GameData.isInvicibleEnemy = false;
+            DataManager.GetRuntimeData().isInvicibleEnemy = false;
             foreach (var enemy in EntitySystem.Instance.GetAllEnemyEntity())
             {
                 enemy.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit(int.MinValue);

@@ -12,7 +12,7 @@ namespace Runtime.Component.Skill
     {
         public readonly HeroEntity Entity;
         //public DataType.HeroPositionType positionType;
-        public HeroSkillComponent(HeroEntity heroEntity)
+        public HeroSkillComponent(int index, HeroEntity heroEntity)
         {
             Entity = heroEntity;
         }

@@ -29,7 +29,7 @@ namespace Runtime.Component.Skill
             StateType stateType = id == 0 ? StateType.Skill_1 : StateType.Skill_2;
             SkillData skillData = id == 0 ? Entity.GetHeroData().skillData1 : Entity.GetHeroData().skillData2;
             //避免缓存的技能数据不是最新的
-            skillData = DataManager.SkillStruct.GetSkillDataOfKey(skillData.key);
+            skillData = DataManager.GetSkillStruct().GetSkillDataOfKey(skillData.key);
             Entity.GetSpecifyComponent<StateMachineComponent>(ComponentType.StateMachineComponent).ChangeState(stateType);
             SkillSystem.Instance.ShowSkill(1, skillData, Entity);
         }

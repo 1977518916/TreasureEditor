@@ -1,0 +1,49 @@
+ManifestFileVersion: 0
+CRC: 4038019507
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: mapeditorview_prefab
+      Dependencies: {}
+    Info_1:
+      Name: heroselectpopui_prefab
+      Dependencies:
+        Dependency_0: character
+    Info_2:
+      Name: heroeditview_prefab
+      Dependencies:
+        Dependency_0: character
+        Dependency_1: effect
+        Dependency_2: font
+        Dependency_3: texture
+    Info_3:
+      Name: skillselectpopui_prefab
+      Dependencies: {}
+    Info_4:
+      Name: enemyeditorview_prefab
+      Dependencies: {}
+    Info_5:
+      Name: editorui_prefab
+      Dependencies:
+        Dependency_0: texture
+    Info_6:
+      Name: character
+      Dependencies: {}
+    Info_7:
+      Name: config
+      Dependencies: {}
+    Info_8:
+      Name: effect
+      Dependencies: {}
+    Info_9:
+      Name: font
+      Dependencies:
+        Dependency_0: texture
+    Info_10:
+      Name: prefabs
+      Dependencies:
+        Dependency_0: font
+        Dependency_1: texture
+    Info_11:
+      Name: texture
+      Dependencies: {}

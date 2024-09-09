@@ -17,6 +17,19 @@ namespace Runtime.Manager
         /// 本次使用的英雄列表
         /// </summary>
         private static List<HeroData> heroDataList = new List<HeroData>();
+        
+        /// <summary>
+        /// 关卡数据
+        /// </summary>
+        private static LevelData levelData = new LevelData();
+
+        /// <summary>
+        /// 游戏内的动态数据
+        /// </summary>
+        private static GameData gameData = new GameData();
+        
+        // 动画相关字段
+        #region Spine
 
         /// <summary>
         /// 所有的动画资源
@@ -39,7 +52,7 @@ namespace Runtime.Manager
         /// <summary>
         /// 技能数据
         /// </summary>
-        public static SkillStruct SkillStruct { get; private set; }
+        private static SkillStruct skillStruct;
         
         /// <summary>
         /// 实体寻常动画
@@ -47,32 +60,34 @@ namespace Runtime.Manager
         private static readonly Dictionary<EntityModelType, SkeletonDataAsset> EntityCommonSpineDic =
             new Dictionary<EntityModelType, SkeletonDataAsset>();
 
-        /// <summary>
-        /// 关卡数据
-        /// </summary>
-        private static LevelData levelData = new LevelData();
+        #endregion
 
+        // 动画数据路径映射
+        #region SpineDataDic
+        
         /// <summary>
-        /// 游戏内的动态数据
+        /// 技能Spine路径映射
         /// </summary>
-        private static GameData gameData = new GameData();
-
+        private static Dictionary<string, string> SkillSpineDic = new Dictionary<string, string>();
+        
         /// <summary>
-        /// 地图素材路径
+        /// 攻击Spine路径映射
         /// </summary>
-        public const string MapTexturePath = "Texture/LongMap/Map_";
-
+        private static Dictionary<EntityModelType, string> AttackSpineDic = new Dictionary<EntityModelType, string>();
+        
         /// <summary>
-        /// 预制体路径
+        /// 寻常Spine路径映射
         /// </summary>
-        public const string PrefabPath = "Prefabs/";
+        private static Dictionary<EntityModelType, string> CommonSpineDic = new Dictionary<EntityModelType, string>();
 
+        #endregion
+        
         public static void Init(Action action)
         {
             ES3.Init();
             InitReadData();
-            InitAllSpineData();
-            SkillStruct = AssetsLoadManager.Load<SkillStruct>("Config/AllSkillData");
+            InitSpineData();
+            skillStruct = AssetsLoadManager.Load<SkillStruct>("Config/AllSkillData");
             action.Invoke();
         }
         
@@ -88,6 +103,19 @@ namespace Runtime.Manager
         }
         
         /// <summary>
+        /// 初始化动画文件路径映射数据文件
+        /// </summary>
+        private static void InitSpineData()
+        {
+            SkillSpineDic = ES3.Load(HelpTools.GetEnumValueName<DataType>(DataType.EntitySkillSpineData),
+                Config.SPINE_DATA_MAP_FILE_PATH, SkillSpineDic);
+            AttackSpineDic = ES3.Load(HelpTools.GetEnumValueName<DataType>(DataType.EntityBulletSpineData),
+                Config.SPINE_DATA_MAP_FILE_PATH, AttackSpineDic);
+            CommonSpineDic = ES3.Load(HelpTools.GetEnumValueName<DataType>(DataType.EntityCommonSpineData),
+                Config.SPINE_DATA_MAP_FILE_PATH, CommonSpineDic);
+        }
+
+        /// <summary>
         /// 如果一开始没有存档的数据就保存一次
         /// </summary>
         private static void IsNotData()
@@ -99,7 +127,7 @@ namespace Runtime.Manager
             if (!ES3.KeyExists(HelpTools.GetEnumValueName<DataType>(DataType.RuntimeData)))
                 SaveRuntimeData();
         }
-
+        
         // Spine相关API
         #region Spine
 
@@ -109,7 +137,7 @@ namespace Runtime.Manager
         /// <param name="modelType"></param>
         /// <param name="asset"></param>
         /// <returns></returns>
-        public static bool GetSpecifyEntityBulletSpine(EntityModelType modelType, out SkeletonDataAsset asset)
+        private static bool GetSpecifyEntityBulletSpine(EntityModelType modelType, out SkeletonDataAsset asset)
         {
             return AllEntityAttackSpineDic.TryGetValue(modelType, out asset);
         }
@@ -131,22 +159,31 @@ namespace Runtime.Manager
         {
             return EntityCommonSpineDic;
         }
-
+        
+        /// <summary>
+        /// 获取所有实体技能动画
+        /// </summary>
+        /// <returns></returns>
+        public static Dictionary<string, SkeletonDataAsset> GetAllEntitySkillSpine()
+        {
+            return AllEntitySkillSpineDic;
+        }
+        
         /// <summary>
         /// 获取指定实体的寻常动画
         /// </summary>
         /// <param name="modelType"></param>
         /// <param name="asset"></param>
         /// <returns></returns>
-        public static bool GetSpecifyEntityCommonSpine(EntityModelType modelType, out SkeletonDataAsset asset)
+        private static bool GetSpecifyEntityCommonSpine(EntityModelType modelType, out SkeletonDataAsset asset)
         {
             return EntityCommonSpineDic.TryGetValue(modelType, out asset);
         }
 
         /// <summary>
-        /// 初始化所有动画文件数据
+        /// 初始化所有动画文件数据 现在只留给Editor内使用 制作成动画文件路径映射表
         /// </summary>
-        public static void InitAllSpineData()
+        public static void CollectAllSpineData()
         {
             var allEffect = Resources.LoadAll<SkeletonDataAsset>("");
             foreach (EntityModelType entityName in Enum.GetValues(typeof(EntityModelType)))
@@ -161,8 +198,6 @@ namespace Runtime.Manager
             }
 
             InitAllEntitySkillSpine(allEffect);
-            
-            
         }
 
         /// <summary>
@@ -217,11 +252,15 @@ namespace Runtime.Manager
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public static bool EntityIsHaveBullet(EntityModelType type)
+        private static bool EntityIsHaveBullet(EntityModelType type)
         {
             return AllEntityAttackSpineDic.ContainsKey(type);
         }
-
+        
+        /// <summary>
+        /// 初始化所有实体技能动画
+        /// </summary>
+        /// <param name="allEffect"></param>
         private static void InitAllEntitySkillSpine(SkeletonDataAsset[] allEffect)
         {
             foreach (SkeletonDataAsset asset in allEffect.Where(data => data.name.Contains("skill")))
@@ -229,22 +268,7 @@ namespace Runtime.Manager
                 AllEntitySkillSpineDic.Add(asset.name, asset);
             }
         }
-
-        /// <summary>
-        /// 获取所有实体的寻常动画
-        /// </summary>
-        /// <returns></returns>
-        public static Dictionary<EntityModelType, SkeletonDataAsset> GetAllEntityCommonSpine()
-        {
-            return EntityCommonSpineDic;
-        }
         
-        
-        public static Dictionary<string, SkeletonDataAsset> GetAllEntitySkillSpine()
-        {
-            return AllEntitySkillSpineDic;
-        }
-
         #endregion
         
         // 数据存储和读取相关的API
@@ -334,6 +358,15 @@ namespace Runtime.Manager
             return gameData;
         }
 
+        /// <summary>
+        /// 获取技能数据
+        /// </summary>
+        /// <returns></returns>
+        public static SkillStruct GetSkillStruct()
+        {
+            return skillStruct;
+        }
+
         #endregion
         
         // 设置对应数据的接口
@@ -365,6 +398,40 @@ namespace Runtime.Manager
         public static void SetRuntimeData(GameData data)
         {
             gameData = data;
+        }
+
+        #endregion
+
+        #region Path
+        
+        /// <summary>
+        /// 获取子弹路径
+        /// </summary>
+        /// <param name="modelType"></param>
+        /// <returns></returns>
+        public static string GetBulletPath(EntityModelType modelType)
+        {
+            return AttackSpineDic.GetValueOrDefault(modelType, "");
+        }
+        
+        /// <summary>
+        /// 获取技能路径
+        /// </summary>
+        /// <param name="skillKey"></param>
+        /// <returns></returns>
+        public static string GetSkillPath(string skillKey)
+        {
+            return SkillSpineDic.GetValueOrDefault(skillKey, "");
+        }
+        
+        /// <summary>
+        /// 获取寻常动画路径
+        /// </summary>
+        /// <param name="modelType"></param>
+        /// <returns></returns>
+        public static string GetCommonSpinePath(EntityModelType modelType)
+        {
+            return CommonSpineDic.GetValueOrDefault(modelType, "");
         }
 
         #endregion

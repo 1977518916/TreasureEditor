@@ -68,10 +68,10 @@ namespace Runtime.UI
             switch(index)
             {
                 case 0:
-                    heroData.skillData1 = DataManager.SkillStruct.GetSkillDataOfKey(key);
+                    heroData.skillData1 = DataManager.GetSkillStruct().GetSkillDataOfKey(key);
                     break;
                 case 1:
-                    heroData.skillData2 = DataManager.SkillStruct.GetSkillDataOfKey(key);
+                    heroData.skillData2 = DataManager.GetSkillStruct().GetSkillDataOfKey(key);
                     break;
             }
             UpdateSelection();
@@ -110,7 +110,7 @@ namespace Runtime.UI
             private void TryMatch()
             {
                 skeletonGraphic.MatchRectTransformWithBounds();
-                SkillData data = DataManager.SkillStruct.GetSkillDataOfKey(key);
+                SkillData data = DataManager.GetSkillStruct().GetSkillDataOfKey(key);
                 float scale = .5f;
                 Vector3 pos = Vector3.zero;
                 if(data != null)

@@ -15,6 +15,7 @@ namespace QFramework.Example
 {
 	public partial class BulletModelDataEdit : UIElement
 	{
+		ResLoader resLoader = ResLoader.Allocate();
 		private void Awake()
 		{
 		}
@@ -27,8 +28,8 @@ namespace QFramework.Example
 		{
 			BulletSpiteView.gameObject.SetActive(false);
 			BulletSpineView.gameObject.SetActive(false);
-			DataManager.GetSpecifyEntityBulletSpine(heroData.modelType, out var dataAsset);
-			SetBulletModel(dataAsset);
+			//DataManager.GetSpecifyEntityBulletSpine(heroData.modelType, out var dataAsset);
+			SetBulletModel(resLoader.LoadSync<SkeletonDataAsset>(DataManager.GetBulletPath(EntityModelType.CaiWenJi).ToLower().Replace("effect/spine/caiwenji/","")));
 			SetBulletModelBtnCanClick(false);
 		}
 
@@ -59,6 +60,7 @@ namespace QFramework.Example
 		public void SetBulletModel(SkeletonDataAsset dataAsset)
 		{
 			BulletSpineView.skeletonDataAsset = dataAsset;
+			BulletSpineView.Initialize(true);
 			BulletSpineView.gameObject.SetActive(true);
 		}
 		

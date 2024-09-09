@@ -105,7 +105,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     public void SetBattleBG(int value)
     {
         if(value > 6) return;
-        battleBG.sprite = AssetsLoadManager.Load<Sprite>(DataManager.MapTexturePath + value);
+        battleBG.sprite = AssetsLoadManager.Load<Sprite>(Config.MAP_TEXTURE_PATH + value);
     }
 
     /// <summary>
@@ -142,10 +142,10 @@ public class BattleManager : MonoSingleton<BattleManager>
     {
         return BulletParent;
     }
-
+    
     private void Start()
     {
-        battleBG.sprite = AssetsLoadManager.LoadBg(DataManager.LevelData.mapType);
+        battleBG.sprite = AssetsLoadManager.LoadBg(DataManager.GetLevelData().mapType);
     }
     
     /// <summary>

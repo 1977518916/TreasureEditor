@@ -70,7 +70,7 @@ namespace Runtime.Manager
         {
             if(mapTypeEnum != MapTypeEnum.Other)
             {
-                return Resources.Load<Sprite>(DataManager.MapTexturePath + (int)mapTypeEnum);
+                return Resources.Load<Sprite>(Config.MAP_TEXTURE_PATH + (int)mapTypeEnum);
             }
             Texture2D texture2D = new Texture2D(2, 2);
             texture2D.filterMode = FilterMode.Bilinear;
@@ -107,18 +107,19 @@ namespace Runtime.Manager
             SkeletonGraphic skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
             return skeletonGraphic;
         }
-
+        
         public static SkeletonGraphic LoadSkeletonGraphic(EntityModelType type, Transform parent = null)
         {
-            if (DataManager.GetSpecifyEntityCommonSpine(type, out var asset))
-            {
-
-                return SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
-            }
-            else
-            {
-                throw new Exception($"没有这个模型对应的寻常动画文件,请检查： {type}");
-            }
+            // if (DataManager.GetSpecifyEntityCommonSpine(type, out var asset))
+            // {
+            //
+            //     return SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
+            // }
+            // else
+            // {
+            //     throw new Exception($"没有这个模型对应的寻常动画文件,请检查： {type}");
+            // }
+            return default;
         }
 
         public static SkeletonGraphic LoadSkeletonGraphic(SkeletonDataAsset asset, Transform parent = null)
@@ -165,11 +166,12 @@ namespace Runtime.Manager
         
         public static SkeletonGraphic LoadBulletSkeletonOfEnum(EntityModelType entityModelType, Transform parent = null)
         {
-            if (!DataManager.GetSpecifyEntityBulletSpine(entityModelType, out var dataAsset)) return null;
-            var anima = LoadSkeletonGraphic(dataAsset, parent);
-            anima.name = entityModelType.ToString();
-            anima.transform.localScale = new Vector3(1f, 1f, 1f);
-            return anima;
+            // if (!DataManager.GetSpecifyEntityBulletSpine(entityModelType, out var dataAsset)) return null;
+            // var anima = LoadSkeletonGraphic(dataAsset, parent);
+            // anima.name = entityModelType.ToString();
+            // anima.transform.localScale = new Vector3(1f, 1f, 1f);
+            // return anima;
+            return default;
         }
 
         public static T Load<T>(string path) where T : Object

@@ -25,8 +25,8 @@ public class EditorTools
     [MenuItem("插件/收集所有动画文件资源路径")]
     public static void SpineDataAssetPathCollection()
     {
-        //DataManager.InitAllSpineData();
-
+        DataManager.CollectAllSpineData();
+        
         SaveAttackSpineDataAssetPath();
         SaveCommonSpineDataAssetPath();
         SaveSkillSpineDataAssetPath();
@@ -39,12 +39,7 @@ public class EditorTools
     {
         foreach (var keyValue in DataManager.GetEntityBulletSpineDic())
         {
-            AttackSpineDic.Add(keyValue.Key,
-                AssetDatabase.GetAssetPath(keyValue.Value).Replace(new[]
-                {
-                    Config.SPINE_FILE_PREFIX_REPLACE,
-                    Config.SPINE_FILE_SUFFIX_REPLACE
-                }, ""));
+            AttackSpineDic.Add(keyValue.Key, keyValue.Value.name);
         }
 
         ES3.Save(HelpTools.GetEnumValueName<DataType>(DataType.EntityBulletSpineData), AttackSpineDic,
@@ -58,11 +53,7 @@ public class EditorTools
     {
         foreach (var keyValue in DataManager.GetEntityCommonSpineDic())
         {
-            CommonSpineDic.Add(keyValue.Key, AssetDatabase.GetAssetPath(keyValue.Value).Replace(new[]
-            {
-                Config.SPINE_FILE_PREFIX_REPLACE,
-                Config.SPINE_FILE_SUFFIX_REPLACE
-            }, ""));
+            CommonSpineDic.Add(keyValue.Key, keyValue.Value.name);
         }
 
         ES3.Save(HelpTools.GetEnumValueName<DataType>(DataType.EntityCommonSpineData), CommonSpineDic,
@@ -76,21 +67,11 @@ public class EditorTools
     {
         foreach (var keyValue in DataManager.GetAllEntitySkillSpine())
         {
-            SkillSpineDic.Add(keyValue.Key, AssetDatabase.GetAssetPath(keyValue.Value).Replace(new[]
-            {
-                Config.SPINE_FILE_PREFIX_REPLACE,
-                Config.SPINE_FILE_SUFFIX_REPLACE
-            }, ""));
+            SkillSpineDic.Add(keyValue.Key, keyValue.Value.name);
         }
 
         ES3.Save(HelpTools.GetEnumValueName<DataType>(DataType.EntitySkillSpineData), SkillSpineDic,
             Config.SPINE_DATA_MAP_FILE_PATH);
-    }
-
-    private static void ReadAttackSpineDataAssetPath()
-    {
-        AttackSpineDic = ES3.Load(HelpTools.GetEnumValueName<DataType>(DataType.EntityBulletSpineData),
-            Config.SPINE_DATA_MAP_FILE_PATH, AttackSpineDic);
     }
     
 #endif

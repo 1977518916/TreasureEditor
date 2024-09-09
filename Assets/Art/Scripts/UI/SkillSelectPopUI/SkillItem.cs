@@ -48,7 +48,7 @@ namespace QFramework.Example
 			SkillSpine.Initialize(true);
 			SkillSpine.raycastTarget = false;
 			SkillSpine.AnimationState.SetAnimation(0, SkillSpine.SkeletonData.Animations.Items[0].Name, true);
-			var skillData = DataManager.SkillStruct.GetSkillDataOfKey(skillKey);
+			var skillData = DataManager.GetSkillStruct().GetSkillDataOfKey(skillKey);
 			var skillScale = 0.5f;
 			var location = Vector3.zero;
 			if (skillData != null)

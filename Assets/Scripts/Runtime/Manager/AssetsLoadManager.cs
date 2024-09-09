@@ -45,7 +45,7 @@ namespace Runtime.Manager
             var bulletObj = new GameObject($"{modelType.ToString()}_Bullet", typeof(RectTransform)) { layer = layer };
             bulletObj.transform.SetParent(parent);
             bulletObj.transform.localPosition = Vector3.zero;
-            bulletObj.transform.localScale = Vector3.one;
+            bulletObj.transform.localScale = new Vector3(2f, 2f, 1f);
             if (HelpTools.BulletIsSpine(modelType))
             {
                 var spine = LoadBulletSkeletonOfEnum(modelType, bulletObj.transform).GameObject();
@@ -159,7 +159,7 @@ namespace Runtime.Manager
             if (!DataManager.GetSpecifyEntityBulletSpine(entityModelType, out var dataAsset)) return null;
             var anima = LoadSkeletonGraphic(dataAsset, parent);
             anima.name = entityModelType.ToString();
-            anima.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            anima.transform.localScale = new Vector3(1f, 1f, 1f);
             return anima;
         }
 

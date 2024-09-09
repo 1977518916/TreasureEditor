@@ -41,7 +41,7 @@ namespace Runtime.System
                 case KeyCode.Alpha9:
                     Debug.Log($"按下{key}");
                     int keyCodeValue = (int)key + (key == KeyCode.Alpha0 ? 58 : 0) - 49;
-                    HeroSkillComponent skillComponent = GetHeroSkillOfPosition((DataType.HeroPositionType)(keyCodeValue / 2));
+                    HeroSkillComponent skillComponent = GetHeroSkillOfPosition((keyCodeValue / 2));
                     if(skillComponent != null)
                     {
                         int skillId = keyCodeValue % 2;
@@ -52,15 +52,11 @@ namespace Runtime.System
             }
         }
 
-        private HeroSkillComponent GetHeroSkillOfPosition(DataType.HeroPositionType positionType)
+        private HeroSkillComponent GetHeroSkillOfPosition(int index)
         {
-            foreach (HeroEntity heroEntity in heroEntities)
+            if(index < heroEntities.Count)
             {
-                HeroSkillComponent skillComponent = heroEntity.GetSpecifyComponent<HeroSkillComponent>(ComponentType.SkillComponent);
-                if(skillComponent.positionType == positionType)
-                {
-                    return skillComponent;
-                }
+                return heroEntities[index].GetSpecifyComponent<HeroSkillComponent>(ComponentType.SkillComponent);
             }
             return null;
         }
@@ -83,8 +79,8 @@ namespace Runtime.System
                 case SkillMoveType.Bullet:
                     CreateBullet(skillData, entity, pointDetectComponent);
                     break;
-                case SkillMoveType.Fall:
-                    CreateFall(skillData, entity, pointDetectComponent);
+                case SkillMoveType.DelayRange:
+                    CreateDelayRange(skillData, entity, pointDetectComponent);
                     break;
                 case SkillMoveType.Self:
                     CreateSelf(skillData, entity);
@@ -103,7 +99,8 @@ namespace Runtime.System
             GameObject go = new GameObject($"{skillData.key}");
             go.AddComponent<RectTransform>();
             go.transform.SetParent(entity.transform);
-            CreateSkeletonGraphic(skillData, go.transform);
+            var graphic = CreateSkeletonGraphic(skillData, go.transform);
+            graphic.transform.localScale = new Vector3(skillData.scale, skillData.scale, skillData.scale);
             return go;
         }
 

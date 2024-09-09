@@ -1,9 +1,8 @@
-﻿using System;
-using Runtime.Data;
-using Spine;
+﻿using Runtime.Data;
+using Runtime.Manager;
 using Spine.Unity;
 using UnityEngine;
-using UnityTimer;
+using Timer = UnityTimer.Timer;
 
 namespace Runtime.System
 {
@@ -18,18 +17,18 @@ namespace Runtime.System
             GameObject go = CreateSkillGo(entity, skillData);
             HeroData heroData = entity.GetHeroData();
             BulletEntity bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, go);
-            bulletEntity.InitBullet(EntityType.EnemyEntity, (int)(heroData.atk * AtkRate), BulletAttributeType.Penetrate,
+            bulletEntity.InitBullet(EntityType.EnemyEntity, GetSkillDamage(heroData), BulletAttributeType.Penetrate,
                 entity.GetFireLocation(), BattleManager.Instance.GetBulletParent());
 
             var point = pointDetectComponent.GetTarget().position;
 
             bulletEntity.AllComponentList.Add(new BulletMoveComponent(bulletEntity.GetComponent<RectTransform>(),
-                point, 800f, BulletMoveType.RectilinearMotion, 2000f));
+                point, 800f, BulletMoveType.RectilinearMotion, 3000f));
 
-            bulletEntity.AllComponentList.Add(new DelayedDeadComponent(3f, bulletEntity));
+            bulletEntity.AllComponentList.Add(new DelayedDeadComponent(8f, bulletEntity));
         }
 
-        private void CreateFall(SkillData skillData, HeroEntity entity, PointDetectComponent pointDetectComponent)
+        private void CreateDelayRange(SkillData skillData, HeroEntity entity, PointDetectComponent pointDetectComponent)
         {
             GameObject go = CreateSkillGo(entity, skillData);
             var point = pointDetectComponent.GetTarget().position;
@@ -44,11 +43,11 @@ namespace Runtime.System
                     float distance = Vector3.Distance(((RectTransform)go.transform).anchoredPosition, ((RectTransform)enemyEntity.transform).anchoredPosition);
                     if(distance <= skillData.damageRange)
                     {
-                        enemyEntity.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit((int)(entity.GetHeroData().atk * AtkRate));
+                        enemyEntity.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit(GetSkillDamage(heroData));
                     }
                 }
-                Destroy(go);
             });
+            go.GetComponentInChildren<SkeletonGraphic>().AnimationState.Complete += _ => Destroy(go);
         }
 
         private void CreateHideRange(SkillData skillData, HeroEntity entity, PointDetectComponent pointDetectComponent)
@@ -67,7 +66,7 @@ namespace Runtime.System
                     float distance = Vector3.Distance(((RectTransform)go.transform).anchoredPosition, ((RectTransform)enemyEntity.transform).anchoredPosition);
                     if(distance <= skillData.damageRange)
                     {
-                        enemyEntity.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit((int)(entity.GetHeroData().atk * AtkRate));
+                        enemyEntity.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit(GetSkillDamage(entity.GetHeroData()));
                     }
                 }
                 Destroy(go);
@@ -91,7 +90,7 @@ namespace Runtime.System
             Vector2 direction = pointDetectComponent.GetTarget().position - skeletonGraphic.rectTransform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             skeletonGraphic.rectTransform.rotation = Quaternion.Euler(0f, 0f, angle + skeletonGraphic.rectTransform.eulerAngles.z);
-            skeletonGraphic.rectTransform.localScale = new Vector3(3, 3, 3);
+            skeletonGraphic.rectTransform.localScale = new Vector3(skillData.scale, skillData.scale, skillData.scale);
 
             HeroData heroData = entity.GetHeroData();
             Vector3 p1 = skeletonGraphic.transform.position;
@@ -103,9 +102,14 @@ namespace Runtime.System
                 EnemyEntity enemyEntity = raycastHit.transform.GetComponent<EnemyEntity>();
                 if(enemyEntity)
                 {
-                    enemyEntity.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit((int)(heroData.atk * AtkRate));
+                    enemyEntity.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit(GetSkillDamage(heroData));
                 }
             }
+        }
+
+        private int GetSkillDamage(HeroData heroData)
+        {
+            return DataManager.GameData.isInvicibleEnemy ? 1 : (int)(heroData.atk * AtkRate);
         }
     }
 }

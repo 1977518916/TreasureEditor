@@ -192,10 +192,21 @@ namespace Runtime.Manager
 
         private static void InitAllEntitySkillSpine(SkeletonDataAsset[] allEffect)
         {
+            List<SkeletonDataAsset> assets = new List<SkeletonDataAsset>();
             foreach (SkeletonDataAsset asset in allEffect.Where(data => data.name.Contains("skill")))
+            {
+                assets.Add(asset);
+            }
+            assets.Sort((a,b)=>GetSkillOrder(a.name).CompareTo(GetSkillOrder(b.name)));
+            foreach (SkeletonDataAsset asset in assets)
             {
                 AllEntitySkillSpineDic.Add(asset.name, asset);
             }
+        }
+
+        private static int GetSkillOrder(string skillName)
+        {
+            return int.Parse(skillName.Replace("skill_",""));
         }
     }
 }

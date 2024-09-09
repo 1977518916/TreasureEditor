@@ -13,7 +13,7 @@ namespace QFramework.Example
 		[SerializeField]
 		public UnityEngine.UI.ScrollRect ScrollView;
 		[SerializeField]
-		public SelectNode SelectNode;
+		public MapSelectNode mapSelectNode;
 		[SerializeField]
 		public UnityEngine.UI.Button CloseButton;
 		[SerializeField]
@@ -24,7 +24,7 @@ namespace QFramework.Example
 		protected override void ClearUIComponents()
 		{
 			ScrollView = null;
-			SelectNode = null;
+			mapSelectNode = null;
 			CloseButton = null;
 			SaveButton = null;
 			

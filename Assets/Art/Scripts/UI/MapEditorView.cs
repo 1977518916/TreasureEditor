@@ -48,15 +48,15 @@ namespace QFramework.Example
 
             foreach (MapTypeEnum type in Enum.GetValues(typeof(MapTypeEnum)))
             {
-                SelectNode selectNode = Instantiate(SelectNode, ScrollView.content);
-                selectNode.name = type.ToString();
-                selectNode.SetNode(AssetsLoadManager.LoadBg(type),
+                MapSelectNode mapSelectNode = Instantiate(this.mapSelectNode, ScrollView.content);
+                mapSelectNode.name = type.ToString();
+                mapSelectNode.SetNode(AssetsLoadManager.LoadBg(type),
                     () => DataManager.GetLevelData().mapType = type);
-                refreshAction += () => selectNode.SetTick(type == DataManager.GetLevelData().mapType);
+                refreshAction += () => mapSelectNode.SetTick(type == DataManager.GetLevelData().mapType);
             }
             foreach (Transform o in ScrollView.content)
             {
-                o.GetComponent<SelectNode>().refreshAction = refreshAction;
+                o.GetComponent<MapSelectNode>().refreshAction = refreshAction;
             }
             GridLayoutGroup gridLayoutGroup = ScrollView.content.GetComponent<GridLayoutGroup>();
             gridLayoutGroup.CalculateLayoutInputHorizontal();

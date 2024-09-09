@@ -14,1132 +14,1132 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillDatas:
   - key: skill_1
-    skillEffectType: 0
-    skillMoveType: 0
+    skillMoveType: 1
     amount: 1
     showScale: 0.4
     showPosition: {x: 0, y: -73}
     rotations: 0
-    isLoopPlay: 1
-    damageDelay: 0
-    damageRange: 0
+    isLoopPlay: 0
+    scale: 1
+    damageDelay: 0.3
+    damageRange: 200
   - key: skill_2
-    skillEffectType: 1
-    skillMoveType: 0
+    skillMoveType: 1
     amount: 1
     showScale: 0.15
     showPosition: {x: 0, y: 0}
     rotations: 0
-    isLoopPlay: 1
-    damageDelay: 0
-    damageRange: 0
+    isLoopPlay: 0
+    scale: 1
+    damageDelay: 0.3
+    damageRange: 500
   - key: skill_3
-    skillEffectType: 1
-    skillMoveType: 0
+    skillMoveType: 2
     amount: 1
     showScale: 0.8
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_4
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_5
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.7
     showPosition: {x: 0, y: 0}
     rotations: -90
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_6
-    skillEffectType: 1
-    skillMoveType: 0
+    skillMoveType: 3
     amount: 1
     showScale: 0.5
     showPosition: {x: -50, y: 0}
     rotations: 0
-    isLoopPlay: 1
+    isLoopPlay: 0
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_7
-    skillEffectType: 1
-    skillMoveType: 0
+    skillMoveType: 3
     amount: 1
     showScale: 0.5
     showPosition: {x: -50, y: 0}
     rotations: 0
-    isLoopPlay: 1
+    isLoopPlay: 0
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_8
-    skillEffectType: 1
     skillMoveType: 3
     amount: 1
     showScale: 0.35
     showPosition: {x: 0, y: -100}
     rotations: -90
     isLoopPlay: 0
+    scale: 3
     damageDelay: 0
     damageRange: 0
   - key: skill_9
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: -25, y: -60}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_10
-    skillEffectType: 1
-    skillMoveType: 0
+    skillMoveType: 2
     amount: 1
     showScale: 1
     showPosition: {x: 43, y: -134}
     rotations: 0
-    isLoopPlay: 1
+    isLoopPlay: 0
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_11
-    skillEffectType: 1
-    skillMoveType: 0
+    skillMoveType: 4
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: 0}
     rotations: 0
-    isLoopPlay: 1
+    isLoopPlay: 0
+    scale: 1
     damageDelay: 0
-    damageRange: 0
+    damageRange: 200
   - key: skill_12
-    skillEffectType: 1
-    skillMoveType: 0
+    skillMoveType: 2
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -60}
     rotations: 0
-    isLoopPlay: 1
+    isLoopPlay: 0
+    scale: 2
     damageDelay: 0
     damageRange: 0
   - key: skill_13
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_14
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.2
     showPosition: {x: 0, y: -55}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_15
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -50}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_16
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.6
     showPosition: {x: 20, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_17
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.7
     showPosition: {x: 0, y: -70}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_18
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.35
     showPosition: {x: 0, y: -30}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_19
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -50}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_20
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: 20}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_21
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_22
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.15
     showPosition: {x: 0, y: -80}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_23
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -50}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_24
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_25
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.8
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_26
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 100, y: -70}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_27
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -50}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_28
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.8
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_29
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.7
     showPosition: {x: -55, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_30
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.45
     showPosition: {x: 90, y: -40}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_31
-    skillEffectType: 1
     skillMoveType: 1
     amount: 1
     showScale: 0.2
     showPosition: {x: 0, y: -84}
     rotations: 0
     isLoopPlay: 0
+    scale: 1
     damageDelay: 1
     damageRange: 400
   - key: skill_32
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_33
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.1
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_34
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: -80}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_35
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: 0, y: -30}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_36
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.8
     showPosition: {x: 30, y: -40}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_37
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -90}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_38
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: -66}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_39
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: -10, y: -45}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_40
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: -60}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_41
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: 90, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_42
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -80}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_43
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -60}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_44
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.15
     showPosition: {x: 0, y: -11}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_45
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: -64}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_46
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -57}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_47
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: 40}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_48
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.3
     showPosition: {x: 8, y: -56}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_49
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -95}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_50
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.8
     showPosition: {x: 0, y: -90}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_51
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 19, y: -38}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_52
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: -67}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_53
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_54
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_55
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.3
     showPosition: {x: 0, y: -64}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_56
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_57
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: 0, y: -63}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_58
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: -50, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_59
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: 0, y: -33}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_60
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.9
     showPosition: {x: -86, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_61
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: 0, y: -78}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_62
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.9
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_63
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: 55}
     rotations: -90
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_64
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.6
     showPosition: {x: 0, y: 7}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_65
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 85, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_66
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_67
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_68
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_69
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.7
     showPosition: {x: 0, y: 46}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_70
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.9
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_71
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_72
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.1
     showPosition: {x: 0, y: -27}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_73
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.8
     showPosition: {x: 0, y: -78}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_74
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_75
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.1
     showPosition: {x: 41, y: -60}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_76
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: 0, y: 18}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_77
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_78
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: -23, y: -33}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_79
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.7
     showPosition: {x: 42, y: -20}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_80
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.35
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_81
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.18
     showPosition: {x: 0, y: -60}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_82
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.6
     showPosition: {x: 0, y: -67}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_83
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.35
     showPosition: {x: 0, y: -85}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_84
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: 0, y: -41}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_85
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: -80}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_86
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -70}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_87
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: 0, y: 35}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_88
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_89
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -42}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_90
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.2
     showPosition: {x: -2, y: -67}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_91
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: -40, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_92
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -80}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_93
-    skillEffectType: 2
     skillMoveType: 2
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: -56}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_94
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.1
     showPosition: {x: 26, y: -33}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_95
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.8
     showPosition: {x: -47, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_96
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.15
     showPosition: {x: -13, y: -58}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_97
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_98
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: -74}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_99
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 1
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_100
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: -40}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_101
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.4
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_102
-    skillEffectType: 1
     skillMoveType: 4
     amount: 1
     showScale: 0.1
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 0
+    scale: 1
     damageDelay: 0
     damageRange: 400
   - key: skill_103
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.2
     showPosition: {x: 0, y: -98}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_104
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.2
     showPosition: {x: 0, y: -87}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_105
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: -47}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_106
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: 22}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_107
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: -21, y: -78}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_108
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.6
     showPosition: {x: 0, y: 0}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_109
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.8
     showPosition: {x: 0, y: -55}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_110
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.2
     showPosition: {x: 0, y: -80}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_111
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: -52, y: -83}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_112
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.5
     showPosition: {x: 0, y: -73}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0
   - key: skill_113
-    skillEffectType: 1
     skillMoveType: 0
     amount: 1
     showScale: 0.7
     showPosition: {x: 0, y: 23}
     rotations: 0
     isLoopPlay: 1
+    scale: 1
     damageDelay: 0
     damageRange: 0

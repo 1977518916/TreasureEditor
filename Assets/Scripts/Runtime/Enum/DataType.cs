@@ -16,5 +16,20 @@ public enum DataType
     /// <summary>
     /// 运行时数据
     /// </summary>
-    RuntimeData
+    RuntimeData,
+
+    /// <summary>
+    /// 实体子弹动画文件路径
+    /// </summary>
+    EntityBulletSpineData,
+
+    /// <summary>
+    /// 实体寻常动画文件路径
+    /// </summary>
+    EntityCommonSpineData,
+
+    /// <summary>
+    /// 实体技能动画文件路径
+    /// </summary>
+    EntitySkillSpineData
 }

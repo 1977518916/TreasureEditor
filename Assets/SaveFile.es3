@@ -1,4 +1,8 @@
 {
+	"SpineTest" : {
+		"__type" : "string",
+		"value" : "Assets\/Resources\/Character\/Boss\/DongZhuo\/DongZhuo_SkeletonData.asset"
+	},
 	"RuntimeData" : {
 		"__type" : "Runtime.Data.GameData,Assembly-CSharp",
 		"value" : {

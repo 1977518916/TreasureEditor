@@ -6,6 +6,7 @@ using Runtime.Data;
 using Sirenix.Utilities;
 using Spine.Unity;
 using Tao_Framework.Core.Event;
+using UnityEditor;
 using UnityEngine;
 
 namespace Runtime.Manager
@@ -28,7 +29,10 @@ namespace Runtime.Manager
         /// </summary>
         private static readonly Dictionary<EntityModelType, SkeletonDataAsset> AllEntityAttackSpineDic =
             new Dictionary<EntityModelType, SkeletonDataAsset>();
-
+        
+        /// <summary>
+        /// 技能动画字典
+        /// </summary>
         public static readonly Dictionary<string, SkeletonDataAsset> AllEntitySkillSpineDic =
             new Dictionary<string, SkeletonDataAsset>();
 
@@ -71,7 +75,7 @@ namespace Runtime.Manager
             SkillStruct = AssetsLoadManager.Load<SkillStruct>("Config/AllSkillData");
             action.Invoke();
         }
-
+        
         /// <summary>
         /// 初始化读取数据
         /// </summary>
@@ -111,6 +115,15 @@ namespace Runtime.Manager
         }
 
         /// <summary>
+        /// 获取实体子弹动画字典
+        /// </summary>
+        /// <returns></returns>
+        public static Dictionary<EntityModelType, SkeletonDataAsset> GetEntityBulletSpineDic()
+        {
+            return AllEntityAttackSpineDic;
+        }
+
+        /// <summary>
         /// 获取指定实体的寻常动画
         /// </summary>
         /// <param name="modelType"></param>
@@ -124,7 +137,7 @@ namespace Runtime.Manager
         /// <summary>
         /// 初始化所有动画文件数据
         /// </summary>
-        private static void InitAllSpineData()
+        public static void InitAllSpineData()
         {
             var allEffect = Resources.LoadAll<SkeletonDataAsset>("");
             foreach (EntityModelType entityName in Enum.GetValues(typeof(EntityModelType)))
@@ -139,9 +152,8 @@ namespace Runtime.Manager
             }
 
             InitAllEntitySkillSpine(allEffect);
-
-
-            EventMgr.Instance.TriggerEvent(GameEvent.DataInitEnd, 0.15f);
+            
+            
         }
 
         /// <summary>

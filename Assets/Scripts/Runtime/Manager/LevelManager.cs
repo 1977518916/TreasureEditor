@@ -71,7 +71,7 @@ namespace Runtime.Manager
 
         private void OnDestroy()
         {
-            DestroyInstance();
+            //DestroyInstance();
         }
         
         /// <summary>

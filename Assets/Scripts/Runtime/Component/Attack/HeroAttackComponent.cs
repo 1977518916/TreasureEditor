@@ -60,6 +60,11 @@ public class HeroAttackComponent : AttackComponent
     private PointDetectComponent pointDetectComponent;
 
     /// <summary>
+    /// 停止攻击
+    /// </summary>
+    private bool stopAttack = false;
+    
+    /// <summary>
     /// 英雄攻击组件的构造函数
     /// </summary>
     /// <param name="attackCountValue"> 攻击次数总数 </param>
@@ -97,7 +102,7 @@ public class HeroAttackComponent : AttackComponent
                 attackCount = attackMaxCount;
         }
 
-        if(pointDetectComponent.IsVeryClose())
+        if (pointDetectComponent.IsVeryClose() && !stopAttack) 
         {
             Attack(1, pointDetectComponent.GetTarget());
         }
@@ -107,24 +112,33 @@ public class HeroAttackComponent : AttackComponent
     {
 
     }
+    
+    /// <summary>
+    /// 改变停止攻击状态
+    /// </summary>
+    public void ChangeStopAttack()
+    {
+        stopAttack = !stopAttack;
+    }
 
     /// <summary>
     /// 攻击
     /// </summary>
-    public void Attack(float time, RectTransform target)
+    private void Attack(float time, RectTransform target)
     {
         if (isInAttackCd) return;
         if (IsInAttackInterval) return;
-        var stateMachine = heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent);
+        var stateMachine =
+            heroEntity.GetSpecifyComponent<HeroStateMachineComponent>(ComponentType.StateMachineComponent);
         stateMachine.TryChangeState(StateType.Attack);
-        
+
         MakeBullet(target.position);
-        
+
         float deviation = 0.1f;
         for (int i = 1; i < bulletAmount; i++)
         {
             float rate = ((i + 1) / 0b10) * Mathf.Pow(-1, i);
-            MakeBullet(GetOtherPoint(deviation * rate,target.position));
+            MakeBullet(GetOtherPoint(deviation * rate, target.position));
         }
 
         ReduceAttackCount();

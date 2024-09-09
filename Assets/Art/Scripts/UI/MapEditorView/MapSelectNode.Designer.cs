@@ -8,7 +8,7 @@ using QFramework;
 
 namespace QFramework.Example
 {
-	public partial class SelectNode
+	public partial class MapSelectNode
 	{
 		[SerializeField] public UnityEngine.UI.Image bg;
 		[SerializeField] public UnityEngine.UI.Image tick;

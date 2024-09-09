@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 3841215927337100192}
   - component: {fileID: 3224144994481221583}
   m_Layer: 5
-  m_Name: SelectNode
+  m_Name: MapSelectNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScrollView: {fileID: 4827602452286346609}
-  SelectNode: {fileID: 3841215927337100192}
+  mapSelectNode: {fileID: 3841215927337100192}
   CloseButton: {fileID: 1602613993938936097}
   SaveButton: {fileID: 2340103710829474115}
 --- !u!1 &3138774250763517215

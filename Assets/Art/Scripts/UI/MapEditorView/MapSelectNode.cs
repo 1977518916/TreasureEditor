@@ -11,7 +11,7 @@ using Unity.VisualScripting;
 
 namespace QFramework.Example
 {
-	public partial class SelectNode : UIComponent
+	public partial class MapSelectNode : UIComponent
 	{
 		private Action clickAction;
 		public Action refreshAction;

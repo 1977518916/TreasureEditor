@@ -22,11 +22,11 @@ namespace QFramework.Example
 		{
 		}
 
-		public void InitView(string key, SkeletonDataAsset dataAsset)
+		public void InitView(string key)
 		{
 			skillKey = key;
 			gameObject.SetActive(true);
-			InitSkillSpine(dataAsset);
+			InitSkillSpine();
 		}
 
 		/// <summary>
@@ -42,8 +42,7 @@ namespace QFramework.Example
 		/// <summary>
 		/// 初始化技能Spine
 		/// </summary>
-		/// <param name="dataAsset"></param>
-		private void InitSkillSpine(SkeletonDataAsset dataAsset)
+		private void InitSkillSpine()
 		{
 			SkillSpine.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillKey];
 			SkillSpine.Initialize(true);

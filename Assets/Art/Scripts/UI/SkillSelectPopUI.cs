@@ -25,7 +25,7 @@ namespace QFramework.Example
 			foreach (var item in DataManager.AllEntitySkillSpineDic.Values)
 			{
 				var skill = Instantiate(SkillItem, Content.transform, false);
-				skill.InitView(item.name, item);
+				skill.InitView(item.name);
 				skillItemList.Add(skill);
 				skill.gameObject.SetActive(true);
 			}

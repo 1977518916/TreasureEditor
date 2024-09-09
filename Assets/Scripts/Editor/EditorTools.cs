@@ -19,8 +19,6 @@ public class EditorTools
 
     private static Dictionary<EntityModelType, string> CommonSpineDic = new Dictionary<EntityModelType, string>();
 
-    private static ResLoader resLoader = ResLoader.Allocate();
-    
     /// <summary>
     /// 动画数据文件路径收集
     /// </summary>
@@ -29,11 +27,11 @@ public class EditorTools
     {
         //DataManager.InitAllSpineData();
 
-        //SaveAttackSpineDataAssetPath();
-
-        ReadAttackSpineDataAssetPath();
+        SaveAttackSpineDataAssetPath();
+        SaveCommonSpineDataAssetPath();
+        SaveSkillSpineDataAssetPath();
     }
-    
+
     /// <summary>
     /// 保存攻击动画文件路径
     /// </summary>
@@ -42,22 +40,58 @@ public class EditorTools
         foreach (var keyValue in DataManager.GetEntityBulletSpineDic())
         {
             AttackSpineDic.Add(keyValue.Key,
-                AssetDatabase.GetAssetPath(keyValue.Value).Replace("Assets/Resources/", "").Replace(".asset", ""));
+                AssetDatabase.GetAssetPath(keyValue.Value).Replace(new[]
+                {
+                    Config.SPINE_FILE_PREFIX_REPLACE,
+                    Config.SPINE_FILE_SUFFIX_REPLACE
+                }, ""));
         }
 
         ES3.Save(HelpTools.GetEnumValueName<DataType>(DataType.EntityBulletSpineData), AttackSpineDic,
-            "Resources/DataFile/SpineData.es3");
+            Config.SPINE_DATA_MAP_FILE_PATH);
     }
-    
+
+    /// <summary>
+    /// 保存寻常动画文件路径
+    /// </summary>
+    private static void SaveCommonSpineDataAssetPath()
+    {
+        foreach (var keyValue in DataManager.GetEntityCommonSpineDic())
+        {
+            CommonSpineDic.Add(keyValue.Key, AssetDatabase.GetAssetPath(keyValue.Value).Replace(new[]
+            {
+                Config.SPINE_FILE_PREFIX_REPLACE,
+                Config.SPINE_FILE_SUFFIX_REPLACE
+            }, ""));
+        }
+
+        ES3.Save(HelpTools.GetEnumValueName<DataType>(DataType.EntityCommonSpineData), CommonSpineDic,
+            Config.SPINE_DATA_MAP_FILE_PATH);
+    }
+
+    /// <summary>
+    /// 保存技能动画文件路径
+    /// </summary>
+    private static void SaveSkillSpineDataAssetPath()
+    {
+        foreach (var keyValue in DataManager.GetAllEntitySkillSpine())
+        {
+            SkillSpineDic.Add(keyValue.Key, AssetDatabase.GetAssetPath(keyValue.Value).Replace(new[]
+            {
+                Config.SPINE_FILE_PREFIX_REPLACE,
+                Config.SPINE_FILE_SUFFIX_REPLACE
+            }, ""));
+        }
+
+        ES3.Save(HelpTools.GetEnumValueName<DataType>(DataType.EntitySkillSpineData), SkillSpineDic,
+            Config.SPINE_DATA_MAP_FILE_PATH);
+    }
+
     private static void ReadAttackSpineDataAssetPath()
     {
         AttackSpineDic = ES3.Load(HelpTools.GetEnumValueName<DataType>(DataType.EntityBulletSpineData),
-            "Resources/DataFile/SpineData.es3", AttackSpineDic);
-        Debug.Log($"{AttackSpineDic[EntityModelType.MaDai]}");
-        var test = Resources.Load<SkeletonDataAsset>(AttackSpineDic[EntityModelType.MaDai]
-            .Replace("Assets/Resources/", "").Replace(".asset", ""));
-        Debug.Log($"{test}");
+            Config.SPINE_DATA_MAP_FILE_PATH, AttackSpineDic);
     }
-
+    
 #endif
 }

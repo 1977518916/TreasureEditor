@@ -122,6 +122,15 @@ namespace Runtime.Manager
         {
             return AllEntityAttackSpineDic;
         }
+        
+        /// <summary>
+        /// 获取实体寻常动画字典
+        /// </summary>
+        /// <returns></returns>
+        public static Dictionary<EntityModelType, SkeletonDataAsset> GetEntityCommonSpineDic()
+        {
+            return EntityCommonSpineDic;
+        }
 
         /// <summary>
         /// 获取指定实体的寻常动画
@@ -228,6 +237,12 @@ namespace Runtime.Manager
         public static Dictionary<EntityModelType, SkeletonDataAsset> GetAllEntityCommonSpine()
         {
             return EntityCommonSpineDic;
+        }
+        
+        
+        public static Dictionary<string, SkeletonDataAsset> GetAllEntitySkillSpine()
+        {
+            return AllEntitySkillSpineDic;
         }
 
         #endregion

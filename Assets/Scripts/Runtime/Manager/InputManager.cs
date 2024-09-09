@@ -15,6 +15,7 @@ namespace Runtime.Manager
             TryQuitBattle();
             TryShowHideRunTimeData();
             TryUseSkill();
+            AllEnemyEntityDead();
         }
 
         private void TryQuitBattle()
@@ -37,6 +38,21 @@ namespace Runtime.Manager
                 return;
             }
             runDataUI.SetActive(!runDataUI.activeSelf);
+        }
+        
+        /// <summary>
+        /// 所有敌人死亡
+        /// </summary>
+        private void AllEnemyEntityDead()
+        {
+            if (!Input.GetKeyDown(KeyCode.J)) return;
+            DataManager.GameData.isInvicibleEnemy = false;
+            foreach (var enemy in EntitySystem.Instance.GetAllEnemyEntity())
+            {
+                enemy.GetSpecifyComponent<EnemyStatusComponent>(ComponentType.StatusComponent).Hit(int.MinValue);
+            }
+
+            LevelManager.Instance.StopMakeEnemy();
         }
 
         private void TryUseSkill()

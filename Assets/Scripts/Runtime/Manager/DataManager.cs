@@ -86,8 +86,8 @@ namespace Runtime.Manager
         {
             ES3.Init();
             InitReadData();
+            InitSkillData();
             InitSpineData();
-            skillStruct = AssetsLoadManager.Load<SkillStruct>("Config/AllSkillData");
             action.Invoke();
         }
         
@@ -101,7 +101,15 @@ namespace Runtime.Manager
             levelData = ReadLevelData();
             gameData = ReadRuntimeData();
         }
-        
+
+        /// <summary>
+        /// 初始化技能数据
+        /// </summary>
+        private static void InitSkillData()
+        {
+            skillStruct = ResLoaderTools.GetAllSkillData();
+        }
+
         /// <summary>
         /// 初始化动画文件路径映射数据文件
         /// </summary>
@@ -401,7 +409,8 @@ namespace Runtime.Manager
         }
 
         #endregion
-
+        
+        // 路径相关接口
         #region Path
         
         /// <summary>

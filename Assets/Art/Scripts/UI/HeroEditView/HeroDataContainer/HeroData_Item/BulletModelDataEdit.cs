@@ -15,7 +15,6 @@ namespace QFramework.Example
 {
 	public partial class BulletModelDataEdit : UIElement
 	{
-		ResLoader resLoader = ResLoader.Allocate();
 		private void Awake()
 		{
 		}
@@ -28,8 +27,14 @@ namespace QFramework.Example
 		{
 			BulletSpiteView.gameObject.SetActive(false);
 			BulletSpineView.gameObject.SetActive(false);
-			//DataManager.GetSpecifyEntityBulletSpine(heroData.modelType, out var dataAsset);
-			SetBulletModel(resLoader.LoadSync<SkeletonDataAsset>(DataManager.GetBulletPath(EntityModelType.CaiWenJi).ToLower().Replace("effect/spine/caiwenji/","")));
+			if (ResLoaderTools.TryGetEntityBulletSpineDataAsset(heroData.modelType, out var dataAsset))
+			{
+				SetBulletModel(dataAsset);
+			}
+			else
+			{
+				throw new Exception($"报错：此 {heroData.modelType} 不存在对应的子弹动画文件,请排查错误");
+			}
 			SetBulletModelBtnCanClick(false);
 		}
 

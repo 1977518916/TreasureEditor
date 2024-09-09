@@ -26,7 +26,7 @@ public static class ResLoaderTools
         dataAsset = Loader.LoadSync<SkeletonDataAsset>(DataManager.GetBulletPath(modelType));
         return true;
     }
-    
+
     /// <summary>
     /// 尝试获取实体技能动画文件
     /// </summary>
@@ -54,4 +54,14 @@ public static class ResLoaderTools
         dataAsset = Loader.LoadSync<SkeletonDataAsset>(DataManager.GetCommonSpinePath(modelType));
         return true;
     }
+    
+    /// <summary>
+    /// 获取所有技能数据
+    /// </summary>
+    /// <returns></returns>
+    public static SkillStruct GetAllSkillData()
+    {
+        return Loader.LoadSync<SkillStruct>(Config.ALL_SKILL_DATA_PATH);
+    }
+
 }

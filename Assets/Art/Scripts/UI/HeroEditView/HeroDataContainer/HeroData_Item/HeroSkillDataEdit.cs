@@ -35,7 +35,7 @@ namespace QFramework.Example
 				{
 					ClickAction = skillName =>
 					{
-						//data.skillData1 = DataManager.SkillStruct.GetSkillDataOfKey(skillName);
+						data.skillData1 = DataManager.GetSkillStruct().GetSkillDataOfKey(skillName);
 						SkillOneView.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillName];
 						UIKit.HidePanel<SkillSelectPopUI>();
 					}
@@ -46,7 +46,7 @@ namespace QFramework.Example
 				{
 					ClickAction = skillName =>
 					{
-						//data.skillData2 = DataManager.SkillStruct.GetSkillDataOfKey(skillName);
+						data.skillData2 = DataManager.GetSkillStruct().GetSkillDataOfKey(skillName);
 						SkillTwoView.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillName];
 						UIKit.HidePanel<SkillSelectPopUI>();
 					}

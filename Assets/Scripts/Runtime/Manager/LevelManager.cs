@@ -73,6 +73,15 @@ namespace Runtime.Manager
         {
             DestroyInstance();
         }
+        
+        /// <summary>
+        /// 停止出怪
+        /// </summary>
+        public void StopMakeEnemy()
+        {
+            isMaking = false;
+            index = list.Count;
+        }
 
         public class EnemyBean
         {

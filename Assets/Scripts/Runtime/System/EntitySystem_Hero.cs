@@ -22,6 +22,7 @@ public partial class EntitySystem
         if (data.modelType == EntityModelType.Null)
         {
             InitNullHeroStatus(indexValue);
+            BattleManager.Instance.HideBattleBase(Convert.ToInt32(type));
             return;
         }
 

@@ -16,6 +16,7 @@ namespace Runtime.Manager
             TryShowHideRunTimeData();
             TryUseSkill();
             AllEnemyEntityDead();
+            AllHeroEntityStopAttack();
         }
 
         private void TryQuitBattle()
@@ -53,6 +54,18 @@ namespace Runtime.Manager
             }
 
             LevelManager.Instance.StopMakeEnemy();
+        }
+        
+        /// <summary>
+        /// 所有英雄实体停止攻击
+        /// </summary>
+        private void AllHeroEntityStopAttack()
+        {
+            if (!Input.GetKeyDown(KeyCode.H)) return;
+            foreach (var entity in EntitySystem.Instance.GetAllHeroEntity())
+            {
+                entity.GetSpecifyComponent<HeroAttackComponent>(ComponentType.AttackComponent).ChangeStopAttack();
+            }
         }
 
         private void TryUseSkill()

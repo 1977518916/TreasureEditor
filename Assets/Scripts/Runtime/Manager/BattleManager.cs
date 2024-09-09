@@ -147,6 +147,15 @@ public class BattleManager : MonoSingleton<BattleManager>
     {
         //battleBG.sprite = AssetsLoadManager.LoadBg(DataManager.LevelData.mapType);
     }
+    
+    /// <summary>
+    /// 隐藏战斗底座
+    /// </summary>
+    /// <param name="index"></param>
+    public void HideBattleBase(int index)
+    {
+        BattleBaseList[index].gameObject.SetActive(false);
+    }
 
     public void GenerateHurtText(Vector2 location, int hurt, float surviveTime)
     {

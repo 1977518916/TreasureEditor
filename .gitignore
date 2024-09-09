@@ -75,15 +75,25 @@ crashlytics-build.properties
 /[Aa]ssets/[Pp]lugins/[Tt]extMeshPro/[Ff]onts/SIMKAI.TTF
 /[Aa]ssets/[Pp]lugins/[Tt]extMeshPro/[Ff]onts/SIMKAI.TTF.meta
 
-/[Aa]ssets/[Pp]lugins/[Tt]extMesh Pro/[Rr]esources/Fonts & Materials/SIMKAI SDF.asset
-Fonts & Materials
+Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/SIMKAI SDF.asset
+/Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+/Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat.meta
+/Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+/Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset.meta
+/Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+/Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat.meta
+/Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+/Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset.meta
+/Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/SIMKAI SDF.asset.meta
+/Assets/Plugins/Easy Save 3.meta
+/Assets/Plugins/Easy Save 3/Editor.meta
+/Assets/Plugins/Easy Save 3/Editor/ES3Asmdefs.unitypackage.meta
 /Assets/Plugins/TextMesh Pro/Resources/Fonts.meta
 /Assets/Plugins/TextMesh Pro/Resources/Fonts/SIMKAI SDF.asset
 /Assets/Plugins/TextMesh Pro/Resources/Fonts/SIMKAI SDF.asset.meta
-/Assets/Tmp
 /Assets/Tmp.meta
-/Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials.meta
-/Assets/Plugins/QFramework/Framework/Examples.unitypackage.meta
-/Assets/Plugins/QFramework/Framework/Examples.unitypackage
-/Assets/Plugins/QFramework/ToolKitsPro/DocKit.unitypackage.meta
-/Assets/Plugins/QFramework/ToolKitsPro/DocKit.unitypackage
+/Assets/Tmp/Editor.meta
+/Assets/Tmp/Editor/SpineTool.cs
+/Assets/Tmp/Editor/SpineTool.cs.meta
+/Assets/Tmp/UIMake.unity
+/Assets/Tmp/UIMake.unity.meta

@@ -28,7 +28,7 @@ namespace QFramework.Example
 		/// <param name="data"></param>
 		public void InitView(List<HeroData> data)
 		{
-			heroDataList = data;
+			heroDataList.AddRange(data);
 			HeroData_Item.gameObject.SetActive(false);
 			if (DetectAndInitData()) return;
 			for (var i = 0; i < heroDataList.Count; i++)
@@ -39,7 +39,7 @@ namespace QFramework.Example
 				heroDataViewList.Add(viewItem);
 			}
 		}
-
+		
 		/// <summary>
 		/// 检测并初始化数据
 		/// </summary>
@@ -59,7 +59,7 @@ namespace QFramework.Example
 		{
 			if (heroDataList.Count >= 5) return;
 			var heroDataItem = Instantiate(HeroData_Item, transform);
-			heroDataItem.InitView(heroDataList.Count - 1, heroData);
+			heroDataItem.InitView(0, heroData);
 			heroDataItem.gameObject.SetActive(true);
 			heroDataList.Add(heroData);
 			heroDataViewList.Add(heroDataItem);
@@ -81,7 +81,6 @@ namespace QFramework.Example
 		public void ResetView()
 		{
 			ClearAllHeroDataView();
-			heroDataList.Add(new HeroData());
 			DataManager.SetHeroListData(heroDataList);
 			InitView(DataManager.GetHeroDataList());
 		}

@@ -33,6 +33,15 @@ public class EditorTools
     }
 
     /// <summary>
+    /// 清除存档数据
+    /// </summary>
+    [MenuItem("插件/清除存档数据")]
+    public static void ClearSaveData()
+    {
+        ES3.DeleteFile();
+    }
+
+    /// <summary>
     /// 保存攻击动画文件路径
     /// </summary>
     private static void SaveAttackSpineDataAssetPath()

@@ -54,7 +54,7 @@ namespace Runtime.Utils
                     return $"地图{(int)mapTypeEnum + 1}";
             }
         }
-
+        
         public static string TranslateUi(BulletType bulletType)
         {
             switch(bulletType)
@@ -62,9 +62,12 @@ namespace Runtime.Utils
                 case BulletType.NoEntity:
                     return "攻击动画";
                 case BulletType.Self:
-                default:
                     return "自身子弹";
+                case BulletType.CustomBullet:
+                    return "自定义子弹";
             }
+
+            return "";
         }
 
         public static string TranslateUi(BulletAttributeType attributeType)

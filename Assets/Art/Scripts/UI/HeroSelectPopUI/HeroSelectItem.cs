@@ -21,11 +21,18 @@ namespace QFramework.Example
 		protected override void OnBeforeDestroy()
 		{
 		}
-		
-		public void InitView(EntityModelType modelType, SkeletonDataAsset skeletonData)
+
+		public void InitView(EntityModelType modelType)
 		{
-			HeroView.skeletonDataAsset = skeletonData;
-			HeroView.AnimationState.SetAnimation(0, "Idle", true);
+			if (ResLoaderTools.TryGetEntityCommonSpineDataAsset(modelType, out var dataAsset))
+			{
+				SpineTools.SkeletonDataAssetReplace(HeroView, dataAsset, "Idle");
+			}
+			else
+			{
+				throw new Exception($"报错：此{modelType} 对应的英雄动画文件缺失,请排查错误");
+			}
+
 			entityModelType = modelType;
 			HeroView.transform.localScale = modelType == EntityModelType.DongZhuo
 				? new Vector3(0.25f, 0.25f, 1f)

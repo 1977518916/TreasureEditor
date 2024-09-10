@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3022610297
+CRC: 622345963
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: bfce857ff95037178174ff0e61f781ab
+    Hash: 5fdbb51964299b9b912af020ae04214d
   TypeTreeHash:
     serializedVersion: 2
     Hash: 31dc32ee15946f12312086431da1d834
@@ -69,7 +69,6 @@ Assets:
 - Assets/Resources/Effect/Spine/JiangWei/Fx_JiangWei_Attack.png
 - Assets/Resources/Effect/Spine/NewSkill/Moon/heroskill_4_1.atlas.txt
 - Assets/Resources/Effect/Spine/SiXiangBuff/Fx_SiXiang_Jin_Atlas.asset
-- Assets/Resources/Effect/Spine/Ui/GuanYu_UI/GuanYu.json
 - Assets/Resources/Effect/Spine/JiangWei/skill_40.asset
 - Assets/Resources/Effect/Spine/buff/buff_furious.png
 - Assets/Resources/Effect/Spine/ChengPu/ChengPu_Skill_2.png
@@ -506,7 +505,6 @@ Assets:
 - Assets/Resources/Effect/Spine/Ui/Gu/Gu_SkeletonData.asset
 - Assets/Resources/Effect/Spine/HuangZhong/Buff_HuangZhong_LaoHuB_SkeletonData.asset
 - Assets/Resources/Effect/Spine/LvMeng/LvMeng_Skill_1_Material.mat
-- Assets/Resources/Effect/Spine/Ui/GuanYu_UI/GuanYu_Atlas.asset
 - Assets/Resources/Effect/Spine/HuangZhong/HuangZhong_ZhuanShu_Skill_1.png
 - Assets/Resources/Effect/Spine/XiaoQiao/XiaoQiao_Skill_1.png
 - Assets/Resources/Effect/Spine/BaoQi/Fx_BaoQi_Atlas.asset
@@ -1125,7 +1123,6 @@ Assets:
 - Assets/Resources/Effect/Spine/Attack/ZhangJiao/Fx_ZhangJiao_hit_Atlas.asset
 - Assets/Resources/Effect/Spine/JiangWei/JiangWei_Skill_1_Atlas.asset
 - Assets/Resources/Effect/Spine/Ui/LiuXue/Fx_LiuXue_SkeletonData.asset
-- Assets/Resources/Effect/Spine/Ui/GuanYu_UI/GuanYu.png
 - Assets/Resources/Effect/Spine/Ui/PaTa/PaTa_baoxiang.atlas.txt
 - Assets/Resources/Effect/Spine/Attack/GouLiang_Yuan/Fx_GouLiang_Yuan_Attack.png
 - Assets/Resources/Effect/Spine/Ui/Fire/Fx_Fire_Material.mat
@@ -1310,7 +1307,6 @@ Assets:
 - Assets/Resources/Effect/Spine/LvMeng/LvMeng_Skill_1.png
 - Assets/Resources/Effect/Spine/LiDian/LiDian_Skill_1_Atlas.asset
 - Assets/Resources/Effect/Spine/ZhuGeJin/ZhuGeJin_Skill_1_Material.mat
-- Assets/Resources/Effect/Spine/Ui/GuanYu_UI/GuanYu_Material.mat
 - Assets/Resources/Effect/Spine/Ui/Fund/Yingxongzhaomu_Atlas.asset
 - Assets/Resources/Effect/Spine/DongZhuo/DongZhuo_Skill_1_Atlas.asset
 - Assets/Resources/Effect/Spine/SiXiangBuff/Fx_SiXiang_Shui_SkeletonData.asset
@@ -1601,7 +1597,6 @@ Assets:
 - Assets/Resources/Effect/Spine/Ui/PaTa/PaTa_denglong_SkeletonData.asset
 - Assets/Resources/Effect/Spine/Hit/Common_hit_Atlas.asset
 - Assets/Resources/Effect/Spine/LingTong/Fx_LingTong_hit_Atlas.asset
-- Assets/Resources/Effect/Spine/Ui/GuanYu_UI/GuanYu.atlas.txt
 - Assets/Resources/Effect/Spine/MaSu/MaSu_Skill_2.json
 - Assets/Resources/Effect/Spine/Ui/break/tupo_Material-Screen.mat
 - Assets/Resources/Effect/Spine/TaiShiCi/Fx_TaiShiCi_Hit.png
@@ -1730,7 +1725,6 @@ Assets:
 - Assets/Resources/Effect/Spine/Attack/ZhaoYun/Fx_ZhaoYun_Hit.png
 - Assets/Resources/Effect/Spine/ZhangFei/ZhangFei_Skill_1_Dun.json
 - Assets/Resources/Effect/Spine/JiaXu/JiaXu_Skill_2.json
-- Assets/Resources/Effect/Spine/Ui/GuanYu_UI/GuanYu_SkeletonData.asset
 - Assets/Resources/Effect/Spine/Attack/LvMeng/Fx_LvMeng_Attack.png
 - Assets/Resources/Effect/Spine/DongZhuo/DongZhuo_Skill_1.png
 - Assets/Resources/Effect/Spine/Ui/Fund/Yanjing_SkeletonData.asset

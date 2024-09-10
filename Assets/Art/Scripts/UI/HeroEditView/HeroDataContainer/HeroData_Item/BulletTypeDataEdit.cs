@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
 using Runtime.Data;
+using Runtime.Utils;
 using TMPro;
 
 namespace QFramework.Example
@@ -32,19 +33,25 @@ namespace QFramework.Example
 			InitBulletDropdownEvent();
 		}
 		
+		/// <summary>
+		/// 初始化子弹类型
+		/// </summary>
 		private void InitBulletType()
 		{
-			foreach (var item in Enum.GetNames(typeof(BulletType)))
+			foreach (BulletType item in Enum.GetValues(typeof(BulletType)))
 			{
-				BulletType_Select.options.Add(new TMP_Dropdown.OptionData(item));
+				BulletType_Select.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(item)));
 			}
 
-			foreach (var item in Enum.GetNames(typeof(BulletAttributeType)))
+			foreach (BulletAttributeType item in Enum.GetValues(typeof(BulletAttributeType)))
 			{
-				BulletAttribute_Select.options.Add(new TMP_Dropdown.OptionData(item));
+				BulletAttribute_Select.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(item)));
 			}
 		}
 		
+		/// <summary>
+		/// 初始化子弹下拉框事件
+		/// </summary>
 		private void InitBulletDropdownEvent()
 		{
 			BulletType_Select.onValueChanged.AddListener(value => data.bulletType = (BulletType)value);

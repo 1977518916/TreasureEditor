@@ -1328,10 +1328,6 @@ namespace QAssetBundle
         public const string GuMian_Atlas = "GuMian_Atlas";
         public const string GuMian_Material = "GuMian_Material";
         public const string GuMian_SkeletonData = "GuMian_SkeletonData";
-        public const string GuanYu = "GuanYu";
-        public const string GuanYu_Atlas = "GuanYu_Atlas";
-        public const string GuanYu_Material = "GuanYu_Material";
-        public const string GuanYu_SkeletonData = "GuanYu_SkeletonData";
         public const string Fx_HanYi = "Fx_HanYi";
         public const string Fx_HanYi_Atlas = "Fx_HanYi_Atlas";
         public const string Fx_HanYi_Material = "Fx_HanYi_Material";
@@ -1724,6 +1720,7 @@ namespace QAssetBundle
         public const string KillBox = "KillBox";
         public const string Recording = "Recording";
         public const string RunTimeSetting = "RunTimeSetting";
+        public const string SkeObject = "SkeObject";
         public const string Small_EnemyAttackBox = "Small_EnemyAttackBox";
     }
     public class Skillselectpopui_prefab

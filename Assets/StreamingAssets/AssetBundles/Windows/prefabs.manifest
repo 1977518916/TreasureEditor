@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2267245364
+CRC: 266604175
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dad16eda8f33990a64afbb5a7959437a
+    Hash: 1b74572f49952cdbe154d0fd782d1c54
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 5d63390572c3536fcb7f0a87edaee2fe
+    Hash: c8851e388bb861c06fbd7183d493da52
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -40,11 +40,15 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: d85b887af7e6c3f45a2e2d2920d641bc, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 7ca3e27221be35d41a4ff608f4ef327e, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 6ebb31b4731941044bb69c038327ccbd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: f41e58c74463edf43a9624fcdf483d19, type: 3}
 - Class: 114
@@ -112,15 +116,21 @@ SerializeReferenceClassIdentifiers:
   ClassName: UnityEngine.UI.SpriteState
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Toggle/ToggleEvent
+- AssemblyName: spine-unity
+  ClassName: Spine.Unity.MeshGenerator
+- AssemblyName: spine-unity
+  ClassName: Spine.Unity.MeshGenerator/Settings
 Assets:
 - Assets/Resources/Prefabs/Small_EnemyAttackBox.prefab
 - Assets/Resources/Prefabs/KillBox.prefab
 - Assets/Resources/Prefabs/RunTimeSetting.prefab
 - Assets/Resources/Prefabs/GUI.prefab
 - Assets/Resources/Prefabs/Recording.prefab
+- Assets/Resources/Prefabs/SkeObject.prefab
 - Assets/Resources/Prefabs/HurtText.prefab
 - Assets/Resources/Prefabs/Jian.prefab
 - Assets/Resources/Prefabs/Avatar_0.prefab
 Dependencies:
+- D:/UnityProject/TreasureEditor/AssetBundles/Windows/character
 - D:/UnityProject/TreasureEditor/AssetBundles/Windows/font
 - D:/UnityProject/TreasureEditor/AssetBundles/Windows/texture

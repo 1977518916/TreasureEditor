@@ -27,14 +27,10 @@ namespace QFramework.Example
 		{
 			BulletSpiteView.gameObject.SetActive(false);
 			BulletSpineView.gameObject.SetActive(false);
-			if (heroData.modelType == EntityModelType.Null) return;
+			if (!DataManager.EntityIsHaveBullet(heroData.modelType)) return;
 			if (ResLoaderTools.TryGetEntityBulletSpineDataAsset(heroData.modelType, out var dataAsset))
 			{
 				SetBulletModel(dataAsset);
-			}
-			else
-			{
-				throw new Exception($"报错：此 {heroData.modelType} 不存在对应的子弹动画文件,请排查错误");
 			}
 			SetBulletModelBtnCanClick(false);
 		}
@@ -43,41 +39,19 @@ namespace QFramework.Example
 		/// 设置子弹模型选择按钮是否可以点击
 		/// </summary>
 		/// <param name="isCan"></param>
-		public void SetBulletModelBtnCanClick(bool isCan)
+		private void SetBulletModelBtnCanClick(bool isCan)
 		{
 			BulletModelSelect_Btn.interactable = isCan;
 		}
 		
 		/// <summary>
-		/// 初始化子弹模型按钮事件
-		/// </summary>
-		private void InitBulletModelBtnEvent()
-		{
-			BulletModelSelect_Btn.onClick.AddListener(() =>
-			{
-				// 弹出外部自定义子弹模型列表选择自定义子弹
-			});
-		}
-
-		/// <summary>
 		/// 设置子弹模型
 		/// ------------ 需要留给选择子弹类型的下拉框事件中调用 ------------
 		/// </summary>
-		public void SetBulletModel(SkeletonDataAsset dataAsset)
+		private void SetBulletModel(SkeletonDataAsset dataAsset)
 		{
-			BulletSpineView.skeletonDataAsset = dataAsset;
-			BulletSpineView.Initialize(true);
+			SpineTools.SkeletonDataAssetReplace(BulletSpineView, dataAsset);
 			BulletSpineView.gameObject.SetActive(true);
-		}
-		
-		/// <summary>
-		/// 设置子弹模型
-		/// </summary>
-		/// <param name="sprite"></param>
-		public void SetBulletModel(Sprite sprite)
-		{
-			BulletSpiteView.sprite = sprite;
-			BulletSpiteView.gameObject.SetActive(true);
 		}
 	}
 }

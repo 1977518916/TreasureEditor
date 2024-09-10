@@ -21,7 +21,6 @@ namespace Runtime.Data
         LuSu,
         LvMeng,
         MaDai,
-        MaSu,
         PangTong,
         TaiShiCi,
         WenChou,
@@ -35,6 +34,14 @@ namespace Runtime.Data
         ZhuGeJin,
         ZhuGeLiang,
         ZhuRong,
+        LvBu,
+        SunShangXiang,
+        ZhangFei,
+        
+        
+        XuChu,
+        XunYu,
+        XuShu,
         DongZhuo,
         //QingLong
         

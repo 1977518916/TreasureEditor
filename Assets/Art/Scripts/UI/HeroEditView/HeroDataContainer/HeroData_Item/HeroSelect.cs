@@ -22,9 +22,10 @@ namespace QFramework.Example
 		{
 		}
 
-		public void InitView(HeroData heroData)
+		public void InitView(HeroData heroData, HeroData_Item dataItem)
 		{
 			data = heroData;
+			heroDataItem = dataItem;
 			InitHeroView();
 			InitButton();
 		}
@@ -36,9 +37,9 @@ namespace QFramework.Example
 		private void InitHeroView()
 		{
 			HeroView.gameObject.SetActive(data.modelType != EntityModelType.Null);
-			HeroView.transform.localScale = data.modelType == EntityModelType.DongZhuo
-				? new Vector3(0.2f, 0.2f, 1f)
-				: new Vector3(0.5f, 0.5f, 1f);
+			// HeroView.transform.localScale = data.modelType == EntityModelType.DongZhuo
+			// 	? new Vector3(0.2f, 0.2f, 1f)
+			// 	: new Vector3(0.5f, 0.5f, 1f);
 			if (ResLoaderTools.TryGetEntityCommonSpineDataAsset(data.modelType, out var dataAsset))
 			{
 				SpineTools.SkeletonDataAssetReplace(HeroView, dataAsset);
@@ -58,26 +59,28 @@ namespace QFramework.Example
 		{
 			HeroSelect_Btn.onClick.AddListener(() =>
 			{
-				// 打开选择英雄的页面 并绑定对应的事件
-				UIKit.OpenPanel<HeroSelectPopUI>(UILevel.PopUI, new HeroSelectPopUIData
+				var popUIData = new HeroSelectPopUIData
 				{
 					ClickAction = modelType =>
 					{
 						data.modelType = modelType;
 						HeroView.gameObject.SetActive(modelType != EntityModelType.Null);
-						HeroView.transform.localScale = data.modelType == EntityModelType.DongZhuo
-							? new Vector3(0.2f, 0.2f, 1f)
-							: new Vector3(0.5f, 0.5f, 1f);
+						// HeroView.transform.localScale = data.modelType == EntityModelType.DongZhuo
+						// 	? new Vector3(0.2f, 0.2f, 1f)
+						// 	: new Vector3(0.5f, 0.5f, 1f);
 						if (ResLoaderTools.TryGetEntityCommonSpineDataAsset(data.modelType, out var dataAsset))
 						{
 							SpineTools.SkeletonDataAssetReplace(HeroView, dataAsset, "Idle");
+							heroDataItem.SetHeroBullet(data);
 						}
 						else
 						{
 							throw new Exception($"报错：此{data.modelType} 实体枚举对应的Model缺失,请注意查找错误");
 						}
 					}
-				});
+				};
+				// 打开选择英雄的页面 并绑定对应的事件
+				UIKit.OpenPanel<HeroSelectPopUI>(UILevel.PopUI, popUIData);
 			});
 		}
 	}

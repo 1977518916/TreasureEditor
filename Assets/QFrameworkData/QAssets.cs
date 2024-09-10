@@ -106,10 +106,6 @@ namespace QAssetBundle
         public const string LingTong_Atlas = "LingTong_Atlas";
         public const string LingTong_Material = "LingTong_Material";
         public const string LingTong_SkeletonData = "LingTong_SkeletonData";
-        public const string MaSu = "MaSu";
-        public const string MaSu_Atlas = "MaSu_Atlas";
-        public const string MaSu_Material = "MaSu_Material";
-        public const string MaSu_SkeletonData = "MaSu_SkeletonData";
         public const string LuJi = "LuJi";
         public const string LuJi_Atlas = "LuJi_Atlas";
         public const string LuJi_Material = "LuJi_Material";
@@ -970,14 +966,6 @@ namespace QAssetBundle
         public const string MaDai_Skill_1_Material = "MaDai_Skill_1_Material";
         public const string skill_53 = "skill_53";
         public const string skill_54 = "skill_54";
-        public const string MaSu_Skill_1 = "MaSu_Skill_1";
-        public const string MaSu_Skill_1_Atlas = "MaSu_Skill_1_Atlas";
-        public const string MaSu_Skill_1_Material = "MaSu_Skill_1_Material";
-        public const string MaSu_Skill_2 = "MaSu_Skill_2";
-        public const string MaSu_Skill_2_Atlas = "MaSu_Skill_2_Atlas";
-        public const string MaSu_Skill_2_Material = "MaSu_Skill_2_Material";
-        public const string skill_55 = "skill_55";
-        public const string skill_56 = "skill_56";
         public const string Monster006 = "Monster006";
         public const string Monster006_Atlas = "Monster006_Atlas";
         public const string Monster006_Material = "Monster006_Material";
@@ -1745,7 +1733,6 @@ namespace QAssetBundle
         public const string Fx_LuJi_Attack = "Fx_LuJi_Attack";
         public const string Fx_LvMeng_Attack = "Fx_LvMeng_Attack";
         public const string Fx_MaDai_Attack = "Fx_MaDai_Attack";
-        public const string Fx_MaSu_Attack = "Fx_MaSu_Attack";
         public const string Fx_PangTong_Attack = "Fx_PangTong_Attack";
         public const string Fx_TaiShiCi_Attack = "Fx_TaiShiCi_Attack";
         public const string Fx_WenChou_Attack = "Fx_WenChou_Attack";

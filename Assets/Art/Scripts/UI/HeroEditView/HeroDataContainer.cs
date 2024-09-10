@@ -58,10 +58,10 @@ namespace QFramework.Example
 		public void AddHeroData(HeroData heroData)
 		{
 			if (heroDataList.Count >= 5) return;
-			var heroDataItem = Instantiate(HeroData_Item, transform);
-			heroDataItem.InitView(0, heroData);
-			heroDataItem.gameObject.SetActive(true);
 			heroDataList.Add(heroData);
+			var heroDataItem = Instantiate(HeroData_Item, transform);
+			heroDataItem.InitView(heroDataList.Count - 1, heroData);
+			heroDataItem.gameObject.SetActive(true);
 			heroDataViewList.Add(heroDataItem);
 		}
 		

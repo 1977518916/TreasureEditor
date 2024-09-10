@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 42757305
+CRC: 1736271600
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4a68509f8e562683b3d83598aa741879
+    Hash: f61d5ea4f2901a84af8d4e5f37a7d897
   TypeTreeHash:
     serializedVersion: 2
     Hash: ea023f5bef04901cb25b9e355a0c12bd
@@ -43,7 +43,6 @@ Assets:
 - Assets/Resources/Character/Monster004_Idle/Monster004_Idle.atlas.txt
 - Assets/Resources/Character/Monster/Monster005/Monster005.png
 - Assets/Resources/Character/Monster/Monster009/Monster009.json
-- Assets/Resources/Character/LingTong/MaSu.atlas.txt
 - Assets/Resources/Character/XiaoBing_Dao/XiaoBing_Dao.png
 - Assets/Resources/Character/Mounts/Mounts020/Mounts020.png
 - Assets/Resources/Character/Boss/QingLong/Boss_dragon_Attack.json
@@ -81,7 +80,6 @@ Assets:
 - Assets/Resources/Character/HuangGai/HuangGai_SkeletonData.asset
 - Assets/Resources/Character/Boss/QingLong/Boss_dragon_skill1_Material.mat
 - Assets/Resources/Character/ZhaoYun/ZhaoYun.atlas.txt
-- Assets/Resources/Character/MaSu/MaSu.atlas.txt
 - Assets/Resources/Character/Monster003_zibao/Monster003_zibao.atlas.txt
 - Assets/Resources/Character/Mounts/Mounts017/Mounts017.atlas.txt
 - Assets/Resources/Character/GaoShun/GaoShun_SkeletonData.asset
@@ -115,10 +113,9 @@ Assets:
 - Assets/Resources/Character/GuoJia/GuoJia_Material.mat
 - Assets/Resources/Character/GuanYinPing/GuanYinPing_SkeletonData.asset
 - Assets/Resources/Character/JiaXu/JiaXu.json
-- Assets/Resources/Character/LingTong/MaSu.json
+- Assets/Resources/Character/Monster/Monster015/Monster015.atlas.txt
 - Assets/Resources/Character/DunBing/XiaoBing_Dun.png
 - Assets/Resources/Character/Monster/Monster016/Monster016_SkeletonData.asset
-- Assets/Resources/Character/Monster/Monster015/Monster015.atlas.txt
 - Assets/Resources/Character/SunShangXiang/SunShangXiang_Atlas.asset
 - Assets/Resources/Character/ZhouYu/ZhouYu.png
 - Assets/Resources/Character/XiaoBing_TouShiChe/XiaoBing_TouShiChe_SkeletonData.asset
@@ -239,7 +236,6 @@ Assets:
 - Assets/Resources/Character/Monster003_zibao/Monster003_zibao_Material.mat
 - Assets/Resources/Character/GuanYu/GuanYu_Material.mat
 - Assets/Resources/Character/CaiWenJi/CaiWenJi.atlas.txt
-- Assets/Resources/Character/LingTong/MaSu_Atlas.asset
 - Assets/Resources/Character/LuJi/LuJi_SkeletonData.asset
 - Assets/Resources/Character/XuChu/XuChu_Atlas.asset
 - Assets/Resources/Character/Monster/Monster007/Monster007.json
@@ -296,13 +292,11 @@ Assets:
 - Assets/Resources/Character/GuanYu/GuanYu.json
 - Assets/Resources/Character/Mounts/Mounts007/Mounts007_SkeletonData.asset
 - Assets/Resources/Character/Boss/QingLong/Boss_dragon_Attack_Atlas.asset
-- Assets/Resources/Character/MaSu/MaSu.png
+- Assets/Resources/Character/ZhenJi/ZhenJi.json
 - Assets/Resources/Character/ZhangFei/ZhangFei_Skill_2_zidan_Atlas.asset
 - Assets/Resources/Character/XunYu/XunYu.png
-- Assets/Resources/Character/MaSu/MaSu.json
 - Assets/Resources/Character/Mounts/Mounts007/Mounts007_Atlas.asset
 - Assets/Resources/Character/ZhuGeJin/ZhuGeJin.json
-- Assets/Resources/Character/ZhenJi/ZhenJi.json
 - Assets/Resources/Character/ZhangFei/Fx_ZhangFei_hit_Material.mat
 - Assets/Resources/Character/Mounts/Mounts016/Mounts016.png
 - Assets/Resources/Character/Monster/Monster006/Monster006.png
@@ -350,7 +344,6 @@ Assets:
 - Assets/Resources/Character/LvBu/LvBu.atlas.txt
 - Assets/Resources/Character/SunShangXiang/buff_sunshangxiang_skill1.png
 - Assets/Resources/Character/Monster/Monster004/Monster004.json
-- Assets/Resources/Character/LingTong/MaSu_Material.mat
 - Assets/Resources/Character/Mounts/Mounts005/Mounts005_Material.mat
 - Assets/Resources/Character/GuoJia/GuoJia.json
 - Assets/Resources/Character/XiaoBing/XiaoBing_Atlas.asset
@@ -427,9 +420,7 @@ Assets:
 - Assets/Resources/Character/HuangGai/HuangGai.png
 - Assets/Resources/Character/XiaoBing_Qi/XiaoBing_Qi.json
 - Assets/Resources/Character/Mounts/Mounts022/Mounts022.atlas.txt
-- Assets/Resources/Character/LingTong/MaSu_SkeletonData.asset
 - Assets/Resources/Character/Mounts/Mounts025/Mounts025.json
-- Assets/Resources/Character/MaSu/MaSu_Material.mat
 - Assets/Resources/Character/XiaoBing_TouShiChe/XiaoBing_TouShiChe_Material.mat
 - Assets/Resources/Character/XiaoBing_TouShiChe/XiaoBing_TouShiChe.atlas.txt
 - Assets/Resources/Character/XiaoBing_GongJian_1/XiaoBing_GongJian_1_Material.mat
@@ -461,8 +452,8 @@ Assets:
 - Assets/Resources/Character/GuanYu/GuanYu_Atlas.asset
 - Assets/Resources/Character/Mounts/Mounts025/Mounts025_SkeletonData.asset
 - Assets/Resources/Character/Monster004_Idle/Monster004_Idle.json
-- Assets/Resources/Character/LingTong/MaSu.png
 - Assets/Resources/Character/Monster/Monster007/Monster007_Atlas.asset
+- Assets/Resources/Character/Monster/Monster017/Monster017_Atlas.asset
 - Assets/Resources/Character/XiaoBing/XiaoBing.png
 - Assets/Resources/Character/GuanYu/ChiTu_GuanYu_Material.mat
 - Assets/Resources/Character/CaiWenJi/CaiWenJi_SkeletonData.asset
@@ -471,8 +462,8 @@ Assets:
 - Assets/Resources/Character/Mounts/Mounts005/Mounts005.atlas.txt
 - Assets/Resources/Character/ZhenJi/ZhenJi_SkeletonData.asset
 - Assets/Resources/Character/XiaoBing_GongJian/XiaoBing_gong.png
-- Assets/Resources/Character/Monster/Monster017/Monster017_Atlas.asset
 - Assets/Resources/Character/Mounts/Mounts017/Mounts017_Atlas.asset
+- Assets/Resources/Character/ZhuGeJin/ZhuGeJin.png
 - Assets/Resources/Character/ZhuRong/ZhuRong_Material.mat
 - Assets/Resources/Character/Monster/Monster019/Monster019_Atlas.asset
 - Assets/Resources/Character/Monster/Monster012/Monster012.json
@@ -483,7 +474,6 @@ Assets:
 - Assets/Resources/Character/Monster/Monster001/Monster001_Atlas.asset
 - Assets/Resources/Character/DaQiao/DaQiao_Material.mat
 - Assets/Resources/Character/SunShangXiang/Fx_SunShangXiang_Attack.png
-- Assets/Resources/Character/ZhuGeJin/ZhuGeJin.png
 - Assets/Resources/Character/ZhuRong/ZhuRong.atlas.txt
 - Assets/Resources/Character/Mounts/Mounts003/Mounts003_Atlas.asset
 - Assets/Resources/Character/Monster/Monster015/Monster015.png
@@ -538,7 +528,6 @@ Assets:
 - Assets/Resources/Character/Monster/Monster017/Monster017_Material.mat
 - Assets/Resources/Character/Monster/Monster022/Monster022_SkeletonData.asset
 - Assets/Resources/Character/Monster/Monster023/Monster023.png
-- Assets/Resources/Character/MaSu/MaSu_SkeletonData.asset
 - Assets/Resources/Character/Mounts/Mounts016/Mounts016.atlas.txt
 - Assets/Resources/Character/Monster/Monster013/Monster013_SkeletonData.asset
 - Assets/Resources/Character/Mounts/Mounts014/Mounts014_SkeletonData.asset
@@ -646,7 +635,6 @@ Assets:
 - Assets/Resources/Character/Monster/Monster022/Monster022_Attack.json
 - Assets/Resources/Character/Mounts/Mounts001/Mounts001_Atlas.asset
 - Assets/Resources/Character/Mounts/Mounts007/Mounts007.png
-- Assets/Resources/Character/MaSu/MaSu_Atlas.asset
 - Assets/Resources/Character/Monster/Monster007/Monster007.png
 - Assets/Resources/Character/ZhuRong/ZhuRong.png
 - Assets/Resources/Character/GuoJia/GuoJia_SkeletonData.asset

@@ -20,7 +20,7 @@ namespace QFramework.Example
 			foreach (EntityModelType item in Enum.GetValues(typeof(EntityModelType)))
 			{
 				if (item == EntityModelType.Null) continue;
-				if (item >= EntityModelType.XiaoBing) break;
+				if (!DataManager.EntityIsHaveBullet(item)) continue;
 					var heroItem = Instantiate(HeroSelectItem, Content.transform, false);
 					heroItem.InitView(item);
 					heroSelectItemList.Add(heroItem);
@@ -30,6 +30,7 @@ namespace QFramework.Example
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
+			mData = uiData as HeroSelectPopUIData ?? new HeroSelectPopUIData();
 			foreach (var item in heroSelectItemList)
 			{
 				item.SetSelectBtnEvent(mData.ClickAction);

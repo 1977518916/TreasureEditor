@@ -54,7 +54,11 @@ namespace QFramework.Example
 		/// </summary>
 		private void InitBulletDropdownEvent()
 		{
-			BulletType_Select.onValueChanged.AddListener(value => data.bulletType = (BulletType)value);
+			BulletType_Select.onValueChanged.AddListener(value =>
+			{
+				data.bulletType = (BulletType)value;
+				BulletSelect_Btn.interactable = (BulletType)value == BulletType.CustomBullet;
+			});
 			BulletAttribute_Select.onValueChanged.AddListener(value => data.bulletAttributeType = (BulletAttributeType)value);
 		}
 	}

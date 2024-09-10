@@ -29,6 +29,7 @@ namespace QFramework.Example
 		public void InitView(int index, HeroData heroData)
 		{
 			gameObject.SetActive(true);
+			gameObject.name = $"HeroDataView_{index}";
 			InitDeleteBtn(index);
 			InitNumber(index);
 			InitHeroSelect(heroData);
@@ -55,7 +56,7 @@ namespace QFramework.Example
 		/// <param name="heroData"></param>
 		private void InitHeroSelect(HeroData heroData)
 		{
-			HeroSelect.InitView(heroData);
+			HeroSelect.InitView(heroData, this);
 		}
 
 		/// <summary>
@@ -68,7 +69,7 @@ namespace QFramework.Example
 		}
 		
 		/// <summary>
-		/// 初始化英雄子弹
+		/// 初始化英雄子弹类型
 		/// </summary>
 		/// <param name="heroData"></param>
 		private void InitHeroBullet(HeroData heroData)
@@ -123,9 +124,18 @@ namespace QFramework.Example
 			// 删除按钮绑定的事件
 			Delete_Btn.onClick.AddListener(() =>
 			{
-				//DataManager.HeroDataList.RemoveAt(DataManager.HeroDataList.Count - 1);
+				UIKit.GetPanel<HeroEditView>().EditContainer.RemoveAtViewAndData(index);
 				Destroy(gameObject);
 			});
+		}
+
+		/// <summary>
+		/// 设置英雄子弹
+		/// </summary>
+		/// <param name="data"></param>
+		public void SetHeroBullet(HeroData data)
+		{
+			BulletModelData.InitView(data);
 		}
 	}
 }

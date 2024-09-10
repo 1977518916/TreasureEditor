@@ -260,9 +260,9 @@ namespace Runtime.Manager
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        private static bool EntityIsHaveBullet(EntityModelType type)
+        public static bool EntityIsHaveBullet(EntityModelType type)
         {
-            return AllEntityAttackSpineDic.ContainsKey(type);
+            return AttackSpineDic.ContainsKey(type);
         }
         
         /// <summary>

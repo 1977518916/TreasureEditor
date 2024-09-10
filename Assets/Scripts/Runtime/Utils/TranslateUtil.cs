@@ -92,8 +92,6 @@ namespace Runtime.Utils
                     return "吕蒙";
                 case EntityModelType.MaDai:
                     return "马岱";
-                case EntityModelType.MaSu:
-                    return "马谡";
                 case EntityModelType.PangTong:
                     return "庞统";
                 // case EntityModelType.SunShangXiang:

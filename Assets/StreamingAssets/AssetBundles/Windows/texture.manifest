@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 311945074
+CRC: 2701010909
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ba2b4ea7ad89d3920db95dd3d89c2304
+    Hash: 6e786de775964c24ec327a23ba87d175
   TypeTreeHash:
     serializedVersion: 2
     Hash: c21d61fe394c58399df3c6fb5c7c99b3
@@ -204,11 +204,10 @@ Assets:
 - Assets/Resources/Texture/HeroAvatar/hero_38.png
 - Assets/Resources/Texture/Map/Zpbj2.png
 - Assets/Resources/Texture/Mount/M_18.png
-- Assets/Resources/Texture/AttackFlyingObjects/Fx_MaSu_Attack.png
+- Assets/Resources/Texture/HeroAvatarCareerIcon/c_2.png
 - Assets/Resources/Texture/Commom/Receive.png
 - Assets/Resources/Texture/AttackFlyingObjects/Fx_GanNing1_Attack.png
 - Assets/Resources/Texture/Map/background002.png
-- Assets/Resources/Texture/HeroAvatarCareerIcon/c_2.png
 - Assets/Resources/Texture/Map/ArtifactBg.png
 - Assets/Resources/Texture/Commom/Fanhuianniu.png
 - Assets/Resources/Texture/Commom/Guanggao_.png

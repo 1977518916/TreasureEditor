@@ -36,16 +36,26 @@ namespace QFramework.Example
 					ClickAction = skillName =>
 					{
 						data.skillData1 = DataManager.GetSkillStruct().GetSkillDataOfKey(skillName);
+						var skillScale = 0.5f;
+						var location = Vector3.zero;
+						if (data.skillData1 != null)
+						{
+							skillScale = data.skillData1.showScale;
+							location = data.skillData1.showPosition;
+						}
+
+						var skillSpineTransform = SkillOneView.transform;
+						skillSpineTransform.localScale = new Vector3(skillScale / 2, skillScale / 2, 1);
+						skillSpineTransform.localPosition = location;
 						if (ResLoaderTools.TryGetEntitySkillSpineDataAsset(skillName, out var dataAsset))
 						{
-							SkillOneView.skeletonDataAsset = dataAsset;
-							SkillOneView.Initialize(true);
+							SpineTools.SkeletonDataAssetReplace(SkillOneView, dataAsset);
 						}
 						else
 						{
 							throw new Exception($"报错：此{skillName} 技能Key找不到对应的技能动画");
 						}
-						
+
 						UIKit.HidePanel<SkillSelectPopUI>();
 					}
 				}));
@@ -56,15 +66,26 @@ namespace QFramework.Example
 					ClickAction = skillName =>
 					{
 						data.skillData2 = DataManager.GetSkillStruct().GetSkillDataOfKey(skillName);
+						var skillScale = 0.5f;
+						var location = Vector3.zero;
+						if (data.skillData2 != null)
+						{
+							skillScale = data.skillData2.showScale;
+							location = data.skillData2.showPosition;
+						}
+
+						var skillSpineTransform = SkillTwoView.transform;
+						skillSpineTransform.localScale = new Vector3(skillScale, skillScale, 1);
+						skillSpineTransform.localPosition = location;
 						if (ResLoaderTools.TryGetEntitySkillSpineDataAsset(skillName, out var dataAsset))
 						{
-							SkillTwoView.skeletonDataAsset = dataAsset;
-							SkillTwoView.Initialize(true);
+							SpineTools.SkeletonDataAssetReplace(SkillTwoView, dataAsset);
 						}
 						else
 						{
 							throw new Exception($"报错：此{skillName} 技能Key找不到对应的技能动画");
 						}
+
 						UIKit.HidePanel<SkillSelectPopUI>();
 					}
 				}));

@@ -27,12 +27,12 @@ namespace Runtime.Manager
         {
             return LoadCharacterSkeletonOfEnum(enemyTypeEnum, parent).GameObject();
         }
-        
+
         public static GameObject LoadBoss(EntityModelType entityModelType, Transform parent)
         {
             return LoadEntityModelSkeleton(entityModelType, parent, StateType.Idle).GameObject();
         }
-        
+
         /// <summary>
         /// 加载子弹
         /// </summary>
@@ -42,11 +42,14 @@ namespace Runtime.Manager
         /// <returns></returns>
         public static GameObject LoadBullet(EntityModelType modelType, int layer, Transform parent = null)
         {
-            var bulletObj = new GameObject($"{modelType.ToString()}_Bullet", typeof(RectTransform)) { layer = layer };
+            var bulletObj = new GameObject($"{modelType.ToString()}_Bullet", typeof(RectTransform))
+            {
+                layer = layer
+            };
             bulletObj.transform.SetParent(parent);
             bulletObj.transform.localPosition = Vector3.zero;
             bulletObj.transform.localScale = new Vector3(2f, 2f, 1f);
-            if (HelpTools.BulletIsSpine(modelType))
+            if(HelpTools.BulletIsSpine(modelType))
             {
                 var spine = LoadBulletSkeletonOfEnum(modelType, bulletObj.transform).GameObject();
                 spine.transform.eulerAngles = new Vector3(0, 0, -90f);
@@ -93,7 +96,7 @@ namespace Runtime.Manager
             {
                 return File.ReadAllBytes(path);
             }
-            path = Application.dataPath + ExternalPath + "map.jpg";    
+            path = Application.dataPath + ExternalPath + "map.jpg";
             if(File.Exists(path))
             {
                 return File.ReadAllBytes(path);
@@ -104,28 +107,22 @@ namespace Runtime.Manager
         public static SkeletonGraphic LoadSkeletonGraphic(string path, Transform parent = null)
         {
             SkeletonDataAsset asset = Load<SkeletonDataAsset>(path);
-            SkeletonGraphic skeletonGraphic = SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
-            return skeletonGraphic;
+            return CreateSkeletonGraphic(asset, parent);
         }
-        
+
         public static SkeletonGraphic LoadSkeletonGraphic(EntityModelType type, Transform parent = null)
         {
-            // if (DataManager.GetSpecifyEntityCommonSpine(type, out var asset))
-            // {
-            //
-            //     return SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Graphic.defaultGraphicMaterial);
-            // }
-            // else
-            // {
-            //     throw new Exception($"没有这个模型对应的寻常动画文件,请检查： {type}");
-            // }
+            if(ResLoaderTools.TryGetEntityCommonSpineDataAsset(type, out SkeletonDataAsset skeletonDataAsset))
+            {
+                return CreateSkeletonGraphic(skeletonDataAsset, parent);
+            }
+            Debug.LogError($"未加载到子弹动画{type.ToString()}");
             return default;
         }
 
         public static SkeletonGraphic LoadSkeletonGraphic(SkeletonDataAsset asset, Transform parent = null)
         {
-            SkeletonGraphic skeletonGraphic =
-                SkeletonGraphic.NewSkeletonGraphicGameObject(asset, parent, Load<Material>("Material/SkeletonGraphicDefault"));
+            SkeletonGraphic skeletonGraphic = CreateSkeletonGraphic(asset, parent);
             skeletonGraphic.AnimationState.SetAnimation(0, skeletonGraphic.SkeletonData.Animations.Items[0].Name,
                 false);
             return skeletonGraphic;
@@ -139,7 +136,7 @@ namespace Runtime.Manager
             skeletonAnimation.name = @enum.ToString();
             return skeletonAnimation;
         }
-        
+
         /// <summary>
         /// 加载实体模型 并播放传入的动画类型
         /// </summary>
@@ -163,15 +160,25 @@ namespace Runtime.Manager
             skeletonAnimation.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             return skeletonAnimation;
         }
-        
+
         public static SkeletonGraphic LoadBulletSkeletonOfEnum(EntityModelType entityModelType, Transform parent = null)
         {
-            // if (!DataManager.GetSpecifyEntityBulletSpine(entityModelType, out var dataAsset)) return null;
-            // var anima = LoadSkeletonGraphic(dataAsset, parent);
-            // anima.name = entityModelType.ToString();
-            // anima.transform.localScale = new Vector3(1f, 1f, 1f);
-            // return anima;
+            if(ResLoaderTools.TryGetEntityBulletSpineDataAsset(entityModelType, out SkeletonDataAsset asset))
+            {
+                return CreateSkeletonGraphic(asset, parent);
+            }
+            Debug.LogError($"未加载到子弹动画{entityModelType.ToString()}");
             return default;
+        }
+
+        private static SkeletonGraphic CreateSkeletonGraphic(SkeletonDataAsset skeletonData, Transform parent = null)
+        {
+            GameObject go = Object.Instantiate(Load<GameObject>("Prefabs/SkeObject"), parent);
+            SkeletonGraphic skeletonGraphic = go.GetComponent<SkeletonGraphic>();
+            skeletonGraphic.skeletonDataAsset = skeletonData;
+            skeletonGraphic.Initialize(true);
+            skeletonGraphic.MatchRectTransformWithBounds();
+            return skeletonGraphic;
         }
 
         public static T Load<T>(string path) where T : Object

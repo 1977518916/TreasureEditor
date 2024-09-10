@@ -44,7 +44,15 @@ namespace QFramework.Example
 		/// </summary>
 		private void InitSkillSpine()
 		{
-			SkillSpine.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillKey];
+			if (ResLoaderTools.TryGetEntitySkillSpineDataAsset(skillKey, out var dataAsset))
+			{
+				SkillSpine.skeletonDataAsset = dataAsset;
+			}
+			else
+			{
+				throw new Exception($"报错：此{skillKey} 技能Key找不到对应的技能动画");
+			}
+			
 			SkillSpine.Initialize(true);
 			SkillSpine.raycastTarget = false;
 			SkillSpine.AnimationState.SetAnimation(0, SkillSpine.SkeletonData.Animations.Items[0].Name, true);

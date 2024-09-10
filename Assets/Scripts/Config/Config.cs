@@ -1,3 +1,5 @@
+using UnityEngine.Device;
+
 /// <summary>
 /// 配置类
 /// </summary>
@@ -20,10 +22,20 @@ public static class Config
     /// </summary>
     public const string ALL_SKILL_DATA_PATH = "AllSkillData";
 
+#if UNITY_EDITOR
+    /// <summary>
+    /// 地图素材外部文件路径
+    /// </summary>
+    public static string MapExternalPath = $"{Application.dataPath}/Map";
+#endif
+        
+#if !UNITY_EDITOR
     /// <summary>
     /// 地图素材外部文件路径
     /// </summary>
     public static string MapExternalPath = $"{System.Environment.CurrentDirectory}/Map";
+#endif
+
 
     /// <summary>
     /// 子弹文件外部路径

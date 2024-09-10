@@ -22,10 +22,11 @@ namespace QFramework.Example
 		{
 			mData = uiData as SkillSelectPopUIData ?? new SkillSelectPopUIData();
 			SkillItem.gameObject.SetActive(false);
-			foreach (var item in DataManager.AllEntitySkillSpineDic.Values)
+			var skillSpineData = DataManager.GetSkillSpineMapDic();
+			foreach (var keyValue in skillSpineData)
 			{
 				var skill = Instantiate(SkillItem, Content.transform, false);
-				skill.InitView(item.name);
+				skill.InitView(keyValue.Key);
 				skillItemList.Add(skill);
 				skill.gameObject.SetActive(true);
 			}

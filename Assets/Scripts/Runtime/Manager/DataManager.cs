@@ -374,6 +374,15 @@ namespace Runtime.Manager
         {
             return skillStruct;
         }
+        
+        /// <summary>
+        /// 获取技能动画映射字典
+        /// </summary>
+        /// <returns></returns>
+        public static Dictionary<string, string> GetSkillSpineMapDic()
+        {
+            return SkillSpineDic;
+        }
 
         #endregion
         

@@ -37,10 +37,14 @@ namespace Runtime.Data
         ZhuRong,
         DongZhuo,
         //QingLong
-
-
-
-        // -------------  500往上都是预制体子弹,不带有Spine动画的预制体
-        XiaoBing_GongJian = 500
+        
+        
+        // -------------  500往上都是敌人
+        XiaoBing = 500,
+        DunBing,
+        XiaoBing_Dao,
+        XiaoBing_GongJian,
+        XiaoBing_Qi,
+        XiaoBing_TouShiChe
     }
 }

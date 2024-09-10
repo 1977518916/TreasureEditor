@@ -36,7 +36,16 @@ namespace QFramework.Example
 					ClickAction = skillName =>
 					{
 						data.skillData1 = DataManager.GetSkillStruct().GetSkillDataOfKey(skillName);
-						SkillOneView.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillName];
+						if (ResLoaderTools.TryGetEntitySkillSpineDataAsset(skillName, out var dataAsset))
+						{
+							SkillOneView.skeletonDataAsset = dataAsset;
+							SkillOneView.Initialize(true);
+						}
+						else
+						{
+							throw new Exception($"报错：此{skillName} 技能Key找不到对应的技能动画");
+						}
+						
 						UIKit.HidePanel<SkillSelectPopUI>();
 					}
 				}));
@@ -47,7 +56,15 @@ namespace QFramework.Example
 					ClickAction = skillName =>
 					{
 						data.skillData2 = DataManager.GetSkillStruct().GetSkillDataOfKey(skillName);
-						SkillTwoView.skeletonDataAsset = DataManager.AllEntitySkillSpineDic[skillName];
+						if (ResLoaderTools.TryGetEntitySkillSpineDataAsset(skillName, out var dataAsset))
+						{
+							SkillTwoView.skeletonDataAsset = dataAsset;
+							SkillTwoView.Initialize(true);
+						}
+						else
+						{
+							throw new Exception($"报错：此{skillName} 技能Key找不到对应的技能动画");
+						}
 						UIKit.HidePanel<SkillSelectPopUI>();
 					}
 				}));

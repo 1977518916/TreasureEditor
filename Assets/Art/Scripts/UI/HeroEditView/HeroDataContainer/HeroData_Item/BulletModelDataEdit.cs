@@ -27,6 +27,7 @@ namespace QFramework.Example
 		{
 			BulletSpiteView.gameObject.SetActive(false);
 			BulletSpineView.gameObject.SetActive(false);
+			if (heroData.modelType == EntityModelType.Null) return;
 			if (ResLoaderTools.TryGetEntityBulletSpineDataAsset(heroData.modelType, out var dataAsset))
 			{
 				SetBulletModel(dataAsset);

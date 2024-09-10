@@ -11,11 +11,11 @@ namespace Runtime.Manager
         private float currentTime, targetTime;
         private int index, amount;
         private Transform enemyParent;
-        private List<TimesData> list;
+        private List<EnemyMakerData> list;
         private bool isMaking;
         private void Awake()
         {
-            list = DataManager.GetLevelData().timesDatas;
+            list = DataManager.GetLevelData().EnemyMakerDatas;
             targetTime = list[index].time;
         }
 

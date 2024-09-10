@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Runtime.Data
 {
@@ -15,9 +16,9 @@ namespace Runtime.Data
         };
         
         /// <summary>
-        /// 地图类型
+        /// 地图精灵
         /// </summary>
-        public MapTypeEnum mapType;
+        public Sprite mapSprite;
 
         /// <summary>
         /// Boss的数据 目前整个关卡只支持单个Boss
@@ -48,7 +49,7 @@ namespace Runtime.Data
         /// </summary>
         public EnemyData enemyData = new EnemyData();
         
-        public EnemyTypeEnum enemyType = EnemyTypeEnum.XiaoBing;
+        public EntityModelType enemyType = EntityModelType.XiaoBing;
 
         public EnemyType enemyActionType = EnemyType.Melee;
     }

@@ -1,4 +1,5 @@
-﻿using Runtime.Data;
+﻿using Factories;
+using Runtime.Data;
 using Runtime.Manager;
 using Tao_Framework.Core.Event;
 using UnityEngine;
@@ -68,7 +69,7 @@ namespace Runtime.Component.Attack
             {
                 // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
                 entity.GetSpecifyComponent<StateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
-                var bulletGo = AssetsLoadManager.LoadBullet(entityModelType, LayerMask.NameToLayer("BattleUI"));
+                var bulletGo = BulletGameObjectFactory.Instance.Create(entityModelType, LayerMask.NameToLayer("BattleUI"));
                 var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
                 var bulletAttributeType = BulletAttributeType.Penetrate;
                 var bulletHurt = DataManager.GetRuntimeData().isInvicibleSelf ? 1 : hurt;

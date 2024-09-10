@@ -1,4 +1,90 @@
 {
+	"HeroDataList" : {
+		"__type" : "System.Collections.Generic.List`1[[Runtime.Data.HeroData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],mscorlib",
+		"value" : [
+			{
+				"bulletAmount" : 10,
+				"shooterAmount" : 1,
+				"modelType" : 14,
+				"bulletType" : 0,
+				"bulletAttributeType" : 0,
+				"bulletMoveType" : 0,
+				"atkInterval" : 2,
+				"modelScale" : 1,
+				"skillData1" : {
+					"key" : "skill_14",
+					"skillMoveType" : 0,
+					"amount" : 1,
+					"showScale" : 0.2,
+					"showPosition" : {
+						"x" : 0,
+						"y" : -55
+					},
+					"rotations" : 0,
+					"isLoopPlay" : true,
+					"damageDelay" : 0,
+					"damageRange" : 0
+				},
+				"skillData2" : {
+					"key" : "skill_22",
+					"skillMoveType" : 0,
+					"amount" : 1,
+					"showScale" : 0.15,
+					"showPosition" : {
+						"x" : 0,
+						"y" : -80
+					},
+					"rotations" : 0,
+					"isLoopPlay" : true,
+					"damageDelay" : 0,
+					"damageRange" : 0
+				},
+				"hp" : 20,
+				"atk" : 5,
+				"isInvincible" : false
+			},{
+				"bulletAmount" : 10,
+				"shooterAmount" : 1,
+				"modelType" : 32,
+				"bulletType" : 0,
+				"bulletAttributeType" : 0,
+				"bulletMoveType" : 0,
+				"atkInterval" : 2,
+				"modelScale" : 1,
+				"skillData1" : {
+					"key" : "skill_20",
+					"skillMoveType" : 0,
+					"amount" : 1,
+					"showScale" : 1,
+					"showPosition" : {
+						"x" : 0,
+						"y" : 20
+					},
+					"rotations" : 0,
+					"isLoopPlay" : true,
+					"damageDelay" : 0,
+					"damageRange" : 0
+				},
+				"skillData2" : {
+					"key" : "skill_58",
+					"skillMoveType" : 0,
+					"amount" : 1,
+					"showScale" : 0.4,
+					"showPosition" : {
+						"x" : -50,
+						"y" : 0
+					},
+					"rotations" : 0,
+					"isLoopPlay" : true,
+					"damageDelay" : 0,
+					"damageRange" : 0
+				},
+				"hp" : 20,
+				"atk" : 5,
+				"isInvincible" : false
+			}
+		]
+	},
 	"RuntimeData" : {
 		"__type" : "Runtime.Data.GameData,Assembly-CSharp",
 		"value" : {
@@ -30,11 +116,5 @@
 			"mapSprite" : null,
 			"BossData" : null
 		}
-	},
-	"HeroDataList" : {
-		"__type" : "System.Collections.Generic.List`1[[Runtime.Data.HeroData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],mscorlib",
-		"value" : [
-			
-		]
 	}
 }

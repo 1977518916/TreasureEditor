@@ -70,7 +70,7 @@ namespace Runtime.System
                 case SkillMoveType.Bullet:
                     CreateBullet(skillData, entity, pointDetectComponent);
                     break;
-                case SkillMoveType.Fall:
+                case SkillMoveType.DelayRange:
                     CreateFall(skillData, entity, pointDetectComponent);
                     break;
                 case SkillMoveType.Self:

@@ -51,15 +51,15 @@ namespace QFramework.Example
         {
             AddTimesButton.onClick.AddListener(() =>
             {
-                currentLevelData.timesDatas.Add(new TimesData());
-                currentIndex = currentLevelData.timesDatas.Count - 1;
+                currentLevelData.EnemyMakerDatas.Add(new EnemyMakerData());
+                currentIndex = currentLevelData.EnemyMakerDatas.Count - 1;
                 RefreshTimesDropDown();
                 RefreshUi();
             });
 
             ReduceTimesButton.onClick.AddListener(() =>
             {
-                currentLevelData.timesDatas.RemoveAt(currentIndex);
+                currentLevelData.EnemyMakerDatas.RemoveAt(currentIndex);
                 currentIndex = Mathf.Max(0, currentIndex - 1);
                 RefreshTimesDropDown();
                 RefreshUi();
@@ -101,33 +101,33 @@ namespace QFramework.Example
                     EnemyTypeDrop.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(o)));
                 }
             });
-            EnemyTypeDrop.SetValueWithoutNotify((int)currentLevelData.timesDatas[currentIndex].enemyType - 500);
+            EnemyTypeDrop.SetValueWithoutNotify((int)currentLevelData.EnemyMakerDatas[currentIndex].enemyType - 500);
             EnemyTypeDrop.onValueChanged.AddListener(value =>
             {
-                currentLevelData.timesDatas[currentIndex].enemyType = (EntityModelType)(value + 500);
+                currentLevelData.EnemyMakerDatas[currentIndex].enemyType = (EntityModelType)(value + 500);
                 RefreshUi();
             });
 
             array = Enum.GetValues(typeof(EnemyType));
             ResetDropDown<EnemyType>(array, EnemyActionTypeDrop, index =>
                 EnemyActionTypeDrop.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(index))));
-            EnemyActionTypeDrop.onValueChanged.AddListener(index => currentLevelData.timesDatas[currentIndex].enemyActionType = (EnemyType)index);
+            EnemyActionTypeDrop.onValueChanged.AddListener(index => currentLevelData.EnemyMakerDatas[currentIndex].enemyActionType = (EnemyType)index);
         }
 
         private void InitField()
         {
-            TimesAmountField.onValueChanged.AddListener(value => currentLevelData.timesDatas[currentIndex].amount = int.Parse(value));
+            TimesAmountField.onValueChanged.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].amount = int.Parse(value));
 
-            EnemyHpField.onValueChanged.AddListener(value => currentLevelData.timesDatas[currentIndex].enemyData.hp = int.Parse(value));
+            EnemyHpField.onValueChanged.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].enemyData.hp = int.Parse(value));
 
-            EnemyAtkField.onValueChanged.AddListener(value => currentLevelData.timesDatas[currentIndex].enemyData.atk = int.Parse(value));
+            EnemyAtkField.onValueChanged.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].enemyData.atk = int.Parse(value));
 
-            EnemySpeedField.onValueChanged.AddListener(value => currentLevelData.timesDatas[currentIndex].enemyData.speed = int.Parse(value));
+            EnemySpeedField.onValueChanged.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].enemyData.speed = int.Parse(value));
         }
 
         private void RefreshUi()
         {
-            TimesData timesData = currentLevelData.timesDatas[currentIndex];
+            EnemyMakerData timesData = currentLevelData.EnemyMakerDatas[currentIndex];
 
             CurrentTimesDrop.SetValueWithoutNotify(currentIndex);
             CurrentTimesDrop.RefreshShownValue();
@@ -146,7 +146,7 @@ namespace QFramework.Example
             ShowEnemyModel(timesData);
         }
 
-        private void ShowEnemyModel(TimesData timesData)
+        private void ShowEnemyModel(EnemyMakerData timesData)
         {
             EnemyParent.DestroyChildren();
             EnemyGameObjectFactory.Instance.Create(timesData.enemyType, EnemyParent);
@@ -155,7 +155,7 @@ namespace QFramework.Example
         private void RefreshTimesDropDown()
         {
             int index = 0;
-            ResetDropDown<TimesData>(currentLevelData.timesDatas.ToArray(), CurrentTimesDrop,
+            ResetDropDown<EnemyMakerData>(currentLevelData.EnemyMakerDatas.ToArray(), CurrentTimesDrop,
                 _ => { CurrentTimesDrop.options.Add(new TMP_Dropdown.OptionData($"第{++index}波")); });
         }
 

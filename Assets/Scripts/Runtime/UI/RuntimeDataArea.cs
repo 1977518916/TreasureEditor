@@ -41,7 +41,11 @@ namespace Runtime.UI
                 });
             }
 
-            transform.FindGet<Button>("Save").onClick.AddListener(() => { ReadWriteManager.Write("GameRunTimeData", JsonUtility.ToJson(gameData)); });
+            transform.FindGet<Button>("Save").onClick.AddListener(() =>
+            {
+                DataManager.SetRuntimeData(gameData);
+                DataManager.SaveRuntimeData();
+            });
         }
 
         private void OnEnable()

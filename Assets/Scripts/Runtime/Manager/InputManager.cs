@@ -35,7 +35,7 @@ namespace Runtime.Manager
             }
             if(runDataUI == null)
             {
-                runDataUI = Instantiate(AssetsLoadManager.Load<GameObject>("Prefabs/RunTimeSetting"), canvas.transform);
+                runDataUI = Instantiate(ResLoaderTools.LoadPrefab("RunTimeSetting"), canvas.transform);
                 return;
             }
             runDataUI.SetActive(!runDataUI.activeSelf);

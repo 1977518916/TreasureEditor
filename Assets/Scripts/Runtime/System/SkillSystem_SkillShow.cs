@@ -1,4 +1,5 @@
 ﻿using System;
+using Factories;
 using Runtime.Data;
 using Spine;
 using Spine.Unity;
@@ -85,7 +86,7 @@ namespace Runtime.System
 
         private void CreateThrough(SkillData skillData, HeroEntity entity, PointDetectComponent pointDetectComponent)
         {
-            SkeletonGraphic skeletonGraphic = CreateSkeletonGraphic(skillData, BattleManager.Instance.GetBulletParent());
+            SkeletonGraphic skeletonGraphic = SkillGameObjectFactory.Instance.Create(skillData, BattleManager.Instance.GetBulletParent());
             skeletonGraphic.rectTransform.localPosition = entity.GetFireLocation();
 
             Vector2 direction = pointDetectComponent.GetTarget().position - skeletonGraphic.rectTransform.position;

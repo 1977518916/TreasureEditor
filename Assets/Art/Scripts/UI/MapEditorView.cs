@@ -45,15 +45,19 @@ namespace QFramework.Example
 
         private void InitMaps()
         {
-
-            foreach (MapTypeEnum type in Enum.GetValues(typeof(MapTypeEnum)))
+            for(int index = 0; index < 6; index++)
             {
                 MapSelectNode mapSelectNode = Instantiate(this.mapSelectNode, ScrollView.content);
-                mapSelectNode.name = type.ToString();
-                mapSelectNode.SetNode(AssetsLoadManager.LoadBg(type),
-                    () => DataManager.GetLevelData().mapType = type);
-                refreshAction += () => mapSelectNode.SetTick(type == DataManager.GetLevelData().mapType);
+                mapSelectNode.name = index.ToString();
+                if(ResLoaderTools.TryGetMapSprite(index, out Sprite sprite))
+                {
+                    mapSelectNode.SetNode(sprite,
+                        () => DataManager.GetLevelData().mapSprite = sprite);
+                    refreshAction += () => mapSelectNode.SetTick(sprite == DataManager.GetLevelData().mapSprite);
+                }
+
             }
+
             foreach (Transform o in ScrollView.content)
             {
                 o.GetComponent<MapSelectNode>().refreshAction = refreshAction;

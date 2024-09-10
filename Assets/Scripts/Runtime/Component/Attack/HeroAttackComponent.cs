@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using Factories;
 using Runtime.Manager;
 using Tao_Framework.Core.Event;
 using UnityEngine;
@@ -168,7 +169,7 @@ public class HeroAttackComponent : AttackComponent
     {
         LastAttackTime = Time.time;
         IsInAttackInterval = true;
-        var bulletGo = AssetsLoadManager.LoadBullet(heroEntity.GetHeroData().modelType, LayerMask.NameToLayer("BattleUI"));
+        var bulletGo = BulletGameObjectFactory.Instance.Create(heroEntity.GetHeroData().modelType, LayerMask.NameToLayer("BattleUI"));
         var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
         var bulletTran = bulletEntity.GetComponent<RectTransform>();
         var bulletHurt = DataManager.GetRuntimeData().isInvicibleEnemy ? 1 : heroEntity.GetHeroData().atk;

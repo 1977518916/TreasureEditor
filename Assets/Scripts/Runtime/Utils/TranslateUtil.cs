@@ -8,28 +8,6 @@ namespace Runtime.Utils
 {
     public static class TranslateUtil
     {
-
-        public static string TranslateUi(EnemyTypeEnum enemyTypeEnum)
-        {
-            switch(enemyTypeEnum)
-            {
-                case EnemyTypeEnum.DunBing:
-                    return "盾兵";
-                case EnemyTypeEnum.XiaoBing:
-                    return "小兵";
-                case EnemyTypeEnum.XiaoBing_Dao:
-                    return "刀兵";
-                case EnemyTypeEnum.XiaoBing_GongJian:
-                    return "弓箭手";
-                case EnemyTypeEnum.XiaoBing_Qi:
-                    return "骑兵";
-                case EnemyTypeEnum.XiaoBing_TouShiChe:
-                    return "投石车";
-                default:
-                    return "";
-            }
-        }
-
         public static string TranslateUi(EnemyType enemyType)
         {
             switch(enemyType)
@@ -44,7 +22,7 @@ namespace Runtime.Utils
             }
         }
 
-        public static string TranslateUi(MapTypeEnum mapTypeEnum)
+		 public static string TranslateUi(MapTypeEnum mapTypeEnum)
         {
             switch(mapTypeEnum)
             {
@@ -53,9 +31,7 @@ namespace Runtime.Utils
                 default:
                     return $"地图{(int)mapTypeEnum + 1}";
             }
-        }
-        
-        public static string TranslateUi(BulletType bulletType)
+        }        public static string TranslateUi(BulletType bulletType)
         {
             switch(bulletType)
             {
@@ -167,6 +143,18 @@ namespace Runtime.Utils
                     return "董卓";
                 // case EntityModelType.QingLong:
                 //     return "青龙";
+                case EntityModelType.DunBing:
+                    return "盾兵";
+                case EntityModelType.XiaoBing:
+                    return "小兵";
+                case EntityModelType.XiaoBing_Dao:
+                    return "刀兵";
+                case EntityModelType.XiaoBing_GongJian:
+                    return "弓箭手";
+                case EntityModelType.XiaoBing_Qi:
+                    return "骑兵";
+                case EntityModelType.XiaoBing_TouShiChe:
+                    return "投石车";
                 case EntityModelType.Null:
                 default:
                     return "无";

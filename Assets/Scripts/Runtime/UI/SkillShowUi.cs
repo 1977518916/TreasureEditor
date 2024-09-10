@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Factories;
 using Runtime.Data;
 using Runtime.Extensions;
 using Runtime.Manager;
@@ -15,7 +16,7 @@ namespace Runtime.UI
         private HeroData heroData;
         private Dictionary<string, SkeletonDataAsset> assets;
         private RectTransform sklls;
-        private GameObject nodePrefab,scroll;
+        private GameObject nodePrefab, scroll;
         private static SkillShowUi instance;
         private List<SkillBtn> skillBtns;
         private int clickIndex;
@@ -51,8 +52,8 @@ namespace Runtime.UI
             foreach (SkeletonDataAsset value in assets.Values)
             {
                 GameObject go = Instantiate(nodePrefab, sklls, false);
-                AssetsLoadManager.LoadSkeletonGraphic(value, go.transform);    
-                
+                SkeletonGraphicFactory.Instance.Create(value, go.transform);
+
                 SkillBtn skill = go.AddComponent<SkillBtn>();
                 skill.gameObject.SetActive(true);
                 skill.key = value.name;
@@ -93,7 +94,7 @@ namespace Runtime.UI
             public Action<string> ClickAction { private get; set; }
             private Tick tick;
             private SkeletonGraphic skeletonGraphic;
-            
+
             public void Awake()
             {
                 tick = transform.FindAdd<Tick>("tick");

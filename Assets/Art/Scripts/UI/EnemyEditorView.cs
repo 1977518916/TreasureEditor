@@ -1,4 +1,5 @@
 using System;
+using Factories;
 using Runtime.Data;
 using Runtime.Manager;
 using Runtime.Utils;
@@ -92,18 +93,24 @@ namespace QFramework.Example
                 RefreshUi();
             });
 
-            Array array = Enum.GetValues(typeof(EnemyTypeEnum));
-            ResetDropDown(array.Length, EnemyTypeDrop, index => { EnemyTypeDrop.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi((EnemyTypeEnum)index))); });
+            Array array = Enum.GetValues(typeof(EntityModelType));
+            ResetDropDown<EntityModelType>(array, EnemyTypeDrop, o =>
+            {
+                if((int)o >= 500)
+                {
+                    EnemyTypeDrop.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(o)));
+                }
+            });
             EnemyTypeDrop.SetValueWithoutNotify((int)currentLevelData.timesDatas[currentIndex].enemyType);
             EnemyTypeDrop.onValueChanged.AddListener(value =>
             {
-                currentLevelData.timesDatas[currentIndex].enemyType = (EnemyTypeEnum)value;
+                currentLevelData.timesDatas[currentIndex].enemyType = (EntityModelType)(value + 500);
                 RefreshUi();
             });
 
             array = Enum.GetValues(typeof(EnemyType));
-            ResetDropDown(array.Length, EnemyActionTypeDrop, index =>
-                EnemyActionTypeDrop.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi((EnemyType)index))));
+            ResetDropDown<EnemyType>(array, EnemyActionTypeDrop, index =>
+                EnemyActionTypeDrop.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(index))));
             EnemyActionTypeDrop.onValueChanged.AddListener(index => currentLevelData.timesDatas[currentIndex].enemyActionType = (EnemyType)index);
         }
 
@@ -142,21 +149,22 @@ namespace QFramework.Example
         private void ShowEnemyModel(TimesData timesData)
         {
             EnemyParent.DestroyChildren();
-            AssetsLoadManager.LoadEnemy(timesData.enemyType, EnemyParent);
+            EnemyGameObjectFactory.Instance.Create(timesData.enemyType, EnemyParent);
         }
 
         private void RefreshTimesDropDown()
         {
-            ResetDropDown(currentLevelData.timesDatas.Count, CurrentTimesDrop,
-                index => CurrentTimesDrop.options.Add(new TMP_Dropdown.OptionData($"第{index + 1}波")));
+            int index = 0;
+            ResetDropDown<TimesData>(currentLevelData.timesDatas.ToArray(), CurrentTimesDrop,
+                _ => { CurrentTimesDrop.options.Add(new TMP_Dropdown.OptionData($"第{++index}波")); });
         }
 
-        private void ResetDropDown(int amount, TMP_Dropdown dropdown, Action<int> action)
+        private void ResetDropDown<T>(Array array, TMP_Dropdown dropdown, Action<T> action)
         {
             dropdown.ClearOptions();
-            for(int i = 0; i < amount; i++)
+            foreach (T o in array)
             {
-                action.Invoke(i);
+                action.Invoke(o);
             }
         }
     }

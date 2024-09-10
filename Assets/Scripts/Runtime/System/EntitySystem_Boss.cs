@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Factories;
 using Runtime.Component.Attack;
 using Runtime.Component.Position;
 using Runtime.Data;
@@ -19,7 +20,7 @@ public partial class EntitySystem
     {
         var root = Instantiate(BattleManager.BossRootPrefab, BattleManager.BossParent);
         var entity = CreateEntity<BossEntity>(EntityType.BossEntity, root);
-        var bossAnima = AssetsLoadManager.LoadSkeletonGraphic(modelType, entity.transform);
+        var bossAnima = BossGameObjectFactory.Instance.Create(modelType, entity.transform);
         bossAnima.transform.localScale *= data.modelScale;
         entity.InitBoss(data);
         // 初始化出生点组件

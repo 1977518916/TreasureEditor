@@ -1,4 +1,5 @@
 ﻿using System;
+using Factories;
 using Runtime.Data;
 using Runtime.Extensions;
 using Runtime.Manager;
@@ -99,8 +100,8 @@ namespace Runtime.UI
                     {
                         return;
                     }
-                    AssetsLoadManager.LoadHero(heroData.modelType, heroParent);
-                    AssetsLoadManager.LoadBullet(heroData.modelType, LayerMask.NameToLayer("UI"), bulletParent);
+                    HeroGameObjectFactory.Instance.Create(heroData.modelType, heroParent);
+                    BulletGameObjectFactory.Instance.Create(heroData.modelType, LayerMask.NameToLayer("UI"), bulletParent);
                 };
 
                 TMP_Dropdown bulletType = transform.FindGet<TMP_Dropdown>("bulletField");

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Factories;
 using Runtime.Component.Skill;
 using Runtime.Data;
 using Runtime.Manager;
@@ -30,7 +31,7 @@ public partial class EntitySystem
         var hero = Instantiate(BattleManager.HeroAndEnemyRootPrefab, BattleManager.HeroParent);
         hero.tag = "Hero";
         var heroEntity = CreateEntity<HeroEntity>(EntityType.HeroEntity, hero);
-        var heroModel = AssetsLoadManager.LoadHero(data.modelType, hero.GetComponent<RectTransform>());
+        var heroModel = HeroGameObjectFactory.Instance.Create(data.modelType, hero.GetComponent<RectTransform>());
         heroModel.GetComponent<RectTransform>().localScale *= data.modelScale;
         heroEntity.InitHero(data, BattleManager.GetFirePoint(indexValue), indexValue);
         // 获取英雄动画对象

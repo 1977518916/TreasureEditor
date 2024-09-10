@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Factories;
 using Runtime.Component.Position;
 using Runtime.Manager;
 using Spine.Unity;
@@ -19,7 +20,7 @@ public partial class EntitySystem
         GameObject root = Instantiate(BattleManager.HeroAndEnemyRootPrefab, BattleManager.EnemyParent);
         root.tag = "Enemy";
         var entity = CreateEntity<EnemyEntity>(EntityType.EnemyEntity, root);
-        var model = AssetsLoadManager.LoadEnemy(enemyBean.EnemyType, root.transform);
+        var model = EnemyGameObjectFactory.Instance.Create(enemyBean.EnemyType, root.transform);
         var anim = model.GetComponent<SkeletonGraphic>();
         var scale = new Vector3(0.3f, 0.3f, 1f);
         root.transform.localScale *= enemyBean.EnemyData.modelScale;

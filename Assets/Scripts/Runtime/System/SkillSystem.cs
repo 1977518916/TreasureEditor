@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Factories;
 using Runtime.Component.Skill;
 using Runtime.Data;
 using Runtime.Manager;
@@ -89,16 +90,8 @@ namespace Runtime.System
             GameObject go = new GameObject($"{skillData.key}");
             go.AddComponent<RectTransform>();
             go.transform.SetParent(entity.transform);
-            CreateSkeletonGraphic(skillData, go.transform);
+            SkillGameObjectFactory.Instance.Create(skillData, go.transform);
             return go;
-        }
-
-        private SkeletonGraphic CreateSkeletonGraphic(SkillData skillData, Transform parent = null)
-        {
-            SkeletonGraphic skeletonGraphic = AssetsLoadManager.LoadSkeletonGraphic(DataManager.AllEntitySkillSpineDic[skillData.key], parent);
-            skeletonGraphic.transform.eulerAngles = new Vector3(0, 0, skillData.rotations);
-            skeletonGraphic.AnimationState.SetAnimation(0, skeletonGraphic.SkeletonData.Animations.Items[0].Name, skillData.isLoopPlay);
-            return skeletonGraphic;
         }
     }
 }

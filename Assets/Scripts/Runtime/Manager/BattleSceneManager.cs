@@ -13,23 +13,22 @@ namespace Runtime.Manager
         {
             CommonUi.Instance.gameObject.SetActive(false);
             SceneManager.LoadScene(BattleSceneName, LoadSceneMode.Additive);
-            SceneManager.sceneLoaded += (arg0, mode) =>
-            {
-                if (arg0.buildIndex == 1)
-                {
-                    EventMgr.Instance.TriggerEvent(GameEvent.EnterBattle);
-                }
-            };
+            SceneManager.sceneLoaded += LoadScene;
         }
 
         public static void QuitBattle()
         {
-            EntitySystem.Instance.Destroy(() =>
-            {
-                SceneManager.UnloadSceneAsync(BattleSceneName);
-            });
+            SceneManager.sceneLoaded -= LoadScene;
+            EntitySystem.Instance.Destroy(() => { SceneManager.UnloadSceneAsync(BattleSceneName); });
             CommonUi.Instance.gameObject.SetActive(true);
         }
 
+        public static void LoadScene(Scene scene, LoadSceneMode mode)
+        {
+            if(scene.buildIndex == 1)
+            {
+                EventMgr.Instance.TriggerEvent(GameEvent.EnterBattle);
+            }
+        }
     }
 }

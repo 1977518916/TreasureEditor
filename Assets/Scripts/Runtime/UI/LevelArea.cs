@@ -38,7 +38,7 @@ namespace Runtime.UI
         private LevelData levelData;
         private Transform enemyParent, bossModelParent, bossBulletModelParent;
         private Image bg;
-        private TimesData CurrentData => levelData.timesDatas[dropdown.value];
+        private EnemyMakerData CurrentData => levelData.EnemyMakerDatas[dropdown.value];
         
         private void Awake()
         {
@@ -163,7 +163,7 @@ namespace Runtime.UI
         {
             dropdown.ClearOptions();
             int i = 1;
-            foreach (TimesData unused in levelData.timesDatas)
+            foreach (EnemyMakerData unused in levelData.EnemyMakerDatas)
             {
                 dropdown.options.Add(new TMP_Dropdown.OptionData($"第{i++}波"));
             }
@@ -172,7 +172,7 @@ namespace Runtime.UI
 
         private void DeleteTimes()
         {
-            levelData.timesDatas.RemoveAt(dropdown.value);
+            levelData.EnemyMakerDatas.RemoveAt(dropdown.value);
             ShowLevelData();
             dropdown.SetValueWithoutNotify(0);
             ShowTimeData(dropdown.value);
@@ -180,7 +180,7 @@ namespace Runtime.UI
 
         private void AddTimes()
         {
-            levelData.timesDatas.Add(new TimesData());
+            levelData.EnemyMakerDatas.Add(new EnemyMakerData());
             ShowLevelData();
             dropdown.SetValueWithoutNotify(dropdown.options.Count - 1);
             ShowTimeData(dropdown.value);
@@ -195,8 +195,8 @@ namespace Runtime.UI
         private void Delete()
         {
             ReadWriteManager.Level.SaveLevelData(null);
-            levelData.timesDatas.Clear();
-            levelData.timesDatas.Add(new TimesData());
+            levelData.EnemyMakerDatas.Clear();
+            levelData.EnemyMakerDatas.Add(new EnemyMakerData());
             ShowLevelData();
         }
 

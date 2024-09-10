@@ -7,11 +7,11 @@ namespace Runtime.Data
     public class LevelData
     {
         /// <summary>
-        /// 总波次的集合
+        /// 生成敌人节点的集合
         /// </summary>
-        public List<TimesData> timesDatas = new List<TimesData>()
+        public List<EnemyMakerData> EnemyMakerDatas = new List<EnemyMakerData>()
         {
-            new TimesData()
+            new EnemyMakerData()
         };
         
         /// <summary>
@@ -26,7 +26,7 @@ namespace Runtime.Data
     }
 
     [Serializable]
-    public class TimesData
+    public class EnemyMakerData
     {
         /// <summary>
         /// 单波敌人数量
@@ -34,12 +34,12 @@ namespace Runtime.Data
         public int amount = 3;
         
         /// <summary>
-        /// 当前波出怪间隔
+        /// 首次出怪的时间
         /// </summary>
         public float time = 10;
         
         /// <summary>
-        /// 每次生成时的间隔
+        /// 每次生成时的时间间隔
         /// </summary>
         public float makeTime = 1;
         

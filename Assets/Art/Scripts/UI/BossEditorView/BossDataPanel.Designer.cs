@@ -5,6 +5,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using Runtime.Data;
 
 namespace QFramework.Example
 {
@@ -13,8 +14,10 @@ namespace QFramework.Example
 		[SerializeField] public TMPro.TMP_Dropdown BossModelDrop;
 		[SerializeField] public BossDataView BossDataView;
 		[SerializeField] public Spine.Unity.SkeletonGraphic BossModel;
-		[SerializeField] public RectTransform BossBulletModel;
+		[SerializeField] public Spine.Unity.SkeletonGraphic BossBulletModel;
 
+		private BossData data;
+		
 		public void Clear()
 		{
 			BossModelDrop = null;

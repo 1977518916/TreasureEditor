@@ -5,6 +5,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using Runtime.Data;
 
 namespace QFramework.Example
 {
@@ -17,6 +18,8 @@ namespace QFramework.Example
 		[SerializeField] public TMPro.TMP_Dropdown BossBulletTypeDrop;
 		[SerializeField] public TMPro.TMP_InputField BossRunSpeedInputField;
 
+		private BossData data;
+		
 		public void Clear()
 		{
 			GenerateTimeInputField = null;

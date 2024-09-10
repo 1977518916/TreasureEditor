@@ -2127,7 +2127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &149071005236813890
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2236,7 +2236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &149071005239414846
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2272,7 +2272,7 @@ MonoBehaviour:
   MarkType: 0
   CustomComponentName: BossBulletModel
   CustomComment: 
-  mComponentName: RectTransform
+  mComponentName: Spine.Unity.SkeletonGraphic
 --- !u!222 &1786277814297935174
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2871,7 +2871,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &149071005514411779
@@ -5066,7 +5066,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &149071005953825893
@@ -6926,7 +6926,7 @@ MonoBehaviour:
   BossModelDrop: {fileID: 149071005174590202}
   BossDataView: {fileID: -3077641482608779672}
   BossModel: {fileID: 6614941273146924843}
-  BossBulletModel: {fileID: 149071005239414846}
+  BossBulletModel: {fileID: 7069129116421225918}
 --- !u!1 &149071006388759933
 GameObject:
   m_ObjectHideFlags: 0
@@ -8083,7 +8083,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &149071006792183808

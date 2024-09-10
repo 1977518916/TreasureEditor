@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using Runtime.Manager;
 
 namespace QFramework.Example
 {
@@ -17,6 +18,9 @@ namespace QFramework.Example
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
+			var bossData = DataManager.GetLevelData().BossData;
+			AddBossBtn.gameObject.SetActive(bossData == null);
+			RemoveBossBtn.gameObject.SetActive(bossData != null);
 		}
 		
 		protected override void OnShow()
@@ -29,6 +33,21 @@ namespace QFramework.Example
 		
 		protected override void OnClose()
 		{
+		}
+		
+		/// <summary>
+		/// 初始化按钮
+		/// </summary>
+		private void InitBtn()
+		{
+			AddBossBtn.onClick.AddListener(() =>
+			{
+				
+			});
+			RemoveBossBtn.onClick.AddListener(() =>
+			{
+
+			});
 		}
 	}
 }

@@ -11,7 +11,7 @@ namespace QFramework.Example
         private void Awake()
         {
             HeroEdit_Btn.onClick.AddListener(ShowView<HeroEditView>);
-            //BossEdit_Btn.onClick.AddListener(ShowView<>());
+            BossEdit_Btn.onClick.AddListener(ShowView<BossEditorView>);
             EnemyEdit_Btn.onClick.AddListener(ShowView<EnemyEditorView>);
             MapEdit_Btn.onClick.AddListener(ShowView<MapEditorView>);
         }

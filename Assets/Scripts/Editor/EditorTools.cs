@@ -5,6 +5,7 @@ using Runtime.Manager;
 using Spine.Unity;
 using UnityEditor;
 using UnityEngine;
+using Application = UnityEngine.Device.Application;
 
 /// <summary>
 /// 编辑器内工具集
@@ -39,6 +40,7 @@ public class EditorTools
     public static void ClearSaveData()
     {
         ES3.DeleteFile();
+        AssetDatabase.Refresh();
     }
 
     /// <summary>

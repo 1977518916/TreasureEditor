@@ -21,19 +21,10 @@ namespace Runtime.Utils
                     return "远程";
             }
         }
-
-		 public static string TranslateUi(MapTypeEnum mapTypeEnum)
+        
+        public static string TranslateUi(BulletType bulletType)
         {
-            switch(mapTypeEnum)
-            {
-                case MapTypeEnum.Other:
-                    return $"外部地图";
-                default:
-                    return $"地图{(int)mapTypeEnum + 1}";
-            }
-        }        public static string TranslateUi(BulletType bulletType)
-        {
-            switch(bulletType)
+            switch (bulletType)
             {
                 case BulletType.NoEntity:
                     return "攻击动画";

@@ -1,0 +1,40 @@
+{
+	"RuntimeData" : {
+		"__type" : "Runtime.Data.GameData,Assembly-CSharp",
+		"value" : {
+			"isShowNumber" : false,
+			"isInvicibleSelf" : false,
+			"isInvicibleEnemy" : true
+		}
+	},
+	"LevelData" : {
+		"__type" : "Runtime.Data.LevelData,Assembly-CSharp",
+		"value" : {
+			"timesDatas" : [
+				{
+					"amount" : 3,
+					"time" : 10,
+					"makeTime" : 1,
+					"enemyData" : {
+						"modelType" : 0,
+						"speed" : 30,
+						"modelScale" : 1,
+						"hp" : 20,
+						"atk" : 5,
+						"isInvincible" : false
+					},
+					"enemyType" : 500,
+					"enemyActionType" : 0
+				}
+			],
+			"mapSprite" : null,
+			"BossData" : null
+		}
+	},
+	"HeroDataList" : {
+		"__type" : "System.Collections.Generic.List`1[[Runtime.Data.HeroData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],mscorlib",
+		"value" : [
+			
+		]
+	}
+}

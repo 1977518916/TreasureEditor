@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 2673830614
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 711c310427fca37bd28a88e7d60c50e8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3850c1ad16954dbc1a82004875c9a83c
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: fbfe772663c64e26bd488de16e8872a5, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: Runtime.Data.SkillData
+Assets:
+- Assets/Resources/Config/AllSkillData.asset
+Dependencies: []

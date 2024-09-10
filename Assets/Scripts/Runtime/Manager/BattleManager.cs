@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using Factories;
 using QFSW.QC;
 using Runtime.Manager;
 using Tao_Framework.Core.Singleton;
@@ -104,8 +106,8 @@ public class BattleManager : MonoSingleton<BattleManager>
     [Command]
     public void SetBattleBG(int value)
     {
-        if(value > 6) return;
-        battleBG.sprite = AssetsLoadManager.Load<Sprite>(DataManager.MapTexturePath + value);
+        // if(value > 6) return;
+        // battleBG.sprite = AssetsLoadManager.Load<Sprite>(Config.MAP_TEXTURE_PATH + value);
     }
 
     /// <summary>
@@ -142,10 +144,10 @@ public class BattleManager : MonoSingleton<BattleManager>
     {
         return BulletParent;
     }
-
+    
     private void Start()
     {
-        battleBG.sprite = AssetsLoadManager.LoadBg(DataManager.LevelData.mapType);
+        battleBG.sprite = MapSpriteFactory.Instance.Create(DataManager.GetLevelData().mapIndex);
     }
     
     /// <summary>
@@ -159,8 +161,8 @@ public class BattleManager : MonoSingleton<BattleManager>
 
     public void GenerateHurtText(Vector2 location, int hurt, float surviveTime)
     {
-        if (!DataManager.GameData.isShowNumber) return;
-        var hurtTextPrefab = AssetsLoadManager.Load<GameObject>("Prefabs/HurtText");
+        if (!DataManager.GetRuntimeData().isShowNumber) return;
+        var hurtTextPrefab = ResLoaderTools.LoadPrefab("HurtText");
         var hurtProstitute = Instantiate(hurtTextPrefab);
         hurtProstitute.GetComponent<RectTransform>().SetParent(hurtTextPrefabParent);
         hurtProstitute.GetComponent<HurtText>().SetData(location, hurt, surviveTime);

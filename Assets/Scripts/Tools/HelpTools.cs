@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using Runtime.Data;
 
 /// <summary>
@@ -42,5 +44,26 @@ public static class HelpTools
     private static bool BulletIsArrow(EntityModelType modelType)
     {
         return modelType == EntityModelType.XiaoBing_GongJian;
+    }
+
+    /// <summary>
+    /// 获取枚举值对应的名字
+    /// </summary>
+    /// <returns></returns>
+    public static string GetEnumValueName<T>(object enumValue)
+    {
+        return Enum.GetName(typeof(T), enumValue);
+    }
+
+    /// <summary>
+    /// 动画数据文件路径替换
+    /// </summary>
+    /// <param name="replace"></param>
+    /// <param name="path"></param>
+    /// <param name="replaceValue"></param>
+    /// <returns></returns>
+    public static string Replace(this string path, string[] replace, string replaceValue)
+    {
+        return replace.Aggregate(path, (current, s) => current.Replace(s, replaceValue));
     }
 }

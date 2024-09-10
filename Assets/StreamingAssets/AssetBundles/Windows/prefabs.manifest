@@ -1,0 +1,136 @@
+ManifestFileVersion: 0
+CRC: 1204881247
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 57999556b87a6dd250e7b942b7c6c0fa
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c8851e388bb861c06fbd7183d493da52
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 61
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 12001, guid: 0000000000000000e000000000000000, type: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5610510b8efd4e2a9839629813fa2bb1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 31e5eb110ca173c44ad806117c20bf18, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d85b887af7e6c3f45a2e2d2920d641bc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7ca3e27221be35d41a4ff608f4ef327e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6ebb31b4731941044bb69c038327ccbd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f41e58c74463edf43a9624fcdf483d19, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ebd8ebb065684ad3a28d21fe6774e4e3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dbfc4cbb9957c704f912cd32368f81dc, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: RenderHeads.AVProMovieCapture.Runtime
+  ClassName: RenderHeads.Media.AVProMovieCapture.EncoderHints
+- AssemblyName: RenderHeads.AVProMovieCapture.Runtime
+  ClassName: RenderHeads.Media.AVProMovieCapture.ImageEncoderHints
+- AssemblyName: RenderHeads.AVProMovieCapture.Runtime
+  ClassName: RenderHeads.Media.AVProMovieCapture.VideoEncoderHints
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.FaceInfo_Legacy
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.FontAssetCreationSettings
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.KerningTable
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_Character
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_FontFeatureTable
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_FontWeightPair
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.VertexGradient
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.IMGUIModule
+  ClassName: UnityEngine.GUISettings
+- AssemblyName: UnityEngine.IMGUIModule
+  ClassName: UnityEngine.GUIStyle
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.FaceInfo
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.Glyph
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.GlyphMetrics
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.GlyphRect
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.AnimationTriggers
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Button/ButtonClickedEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.ColorBlock
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.FontData
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Navigation
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.SpriteState
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Toggle/ToggleEvent
+- AssemblyName: spine-unity
+  ClassName: Spine.Unity.MeshGenerator
+- AssemblyName: spine-unity
+  ClassName: Spine.Unity.MeshGenerator/Settings
+Assets:
+- Assets/Resources/Prefabs/Small_EnemyAttackBox.prefab
+- Assets/Resources/Prefabs/KillBox.prefab
+- Assets/Resources/Prefabs/RunTimeSetting.prefab
+- Assets/Resources/Prefabs/GUI.prefab
+- Assets/Resources/Prefabs/Recording.prefab
+- Assets/Resources/Prefabs/SkeObject.prefab
+- Assets/Resources/Prefabs/HurtText.prefab
+- Assets/Resources/Prefabs/Jian.prefab
+- Assets/Resources/Prefabs/Avatar_0.prefab
+Dependencies:
+- D:/UnityProject/TreasureEditor/AssetBundles/Windows/character
+- D:/UnityProject/TreasureEditor/AssetBundles/Windows/font
+- D:/UnityProject/TreasureEditor/AssetBundles/Windows/texture

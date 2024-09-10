@@ -1,4 +1,5 @@
 ﻿using System;
+using Factories;
 using Runtime.Data;
 using Runtime.Extensions;
 using Runtime.Manager;
@@ -38,16 +39,16 @@ namespace Runtime.UI
         private class Hero : MonoBehaviour
         {
             private HeroData heroData;
-            private DataType.HeroPositionType positionType;
+            //private DataType.HeroPositionType positionType;
             private int index;
             private Action updateAction;
             private Transform heroParent, bulletParent;
             private void Awake()
             {
                 index = int.Parse(name.Replace("hero", ""));
-                positionType = (DataType.HeroPositionType)(index - 1);
-                heroData = ReadWriteManager.Hero.GetHeroData(positionType);
-                DataManager.HeroDatas.Add(positionType, heroData);
+                //positionType = (DataType.HeroPositionType)(index - 1);
+                //heroData = ReadWriteManager.Hero.GetHeroData(positionType);
+                //DataManager.HeroDatas.Add(positionType, heroData);
                 transform.FindGet<TextMeshProUGUI>("info").SetText($"英雄{index}");
                 heroParent = transform.Find("HeroNode");
                 bulletParent = transform.Find("BulletNode");
@@ -58,14 +59,14 @@ namespace Runtime.UI
             }
             private void InitButton()
             {
-                transform.FindGet<Button>("Save")
-                    .onClick.AddListener(() => ReadWriteManager.Hero.SaveHeroData(positionType, heroData));
+                // transform.FindGet<Button>("Save")
+                //     .onClick.AddListener(() => ReadWriteManager.Hero.SaveHeroData(positionType, heroData));
                 
                 transform.FindGet<Button>("Clear").onClick.AddListener(() =>
                 {
                     heroData = new HeroData();
-                    DataManager.HeroDatas[positionType] = heroData;
-                    ReadWriteManager.Hero.SaveHeroData(positionType, null);
+                    //DataManager.HeroDatas[positionType] = heroData;
+                    //ReadWriteManager.Hero.SaveHeroData(positionType, null);
                     updateAction.Invoke();
                 });
                 
@@ -99,8 +100,8 @@ namespace Runtime.UI
                     {
                         return;
                     }
-                    AssetsLoadManager.LoadHero(heroData.modelType, heroParent);
-                    AssetsLoadManager.LoadBullet(heroData.modelType, LayerMask.NameToLayer("UI"), bulletParent);
+                    HeroGameObjectFactory.Instance.Create(heroData.modelType, heroParent);
+                    BulletGameObjectFactory.Instance.Create(heroData.modelType, LayerMask.NameToLayer("UI"), bulletParent);
                 };
 
                 TMP_Dropdown bulletType = transform.FindGet<TMP_Dropdown>("bulletField");

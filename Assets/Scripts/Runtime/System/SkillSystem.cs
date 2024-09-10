@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Factories;
 using Runtime.Component.Skill;
 using Runtime.Data;
 using Runtime.Manager;
@@ -41,26 +42,16 @@ namespace Runtime.System
                 case KeyCode.Alpha9:
                     Debug.Log($"按下{key}");
                     int keyCodeValue = (int)key + (key == KeyCode.Alpha0 ? 58 : 0) - 49;
-                    HeroSkillComponent skillComponent = GetHeroSkillOfPosition((keyCodeValue / 2));
-                    if(skillComponent != null)
-                    {
-                        int skillId = keyCodeValue % 2;
-                        Debug.Log(TranslateUtil.TranslateUi(skillComponent.Entity.GetHeroData().modelType) + "释放技能" + skillId);
-                        skillComponent.UseSkill(skillId);
-                    }
+                    //HeroSkillComponent skillComponent = GetHeroSkillOfPosition((DataType.HeroPositionType)(keyCodeValue / 2));
+                    // if(skillComponent != null)
+                    // {
+                    //     int skillId = keyCodeValue % 2;
+                    //     Debug.Log(TranslateUtil.TranslateUi(skillComponent.Entity.GetHeroData().modelType) + "释放技能" + skillId);
+                    //     skillComponent.UseSkill(skillId);
+                    // }
                     break;
             }
         }
-
-        private HeroSkillComponent GetHeroSkillOfPosition(int index)
-        {
-            if(index < heroEntities.Count)
-            {
-                return heroEntities[index].GetSpecifyComponent<HeroSkillComponent>(ComponentType.SkillComponent);
-            }
-            return null;
-        }
-
 
         public void ShowSkill(float triggerTime, SkillData skillData, HeroEntity entity)
         {
@@ -79,8 +70,8 @@ namespace Runtime.System
                 case SkillMoveType.Bullet:
                     CreateBullet(skillData, entity, pointDetectComponent);
                     break;
-                case SkillMoveType.DelayRange:
-                    CreateDelayRange(skillData, entity, pointDetectComponent);
+                case SkillMoveType.Fall:
+                    CreateFall(skillData, entity, pointDetectComponent);
                     break;
                 case SkillMoveType.Self:
                     CreateSelf(skillData, entity);
@@ -99,17 +90,8 @@ namespace Runtime.System
             GameObject go = new GameObject($"{skillData.key}");
             go.AddComponent<RectTransform>();
             go.transform.SetParent(entity.transform);
-            var graphic = CreateSkeletonGraphic(skillData, go.transform);
-            graphic.transform.localScale = new Vector3(skillData.scale, skillData.scale, skillData.scale);
+            SkillGameObjectFactory.Instance.Create(skillData, go.transform);
             return go;
-        }
-
-        private SkeletonGraphic CreateSkeletonGraphic(SkillData skillData, Transform parent = null)
-        {
-            SkeletonGraphic skeletonGraphic = AssetsLoadManager.LoadSkeletonGraphic(DataManager.AllEntitySkillSpineDic[skillData.key], parent);
-            skeletonGraphic.transform.eulerAngles = new Vector3(0, 0, skillData.rotations);
-            skeletonGraphic.AnimationState.SetAnimation(0, skeletonGraphic.SkeletonData.Animations.Items[0].Name, skillData.isLoopPlay);
-            return skeletonGraphic;
         }
     }
 }

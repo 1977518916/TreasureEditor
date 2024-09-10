@@ -8,51 +8,35 @@ namespace Runtime.Utils
 {
     public static class TranslateUtil
     {
-
-        public static string TranslateUi(EnemyTypeEnum enemyTypeEnum)
+        public static string TranslateUi(EnemyType enemyType)
         {
-            switch(enemyTypeEnum)
+            switch(enemyType)
             {
-                case EnemyTypeEnum.DunBing:
-                    return "盾兵";
-                case EnemyTypeEnum.XiaoBing:
-                    return "小兵";
-                case EnemyTypeEnum.XiaoBing_Dao:
-                    return "刀兵";
-                case EnemyTypeEnum.XiaoBing_GongJian:
-                    return "弓箭手";
-                case EnemyTypeEnum.XiaoBing_Qi:
-                    return "骑兵";
-                case EnemyTypeEnum.XiaoBing_TouShiChe:
-                    return "投石车";
+                case EnemyType.Buff:
+                    return "buff";
+                case EnemyType.Melee:
+                    return "近战";
+                case EnemyType.Remote:
                 default:
-                    return "";
+                    return "远程";
             }
         }
-
-        public static string TranslateUi(MapTypeEnum mapTypeEnum)
-        {
-            switch(mapTypeEnum)
-            {
-                case MapTypeEnum.Other:
-                    return $"外部地图";
-                default:
-                    return $"地图{(int)mapTypeEnum + 1}";
-            }
-        }
-
+        
         public static string TranslateUi(BulletType bulletType)
         {
-            switch(bulletType)
+            switch (bulletType)
             {
                 case BulletType.NoEntity:
                     return "攻击动画";
                 case BulletType.Self:
-                default:
                     return "自身子弹";
+                case BulletType.CustomBullet:
+                    return "自定义子弹";
             }
+
+            return "";
         }
-        
+
         public static string TranslateUi(BulletAttributeType attributeType)
         {
             return attributeType switch
@@ -108,8 +92,6 @@ namespace Runtime.Utils
                     return "吕蒙";
                 case EntityModelType.MaDai:
                     return "马岱";
-                case EntityModelType.MaSu:
-                    return "马谡";
                 case EntityModelType.PangTong:
                     return "庞统";
                 // case EntityModelType.SunShangXiang:
@@ -150,6 +132,18 @@ namespace Runtime.Utils
                     return "董卓";
                 // case EntityModelType.QingLong:
                 //     return "青龙";
+                case EntityModelType.DunBing:
+                    return "盾兵";
+                case EntityModelType.XiaoBing:
+                    return "小兵";
+                case EntityModelType.XiaoBing_Dao:
+                    return "刀兵";
+                case EntityModelType.XiaoBing_GongJian:
+                    return "弓箭手";
+                case EntityModelType.XiaoBing_Qi:
+                    return "骑兵";
+                case EntityModelType.XiaoBing_TouShiChe:
+                    return "投石车";
                 case EntityModelType.Null:
                 default:
                     return "无";

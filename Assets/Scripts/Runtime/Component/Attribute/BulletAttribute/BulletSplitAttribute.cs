@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Factories;
 using Runtime.Data;
 using Runtime.Manager;
 using UnityEngine;
@@ -81,10 +82,10 @@ public class BulletSplitAttribute : BulletAttribute
 
     private void Split(Vector2 target)
     {
-        var bulletGo = AssetsLoadManager.LoadBullet(data.modelType, LayerMask.NameToLayer("BattleUI"));
+        var bulletGo = BulletGameObjectFactory.Instance.Create(data.modelType, LayerMask.NameToLayer("BattleUI"));
         var splitBullet = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
         splitBullet.MoveObject = bulletGo.transform.GetChild(0).gameObject;
-        var bulletHurt = DataManager.GameData.isInvicibleEnemy ? 1 : data.atk;
+        var bulletHurt = DataManager.GetRuntimeData().isInvicibleEnemy ? 1 : data.atk;
         splitBullet.InitBullet(EntityType.EnemyEntity, bulletHurt, BulletAttributeType.Penetrate,
             bulletEntity.GetSpecifyComponent<BulletMoveComponent>(ComponentType.MoveComponent).EntityTransform.anchoredPosition,
             BattleManager.Instance.GetBulletParent());

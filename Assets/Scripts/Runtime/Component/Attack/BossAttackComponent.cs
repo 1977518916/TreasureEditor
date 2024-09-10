@@ -1,4 +1,5 @@
-﻿using Runtime.Data;
+﻿using Factories;
+using Runtime.Data;
 using Runtime.Manager;
 using Tao_Framework.Core.Event;
 using UnityEngine;
@@ -68,10 +69,10 @@ namespace Runtime.Component.Attack
             {
                 // 这里需要传入一个子弹的爆炸后的特效,可能是没有的
                 entity.GetSpecifyComponent<StateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
-                var bulletGo = AssetsLoadManager.LoadBullet(entityModelType, LayerMask.NameToLayer("BattleUI"));
+                var bulletGo = BulletGameObjectFactory.Instance.Create(entityModelType, LayerMask.NameToLayer("BattleUI"));
                 var bulletEntity = EntitySystem.Instance.CreateEntity<BulletEntity>(EntityType.BulletEntity, bulletGo);
                 var bulletAttributeType = BulletAttributeType.Penetrate;
-                var bulletHurt = DataManager.GameData.isInvicibleSelf ? 1 : hurt;
+                var bulletHurt = DataManager.GetRuntimeData().isInvicibleSelf ? 1 : hurt;
                 var bulletParent = BattleManager.Instance.BulletParent;
                 bulletEntity.MoveObject = bulletGo.transform.GetChild(0).gameObject;
                 bulletEntity.InitBullet(EntityType.HeroEntity, bulletHurt, bulletAttributeType, rectTransform.anchoredPosition, bulletParent);
@@ -88,7 +89,7 @@ namespace Runtime.Component.Attack
             if (TryGetAtkedEntity(out var hero))
             {
                 entity.GetSpecifyComponent<EnemyStateMachineComponent>(ComponentType.StateMachineComponent).TryChangeState(StateType.Attack);
-                hero.GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(DataManager.GameData.isInvicibleSelf ? 1 : hurt);
+                hero.GetSpecifyComponent<HeroStatusComponent>(ComponentType.StatusComponent).Hit(DataManager.GetRuntimeData().isInvicibleSelf ? 1 : hurt);
             }
         }
 

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Factories;
 using Runtime.Component.Skill;
 using Runtime.Data;
 using Runtime.Manager;
@@ -14,23 +15,23 @@ public partial class EntitySystem
     /// <summary>
     /// 生成英雄实体
     /// </summary>
-    /// <param name="type"> 位置 </param>
+    /// <param name="index"> 位置 </param>
     /// <param name="data"> 数据 </param>
-    private void GenerateEntity(DataType.HeroPositionType type, HeroData data)
+    private void GenerateEntity(int index, HeroData data)
     {
-        var indexValue = Convert.ToInt32(type);
+        var indexValue = Convert.ToInt32(index);
         if (data.modelType == EntityModelType.Null)
         {
             InitNullHeroStatus(indexValue);
-            BattleManager.Instance.HideBattleBase(Convert.ToInt32(type));
+            BattleManager.Instance.HideBattleBase(index);
             return;
         }
-
+        
         // 生成英雄实体
         var hero = Instantiate(BattleManager.HeroAndEnemyRootPrefab, BattleManager.HeroParent);
         hero.tag = "Hero";
         var heroEntity = CreateEntity<HeroEntity>(EntityType.HeroEntity, hero);
-        var heroModel = AssetsLoadManager.LoadHero(data.modelType, hero.GetComponent<RectTransform>());
+        var heroModel = HeroGameObjectFactory.Instance.Create(data.modelType, hero.GetComponent<RectTransform>());
         heroModel.GetComponent<RectTransform>().localScale *= data.modelScale;
         heroEntity.InitHero(data, BattleManager.GetFirePoint(indexValue), indexValue);
         // 获取英雄动画对象
@@ -51,17 +52,17 @@ public partial class EntitySystem
         // 设置英雄实体模型到对应位置
         BattleManager.Instance.SetPrefabLocation(hero, indexValue);
         // 初始化技能组件
-        InitSkill(type, heroEntity);
+        InitSkill(index, heroEntity);
     }
 
     /// <summary>
     /// 初始化技能组件
     /// </summary>
-    /// <param name="positionType"></param>
+    /// <param name="index"></param>
     /// <param name="heroEntity"></param>
-    private void InitSkill(DataType.HeroPositionType positionType, HeroEntity heroEntity)
+    private void InitSkill(int index, HeroEntity heroEntity)
     {
-        HeroSkillComponent skillComponent = new HeroSkillComponent(positionType, heroEntity);
+        HeroSkillComponent skillComponent = new HeroSkillComponent(index, heroEntity);
         heroEntity.AllComponentList.Add(skillComponent);
     }
 

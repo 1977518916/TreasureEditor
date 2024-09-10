@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 110723099
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c2854804406c26520322d1fab14ebffd
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8becd547c702b21343d9309dc05a5f64
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Resources/Font/bai_50.fontsettings
+- Assets/Resources/Font/hong.mat
+- Assets/Resources/Font/bai.mat
+- Assets/Resources/Font/hong_50.fontsettings
+Dependencies:
+- D:/UnityProject/TreasureEditor/AssetBundles/Windows/texture

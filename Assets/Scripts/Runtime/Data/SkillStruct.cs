@@ -32,8 +32,6 @@ namespace Runtime.Data
         [Space(10)]
         [Tooltip("绑定的技能表现层")]
         public string key = "skill_";
-        [Tooltip("技能效果")]
-        public SkillEffectType skillEffectType = SkillEffectType.Attack;
         [Tooltip("技能运动类型")]
         public SkillMoveType skillMoveType = SkillMoveType.Bullet;
         [Tooltip("技能释放的量")]
@@ -52,7 +50,7 @@ namespace Runtime.Data
         [Tooltip("伤害触发的延迟")]
         public float damageDelay = 0;
         [ShowIf("HasRange")]
-        [Tooltip("伤害的范围,0为单体伤害")]
+        [Tooltip("伤害的范围")]
         public float damageRange = 0;
 
         private bool HasDamageDelay()

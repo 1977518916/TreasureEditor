@@ -10,9 +10,9 @@ namespace Runtime.Data
         /// <summary>
         /// 总波次的集合
         /// </summary>
-        public List<TimesData> timesDatas = new List<TimesData>()
+        public List<EnemyMakerData> EnemyMakerDatas = new List<EnemyMakerData>()
         {
-            new TimesData()
+            new EnemyMakerData()
         };
         
         /// <summary>
@@ -27,7 +27,7 @@ namespace Runtime.Data
     }
 
     [Serializable]
-    public class TimesData
+    public class EnemyMakerData
     {
         /// <summary>
         /// 单波敌人数量

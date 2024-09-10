@@ -55,7 +55,7 @@ namespace Runtime.Data
         {
             return skillMoveType switch
             {
-                SkillMoveType.Fall => true,
+                SkillMoveType.DelayRange => true,
                 _ => false
             };
         }
@@ -64,7 +64,7 @@ namespace Runtime.Data
         {
             return skillMoveType switch
             {
-                SkillMoveType.Fall => true,
+                SkillMoveType.DelayRange => true,
                 SkillMoveType.HideRange => true,
                 _ => false
             };
@@ -87,8 +87,8 @@ namespace Runtime.Data
     {
         [InspectorName("子弹移动")]
         Bullet,
-        [InspectorName("坠落移动")]
-        Fall,
+        [InspectorName("延迟范围伤害")]
+        DelayRange,
         [InspectorName("用作自身不移动")]
         Self,
         [InspectorName("贯穿")]

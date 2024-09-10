@@ -18,7 +18,7 @@ namespace Runtime.Data
         /// <summary>
         /// 地图精灵
         /// </summary>
-        public Sprite mapSprite;
+        public int mapIndex;
 
         /// <summary>
         /// Boss的数据 目前整个关卡只支持单个Boss

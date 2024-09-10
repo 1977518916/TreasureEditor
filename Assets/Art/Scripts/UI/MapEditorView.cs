@@ -37,25 +37,36 @@ namespace QFramework.Example
 
         private void Init()
         {
-            CloseButton.onClick.AddListener(() => UIKit.HidePanel<MapEditorView>());
-            SaveButton.onClick.AddListener(() => ReadWriteManager.Level.SaveLevelData(DataManager.GetLevelData()));
+            CloseButton.onClick.AddListener(UIKit.HidePanel<MapEditorView>);
+            SaveButton.onClick.AddListener(DataManager.SaveLevelData);
             InitMaps();
             refreshAction.Invoke();
         }
 
         private void InitMaps()
         {
-            for(int index = 0; index < 6; index++)
+            int index = 0;
+            for(; index < 6; index++)
             {
                 MapSelectNode mapSelectNode = Instantiate(this.mapSelectNode, ScrollView.content);
                 mapSelectNode.name = index.ToString();
                 if(ResLoaderTools.TryGetMapSprite(index, out Sprite sprite))
                 {
+                    int index1 = index;
                     mapSelectNode.SetNode(sprite,
-                        () => DataManager.GetLevelData().mapSprite = sprite);
-                    refreshAction += () => mapSelectNode.SetTick(sprite == DataManager.GetLevelData().mapSprite);
+                        () => DataManager.GetLevelData().mapIndex = index1);
+                    refreshAction += () => mapSelectNode.SetTick(index1 == DataManager.GetLevelData().mapIndex);
                 }
-
+            }
+            
+            foreach (Sprite sprite in ResLoaderTools.GetAllExternalMap())
+            {
+                MapSelectNode mapSelectNode = Instantiate(this.mapSelectNode, ScrollView.content);
+                mapSelectNode.name = index++.ToString();
+                int index1 = index;
+                mapSelectNode.SetNode(sprite,
+                    () => DataManager.GetLevelData().mapIndex = index1);
+                refreshAction += () => mapSelectNode.SetTick(index1 == DataManager.GetLevelData().mapIndex);
             }
 
             foreach (Transform o in ScrollView.content)

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using Factories;
 using QFSW.QC;
 using Runtime.Manager;
 using Tao_Framework.Core.Singleton;
@@ -146,7 +147,7 @@ public class BattleManager : MonoSingleton<BattleManager>
     
     private void Start()
     {
-        battleBG.sprite = DataManager.GetLevelData().mapSprite;
+        battleBG.sprite = MapSpriteFactory.Instance.Create(DataManager.GetLevelData().mapIndex);
     }
     
     /// <summary>

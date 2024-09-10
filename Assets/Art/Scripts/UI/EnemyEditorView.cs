@@ -101,7 +101,7 @@ namespace QFramework.Example
                     EnemyTypeDrop.options.Add(new TMP_Dropdown.OptionData(TranslateUtil.TranslateUi(o)));
                 }
             });
-            EnemyTypeDrop.SetValueWithoutNotify((int)currentLevelData.timesDatas[currentIndex].enemyType);
+            EnemyTypeDrop.SetValueWithoutNotify((int)currentLevelData.timesDatas[currentIndex].enemyType - 500);
             EnemyTypeDrop.onValueChanged.AddListener(value =>
             {
                 currentLevelData.timesDatas[currentIndex].enemyType = (EntityModelType)(value + 500);
@@ -132,7 +132,7 @@ namespace QFramework.Example
             CurrentTimesDrop.SetValueWithoutNotify(currentIndex);
             CurrentTimesDrop.RefreshShownValue();
 
-            EnemyTypeDrop.SetValueWithoutNotify((int)timesData.enemyType);
+            EnemyTypeDrop.SetValueWithoutNotify((int)timesData.enemyType - 500);
             EnemyTypeDrop.RefreshShownValue();
 
             EnemyActionTypeDrop.SetValueWithoutNotify((int)timesData.enemyActionType);

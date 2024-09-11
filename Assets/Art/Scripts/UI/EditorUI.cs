@@ -1,4 +1,5 @@
 using Factories;
+using Runtime.Manager;
 using UnityEngine;
 
 namespace QFramework.Example
@@ -8,18 +9,15 @@ namespace QFramework.Example
     }
     public partial class EditorUI : UIPanel
     {
-
-        private void Awake()
-        {
-            HeroEdit_Btn.onClick.AddListener(ShowView<HeroEditView>);
-            BossEdit_Btn.onClick.AddListener(ShowView<BossEditorView>);
-            EnemyEdit_Btn.onClick.AddListener(ShowView<EnemyEditorView>);
-            MapEdit_Btn.onClick.AddListener(ShowView<MapEditorView>);
-        }
         protected override void OnInit(IUIData uiData = null)
         {
             mData = uiData as EditorUIData ?? new EditorUIData();
             // please add init code here
+            HeroEdit_Btn.onClick.AddListener(ShowView<HeroEditView>);
+            BossEdit_Btn.onClick.AddListener(ShowView<BossEditorView>);
+            EnemyEdit_Btn.onClick.AddListener(ShowView<EnemyEditorView>);
+            MapEdit_Btn.onClick.AddListener(ShowView<MapEditorView>);
+            InitMap();
         }
 
         protected override void OnOpen(IUIData uiData = null)
@@ -66,6 +64,14 @@ namespace QFramework.Example
         public void SetMap(Sprite sprite)
         {
             MapView.sprite = sprite;
+        }
+        
+        /// <summary>
+        /// 初始化地图
+        /// </summary>
+        private void InitMap()
+        {
+            MapView.sprite = MapSpriteFactory.Instance.Create(DataManager.GetLevelData().mapIndex);
         }
     }
 }

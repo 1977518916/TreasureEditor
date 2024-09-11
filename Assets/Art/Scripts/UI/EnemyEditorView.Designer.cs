@@ -5,17 +5,17 @@ using QFramework;
 
 namespace QFramework.Example
 {
-	// Generate Id:0fff3b8d-d995-46e0-8c88-a09ceb2af8c7
+	// Generate Id:58c787eb-f657-45cb-bb40-522361f1e9e1
 	public partial class EnemyEditorView
 	{
 		public const string Name = "EnemyEditorView";
 		
 		[SerializeField]
-		public TMPro.TMP_Dropdown CurrentTimesDrop;
+		public TMPro.TMP_Dropdown CurrentMakerDrop;
 		[SerializeField]
-		public UnityEngine.UI.Button AddTimesButton;
+		public UnityEngine.UI.Button AddMakerButton;
 		[SerializeField]
-		public UnityEngine.UI.Button ReduceTimesButton;
+		public UnityEngine.UI.Button ReduceMakerButton;
 		[SerializeField]
 		public UnityEngine.UI.Button SaveButton;
 		[SerializeField]
@@ -36,14 +36,18 @@ namespace QFramework.Example
 		public RectTransform EnemyParent;
 		[SerializeField]
 		public UnityEngine.UI.Button CloseButton;
+		[SerializeField]
+		public TMPro.TMP_InputField StartTimeField;
+		[SerializeField]
+		public TMPro.TMP_InputField IntervalTimeField;
 		
 		private EnemyEditorViewData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
-			CurrentTimesDrop = null;
-			AddTimesButton = null;
-			ReduceTimesButton = null;
+			CurrentMakerDrop = null;
+			AddMakerButton = null;
+			ReduceMakerButton = null;
 			SaveButton = null;
 			DeleteButton = null;
 			TimesAmountField = null;
@@ -54,6 +58,8 @@ namespace QFramework.Example
 			EnemyActionTypeDrop = null;
 			EnemyParent = null;
 			CloseButton = null;
+			StartTimeField = null;
+			IntervalTimeField = null;
 			
 			mData = null;
 		}

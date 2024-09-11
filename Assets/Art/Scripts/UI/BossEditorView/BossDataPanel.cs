@@ -23,7 +23,7 @@ namespace QFramework.Example
 		{
 		}
 		
-		private void InitView(BossData bossData)
+		public void InitView(BossData bossData)
 		{
 			data = bossData;
 			InitSelectBossDrop();

@@ -21,6 +21,7 @@ namespace QFramework.Example
 			var bossData = DataManager.GetLevelData().BossData;
 			AddBossBtn.gameObject.SetActive(bossData == null);
 			RemoveBossBtn.gameObject.SetActive(bossData != null);
+			BossDataPanel.InitView(bossData);
 		}
 		
 		protected override void OnShow()

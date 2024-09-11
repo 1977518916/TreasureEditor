@@ -116,13 +116,22 @@ namespace QFramework.Example
 
         private void InitField()
         {
-            TimesAmountField.onValueChanged.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].amount = int.Parse(value));
+            TimesAmountField.onEndEdit.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].amount = ParseInt(value, 3));
 
-            EnemyHpField.onValueChanged.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].enemyData.hp = int.Parse(value));
+            EnemyHpField.onEndEdit.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].enemyData.hp = ParseInt(value, 10));
 
-            EnemyAtkField.onValueChanged.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].enemyData.atk = int.Parse(value));
+            EnemyAtkField.onEndEdit.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].enemyData.atk = ParseInt(value, 1));
 
-            EnemySpeedField.onValueChanged.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].enemyData.speed = int.Parse(value));
+            EnemySpeedField.onEndEdit.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].enemyData.speed = ParseInt(value, 30));
+        }
+
+        private int ParseInt(string value, int defaultValue)
+        {
+            if(value.IsNullOrEmpty())
+            {
+                return defaultValue;
+            }
+            return int.Parse(value);
         }
 
         private void RefreshUi()

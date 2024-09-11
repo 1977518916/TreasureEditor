@@ -7,6 +7,11 @@ namespace Factories
 {
     public class MapSpriteFactory : Singleton<MapSpriteFactory>, IFactory
     {
+        private MapSpriteFactory()
+        {
+
+        }
+
         public Sprite Create(int index)
         {
             if(ResLoaderTools.TryGetMapSprite(index, out Sprite sprite))

@@ -14,11 +14,11 @@ namespace Factories
                 return sprite;
             }
             List<Sprite> externalSprites = ResLoaderTools.GetAllExternalMap();
-            if(index - 6 >= externalSprites.Count || index - 6 < 0)
+            if(index - Config.MapMaxIndex >= externalSprites.Count || index - Config.MapMaxIndex < 0)
             {
                 throw new DataException($"There is no sprite with index {index}");
             }
-            return externalSprites[index - 6];
+            return externalSprites[index - Config.MapMaxIndex];
         }
     }
 }

@@ -12,9 +12,11 @@ namespace QFramework.Example
     public partial class MapEditorView : UIPanel
     {
         Action refreshAction;
+        private EditorUI editorUI;
         protected override void OnInit(IUIData uiData = null)
         {
             mData = uiData as MapEditorViewData ?? new MapEditorViewData();
+            editorUI = UIKit.GetPanel<EditorUI>();
             // please add init code here
             Init();
         }
@@ -54,11 +56,15 @@ namespace QFramework.Example
                 {
                     int index1 = index;
                     mapSelectNode.SetNode(sprite,
-                        () => DataManager.GetLevelData().mapIndex = index1);
+                        () =>
+                        {
+                            DataManager.GetLevelData().mapIndex = index1;
+                            editorUI.SetMap(sprite);
+                        });
                     refreshAction += () => mapSelectNode.SetTick(index1 == DataManager.GetLevelData().mapIndex);
                 }
             }
-            
+
             foreach (Sprite sprite in ResLoaderTools.GetAllExternalMap())
             {
                 MapSelectNode mapSelectNode = Instantiate(this.mapSelectNode, ScrollView.content);

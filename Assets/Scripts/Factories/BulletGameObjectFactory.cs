@@ -9,7 +9,7 @@ namespace Factories
     {
         private BulletGameObjectFactory()
         {
-            
+
         }
         public GameObject Create(EntityModelType modelType, int layer, Transform parent = null)
         {
@@ -24,6 +24,7 @@ namespace Factories
             {
                 var spine = SkeletonGraphicFactory.Instance.Create(asset).gameObject;
                 spine.transform.eulerAngles = new Vector3(0, 0, -90f);
+                spine.gameObject.transform.SetParent(bulletObj.transform);
             }
             else
             {

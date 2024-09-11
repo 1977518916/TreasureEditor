@@ -5,12 +5,29 @@ using Runtime.Component.Position;
 using Runtime.Data;
 using Runtime.Manager;
 using UnityEngine;
+using UnityTimer;
 
 /// <summary>
 /// 实体系统 Boss模块
 /// </summary>
 public partial class EntitySystem
 {
+    /// <summary>
+    /// 初始化Boss
+    /// </summary>
+    private void InitBoss()
+    {
+        if (bossData != null)
+        {
+            timer = Timer.Register(DataManager.GetLevelData().BossData.Time, () =>
+            {
+                if (DataManager.GetLevelData().BossData.EntityModelType == EntityModelType.Null) return;
+                GenerateBossEntity(DataManager.GetLevelData().BossData.EntityModelType,
+                    DataManager.GetLevelData().BossData);
+            });
+        }
+    }
+
     /// <summary>
     /// 生成Boss实体
     /// </summary>

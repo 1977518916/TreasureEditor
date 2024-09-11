@@ -117,7 +117,6 @@ public class BattleManager : MonoSingleton<BattleManager>
     /// <returns></returns>
     public (GameObject HpBg, GameObject CdBg, Image Hp, Image Cd) GetHeroStatus(int value)
     {
-        if(value > 4) return default;
         var heroStatus = HeroStatusList[value];
         var hpBg = heroStatus.Find("HP_BG").gameObject;
         var cdBg = heroStatus.Find("AttackCD_BG").gameObject;
@@ -149,14 +148,15 @@ public class BattleManager : MonoSingleton<BattleManager>
     {
         battleBG.sprite = MapSpriteFactory.Instance.Create(DataManager.GetLevelData().mapIndex);
     }
-    
+
     /// <summary>
     /// 隐藏战斗底座
     /// </summary>
     /// <param name="index"></param>
-    public void HideBattleBase(int index)
+    /// <param name="isShow"></param>
+    public void ShowBattleBase(int index, bool isShow)
     {
-        BattleBaseList[index].gameObject.SetActive(false);
+        BattleBaseList[index].gameObject.SetActive(isShow);
     }
 
     public void GenerateHurtText(Vector2 location, int hurt, float surviveTime)
@@ -166,6 +166,31 @@ public class BattleManager : MonoSingleton<BattleManager>
         var hurtProstitute = Instantiate(hurtTextPrefab);
         hurtProstitute.GetComponent<RectTransform>().SetParent(hurtTextPrefabParent);
         hurtProstitute.GetComponent<HurtText>().SetData(location, hurt, surviveTime);
+    }
+    
+    /// <summary>
+    /// 隐藏所有战斗底座和状态栏
+    /// </summary>
+    public void HideAllBattleBaseAndStatus()
+    {
+        foreach (var item in BattleBaseList)
+        {
+            item.gameObject.SetActive(false);
+        }
+
+        foreach (var item in HeroStatusList)
+        {
+            item.gameObject.SetActive(false);
+        }
+    }
+    
+    /// <summary>
+    /// 获取战斗底座和状态栏最大的索引数
+    /// </summary>
+    /// <returns></returns>
+    public int GetBattleBaseAndStatusMaxIndex()
+    {
+        return BattleBaseList.Count - 1;
     }
 
     private void OnDestroy()

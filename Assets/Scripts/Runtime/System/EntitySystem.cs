@@ -93,17 +93,9 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// </summary>
     private void Init()
     {
-        for (int i = 0; i < DataManager.GetHeroDataList().Count; i++)
-        {
-            GenerateEntity(i, DataManager.GetHeroDataList()[i]);
-        }
-
-        timer = Timer.Register(DataManager.GetLevelData().BossData.Time, () =>
-        {
-            if (DataManager.GetLevelData().BossData.EntityModelType == EntityModelType.Null) return;
-            GenerateBossEntity(DataManager.GetLevelData().BossData.EntityModelType,
-                DataManager.GetLevelData().BossData);
-        });
+        InitData();
+        InitGameHeroEntity();
+        InitBoss();
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy,
             GenerateEnemyEntity);
     }

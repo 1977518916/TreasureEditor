@@ -13,6 +13,25 @@ using UnityEngine;
 public partial class EntitySystem
 {
     /// <summary>
+    /// 初始化游戏英雄实体
+    /// </summary>
+    private void InitGameHeroEntity()
+    {
+        BattleManager.HideAllBattleBaseAndStatus();
+        var maxIndex = BattleManager.GetBattleBaseAndStatusMaxIndex();
+        if (currentAllHeroData.Count == 1)
+        {
+            GenerateEntity(maxIndex, currentAllHeroData[0]);
+            return;
+        }
+
+        for (var i = 0; i < currentAllHeroData.Count; i++)
+        {
+            GenerateEntity(i, currentAllHeroData[i]);
+        }
+    }
+
+    /// <summary>
     /// 生成英雄实体
     /// </summary>
     /// <param name="index"> 位置 </param>
@@ -20,12 +39,9 @@ public partial class EntitySystem
     private void GenerateEntity(int index, HeroData data)
     {
         var indexValue = Convert.ToInt32(index);
-        if (data.modelType == EntityModelType.Null)
-        {
-            InitNullHeroStatus(indexValue);
-            BattleManager.Instance.HideBattleBase(index);
-            return;
-        }
+        ShowHeroStatus(index, data.modelType != EntityModelType.Null);
+        BattleManager.ShowBattleBase(index, data.modelType != EntityModelType.Null);
+        if (data.modelType == EntityModelType.Null) return;
         
         // 生成英雄实体
         var hero = Instantiate(BattleManager.HeroAndEnemyRootPrefab, BattleManager.HeroParent);
@@ -65,16 +81,17 @@ public partial class EntitySystem
         HeroSkillComponent skillComponent = new HeroSkillComponent(index, heroEntity);
         heroEntity.AllComponentList.Add(skillComponent);
     }
-
+    
     /// <summary>
-    /// 初始化空的英雄的状态栏
+    /// 显示英雄状态栏
     /// </summary>
     /// <param name="value"></param>
-    private void InitNullHeroStatus(int value)
+    /// <param name="isShow"></param>
+    public void ShowHeroStatus(int value, bool isShow)
     {
         var heroStatusUI = BattleManager.Instance.GetHeroStatus(value);
-        heroStatusUI.HpBg.SetActive(false);
-        heroStatusUI.CdBg.SetActive(false);
+        heroStatusUI.HpBg.SetActive(isShow);
+        heroStatusUI.CdBg.SetActive(isShow);
     }
 
     /// <summary>

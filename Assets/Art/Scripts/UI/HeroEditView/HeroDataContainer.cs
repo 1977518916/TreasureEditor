@@ -107,5 +107,14 @@ namespace QFramework.Example
 			heroDataViewList.Clear();
 			heroDataList.Clear();
 		}
+		
+		/// <summary>
+		/// 获取所有当前英雄数据
+		/// </summary>
+		/// <returns></returns>
+		public List<HeroData> GetCurrentAllHeroData()
+		{
+			return heroDataList;
+		}
 	}
 }

@@ -49,7 +49,7 @@ namespace QFramework.Example
 
         private void InitBtn()
         {
-            AddTimesButton.onClick.AddListener(() =>
+            AddMakerButton.onClick.AddListener(() =>
             {
                 currentLevelData.EnemyMakerDatas.Add(new EnemyMakerData());
                 currentIndex = currentLevelData.EnemyMakerDatas.Count - 1;
@@ -57,7 +57,7 @@ namespace QFramework.Example
                 RefreshUi();
             });
 
-            ReduceTimesButton.onClick.AddListener(() =>
+            ReduceMakerButton.onClick.AddListener(() =>
             {
                 currentLevelData.EnemyMakerDatas.RemoveAt(currentIndex);
                 currentIndex = Mathf.Max(0, currentIndex - 1);
@@ -87,7 +87,7 @@ namespace QFramework.Example
         private void InitDropDown()
         {
             RefreshTimesDropDown();
-            CurrentTimesDrop.onValueChanged.AddListener(index =>
+            CurrentMakerDrop.onValueChanged.AddListener(index =>
             {
                 currentIndex = index;
                 RefreshUi();
@@ -123,6 +123,10 @@ namespace QFramework.Example
             EnemyAtkField.onEndEdit.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].enemyData.atk = ParseInt(value, 1));
 
             EnemySpeedField.onEndEdit.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].enemyData.speed = ParseInt(value, 30));
+
+            StartTimeField.onValueChanged.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].time = ParseFloat(value, 1));
+
+            IntervalTimeField.onValueChanged.AddListener(value => currentLevelData.EnemyMakerDatas[currentIndex].makeTime = ParseFloat(value, 1));
         }
 
         private int ParseInt(string value, int defaultValue)
@@ -134,12 +138,21 @@ namespace QFramework.Example
             return int.Parse(value);
         }
 
+        private float ParseFloat(string value, float defaultValue)
+        {
+            if(value.IsNullOrEmpty())
+            {
+                return defaultValue;
+            }
+            return float.Parse(value);
+        }
+
         private void RefreshUi()
         {
             EnemyMakerData timesData = currentLevelData.EnemyMakerDatas[currentIndex];
 
-            CurrentTimesDrop.SetValueWithoutNotify(currentIndex);
-            CurrentTimesDrop.RefreshShownValue();
+            CurrentMakerDrop.SetValueWithoutNotify(currentIndex);
+            CurrentMakerDrop.RefreshShownValue();
 
             EnemyTypeDrop.SetValueWithoutNotify((int)timesData.enemyType - 500);
             EnemyTypeDrop.RefreshShownValue();
@@ -151,7 +164,8 @@ namespace QFramework.Example
             EnemyHpField.SetTextWithoutNotify(timesData.enemyData.hp.ToString());
             EnemyAtkField.SetTextWithoutNotify(timesData.enemyData.atk.ToString());
             EnemySpeedField.SetTextWithoutNotify(timesData.enemyData.speed + "");
-
+            StartTimeField.SetTextWithoutNotify(timesData.time + "");
+            IntervalTimeField.SetTextWithoutNotify(timesData.makeTime + "");
             ShowEnemyModel(timesData);
         }
 
@@ -164,8 +178,8 @@ namespace QFramework.Example
         private void RefreshTimesDropDown()
         {
             int index = 0;
-            ResetDropDown<EnemyMakerData>(currentLevelData.EnemyMakerDatas.ToArray(), CurrentTimesDrop,
-                _ => { CurrentTimesDrop.options.Add(new TMP_Dropdown.OptionData($"第{++index}波")); });
+            ResetDropDown<EnemyMakerData>(currentLevelData.EnemyMakerDatas.ToArray(), CurrentMakerDrop,
+                _ => { CurrentMakerDrop.options.Add(new TMP_Dropdown.OptionData($"生成器{++index}")); });
         }
 
         private void ResetDropDown<T>(Array array, TMP_Dropdown dropdown, Action<T> action)

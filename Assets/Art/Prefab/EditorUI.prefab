@@ -1036,6 +1036,7 @@ MonoBehaviour:
   EnemyEdit_Btn: {fileID: 3985082323685659850}
   BossEdit_Btn: {fileID: 3985082322734311301}
   MapEdit_Btn: {fileID: 3985082322045152376}
+  EnterGameBtn: {fileID: 1209487872589696668}
 --- !u!1 &3985082322850351091
 GameObject:
   m_ObjectHideFlags: 0

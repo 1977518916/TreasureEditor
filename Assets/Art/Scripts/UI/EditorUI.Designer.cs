@@ -20,7 +20,8 @@ namespace QFramework.Example
 		public UnityEngine.UI.Button BossEdit_Btn;
 		[SerializeField]
 		public UnityEngine.UI.Button MapEdit_Btn;
-		
+
+		[SerializeField] public UnityEngine.UI.Button EnterGameBtn;
 		private EditorUIData mPrivateData = null;
 		
 		protected override void ClearUIComponents()

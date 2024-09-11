@@ -22,6 +22,7 @@ namespace QFramework.Example
 			HeroAdd_Btn.onClick.AddListener(() => EditContainer.AddHeroData(new HeroData()));
 			SaveData_Btn.onClick.AddListener(() => EditContainer.SaveAllHeroData());
 			ResetData_Btn.onClick.AddListener(() => EditContainer.ResetView());
+			CloseView_Btn.onClick.AddListener(UIKit.HidePanel<HeroEditView>);
 		}
 		
 		protected override void OnShow()

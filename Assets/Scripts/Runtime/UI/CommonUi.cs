@@ -10,7 +10,7 @@ namespace Runtime.UI
     {
         private void Awake()
         {
-            transform.FindGet<Button>("EnterLevel").onClick.AddListener(BattleSceneManager.LoadBattleScene);
+            //transform.FindGet<Button>("EnterLevel").onClick.AddListener();
         }
     }
 }

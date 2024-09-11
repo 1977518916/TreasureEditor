@@ -17,6 +17,7 @@ namespace QFramework.Example
             BossEdit_Btn.onClick.AddListener(ShowView<BossEditorView>);
             EnemyEdit_Btn.onClick.AddListener(ShowView<EnemyEditorView>);
             MapEdit_Btn.onClick.AddListener(ShowView<MapEditorView>);
+            EnterGameBtn.onClick.AddListener(BattleSceneManager.LoadBattleScene);
             InitMap();
         }
 

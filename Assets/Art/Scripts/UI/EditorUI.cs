@@ -1,3 +1,4 @@
+using Factories;
 using UnityEngine;
 
 namespace QFramework.Example
@@ -57,6 +58,14 @@ namespace QFramework.Example
                 }
             }
             return false;
+        }
+
+        /// <summary>
+        /// 设置地图
+        /// </summary>
+        public void SetMap(Sprite sprite)
+        {
+            MapView.sprite = sprite;
         }
     }
 }

@@ -37,9 +37,6 @@ namespace QFramework.Example
 		private void InitHeroView()
 		{
 			HeroView.gameObject.SetActive(data.modelType != EntityModelType.Null);
-			// HeroView.transform.localScale = data.modelType == EntityModelType.DongZhuo
-			// 	? new Vector3(0.2f, 0.2f, 1f)
-			// 	: new Vector3(0.5f, 0.5f, 1f);
 			if (ResLoaderTools.TryGetEntityCommonSpineDataAsset(data.modelType, out var dataAsset))
 			{
 				SpineTools.SkeletonDataAssetReplace(HeroView, dataAsset);
@@ -81,6 +78,11 @@ namespace QFramework.Example
 				};
 				// 打开选择英雄的页面 并绑定对应的事件
 				UIKit.OpenPanel<HeroSelectPopUI>(UILevel.PopUI, popUIData);
+			});
+			HeroDataClearBtn.onClick.AddListener(() =>
+			{
+				data = new HeroData();
+				heroDataItem.InitView(Convert.ToInt32(heroDataItem.gameObject.name.Replace("HeroDataView_", "")), data);
 			});
 		}
 	}

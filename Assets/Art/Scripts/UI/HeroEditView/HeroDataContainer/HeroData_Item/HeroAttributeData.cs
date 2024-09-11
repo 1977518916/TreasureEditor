@@ -28,10 +28,20 @@ namespace QFramework.Example
 		public void InitView(HeroData heroData)
 		{
 			data = heroData;
-			HeroHpValue_Input.SetTextWithoutNotify(heroData.hp.ToString());
-			HeroAtkValue_Input.SetTextWithoutNotify(heroData.atk.ToString());
-			HeroHpValue_Input.onValueChanged.AddListener(value => heroData.hp = Convert.ToInt32(value));
-			HeroAtkValue_Input.onValueChanged.AddListener(value => heroData.atk = Convert.ToInt32(value));
+			HeroHpValue_Input.SetTextWithoutNotify($"{heroData.hp}");
+			HeroAtkValue_Input.SetTextWithoutNotify($"{heroData.atk}");
+			HeroHpValue_Input.onEndEdit.AddListener(value =>
+			{
+				value = value.IsNullOrEmpty() ? "20" : value;
+				data.hp = Convert.ToInt32(value);
+				HeroHpValue_Input.SetTextWithoutNotify($"{value}");
+			});
+			HeroAtkValue_Input.onEndEdit.AddListener(value =>
+			{
+				value = value.IsNullOrEmpty() ? "5" : value;
+				data.atk = Convert.ToInt32(value);
+				HeroAtkValue_Input.SetTextWithoutNotify($"{value}");
+			});
 		}
 	}
 }

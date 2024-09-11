@@ -69,7 +69,7 @@ public static class ResLoaderTools
     public static bool TryGetMapSprite(int index, out Sprite sprite)
     {
         sprite = default;
-        if (index is > 6 or < 0) return false;
+        if (index is > Config.MapMaxIndex or < 0) return false;
         sprite = Loader.LoadSync<Sprite>($"Map_{index}");
         return true;
     }

@@ -13,7 +13,8 @@ namespace QFramework.Example
 	{
 		[SerializeField] public UnityEngine.UI.Button HeroSelect_Btn;
 		[SerializeField] public Spine.Unity.SkeletonGraphic HeroView;
-
+		[SerializeField] public UnityEngine.UI.Button HeroDataClearBtn;
+		
 		private HeroData_Item heroDataItem;
 		private HeroData data;
 		

@@ -41,6 +41,11 @@ public static class Config
     /// 子弹文件外部路径
     /// </summary>
     public static string BulletExternalPath = $"{System.Environment.CurrentDirectory}/Bullet";
+    
+    /// <summary>
+    /// 内部地图最大索引值
+    /// </summary>
+    public const int MapMaxIndex = 6;
 
     #endregion
 }

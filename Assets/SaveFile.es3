@@ -1,4 +1,28 @@
 {
+	"LevelData" : {
+		"__type" : "Runtime.Data.LevelData,Assembly-CSharp",
+		"value" : {
+			"EnemyMakerDatas" : [
+				{
+					"amount" : 3,
+					"time" : 10,
+					"makeTime" : 1,
+					"enemyData" : {
+						"modelType" : 0,
+						"speed" : 30,
+						"modelScale" : 1,
+						"hp" : 20,
+						"atk" : 5,
+						"isInvincible" : false
+					},
+					"enemyType" : 500,
+					"enemyActionType" : 0
+				}
+			],
+			"mapIndex" : 5,
+			"BossData" : null
+		}
+	},
 	"HeroDataList" : {
 		"__type" : "System.Collections.Generic.List`1[[Runtime.Data.HeroData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],mscorlib",
 		"value" : [
@@ -52,13 +76,13 @@
 				"atkInterval" : 2,
 				"modelScale" : 1,
 				"skillData1" : {
-					"key" : "skill_20",
+					"key" : "skill_22",
 					"skillMoveType" : 0,
 					"amount" : 1,
-					"showScale" : 1,
+					"showScale" : 0.15,
 					"showPosition" : {
 						"x" : 0,
-						"y" : 20
+						"y" : -80
 					},
 					"rotations" : 0,
 					"isLoopPlay" : true,
@@ -82,6 +106,74 @@
 				"hp" : 20,
 				"atk" : 5,
 				"isInvincible" : false
+			},{
+				"bulletAmount" : 10,
+				"shooterAmount" : 1,
+				"modelType" : 0,
+				"bulletType" : 0,
+				"bulletAttributeType" : 0,
+				"bulletMoveType" : 0,
+				"atkInterval" : 2,
+				"modelScale" : 1,
+				"skillData1" : null,
+				"skillData2" : null,
+				"hp" : 20,
+				"atk" : 5,
+				"isInvincible" : false
+			},{
+				"bulletAmount" : 10,
+				"shooterAmount" : 1,
+				"modelType" : 0,
+				"bulletType" : 0,
+				"bulletAttributeType" : 0,
+				"bulletMoveType" : 0,
+				"atkInterval" : 2,
+				"modelScale" : 1,
+				"skillData1" : {
+					"key" : "skill_23",
+					"skillMoveType" : 0,
+					"amount" : 1,
+					"showScale" : 1,
+					"showPosition" : {
+						"x" : 0,
+						"y" : -50
+					},
+					"rotations" : 0,
+					"isLoopPlay" : true,
+					"damageDelay" : 0,
+					"damageRange" : 0
+				},
+				"skillData2" : null,
+				"hp" : 20,
+				"atk" : 5,
+				"isInvincible" : false
+			},{
+				"bulletAmount" : 10,
+				"shooterAmount" : 1,
+				"modelType" : 0,
+				"bulletType" : 0,
+				"bulletAttributeType" : 0,
+				"bulletMoveType" : 0,
+				"atkInterval" : 2,
+				"modelScale" : 1,
+				"skillData1" : null,
+				"skillData2" : {
+					"key" : "skill_39",
+					"skillMoveType" : 0,
+					"amount" : 1,
+					"showScale" : 0.5,
+					"showPosition" : {
+						"x" : -10,
+						"y" : -45
+					},
+					"rotations" : 0,
+					"isLoopPlay" : true,
+					"damageDelay" : 0,
+					"damageRange" : 0
+				},
+				"hp" : 20,
+				"atk" : 5,
+				"isInvincible" : false
 			}
 		]
 	},
@@ -91,30 +183,6 @@
 			"isShowNumber" : false,
 			"isInvicibleSelf" : false,
 			"isInvicibleEnemy" : true
-		}
-	},
-	"LevelData" : {
-		"__type" : "Runtime.Data.LevelData,Assembly-CSharp",
-		"value" : {
-			"timesDatas" : [
-				{
-					"amount" : 3,
-					"time" : 10,
-					"makeTime" : 1,
-					"enemyData" : {
-						"modelType" : 0,
-						"speed" : 30,
-						"modelScale" : 1,
-						"hp" : 20,
-						"atk" : 5,
-						"isInvincible" : false
-					},
-					"enemyType" : 500,
-					"enemyActionType" : 0
-				}
-			],
-			"mapSprite" : null,
-			"BossData" : null
 		}
 	}
 }

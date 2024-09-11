@@ -25,13 +25,14 @@ namespace QFramework.Example
 		{
 			data = heroData;
 			ModelScale_Input.SetTextWithoutNotify($"{heroData.modelScale}");
-			ModelScale_Input.onValueChanged.AddListener(value => heroData.modelScale = Convert.ToSingle(value));
 			ModelScale_Input.onEndEdit.AddListener(value =>
 			{
+				value = value.IsNullOrEmpty() ? "1" : value;
 				var scaleValue = Convert.ToSingle(value);
 				// 如果大于0 就看是不是小于2 如果小于等于2 就用这个值 如果大于2 就用2 如果不大于0 就用0.1f
 				scaleValue = scaleValue > 0 ? scaleValue <= 2 ? scaleValue : 2 : 0.1f;
 				heroData.modelScale = Convert.ToSingle(scaleValue);
+				ModelScale_Input.SetTextWithoutNotify($"{heroData.modelScale}");
 			});
 		}
 	}

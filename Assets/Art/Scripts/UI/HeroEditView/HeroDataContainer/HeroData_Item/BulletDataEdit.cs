@@ -27,9 +27,24 @@ namespace QFramework.Example
 			AttackInterval_Input.SetTextWithoutNotify($"{data.atkInterval}");
 			BulletMaxValue_Input.SetTextWithoutNotify($"{data.bulletAmount}");
 			SingleBulletNumber_Input.SetTextWithoutNotify($"{data.shooterAmount}");
-			AttackInterval_Input.onValueChanged.AddListener(value => data.atkInterval = Convert.ToSingle(value));
-			BulletMaxValue_Input.onValueChanged.AddListener(value => data.bulletAmount = Convert.ToInt32(value));
-			SingleBulletNumber_Input.onValueChanged.AddListener(value => data.shooterAmount = Convert.ToInt32(value));
+			AttackInterval_Input.onEndEdit.AddListener(value =>
+			{
+				value = value.IsNullOrEmpty() ? "1" : value;
+				data.atkInterval = Convert.ToInt32(value);
+				AttackInterval_Input.SetTextWithoutNotify($"{value}");
+			});
+			BulletMaxValue_Input.onEndEdit.AddListener(value =>
+			{
+				value = value.IsNullOrEmpty() ? "10" : value;
+				data.bulletAmount = Convert.ToInt32(value);
+				BulletMaxValue_Input.SetTextWithoutNotify($"{value}");
+			});
+			SingleBulletNumber_Input.onEndEdit.AddListener(value =>
+			{
+				value = value.IsNullOrEmpty() ? "1" : value;
+				data.shooterAmount = Convert.ToInt32(value);
+				SingleBulletNumber_Input.SetTextWithoutNotify($"{value}");
+			});
 		}
 	}
 }

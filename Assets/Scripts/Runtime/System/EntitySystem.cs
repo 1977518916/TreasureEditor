@@ -2,12 +2,9 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using Runtime.Component.Position;
-using Runtime.Component.Skill;
 using Runtime.Data;
 using Runtime.Manager;
 using Sirenix.OdinInspector;
-using Spine.Unity;
 using Tao_Framework.Core.Event;
 using Tao_Framework.Core.Singleton;
 using UnityEngine;
@@ -57,7 +54,7 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
 
     private void Start()
     {
-        EventMgr.Instance.RegisterEvent(GetHashCode(), GameEvent.EnterBattle, EnterBattle);
+        Init();
     }
     
     private void Update()
@@ -87,11 +84,6 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
         action?.Invoke();
     }
     
-    private void OnDestroy()
-    {
-        EventMgr.Instance.RemoveEvent(GetHashCode(), GameEvent.EnterBattle);
-    }
-    
     #endregion
 
     #region Event
@@ -99,17 +91,18 @@ public partial class EntitySystem : MonoSingleton<EntitySystem>
     /// <summary>
     /// 进入战斗场景
     /// </summary>
-    private void EnterBattle()
+    private void Init()
     {
         for (int i = 0; i < DataManager.GetHeroDataList().Count; i++)
         {
             GenerateEntity(i, DataManager.GetHeroDataList()[i]);
         }
-        
+
         timer = Timer.Register(DataManager.GetLevelData().BossData.Time, () =>
         {
             if (DataManager.GetLevelData().BossData.EntityModelType == EntityModelType.Null) return;
-            GenerateBossEntity(DataManager.GetLevelData().BossData.EntityModelType, DataManager.GetLevelData().BossData);
+            GenerateBossEntity(DataManager.GetLevelData().BossData.EntityModelType,
+                DataManager.GetLevelData().BossData);
         });
         EventMgr.Instance.RegisterEvent<LevelManager.EnemyBean>(GetHashCode(), GameEvent.MakeEnemy,
             GenerateEnemyEntity);

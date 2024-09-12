@@ -40,7 +40,7 @@ namespace Runtime.System
                 case KeyCode.Alpha8:
                 case KeyCode.Alpha9:
                     Debug.Log($"按下{key}");
-                    int keyCodeValue = (int)key + (key == KeyCode.Alpha0 ? 58 : 0) - 49;
+                    int keyCodeValue = (int)key + (key == KeyCode.Alpha0 ? 10 : 0) - 49;
                     HeroSkillComponent skillComponent = GetHeroSkillOfPosition((keyCodeValue / 2));
                     if(skillComponent != null)
                     {
